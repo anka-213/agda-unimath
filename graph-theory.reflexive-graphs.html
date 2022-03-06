@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Formalisation of the Symmetry Book</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/graph-theory/reflexive-graphs.lagda.md.</p>
+<p>Version of Sunday, March  6, 2022, 03:51 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Formalisation of the Symmetry Book</h1>
+</header>
+<pre class="Agda"><a id="60" class="Symbol">{-#</a> <a id="64" class="Keyword">OPTIONS</a> <a id="72" class="Pragma">--without-K</a> <a id="84" class="Pragma">--exact-split</a> <a id="98" class="Pragma">--allow-unsolved-metas</a> <a id="121" class="Symbol">#-}</a>
+
+<a id="126" class="Keyword">module</a> <a id="133" href="graph-theory.reflexive-graphs.html" class="Module">graph-theory.reflexive-graphs</a> <a id="163" class="Keyword">where</a>
+
+<a id="170" class="Keyword">open</a> <a id="175" class="Keyword">import</a> <a id="182" href="univalent-foundations.html" class="Module">univalent-foundations</a> <a id="204" class="Keyword">public</a>
+
+<a id="Reflexive-Graph"></a><a id="212" href="graph-theory.reflexive-graphs.html#212" class="Function">Reflexive-Graph</a> <a id="228" class="Symbol">:</a> <a id="230" class="Symbol">(</a><a id="231" href="graph-theory.reflexive-graphs.html#231" class="Bound">l1</a> <a id="234" href="graph-theory.reflexive-graphs.html#234" class="Bound">l2</a> <a id="237" class="Symbol">:</a> <a id="239" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="244" class="Symbol">)</a> <a id="246" class="Symbol">→</a> <a id="248" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="251" class="Symbol">(</a><a id="252" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="257" href="graph-theory.reflexive-graphs.html#231" class="Bound">l1</a> <a id="260" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="262" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="267" href="graph-theory.reflexive-graphs.html#234" class="Bound">l2</a><a id="269" class="Symbol">)</a>
+<a id="271" href="graph-theory.reflexive-graphs.html#212" class="Function">Reflexive-Graph</a> <a id="287" href="graph-theory.reflexive-graphs.html#287" class="Bound">l1</a> <a id="290" href="graph-theory.reflexive-graphs.html#290" class="Bound">l2</a> <a id="293" class="Symbol">=</a>
+  <a id="297" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="299" class="Symbol">(</a><a id="300" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="303" href="graph-theory.reflexive-graphs.html#287" class="Bound">l1</a><a id="305" class="Symbol">)</a> <a id="307" class="Symbol">(λ</a> <a id="310" href="graph-theory.reflexive-graphs.html#310" class="Bound">V</a> <a id="312" class="Symbol">→</a> <a id="314" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="316" class="Symbol">(</a><a id="317" href="graph-theory.reflexive-graphs.html#310" class="Bound">V</a> <a id="319" class="Symbol">→</a> <a id="321" href="graph-theory.reflexive-graphs.html#310" class="Bound">V</a> <a id="323" class="Symbol">→</a> <a id="325" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="328" href="graph-theory.reflexive-graphs.html#290" class="Bound">l2</a><a id="330" class="Symbol">)</a> <a id="332" class="Symbol">(λ</a> <a id="335" href="graph-theory.reflexive-graphs.html#335" class="Bound">E</a> <a id="337" class="Symbol">→</a> <a id="339" class="Symbol">(</a><a id="340" href="graph-theory.reflexive-graphs.html#340" class="Bound">v</a> <a id="342" class="Symbol">:</a> <a id="344" href="graph-theory.reflexive-graphs.html#310" class="Bound">V</a><a id="345" class="Symbol">)</a> <a id="347" class="Symbol">→</a> <a id="349" href="graph-theory.reflexive-graphs.html#335" class="Bound">E</a> <a id="351" href="graph-theory.reflexive-graphs.html#340" class="Bound">v</a> <a id="353" href="graph-theory.reflexive-graphs.html#340" class="Bound">v</a><a id="354" class="Symbol">))</a>
+
+<a id="358" class="Keyword">module</a> <a id="365" href="graph-theory.reflexive-graphs.html#365" class="Module">_</a>
+  <a id="369" class="Symbol">{</a><a id="370" href="graph-theory.reflexive-graphs.html#370" class="Bound">l1</a> <a id="373" href="graph-theory.reflexive-graphs.html#373" class="Bound">l2</a> <a id="376" class="Symbol">:</a> <a id="378" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="383" class="Symbol">}</a> <a id="385" class="Symbol">(</a><a id="386" href="graph-theory.reflexive-graphs.html#386" class="Bound">G</a> <a id="388" class="Symbol">:</a> <a id="390" href="graph-theory.reflexive-graphs.html#212" class="Function">Reflexive-Graph</a> <a id="406" href="graph-theory.reflexive-graphs.html#370" class="Bound">l1</a> <a id="409" href="graph-theory.reflexive-graphs.html#373" class="Bound">l2</a><a id="411" class="Symbol">)</a>
+  <a id="415" class="Keyword">where</a>
+
+  <a id="424" href="graph-theory.reflexive-graphs.html#424" class="Function">vertex-Reflexive-Graph</a> <a id="447" class="Symbol">:</a> <a id="449" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="452" href="graph-theory.reflexive-graphs.html#370" class="Bound">l1</a>
+  <a id="457" href="graph-theory.reflexive-graphs.html#424" class="Function">vertex-Reflexive-Graph</a> <a id="480" class="Symbol">=</a> <a id="482" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="486" href="graph-theory.reflexive-graphs.html#386" class="Bound">G</a>
+
+  <a id="491" href="graph-theory.reflexive-graphs.html#491" class="Function">edge-Reflexive-Graph</a> <a id="512" class="Symbol">:</a> <a id="514" href="graph-theory.reflexive-graphs.html#424" class="Function">vertex-Reflexive-Graph</a> <a id="537" class="Symbol">→</a> <a id="539" href="graph-theory.reflexive-graphs.html#424" class="Function">vertex-Reflexive-Graph</a> <a id="562" class="Symbol">→</a> <a id="564" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="567" href="graph-theory.reflexive-graphs.html#373" class="Bound">l2</a>
+  <a id="572" href="graph-theory.reflexive-graphs.html#491" class="Function">edge-Reflexive-Graph</a> <a id="593" class="Symbol">=</a> <a id="595" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="599" class="Symbol">(</a><a id="600" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="604" href="graph-theory.reflexive-graphs.html#386" class="Bound">G</a><a id="605" class="Symbol">)</a>
+
+  <a id="610" href="graph-theory.reflexive-graphs.html#610" class="Function">refl-Reflexive-Graph</a> <a id="631" class="Symbol">:</a> <a id="633" class="Symbol">(</a><a id="634" href="graph-theory.reflexive-graphs.html#634" class="Bound">x</a> <a id="636" class="Symbol">:</a> <a id="638" href="graph-theory.reflexive-graphs.html#424" class="Function">vertex-Reflexive-Graph</a><a id="660" class="Symbol">)</a> <a id="662" class="Symbol">→</a> <a id="664" href="graph-theory.reflexive-graphs.html#491" class="Function">edge-Reflexive-Graph</a> <a id="685" href="graph-theory.reflexive-graphs.html#634" class="Bound">x</a> <a id="687" href="graph-theory.reflexive-graphs.html#634" class="Bound">x</a>
+  <a id="691" href="graph-theory.reflexive-graphs.html#610" class="Function">refl-Reflexive-Graph</a> <a id="712" class="Symbol">=</a> <a id="714" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="718" class="Symbol">(</a><a id="719" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="723" href="graph-theory.reflexive-graphs.html#386" class="Bound">G</a><a id="724" class="Symbol">)</a>
+
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-06)(649ac6f) Merge branch 'master' of github.com:UniMath/agda-unimath by e.m.rijke
+</pre>
+</body>
+</html>

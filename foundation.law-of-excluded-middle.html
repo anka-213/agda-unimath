@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>foundation.law-of-excluded-middle</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/foundation/law-of-excluded-middle.lagda.md.</p>
+<p>Version of Sunday, March  6, 2022, 03:51 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="the-law-of-excluded-middle">The law of excluded middle</h1>
+<pre class="Agda"><a id="39" class="Symbol">{-#</a> <a id="43" class="Keyword">OPTIONS</a> <a id="51" class="Pragma">--without-K</a> <a id="63" class="Pragma">--exact-split</a> <a id="77" class="Symbol">#-}</a>
+
+<a id="82" class="Keyword">module</a> <a id="89" href="foundation.law-of-excluded-middle.html" class="Module">foundation.law-of-excluded-middle</a> <a id="123" class="Keyword">where</a>
+
+<a id="130" class="Keyword">open</a> <a id="135" class="Keyword">import</a> <a id="142" href="foundation.decidable-types.html" class="Module">foundation.decidable-types</a> <a id="169" class="Keyword">using</a> <a id="175" class="Symbol">(</a><a id="176" href="foundation.decidable-types.html#1741" class="Function">is-decidable</a><a id="188" class="Symbol">)</a>
+<a id="190" class="Keyword">open</a> <a id="195" class="Keyword">import</a> <a id="202" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="234" class="Keyword">using</a> <a id="240" class="Symbol">(</a><a id="241" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="242" class="Symbol">;</a> <a id="244" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="248" class="Symbol">;</a> <a id="250" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="253" class="Symbol">;</a> <a id="255" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="258" class="Symbol">)</a>
+<a id="260" class="Keyword">open</a> <a id="265" class="Keyword">import</a> <a id="272" href="foundation.negation.html" class="Module">foundation.negation</a> <a id="292" class="Keyword">using</a> <a id="298" class="Symbol">(</a><a id="299" href="foundation.negation.html#756" class="Function">¬</a><a id="300" class="Symbol">)</a>
+<a id="302" class="Keyword">open</a> <a id="307" class="Keyword">import</a> <a id="314" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="338" class="Keyword">using</a> <a id="344" class="Symbol">(</a><a id="345" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a><a id="352" class="Symbol">;</a> <a id="354" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a><a id="363" class="Symbol">)</a>
+<a id="365" class="Keyword">open</a> <a id="370" class="Keyword">import</a> <a id="377" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="404" class="Keyword">using</a> <a id="410" class="Symbol">(</a><a id="411" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="416" class="Symbol">;</a> <a id="418" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="420" class="Symbol">;</a> <a id="422" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="426" class="Symbol">)</a>
+
+<a id="429" class="Keyword">open</a> <a id="434" class="Keyword">import</a> <a id="441" href="univalent-combinatorics.2-element-types.html" class="Module">univalent-combinatorics.2-element-types</a> <a id="481" class="Keyword">using</a>
+  <a id="489" class="Symbol">(</a> <a id="491" href="univalent-combinatorics.2-element-types.html#10409" class="Function">is-not-decidable-type-UU-Fin-Level-two-ℕ</a><a id="531" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The law of excluded middle asserts that any proposition <code>P</code> is decidable.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="LEM"></a><a id="645" href="foundation.law-of-excluded-middle.html#645" class="Function">LEM</a> <a id="649" class="Symbol">:</a> <a id="651" class="Symbol">(</a><a id="652" href="foundation.law-of-excluded-middle.html#652" class="Bound">l</a> <a id="654" class="Symbol">:</a> <a id="656" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="661" class="Symbol">)</a> <a id="663" class="Symbol">→</a> <a id="665" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="668" class="Symbol">(</a><a id="669" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="674" href="foundation.law-of-excluded-middle.html#652" class="Bound">l</a><a id="675" class="Symbol">)</a>
+<a id="677" href="foundation.law-of-excluded-middle.html#645" class="Function">LEM</a> <a id="681" href="foundation.law-of-excluded-middle.html#681" class="Bound">l</a> <a id="683" class="Symbol">=</a> <a id="685" class="Symbol">(</a><a id="686" href="foundation.law-of-excluded-middle.html#686" class="Bound">P</a> <a id="688" class="Symbol">:</a> <a id="690" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a> <a id="698" href="foundation.law-of-excluded-middle.html#681" class="Bound">l</a><a id="699" class="Symbol">)</a> <a id="701" class="Symbol">→</a> <a id="703" href="foundation.decidable-types.html#1741" class="Function">is-decidable</a> <a id="716" class="Symbol">(</a><a id="717" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a> <a id="727" href="foundation.law-of-excluded-middle.html#686" class="Bound">P</a><a id="728" class="Symbol">)</a>
+</pre>
+<h2 id="properties">Properties</h2>
+<h3 id="the-unrestricted-law-of-excluded-middle-does-not-hold">The unrestricted law of excluded middle does not hold</h3>
+<pre class="Agda"><a id="817" class="Keyword">abstract</a>
+  <a id="no-global-decidability"></a><a id="828" href="foundation.law-of-excluded-middle.html#828" class="Function">no-global-decidability</a> <a id="851" class="Symbol">:</a>
+    <a id="857" class="Symbol">{</a><a id="858" href="foundation.law-of-excluded-middle.html#858" class="Bound">l</a> <a id="860" class="Symbol">:</a> <a id="862" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="867" class="Symbol">}</a> <a id="869" class="Symbol">→</a> <a id="871" href="foundation.negation.html#756" class="Function">¬</a> <a id="873" class="Symbol">((</a><a id="875" href="foundation.law-of-excluded-middle.html#875" class="Bound">X</a> <a id="877" class="Symbol">:</a> <a id="879" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="882" href="foundation.law-of-excluded-middle.html#858" class="Bound">l</a><a id="883" class="Symbol">)</a> <a id="885" class="Symbol">→</a> <a id="887" href="foundation.decidable-types.html#1741" class="Function">is-decidable</a> <a id="900" href="foundation.law-of-excluded-middle.html#875" class="Bound">X</a><a id="901" class="Symbol">)</a>
+  <a id="905" href="foundation.law-of-excluded-middle.html#828" class="Function">no-global-decidability</a> <a id="928" class="Symbol">{</a><a id="929" href="foundation.law-of-excluded-middle.html#929" class="Bound">l</a><a id="930" class="Symbol">}</a> <a id="932" href="foundation.law-of-excluded-middle.html#932" class="Bound">d</a> <a id="934" class="Symbol">=</a>
+    <a id="940" href="univalent-combinatorics.2-element-types.html#10409" class="Function">is-not-decidable-type-UU-Fin-Level-two-ℕ</a> <a id="981" class="Symbol">(λ</a> <a id="984" href="foundation.law-of-excluded-middle.html#984" class="Bound">X</a> <a id="986" class="Symbol">→</a> <a id="988" href="foundation.law-of-excluded-middle.html#932" class="Bound">d</a> <a id="990" class="Symbol">(</a><a id="991" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="995" href="foundation.law-of-excluded-middle.html#984" class="Bound">X</a><a id="996" class="Symbol">))</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-06)(649ac6f) Merge branch 'master' of github.com:UniMath/agda-unimath by e.m.rijke
+</pre>
+</body>
+</html>

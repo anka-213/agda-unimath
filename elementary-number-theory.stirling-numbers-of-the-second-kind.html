@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>elementary-number-theory.stirling-numbers-of-the-second-kind</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/elementary-number-theory/stirling-numbers-of-the-second-kind.lagda.md.</p>
+<p>Version of Sunday, March  6, 2022, 03:50 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="stirling-numbers-of-the-second-kind">Stirling numbers of the second kind</h1>
+<pre class="Agda"><a id="48" class="Symbol">{-#</a> <a id="52" class="Keyword">OPTIONS</a> <a id="60" class="Pragma">--without-K</a> <a id="72" class="Pragma">--exact-split</a> <a id="86" class="Symbol">#-}</a>
+
+<a id="91" class="Keyword">module</a> <a id="98" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html" class="Module">elementary-number-theory.stirling-numbers-of-the-second-kind</a> <a id="159" class="Keyword">where</a>
+
+<a id="166" class="Keyword">open</a> <a id="171" class="Keyword">import</a> <a id="178" href="elementary-number-theory.addition-natural-numbers.html" class="Module">elementary-number-theory.addition-natural-numbers</a> <a id="228" class="Keyword">using</a> <a id="234" class="Symbol">(</a><a id="235" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a><a id="240" class="Symbol">)</a>
+<a id="242" class="Keyword">open</a> <a id="247" class="Keyword">import</a> <a id="254" href="elementary-number-theory.multiplication-natural-numbers.html" class="Module">elementary-number-theory.multiplication-natural-numbers</a> <a id="310" class="Keyword">using</a>
+  <a id="318" class="Symbol">(</a> <a id="320" href="elementary-number-theory.multiplication-natural-numbers.html#1176" class="Function">mul-ℕ</a><a id="325" class="Symbol">)</a>
+<a id="327" class="Keyword">open</a> <a id="332" class="Keyword">import</a> <a id="339" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="380" class="Keyword">using</a> <a id="386" class="Symbol">(</a><a id="387" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a><a id="388" class="Symbol">;</a> <a id="390" href="elementary-number-theory.natural-numbers.html#1459" class="InductiveConstructor">zero-ℕ</a><a id="396" class="Symbol">;</a> <a id="398" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a><a id="404" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The stirling number of the second kind <code>{n m}</code> is the number of surjective maps from the standard <code>n</code>-element set to the standard <code>m</code>-element set</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="stirling-number-second-kind"></a><a id="590" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#590" class="Function">stirling-number-second-kind</a> <a id="618" class="Symbol">:</a> <a id="620" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a> <a id="622" class="Symbol">→</a> <a id="624" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a> <a id="626" class="Symbol">→</a> <a id="628" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a>
+<a id="630" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#590" class="Function">stirling-number-second-kind</a> <a id="658" href="elementary-number-theory.natural-numbers.html#1459" class="InductiveConstructor">zero-ℕ</a> <a id="665" href="elementary-number-theory.natural-numbers.html#1459" class="InductiveConstructor">zero-ℕ</a> <a id="672" class="Symbol">=</a> <a id="674" class="Number">1</a>
+<a id="676" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#590" class="Function">stirling-number-second-kind</a> <a id="704" href="elementary-number-theory.natural-numbers.html#1459" class="InductiveConstructor">zero-ℕ</a> <a id="711" class="Symbol">(</a><a id="712" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="719" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#719" class="Bound">n</a><a id="720" class="Symbol">)</a> <a id="722" class="Symbol">=</a> <a id="724" class="Number">0</a>
+<a id="726" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#590" class="Function">stirling-number-second-kind</a> <a id="754" class="Symbol">(</a><a id="755" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="762" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#762" class="Bound">m</a><a id="763" class="Symbol">)</a> <a id="765" href="elementary-number-theory.natural-numbers.html#1459" class="InductiveConstructor">zero-ℕ</a> <a id="772" class="Symbol">=</a> <a id="774" class="Number">0</a>
+<a id="776" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#590" class="Function">stirling-number-second-kind</a> <a id="804" class="Symbol">(</a><a id="805" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="812" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#812" class="Bound">m</a><a id="813" class="Symbol">)</a> <a id="815" class="Symbol">(</a><a id="816" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="823" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#823" class="Bound">n</a><a id="824" class="Symbol">)</a> <a id="826" class="Symbol">=</a>
+  <a id="830" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a>
+    <a id="840" class="Symbol">(</a> <a id="842" href="elementary-number-theory.multiplication-natural-numbers.html#1176" class="Function">mul-ℕ</a> <a id="848" class="Symbol">(</a><a id="849" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="856" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#823" class="Bound">n</a><a id="857" class="Symbol">)</a> <a id="859" class="Symbol">(</a><a id="860" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#590" class="Function">stirling-number-second-kind</a> <a id="888" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#812" class="Bound">m</a> <a id="890" class="Symbol">(</a><a id="891" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="898" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#823" class="Bound">n</a><a id="899" class="Symbol">)))</a>
+    <a id="907" class="Symbol">(</a> <a id="909" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#590" class="Function">stirling-number-second-kind</a> <a id="937" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#812" class="Bound">m</a> <a id="939" href="elementary-number-theory.stirling-numbers-of-the-second-kind.html#823" class="Bound">n</a><a id="940" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-06)(649ac6f) Merge branch 'master' of github.com:UniMath/agda-unimath by e.m.rijke
+</pre>
+</body>
+</html>

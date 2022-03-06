@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>foundation-core.sections</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/foundation-core/sections.lagda.md.</p>
+<p>Version of Sunday, March  6, 2022, 03:50 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="sections-of-type-families">Sections of type families</h1>
+<pre class="Agda"><a id="38" class="Symbol">{-#</a> <a id="42" class="Keyword">OPTIONS</a> <a id="50" class="Pragma">--without-K</a> <a id="62" class="Pragma">--exact-split</a> <a id="76" class="Pragma">--safe</a> <a id="83" class="Symbol">#-}</a>
+
+<a id="88" class="Keyword">module</a> <a id="95" href="foundation-core.sections.html" class="Module">foundation-core.sections</a> <a id="120" class="Keyword">where</a>
+
+<a id="127" class="Keyword">open</a> <a id="132" class="Keyword">import</a> <a id="139" href="foundation-core.dependent-pair-types.html" class="Module">foundation-core.dependent-pair-types</a> <a id="176" class="Keyword">using</a> <a id="182" class="Symbol">(</a><a id="183" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="184" class="Symbol">)</a>
+<a id="186" class="Keyword">open</a> <a id="191" class="Keyword">import</a> <a id="198" href="foundation-core.functions.html" class="Module">foundation-core.functions</a> <a id="224" class="Keyword">using</a> <a id="230" class="Symbol">(</a><a id="231" href="foundation-core.functions.html#407" class="Function Operator">_∘_</a><a id="234" class="Symbol">;</a> <a id="236" href="foundation-core.functions.html#309" class="Function">id</a><a id="238" class="Symbol">)</a>
+<a id="240" class="Keyword">open</a> <a id="245" class="Keyword">import</a> <a id="252" href="foundation-core.homotopies.html" class="Module">foundation-core.homotopies</a> <a id="279" class="Keyword">using</a> <a id="285" class="Symbol">(</a><a id="286" href="foundation-core.homotopies.html#467" class="Function Operator">_~_</a><a id="289" class="Symbol">)</a>
+<a id="291" class="Keyword">open</a> <a id="296" class="Keyword">import</a> <a id="303" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a> <a id="335" class="Keyword">using</a> <a id="341" class="Symbol">(</a><a id="342" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="347" class="Symbol">;</a> <a id="349" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="351" class="Symbol">;</a> <a id="353" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="356" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>Any dependent function induces a section of the projection map</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="459" class="Keyword">module</a> <a id="466" href="foundation-core.sections.html#466" class="Module">_</a>
+  <a id="470" class="Symbol">{</a><a id="471" href="foundation-core.sections.html#471" class="Bound">l1</a> <a id="474" href="foundation-core.sections.html#474" class="Bound">l2</a> <a id="477" class="Symbol">:</a> <a id="479" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="484" class="Symbol">}</a> <a id="486" class="Symbol">{</a><a id="487" href="foundation-core.sections.html#487" class="Bound">A</a> <a id="489" class="Symbol">:</a> <a id="491" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="494" href="foundation-core.sections.html#471" class="Bound">l1</a><a id="496" class="Symbol">}</a> <a id="498" class="Symbol">{</a><a id="499" href="foundation-core.sections.html#499" class="Bound">B</a> <a id="501" class="Symbol">:</a> <a id="503" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="506" href="foundation-core.sections.html#474" class="Bound">l2</a><a id="508" class="Symbol">}</a>
+  <a id="512" class="Keyword">where</a>
+
+  <a id="521" href="foundation-core.sections.html#521" class="Function">sec</a> <a id="525" class="Symbol">:</a> <a id="527" class="Symbol">(</a><a id="528" href="foundation-core.sections.html#487" class="Bound">A</a> <a id="530" class="Symbol">→</a> <a id="532" href="foundation-core.sections.html#499" class="Bound">B</a><a id="533" class="Symbol">)</a> <a id="535" class="Symbol">→</a> <a id="537" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="540" class="Symbol">(</a><a id="541" href="foundation-core.sections.html#471" class="Bound">l1</a> <a id="544" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="546" href="foundation-core.sections.html#474" class="Bound">l2</a><a id="548" class="Symbol">)</a>
+  <a id="552" href="foundation-core.sections.html#521" class="Function">sec</a> <a id="556" href="foundation-core.sections.html#556" class="Bound">f</a> <a id="558" class="Symbol">=</a> <a id="560" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="562" class="Symbol">(</a><a id="563" href="foundation-core.sections.html#499" class="Bound">B</a> <a id="565" class="Symbol">→</a> <a id="567" href="foundation-core.sections.html#487" class="Bound">A</a><a id="568" class="Symbol">)</a> <a id="570" class="Symbol">(λ</a> <a id="573" href="foundation-core.sections.html#573" class="Bound">g</a> <a id="575" class="Symbol">→</a> <a id="577" class="Symbol">(</a><a id="578" href="foundation-core.sections.html#556" class="Bound">f</a> <a id="580" href="foundation-core.functions.html#407" class="Function Operator">∘</a> <a id="582" href="foundation-core.sections.html#573" class="Bound">g</a><a id="583" class="Symbol">)</a> <a id="585" href="foundation-core.homotopies.html#467" class="Function Operator">~</a> <a id="587" href="foundation-core.functions.html#309" class="Function">id</a><a id="589" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-06)(649ac6f) Merge branch 'master' of github.com:UniMath/agda-unimath by e.m.rijke
+</pre>
+</body>
+</html>

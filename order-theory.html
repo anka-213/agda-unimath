@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Formalisation of the Symmetry Book</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/order-theory.lagda.md.</p>
+<p>Version of Sunday, March  6, 2022, 03:51 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Formalisation of the Symmetry Book</h1>
+</header>
+<pre class="Agda"><a id="60" class="Symbol">{-#</a> <a id="64" class="Keyword">OPTIONS</a> <a id="72" class="Pragma">--without-K</a> <a id="84" class="Pragma">--exact-split</a> <a id="98" class="Symbol">#-}</a>
+
+<a id="103" class="Keyword">module</a> <a id="110" href="order-theory.html" class="Module">order-theory</a> <a id="123" class="Keyword">where</a>
+
+<a id="130" class="Keyword">open</a> <a id="135" class="Keyword">import</a> <a id="142" href="order-theory.finite-posets.html" class="Module">order-theory.finite-posets</a> <a id="169" class="Keyword">public</a>
+<a id="176" class="Keyword">open</a> <a id="181" class="Keyword">import</a> <a id="188" href="order-theory.finite-preorders.html" class="Module">order-theory.finite-preorders</a> <a id="218" class="Keyword">public</a>
+<a id="225" class="Keyword">open</a> <a id="230" class="Keyword">import</a> <a id="237" href="order-theory.finitely-graded-posets.html" class="Module">order-theory.finitely-graded-posets</a> <a id="273" class="Keyword">public</a>
+<a id="280" class="Keyword">open</a> <a id="285" class="Keyword">import</a> <a id="292" href="order-theory.planar-binary-trees.html" class="Module">order-theory.planar-binary-trees</a> <a id="325" class="Keyword">public</a>
+<a id="332" class="Keyword">open</a> <a id="337" class="Keyword">import</a> <a id="344" href="order-theory.posets.html" class="Module">order-theory.posets</a> <a id="364" class="Keyword">public</a>
+<a id="371" class="Keyword">open</a> <a id="376" class="Keyword">import</a> <a id="383" href="order-theory.preorders.html" class="Module">order-theory.preorders</a> <a id="406" class="Keyword">public</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-06)(649ac6f) Merge branch 'master' of github.com:UniMath/agda-unimath by e.m.rijke
+</pre>
+</body>
+</html>

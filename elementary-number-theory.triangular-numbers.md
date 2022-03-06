@@ -1,0 +1,15 @@
+# The triangular numbers
+
+<pre class="Agda"><a id="35" class="Symbol">{-#</a> <a id="39" class="Keyword">OPTIONS</a> <a id="47" class="Pragma">--without-K</a> <a id="59" class="Pragma">--exact-split</a> <a id="73" class="Symbol">#-}</a>
+
+<a id="78" class="Keyword">module</a> <a id="85" href="elementary-number-theory.triangular-numbers.html" class="Module">elementary-number-theory.triangular-numbers</a> <a id="129" class="Keyword">where</a>
+
+<a id="136" class="Keyword">open</a> <a id="141" class="Keyword">import</a> <a id="148" href="elementary-number-theory.addition-natural-numbers.html" class="Module">elementary-number-theory.addition-natural-numbers</a> <a id="198" class="Keyword">using</a> <a id="204" class="Symbol">(</a><a id="205" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a><a id="210" class="Symbol">)</a>
+<a id="212" class="Keyword">open</a> <a id="217" class="Keyword">import</a> <a id="224" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="265" class="Keyword">using</a> <a id="271" class="Symbol">(</a><a id="272" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a><a id="273" class="Symbol">;</a> <a id="275" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a><a id="281" class="Symbol">)</a>
+</pre>
+## Definition
+
+<pre class="Agda"><a id="triangular-number-ℕ"></a><a id="311" href="elementary-number-theory.triangular-numbers.html#311" class="Function">triangular-number-ℕ</a> <a id="331" class="Symbol">:</a> <a id="333" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a> <a id="335" class="Symbol">→</a> <a id="337" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a>
+<a id="339" href="elementary-number-theory.triangular-numbers.html#311" class="Function">triangular-number-ℕ</a> <a id="359" class="Number">0</a> <a id="361" class="Symbol">=</a> <a id="363" class="Number">0</a>
+<a id="365" href="elementary-number-theory.triangular-numbers.html#311" class="Function">triangular-number-ℕ</a> <a id="385" class="Symbol">(</a><a id="386" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="393" href="elementary-number-theory.triangular-numbers.html#393" class="Bound">n</a><a id="394" class="Symbol">)</a> <a id="396" class="Symbol">=</a> <a id="398" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a> <a id="404" class="Symbol">(</a><a id="405" href="elementary-number-theory.triangular-numbers.html#311" class="Function">triangular-number-ℕ</a> <a id="425" href="elementary-number-theory.triangular-numbers.html#393" class="Bound">n</a><a id="426" class="Symbol">)</a> <a id="428" class="Symbol">(</a><a id="429" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="436" href="elementary-number-theory.triangular-numbers.html#393" class="Bound">n</a><a id="437" class="Symbol">)</a>
+</pre>

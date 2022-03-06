@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>elementary-number-theory</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/elementary-number-theory.lagda.md.</p>
+<p>Version of Sunday, March  6, 2022, 03:50 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="elementary-number-theory">Elementary Number Theory</h1>
+<pre class="Agda"><a id="37" class="Symbol">{-#</a> <a id="41" class="Keyword">OPTIONS</a> <a id="49" class="Pragma">--without-K</a> <a id="61" class="Pragma">--exact-split</a> <a id="75" class="Symbol">#-}</a>
+
+<a id="80" class="Keyword">module</a> <a id="87" href="elementary-number-theory.html" class="Module">elementary-number-theory</a> <a id="112" class="Keyword">where</a>
+
+<a id="119" class="Keyword">open</a> <a id="124" class="Keyword">import</a> <a id="131" href="elementary-number-theory.absolute-value-integers.html" class="Module">elementary-number-theory.absolute-value-integers</a> <a id="180" class="Keyword">public</a>
+<a id="187" class="Keyword">open</a> <a id="192" class="Keyword">import</a> <a id="199" href="elementary-number-theory.addition-integers.html" class="Module">elementary-number-theory.addition-integers</a> <a id="242" class="Keyword">public</a>
+<a id="249" class="Keyword">open</a> <a id="254" class="Keyword">import</a> <a id="261" href="elementary-number-theory.addition-natural-numbers.html" class="Module">elementary-number-theory.addition-natural-numbers</a> <a id="311" class="Keyword">public</a>
+<a id="318" class="Keyword">open</a> <a id="323" class="Keyword">import</a> <a id="330" href="elementary-number-theory.classical-finite-types.html" class="Module">elementary-number-theory.classical-finite-types</a> <a id="378" class="Keyword">public</a>
+<a id="385" class="Keyword">open</a> <a id="390" class="Keyword">import</a> <a id="397" href="elementary-number-theory.collatz-conjecture.html" class="Module">elementary-number-theory.collatz-conjecture</a> <a id="441" class="Keyword">public</a>
+<a id="448" class="Keyword">open</a> <a id="453" class="Keyword">import</a> <a id="460" href="elementary-number-theory.congruence-integers.html" class="Module">elementary-number-theory.congruence-integers</a> <a id="505" class="Keyword">public</a>
+<a id="512" class="Keyword">open</a> <a id="517" class="Keyword">import</a> <a id="524" href="elementary-number-theory.congruence-natural-numbers.html" class="Module">elementary-number-theory.congruence-natural-numbers</a> <a id="576" class="Keyword">public</a>
+<a id="583" class="Keyword">open</a> <a id="588" class="Keyword">import</a> <a id="595" href="elementary-number-theory.difference-integers.html" class="Module">elementary-number-theory.difference-integers</a> <a id="640" class="Keyword">public</a>
+<a id="647" class="Keyword">open</a> <a id="652" class="Keyword">import</a> <a id="659" href="elementary-number-theory.distance-integers.html" class="Module">elementary-number-theory.distance-integers</a> <a id="702" class="Keyword">public</a>
+<a id="709" class="Keyword">open</a> <a id="714" class="Keyword">import</a> <a id="721" href="elementary-number-theory.distance-natural-numbers.html" class="Module">elementary-number-theory.distance-natural-numbers</a> <a id="771" class="Keyword">public</a>
+<a id="778" class="Keyword">open</a> <a id="783" class="Keyword">import</a> <a id="790" href="elementary-number-theory.divisibility-integers.html" class="Module">elementary-number-theory.divisibility-integers</a> <a id="837" class="Keyword">public</a>
+<a id="844" class="Keyword">open</a> <a id="849" class="Keyword">import</a> <a id="856" href="elementary-number-theory.divisibility-natural-numbers.html" class="Module">elementary-number-theory.divisibility-natural-numbers</a> <a id="910" class="Keyword">public</a>
+<a id="917" class="Keyword">open</a> <a id="922" class="Keyword">import</a> <a id="929" href="elementary-number-theory.divisibility-standard-finite-types.html" class="Module">elementary-number-theory.divisibility-standard-finite-types</a> <a id="989" class="Keyword">public</a>
+<a id="996" class="Keyword">open</a> <a id="1001" class="Keyword">import</a> <a id="1008" href="elementary-number-theory.equality-integers.html" class="Module">elementary-number-theory.equality-integers</a> <a id="1051" class="Keyword">public</a>
+<a id="1058" class="Keyword">open</a> <a id="1063" class="Keyword">import</a> <a id="1070" href="elementary-number-theory.equality-natural-numbers.html" class="Module">elementary-number-theory.equality-natural-numbers</a> <a id="1120" class="Keyword">public</a>
+<a id="1127" class="Keyword">open</a> <a id="1132" class="Keyword">import</a> <a id="1139" href="elementary-number-theory.euclidean-division-natural-numbers.html" class="Module">elementary-number-theory.euclidean-division-natural-numbers</a> <a id="1199" class="Keyword">public</a>
+<a id="1206" class="Keyword">open</a> <a id="1211" class="Keyword">import</a> <a id="1218" href="elementary-number-theory.factorials.html" class="Module">elementary-number-theory.factorials</a> <a id="1254" class="Keyword">public</a>
+<a id="1261" class="Keyword">open</a> <a id="1266" class="Keyword">import</a> <a id="1273" href="elementary-number-theory.fibonacci-sequence.html" class="Module">elementary-number-theory.fibonacci-sequence</a> <a id="1317" class="Keyword">public</a>
+<a id="1324" class="Keyword">open</a> <a id="1329" class="Keyword">import</a> <a id="1336" href="elementary-number-theory.finitary-natural-numbers.html" class="Module">elementary-number-theory.finitary-natural-numbers</a> <a id="1386" class="Keyword">public</a>
+<a id="1393" class="Keyword">open</a> <a id="1398" class="Keyword">import</a> <a id="1405" href="elementary-number-theory.finitely-cyclic-maps.html" class="Module">elementary-number-theory.finitely-cyclic-maps</a> <a id="1451" class="Keyword">public</a>
+<a id="1458" class="Keyword">open</a> <a id="1463" class="Keyword">import</a> <a id="1470" href="elementary-number-theory.goldbach-conjecture.html" class="Module">elementary-number-theory.goldbach-conjecture</a> <a id="1515" class="Keyword">public</a>
+<a id="1522" class="Keyword">open</a> <a id="1527" class="Keyword">import</a> <a id="1534" href="elementary-number-theory.greatest-common-divisor-integers.html" class="Module">elementary-number-theory.greatest-common-divisor-integers</a> <a id="1592" class="Keyword">public</a>
+<a id="1599" class="Keyword">open</a> <a id="1604" class="Keyword">import</a> <a id="1611" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html" class="Module">elementary-number-theory.greatest-common-divisor-natural-numbers</a> <a id="1676" class="Keyword">public</a>
+<a id="1683" class="Keyword">open</a> <a id="1688" class="Keyword">import</a> <a id="1695" href="elementary-number-theory.inequality-integers.html" class="Module">elementary-number-theory.inequality-integers</a> <a id="1740" class="Keyword">public</a>
+<a id="1747" class="Keyword">open</a> <a id="1752" class="Keyword">import</a> <a id="1759" href="elementary-number-theory.inequality-natural-numbers.html" class="Module">elementary-number-theory.inequality-natural-numbers</a> <a id="1811" class="Keyword">public</a>
+<a id="1818" class="Keyword">open</a> <a id="1823" class="Keyword">import</a> <a id="1830" href="elementary-number-theory.inequality-standard-finite-types.html" class="Module">elementary-number-theory.inequality-standard-finite-types</a> <a id="1888" class="Keyword">public</a>
+<a id="1895" class="Keyword">open</a> <a id="1900" class="Keyword">import</a> <a id="1907" href="elementary-number-theory.infinitude-of-primes.html" class="Module">elementary-number-theory.infinitude-of-primes</a> <a id="1953" class="Keyword">public</a>
+<a id="1960" class="Keyword">open</a> <a id="1965" class="Keyword">import</a> <a id="1972" href="elementary-number-theory.integers.html" class="Module">elementary-number-theory.integers</a> <a id="2006" class="Keyword">public</a>
+<a id="2013" class="Keyword">open</a> <a id="2018" class="Keyword">import</a> <a id="2025" href="elementary-number-theory.iterating-functions.html" class="Module">elementary-number-theory.iterating-functions</a> <a id="2070" class="Keyword">public</a>
+<a id="2077" class="Keyword">open</a> <a id="2082" class="Keyword">import</a> <a id="2089" href="elementary-number-theory.modular-arithmetic-standard-finite-types.html" class="Module">elementary-number-theory.modular-arithmetic-standard-finite-types</a> <a id="2155" class="Keyword">public</a>
+<a id="2162" class="Keyword">open</a> <a id="2167" class="Keyword">import</a> <a id="2174" href="elementary-number-theory.modular-arithmetic.html" class="Module">elementary-number-theory.modular-arithmetic</a> <a id="2218" class="Keyword">public</a>
+<a id="2225" class="Keyword">open</a> <a id="2230" class="Keyword">import</a> <a id="2237" href="elementary-number-theory.multiplication-integers.html" class="Module">elementary-number-theory.multiplication-integers</a> <a id="2286" class="Keyword">public</a>
+<a id="2293" class="Keyword">open</a> <a id="2298" class="Keyword">import</a> <a id="2305" href="elementary-number-theory.multiplication-natural-numbers.html" class="Module">elementary-number-theory.multiplication-natural-numbers</a> <a id="2361" class="Keyword">public</a>
+<a id="2368" class="Keyword">open</a> <a id="2373" class="Keyword">import</a> <a id="2380" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="2421" class="Keyword">public</a>
+<a id="2428" class="Keyword">open</a> <a id="2433" class="Keyword">import</a> <a id="2440" href="elementary-number-theory.ordinal-induction-natural-numbers.html" class="Module">elementary-number-theory.ordinal-induction-natural-numbers</a> <a id="2499" class="Keyword">public</a>
+<a id="2506" class="Keyword">open</a> <a id="2511" class="Keyword">import</a> <a id="2518" href="elementary-number-theory.prime-numbers.html" class="Module">elementary-number-theory.prime-numbers</a> <a id="2557" class="Keyword">public</a>
+<a id="2564" class="Keyword">open</a> <a id="2569" class="Keyword">import</a> <a id="2576" href="elementary-number-theory.proper-divisors-natural-numbers.html" class="Module">elementary-number-theory.proper-divisors-natural-numbers</a> <a id="2633" class="Keyword">public</a>
+<a id="2640" class="Keyword">open</a> <a id="2645" class="Keyword">import</a> <a id="2652" href="elementary-number-theory.rational-numbers.html" class="Module">elementary-number-theory.rational-numbers</a> <a id="2694" class="Keyword">public</a>
+<a id="2701" class="Keyword">open</a> <a id="2706" class="Keyword">import</a> <a id="2713" href="elementary-number-theory.relatively-prime-integers.html" class="Module">elementary-number-theory.relatively-prime-integers</a> <a id="2764" class="Keyword">public</a>
+<a id="2771" class="Keyword">open</a> <a id="2776" class="Keyword">import</a> <a id="2783" href="elementary-number-theory.strong-induction-natural-numbers.html" class="Module">elementary-number-theory.strong-induction-natural-numbers</a> <a id="2841" class="Keyword">public</a>
+<a id="2848" class="Keyword">open</a> <a id="2853" class="Keyword">import</a> <a id="2860" href="elementary-number-theory.twin-prime-conjecture.html" class="Module">elementary-number-theory.twin-prime-conjecture</a> <a id="2907" class="Keyword">public</a>
+<a id="2914" class="Keyword">open</a> <a id="2919" class="Keyword">import</a> <a id="2926" href="elementary-number-theory.well-ordering-principle-natural-numbers.html" class="Module">elementary-number-theory.well-ordering-principle-natural-numbers</a> <a id="2991" class="Keyword">public</a>
+<a id="2998" class="Keyword">open</a> <a id="3003" class="Keyword">import</a> <a id="3010" href="elementary-number-theory.well-ordering-principle-standard-finite-types.html" class="Module">elementary-number-theory.well-ordering-principle-standard-finite-types</a> <a id="3081" class="Keyword">public</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-06)(649ac6f) Merge branch 'master' of github.com:UniMath/agda-unimath by e.m.rijke
+</pre>
+</body>
+</html>

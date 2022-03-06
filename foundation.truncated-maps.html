@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>foundation.truncated-maps</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/foundation/truncated-maps.lagda.md.</p>
+<p>Version of Sunday, March  6, 2022, 03:51 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="truncated-maps">Truncated maps</h1>
+<pre class="Agda"><a id="27" class="Symbol">{-#</a> <a id="31" class="Keyword">OPTIONS</a> <a id="39" class="Pragma">--without-K</a> <a id="51" class="Pragma">--exact-split</a> <a id="65" class="Symbol">#-}</a>
+
+<a id="70" class="Keyword">module</a> <a id="77" href="foundation.truncated-maps.html" class="Module">foundation.truncated-maps</a> <a id="103" class="Keyword">where</a>
+
+<a id="110" class="Keyword">open</a> <a id="115" class="Keyword">import</a> <a id="122" href="foundation-core.truncated-maps.html" class="Module">foundation-core.truncated-maps</a> <a id="153" class="Keyword">public</a>
+
+<a id="161" class="Keyword">open</a> <a id="166" class="Keyword">import</a> <a id="173" href="foundation-core.dependent-pair-types.html" class="Module">foundation-core.dependent-pair-types</a> <a id="210" class="Keyword">using</a> <a id="216" class="Symbol">(</a><a id="217" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="218" class="Symbol">;</a> <a id="220" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="224" class="Symbol">;</a> <a id="226" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="229" class="Symbol">;</a> <a id="231" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="234" class="Symbol">)</a>
+<a id="236" class="Keyword">open</a> <a id="241" class="Keyword">import</a> <a id="248" href="foundation-core.fibers-of-maps.html" class="Module">foundation-core.fibers-of-maps</a> <a id="279" class="Keyword">using</a> <a id="285" class="Symbol">(</a><a id="286" href="foundation-core.fibers-of-maps.html#928" class="Function">fib</a><a id="289" class="Symbol">)</a>
+<a id="291" class="Keyword">open</a> <a id="296" class="Keyword">import</a> <a id="303" href="foundation-core.truncation-levels.html" class="Module">foundation-core.truncation-levels</a> <a id="337" class="Keyword">using</a> <a id="343" class="Symbol">(</a><a id="344" href="foundation-core.truncation-levels.html#382" class="Datatype">𝕋</a><a id="345" class="Symbol">)</a>
+<a id="347" class="Keyword">open</a> <a id="352" class="Keyword">import</a> <a id="359" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a> <a id="391" class="Keyword">using</a> <a id="397" class="Symbol">(</a><a id="398" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="403" class="Symbol">;</a> <a id="405" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="407" class="Symbol">;</a> <a id="409" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="412" class="Symbol">)</a>
+
+<a id="415" class="Keyword">open</a> <a id="420" class="Keyword">import</a> <a id="427" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="451" class="Keyword">using</a> <a id="457" class="Symbol">(</a><a id="458" href="foundation-core.propositions.html#1246" class="Function">is-prop</a><a id="465" class="Symbol">;</a> <a id="467" href="foundation.propositions.html#1492" class="Function">is-prop-Π</a><a id="476" class="Symbol">;</a> <a id="478" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a><a id="485" class="Symbol">)</a>
+<a id="487" class="Keyword">open</a> <a id="492" class="Keyword">import</a> <a id="499" href="foundation.truncated-types.html" class="Module">foundation.truncated-types</a> <a id="526" class="Keyword">using</a> <a id="532" class="Symbol">(</a><a id="533" href="foundation.truncated-types.html#4327" class="Function">is-prop-is-trunc</a><a id="549" class="Symbol">)</a>
+</pre>
+<h2 id="properties">Properties</h2>
+<h3 id="being-a-truncated-map-is-a-property">Being a truncated map is a property</h3>
+<pre class="Agda"><a id="620" class="Keyword">module</a> <a id="627" href="foundation.truncated-maps.html#627" class="Module">_</a>
+  <a id="631" class="Symbol">{</a><a id="632" href="foundation.truncated-maps.html#632" class="Bound">l1</a> <a id="635" href="foundation.truncated-maps.html#635" class="Bound">l2</a> <a id="638" class="Symbol">:</a> <a id="640" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="645" class="Symbol">}</a> <a id="647" class="Symbol">{</a><a id="648" href="foundation.truncated-maps.html#648" class="Bound">A</a> <a id="650" class="Symbol">:</a> <a id="652" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="655" href="foundation.truncated-maps.html#632" class="Bound">l1</a><a id="657" class="Symbol">}</a> <a id="659" class="Symbol">{</a><a id="660" href="foundation.truncated-maps.html#660" class="Bound">B</a> <a id="662" class="Symbol">:</a> <a id="664" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="667" href="foundation.truncated-maps.html#635" class="Bound">l2</a><a id="669" class="Symbol">}</a>
+  <a id="673" class="Keyword">where</a>
+  
+  <a id="684" href="foundation.truncated-maps.html#684" class="Function">is-prop-is-trunc-map</a> <a id="705" class="Symbol">:</a> <a id="707" class="Symbol">(</a><a id="708" href="foundation.truncated-maps.html#708" class="Bound">k</a> <a id="710" class="Symbol">:</a> <a id="712" href="foundation-core.truncation-levels.html#382" class="Datatype">𝕋</a><a id="713" class="Symbol">)</a> <a id="715" class="Symbol">(</a><a id="716" href="foundation.truncated-maps.html#716" class="Bound">f</a> <a id="718" class="Symbol">:</a> <a id="720" href="foundation.truncated-maps.html#648" class="Bound">A</a> <a id="722" class="Symbol">→</a> <a id="724" href="foundation.truncated-maps.html#660" class="Bound">B</a><a id="725" class="Symbol">)</a> <a id="727" class="Symbol">→</a> <a id="729" href="foundation-core.propositions.html#1246" class="Function">is-prop</a> <a id="737" class="Symbol">(</a><a id="738" href="foundation-core.truncated-maps.html#1876" class="Function">is-trunc-map</a> <a id="751" href="foundation.truncated-maps.html#708" class="Bound">k</a> <a id="753" href="foundation.truncated-maps.html#716" class="Bound">f</a><a id="754" class="Symbol">)</a>
+  <a id="758" href="foundation.truncated-maps.html#684" class="Function">is-prop-is-trunc-map</a> <a id="779" href="foundation.truncated-maps.html#779" class="Bound">k</a> <a id="781" href="foundation.truncated-maps.html#781" class="Bound">f</a> <a id="783" class="Symbol">=</a> <a id="785" href="foundation.propositions.html#1492" class="Function">is-prop-Π</a> <a id="795" class="Symbol">(λ</a> <a id="798" href="foundation.truncated-maps.html#798" class="Bound">x</a> <a id="800" class="Symbol">→</a> <a id="802" href="foundation.truncated-types.html#4327" class="Function">is-prop-is-trunc</a> <a id="819" href="foundation.truncated-maps.html#779" class="Bound">k</a> <a id="821" class="Symbol">(</a><a id="822" href="foundation-core.fibers-of-maps.html#928" class="Function">fib</a> <a id="826" href="foundation.truncated-maps.html#781" class="Bound">f</a> <a id="828" href="foundation.truncated-maps.html#798" class="Bound">x</a><a id="829" class="Symbol">))</a>
+
+  <a id="835" href="foundation.truncated-maps.html#835" class="Function">is-trunc-map-Prop</a> <a id="853" class="Symbol">:</a> <a id="855" class="Symbol">(</a><a id="856" href="foundation.truncated-maps.html#856" class="Bound">k</a> <a id="858" class="Symbol">:</a> <a id="860" href="foundation-core.truncation-levels.html#382" class="Datatype">𝕋</a><a id="861" class="Symbol">)</a> <a id="863" class="Symbol">→</a> <a id="865" class="Symbol">(</a><a id="866" href="foundation.truncated-maps.html#648" class="Bound">A</a> <a id="868" class="Symbol">→</a> <a id="870" href="foundation.truncated-maps.html#660" class="Bound">B</a><a id="871" class="Symbol">)</a> <a id="873" class="Symbol">→</a> <a id="875" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a> <a id="883" class="Symbol">(</a><a id="884" href="foundation.truncated-maps.html#632" class="Bound">l1</a> <a id="887" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="889" href="foundation.truncated-maps.html#635" class="Bound">l2</a><a id="891" class="Symbol">)</a>
+  <a id="895" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="899" class="Symbol">(</a><a id="900" href="foundation.truncated-maps.html#835" class="Function">is-trunc-map-Prop</a> <a id="918" href="foundation.truncated-maps.html#918" class="Bound">k</a> <a id="920" href="foundation.truncated-maps.html#920" class="Bound">f</a><a id="921" class="Symbol">)</a> <a id="923" class="Symbol">=</a> <a id="925" href="foundation-core.truncated-maps.html#1876" class="Function">is-trunc-map</a> <a id="938" href="foundation.truncated-maps.html#918" class="Bound">k</a> <a id="940" href="foundation.truncated-maps.html#920" class="Bound">f</a>
+  <a id="944" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="948" class="Symbol">(</a><a id="949" href="foundation.truncated-maps.html#835" class="Function">is-trunc-map-Prop</a> <a id="967" href="foundation.truncated-maps.html#967" class="Bound">k</a> <a id="969" href="foundation.truncated-maps.html#969" class="Bound">f</a><a id="970" class="Symbol">)</a> <a id="972" class="Symbol">=</a> <a id="974" href="foundation.truncated-maps.html#684" class="Function">is-prop-is-trunc-map</a> <a id="995" href="foundation.truncated-maps.html#967" class="Bound">k</a> <a id="997" href="foundation.truncated-maps.html#969" class="Bound">f</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-06)(649ac6f) Merge branch 'master' of github.com:UniMath/agda-unimath by e.m.rijke
+</pre>
+</body>
+</html>

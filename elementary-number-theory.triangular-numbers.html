@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>elementary-number-theory.triangular-numbers</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/elementary-number-theory/triangular-numbers.lagda.md.</p>
+<p>Version of Sunday, March  6, 2022, 03:50 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="the-triangular-numbers">The triangular numbers</h1>
+<pre class="Agda"><a id="35" class="Symbol">{-#</a> <a id="39" class="Keyword">OPTIONS</a> <a id="47" class="Pragma">--without-K</a> <a id="59" class="Pragma">--exact-split</a> <a id="73" class="Symbol">#-}</a>
+
+<a id="78" class="Keyword">module</a> <a id="85" href="elementary-number-theory.triangular-numbers.html" class="Module">elementary-number-theory.triangular-numbers</a> <a id="129" class="Keyword">where</a>
+
+<a id="136" class="Keyword">open</a> <a id="141" class="Keyword">import</a> <a id="148" href="elementary-number-theory.addition-natural-numbers.html" class="Module">elementary-number-theory.addition-natural-numbers</a> <a id="198" class="Keyword">using</a> <a id="204" class="Symbol">(</a><a id="205" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a><a id="210" class="Symbol">)</a>
+<a id="212" class="Keyword">open</a> <a id="217" class="Keyword">import</a> <a id="224" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="265" class="Keyword">using</a> <a id="271" class="Symbol">(</a><a id="272" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a><a id="273" class="Symbol">;</a> <a id="275" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a><a id="281" class="Symbol">)</a>
+</pre>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="triangular-number-ℕ"></a><a id="311" href="elementary-number-theory.triangular-numbers.html#311" class="Function">triangular-number-ℕ</a> <a id="331" class="Symbol">:</a> <a id="333" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a> <a id="335" class="Symbol">→</a> <a id="337" href="elementary-number-theory.natural-numbers.html#1438" class="Datatype">ℕ</a>
+<a id="339" href="elementary-number-theory.triangular-numbers.html#311" class="Function">triangular-number-ℕ</a> <a id="359" class="Number">0</a> <a id="361" class="Symbol">=</a> <a id="363" class="Number">0</a>
+<a id="365" href="elementary-number-theory.triangular-numbers.html#311" class="Function">triangular-number-ℕ</a> <a id="385" class="Symbol">(</a><a id="386" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="393" href="elementary-number-theory.triangular-numbers.html#393" class="Bound">n</a><a id="394" class="Symbol">)</a> <a id="396" class="Symbol">=</a> <a id="398" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a> <a id="404" class="Symbol">(</a><a id="405" href="elementary-number-theory.triangular-numbers.html#311" class="Function">triangular-number-ℕ</a> <a id="425" href="elementary-number-theory.triangular-numbers.html#393" class="Bound">n</a><a id="426" class="Symbol">)</a> <a id="428" class="Symbol">(</a><a id="429" href="elementary-number-theory.natural-numbers.html#1472" class="InductiveConstructor">succ-ℕ</a> <a id="436" href="elementary-number-theory.triangular-numbers.html#393" class="Bound">n</a><a id="437" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-06)(649ac6f) Merge branch 'master' of github.com:UniMath/agda-unimath by e.m.rijke
+</pre>
+</body>
+</html>
