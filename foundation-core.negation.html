@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>foundation-core.negation</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/foundation-core/negation.lagda.md.</p>
+<p>Version of Sunday, March  6, 2022, 05:48 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="negation">Negation</h1>
+<pre class="Agda"><a id="21" class="Symbol">{-#</a> <a id="25" class="Keyword">OPTIONS</a> <a id="33" class="Pragma">--without-K</a> <a id="45" class="Pragma">--exact-split</a> <a id="59" class="Symbol">#-}</a>
+
+<a id="64" class="Keyword">module</a> <a id="71" href="foundation-core.negation.html" class="Module">foundation-core.negation</a> <a id="96" class="Keyword">where</a>
+
+<a id="103" class="Keyword">open</a> <a id="108" class="Keyword">import</a> <a id="115" href="foundation-core.empty-types.html" class="Module">foundation-core.empty-types</a> <a id="143" class="Keyword">using</a> <a id="149" class="Symbol">(</a><a id="150" href="foundation-core.empty-types.html#1047" class="Datatype">empty</a><a id="155" class="Symbol">)</a>
+<a id="157" class="Keyword">open</a> <a id="162" class="Keyword">import</a> <a id="169" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a> <a id="201" class="Keyword">using</a> <a id="207" class="Symbol">(</a><a id="208" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="213" class="Symbol">;</a> <a id="215" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="217" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The Curry-Howard interpretation of negation in type theory is the interpretation of the proposition <code>P ⇒ ⊥</code> using propositions as types. Thus, the negation of a type <code>A</code> is the type <code>A → empty</code>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="¬"></a><a id="452" href="foundation-core.negation.html#452" class="Function">¬</a> <a id="454" class="Symbol">:</a> <a id="456" class="Symbol">{</a><a id="457" href="foundation-core.negation.html#457" class="Bound">l</a> <a id="459" class="Symbol">:</a> <a id="461" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="466" class="Symbol">}</a> <a id="468" class="Symbol">→</a> <a id="470" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="473" href="foundation-core.negation.html#457" class="Bound">l</a> <a id="475" class="Symbol">→</a> <a id="477" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="480" href="foundation-core.negation.html#457" class="Bound">l</a>
+<a id="482" href="foundation-core.negation.html#452" class="Function">¬</a> <a id="484" href="foundation-core.negation.html#484" class="Bound">A</a> <a id="486" class="Symbol">=</a> <a id="488" href="foundation-core.negation.html#484" class="Bound">A</a> <a id="490" class="Symbol">→</a> <a id="492" href="foundation-core.empty-types.html#1047" class="Datatype">empty</a>
+
+<a id="map-neg"></a><a id="499" href="foundation-core.negation.html#499" class="Function">map-neg</a> <a id="507" class="Symbol">:</a> <a id="509" class="Symbol">{</a><a id="510" href="foundation-core.negation.html#510" class="Bound">l1</a> <a id="513" href="foundation-core.negation.html#513" class="Bound">l2</a> <a id="516" class="Symbol">:</a> <a id="518" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="523" class="Symbol">}</a> <a id="525" class="Symbol">{</a><a id="526" href="foundation-core.negation.html#526" class="Bound">P</a> <a id="528" class="Symbol">:</a> <a id="530" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="533" href="foundation-core.negation.html#510" class="Bound">l1</a><a id="535" class="Symbol">}</a> <a id="537" class="Symbol">{</a><a id="538" href="foundation-core.negation.html#538" class="Bound">Q</a> <a id="540" class="Symbol">:</a> <a id="542" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="545" href="foundation-core.negation.html#513" class="Bound">l2</a><a id="547" class="Symbol">}</a> <a id="549" class="Symbol">→</a>
+  <a id="553" class="Symbol">(</a><a id="554" href="foundation-core.negation.html#526" class="Bound">P</a> <a id="556" class="Symbol">→</a> <a id="558" href="foundation-core.negation.html#538" class="Bound">Q</a><a id="559" class="Symbol">)</a> <a id="561" class="Symbol">→</a> <a id="563" class="Symbol">(</a><a id="564" href="foundation-core.negation.html#452" class="Function">¬</a> <a id="566" href="foundation-core.negation.html#538" class="Bound">Q</a> <a id="568" class="Symbol">→</a> <a id="570" href="foundation-core.negation.html#452" class="Function">¬</a> <a id="572" href="foundation-core.negation.html#526" class="Bound">P</a><a id="573" class="Symbol">)</a>
+<a id="575" href="foundation-core.negation.html#499" class="Function">map-neg</a> <a id="583" href="foundation-core.negation.html#583" class="Bound">f</a> <a id="585" href="foundation-core.negation.html#585" class="Bound">nq</a> <a id="588" href="foundation-core.negation.html#588" class="Bound">p</a> <a id="590" class="Symbol">=</a> <a id="592" href="foundation-core.negation.html#585" class="Bound">nq</a> <a id="595" class="Symbol">(</a><a id="596" href="foundation-core.negation.html#583" class="Bound">f</a> <a id="598" href="foundation-core.negation.html#588" class="Bound">p</a><a id="599" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-06)(c19fb75) Merge pull request #88 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>
