@@ -127,7 +127,7 @@ Welcome to the website of the `agda-unimath` formalization project.
 <a id="6249" class="Keyword">open</a> <a id="6254" class="Keyword">import</a> <a id="6261" href="foundation.distributivity-of-dependent-functions-over-dependent-pairs.html" class="Module">foundation.distributivity-of-dependent-functions-over-dependent-pairs</a>
 <a id="6331" class="Keyword">open</a> <a id="6336" class="Keyword">import</a> <a id="6343" href="foundation.double-negation.html" class="Module">foundation.double-negation</a>
 <a id="6370" class="Keyword">open</a> <a id="6375" class="Keyword">import</a> <a id="6382" href="foundation.effective-maps-equivalence-relations.html" class="Module">foundation.effective-maps-equivalence-relations</a>
-<a id="6430" class="Keyword">open</a> <a id="6435" class="Keyword">import</a> <a id="6442" href="foundation.elementhood-relation-W-types.html" class="Module">foundation.elementhood-relation-W-types</a>
+<a id="6430" class="Keyword">open</a> <a id="6435" class="Keyword">import</a> <a id="6442" href="foundation.elementhood-relation-w-types.html" class="Module">foundation.elementhood-relation-w-types</a>
 <a id="6482" class="Keyword">open</a> <a id="6487" class="Keyword">import</a> <a id="6494" href="foundation.embeddings.html" class="Module">foundation.embeddings</a>
 <a id="6516" class="Keyword">open</a> <a id="6521" class="Keyword">import</a> <a id="6528" href="foundation.empty-types.html" class="Module">foundation.empty-types</a>
 <a id="6551" class="Keyword">open</a> <a id="6556" class="Keyword">import</a> <a id="6563" href="foundation.epimorphisms-with-respect-to-sets.html" class="Module">foundation.epimorphisms-with-respect-to-sets</a>
@@ -142,7 +142,7 @@ Welcome to the website of the `agda-unimath` formalization project.
 <a id="7002" class="Keyword">open</a> <a id="7007" class="Keyword">import</a> <a id="7014" href="foundation.equivalences-maybe.html" class="Module">foundation.equivalences-maybe</a>
 <a id="7044" class="Keyword">open</a> <a id="7049" class="Keyword">import</a> <a id="7056" href="foundation.equivalences.html" class="Module">foundation.equivalences</a>
 <a id="7080" class="Keyword">open</a> <a id="7085" class="Keyword">import</a> <a id="7092" href="foundation.existential-quantification.html" class="Module">foundation.existential-quantification</a>
-<a id="7130" class="Keyword">open</a> <a id="7135" class="Keyword">import</a> <a id="7142" href="foundation.extensional-W-types.html" class="Module">foundation.extensional-W-types</a>
+<a id="7130" class="Keyword">open</a> <a id="7135" class="Keyword">import</a> <a id="7142" href="foundation.extensional-w-types.html" class="Module">foundation.extensional-w-types</a>
 <a id="7173" class="Keyword">open</a> <a id="7178" class="Keyword">import</a> <a id="7185" href="foundation.faithful-maps.html" class="Module">foundation.faithful-maps</a>
 <a id="7210" class="Keyword">open</a> <a id="7215" class="Keyword">import</a> <a id="7222" href="foundation.fiber-inclusions.html" class="Module">foundation.fiber-inclusions</a>
 <a id="7250" class="Keyword">open</a> <a id="7255" class="Keyword">import</a> <a id="7262" href="foundation.fibered-maps.html" class="Module">foundation.fibered-maps</a>
@@ -164,10 +164,10 @@ Welcome to the website of the `agda-unimath` formalization project.
 <a id="8027" class="Keyword">open</a> <a id="8032" class="Keyword">import</a> <a id="8039" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
 <a id="8065" class="Keyword">open</a> <a id="8070" class="Keyword">import</a> <a id="8077" href="foundation.images.html" class="Module">foundation.images</a>
 <a id="8095" class="Keyword">open</a> <a id="8100" class="Keyword">import</a> <a id="8107" href="foundation.impredicative-encodings.html" class="Module">foundation.impredicative-encodings</a>
-<a id="8142" class="Keyword">open</a> <a id="8147" class="Keyword">import</a> <a id="8154" href="foundation.indexed-W-types.html" class="Module">foundation.indexed-W-types</a>
+<a id="8142" class="Keyword">open</a> <a id="8147" class="Keyword">import</a> <a id="8154" href="foundation.indexed-w-types.html" class="Module">foundation.indexed-w-types</a>
 <a id="8181" class="Keyword">open</a> <a id="8186" class="Keyword">import</a> <a id="8193" href="foundation.induction-principle-propositional-truncation.html" class="Module">foundation.induction-principle-propositional-truncation</a>
-<a id="8249" class="Keyword">open</a> <a id="8254" class="Keyword">import</a> <a id="8261" href="foundation.induction-W-types.html" class="Module">foundation.induction-W-types</a>
-<a id="8290" class="Keyword">open</a> <a id="8295" class="Keyword">import</a> <a id="8302" href="foundation.inequality-W-types.html" class="Module">foundation.inequality-W-types</a>
+<a id="8249" class="Keyword">open</a> <a id="8254" class="Keyword">import</a> <a id="8261" href="foundation.induction-w-types.html" class="Module">foundation.induction-w-types</a>
+<a id="8290" class="Keyword">open</a> <a id="8295" class="Keyword">import</a> <a id="8302" href="foundation.inequality-w-types.html" class="Module">foundation.inequality-w-types</a>
 <a id="8332" class="Keyword">open</a> <a id="8337" class="Keyword">import</a> <a id="8344" href="foundation.injective-maps.html" class="Module">foundation.injective-maps</a>
 <a id="8370" class="Keyword">open</a> <a id="8375" class="Keyword">import</a> <a id="8382" href="foundation.interchange-law.html" class="Module">foundation.interchange-law</a>
 <a id="8409" class="Keyword">open</a> <a id="8414" class="Keyword">import</a> <a id="8421" href="foundation.involutions.html" class="Module">foundation.involutions</a>
@@ -175,246 +175,246 @@ Welcome to the website of the `agda-unimath` formalization project.
 <a id="8483" class="Keyword">open</a> <a id="8488" class="Keyword">import</a> <a id="8495" href="foundation.isomorphisms-of-sets.html" class="Module">foundation.isomorphisms-of-sets</a>
 <a id="8527" class="Keyword">open</a> <a id="8532" class="Keyword">import</a> <a id="8539" href="foundation.law-of-excluded-middle.html" class="Module">foundation.law-of-excluded-middle</a>
 <a id="8573" class="Keyword">open</a> <a id="8578" class="Keyword">import</a> <a id="8585" href="foundation.lawveres-fixed-point-theorem.html" class="Module">foundation.lawveres-fixed-point-theorem</a>
-<a id="8625" class="Keyword">open</a> <a id="8630" class="Keyword">import</a> <a id="8637" href="foundation.lists.html" class="Module">foundation.lists</a>
-<a id="8654" class="Keyword">open</a> <a id="8659" class="Keyword">import</a> <a id="8666" href="foundation.locally-small-types.html" class="Module">foundation.locally-small-types</a>
-<a id="8697" class="Keyword">open</a> <a id="8702" class="Keyword">import</a> <a id="8709" href="foundation.logical-equivalences.html" class="Module">foundation.logical-equivalences</a>
-<a id="8741" class="Keyword">open</a> <a id="8746" class="Keyword">import</a> <a id="8753" href="foundation.maybe.html" class="Module">foundation.maybe</a>
-<a id="8770" class="Keyword">open</a> <a id="8775" class="Keyword">import</a> <a id="8782" href="foundation.mere-equality.html" class="Module">foundation.mere-equality</a>
-<a id="8807" class="Keyword">open</a> <a id="8812" class="Keyword">import</a> <a id="8819" href="foundation.mere-equivalences.html" class="Module">foundation.mere-equivalences</a>
-<a id="8848" class="Keyword">open</a> <a id="8853" class="Keyword">import</a> <a id="8860" href="foundation.monomorphisms.html" class="Module">foundation.monomorphisms</a>
-<a id="8885" class="Keyword">open</a> <a id="8890" class="Keyword">import</a> <a id="8897" href="foundation.multisets.html" class="Module">foundation.multisets</a>
-<a id="8918" class="Keyword">open</a> <a id="8923" class="Keyword">import</a> <a id="8930" href="foundation.negation.html" class="Module">foundation.negation</a>
-<a id="8950" class="Keyword">open</a> <a id="8955" class="Keyword">import</a> <a id="8962" href="foundation.non-contractible-types.html" class="Module">foundation.non-contractible-types</a>
-<a id="8996" class="Keyword">open</a> <a id="9001" class="Keyword">import</a> <a id="9008" href="foundation.path-split-maps.html" class="Module">foundation.path-split-maps</a>
-<a id="9035" class="Keyword">open</a> <a id="9040" class="Keyword">import</a> <a id="9047" href="foundation.polynomial-endofunctors.html" class="Module">foundation.polynomial-endofunctors</a>
-<a id="9082" class="Keyword">open</a> <a id="9087" class="Keyword">import</a> <a id="9094" href="foundation.propositional-extensionality.html" class="Module">foundation.propositional-extensionality</a>
-<a id="9134" class="Keyword">open</a> <a id="9139" class="Keyword">import</a> <a id="9146" href="foundation.propositional-maps.html" class="Module">foundation.propositional-maps</a>
-<a id="9176" class="Keyword">open</a> <a id="9181" class="Keyword">import</a> <a id="9188" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a>
-<a id="9225" class="Keyword">open</a> <a id="9230" class="Keyword">import</a> <a id="9237" href="foundation.propositions.html" class="Module">foundation.propositions</a>
-<a id="9261" class="Keyword">open</a> <a id="9266" class="Keyword">import</a> <a id="9273" href="foundation.pullbacks.html" class="Module">foundation.pullbacks</a>
-<a id="9294" class="Keyword">open</a> <a id="9299" class="Keyword">import</a> <a id="9306" href="foundation.raising-universe-levels.html" class="Module">foundation.raising-universe-levels</a>
-<a id="9341" class="Keyword">open</a> <a id="9346" class="Keyword">import</a> <a id="9353" href="foundation.reflecting-maps-equivalence-relations.html" class="Module">foundation.reflecting-maps-equivalence-relations</a>
-<a id="9402" class="Keyword">open</a> <a id="9407" class="Keyword">import</a> <a id="9414" href="foundation.replacement.html" class="Module">foundation.replacement</a>
-<a id="9437" class="Keyword">open</a> <a id="9442" class="Keyword">import</a> <a id="9449" href="foundation.retractions.html" class="Module">foundation.retractions</a>
-<a id="9472" class="Keyword">open</a> <a id="9477" class="Keyword">import</a> <a id="9484" href="foundation.Russells-paradox.html" class="Module">foundation.Russells-paradox</a>
-<a id="9512" class="Keyword">open</a> <a id="9517" class="Keyword">import</a> <a id="9524" href="foundation.sections.html" class="Module">foundation.sections</a>
-<a id="9544" class="Keyword">open</a> <a id="9549" class="Keyword">import</a> <a id="9556" href="foundation.set-presented-types.html" class="Module">foundation.set-presented-types</a>
-<a id="9587" class="Keyword">open</a> <a id="9592" class="Keyword">import</a> <a id="9599" href="foundation.set-truncations.html" class="Module">foundation.set-truncations</a>
-<a id="9626" class="Keyword">open</a> <a id="9631" class="Keyword">import</a> <a id="9638" href="foundation.sets.html" class="Module">foundation.sets</a>
-<a id="9654" class="Keyword">open</a> <a id="9659" class="Keyword">import</a> <a id="9666" href="foundation.singleton-induction.html" class="Module">foundation.singleton-induction</a>
-<a id="9697" class="Keyword">open</a> <a id="9702" class="Keyword">import</a> <a id="9709" href="foundation.slice.html" class="Module">foundation.slice</a>
-<a id="9726" class="Keyword">open</a> <a id="9731" class="Keyword">import</a> <a id="9738" href="foundation.small-maps.html" class="Module">foundation.small-maps</a>
-<a id="9760" class="Keyword">open</a> <a id="9765" class="Keyword">import</a> <a id="9772" href="foundation.small-multisets.html" class="Module">foundation.small-multisets</a>
-<a id="9799" class="Keyword">open</a> <a id="9804" class="Keyword">import</a> <a id="9811" href="foundation.small-types.html" class="Module">foundation.small-types</a>
-<a id="9834" class="Keyword">open</a> <a id="9839" class="Keyword">import</a> <a id="9846" href="foundation.small-universes.html" class="Module">foundation.small-universes</a>
-<a id="9873" class="Keyword">open</a> <a id="9878" class="Keyword">import</a> <a id="9885" href="foundation.split-surjective-maps.html" class="Module">foundation.split-surjective-maps</a>
-<a id="9918" class="Keyword">open</a> <a id="9923" class="Keyword">import</a> <a id="9930" href="foundation.structure-identity-principle.html" class="Module">foundation.structure-identity-principle</a>
-<a id="9970" class="Keyword">open</a> <a id="9975" class="Keyword">import</a> <a id="9982" href="foundation.structure.html" class="Module">foundation.structure</a>
-<a id="10003" class="Keyword">open</a> <a id="10008" class="Keyword">import</a> <a id="10015" href="foundation.subterminal-types.html" class="Module">foundation.subterminal-types</a>
-<a id="10044" class="Keyword">open</a> <a id="10049" class="Keyword">import</a> <a id="10056" href="foundation.subtype-identity-principle.html" class="Module">foundation.subtype-identity-principle</a>
-<a id="10094" class="Keyword">open</a> <a id="10099" class="Keyword">import</a> <a id="10106" href="foundation.subtypes.html" class="Module">foundation.subtypes</a>
-<a id="10126" class="Keyword">open</a> <a id="10131" class="Keyword">import</a> <a id="10138" href="foundation.subuniverses.html" class="Module">foundation.subuniverses</a>
-<a id="10162" class="Keyword">open</a> <a id="10167" class="Keyword">import</a> <a id="10174" href="foundation.surjective-maps.html" class="Module">foundation.surjective-maps</a>
-<a id="10201" class="Keyword">open</a> <a id="10206" class="Keyword">import</a> <a id="10213" href="foundation.truncated-maps.html" class="Module">foundation.truncated-maps</a>
-<a id="10239" class="Keyword">open</a> <a id="10244" class="Keyword">import</a> <a id="10251" href="foundation.truncated-types.html" class="Module">foundation.truncated-types</a>
-<a id="10278" class="Keyword">open</a> <a id="10283" class="Keyword">import</a> <a id="10290" href="foundation.truncation-levels.html" class="Module">foundation.truncation-levels</a>
-<a id="10319" class="Keyword">open</a> <a id="10324" class="Keyword">import</a> <a id="10331" href="foundation.type-arithmetic-cartesian-product-types.html" class="Module">foundation.type-arithmetic-cartesian-product-types</a>
-<a id="10382" class="Keyword">open</a> <a id="10387" class="Keyword">import</a> <a id="10394" href="foundation.type-arithmetic-coproduct-types.html" class="Module">foundation.type-arithmetic-coproduct-types</a>
-<a id="10437" class="Keyword">open</a> <a id="10442" class="Keyword">import</a> <a id="10449" href="foundation.type-arithmetic-dependent-pair-types.html" class="Module">foundation.type-arithmetic-dependent-pair-types</a>
-<a id="10497" class="Keyword">open</a> <a id="10502" class="Keyword">import</a> <a id="10509" href="foundation.type-arithmetic-empty-type.html" class="Module">foundation.type-arithmetic-empty-type</a>
-<a id="10547" class="Keyword">open</a> <a id="10552" class="Keyword">import</a> <a id="10559" href="foundation.type-arithmetic-unit-type.html" class="Module">foundation.type-arithmetic-unit-type</a>
-<a id="10596" class="Keyword">open</a> <a id="10601" class="Keyword">import</a> <a id="10608" href="foundation.uniqueness-image.html" class="Module">foundation.uniqueness-image</a>
-<a id="10636" class="Keyword">open</a> <a id="10641" class="Keyword">import</a> <a id="10648" href="foundation.uniqueness-set-quotients.html" class="Module">foundation.uniqueness-set-quotients</a>
-<a id="10684" class="Keyword">open</a> <a id="10689" class="Keyword">import</a> <a id="10696" href="foundation.uniqueness-set-truncations.html" class="Module">foundation.uniqueness-set-truncations</a>
-<a id="10734" class="Keyword">open</a> <a id="10739" class="Keyword">import</a> <a id="10746" href="foundation.unit-type.html" class="Module">foundation.unit-type</a>
-<a id="10767" class="Keyword">open</a> <a id="10772" class="Keyword">import</a> <a id="10779" href="foundation.univalence-implies-function-extensionality.html" class="Module">foundation.univalence-implies-function-extensionality</a>
-<a id="10833" class="Keyword">open</a> <a id="10838" class="Keyword">import</a> <a id="10845" href="foundation.univalence.html" class="Module">foundation.univalence</a>
-<a id="10867" class="Keyword">open</a> <a id="10872" class="Keyword">import</a> <a id="10879" href="foundation.univalent-type-families.html" class="Module">foundation.univalent-type-families</a>
-<a id="10914" class="Keyword">open</a> <a id="10919" class="Keyword">import</a> <a id="10926" href="foundation.universal-property-booleans.html" class="Module">foundation.universal-property-booleans</a>
-<a id="10965" class="Keyword">open</a> <a id="10970" class="Keyword">import</a> <a id="10977" href="foundation.universal-property-cartesian-product-types.html" class="Module">foundation.universal-property-cartesian-product-types</a>
-<a id="11031" class="Keyword">open</a> <a id="11036" class="Keyword">import</a> <a id="11043" href="foundation.universal-property-coproduct-types.html" class="Module">foundation.universal-property-coproduct-types</a>
-<a id="11089" class="Keyword">open</a> <a id="11094" class="Keyword">import</a> <a id="11101" href="foundation.universal-property-dependent-pair-types.html" class="Module">foundation.universal-property-dependent-pair-types</a>
-<a id="11152" class="Keyword">open</a> <a id="11157" class="Keyword">import</a> <a id="11164" href="foundation.universal-property-empty-type.html" class="Module">foundation.universal-property-empty-type</a>
-<a id="11205" class="Keyword">open</a> <a id="11210" class="Keyword">import</a> <a id="11217" href="foundation.universal-property-fiber-products.html" class="Module">foundation.universal-property-fiber-products</a>
-<a id="11262" class="Keyword">open</a> <a id="11267" class="Keyword">import</a> <a id="11274" href="foundation.universal-property-identity-types.html" class="Module">foundation.universal-property-identity-types</a>
-<a id="11319" class="Keyword">open</a> <a id="11324" class="Keyword">import</a> <a id="11331" href="foundation.universal-property-image.html" class="Module">foundation.universal-property-image</a>
-<a id="11367" class="Keyword">open</a> <a id="11372" class="Keyword">import</a> <a id="11379" href="foundation.universal-property-maybe.html" class="Module">foundation.universal-property-maybe</a>
-<a id="11415" class="Keyword">open</a> <a id="11420" class="Keyword">import</a> <a id="11427" href="foundation.universal-property-propositional-truncation-into-sets.html" class="Module">foundation.universal-property-propositional-truncation-into-sets</a>
-<a id="11492" class="Keyword">open</a> <a id="11497" class="Keyword">import</a> <a id="11504" href="foundation.universal-property-propositional-truncation.html" class="Module">foundation.universal-property-propositional-truncation</a>
-<a id="11559" class="Keyword">open</a> <a id="11564" class="Keyword">import</a> <a id="11571" href="foundation.universal-property-pullbacks.html" class="Module">foundation.universal-property-pullbacks</a>
-<a id="11611" class="Keyword">open</a> <a id="11616" class="Keyword">import</a> <a id="11623" href="foundation.universal-property-set-quotients.html" class="Module">foundation.universal-property-set-quotients</a>
-<a id="11667" class="Keyword">open</a> <a id="11672" class="Keyword">import</a> <a id="11679" href="foundation.universal-property-set-truncation.html" class="Module">foundation.universal-property-set-truncation</a>
-<a id="11724" class="Keyword">open</a> <a id="11729" class="Keyword">import</a> <a id="11736" href="foundation.universal-property-unit-type.html" class="Module">foundation.universal-property-unit-type</a>
-<a id="11776" class="Keyword">open</a> <a id="11781" class="Keyword">import</a> <a id="11788" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="11815" class="Keyword">open</a> <a id="11820" class="Keyword">import</a> <a id="11827" href="foundation.unordered-pairs.html" class="Module">foundation.unordered-pairs</a>
-<a id="11854" class="Keyword">open</a> <a id="11859" class="Keyword">import</a> <a id="11866" href="foundation.W-types.html" class="Module">foundation.W-types</a>
-<a id="11885" class="Keyword">open</a> <a id="11890" class="Keyword">import</a> <a id="11897" href="foundation.weak-function-extensionality.html" class="Module">foundation.weak-function-extensionality</a>
-<a id="11937" class="Keyword">open</a> <a id="11942" class="Keyword">import</a> <a id="11949" href="foundation.weakly-constant-maps.html" class="Module">foundation.weakly-constant-maps</a>
+<a id="8625" class="Keyword">open</a> <a id="8630" class="Keyword">import</a> <a id="8637" href="foundation.locally-small-types.html" class="Module">foundation.locally-small-types</a>
+<a id="8668" class="Keyword">open</a> <a id="8673" class="Keyword">import</a> <a id="8680" href="foundation.logical-equivalences.html" class="Module">foundation.logical-equivalences</a>
+<a id="8712" class="Keyword">open</a> <a id="8717" class="Keyword">import</a> <a id="8724" href="foundation.maybe.html" class="Module">foundation.maybe</a>
+<a id="8741" class="Keyword">open</a> <a id="8746" class="Keyword">import</a> <a id="8753" href="foundation.mere-equality.html" class="Module">foundation.mere-equality</a>
+<a id="8778" class="Keyword">open</a> <a id="8783" class="Keyword">import</a> <a id="8790" href="foundation.mere-equivalences.html" class="Module">foundation.mere-equivalences</a>
+<a id="8819" class="Keyword">open</a> <a id="8824" class="Keyword">import</a> <a id="8831" href="foundation.monomorphisms.html" class="Module">foundation.monomorphisms</a>
+<a id="8856" class="Keyword">open</a> <a id="8861" class="Keyword">import</a> <a id="8868" href="foundation.multisets.html" class="Module">foundation.multisets</a>
+<a id="8889" class="Keyword">open</a> <a id="8894" class="Keyword">import</a> <a id="8901" href="foundation.negation.html" class="Module">foundation.negation</a>
+<a id="8921" class="Keyword">open</a> <a id="8926" class="Keyword">import</a> <a id="8933" href="foundation.non-contractible-types.html" class="Module">foundation.non-contractible-types</a>
+<a id="8967" class="Keyword">open</a> <a id="8972" class="Keyword">import</a> <a id="8979" href="foundation.path-split-maps.html" class="Module">foundation.path-split-maps</a>
+<a id="9006" class="Keyword">open</a> <a id="9011" class="Keyword">import</a> <a id="9018" href="foundation.polynomial-endofunctors.html" class="Module">foundation.polynomial-endofunctors</a>
+<a id="9053" class="Keyword">open</a> <a id="9058" class="Keyword">import</a> <a id="9065" href="foundation.propositional-extensionality.html" class="Module">foundation.propositional-extensionality</a>
+<a id="9105" class="Keyword">open</a> <a id="9110" class="Keyword">import</a> <a id="9117" href="foundation.propositional-maps.html" class="Module">foundation.propositional-maps</a>
+<a id="9147" class="Keyword">open</a> <a id="9152" class="Keyword">import</a> <a id="9159" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a>
+<a id="9196" class="Keyword">open</a> <a id="9201" class="Keyword">import</a> <a id="9208" href="foundation.propositions.html" class="Module">foundation.propositions</a>
+<a id="9232" class="Keyword">open</a> <a id="9237" class="Keyword">import</a> <a id="9244" href="foundation.pullbacks.html" class="Module">foundation.pullbacks</a>
+<a id="9265" class="Keyword">open</a> <a id="9270" class="Keyword">import</a> <a id="9277" href="foundation.raising-universe-levels.html" class="Module">foundation.raising-universe-levels</a>
+<a id="9312" class="Keyword">open</a> <a id="9317" class="Keyword">import</a> <a id="9324" href="foundation.reflecting-maps-equivalence-relations.html" class="Module">foundation.reflecting-maps-equivalence-relations</a>
+<a id="9373" class="Keyword">open</a> <a id="9378" class="Keyword">import</a> <a id="9385" href="foundation.replacement.html" class="Module">foundation.replacement</a>
+<a id="9408" class="Keyword">open</a> <a id="9413" class="Keyword">import</a> <a id="9420" href="foundation.retractions.html" class="Module">foundation.retractions</a>
+<a id="9443" class="Keyword">open</a> <a id="9448" class="Keyword">import</a> <a id="9455" href="foundation.russells-paradox.html" class="Module">foundation.russells-paradox</a>
+<a id="9483" class="Keyword">open</a> <a id="9488" class="Keyword">import</a> <a id="9495" href="foundation.sections.html" class="Module">foundation.sections</a>
+<a id="9515" class="Keyword">open</a> <a id="9520" class="Keyword">import</a> <a id="9527" href="foundation.set-presented-types.html" class="Module">foundation.set-presented-types</a>
+<a id="9558" class="Keyword">open</a> <a id="9563" class="Keyword">import</a> <a id="9570" href="foundation.set-truncations.html" class="Module">foundation.set-truncations</a>
+<a id="9597" class="Keyword">open</a> <a id="9602" class="Keyword">import</a> <a id="9609" href="foundation.sets.html" class="Module">foundation.sets</a>
+<a id="9625" class="Keyword">open</a> <a id="9630" class="Keyword">import</a> <a id="9637" href="foundation.singleton-induction.html" class="Module">foundation.singleton-induction</a>
+<a id="9668" class="Keyword">open</a> <a id="9673" class="Keyword">import</a> <a id="9680" href="foundation.slice.html" class="Module">foundation.slice</a>
+<a id="9697" class="Keyword">open</a> <a id="9702" class="Keyword">import</a> <a id="9709" href="foundation.small-maps.html" class="Module">foundation.small-maps</a>
+<a id="9731" class="Keyword">open</a> <a id="9736" class="Keyword">import</a> <a id="9743" href="foundation.small-multisets.html" class="Module">foundation.small-multisets</a>
+<a id="9770" class="Keyword">open</a> <a id="9775" class="Keyword">import</a> <a id="9782" href="foundation.small-types.html" class="Module">foundation.small-types</a>
+<a id="9805" class="Keyword">open</a> <a id="9810" class="Keyword">import</a> <a id="9817" href="foundation.small-universes.html" class="Module">foundation.small-universes</a>
+<a id="9844" class="Keyword">open</a> <a id="9849" class="Keyword">import</a> <a id="9856" href="foundation.split-surjective-maps.html" class="Module">foundation.split-surjective-maps</a>
+<a id="9889" class="Keyword">open</a> <a id="9894" class="Keyword">import</a> <a id="9901" href="foundation.structure-identity-principle.html" class="Module">foundation.structure-identity-principle</a>
+<a id="9941" class="Keyword">open</a> <a id="9946" class="Keyword">import</a> <a id="9953" href="foundation.structure.html" class="Module">foundation.structure</a>
+<a id="9974" class="Keyword">open</a> <a id="9979" class="Keyword">import</a> <a id="9986" href="foundation.subterminal-types.html" class="Module">foundation.subterminal-types</a>
+<a id="10015" class="Keyword">open</a> <a id="10020" class="Keyword">import</a> <a id="10027" href="foundation.subtype-identity-principle.html" class="Module">foundation.subtype-identity-principle</a>
+<a id="10065" class="Keyword">open</a> <a id="10070" class="Keyword">import</a> <a id="10077" href="foundation.subtypes.html" class="Module">foundation.subtypes</a>
+<a id="10097" class="Keyword">open</a> <a id="10102" class="Keyword">import</a> <a id="10109" href="foundation.subuniverses.html" class="Module">foundation.subuniverses</a>
+<a id="10133" class="Keyword">open</a> <a id="10138" class="Keyword">import</a> <a id="10145" href="foundation.surjective-maps.html" class="Module">foundation.surjective-maps</a>
+<a id="10172" class="Keyword">open</a> <a id="10177" class="Keyword">import</a> <a id="10184" href="foundation.truncated-maps.html" class="Module">foundation.truncated-maps</a>
+<a id="10210" class="Keyword">open</a> <a id="10215" class="Keyword">import</a> <a id="10222" href="foundation.truncated-types.html" class="Module">foundation.truncated-types</a>
+<a id="10249" class="Keyword">open</a> <a id="10254" class="Keyword">import</a> <a id="10261" href="foundation.truncation-levels.html" class="Module">foundation.truncation-levels</a>
+<a id="10290" class="Keyword">open</a> <a id="10295" class="Keyword">import</a> <a id="10302" href="foundation.type-arithmetic-cartesian-product-types.html" class="Module">foundation.type-arithmetic-cartesian-product-types</a>
+<a id="10353" class="Keyword">open</a> <a id="10358" class="Keyword">import</a> <a id="10365" href="foundation.type-arithmetic-coproduct-types.html" class="Module">foundation.type-arithmetic-coproduct-types</a>
+<a id="10408" class="Keyword">open</a> <a id="10413" class="Keyword">import</a> <a id="10420" href="foundation.type-arithmetic-dependent-pair-types.html" class="Module">foundation.type-arithmetic-dependent-pair-types</a>
+<a id="10468" class="Keyword">open</a> <a id="10473" class="Keyword">import</a> <a id="10480" href="foundation.type-arithmetic-empty-type.html" class="Module">foundation.type-arithmetic-empty-type</a>
+<a id="10518" class="Keyword">open</a> <a id="10523" class="Keyword">import</a> <a id="10530" href="foundation.type-arithmetic-unit-type.html" class="Module">foundation.type-arithmetic-unit-type</a>
+<a id="10567" class="Keyword">open</a> <a id="10572" class="Keyword">import</a> <a id="10579" href="foundation.uniqueness-image.html" class="Module">foundation.uniqueness-image</a>
+<a id="10607" class="Keyword">open</a> <a id="10612" class="Keyword">import</a> <a id="10619" href="foundation.uniqueness-set-quotients.html" class="Module">foundation.uniqueness-set-quotients</a>
+<a id="10655" class="Keyword">open</a> <a id="10660" class="Keyword">import</a> <a id="10667" href="foundation.uniqueness-set-truncations.html" class="Module">foundation.uniqueness-set-truncations</a>
+<a id="10705" class="Keyword">open</a> <a id="10710" class="Keyword">import</a> <a id="10717" href="foundation.unit-type.html" class="Module">foundation.unit-type</a>
+<a id="10738" class="Keyword">open</a> <a id="10743" class="Keyword">import</a> <a id="10750" href="foundation.univalence-implies-function-extensionality.html" class="Module">foundation.univalence-implies-function-extensionality</a>
+<a id="10804" class="Keyword">open</a> <a id="10809" class="Keyword">import</a> <a id="10816" href="foundation.univalence.html" class="Module">foundation.univalence</a>
+<a id="10838" class="Keyword">open</a> <a id="10843" class="Keyword">import</a> <a id="10850" href="foundation.univalent-type-families.html" class="Module">foundation.univalent-type-families</a>
+<a id="10885" class="Keyword">open</a> <a id="10890" class="Keyword">import</a> <a id="10897" href="foundation.universal-property-booleans.html" class="Module">foundation.universal-property-booleans</a>
+<a id="10936" class="Keyword">open</a> <a id="10941" class="Keyword">import</a> <a id="10948" href="foundation.universal-property-cartesian-product-types.html" class="Module">foundation.universal-property-cartesian-product-types</a>
+<a id="11002" class="Keyword">open</a> <a id="11007" class="Keyword">import</a> <a id="11014" href="foundation.universal-property-coproduct-types.html" class="Module">foundation.universal-property-coproduct-types</a>
+<a id="11060" class="Keyword">open</a> <a id="11065" class="Keyword">import</a> <a id="11072" href="foundation.universal-property-dependent-pair-types.html" class="Module">foundation.universal-property-dependent-pair-types</a>
+<a id="11123" class="Keyword">open</a> <a id="11128" class="Keyword">import</a> <a id="11135" href="foundation.universal-property-empty-type.html" class="Module">foundation.universal-property-empty-type</a>
+<a id="11176" class="Keyword">open</a> <a id="11181" class="Keyword">import</a> <a id="11188" href="foundation.universal-property-fiber-products.html" class="Module">foundation.universal-property-fiber-products</a>
+<a id="11233" class="Keyword">open</a> <a id="11238" class="Keyword">import</a> <a id="11245" href="foundation.universal-property-identity-types.html" class="Module">foundation.universal-property-identity-types</a>
+<a id="11290" class="Keyword">open</a> <a id="11295" class="Keyword">import</a> <a id="11302" href="foundation.universal-property-image.html" class="Module">foundation.universal-property-image</a>
+<a id="11338" class="Keyword">open</a> <a id="11343" class="Keyword">import</a> <a id="11350" href="foundation.universal-property-maybe.html" class="Module">foundation.universal-property-maybe</a>
+<a id="11386" class="Keyword">open</a> <a id="11391" class="Keyword">import</a> <a id="11398" href="foundation.universal-property-propositional-truncation-into-sets.html" class="Module">foundation.universal-property-propositional-truncation-into-sets</a>
+<a id="11463" class="Keyword">open</a> <a id="11468" class="Keyword">import</a> <a id="11475" href="foundation.universal-property-propositional-truncation.html" class="Module">foundation.universal-property-propositional-truncation</a>
+<a id="11530" class="Keyword">open</a> <a id="11535" class="Keyword">import</a> <a id="11542" href="foundation.universal-property-pullbacks.html" class="Module">foundation.universal-property-pullbacks</a>
+<a id="11582" class="Keyword">open</a> <a id="11587" class="Keyword">import</a> <a id="11594" href="foundation.universal-property-set-quotients.html" class="Module">foundation.universal-property-set-quotients</a>
+<a id="11638" class="Keyword">open</a> <a id="11643" class="Keyword">import</a> <a id="11650" href="foundation.universal-property-set-truncation.html" class="Module">foundation.universal-property-set-truncation</a>
+<a id="11695" class="Keyword">open</a> <a id="11700" class="Keyword">import</a> <a id="11707" href="foundation.universal-property-unit-type.html" class="Module">foundation.universal-property-unit-type</a>
+<a id="11747" class="Keyword">open</a> <a id="11752" class="Keyword">import</a> <a id="11759" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="11786" class="Keyword">open</a> <a id="11791" class="Keyword">import</a> <a id="11798" href="foundation.unordered-pairs.html" class="Module">foundation.unordered-pairs</a>
+<a id="11825" class="Keyword">open</a> <a id="11830" class="Keyword">import</a> <a id="11837" href="foundation.w-types.html" class="Module">foundation.w-types</a>
+<a id="11856" class="Keyword">open</a> <a id="11861" class="Keyword">import</a> <a id="11868" href="foundation.weak-function-extensionality.html" class="Module">foundation.weak-function-extensionality</a>
+<a id="11908" class="Keyword">open</a> <a id="11913" class="Keyword">import</a> <a id="11920" href="foundation.weakly-constant-maps.html" class="Module">foundation.weakly-constant-maps</a>
 </pre>
 ## Foundation Core
 
-<pre class="Agda"><a id="12014" class="Keyword">open</a> <a id="12019" class="Keyword">import</a> <a id="12026" href="foundation-core.0-maps.html" class="Module">foundation-core.0-maps</a>
-<a id="12049" class="Keyword">open</a> <a id="12054" class="Keyword">import</a> <a id="12061" href="foundation-core.1-types.html" class="Module">foundation-core.1-types</a>
-<a id="12085" class="Keyword">open</a> <a id="12090" class="Keyword">import</a> <a id="12097" href="foundation-core.cartesian-product-types.html" class="Module">foundation-core.cartesian-product-types</a>
-<a id="12137" class="Keyword">open</a> <a id="12142" class="Keyword">import</a> <a id="12149" href="foundation-core.coherently-invertible-maps.html" class="Module">foundation-core.coherently-invertible-maps</a>
-<a id="12192" class="Keyword">open</a> <a id="12197" class="Keyword">import</a> <a id="12204" href="foundation-core.commuting-squares.html" class="Module">foundation-core.commuting-squares</a>
-<a id="12238" class="Keyword">open</a> <a id="12243" class="Keyword">import</a> <a id="12250" href="foundation-core.constant-maps.html" class="Module">foundation-core.constant-maps</a>
-<a id="12280" class="Keyword">open</a> <a id="12285" class="Keyword">import</a> <a id="12292" href="foundation-core.contractible-maps.html" class="Module">foundation-core.contractible-maps</a>
-<a id="12326" class="Keyword">open</a> <a id="12331" class="Keyword">import</a> <a id="12338" href="foundation-core.contractible-types.html" class="Module">foundation-core.contractible-types</a>
-<a id="12373" class="Keyword">open</a> <a id="12378" class="Keyword">import</a> <a id="12385" href="foundation-core.dependent-pair-types.html" class="Module">foundation-core.dependent-pair-types</a>
-<a id="12422" class="Keyword">open</a> <a id="12427" class="Keyword">import</a> <a id="12434" href="foundation-core.embeddings.html" class="Module">foundation-core.embeddings</a>
-<a id="12461" class="Keyword">open</a> <a id="12466" class="Keyword">import</a> <a id="12473" href="foundation-core.equality-cartesian-product-types.html" class="Module">foundation-core.equality-cartesian-product-types</a>
-<a id="12522" class="Keyword">open</a> <a id="12527" class="Keyword">import</a> <a id="12534" href="foundation-core.equality-dependent-pair-types.html" class="Module">foundation-core.equality-dependent-pair-types</a>
-<a id="12580" class="Keyword">open</a> <a id="12585" class="Keyword">import</a> <a id="12592" href="foundation-core.equality-fibers-of-maps.html" class="Module">foundation-core.equality-fibers-of-maps</a>
-<a id="12632" class="Keyword">open</a> <a id="12637" class="Keyword">import</a> <a id="12644" href="foundation-core.equivalence-induction.html" class="Module">foundation-core.equivalence-induction</a>
-<a id="12682" class="Keyword">open</a> <a id="12687" class="Keyword">import</a> <a id="12694" href="foundation-core.equivalences.html" class="Module">foundation-core.equivalences</a>
-<a id="12723" class="Keyword">open</a> <a id="12728" class="Keyword">import</a> <a id="12735" href="foundation-core.faithful-maps.html" class="Module">foundation-core.faithful-maps</a>
-<a id="12765" class="Keyword">open</a> <a id="12770" class="Keyword">import</a> <a id="12777" href="foundation-core.fibers-of-maps.html" class="Module">foundation-core.fibers-of-maps</a>
-<a id="12808" class="Keyword">open</a> <a id="12813" class="Keyword">import</a> <a id="12820" href="foundation-core.functions.html" class="Module">foundation-core.functions</a>
-<a id="12846" class="Keyword">open</a> <a id="12851" class="Keyword">import</a> <a id="12858" href="foundation-core.functoriality-dependent-pair-types.html" class="Module">foundation-core.functoriality-dependent-pair-types</a>
-<a id="12909" class="Keyword">open</a> <a id="12914" class="Keyword">import</a> <a id="12921" href="foundation-core.fundamental-theorem-of-identity-types.html" class="Module">foundation-core.fundamental-theorem-of-identity-types</a>
-<a id="12975" class="Keyword">open</a> <a id="12980" class="Keyword">import</a> <a id="12987" href="foundation-core.homotopies.html" class="Module">foundation-core.homotopies</a>
-<a id="13014" class="Keyword">open</a> <a id="13019" class="Keyword">import</a> <a id="13026" href="foundation-core.identity-systems.html" class="Module">foundation-core.identity-systems</a>
-<a id="13059" class="Keyword">open</a> <a id="13064" class="Keyword">import</a> <a id="13071" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
-<a id="13102" class="Keyword">open</a> <a id="13107" class="Keyword">import</a> <a id="13114" href="foundation-core.logical-equivalences.html" class="Module">foundation-core.logical-equivalences</a>
-<a id="13151" class="Keyword">open</a> <a id="13156" class="Keyword">import</a> <a id="13163" href="foundation-core.path-split-maps.html" class="Module">foundation-core.path-split-maps</a>
-<a id="13195" class="Keyword">open</a> <a id="13200" class="Keyword">import</a> <a id="13207" href="foundation-core.propositional-maps.html" class="Module">foundation-core.propositional-maps</a>
-<a id="13242" class="Keyword">open</a> <a id="13247" class="Keyword">import</a> <a id="13254" href="foundation-core.propositions.html" class="Module">foundation-core.propositions</a>
-<a id="13283" class="Keyword">open</a> <a id="13288" class="Keyword">import</a> <a id="13295" href="foundation-core.retractions.html" class="Module">foundation-core.retractions</a>
-<a id="13323" class="Keyword">open</a> <a id="13328" class="Keyword">import</a> <a id="13335" href="foundation-core.sections.html" class="Module">foundation-core.sections</a>
-<a id="13360" class="Keyword">open</a> <a id="13365" class="Keyword">import</a> <a id="13372" href="foundation-core.sets.html" class="Module">foundation-core.sets</a>
-<a id="13393" class="Keyword">open</a> <a id="13398" class="Keyword">import</a> <a id="13405" href="foundation-core.singleton-induction.html" class="Module">foundation-core.singleton-induction</a>
-<a id="13441" class="Keyword">open</a> <a id="13446" class="Keyword">import</a> <a id="13453" href="foundation-core.subtype-identity-principle.html" class="Module">foundation-core.subtype-identity-principle</a>
-<a id="13496" class="Keyword">open</a> <a id="13501" class="Keyword">import</a> <a id="13508" href="foundation-core.subtypes.html" class="Module">foundation-core.subtypes</a>
-<a id="13533" class="Keyword">open</a> <a id="13538" class="Keyword">import</a> <a id="13545" href="foundation-core.truncated-maps.html" class="Module">foundation-core.truncated-maps</a>
-<a id="13576" class="Keyword">open</a> <a id="13581" class="Keyword">import</a> <a id="13588" href="foundation-core.truncated-types.html" class="Module">foundation-core.truncated-types</a>
-<a id="13620" class="Keyword">open</a> <a id="13625" class="Keyword">import</a> <a id="13632" href="foundation-core.truncation-levels.html" class="Module">foundation-core.truncation-levels</a>
-<a id="13666" class="Keyword">open</a> <a id="13671" class="Keyword">import</a> <a id="13678" href="foundation-core.type-arithmetic-cartesian-product-types.html" class="Module">foundation-core.type-arithmetic-cartesian-product-types</a>
-<a id="13734" class="Keyword">open</a> <a id="13739" class="Keyword">import</a> <a id="13746" href="foundation-core.type-arithmetic-dependent-pair-types.html" class="Module">foundation-core.type-arithmetic-dependent-pair-types</a>
-<a id="13799" class="Keyword">open</a> <a id="13804" class="Keyword">import</a> <a id="13811" href="foundation-core.univalence.html" class="Module">foundation-core.univalence</a>
-<a id="13838" class="Keyword">open</a> <a id="13843" class="Keyword">import</a> <a id="13850" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a>
+<pre class="Agda"><a id="11985" class="Keyword">open</a> <a id="11990" class="Keyword">import</a> <a id="11997" href="foundation-core.0-maps.html" class="Module">foundation-core.0-maps</a>
+<a id="12020" class="Keyword">open</a> <a id="12025" class="Keyword">import</a> <a id="12032" href="foundation-core.1-types.html" class="Module">foundation-core.1-types</a>
+<a id="12056" class="Keyword">open</a> <a id="12061" class="Keyword">import</a> <a id="12068" href="foundation-core.cartesian-product-types.html" class="Module">foundation-core.cartesian-product-types</a>
+<a id="12108" class="Keyword">open</a> <a id="12113" class="Keyword">import</a> <a id="12120" href="foundation-core.coherently-invertible-maps.html" class="Module">foundation-core.coherently-invertible-maps</a>
+<a id="12163" class="Keyword">open</a> <a id="12168" class="Keyword">import</a> <a id="12175" href="foundation-core.commuting-squares.html" class="Module">foundation-core.commuting-squares</a>
+<a id="12209" class="Keyword">open</a> <a id="12214" class="Keyword">import</a> <a id="12221" href="foundation-core.constant-maps.html" class="Module">foundation-core.constant-maps</a>
+<a id="12251" class="Keyword">open</a> <a id="12256" class="Keyword">import</a> <a id="12263" href="foundation-core.contractible-maps.html" class="Module">foundation-core.contractible-maps</a>
+<a id="12297" class="Keyword">open</a> <a id="12302" class="Keyword">import</a> <a id="12309" href="foundation-core.contractible-types.html" class="Module">foundation-core.contractible-types</a>
+<a id="12344" class="Keyword">open</a> <a id="12349" class="Keyword">import</a> <a id="12356" href="foundation-core.dependent-pair-types.html" class="Module">foundation-core.dependent-pair-types</a>
+<a id="12393" class="Keyword">open</a> <a id="12398" class="Keyword">import</a> <a id="12405" href="foundation-core.embeddings.html" class="Module">foundation-core.embeddings</a>
+<a id="12432" class="Keyword">open</a> <a id="12437" class="Keyword">import</a> <a id="12444" href="foundation-core.equality-cartesian-product-types.html" class="Module">foundation-core.equality-cartesian-product-types</a>
+<a id="12493" class="Keyword">open</a> <a id="12498" class="Keyword">import</a> <a id="12505" href="foundation-core.equality-dependent-pair-types.html" class="Module">foundation-core.equality-dependent-pair-types</a>
+<a id="12551" class="Keyword">open</a> <a id="12556" class="Keyword">import</a> <a id="12563" href="foundation-core.equality-fibers-of-maps.html" class="Module">foundation-core.equality-fibers-of-maps</a>
+<a id="12603" class="Keyword">open</a> <a id="12608" class="Keyword">import</a> <a id="12615" href="foundation-core.equivalence-induction.html" class="Module">foundation-core.equivalence-induction</a>
+<a id="12653" class="Keyword">open</a> <a id="12658" class="Keyword">import</a> <a id="12665" href="foundation-core.equivalences.html" class="Module">foundation-core.equivalences</a>
+<a id="12694" class="Keyword">open</a> <a id="12699" class="Keyword">import</a> <a id="12706" href="foundation-core.faithful-maps.html" class="Module">foundation-core.faithful-maps</a>
+<a id="12736" class="Keyword">open</a> <a id="12741" class="Keyword">import</a> <a id="12748" href="foundation-core.fibers-of-maps.html" class="Module">foundation-core.fibers-of-maps</a>
+<a id="12779" class="Keyword">open</a> <a id="12784" class="Keyword">import</a> <a id="12791" href="foundation-core.functions.html" class="Module">foundation-core.functions</a>
+<a id="12817" class="Keyword">open</a> <a id="12822" class="Keyword">import</a> <a id="12829" href="foundation-core.functoriality-dependent-pair-types.html" class="Module">foundation-core.functoriality-dependent-pair-types</a>
+<a id="12880" class="Keyword">open</a> <a id="12885" class="Keyword">import</a> <a id="12892" href="foundation-core.fundamental-theorem-of-identity-types.html" class="Module">foundation-core.fundamental-theorem-of-identity-types</a>
+<a id="12946" class="Keyword">open</a> <a id="12951" class="Keyword">import</a> <a id="12958" href="foundation-core.homotopies.html" class="Module">foundation-core.homotopies</a>
+<a id="12985" class="Keyword">open</a> <a id="12990" class="Keyword">import</a> <a id="12997" href="foundation-core.identity-systems.html" class="Module">foundation-core.identity-systems</a>
+<a id="13030" class="Keyword">open</a> <a id="13035" class="Keyword">import</a> <a id="13042" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="13073" class="Keyword">open</a> <a id="13078" class="Keyword">import</a> <a id="13085" href="foundation-core.logical-equivalences.html" class="Module">foundation-core.logical-equivalences</a>
+<a id="13122" class="Keyword">open</a> <a id="13127" class="Keyword">import</a> <a id="13134" href="foundation-core.path-split-maps.html" class="Module">foundation-core.path-split-maps</a>
+<a id="13166" class="Keyword">open</a> <a id="13171" class="Keyword">import</a> <a id="13178" href="foundation-core.propositional-maps.html" class="Module">foundation-core.propositional-maps</a>
+<a id="13213" class="Keyword">open</a> <a id="13218" class="Keyword">import</a> <a id="13225" href="foundation-core.propositions.html" class="Module">foundation-core.propositions</a>
+<a id="13254" class="Keyword">open</a> <a id="13259" class="Keyword">import</a> <a id="13266" href="foundation-core.retractions.html" class="Module">foundation-core.retractions</a>
+<a id="13294" class="Keyword">open</a> <a id="13299" class="Keyword">import</a> <a id="13306" href="foundation-core.sections.html" class="Module">foundation-core.sections</a>
+<a id="13331" class="Keyword">open</a> <a id="13336" class="Keyword">import</a> <a id="13343" href="foundation-core.sets.html" class="Module">foundation-core.sets</a>
+<a id="13364" class="Keyword">open</a> <a id="13369" class="Keyword">import</a> <a id="13376" href="foundation-core.singleton-induction.html" class="Module">foundation-core.singleton-induction</a>
+<a id="13412" class="Keyword">open</a> <a id="13417" class="Keyword">import</a> <a id="13424" href="foundation-core.subtype-identity-principle.html" class="Module">foundation-core.subtype-identity-principle</a>
+<a id="13467" class="Keyword">open</a> <a id="13472" class="Keyword">import</a> <a id="13479" href="foundation-core.subtypes.html" class="Module">foundation-core.subtypes</a>
+<a id="13504" class="Keyword">open</a> <a id="13509" class="Keyword">import</a> <a id="13516" href="foundation-core.truncated-maps.html" class="Module">foundation-core.truncated-maps</a>
+<a id="13547" class="Keyword">open</a> <a id="13552" class="Keyword">import</a> <a id="13559" href="foundation-core.truncated-types.html" class="Module">foundation-core.truncated-types</a>
+<a id="13591" class="Keyword">open</a> <a id="13596" class="Keyword">import</a> <a id="13603" href="foundation-core.truncation-levels.html" class="Module">foundation-core.truncation-levels</a>
+<a id="13637" class="Keyword">open</a> <a id="13642" class="Keyword">import</a> <a id="13649" href="foundation-core.type-arithmetic-cartesian-product-types.html" class="Module">foundation-core.type-arithmetic-cartesian-product-types</a>
+<a id="13705" class="Keyword">open</a> <a id="13710" class="Keyword">import</a> <a id="13717" href="foundation-core.type-arithmetic-dependent-pair-types.html" class="Module">foundation-core.type-arithmetic-dependent-pair-types</a>
+<a id="13770" class="Keyword">open</a> <a id="13775" class="Keyword">import</a> <a id="13782" href="foundation-core.univalence.html" class="Module">foundation-core.univalence</a>
+<a id="13809" class="Keyword">open</a> <a id="13814" class="Keyword">import</a> <a id="13821" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a>
 </pre>
 ## Graph theory
 
-<pre class="Agda"><a id="13912" class="Keyword">open</a> <a id="13917" class="Keyword">import</a> <a id="13924" href="graph-theory.directed-graphs.html" class="Module">graph-theory.directed-graphs</a>
-<a id="13953" class="Keyword">open</a> <a id="13958" class="Keyword">import</a> <a id="13965" href="graph-theory.finite-graphs.html" class="Module">graph-theory.finite-graphs</a>
-<a id="13992" class="Keyword">open</a> <a id="13997" class="Keyword">import</a> <a id="14004" href="graph-theory.polygons.html" class="Module">graph-theory.polygons</a>
-<a id="14026" class="Keyword">open</a> <a id="14031" class="Keyword">import</a> <a id="14038" href="graph-theory.reflexive-graphs.html" class="Module">graph-theory.reflexive-graphs</a>
-<a id="14068" class="Keyword">open</a> <a id="14073" class="Keyword">import</a> <a id="14080" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a>
+<pre class="Agda"><a id="13883" class="Keyword">open</a> <a id="13888" class="Keyword">import</a> <a id="13895" href="graph-theory.directed-graphs.html" class="Module">graph-theory.directed-graphs</a>
+<a id="13924" class="Keyword">open</a> <a id="13929" class="Keyword">import</a> <a id="13936" href="graph-theory.finite-graphs.html" class="Module">graph-theory.finite-graphs</a>
+<a id="13963" class="Keyword">open</a> <a id="13968" class="Keyword">import</a> <a id="13975" href="graph-theory.polygons.html" class="Module">graph-theory.polygons</a>
+<a id="13997" class="Keyword">open</a> <a id="14002" class="Keyword">import</a> <a id="14009" href="graph-theory.reflexive-graphs.html" class="Module">graph-theory.reflexive-graphs</a>
+<a id="14039" class="Keyword">open</a> <a id="14044" class="Keyword">import</a> <a id="14051" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a>
 </pre>
 ## Groups 
 
-<pre class="Agda"><a id="14136" class="Keyword">open</a> <a id="14141" class="Keyword">import</a> <a id="14148" href="groups.abstract-abelian-groups.html" class="Module">groups.abstract-abelian-groups</a>
-<a id="14179" class="Keyword">open</a> <a id="14184" class="Keyword">import</a> <a id="14191" href="groups.abstract-abelian-subgroups.html" class="Module">groups.abstract-abelian-subgroups</a>
-<a id="14225" class="Keyword">open</a> <a id="14230" class="Keyword">import</a> <a id="14237" href="groups.abstract-group-actions.html" class="Module">groups.abstract-group-actions</a>
-<a id="14267" class="Keyword">open</a> <a id="14272" class="Keyword">import</a> <a id="14279" href="groups.abstract-group-torsors.html" class="Module">groups.abstract-group-torsors</a>
-<a id="14309" class="Keyword">open</a> <a id="14314" class="Keyword">import</a> <a id="14321" href="groups.abstract-groups.html" class="Module">groups.abstract-groups</a>
-<a id="14344" class="Keyword">open</a> <a id="14349" class="Keyword">import</a> <a id="14356" href="groups.abstract-subgroups.html" class="Module">groups.abstract-subgroups</a>
-<a id="14382" class="Keyword">open</a> <a id="14387" class="Keyword">import</a> <a id="14394" href="groups.concrete-group-actions.html" class="Module">groups.concrete-group-actions</a>
-<a id="14424" class="Keyword">open</a> <a id="14429" class="Keyword">import</a> <a id="14436" href="groups.concrete-groups.html" class="Module">groups.concrete-groups</a>
-<a id="14459" class="Keyword">open</a> <a id="14464" class="Keyword">import</a> <a id="14471" href="groups.concrete-subgroups.html" class="Module">groups.concrete-subgroups</a>
-<a id="14497" class="Keyword">open</a> <a id="14502" class="Keyword">import</a> <a id="14509" href="groups.examples-higher-groups.html" class="Module">groups.examples-higher-groups</a>
-<a id="14539" class="Keyword">open</a> <a id="14544" class="Keyword">import</a> <a id="14551" href="groups.furstenberg-groups.html" class="Module">groups.furstenberg-groups</a>
-<a id="14577" class="Keyword">open</a> <a id="14582" class="Keyword">import</a> <a id="14589" href="groups.higher-groups.html" class="Module">groups.higher-groups</a>
-<a id="14610" class="Keyword">open</a> <a id="14615" class="Keyword">import</a> <a id="14622" href="groups.sheargroups.html" class="Module">groups.sheargroups</a>
+<pre class="Agda"><a id="14107" class="Keyword">open</a> <a id="14112" class="Keyword">import</a> <a id="14119" href="groups.abstract-abelian-groups.html" class="Module">groups.abstract-abelian-groups</a>
+<a id="14150" class="Keyword">open</a> <a id="14155" class="Keyword">import</a> <a id="14162" href="groups.abstract-abelian-subgroups.html" class="Module">groups.abstract-abelian-subgroups</a>
+<a id="14196" class="Keyword">open</a> <a id="14201" class="Keyword">import</a> <a id="14208" href="groups.abstract-group-actions.html" class="Module">groups.abstract-group-actions</a>
+<a id="14238" class="Keyword">open</a> <a id="14243" class="Keyword">import</a> <a id="14250" href="groups.abstract-group-torsors.html" class="Module">groups.abstract-group-torsors</a>
+<a id="14280" class="Keyword">open</a> <a id="14285" class="Keyword">import</a> <a id="14292" href="groups.abstract-groups.html" class="Module">groups.abstract-groups</a>
+<a id="14315" class="Keyword">open</a> <a id="14320" class="Keyword">import</a> <a id="14327" href="groups.abstract-subgroups.html" class="Module">groups.abstract-subgroups</a>
+<a id="14353" class="Keyword">open</a> <a id="14358" class="Keyword">import</a> <a id="14365" href="groups.concrete-group-actions.html" class="Module">groups.concrete-group-actions</a>
+<a id="14395" class="Keyword">open</a> <a id="14400" class="Keyword">import</a> <a id="14407" href="groups.concrete-groups.html" class="Module">groups.concrete-groups</a>
+<a id="14430" class="Keyword">open</a> <a id="14435" class="Keyword">import</a> <a id="14442" href="groups.concrete-subgroups.html" class="Module">groups.concrete-subgroups</a>
+<a id="14468" class="Keyword">open</a> <a id="14473" class="Keyword">import</a> <a id="14480" href="groups.examples-higher-groups.html" class="Module">groups.examples-higher-groups</a>
+<a id="14510" class="Keyword">open</a> <a id="14515" class="Keyword">import</a> <a id="14522" href="groups.furstenberg-groups.html" class="Module">groups.furstenberg-groups</a>
+<a id="14548" class="Keyword">open</a> <a id="14553" class="Keyword">import</a> <a id="14560" href="groups.higher-groups.html" class="Module">groups.higher-groups</a>
+<a id="14581" class="Keyword">open</a> <a id="14586" class="Keyword">import</a> <a id="14593" href="groups.sheargroups.html" class="Module">groups.sheargroups</a>
 </pre>
 ## Order theory
 
-<pre class="Agda"><a id="14671" class="Keyword">open</a> <a id="14676" class="Keyword">import</a> <a id="14683" href="order-theory.finite-posets.html" class="Module">order-theory.finite-posets</a>
-<a id="14710" class="Keyword">open</a> <a id="14715" class="Keyword">import</a> <a id="14722" href="order-theory.finite-preorders.html" class="Module">order-theory.finite-preorders</a>
-<a id="14752" class="Keyword">open</a> <a id="14757" class="Keyword">import</a> <a id="14764" href="order-theory.finitely-graded-posets.html" class="Module">order-theory.finitely-graded-posets</a>
-<a id="14800" class="Keyword">open</a> <a id="14805" class="Keyword">import</a> <a id="14812" href="order-theory.planar-binary-trees.html" class="Module">order-theory.planar-binary-trees</a>
-<a id="14845" class="Keyword">open</a> <a id="14850" class="Keyword">import</a> <a id="14857" href="order-theory.posets.html" class="Module">order-theory.posets</a>
-<a id="14877" class="Keyword">open</a> <a id="14882" class="Keyword">import</a> <a id="14889" href="order-theory.preorders.html" class="Module">order-theory.preorders</a>
+<pre class="Agda"><a id="14642" class="Keyword">open</a> <a id="14647" class="Keyword">import</a> <a id="14654" href="order-theory.finite-posets.html" class="Module">order-theory.finite-posets</a>
+<a id="14681" class="Keyword">open</a> <a id="14686" class="Keyword">import</a> <a id="14693" href="order-theory.finite-preorders.html" class="Module">order-theory.finite-preorders</a>
+<a id="14723" class="Keyword">open</a> <a id="14728" class="Keyword">import</a> <a id="14735" href="order-theory.finitely-graded-posets.html" class="Module">order-theory.finitely-graded-posets</a>
+<a id="14771" class="Keyword">open</a> <a id="14776" class="Keyword">import</a> <a id="14783" href="order-theory.planar-binary-trees.html" class="Module">order-theory.planar-binary-trees</a>
+<a id="14816" class="Keyword">open</a> <a id="14821" class="Keyword">import</a> <a id="14828" href="order-theory.posets.html" class="Module">order-theory.posets</a>
+<a id="14848" class="Keyword">open</a> <a id="14853" class="Keyword">import</a> <a id="14860" href="order-theory.preorders.html" class="Module">order-theory.preorders</a>
 </pre>
 ## Polytopes
 
-<pre class="Agda"><a id="14939" class="Keyword">open</a> <a id="14944" class="Keyword">import</a> <a id="14951" href="polytopes.abstract-polytopes.html" class="Module">polytopes.abstract-polytopes</a>
+<pre class="Agda"><a id="14910" class="Keyword">open</a> <a id="14915" class="Keyword">import</a> <a id="14922" href="polytopes.abstract-polytopes.html" class="Module">polytopes.abstract-polytopes</a>
 </pre>
 ## Rings
 
-<pre class="Agda"><a id="15003" class="Keyword">open</a> <a id="15008" class="Keyword">import</a> <a id="15015" href="rings.eisenstein-integers.html" class="Module">rings.eisenstein-integers</a>
-<a id="15041" class="Keyword">open</a> <a id="15046" class="Keyword">import</a> <a id="15053" href="rings.gaussian-integers.html" class="Module">rings.gaussian-integers</a>
-<a id="15077" class="Keyword">open</a> <a id="15082" class="Keyword">import</a> <a id="15089" href="rings.ideals.html" class="Module">rings.ideals</a>
-<a id="15102" class="Keyword">open</a> <a id="15107" class="Keyword">import</a> <a id="15114" href="rings.localizations-rings.html" class="Module">rings.localizations-rings</a>
-<a id="15140" class="Keyword">open</a> <a id="15145" class="Keyword">import</a> <a id="15152" href="rings.rings-with-properties.html" class="Module">rings.rings-with-properties</a>
-<a id="15180" class="Keyword">open</a> <a id="15185" class="Keyword">import</a> <a id="15192" href="rings.rings.html" class="Module">rings.rings</a>
+<pre class="Agda"><a id="14974" class="Keyword">open</a> <a id="14979" class="Keyword">import</a> <a id="14986" href="rings.eisenstein-integers.html" class="Module">rings.eisenstein-integers</a>
+<a id="15012" class="Keyword">open</a> <a id="15017" class="Keyword">import</a> <a id="15024" href="rings.gaussian-integers.html" class="Module">rings.gaussian-integers</a>
+<a id="15048" class="Keyword">open</a> <a id="15053" class="Keyword">import</a> <a id="15060" href="rings.ideals.html" class="Module">rings.ideals</a>
+<a id="15073" class="Keyword">open</a> <a id="15078" class="Keyword">import</a> <a id="15085" href="rings.localizations-rings.html" class="Module">rings.localizations-rings</a>
+<a id="15111" class="Keyword">open</a> <a id="15116" class="Keyword">import</a> <a id="15123" href="rings.rings-with-properties.html" class="Module">rings.rings-with-properties</a>
+<a id="15151" class="Keyword">open</a> <a id="15156" class="Keyword">import</a> <a id="15163" href="rings.rings.html" class="Module">rings.rings</a>
 </pre>
 ## Synthetic homotopy theory
 
-<pre class="Agda"><a id="15247" class="Keyword">open</a> <a id="15252" class="Keyword">import</a> <a id="15259" href="synthetic-homotopy-theory.23-pullbacks.html" class="Module">synthetic-homotopy-theory.23-pullbacks</a>
-<a id="15298" class="Keyword">open</a> <a id="15303" class="Keyword">import</a> <a id="15310" href="synthetic-homotopy-theory.24-pushouts.html" class="Module">synthetic-homotopy-theory.24-pushouts</a>
-<a id="15348" class="Keyword">open</a> <a id="15353" class="Keyword">import</a> <a id="15360" href="synthetic-homotopy-theory.25-cubical-diagrams.html" class="Module">synthetic-homotopy-theory.25-cubical-diagrams</a>
-<a id="15406" class="Keyword">open</a> <a id="15411" class="Keyword">import</a> <a id="15418" href="synthetic-homotopy-theory.26-descent.html" class="Module">synthetic-homotopy-theory.26-descent</a>
-<a id="15455" class="Keyword">open</a> <a id="15460" class="Keyword">import</a> <a id="15467" href="synthetic-homotopy-theory.26-id-pushout.html" class="Module">synthetic-homotopy-theory.26-id-pushout</a>
-<a id="15507" class="Keyword">open</a> <a id="15512" class="Keyword">import</a> <a id="15519" href="synthetic-homotopy-theory.27-sequences.html" class="Module">synthetic-homotopy-theory.27-sequences</a>
-<a id="15558" class="Keyword">open</a> <a id="15563" class="Keyword">import</a> <a id="15570" href="synthetic-homotopy-theory.circle.html" class="Module">synthetic-homotopy-theory.circle</a>
-<a id="15603" class="Keyword">open</a> <a id="15608" class="Keyword">import</a> <a id="15615" href="synthetic-homotopy-theory.cyclic-types.html" class="Module">synthetic-homotopy-theory.cyclic-types</a>
-<a id="15654" class="Keyword">open</a> <a id="15659" class="Keyword">import</a> <a id="15666" href="synthetic-homotopy-theory.infinite-cyclic-types.html" class="Module">synthetic-homotopy-theory.infinite-cyclic-types</a>
-<a id="15714" class="Keyword">open</a> <a id="15719" class="Keyword">import</a> <a id="15726" href="synthetic-homotopy-theory.interval-type.html" class="Module">synthetic-homotopy-theory.interval-type</a>
-<a id="15766" class="Keyword">open</a> <a id="15771" class="Keyword">import</a> <a id="15778" href="synthetic-homotopy-theory.spaces.html" class="Module">synthetic-homotopy-theory.spaces</a>
-<a id="15811" class="Keyword">open</a> <a id="15816" class="Keyword">import</a> <a id="15823" href="synthetic-homotopy-theory.universal-cover-circle.html" class="Module">synthetic-homotopy-theory.universal-cover-circle</a>
+<pre class="Agda"><a id="15218" class="Keyword">open</a> <a id="15223" class="Keyword">import</a> <a id="15230" href="synthetic-homotopy-theory.23-pullbacks.html" class="Module">synthetic-homotopy-theory.23-pullbacks</a>
+<a id="15269" class="Keyword">open</a> <a id="15274" class="Keyword">import</a> <a id="15281" href="synthetic-homotopy-theory.24-pushouts.html" class="Module">synthetic-homotopy-theory.24-pushouts</a>
+<a id="15319" class="Keyword">open</a> <a id="15324" class="Keyword">import</a> <a id="15331" href="synthetic-homotopy-theory.25-cubical-diagrams.html" class="Module">synthetic-homotopy-theory.25-cubical-diagrams</a>
+<a id="15377" class="Keyword">open</a> <a id="15382" class="Keyword">import</a> <a id="15389" href="synthetic-homotopy-theory.26-descent.html" class="Module">synthetic-homotopy-theory.26-descent</a>
+<a id="15426" class="Keyword">open</a> <a id="15431" class="Keyword">import</a> <a id="15438" href="synthetic-homotopy-theory.26-id-pushout.html" class="Module">synthetic-homotopy-theory.26-id-pushout</a>
+<a id="15478" class="Keyword">open</a> <a id="15483" class="Keyword">import</a> <a id="15490" href="synthetic-homotopy-theory.27-sequences.html" class="Module">synthetic-homotopy-theory.27-sequences</a>
+<a id="15529" class="Keyword">open</a> <a id="15534" class="Keyword">import</a> <a id="15541" href="synthetic-homotopy-theory.circle.html" class="Module">synthetic-homotopy-theory.circle</a>
+<a id="15574" class="Keyword">open</a> <a id="15579" class="Keyword">import</a> <a id="15586" href="synthetic-homotopy-theory.cyclic-types.html" class="Module">synthetic-homotopy-theory.cyclic-types</a>
+<a id="15625" class="Keyword">open</a> <a id="15630" class="Keyword">import</a> <a id="15637" href="synthetic-homotopy-theory.infinite-cyclic-types.html" class="Module">synthetic-homotopy-theory.infinite-cyclic-types</a>
+<a id="15685" class="Keyword">open</a> <a id="15690" class="Keyword">import</a> <a id="15697" href="synthetic-homotopy-theory.interval-type.html" class="Module">synthetic-homotopy-theory.interval-type</a>
+<a id="15737" class="Keyword">open</a> <a id="15742" class="Keyword">import</a> <a id="15749" href="synthetic-homotopy-theory.pointed-dependent-functions.html" class="Module">synthetic-homotopy-theory.pointed-dependent-functions</a>
+<a id="15803" class="Keyword">open</a> <a id="15808" class="Keyword">import</a> <a id="15815" href="synthetic-homotopy-theory.pointed-equivalences.html" class="Module">synthetic-homotopy-theory.pointed-equivalences</a>
+<a id="15862" class="Keyword">open</a> <a id="15867" class="Keyword">import</a> <a id="15874" href="synthetic-homotopy-theory.pointed-families-of-types.html" class="Module">synthetic-homotopy-theory.pointed-families-of-types</a>
+<a id="15926" class="Keyword">open</a> <a id="15931" class="Keyword">import</a> <a id="15938" href="synthetic-homotopy-theory.pointed-homotopies.html" class="Module">synthetic-homotopy-theory.pointed-homotopies</a>
+<a id="15983" class="Keyword">open</a> <a id="15988" class="Keyword">import</a> <a id="15995" href="synthetic-homotopy-theory.pointed-maps.html" class="Module">synthetic-homotopy-theory.pointed-maps</a>
+<a id="16034" class="Keyword">open</a> <a id="16039" class="Keyword">import</a> <a id="16046" href="synthetic-homotopy-theory.pointed-types.html" class="Module">synthetic-homotopy-theory.pointed-types</a>
+<a id="16086" class="Keyword">open</a> <a id="16091" class="Keyword">import</a> <a id="16098" href="synthetic-homotopy-theory.spaces.html" class="Module">synthetic-homotopy-theory.spaces</a>
+<a id="16131" class="Keyword">open</a> <a id="16136" class="Keyword">import</a> <a id="16143" href="synthetic-homotopy-theory.universal-cover-circle.html" class="Module">synthetic-homotopy-theory.universal-cover-circle</a>
 </pre>
 ## Univalent combinatorics
 
-<pre class="Agda"><a id="15913" class="Keyword">open</a> <a id="15918" class="Keyword">import</a> <a id="15925" href="univalent-combinatorics.2-element-types.html" class="Module">univalent-combinatorics.2-element-types</a>
-<a id="15965" class="Keyword">open</a> <a id="15970" class="Keyword">import</a> <a id="15977" href="univalent-combinatorics.binomial-types.html" class="Module">univalent-combinatorics.binomial-types</a>
-<a id="16016" class="Keyword">open</a> <a id="16021" class="Keyword">import</a> <a id="16028" href="univalent-combinatorics.cartesian-product-finite-types.html" class="Module">univalent-combinatorics.cartesian-product-finite-types</a>
-<a id="16083" class="Keyword">open</a> <a id="16088" class="Keyword">import</a> <a id="16095" href="univalent-combinatorics.coproduct-finite-types.html" class="Module">univalent-combinatorics.coproduct-finite-types</a>
-<a id="16142" class="Keyword">open</a> <a id="16147" class="Keyword">import</a> <a id="16154" href="univalent-combinatorics.counting-cartesian-product-types.html" class="Module">univalent-combinatorics.counting-cartesian-product-types</a>
-<a id="16211" class="Keyword">open</a> <a id="16216" class="Keyword">import</a> <a id="16223" href="univalent-combinatorics.counting-coproduct-types.html" class="Module">univalent-combinatorics.counting-coproduct-types</a>
-<a id="16272" class="Keyword">open</a> <a id="16277" class="Keyword">import</a> <a id="16284" href="univalent-combinatorics.counting-decidable-subtypes.html" class="Module">univalent-combinatorics.counting-decidable-subtypes</a>
-<a id="16336" class="Keyword">open</a> <a id="16341" class="Keyword">import</a> <a id="16348" href="univalent-combinatorics.counting-dependent-function-types.html" class="Module">univalent-combinatorics.counting-dependent-function-types</a>
-<a id="16406" class="Keyword">open</a> <a id="16411" class="Keyword">import</a> <a id="16418" href="univalent-combinatorics.counting-dependent-pair-types.html" class="Module">univalent-combinatorics.counting-dependent-pair-types</a>
-<a id="16472" class="Keyword">open</a> <a id="16477" class="Keyword">import</a> <a id="16484" href="univalent-combinatorics.counting-fibers-of-maps.html" class="Module">univalent-combinatorics.counting-fibers-of-maps</a>
-<a id="16532" class="Keyword">open</a> <a id="16537" class="Keyword">import</a> <a id="16544" href="univalent-combinatorics.counting-function-types.html" class="Module">univalent-combinatorics.counting-function-types</a>
-<a id="16592" class="Keyword">open</a> <a id="16597" class="Keyword">import</a> <a id="16604" href="univalent-combinatorics.counting-maybe.html" class="Module">univalent-combinatorics.counting-maybe</a>
-<a id="16643" class="Keyword">open</a> <a id="16648" class="Keyword">import</a> <a id="16655" href="univalent-combinatorics.counting.html" class="Module">univalent-combinatorics.counting</a>
-<a id="16688" class="Keyword">open</a> <a id="16693" class="Keyword">import</a> <a id="16700" href="univalent-combinatorics.decidable-dependent-function-types.html" class="Module">univalent-combinatorics.decidable-dependent-function-types</a>
-<a id="16759" class="Keyword">open</a> <a id="16764" class="Keyword">import</a> <a id="16771" href="univalent-combinatorics.decidable-dependent-pair-types.html" class="Module">univalent-combinatorics.decidable-dependent-pair-types</a>
-<a id="16826" class="Keyword">open</a> <a id="16831" class="Keyword">import</a> <a id="16838" href="univalent-combinatorics.decidable-subtypes.html" class="Module">univalent-combinatorics.decidable-subtypes</a>
-<a id="16881" class="Keyword">open</a> <a id="16886" class="Keyword">import</a> <a id="16893" href="univalent-combinatorics.dependent-product-finite-types.html" class="Module">univalent-combinatorics.dependent-product-finite-types</a>
-<a id="16948" class="Keyword">open</a> <a id="16953" class="Keyword">import</a> <a id="16960" href="univalent-combinatorics.dependent-sum-finite-types.html" class="Module">univalent-combinatorics.dependent-sum-finite-types</a>
-<a id="17011" class="Keyword">open</a> <a id="17016" class="Keyword">import</a> <a id="17023" href="univalent-combinatorics.distributivity-of-set-truncation-over-finite-products.html" class="Module">univalent-combinatorics.distributivity-of-set-truncation-over-finite-products</a>
-<a id="17101" class="Keyword">open</a> <a id="17106" class="Keyword">import</a> <a id="17113" href="univalent-combinatorics.double-counting.html" class="Module">univalent-combinatorics.double-counting</a>
-<a id="17153" class="Keyword">open</a> <a id="17158" class="Keyword">import</a> <a id="17165" href="univalent-combinatorics.embeddings.html" class="Module">univalent-combinatorics.embeddings</a>
-<a id="17200" class="Keyword">open</a> <a id="17205" class="Keyword">import</a> <a id="17212" href="univalent-combinatorics.embeddings-standard-finite-types.html" class="Module">univalent-combinatorics.embeddings-standard-finite-types</a>
-<a id="17269" class="Keyword">open</a> <a id="17274" class="Keyword">import</a> <a id="17281" href="univalent-combinatorics.equality-finite-types.html" class="Module">univalent-combinatorics.equality-finite-types</a>
-<a id="17327" class="Keyword">open</a> <a id="17332" class="Keyword">import</a> <a id="17339" href="univalent-combinatorics.equality-standard-finite-types.html" class="Module">univalent-combinatorics.equality-standard-finite-types</a>
-<a id="17394" class="Keyword">open</a> <a id="17399" class="Keyword">import</a> <a id="17406" href="univalent-combinatorics.equivalences.html" class="Module">univalent-combinatorics.equivalences</a>
-<a id="17443" class="Keyword">open</a> <a id="17448" class="Keyword">import</a> <a id="17455" href="univalent-combinatorics.equivalences-standard-finite-types.html" class="Module">univalent-combinatorics.equivalences-standard-finite-types</a>
-<a id="17514" class="Keyword">open</a> <a id="17519" class="Keyword">import</a> <a id="17526" href="univalent-combinatorics.fibers-of-maps-between-finite-types.html" class="Module">univalent-combinatorics.fibers-of-maps-between-finite-types</a>
-<a id="17586" class="Keyword">open</a> <a id="17591" class="Keyword">import</a> <a id="17598" href="univalent-combinatorics.finite-choice.html" class="Module">univalent-combinatorics.finite-choice</a>
-<a id="17636" class="Keyword">open</a> <a id="17641" class="Keyword">import</a> <a id="17648" href="univalent-combinatorics.finite-connected-components.html" class="Module">univalent-combinatorics.finite-connected-components</a>
-<a id="17700" class="Keyword">open</a> <a id="17705" class="Keyword">import</a> <a id="17712" href="univalent-combinatorics.finite-function-types.html" class="Module">univalent-combinatorics.finite-function-types</a>
-<a id="17758" class="Keyword">open</a> <a id="17763" class="Keyword">import</a> <a id="17770" href="univalent-combinatorics.finite-presentations.html" class="Module">univalent-combinatorics.finite-presentations</a>
-<a id="17815" class="Keyword">open</a> <a id="17820" class="Keyword">import</a> <a id="17827" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
-<a id="17864" class="Keyword">open</a> <a id="17869" class="Keyword">import</a> <a id="17876" href="univalent-combinatorics.finitely-presented-types.html" class="Module">univalent-combinatorics.finitely-presented-types</a>
-<a id="17925" class="Keyword">open</a> <a id="17930" class="Keyword">import</a> <a id="17937" href="univalent-combinatorics.image-of-maps.html" class="Module">univalent-combinatorics.image-of-maps</a>
-<a id="17975" class="Keyword">open</a> <a id="17980" class="Keyword">import</a> <a id="17987" href="univalent-combinatorics.inequality-types-with-counting.html" class="Module">univalent-combinatorics.inequality-types-with-counting</a>
-<a id="18042" class="Keyword">open</a> <a id="18047" class="Keyword">import</a> <a id="18054" href="univalent-combinatorics.injective-maps.html" class="Module">univalent-combinatorics.injective-maps</a>
-<a id="18093" class="Keyword">open</a> <a id="18098" class="Keyword">import</a> <a id="18105" href="univalent-combinatorics.maybe.html" class="Module">univalent-combinatorics.maybe</a>
-<a id="18135" class="Keyword">open</a> <a id="18140" class="Keyword">import</a> <a id="18147" href="univalent-combinatorics.pi-finite-types.html" class="Module">univalent-combinatorics.pi-finite-types</a>
-<a id="18187" class="Keyword">open</a> <a id="18192" class="Keyword">import</a> <a id="18199" href="univalent-combinatorics.pigeonhole-principle.html" class="Module">univalent-combinatorics.pigeonhole-principle</a>
-<a id="18244" class="Keyword">open</a> <a id="18249" class="Keyword">import</a> <a id="18256" href="univalent-combinatorics.ramsey-theory.html" class="Module">univalent-combinatorics.ramsey-theory</a>
-<a id="18294" class="Keyword">open</a> <a id="18299" class="Keyword">import</a> <a id="18306" href="univalent-combinatorics.retracts-of-finite-types.html" class="Module">univalent-combinatorics.retracts-of-finite-types</a>
-<a id="18355" class="Keyword">open</a> <a id="18360" class="Keyword">import</a> <a id="18367" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
-<a id="18413" class="Keyword">open</a> <a id="18418" class="Keyword">import</a> <a id="18425" href="univalent-combinatorics.sums-of-natural-numbers.html" class="Module">univalent-combinatorics.sums-of-natural-numbers</a>
-<a id="18473" class="Keyword">open</a> <a id="18478" class="Keyword">import</a> <a id="18485" href="univalent-combinatorics.surjective-maps.html" class="Module">univalent-combinatorics.surjective-maps</a>
+<pre class="Agda"><a id="16233" class="Keyword">open</a> <a id="16238" class="Keyword">import</a> <a id="16245" href="univalent-combinatorics.2-element-types.html" class="Module">univalent-combinatorics.2-element-types</a>
+<a id="16285" class="Keyword">open</a> <a id="16290" class="Keyword">import</a> <a id="16297" href="univalent-combinatorics.binomial-types.html" class="Module">univalent-combinatorics.binomial-types</a>
+<a id="16336" class="Keyword">open</a> <a id="16341" class="Keyword">import</a> <a id="16348" href="univalent-combinatorics.cartesian-product-finite-types.html" class="Module">univalent-combinatorics.cartesian-product-finite-types</a>
+<a id="16403" class="Keyword">open</a> <a id="16408" class="Keyword">import</a> <a id="16415" href="univalent-combinatorics.coproduct-finite-types.html" class="Module">univalent-combinatorics.coproduct-finite-types</a>
+<a id="16462" class="Keyword">open</a> <a id="16467" class="Keyword">import</a> <a id="16474" href="univalent-combinatorics.counting-cartesian-product-types.html" class="Module">univalent-combinatorics.counting-cartesian-product-types</a>
+<a id="16531" class="Keyword">open</a> <a id="16536" class="Keyword">import</a> <a id="16543" href="univalent-combinatorics.counting-coproduct-types.html" class="Module">univalent-combinatorics.counting-coproduct-types</a>
+<a id="16592" class="Keyword">open</a> <a id="16597" class="Keyword">import</a> <a id="16604" href="univalent-combinatorics.counting-decidable-subtypes.html" class="Module">univalent-combinatorics.counting-decidable-subtypes</a>
+<a id="16656" class="Keyword">open</a> <a id="16661" class="Keyword">import</a> <a id="16668" href="univalent-combinatorics.counting-dependent-function-types.html" class="Module">univalent-combinatorics.counting-dependent-function-types</a>
+<a id="16726" class="Keyword">open</a> <a id="16731" class="Keyword">import</a> <a id="16738" href="univalent-combinatorics.counting-dependent-pair-types.html" class="Module">univalent-combinatorics.counting-dependent-pair-types</a>
+<a id="16792" class="Keyword">open</a> <a id="16797" class="Keyword">import</a> <a id="16804" href="univalent-combinatorics.counting-fibers-of-maps.html" class="Module">univalent-combinatorics.counting-fibers-of-maps</a>
+<a id="16852" class="Keyword">open</a> <a id="16857" class="Keyword">import</a> <a id="16864" href="univalent-combinatorics.counting-function-types.html" class="Module">univalent-combinatorics.counting-function-types</a>
+<a id="16912" class="Keyword">open</a> <a id="16917" class="Keyword">import</a> <a id="16924" href="univalent-combinatorics.counting-maybe.html" class="Module">univalent-combinatorics.counting-maybe</a>
+<a id="16963" class="Keyword">open</a> <a id="16968" class="Keyword">import</a> <a id="16975" href="univalent-combinatorics.counting.html" class="Module">univalent-combinatorics.counting</a>
+<a id="17008" class="Keyword">open</a> <a id="17013" class="Keyword">import</a> <a id="17020" href="univalent-combinatorics.decidable-dependent-function-types.html" class="Module">univalent-combinatorics.decidable-dependent-function-types</a>
+<a id="17079" class="Keyword">open</a> <a id="17084" class="Keyword">import</a> <a id="17091" href="univalent-combinatorics.decidable-dependent-pair-types.html" class="Module">univalent-combinatorics.decidable-dependent-pair-types</a>
+<a id="17146" class="Keyword">open</a> <a id="17151" class="Keyword">import</a> <a id="17158" href="univalent-combinatorics.decidable-subtypes.html" class="Module">univalent-combinatorics.decidable-subtypes</a>
+<a id="17201" class="Keyword">open</a> <a id="17206" class="Keyword">import</a> <a id="17213" href="univalent-combinatorics.dependent-product-finite-types.html" class="Module">univalent-combinatorics.dependent-product-finite-types</a>
+<a id="17268" class="Keyword">open</a> <a id="17273" class="Keyword">import</a> <a id="17280" href="univalent-combinatorics.dependent-sum-finite-types.html" class="Module">univalent-combinatorics.dependent-sum-finite-types</a>
+<a id="17331" class="Keyword">open</a> <a id="17336" class="Keyword">import</a> <a id="17343" href="univalent-combinatorics.distributivity-of-set-truncation-over-finite-products.html" class="Module">univalent-combinatorics.distributivity-of-set-truncation-over-finite-products</a>
+<a id="17421" class="Keyword">open</a> <a id="17426" class="Keyword">import</a> <a id="17433" href="univalent-combinatorics.double-counting.html" class="Module">univalent-combinatorics.double-counting</a>
+<a id="17473" class="Keyword">open</a> <a id="17478" class="Keyword">import</a> <a id="17485" href="univalent-combinatorics.embeddings.html" class="Module">univalent-combinatorics.embeddings</a>
+<a id="17520" class="Keyword">open</a> <a id="17525" class="Keyword">import</a> <a id="17532" href="univalent-combinatorics.embeddings-standard-finite-types.html" class="Module">univalent-combinatorics.embeddings-standard-finite-types</a>
+<a id="17589" class="Keyword">open</a> <a id="17594" class="Keyword">import</a> <a id="17601" href="univalent-combinatorics.equality-finite-types.html" class="Module">univalent-combinatorics.equality-finite-types</a>
+<a id="17647" class="Keyword">open</a> <a id="17652" class="Keyword">import</a> <a id="17659" href="univalent-combinatorics.equality-standard-finite-types.html" class="Module">univalent-combinatorics.equality-standard-finite-types</a>
+<a id="17714" class="Keyword">open</a> <a id="17719" class="Keyword">import</a> <a id="17726" href="univalent-combinatorics.equivalences.html" class="Module">univalent-combinatorics.equivalences</a>
+<a id="17763" class="Keyword">open</a> <a id="17768" class="Keyword">import</a> <a id="17775" href="univalent-combinatorics.equivalences-standard-finite-types.html" class="Module">univalent-combinatorics.equivalences-standard-finite-types</a>
+<a id="17834" class="Keyword">open</a> <a id="17839" class="Keyword">import</a> <a id="17846" href="univalent-combinatorics.fibers-of-maps-between-finite-types.html" class="Module">univalent-combinatorics.fibers-of-maps-between-finite-types</a>
+<a id="17906" class="Keyword">open</a> <a id="17911" class="Keyword">import</a> <a id="17918" href="univalent-combinatorics.finite-choice.html" class="Module">univalent-combinatorics.finite-choice</a>
+<a id="17956" class="Keyword">open</a> <a id="17961" class="Keyword">import</a> <a id="17968" href="univalent-combinatorics.finite-connected-components.html" class="Module">univalent-combinatorics.finite-connected-components</a>
+<a id="18020" class="Keyword">open</a> <a id="18025" class="Keyword">import</a> <a id="18032" href="univalent-combinatorics.finite-function-types.html" class="Module">univalent-combinatorics.finite-function-types</a>
+<a id="18078" class="Keyword">open</a> <a id="18083" class="Keyword">import</a> <a id="18090" href="univalent-combinatorics.finite-presentations.html" class="Module">univalent-combinatorics.finite-presentations</a>
+<a id="18135" class="Keyword">open</a> <a id="18140" class="Keyword">import</a> <a id="18147" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
+<a id="18184" class="Keyword">open</a> <a id="18189" class="Keyword">import</a> <a id="18196" href="univalent-combinatorics.finitely-presented-types.html" class="Module">univalent-combinatorics.finitely-presented-types</a>
+<a id="18245" class="Keyword">open</a> <a id="18250" class="Keyword">import</a> <a id="18257" href="univalent-combinatorics.image-of-maps.html" class="Module">univalent-combinatorics.image-of-maps</a>
+<a id="18295" class="Keyword">open</a> <a id="18300" class="Keyword">import</a> <a id="18307" href="univalent-combinatorics.inequality-types-with-counting.html" class="Module">univalent-combinatorics.inequality-types-with-counting</a>
+<a id="18362" class="Keyword">open</a> <a id="18367" class="Keyword">import</a> <a id="18374" href="univalent-combinatorics.injective-maps.html" class="Module">univalent-combinatorics.injective-maps</a>
+<a id="18413" class="Keyword">open</a> <a id="18418" class="Keyword">import</a> <a id="18425" href="univalent-combinatorics.lists.html" class="Module">univalent-combinatorics.lists</a>
+<a id="18455" class="Keyword">open</a> <a id="18460" class="Keyword">import</a> <a id="18467" href="univalent-combinatorics.maybe.html" class="Module">univalent-combinatorics.maybe</a>
+<a id="18497" class="Keyword">open</a> <a id="18502" class="Keyword">import</a> <a id="18509" href="univalent-combinatorics.pi-finite-types.html" class="Module">univalent-combinatorics.pi-finite-types</a>
+<a id="18549" class="Keyword">open</a> <a id="18554" class="Keyword">import</a> <a id="18561" href="univalent-combinatorics.pigeonhole-principle.html" class="Module">univalent-combinatorics.pigeonhole-principle</a>
+<a id="18606" class="Keyword">open</a> <a id="18611" class="Keyword">import</a> <a id="18618" href="univalent-combinatorics.ramsey-theory.html" class="Module">univalent-combinatorics.ramsey-theory</a>
+<a id="18656" class="Keyword">open</a> <a id="18661" class="Keyword">import</a> <a id="18668" href="univalent-combinatorics.retracts-of-finite-types.html" class="Module">univalent-combinatorics.retracts-of-finite-types</a>
+<a id="18717" class="Keyword">open</a> <a id="18722" class="Keyword">import</a> <a id="18729" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
+<a id="18775" class="Keyword">open</a> <a id="18780" class="Keyword">import</a> <a id="18787" href="univalent-combinatorics.sums-of-natural-numbers.html" class="Module">univalent-combinatorics.sums-of-natural-numbers</a>
+<a id="18835" class="Keyword">open</a> <a id="18840" class="Keyword">import</a> <a id="18847" href="univalent-combinatorics.surjective-maps.html" class="Module">univalent-combinatorics.surjective-maps</a>
 </pre>
 ## Univalent foundation
 
-<pre class="Agda"><a id="18563" class="Keyword">open</a> <a id="18568" class="Keyword">import</a> <a id="18575" href="univalent-foundations.functoriality-loop-spaces.html" class="Module">univalent-foundations.functoriality-loop-spaces</a>
-<a id="18623" class="Keyword">open</a> <a id="18628" class="Keyword">import</a> <a id="18635" href="univalent-foundations.isolated-points.html" class="Module">univalent-foundations.isolated-points</a>
-<a id="18673" class="Keyword">open</a> <a id="18678" class="Keyword">import</a> <a id="18685" href="univalent-foundations.iterated-loop-spaces.html" class="Module">univalent-foundations.iterated-loop-spaces</a>
-<a id="18728" class="Keyword">open</a> <a id="18733" class="Keyword">import</a> <a id="18740" href="univalent-foundations.loop-spaces.html" class="Module">univalent-foundations.loop-spaces</a>
-<a id="18774" class="Keyword">open</a> <a id="18779" class="Keyword">import</a> <a id="18786" href="univalent-foundations.pointed-dependent-functions.html" class="Module">univalent-foundations.pointed-dependent-functions</a>
-<a id="18836" class="Keyword">open</a> <a id="18841" class="Keyword">import</a> <a id="18848" href="univalent-foundations.pointed-equivalences.html" class="Module">univalent-foundations.pointed-equivalences</a>
-<a id="18891" class="Keyword">open</a> <a id="18896" class="Keyword">import</a> <a id="18903" href="univalent-foundations.pointed-families-of-types.html" class="Module">univalent-foundations.pointed-families-of-types</a>
-<a id="18951" class="Keyword">open</a> <a id="18956" class="Keyword">import</a> <a id="18963" href="univalent-foundations.pointed-homotopies.html" class="Module">univalent-foundations.pointed-homotopies</a>
-<a id="19004" class="Keyword">open</a> <a id="19009" class="Keyword">import</a> <a id="19016" href="univalent-foundations.pointed-maps.html" class="Module">univalent-foundations.pointed-maps</a>
-<a id="19051" class="Keyword">open</a> <a id="19056" class="Keyword">import</a> <a id="19063" href="univalent-foundations.pointed-types.html" class="Module">univalent-foundations.pointed-types</a>
-<a id="19099" class="Keyword">open</a> <a id="19104" class="Keyword">import</a> <a id="19111" href="univalent-foundations.truncations.html" class="Module">univalent-foundations.truncations</a>
+<pre class="Agda"><a id="18925" class="Keyword">open</a> <a id="18930" class="Keyword">import</a> <a id="18937" href="univalent-foundations.functoriality-loop-spaces.html" class="Module">univalent-foundations.functoriality-loop-spaces</a>
+<a id="18985" class="Keyword">open</a> <a id="18990" class="Keyword">import</a> <a id="18997" href="univalent-foundations.isolated-points.html" class="Module">univalent-foundations.isolated-points</a>
+<a id="19035" class="Keyword">open</a> <a id="19040" class="Keyword">import</a> <a id="19047" href="univalent-foundations.iterated-loop-spaces.html" class="Module">univalent-foundations.iterated-loop-spaces</a>
+<a id="19090" class="Keyword">open</a> <a id="19095" class="Keyword">import</a> <a id="19102" href="univalent-foundations.loop-spaces.html" class="Module">univalent-foundations.loop-spaces</a>
+<a id="19136" class="Keyword">open</a> <a id="19141" class="Keyword">import</a> <a id="19148" href="univalent-foundations.truncations.html" class="Module">univalent-foundations.truncations</a>
 </pre>
 ## Everything
 

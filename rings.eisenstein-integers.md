@@ -446,7 +446,7 @@ title: Formalisation of the Symmetry Book
     <a id="16814" class="Symbol">(</a> <a id="16816" href="foundation.sets.html#1873" class="Function">prod-Set</a> <a id="16825" href="elementary-number-theory.equality-integers.html#3338" class="Function">ℤ-Set</a> <a id="16831" href="elementary-number-theory.equality-integers.html#3338" class="Function">ℤ-Set</a><a id="16836" class="Symbol">)</a>
     <a id="16842" class="Symbol">(</a> <a id="16844" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="16849" href="rings.eisenstein-integers.html#1362" class="Function">add-ℤ[ω]</a> <a id="16858" href="rings.eisenstein-integers.html#2749" class="Function">associative-add-ℤ[ω]</a><a id="16878" class="Symbol">)</a>
 
-<a id="ℤ[ω]-Group"></a><a id="16881" href="rings.eisenstein-integers.html#16881" class="Function">ℤ[ω]-Group</a> <a id="16892" class="Symbol">:</a> <a id="16894" href="groups.abstract-groups.html#23582" class="Function">Group</a> <a id="16900" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="ℤ[ω]-Group"></a><a id="16881" href="rings.eisenstein-integers.html#16881" class="Function">ℤ[ω]-Group</a> <a id="16892" class="Symbol">:</a> <a id="16894" href="groups.abstract-groups.html#23583" class="Function">Group</a> <a id="16900" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
 <a id="16906" href="rings.eisenstein-integers.html#16881" class="Function">ℤ[ω]-Group</a> <a id="16917" class="Symbol">=</a>
   <a id="16921" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
     <a id="16930" class="Symbol">(</a> <a id="16932" href="rings.eisenstein-integers.html#16753" class="Function">ℤ[ω]-Semigroup</a><a id="16946" class="Symbol">)</a>

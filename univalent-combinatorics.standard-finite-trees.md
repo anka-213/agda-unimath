@@ -1,0 +1,25 @@
+# Standard finite trees
+
+<pre class="Agda"><a id="34" class="Symbol">{-#</a> <a id="38" class="Keyword">OPTIONS</a> <a id="46" class="Pragma">--without-K</a> <a id="58" class="Pragma">--exact-split</a> <a id="72" class="Pragma">--allow-unsolved-metas</a> <a id="95" class="Symbol">#-}</a>
+
+<a id="100" class="Keyword">module</a> <a id="107" href="univalent-combinatorics.standard-finite-trees.html" class="Module">univalent-combinatorics.standard-finite-trees</a> <a id="153" class="Keyword">where</a>
+
+<a id="160" class="Keyword">open</a> <a id="165" class="Keyword">import</a> <a id="172" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="213" class="Keyword">using</a> <a id="219" class="Symbol">(</a><a id="220" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="221" class="Symbol">;</a> <a id="223" href="elementary-number-theory.natural-numbers.html#1465" class="InductiveConstructor">zero-ℕ</a><a id="229" class="Symbol">)</a>
+
+<a id="232" class="Keyword">open</a> <a id="237" class="Keyword">import</a> <a id="244" href="foundation.empty-types.html" class="Module">foundation.empty-types</a> <a id="267" class="Keyword">using</a> <a id="273" class="Symbol">(</a><a id="274" href="foundation-core.empty-types.html#1150" class="Function">ex-falso</a><a id="282" class="Symbol">)</a>
+<a id="284" class="Keyword">open</a> <a id="289" class="Keyword">import</a> <a id="296" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="323" class="Keyword">using</a> <a id="329" class="Symbol">(</a><a id="330" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="332" class="Symbol">;</a> <a id="334" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="339" class="Symbol">)</a>
+
+<a id="342" class="Keyword">open</a> <a id="347" class="Keyword">import</a> <a id="354" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="400" class="Keyword">using</a> <a id="406" class="Symbol">(</a><a id="407" href="univalent-combinatorics.standard-finite-types.html#1975" class="Function">Fin</a><a id="410" class="Symbol">)</a>
+</pre>
+## Idea
+
+A standard finite tree is a finite tree that branches by standard finite sets. In contexts where one wouldn't be interested in considering finite trees to be the same if they differ up to a permutation of trees, people simply call our standard finite trees finite trees. From a univalent perspective, however, a finite tree is a tree built out of finite types, not just the standard finite types. Sometimes, standard finite trees are called planar finite trees, to emphasize that the branching types `Fin n` record the order in which the branches occur.
+
+## Definition
+
+<pre class="Agda"><a id="1004" class="Keyword">data</a> <a id="Tree-Fin"></a><a id="1009" href="univalent-combinatorics.standard-finite-trees.html#1009" class="Datatype">Tree-Fin</a> <a id="1018" class="Symbol">:</a> <a id="1020" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1023" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="1029" class="Keyword">where</a>
+  <a id="Tree-Fin.tree-Fin"></a><a id="1037" href="univalent-combinatorics.standard-finite-trees.html#1037" class="InductiveConstructor">tree-Fin</a> <a id="1046" class="Symbol">:</a> <a id="1048" class="Symbol">(</a><a id="1049" href="univalent-combinatorics.standard-finite-trees.html#1049" class="Bound">n</a> <a id="1051" class="Symbol">:</a> <a id="1053" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="1054" class="Symbol">)</a> <a id="1056" class="Symbol">→</a> <a id="1058" class="Symbol">(</a><a id="1059" href="univalent-combinatorics.standard-finite-types.html#1975" class="Function">Fin</a> <a id="1063" href="univalent-combinatorics.standard-finite-trees.html#1049" class="Bound">n</a> <a id="1065" class="Symbol">→</a> <a id="1067" href="univalent-combinatorics.standard-finite-trees.html#1009" class="Datatype">Tree-Fin</a><a id="1075" class="Symbol">)</a> <a id="1077" class="Symbol">→</a> <a id="1079" href="univalent-combinatorics.standard-finite-trees.html#1009" class="Datatype">Tree-Fin</a>
+
+<a id="root-Tree-Fin"></a><a id="1089" href="univalent-combinatorics.standard-finite-trees.html#1089" class="Function">root-Tree-Fin</a> <a id="1103" class="Symbol">:</a> <a id="1105" href="univalent-combinatorics.standard-finite-trees.html#1009" class="Datatype">Tree-Fin</a>
+<a id="1114" href="univalent-combinatorics.standard-finite-trees.html#1089" class="Function">root-Tree-Fin</a> <a id="1128" class="Symbol">=</a> <a id="1130" href="univalent-combinatorics.standard-finite-trees.html#1037" class="InductiveConstructor">tree-Fin</a> <a id="1139" href="elementary-number-theory.natural-numbers.html#1465" class="InductiveConstructor">zero-ℕ</a> <a id="1146" href="foundation-core.empty-types.html#1150" class="Function">ex-falso</a>
+</pre>

@@ -23,7 +23,7 @@
 <body>
 <div class="powerby">
 <p>src/foundation/propositional-maps.lagda.md.</p>
-<p>Version of Monday, March  7, 2022, 06:40 PM</p>
+<p>Version of Monday, March  7, 2022, 07:06 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -40,7 +40,7 @@
 <a id="367" class="Keyword">open</a> <a id="372" class="Keyword">import</a> <a id="379" href="foundation-core.truncation-levels.html" class="Module">foundation-core.truncation-levels</a> <a id="413" class="Keyword">using</a> <a id="419" class="Symbol">(</a><a id="420" href="foundation-core.truncation-levels.html#435" class="Function">neg-one-𝕋</a><a id="429" class="Symbol">)</a>
 <a id="431" class="Keyword">open</a> <a id="436" class="Keyword">import</a> <a id="443" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a> <a id="475" class="Keyword">using</a> <a id="481" class="Symbol">(</a><a id="482" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="487" class="Symbol">;</a> <a id="489" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="491" class="Symbol">;</a> <a id="493" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="496" class="Symbol">)</a>
 
-<a id="499" class="Keyword">open</a> <a id="504" class="Keyword">import</a> <a id="511" href="foundation.embeddings.html" class="Module">foundation.embeddings</a> <a id="533" class="Keyword">using</a> <a id="539" class="Symbol">(</a><a id="540" href="foundation-core.embeddings.html#980" class="Function">is-emb</a><a id="546" class="Symbol">;</a> <a id="548" href="foundation.embeddings.html#1299" class="Function">is-emb-Prop</a><a id="559" class="Symbol">)</a>
+<a id="499" class="Keyword">open</a> <a id="504" class="Keyword">import</a> <a id="511" href="foundation.embeddings.html" class="Module">foundation.embeddings</a> <a id="533" class="Keyword">using</a> <a id="539" class="Symbol">(</a><a id="540" href="foundation-core.embeddings.html#980" class="Function">is-emb</a><a id="546" class="Symbol">;</a> <a id="548" href="foundation.embeddings.html#1301" class="Function">is-emb-Prop</a><a id="559" class="Symbol">)</a>
 <a id="561" class="Keyword">open</a> <a id="566" class="Keyword">import</a> <a id="573" href="foundation.logical-equivalences.html" class="Module">foundation.logical-equivalences</a> <a id="605" class="Keyword">using</a> <a id="611" class="Symbol">(</a><a id="612" href="foundation-core.logical-equivalences.html#1665" class="Function">equiv-iff</a><a id="621" class="Symbol">)</a>
 <a id="623" class="Keyword">open</a> <a id="628" class="Keyword">import</a> <a id="635" href="foundation.truncated-maps.html" class="Module">foundation.truncated-maps</a> <a id="661" class="Keyword">using</a> <a id="667" class="Symbol">(</a><a id="668" href="foundation.truncated-maps.html#684" class="Function">is-prop-is-trunc-map</a><a id="688" class="Symbol">)</a>
 </pre>
@@ -66,21 +66,21 @@
   <a id="1300" href="foundation.propositional-maps.html#1232" class="Function">equiv-is-emb-is-prop-map</a> <a id="1325" href="foundation.propositional-maps.html#1325" class="Bound">f</a> <a id="1327" class="Symbol">=</a>
     <a id="1333" href="foundation-core.logical-equivalences.html#1665" class="Function">equiv-iff</a>
       <a id="1349" class="Symbol">(</a> <a id="1351" href="foundation.propositional-maps.html#949" class="Function">is-prop-map-Prop</a> <a id="1368" href="foundation.propositional-maps.html#1325" class="Bound">f</a><a id="1369" class="Symbol">)</a>
-      <a id="1377" class="Symbol">(</a> <a id="1379" href="foundation.embeddings.html#1299" class="Function">is-emb-Prop</a> <a id="1391" href="foundation.propositional-maps.html#1325" class="Bound">f</a><a id="1392" class="Symbol">)</a>
+      <a id="1377" class="Symbol">(</a> <a id="1379" href="foundation.embeddings.html#1301" class="Function">is-emb-Prop</a> <a id="1391" href="foundation.propositional-maps.html#1325" class="Bound">f</a><a id="1392" class="Symbol">)</a>
       <a id="1400" class="Symbol">(</a> <a id="1402" href="foundation-core.propositional-maps.html#1524" class="Function">is-emb-is-prop-map</a><a id="1420" class="Symbol">)</a>
       <a id="1428" class="Symbol">(</a> <a id="1430" href="foundation-core.propositional-maps.html#1866" class="Function">is-prop-map-is-emb</a><a id="1448" class="Symbol">)</a>
 
   <a id="1453" href="foundation.propositional-maps.html#1453" class="Function">equiv-is-prop-map-is-emb</a> <a id="1478" class="Symbol">:</a> <a id="1480" class="Symbol">(</a><a id="1481" href="foundation.propositional-maps.html#1481" class="Bound">f</a> <a id="1483" class="Symbol">:</a> <a id="1485" href="foundation.propositional-maps.html#1198" class="Bound">A</a> <a id="1487" class="Symbol">→</a> <a id="1489" href="foundation.propositional-maps.html#1210" class="Bound">B</a><a id="1490" class="Symbol">)</a> <a id="1492" class="Symbol">→</a> <a id="1494" href="foundation-core.embeddings.html#980" class="Function">is-emb</a> <a id="1501" href="foundation.propositional-maps.html#1481" class="Bound">f</a> <a id="1503" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="1505" href="foundation-core.propositional-maps.html#1250" class="Function">is-prop-map</a> <a id="1517" href="foundation.propositional-maps.html#1481" class="Bound">f</a>
   <a id="1521" href="foundation.propositional-maps.html#1453" class="Function">equiv-is-prop-map-is-emb</a> <a id="1546" href="foundation.propositional-maps.html#1546" class="Bound">f</a> <a id="1548" class="Symbol">=</a>
     <a id="1554" href="foundation-core.logical-equivalences.html#1665" class="Function">equiv-iff</a>
-      <a id="1570" class="Symbol">(</a> <a id="1572" href="foundation.embeddings.html#1299" class="Function">is-emb-Prop</a> <a id="1584" href="foundation.propositional-maps.html#1546" class="Bound">f</a><a id="1585" class="Symbol">)</a>
+      <a id="1570" class="Symbol">(</a> <a id="1572" href="foundation.embeddings.html#1301" class="Function">is-emb-Prop</a> <a id="1584" href="foundation.propositional-maps.html#1546" class="Bound">f</a><a id="1585" class="Symbol">)</a>
       <a id="1593" class="Symbol">(</a> <a id="1595" href="foundation.propositional-maps.html#949" class="Function">is-prop-map-Prop</a> <a id="1612" href="foundation.propositional-maps.html#1546" class="Bound">f</a><a id="1613" class="Symbol">)</a>
       <a id="1621" class="Symbol">(</a> <a id="1623" href="foundation-core.propositional-maps.html#1866" class="Function">is-prop-map-is-emb</a><a id="1641" class="Symbol">)</a>
       <a id="1649" class="Symbol">(</a> <a id="1651" href="foundation-core.propositional-maps.html#1524" class="Function">is-emb-is-prop-map</a><a id="1669" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-03-07)(8117f9f) Update README.md by noreply
+(2022-03-07)(684880e) Merge pull request #89 from UniMath/ljubljana by noreply
 </pre>
 </body>
 </html>

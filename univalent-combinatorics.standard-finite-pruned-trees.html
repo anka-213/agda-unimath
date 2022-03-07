@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>univalent-combinatorics.standard-finite-pruned-trees</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/univalent-combinatorics/standard-finite-pruned-trees.lagda.md.</p>
+<p>Version of Monday, March  7, 2022, 07:06 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="standard-finite-pruned-trees">Standard finite pruned trees</h1>
+<pre class="Agda"><a id="41" class="Symbol">{-#</a> <a id="45" class="Keyword">OPTIONS</a> <a id="53" class="Pragma">--without-K</a> <a id="65" class="Pragma">--exact-split</a> <a id="79" class="Pragma">--allow-unsolved-metas</a> <a id="102" class="Symbol">#-}</a>
+
+<a id="107" class="Keyword">module</a> <a id="114" href="univalent-combinatorics.standard-finite-pruned-trees.html" class="Module">univalent-combinatorics.standard-finite-pruned-trees</a> <a id="167" class="Keyword">where</a>
+
+<a id="174" class="Keyword">open</a> <a id="179" class="Keyword">import</a> <a id="186" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="227" class="Keyword">using</a> <a id="233" class="Symbol">(</a><a id="234" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="235" class="Symbol">;</a> <a id="237" href="elementary-number-theory.natural-numbers.html#1465" class="InductiveConstructor">zero-ℕ</a><a id="243" class="Symbol">;</a> <a id="245" href="elementary-number-theory.natural-numbers.html#1478" class="InductiveConstructor">succ-ℕ</a><a id="251" class="Symbol">)</a>
+
+<a id="254" class="Keyword">open</a> <a id="259" class="Keyword">import</a> <a id="266" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="293" class="Keyword">using</a> <a id="299" class="Symbol">(</a><a id="300" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="302" class="Symbol">;</a> <a id="304" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="309" class="Symbol">)</a>
+
+<a id="312" class="Keyword">open</a> <a id="317" class="Keyword">import</a> <a id="324" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="370" class="Keyword">using</a> <a id="376" class="Symbol">(</a><a id="377" href="univalent-combinatorics.standard-finite-types.html#1975" class="Function">Fin</a><a id="380" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A standard finite pruned tree of height <code>n</code> can be thought of as a standard finite tree in which each path from the root to a leaf has length <code>n + 1</code>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="571" class="Keyword">data</a> <a id="Pruned-Tree-Fin"></a><a id="576" href="univalent-combinatorics.standard-finite-pruned-trees.html#576" class="Datatype">Pruned-Tree-Fin</a> <a id="592" class="Symbol">:</a> <a id="594" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a> <a id="596" class="Symbol">→</a> <a id="598" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="601" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="607" class="Keyword">where</a>
+  <a id="Pruned-Tree-Fin.root-Pruned-Tree-Fin"></a><a id="615" href="univalent-combinatorics.standard-finite-pruned-trees.html#615" class="InductiveConstructor">root-Pruned-Tree-Fin</a> <a id="636" class="Symbol">:</a> <a id="638" href="univalent-combinatorics.standard-finite-pruned-trees.html#576" class="Datatype">Pruned-Tree-Fin</a> <a id="654" href="elementary-number-theory.natural-numbers.html#1465" class="InductiveConstructor">zero-ℕ</a>
+  <a id="Pruned-Tree-Fin.tree-Pruned-Tree-Fin"></a><a id="663" href="univalent-combinatorics.standard-finite-pruned-trees.html#663" class="InductiveConstructor">tree-Pruned-Tree-Fin</a> <a id="684" class="Symbol">:</a>
+    <a id="690" class="Symbol">(</a><a id="691" href="univalent-combinatorics.standard-finite-pruned-trees.html#691" class="Bound">n</a> <a id="693" href="univalent-combinatorics.standard-finite-pruned-trees.html#693" class="Bound">k</a> <a id="695" class="Symbol">:</a> <a id="697" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="698" class="Symbol">)</a> <a id="700" class="Symbol">→</a> <a id="702" class="Symbol">(</a><a id="703" href="univalent-combinatorics.standard-finite-types.html#1975" class="Function">Fin</a> <a id="707" href="univalent-combinatorics.standard-finite-pruned-trees.html#693" class="Bound">k</a> <a id="709" class="Symbol">→</a> <a id="711" href="univalent-combinatorics.standard-finite-pruned-trees.html#576" class="Datatype">Pruned-Tree-Fin</a> <a id="727" href="univalent-combinatorics.standard-finite-pruned-trees.html#691" class="Bound">n</a><a id="728" class="Symbol">)</a> <a id="730" class="Symbol">→</a> <a id="732" href="univalent-combinatorics.standard-finite-pruned-trees.html#576" class="Datatype">Pruned-Tree-Fin</a> <a id="748" class="Symbol">(</a><a id="749" href="elementary-number-theory.natural-numbers.html#1478" class="InductiveConstructor">succ-ℕ</a> <a id="756" href="univalent-combinatorics.standard-finite-pruned-trees.html#691" class="Bound">n</a><a id="757" class="Symbol">)</a>
+
+<a id="width-Pruned-Tree-Fin"></a><a id="760" href="univalent-combinatorics.standard-finite-pruned-trees.html#760" class="Function">width-Pruned-Tree-Fin</a> <a id="782" class="Symbol">:</a> <a id="784" class="Symbol">(</a><a id="785" href="univalent-combinatorics.standard-finite-pruned-trees.html#785" class="Bound">n</a> <a id="787" class="Symbol">:</a> <a id="789" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="790" class="Symbol">)</a> <a id="792" class="Symbol">→</a> <a id="794" href="univalent-combinatorics.standard-finite-pruned-trees.html#576" class="Datatype">Pruned-Tree-Fin</a> <a id="810" class="Symbol">(</a><a id="811" href="elementary-number-theory.natural-numbers.html#1478" class="InductiveConstructor">succ-ℕ</a> <a id="818" href="univalent-combinatorics.standard-finite-pruned-trees.html#785" class="Bound">n</a><a id="819" class="Symbol">)</a> <a id="821" class="Symbol">→</a> <a id="823" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a>
+<a id="825" href="univalent-combinatorics.standard-finite-pruned-trees.html#760" class="Function">width-Pruned-Tree-Fin</a> <a id="847" href="univalent-combinatorics.standard-finite-pruned-trees.html#847" class="Bound">n</a> <a id="849" class="Symbol">(</a><a id="850" href="univalent-combinatorics.standard-finite-pruned-trees.html#663" class="InductiveConstructor">tree-Pruned-Tree-Fin</a> <a id="871" class="DottedPattern Symbol">.</a><a id="872" href="univalent-combinatorics.standard-finite-pruned-trees.html#847" class="DottedPattern Bound">n</a> <a id="874" href="univalent-combinatorics.standard-finite-pruned-trees.html#874" class="Bound">k</a> <a id="876" href="univalent-combinatorics.standard-finite-pruned-trees.html#876" class="Bound">x</a><a id="877" class="Symbol">)</a> <a id="879" class="Symbol">=</a> <a id="881" href="univalent-combinatorics.standard-finite-pruned-trees.html#874" class="Bound">k</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-07)(684880e) Merge pull request #89 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>
