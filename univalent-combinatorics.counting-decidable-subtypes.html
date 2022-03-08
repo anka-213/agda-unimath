@@ -23,7 +23,7 @@
 <body>
 <div class="powerby">
 <p>src/univalent-combinatorics/counting-decidable-subtypes.lagda.md.</p>
-<p>Version of Monday, March  7, 2022, 07:06 PM</p>
+<p>Version of Tuesday, March  8, 2022, 12:56 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -46,7 +46,7 @@
 <a id="761" class="Keyword">open</a> <a id="766" class="Keyword">import</a> <a id="773" href="foundation.fibers-of-maps.html" class="Module">foundation.fibers-of-maps</a> <a id="799" class="Keyword">using</a>
   <a id="807" class="Symbol">(</a> <a id="809" href="foundation-core.fibers-of-maps.html#3592" class="Function">equiv-fib-pr1</a><a id="822" class="Symbol">;</a> <a id="824" href="foundation-core.fibers-of-maps.html#5261" class="Function">equiv-total-fib</a><a id="839" class="Symbol">;</a> <a id="841" href="foundation-core.fibers-of-maps.html#928" class="Function">fib</a><a id="844" class="Symbol">)</a>
 <a id="846" class="Keyword">open</a> <a id="851" class="Keyword">import</a> <a id="858" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="879" class="Keyword">using</a> <a id="885" class="Symbol">(</a><a id="886" href="foundation-core.functions.html#407" class="Function Operator">_∘_</a><a id="889" class="Symbol">)</a>
-<a id="891" class="Keyword">open</a> <a id="896" class="Keyword">import</a> <a id="903" href="foundation.functoriality-coproduct-types.html" class="Module">foundation.functoriality-coproduct-types</a> <a id="944" class="Keyword">using</a> <a id="950" class="Symbol">(</a><a id="951" href="foundation.functoriality-coproduct-types.html#3417" class="Function">equiv-coprod</a><a id="963" class="Symbol">)</a>
+<a id="891" class="Keyword">open</a> <a id="896" class="Keyword">import</a> <a id="903" href="foundation.functoriality-coproduct-types.html" class="Module">foundation.functoriality-coproduct-types</a> <a id="944" class="Keyword">using</a> <a id="950" class="Symbol">(</a><a id="951" href="foundation.functoriality-coproduct-types.html#3470" class="Function">equiv-coprod</a><a id="963" class="Symbol">)</a>
 <a id="965" class="Keyword">open</a> <a id="970" class="Keyword">import</a> <a id="977" href="foundation.functoriality-dependent-pair-types.html" class="Module">foundation.functoriality-dependent-pair-types</a> <a id="1023" class="Keyword">using</a> <a id="1029" class="Symbol">(</a><a id="1030" href="foundation-core.functoriality-dependent-pair-types.html#10421" class="Function">equiv-Σ</a><a id="1037" class="Symbol">)</a>
 <a id="1039" class="Keyword">open</a> <a id="1044" class="Keyword">import</a> <a id="1051" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="1077" class="Keyword">using</a> <a id="1083" class="Symbol">(</a><a id="1084" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="1086" class="Symbol">;</a> <a id="1088" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="1092" class="Symbol">)</a>
 <a id="1094" class="Keyword">open</a> <a id="1099" class="Keyword">import</a> <a id="1106" href="foundation.propositional-maps.html" class="Module">foundation.propositional-maps</a> <a id="1136" class="Keyword">using</a> <a id="1142" class="Symbol">(</a><a id="1143" href="foundation-core.propositional-maps.html#2339" class="Function">is-prop-map-emb</a><a id="1158" class="Symbol">)</a>
@@ -158,7 +158,7 @@
               <a id="5476" class="Symbol">(</a> <a id="5478" class="Symbol">λ</a> <a id="5480" href="univalent-combinatorics.counting-decidable-subtypes.html#5480" class="Bound">x</a> <a id="5482" class="Symbol">→</a> <a id="5484" class="Bound">d</a> <a id="5486" class="Symbol">(</a><a id="5487" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a> <a id="5497" class="Bound">e</a> <a id="5499" class="Symbol">(</a><a id="5500" href="foundation.coproduct-types.html#1239" class="InductiveConstructor">inl</a> <a id="5504" href="univalent-combinatorics.counting-decidable-subtypes.html#5480" class="Bound">x</a><a id="5505" class="Symbol">)))</a>
               <a id="5523" class="Symbol">(</a> <a id="5525" class="Bound">k</a><a id="5526" class="Symbol">)</a>
               <a id="5542" class="Symbol">(</a> <a id="5544" href="foundation-core.equivalences.html#2480" class="Function">id-equiv</a><a id="5552" class="Symbol">))))</a>
-        <a id="5565" class="Symbol">(</a> <a id="5567" href="foundation.functoriality-coproduct-types.html#3417" class="Function">equiv-coprod</a>
+        <a id="5565" class="Symbol">(</a> <a id="5567" href="foundation.functoriality-coproduct-types.html#3470" class="Function">equiv-coprod</a>
           <a id="5590" class="Symbol">(</a> <a id="5592" href="univalent-combinatorics.counting.html#1943" class="Function">equiv-count</a>
             <a id="5616" class="Symbol">(</a> <a id="5618" href="univalent-combinatorics.counting-decidable-subtypes.html#4702" class="Function">count-decidable-subtype&#39;</a>
               <a id="5657" class="Symbol">(</a> <a id="5659" class="Symbol">λ</a> <a id="5661" href="univalent-combinatorics.counting-decidable-subtypes.html#5661" class="Bound">x</a> <a id="5663" class="Symbol">→</a> <a id="5665" class="Bound">P</a> <a id="5667" class="Symbol">(</a><a id="5668" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a> <a id="5678" class="Bound">e</a> <a id="5680" class="Symbol">(</a><a id="5681" href="foundation.coproduct-types.html#1239" class="InductiveConstructor">inl</a> <a id="5685" href="univalent-combinatorics.counting-decidable-subtypes.html#5661" class="Bound">x</a><a id="5686" class="Symbol">)))</a>
@@ -242,7 +242,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-03-07)(684880e) Merge pull request #89 from UniMath/ljubljana by noreply
+(2022-03-08)(bc374da) Merge pull request #90 from LeoMangel/leomangel by noreply
 </pre>
 </body>
 </html>
