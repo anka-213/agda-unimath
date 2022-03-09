@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>tutorials.basic-agda</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/tutorials/basic-agda.lagda.md.</p>
+<p>Version of Wednesday, March  9, 2022, 03:33 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="tutorial-on-basic-use-of-agda">Tutorial on basic use of Agda</h1>
+<pre class="Agda"><a id="42" class="Symbol">{-#</a> <a id="46" class="Keyword">OPTIONS</a> <a id="54" class="Pragma">--without-K</a> <a id="66" class="Pragma">--exact-split</a> <a id="80" class="Pragma">--allow-unsolved-metas</a> <a id="103" class="Symbol">#-}</a>
+
+<a id="108" class="Keyword">module</a> <a id="115" href="tutorials.basic-agda.html" class="Module">tutorials.basic-agda</a> <a id="136" class="Keyword">where</a>
+</pre>
+<h2 id="introduction">Introduction</h2>
+<p>Welcome to the tutorial on basic use of Agda. Agda is a computer proof assistant. It can be used for formal mathematical reasoning, verification of software, and implementation and design of dependently typed programming languages. Here we will focus solely on the first use of Agda, as a proof assistant for mathematical reasoning.</p>
+<h2 id="further-resources">Further resources</h2>
+<p>There are many online resources that can help you learn more about Agda</p>
+<ul>
+<li><a href="https://agda.readthedocs.io/en/v2.6.2.1/">The official Agda documentation</a></li>
+<li><a href="https://www.cs.bham.ac.uk/~mhe/HoTT-UF-in-Agda-Lecture-Notes/">Martin Escardo’s Univalent Foundations of Mathematics with Agda</a></li>
+<li><a href="http://www.cs.nott.ac.uk/~psztxa/g53cfr/">Thorsten Altenkirch’s Computer Aided Formal Reasoning</a></li>
+</ul>
+<h2 id="how-to-use-agda">How to use Agda</h2>
+<p>To obtain Agda, follow the instructions from the <a href="https://agda.readthedocs.io/en/v2.6.2.1/getting-started/installation.html">installation manual</a> of the official Agda documentation. Agda can be used in either emacs or vscode. Here we will focus on Agda in emacs.</p>
+<p>This tutorial is written in a literate Agda file. In our case, the file is named <code>basic-agda.lagda.md</code>, which means that we can write markdown code between the blocks of Agda code. A block of Agda code is opened with three back ticks followed by the letters <code>agda</code>, and it is closed with three back ticks. For example, the following block of Agda code introduces the type of natural numbers:</p>
+<pre class="Agda"><a id="1588" class="Keyword">data</a> <a id="ℕ"></a><a id="1593" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a> <a id="1595" class="Symbol">:</a> <a id="1597" href="Agda.Primitive.html#326" class="Primitive">Set</a> <a id="1601" class="Keyword">where</a>
+  <a id="ℕ.zero-ℕ"></a><a id="1609" href="tutorials.basic-agda.html#1609" class="InductiveConstructor">zero-ℕ</a> <a id="1616" class="Symbol">:</a> <a id="1618" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a>
+  <a id="ℕ.succ-ℕ"></a><a id="1622" href="tutorials.basic-agda.html#1622" class="InductiveConstructor">succ-ℕ</a> <a id="1629" class="Symbol">:</a> <a id="1631" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a> <a id="1633" class="Symbol">→</a> <a id="1635" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a>
+</pre>
+<p>In emacs mode, the symbol ℕ for the natural numbers is obtained by typing <code>\bN</code>. Likewise, the arrow is obtained by typing <code>\to</code>. The emacs mode has support for many unicode characters. The <a href="https://agda.readthedocs.io/en/v2.6.2.1/tools/emacs-mode.html#unicode-input">official documentation</a> explains how to use them.</p>
+<h3 id="defining-basic-operations-on-natural-numbers">Defining basic operations on natural numbers</h3>
+<pre class="Agda"><a id="add-ℕ"></a><a id="2019" href="tutorials.basic-agda.html#2019" class="Function">add-ℕ</a> <a id="2025" class="Symbol">:</a> <a id="2027" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a> <a id="2029" class="Symbol">→</a> <a id="2031" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a> <a id="2033" class="Symbol">→</a> <a id="2035" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a>
+<a id="2037" href="tutorials.basic-agda.html#2019" class="Function">add-ℕ</a> <a id="2043" href="tutorials.basic-agda.html#2043" class="Bound">x</a> <a id="2045" href="tutorials.basic-agda.html#1609" class="InductiveConstructor">zero-ℕ</a> <a id="2052" class="Symbol">=</a> <a id="2054" href="tutorials.basic-agda.html#2043" class="Bound">x</a>
+<a id="2056" href="tutorials.basic-agda.html#2019" class="Function">add-ℕ</a> <a id="2062" href="tutorials.basic-agda.html#2062" class="Bound">x</a> <a id="2064" class="Symbol">(</a><a id="2065" href="tutorials.basic-agda.html#1622" class="InductiveConstructor">succ-ℕ</a> <a id="2072" href="tutorials.basic-agda.html#2072" class="Bound">y</a><a id="2073" class="Symbol">)</a> <a id="2075" class="Symbol">=</a> <a id="2077" href="tutorials.basic-agda.html#1622" class="InductiveConstructor">succ-ℕ</a> <a id="2084" class="Symbol">(</a><a id="2085" href="tutorials.basic-agda.html#2019" class="Function">add-ℕ</a> <a id="2091" href="tutorials.basic-agda.html#2062" class="Bound">x</a> <a id="2093" href="tutorials.basic-agda.html#2072" class="Bound">y</a><a id="2094" class="Symbol">)</a>
+
+<a id="mul-ℕ"></a><a id="2097" href="tutorials.basic-agda.html#2097" class="Function">mul-ℕ</a> <a id="2103" class="Symbol">:</a> <a id="2105" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a> <a id="2107" class="Symbol">→</a> <a id="2109" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a> <a id="2111" class="Symbol">→</a> <a id="2113" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a>
+<a id="2115" href="tutorials.basic-agda.html#2097" class="Function">mul-ℕ</a> <a id="2121" class="Symbol">=</a> <a id="2123" class="Hole">{!!}</a>
+
+<a id="exp-ℕ"></a><a id="2129" href="tutorials.basic-agda.html#2129" class="Function">exp-ℕ</a> <a id="2135" class="Symbol">:</a> <a id="2137" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a> <a id="2139" class="Symbol">→</a> <a id="2141" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a> <a id="2143" class="Symbol">→</a> <a id="2145" href="tutorials.basic-agda.html#1593" class="Datatype">ℕ</a>
+<a id="2147" href="tutorials.basic-agda.html#2129" class="Function">exp-ℕ</a> <a id="2153" class="Symbol">=</a> <a id="2155" class="Hole">{!!}</a>
+</pre>
+<h3 id="equality-in-agda">Equality in Agda</h3>
+<p>Equality in a proof assistant is expressed by the identity type</p>
+<pre class="Agda"><a id="2260" class="Keyword">data</a> <a id="Id"></a><a id="2265" href="tutorials.basic-agda.html#2265" class="Datatype">Id</a> <a id="2268" class="Symbol">{</a><a id="2269" href="tutorials.basic-agda.html#2269" class="Bound">X</a> <a id="2271" class="Symbol">:</a> <a id="2273" href="Agda.Primitive.html#326" class="Primitive">Set</a><a id="2276" class="Symbol">}</a> <a id="2278" class="Symbol">(</a><a id="2279" href="tutorials.basic-agda.html#2279" class="Bound">x</a> <a id="2281" class="Symbol">:</a> <a id="2283" href="tutorials.basic-agda.html#2269" class="Bound">X</a><a id="2284" class="Symbol">)</a> <a id="2286" class="Symbol">:</a> <a id="2288" href="tutorials.basic-agda.html#2269" class="Bound">X</a> <a id="2290" class="Symbol">→</a> <a id="2292" href="Agda.Primitive.html#326" class="Primitive">Set</a> <a id="2296" class="Keyword">where</a>
+  <a id="Id.refl"></a><a id="2304" href="tutorials.basic-agda.html#2304" class="InductiveConstructor">refl</a> <a id="2309" class="Symbol">:</a> <a id="2311" href="tutorials.basic-agda.html#2265" class="Datatype">Id</a> <a id="2314" href="tutorials.basic-agda.html#2279" class="Bound">x</a> <a id="2316" href="tutorials.basic-agda.html#2279" class="Bound">x</a>
+</pre>
+<h3 id="equality-is-an-equivalence-relation">Equality is an equivalence relation</h3>
+<h3 id="every-function-preserves-equality">Every function preserves equality</h3>
+<h3 id="addition-on-ℕ-satisfies-the-usual-laws">Addition on ℕ satisfies the usual laws</h3>
+<h3 id="section"></h3>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-09)(d66f699) Merge pull request #95 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>
