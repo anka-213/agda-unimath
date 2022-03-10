@@ -23,7 +23,7 @@
 <body>
 <div class="powerby">
 <p>src/elementary-number-theory/addition-natural-numbers.lagda.md.</p>
-<p>Version of Thursday, March 10, 2022, 09:01 AM</p>
+<p>Version of Thursday, March 10, 2022, 04:28 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -43,7 +43,7 @@
 <a id="624" class="Keyword">open</a> <a id="629" class="Keyword">import</a> <a id="636" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="662" class="Keyword">using</a> <a id="668" class="Symbol">(</a><a id="669" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="671" class="Symbol">;</a> <a id="673" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="677" class="Symbol">;</a> <a id="679" href="foundation-core.identity-types.html#1239" class="Function Operator">_∙_</a><a id="682" class="Symbol">;</a> <a id="684" href="foundation-core.identity-types.html#1552" class="Function">inv</a><a id="687" class="Symbol">;</a> <a id="689" href="foundation-core.identity-types.html#2853" class="Function">ap</a><a id="691" class="Symbol">;</a> <a id="693" href="foundation-core.identity-types.html#6353" class="Function">ap-binary</a><a id="702" class="Symbol">)</a>
 <a id="704" class="Keyword">open</a> <a id="709" class="Keyword">import</a> <a id="716" href="foundation.injective-maps.html" class="Module">foundation.injective-maps</a> <a id="742" class="Keyword">using</a> <a id="748" class="Symbol">(</a><a id="749" href="foundation.injective-maps.html#1295" class="Function">is-injective</a><a id="761" class="Symbol">;</a> <a id="763" href="foundation.injective-maps.html#4595" class="Function">is-emb-is-injective</a><a id="782" class="Symbol">)</a>
 <a id="784" class="Keyword">open</a> <a id="789" class="Keyword">import</a> <a id="796" href="foundation.interchange-law.html" class="Module">foundation.interchange-law</a> <a id="823" class="Keyword">using</a>
-  <a id="831" class="Symbol">(</a> <a id="833" href="foundation.interchange-law.html#1648" class="Function">interchange-law</a><a id="848" class="Symbol">;</a> <a id="850" href="foundation.interchange-law.html#1769" class="Function">interchange-law-commutative-and-associative</a><a id="893" class="Symbol">)</a>
+  <a id="831" class="Symbol">(</a> <a id="833" href="foundation.interchange-law.html#1641" class="Function">interchange-law</a><a id="848" class="Symbol">;</a> <a id="850" href="foundation.interchange-law.html#1762" class="Function">interchange-law-commutative-and-associative</a><a id="893" class="Symbol">)</a>
 <a id="895" class="Keyword">open</a> <a id="900" class="Keyword">import</a> <a id="907" href="foundation.negation.html" class="Module">foundation.negation</a> <a id="927" class="Keyword">using</a> <a id="933" class="Symbol">(</a><a id="934" href="foundation-core.negation.html#452" class="Function">¬</a><a id="935" class="Symbol">)</a>
 </pre>
 <h2 id="addition-and-multiplication-on-ℕ">Addition and multiplication on ℕ</h2>
@@ -108,9 +108,9 @@
   <a id="2734" class="Symbol">(</a><a id="2735" href="elementary-number-theory.addition-natural-numbers.html#2735" class="Bound">x</a> <a id="2737" class="Symbol">:</a> <a id="2739" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="2740" class="Symbol">)</a> <a id="2742" class="Symbol">→</a> <a id="2744" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="2747" class="Symbol">(</a><a id="2748" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a> <a id="2754" href="elementary-number-theory.addition-natural-numbers.html#2735" class="Bound">x</a> <a id="2756" class="Number">2</a><a id="2757" class="Symbol">)</a> <a id="2759" class="Symbol">(</a><a id="2760" href="elementary-number-theory.natural-numbers.html#1478" class="InductiveConstructor">succ-ℕ</a> <a id="2767" class="Symbol">(</a><a id="2768" href="elementary-number-theory.natural-numbers.html#1478" class="InductiveConstructor">succ-ℕ</a> <a id="2775" href="elementary-number-theory.addition-natural-numbers.html#2735" class="Bound">x</a><a id="2776" class="Symbol">))</a>
 <a id="2779" href="elementary-number-theory.addition-natural-numbers.html#2710" class="Function">right-two-law-add-ℕ</a> <a id="2799" href="elementary-number-theory.addition-natural-numbers.html#2799" class="Bound">x</a> <a id="2801" class="Symbol">=</a> <a id="2803" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a>
 
-<a id="interchange-law-add-add-ℕ"></a><a id="2809" href="elementary-number-theory.addition-natural-numbers.html#2809" class="Function">interchange-law-add-add-ℕ</a> <a id="2835" class="Symbol">:</a> <a id="2837" href="foundation.interchange-law.html#1648" class="Function">interchange-law</a> <a id="2853" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a> <a id="2859" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a>
+<a id="interchange-law-add-add-ℕ"></a><a id="2809" href="elementary-number-theory.addition-natural-numbers.html#2809" class="Function">interchange-law-add-add-ℕ</a> <a id="2835" class="Symbol">:</a> <a id="2837" href="foundation.interchange-law.html#1641" class="Function">interchange-law</a> <a id="2853" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a> <a id="2859" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a>
 <a id="2865" href="elementary-number-theory.addition-natural-numbers.html#2809" class="Function">interchange-law-add-add-ℕ</a> <a id="2891" class="Symbol">=</a>
-  <a id="2895" href="foundation.interchange-law.html#1769" class="Function">interchange-law-commutative-and-associative</a>
+  <a id="2895" href="foundation.interchange-law.html#1762" class="Function">interchange-law-commutative-and-associative</a>
     <a id="2943" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a>
     <a id="2953" href="elementary-number-theory.addition-natural-numbers.html#2076" class="Function">commutative-add-ℕ</a>
     <a id="2975" href="elementary-number-theory.addition-natural-numbers.html#1884" class="Function">associative-add-ℕ</a>
@@ -158,7 +158,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-03-10)(72417e3) Merge pull request #96 from UniMath/ljubljana by noreply
+(2022-03-10)(bdea633) Merge pull request #97 from UniMath/ljubljana by noreply
 </pre>
 </body>
 </html>

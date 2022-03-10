@@ -261,7 +261,7 @@ equiv-face-standard-cube {succ-ℕ k} d a = {!!}
       <a id="8656" class="Symbol">(</a> <a id="8658" href="finite-groups.concrete-quaternion-group.html#2086" class="Function">dim-equiv-cube</a> <a id="8673" href="finite-groups.concrete-quaternion-group.html#8496" class="Bound">X</a> <a id="8675" href="finite-groups.concrete-quaternion-group.html#8498" class="Bound">Y</a> <a id="8677" href="finite-groups.concrete-quaternion-group.html#8500" class="Bound">e</a><a id="8678" class="Symbol">)</a>
       <a id="8686" class="Symbol">(</a> <a id="8688" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="8692" class="Symbol">))</a>
     <a id="8699" class="Symbol">(</a> <a id="8701" class="Symbol">λ</a> <a id="8703" href="finite-groups.concrete-quaternion-group.html#8703" class="Bound">d&#39;</a> <a id="8706" class="Symbol">→</a>
-      <a id="8714" class="Symbol">(</a> <a id="8716" href="foundation.identity-types.html#3549" class="Function">equiv-tr</a>
+      <a id="8714" class="Symbol">(</a> <a id="8716" href="foundation.identity-types.html#3840" class="Function">equiv-tr</a>
         <a id="8733" class="Symbol">(</a> <a id="8735" href="finite-groups.concrete-quaternion-group.html#1256" class="Function">axis-cube</a> <a id="8745" href="finite-groups.concrete-quaternion-group.html#8498" class="Bound">Y</a><a id="8746" class="Symbol">)</a>
         <a id="8756" class="Symbol">(</a> <a id="8758" href="foundation-core.identity-types.html#1552" class="Function">inv</a>
           <a id="8772" class="Symbol">(</a> <a id="8774" href="univalent-foundations.isolated-points.html#8777" class="Function">natural-inclusion-equiv-complement-isolated-point</a>

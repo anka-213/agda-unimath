@@ -26,7 +26,7 @@ title: Formalisation of the Symmetry Book
       <a id="550" href="groups.examples-higher-groups.html#313" class="Function">classifying-type-ℤ-∞-Group</a>
       <a id="583" href="groups.examples-higher-groups.html#388" class="Function">shape-ℤ-∞-Group</a>
 
-  <a id="602" href="groups.examples-higher-groups.html#602" class="Function">ℤ-∞-Group</a> <a id="612" class="Symbol">:</a> <a id="614" href="groups.higher-groups.html#1485" class="Function">∞-Group</a> <a id="622" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+  <a id="602" href="groups.examples-higher-groups.html#602" class="Function">ℤ-∞-Group</a> <a id="612" class="Symbol">:</a> <a id="614" href="groups.higher-groups.html#1494" class="Function">∞-Group</a> <a id="622" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
   <a id="630" href="groups.examples-higher-groups.html#602" class="Function">ℤ-∞-Group</a> <a id="640" class="Symbol">=</a>
     <a id="646" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
       <a id="657" href="groups.examples-higher-groups.html#440" class="Function">classifying-pointed-type-ℤ-∞-Group</a>
@@ -54,7 +54,7 @@ title: Formalisation of the Symmetry Book
   <a id="1305" href="groups.examples-higher-groups.html#1191" class="Function">is-path-connected-classifying-type-symmetric-∞-Group</a> <a id="1358" class="Symbol">=</a>
     <a id="1364" href="foundation.connected-components-universes.html#6383" class="Function">is-path-connected-component-UU</a> <a id="1395" href="groups.examples-higher-groups.html#744" class="Bound">X</a>
   
-  <a id="1402" href="groups.examples-higher-groups.html#1402" class="Function">symmetric-∞-Group</a> <a id="1420" class="Symbol">:</a> <a id="1422" href="groups.higher-groups.html#1485" class="Function">∞-Group</a> <a id="1430" class="Symbol">(</a><a id="1431" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1436" href="groups.examples-higher-groups.html#732" class="Bound">l</a><a id="1437" class="Symbol">)</a>
+  <a id="1402" href="groups.examples-higher-groups.html#1402" class="Function">symmetric-∞-Group</a> <a id="1420" class="Symbol">:</a> <a id="1422" href="groups.higher-groups.html#1494" class="Function">∞-Group</a> <a id="1430" class="Symbol">(</a><a id="1431" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1436" href="groups.examples-higher-groups.html#732" class="Bound">l</a><a id="1437" class="Symbol">)</a>
   <a id="1441" href="groups.examples-higher-groups.html#1402" class="Function">symmetric-∞-Group</a> <a id="1459" class="Symbol">=</a>
     <a id="1465" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
       <a id="1476" href="groups.examples-higher-groups.html#994" class="Function">classifying-pointed-type-symmetric-∞-Group</a>
