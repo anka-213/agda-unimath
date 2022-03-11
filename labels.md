@@ -397,7 +397,7 @@ The following names are taken from the Latex code of the book using the regex `\
 <a id="sec:absconctorsor"></a><a id="9434" href="labels.html#9434" class="UnsolvedMeta Function">sec:absconctorsor</a> <a id="9452" class="Symbol">=</a> <a id="9454" class="Hole">{!!}</a>
 <a id="sec:monoepi"></a><a id="9459" href="labels.html#9459" class="UnsolvedMeta Function">sec:monoepi</a> <a id="9471" class="Symbol">=</a> <a id="9473" class="Hole">{!!}</a>
 <a id="lem:injofsetsaremono"></a><a id="9478" href="labels.html#9478" class="UnsolvedMeta Function">lem:injofsetsaremono</a> <a id="9499" class="Symbol">=</a> <a id="9501" class="Hole">{!!}</a>
-<a id="def:monomorphism"></a><a id="9506" href="labels.html#9506" class="Function">def:monomorphism</a> <a id="9523" class="Symbol">=</a> <a id="9525" href="foundation.monomorphisms.html#1151" class="Function">is-mono</a>
+<a id="def:monomorphism"></a><a id="9506" href="labels.html#9506" class="Function">def:monomorphism</a> <a id="9523" class="Symbol">=</a> <a id="9525" href="foundation.monomorphisms.html#1152" class="Function">is-mono</a>
 <a id="def:epimorphism"></a><a id="9533" href="labels.html#9533" class="UnsolvedMeta Function">def:epimorphism</a> <a id="9549" class="Symbol">=</a> <a id="9551" class="Hole">{!!}</a>
 <a id="lem:eq-mono-cover"></a><a id="9556" href="labels.html#9556" class="UnsolvedMeta Function">lem:eq-mono-cover</a> <a id="9574" class="Symbol">=</a> <a id="9576" class="Hole">{!!}</a>
 <a id="lem:eq-epi-conn"></a><a id="9581" href="labels.html#9581" class="UnsolvedMeta Function">lem:eq-epi-conn</a> <a id="9597" class="Symbol">=</a> <a id="9599" class="Hole">{!!}</a>

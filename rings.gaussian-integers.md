@@ -256,13 +256,13 @@ title: Formalisation of the Symmetry Book
 
 <a id="8688" class="Comment">-- We complete the construction of the ring of Gaussian integers</a>
 
-<a id="ℤ[i]-Semigroup"></a><a id="8754" href="rings.gaussian-integers.html#8754" class="Function">ℤ[i]-Semigroup</a> <a id="8769" class="Symbol">:</a> <a id="8771" href="groups.abstract-groups.html#951" class="Function">Semigroup</a> <a id="8781" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="ℤ[i]-Semigroup"></a><a id="8754" href="rings.gaussian-integers.html#8754" class="Function">ℤ[i]-Semigroup</a> <a id="8769" class="Symbol">:</a> <a id="8771" href="groups.abstract-groups.html#956" class="Function">Semigroup</a> <a id="8781" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
 <a id="8787" href="rings.gaussian-integers.html#8754" class="Function">ℤ[i]-Semigroup</a> <a id="8802" class="Symbol">=</a>
   <a id="8806" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
     <a id="8815" class="Symbol">(</a> <a id="8817" href="foundation.sets.html#1873" class="Function">prod-Set</a> <a id="8826" href="elementary-number-theory.equality-integers.html#3338" class="Function">ℤ-Set</a> <a id="8832" href="elementary-number-theory.equality-integers.html#3338" class="Function">ℤ-Set</a><a id="8837" class="Symbol">)</a>
     <a id="8843" class="Symbol">(</a> <a id="8845" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="8850" href="rings.gaussian-integers.html#1261" class="Function">add-ℤ[i]</a> <a id="8859" href="rings.gaussian-integers.html#2296" class="Function">associative-add-ℤ[i]</a><a id="8879" class="Symbol">)</a>
 
-<a id="ℤ[i]-Group"></a><a id="8882" href="rings.gaussian-integers.html#8882" class="Function">ℤ[i]-Group</a> <a id="8893" class="Symbol">:</a> <a id="8895" href="groups.abstract-groups.html#23583" class="Function">Group</a> <a id="8901" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="ℤ[i]-Group"></a><a id="8882" href="rings.gaussian-integers.html#8882" class="Function">ℤ[i]-Group</a> <a id="8893" class="Symbol">:</a> <a id="8895" href="groups.abstract-groups.html#23569" class="Function">Group</a> <a id="8901" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
 <a id="8907" href="rings.gaussian-integers.html#8882" class="Function">ℤ[i]-Group</a> <a id="8918" class="Symbol">=</a>
   <a id="8922" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
     <a id="8931" class="Symbol">(</a> <a id="8933" href="rings.gaussian-integers.html#8754" class="Function">ℤ[i]-Semigroup</a><a id="8947" class="Symbol">)</a>
