@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Formalisation of the Symmetry Book</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/group-theory.lagda.md.</p>
+<p>Version of Saturday, March 12, 2022, 12:15 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Formalisation of the Symmetry Book</h1>
+</header>
+<pre class="Agda"><a id="60" class="Symbol">{-#</a> <a id="64" class="Keyword">OPTIONS</a> <a id="72" class="Pragma">--without-K</a> <a id="84" class="Pragma">--exact-split</a> <a id="98" class="Symbol">#-}</a>
+
+<a id="103" class="Keyword">module</a> <a id="110" href="group-theory.html" class="Module">group-theory</a> <a id="123" class="Keyword">where</a>
+
+<a id="130" class="Keyword">open</a> <a id="135" class="Keyword">import</a> <a id="142" href="group-theory.abstract-groups.html" class="Module">group-theory.abstract-groups</a> <a id="171" class="Keyword">public</a>
+<a id="178" class="Keyword">open</a> <a id="183" class="Keyword">import</a> <a id="190" href="group-theory.abstract-subgroups.html" class="Module">group-theory.abstract-subgroups</a> <a id="222" class="Keyword">public</a>
+<a id="229" class="Keyword">open</a> <a id="234" class="Keyword">import</a> <a id="241" href="group-theory.abstract-abelian-groups.html" class="Module">group-theory.abstract-abelian-groups</a> <a id="278" class="Keyword">public</a>
+<a id="285" class="Keyword">open</a> <a id="290" class="Keyword">import</a> <a id="297" href="group-theory.abstract-abelian-subgroups.html" class="Module">group-theory.abstract-abelian-subgroups</a> <a id="337" class="Keyword">public</a>
+<a id="344" class="Keyword">open</a> <a id="349" class="Keyword">import</a> <a id="356" href="group-theory.abstract-group-actions.html" class="Module">group-theory.abstract-group-actions</a> <a id="392" class="Keyword">public</a>
+<a id="399" class="Keyword">open</a> <a id="404" class="Keyword">import</a> <a id="411" href="group-theory.abstract-group-torsors.html" class="Module">group-theory.abstract-group-torsors</a> <a id="447" class="Keyword">public</a>
+<a id="454" class="Keyword">open</a> <a id="459" class="Keyword">import</a> <a id="466" href="group-theory.higher-groups.html" class="Module">group-theory.higher-groups</a> <a id="493" class="Keyword">public</a>
+<a id="500" class="Keyword">open</a> <a id="505" class="Keyword">import</a> <a id="512" href="group-theory.concrete-groups.html" class="Module">group-theory.concrete-groups</a> <a id="541" class="Keyword">public</a>
+<a id="548" class="Keyword">open</a> <a id="553" class="Keyword">import</a> <a id="560" href="group-theory.concrete-subgroups.html" class="Module">group-theory.concrete-subgroups</a> <a id="592" class="Keyword">public</a>
+<a id="599" class="Keyword">open</a> <a id="604" class="Keyword">import</a> <a id="611" href="group-theory.examples-higher-groups.html" class="Module">group-theory.examples-higher-groups</a> <a id="647" class="Keyword">public</a>
+<a id="654" class="Keyword">open</a> <a id="659" class="Keyword">import</a> <a id="666" href="group-theory.concrete-group-actions.html" class="Module">group-theory.concrete-group-actions</a> <a id="702" class="Keyword">public</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-12)(9f166fc) Merge pull request #100 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>

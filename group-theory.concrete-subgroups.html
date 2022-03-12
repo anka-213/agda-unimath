@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Formalisation of the Symmetry Book</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/group-theory/concrete-subgroups.lagda.md.</p>
+<p>Version of Saturday, March 12, 2022, 12:15 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Formalisation of the Symmetry Book</h1>
+</header>
+<pre class="Agda"><a id="60" class="Symbol">{-#</a> <a id="64" class="Keyword">OPTIONS</a> <a id="72" class="Pragma">--without-K</a> <a id="84" class="Pragma">--exact-split</a> <a id="98" class="Symbol">#-}</a>
+
+<a id="103" class="Keyword">module</a> <a id="110" href="group-theory.concrete-subgroups.html" class="Module">group-theory.concrete-subgroups</a> <a id="142" class="Keyword">where</a>
+
+<a id="149" class="Keyword">open</a> <a id="154" class="Keyword">import</a> <a id="161" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="193" class="Keyword">using</a> <a id="199" class="Symbol">(</a><a id="200" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="201" class="Symbol">)</a>
+<a id="203" class="Keyword">open</a> <a id="208" class="Keyword">import</a> <a id="215" href="foundation.embeddings.html" class="Module">foundation.embeddings</a> <a id="237" class="Keyword">using</a> <a id="243" class="Symbol">(</a><a id="244" href="foundation.embeddings.html#1301" class="Function">is-emb-Prop</a><a id="255" class="Symbol">)</a>
+<a id="257" class="Keyword">open</a> <a id="262" class="Keyword">import</a> <a id="269" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="293" class="Keyword">using</a>
+  <a id="301" class="Symbol">(</a> <a id="303" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a><a id="310" class="Symbol">;</a> <a id="312" href="foundation.propositions.html#1941" class="Function">Π-Prop</a><a id="318" class="Symbol">;</a> <a id="320" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a><a id="329" class="Symbol">;</a> <a id="331" href="foundation-core.propositions.html#1246" class="Function">is-prop</a><a id="338" class="Symbol">;</a> <a id="340" href="foundation-core.propositions.html#1491" class="Function">is-prop-type-Prop</a><a id="357" class="Symbol">)</a>
+<a id="359" class="Keyword">open</a> <a id="364" class="Keyword">import</a> <a id="371" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="398" class="Keyword">using</a> <a id="404" class="Symbol">(</a><a id="405" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="407" class="Symbol">;</a> <a id="409" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="414" class="Symbol">;</a> <a id="416" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="419" class="Symbol">;</a> <a id="421" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="425" class="Symbol">)</a>
+<a id="427" class="Keyword">open</a> <a id="432" class="Keyword">import</a> <a id="439" href="group-theory.concrete-groups.html" class="Module">group-theory.concrete-groups</a> <a id="468" class="Keyword">using</a>
+  <a id="476" class="Symbol">(</a> <a id="478" href="group-theory.concrete-groups.html#1994" class="Function">Concrete-Group</a><a id="492" class="Symbol">;</a> <a id="494" href="group-theory.concrete-groups.html#7000" class="Function">hom-Concrete-Group</a><a id="512" class="Symbol">;</a> <a id="514" href="group-theory.concrete-groups.html#10575" class="Function">comp-hom-Concrete-Group</a><a id="537" class="Symbol">)</a>
+
+<a id="540" class="Keyword">module</a> <a id="547" href="group-theory.concrete-subgroups.html#547" class="Module">_</a> <a id="549" class="Symbol">{</a><a id="550" href="group-theory.concrete-subgroups.html#550" class="Bound">l1</a> <a id="553" href="group-theory.concrete-subgroups.html#553" class="Bound">l2</a> <a id="556" class="Symbol">:</a> <a id="558" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="563" class="Symbol">}</a> <a id="565" class="Symbol">(</a><a id="566" href="group-theory.concrete-subgroups.html#566" class="Bound">l3</a> <a id="569" class="Symbol">:</a> <a id="571" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="576" class="Symbol">)</a>
+  <a id="580" class="Symbol">(</a><a id="581" href="group-theory.concrete-subgroups.html#581" class="Bound">G</a> <a id="583" class="Symbol">:</a> <a id="585" href="group-theory.concrete-groups.html#1994" class="Function">Concrete-Group</a> <a id="600" href="group-theory.concrete-subgroups.html#550" class="Bound">l1</a><a id="602" class="Symbol">)</a> <a id="604" class="Symbol">(</a><a id="605" href="group-theory.concrete-subgroups.html#605" class="Bound">H</a> <a id="607" class="Symbol">:</a> <a id="609" href="group-theory.concrete-groups.html#1994" class="Function">Concrete-Group</a> <a id="624" href="group-theory.concrete-subgroups.html#553" class="Bound">l2</a><a id="626" class="Symbol">)</a>
+  <a id="630" class="Symbol">(</a><a id="631" href="group-theory.concrete-subgroups.html#631" class="Bound">f</a> <a id="633" class="Symbol">:</a> <a id="635" href="group-theory.concrete-groups.html#7000" class="Function">hom-Concrete-Group</a> <a id="654" href="group-theory.concrete-subgroups.html#581" class="Bound">G</a> <a id="656" href="group-theory.concrete-subgroups.html#605" class="Bound">H</a><a id="657" class="Symbol">)</a> <a id="659" class="Keyword">where</a>
+
+  <a id="668" href="group-theory.concrete-subgroups.html#668" class="Function">is-mono-hom-Concrete-Group-Prop</a> <a id="700" class="Symbol">:</a> <a id="702" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a> <a id="710" class="Symbol">(</a><a id="711" href="group-theory.concrete-subgroups.html#550" class="Bound">l1</a> <a id="714" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="716" href="group-theory.concrete-subgroups.html#553" class="Bound">l2</a> <a id="719" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="721" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="726" href="group-theory.concrete-subgroups.html#566" class="Bound">l3</a><a id="728" class="Symbol">)</a>
+  <a id="732" href="group-theory.concrete-subgroups.html#668" class="Function">is-mono-hom-Concrete-Group-Prop</a> <a id="764" class="Symbol">=</a>
+    <a id="770" href="foundation.propositions.html#1941" class="Function">Π-Prop</a> <a id="777" class="Symbol">(</a><a id="778" href="group-theory.concrete-groups.html#1994" class="Function">Concrete-Group</a> <a id="793" href="group-theory.concrete-subgroups.html#566" class="Bound">l3</a><a id="795" class="Symbol">)</a> <a id="797" class="Symbol">(λ</a> <a id="800" href="group-theory.concrete-subgroups.html#800" class="Bound">F</a> <a id="802" class="Symbol">→</a> <a id="804" href="foundation.embeddings.html#1301" class="Function">is-emb-Prop</a> <a id="816" class="Symbol">(</a><a id="817" href="group-theory.concrete-groups.html#10575" class="Function">comp-hom-Concrete-Group</a> <a id="841" href="group-theory.concrete-subgroups.html#800" class="Bound">F</a> <a id="843" href="group-theory.concrete-subgroups.html#581" class="Bound">G</a> <a id="845" href="group-theory.concrete-subgroups.html#605" class="Bound">H</a> <a id="847" href="group-theory.concrete-subgroups.html#631" class="Bound">f</a><a id="848" class="Symbol">))</a>
+
+  <a id="854" href="group-theory.concrete-subgroups.html#854" class="Function">is-mono-hom-Concrete-Group</a> <a id="881" class="Symbol">:</a> <a id="883" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="886" class="Symbol">(</a><a id="887" href="group-theory.concrete-subgroups.html#550" class="Bound">l1</a> <a id="890" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="892" href="group-theory.concrete-subgroups.html#553" class="Bound">l2</a> <a id="895" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="897" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="902" href="group-theory.concrete-subgroups.html#566" class="Bound">l3</a><a id="904" class="Symbol">)</a>
+  <a id="908" href="group-theory.concrete-subgroups.html#854" class="Function">is-mono-hom-Concrete-Group</a> <a id="935" class="Symbol">=</a> <a id="937" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a> <a id="947" href="group-theory.concrete-subgroups.html#668" class="Function">is-mono-hom-Concrete-Group-Prop</a>
+
+  <a id="982" href="group-theory.concrete-subgroups.html#982" class="Function">is-prop-is-mono-hom-Concrete-Group</a> <a id="1017" class="Symbol">:</a> <a id="1019" href="foundation-core.propositions.html#1246" class="Function">is-prop</a> <a id="1027" href="group-theory.concrete-subgroups.html#854" class="Function">is-mono-hom-Concrete-Group</a>
+  <a id="1056" href="group-theory.concrete-subgroups.html#982" class="Function">is-prop-is-mono-hom-Concrete-Group</a> <a id="1091" class="Symbol">=</a> <a id="1093" href="foundation-core.propositions.html#1491" class="Function">is-prop-type-Prop</a> <a id="1111" href="group-theory.concrete-subgroups.html#668" class="Function">is-mono-hom-Concrete-Group-Prop</a>
+
+<a id="1144" class="Keyword">module</a> <a id="1151" href="group-theory.concrete-subgroups.html#1151" class="Module">_</a> <a id="1153" class="Symbol">{</a><a id="1154" href="group-theory.concrete-subgroups.html#1154" class="Bound">l1</a> <a id="1157" class="Symbol">:</a> <a id="1159" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1164" class="Symbol">}</a> <a id="1166" class="Symbol">(</a><a id="1167" href="group-theory.concrete-subgroups.html#1167" class="Bound">l2</a> <a id="1170" class="Symbol">:</a> <a id="1172" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1177" class="Symbol">)</a> <a id="1179" class="Symbol">(</a><a id="1180" href="group-theory.concrete-subgroups.html#1180" class="Bound">G</a> <a id="1182" class="Symbol">:</a> <a id="1184" href="group-theory.concrete-groups.html#1994" class="Function">Concrete-Group</a> <a id="1199" href="group-theory.concrete-subgroups.html#1154" class="Bound">l1</a><a id="1201" class="Symbol">)</a> <a id="1203" class="Keyword">where</a>
+
+  <a id="1212" href="group-theory.concrete-subgroups.html#1212" class="Function">mono-Concrete-Group</a> <a id="1232" class="Symbol">:</a> <a id="1234" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1237" class="Symbol">(</a><a id="1238" href="group-theory.concrete-subgroups.html#1154" class="Bound">l1</a> <a id="1241" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1243" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1248" href="group-theory.concrete-subgroups.html#1167" class="Bound">l2</a><a id="1250" class="Symbol">)</a>
+  <a id="1254" href="group-theory.concrete-subgroups.html#1212" class="Function">mono-Concrete-Group</a> <a id="1274" class="Symbol">=</a>
+    <a id="1280" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="1282" class="Symbol">(</a><a id="1283" href="group-theory.concrete-groups.html#1994" class="Function">Concrete-Group</a> <a id="1298" href="group-theory.concrete-subgroups.html#1167" class="Bound">l2</a><a id="1300" class="Symbol">)</a> <a id="1302" class="Symbol">(λ</a> <a id="1305" href="group-theory.concrete-subgroups.html#1305" class="Bound">H</a> <a id="1307" class="Symbol">→</a> <a id="1309" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="1311" class="Symbol">(</a><a id="1312" href="group-theory.concrete-groups.html#7000" class="Function">hom-Concrete-Group</a> <a id="1331" href="group-theory.concrete-subgroups.html#1305" class="Bound">H</a> <a id="1333" href="group-theory.concrete-subgroups.html#1180" class="Bound">G</a><a id="1334" class="Symbol">)</a> <a id="1336" class="Symbol">λ</a> <a id="1338" href="group-theory.concrete-subgroups.html#1338" class="Bound">f</a> <a id="1340" class="Symbol">→</a> <a id="1342" href="group-theory.concrete-subgroups.html#854" class="Function">is-mono-hom-Concrete-Group</a> <a id="1369" href="group-theory.concrete-subgroups.html#1167" class="Bound">l2</a> <a id="1372" href="group-theory.concrete-subgroups.html#1305" class="Bound">H</a> <a id="1374" href="group-theory.concrete-subgroups.html#1180" class="Bound">G</a> <a id="1376" href="group-theory.concrete-subgroups.html#1338" class="Bound">f</a><a id="1377" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-12)(9f166fc) Merge pull request #100 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Formalisation of the Symmetry Book</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/group-theory/furstenberg-groups.lagda.md.</p>
+<p>Version of Saturday, March 12, 2022, 12:15 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Formalisation of the Symmetry Book</h1>
+</header>
+<pre class="Agda"><a id="60" class="Symbol">{-#</a> <a id="64" class="Keyword">OPTIONS</a> <a id="72" class="Pragma">--without-K</a> <a id="84" class="Pragma">--exact-split</a> <a id="98" class="Symbol">#-}</a>
+
+<a id="103" class="Keyword">module</a> <a id="110" href="group-theory.furstenberg-groups.html" class="Module">group-theory.furstenberg-groups</a> <a id="142" class="Keyword">where</a>
+
+<a id="149" class="Keyword">open</a> <a id="154" class="Keyword">import</a> <a id="161" href="group-theory.abstract-groups.html" class="Module">group-theory.abstract-groups</a> <a id="190" class="Keyword">public</a>
+
+<a id="Furstenberg-Group"></a><a id="198" href="group-theory.furstenberg-groups.html#198" class="Function">Furstenberg-Group</a> <a id="216" class="Symbol">:</a> <a id="218" class="Symbol">(</a><a id="219" href="group-theory.furstenberg-groups.html#219" class="Bound">l</a> <a id="221" class="Symbol">:</a> <a id="223" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="228" class="Symbol">)</a> <a id="230" class="Symbol">→</a> <a id="232" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="235" class="Symbol">(</a><a id="236" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="241" href="group-theory.furstenberg-groups.html#219" class="Bound">l</a><a id="242" class="Symbol">)</a>
+<a id="244" href="group-theory.furstenberg-groups.html#198" class="Function">Furstenberg-Group</a> <a id="262" href="group-theory.furstenberg-groups.html#262" class="Bound">l</a> <a id="264" class="Symbol">=</a>
+  <a id="268" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="270" class="Symbol">(</a> <a id="272" href="foundation-core.sets.html#1177" class="Function">UU-Set</a> <a id="279" href="group-theory.furstenberg-groups.html#262" class="Bound">l</a><a id="280" class="Symbol">)</a>
+    <a id="286" class="Symbol">(</a> <a id="288" class="Symbol">λ</a> <a id="290" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a> <a id="292" class="Symbol">→</a>
+      <a id="300" class="Symbol">(</a> <a id="302" href="foundation.propositional-truncations.html#1701" class="Postulate">type-trunc-Prop</a> <a id="318" class="Symbol">(</a><a id="319" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="328" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a><a id="329" class="Symbol">))</a> <a id="332" href="foundation-core.cartesian-product-types.html#577" class="Function Operator">×</a>
+      <a id="340" class="Symbol">(</a> <a id="342" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="344" class="Symbol">(</a> <a id="346" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="355" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a> <a id="357" class="Symbol">→</a> <a id="359" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="368" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a> <a id="370" class="Symbol">→</a> <a id="372" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="381" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a><a id="382" class="Symbol">)</a>
+          <a id="394" class="Symbol">(</a> <a id="396" class="Symbol">λ</a> <a id="398" href="group-theory.furstenberg-groups.html#398" class="Bound">μ</a> <a id="400" class="Symbol">→</a>
+            <a id="414" class="Symbol">(</a> <a id="416" class="Symbol">(</a><a id="417" href="group-theory.furstenberg-groups.html#417" class="Bound">x</a> <a id="419" href="group-theory.furstenberg-groups.html#419" class="Bound">y</a> <a id="421" href="group-theory.furstenberg-groups.html#421" class="Bound">z</a> <a id="423" class="Symbol">:</a> <a id="425" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="434" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a><a id="435" class="Symbol">)</a> <a id="437" class="Symbol">→</a> <a id="439" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="442" class="Symbol">(</a><a id="443" href="group-theory.furstenberg-groups.html#398" class="Bound">μ</a> <a id="445" class="Symbol">(</a><a id="446" href="group-theory.furstenberg-groups.html#398" class="Bound">μ</a> <a id="448" href="group-theory.furstenberg-groups.html#417" class="Bound">x</a> <a id="450" href="group-theory.furstenberg-groups.html#421" class="Bound">z</a><a id="451" class="Symbol">)</a> <a id="453" class="Symbol">(</a><a id="454" href="group-theory.furstenberg-groups.html#398" class="Bound">μ</a> <a id="456" href="group-theory.furstenberg-groups.html#419" class="Bound">y</a> <a id="458" href="group-theory.furstenberg-groups.html#421" class="Bound">z</a><a id="459" class="Symbol">))</a> <a id="462" class="Symbol">(</a><a id="463" href="group-theory.furstenberg-groups.html#398" class="Bound">μ</a> <a id="465" href="group-theory.furstenberg-groups.html#417" class="Bound">x</a> <a id="467" href="group-theory.furstenberg-groups.html#419" class="Bound">y</a><a id="468" class="Symbol">))</a> <a id="471" href="foundation-core.cartesian-product-types.html#577" class="Function Operator">×</a>
+            <a id="485" class="Symbol">(</a> <a id="487" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="489" class="Symbol">(</a> <a id="491" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="500" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a> <a id="502" class="Symbol">→</a> <a id="504" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="513" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a> <a id="515" class="Symbol">→</a> <a id="517" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="526" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a><a id="527" class="Symbol">)</a>
+                <a id="545" class="Symbol">(</a> <a id="547" class="Symbol">λ</a> <a id="549" href="group-theory.furstenberg-groups.html#549" class="Bound">δ</a> <a id="551" class="Symbol">→</a> <a id="553" class="Symbol">(</a><a id="554" href="group-theory.furstenberg-groups.html#554" class="Bound">x</a> <a id="556" href="group-theory.furstenberg-groups.html#556" class="Bound">y</a> <a id="558" class="Symbol">:</a> <a id="560" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="569" href="group-theory.furstenberg-groups.html#290" class="Bound">X</a><a id="570" class="Symbol">)</a> <a id="572" class="Symbol">→</a> <a id="574" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="577" class="Symbol">(</a><a id="578" href="group-theory.furstenberg-groups.html#398" class="Bound">μ</a> <a id="580" href="group-theory.furstenberg-groups.html#554" class="Bound">x</a> <a id="582" class="Symbol">(</a><a id="583" href="group-theory.furstenberg-groups.html#549" class="Bound">δ</a> <a id="585" href="group-theory.furstenberg-groups.html#554" class="Bound">x</a> <a id="587" href="group-theory.furstenberg-groups.html#556" class="Bound">y</a><a id="588" class="Symbol">))</a> <a id="591" href="group-theory.furstenberg-groups.html#556" class="Bound">y</a><a id="592" class="Symbol">)))))</a>
+
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-12)(9f166fc) Merge pull request #100 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>

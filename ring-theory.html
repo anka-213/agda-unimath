@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Formalisation of the Symmetry Book</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/ring-theory.lagda.md.</p>
+<p>Version of Saturday, March 12, 2022, 12:15 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Formalisation of the Symmetry Book</h1>
+</header>
+<pre class="Agda"><a id="60" class="Symbol">{-#</a> <a id="64" class="Keyword">OPTIONS</a> <a id="72" class="Pragma">--without-K</a> <a id="84" class="Pragma">--exact-split</a> <a id="98" class="Symbol">#-}</a>
+
+<a id="103" class="Keyword">module</a> <a id="110" href="ring-theory.html" class="Module">ring-theory</a> <a id="122" class="Keyword">where</a>
+
+<a id="129" class="Keyword">open</a> <a id="134" class="Keyword">import</a> <a id="141" href="ring-theory.rings.html" class="Module">ring-theory.rings</a> <a id="159" class="Keyword">public</a>
+<a id="166" class="Keyword">open</a> <a id="171" class="Keyword">import</a> <a id="178" href="ring-theory.rings-with-properties.html" class="Module">ring-theory.rings-with-properties</a> <a id="212" class="Keyword">public</a>
+<a id="219" class="Keyword">open</a> <a id="224" class="Keyword">import</a> <a id="231" href="ring-theory.ideals.html" class="Module">ring-theory.ideals</a> <a id="250" class="Keyword">public</a>
+<a id="257" class="Keyword">open</a> <a id="262" class="Keyword">import</a> <a id="269" href="ring-theory.localizations-rings.html" class="Module">ring-theory.localizations-rings</a> <a id="301" class="Keyword">public</a>
+<a id="308" class="Keyword">open</a> <a id="313" class="Keyword">import</a> <a id="320" href="ring-theory.eisenstein-integers.html" class="Module">ring-theory.eisenstein-integers</a> <a id="352" class="Keyword">public</a>
+<a id="359" class="Keyword">open</a> <a id="364" class="Keyword">import</a> <a id="371" href="ring-theory.gaussian-integers.html" class="Module">ring-theory.gaussian-integers</a> <a id="401" class="Keyword">public</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-12)(9f166fc) Merge pull request #100 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>
