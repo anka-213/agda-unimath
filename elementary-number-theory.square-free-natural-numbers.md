@@ -1,0 +1,22 @@
+# Square-free natural numbers
+
+<pre class="Agda"><a id="40" class="Symbol">{-#</a> <a id="44" class="Keyword">OPTIONS</a> <a id="52" class="Pragma">--without-K</a> <a id="64" class="Pragma">--exact-split</a> <a id="78" class="Symbol">#-}</a>
+
+<a id="83" class="Keyword">module</a> <a id="90" href="elementary-number-theory.square-free-natural-numbers.html" class="Module">elementary-number-theory.square-free-natural-numbers</a> <a id="143" class="Keyword">where</a>
+
+<a id="150" class="Keyword">open</a> <a id="155" class="Keyword">import</a> <a id="162" href="elementary-number-theory.divisibility-natural-numbers.html" class="Module">elementary-number-theory.divisibility-natural-numbers</a> <a id="216" class="Keyword">using</a> <a id="222" class="Symbol">(</a><a id="223" href="elementary-number-theory.divisibility-natural-numbers.html#1610" class="Function">div-ℕ</a><a id="228" class="Symbol">)</a>
+<a id="230" class="Keyword">open</a> <a id="235" class="Keyword">import</a> <a id="242" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="283" class="Keyword">using</a> <a id="289" class="Symbol">(</a><a id="290" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="291" class="Symbol">;</a> <a id="293" href="elementary-number-theory.natural-numbers.html#1988" class="Function">is-one-ℕ</a><a id="301" class="Symbol">)</a>
+<a id="303" class="Keyword">open</a> <a id="308" class="Keyword">import</a> <a id="315" href="elementary-number-theory.multiplication-natural-numbers.html" class="Module">elementary-number-theory.multiplication-natural-numbers</a> <a id="371" class="Keyword">using</a>
+  <a id="379" class="Symbol">(</a> <a id="381" href="elementary-number-theory.multiplication-natural-numbers.html#1491" class="Function">square-ℕ</a><a id="389" class="Symbol">)</a>
+
+<a id="392" class="Keyword">open</a> <a id="397" class="Keyword">import</a> <a id="404" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="431" class="Keyword">using</a> <a id="437" class="Symbol">(</a><a id="438" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="440" class="Symbol">;</a> <a id="442" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="447" class="Symbol">)</a>
+</pre>
+## Idea
+
+A natural number `n` is said to be square-free if `x² | n ⇒ d = 1` for any natural number `x`.
+
+## Definition
+
+<pre class="Agda"><a id="is-square-free-ℕ"></a><a id="582" href="elementary-number-theory.square-free-natural-numbers.html#582" class="Function">is-square-free-ℕ</a> <a id="599" class="Symbol">:</a> <a id="601" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a> <a id="603" class="Symbol">→</a> <a id="605" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="608" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="614" href="elementary-number-theory.square-free-natural-numbers.html#582" class="Function">is-square-free-ℕ</a> <a id="631" href="elementary-number-theory.square-free-natural-numbers.html#631" class="Bound">n</a> <a id="633" class="Symbol">=</a> <a id="635" class="Symbol">(</a><a id="636" href="elementary-number-theory.square-free-natural-numbers.html#636" class="Bound">x</a> <a id="638" class="Symbol">:</a> <a id="640" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="641" class="Symbol">)</a> <a id="643" class="Symbol">→</a> <a id="645" href="elementary-number-theory.divisibility-natural-numbers.html#1610" class="Function">div-ℕ</a> <a id="651" class="Symbol">(</a><a id="652" href="elementary-number-theory.multiplication-natural-numbers.html#1491" class="Function">square-ℕ</a> <a id="661" href="elementary-number-theory.square-free-natural-numbers.html#636" class="Bound">x</a><a id="662" class="Symbol">)</a> <a id="664" href="elementary-number-theory.square-free-natural-numbers.html#631" class="Bound">n</a> <a id="666" class="Symbol">→</a> <a id="668" href="elementary-number-theory.natural-numbers.html#1988" class="Function">is-one-ℕ</a> <a id="677" href="elementary-number-theory.square-free-natural-numbers.html#636" class="Bound">x</a>
+</pre>
