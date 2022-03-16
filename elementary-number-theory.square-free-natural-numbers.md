@@ -13,7 +13,7 @@
 </pre>
 ## Idea
 
-A natural number `n` is said to be square-free if `x² | n ⇒ d = 1` for any natural number `x`.
+A natural number `n` is said to be square-free if `x² | n ⇒ x = 1` for any natural number `x`.
 
 ## Definition
 
