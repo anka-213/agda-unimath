@@ -1,0 +1,29 @@
+# Connected graphs
+
+<pre class="Agda"><a id="29" class="Symbol">{-#</a> <a id="33" class="Keyword">OPTIONS</a> <a id="41" class="Pragma">--without-K</a> <a id="53" class="Pragma">--exact-split</a> <a id="67" class="Symbol">#-}</a>
+
+<a id="72" class="Keyword">module</a> <a id="79" href="graph-theory.connected-undirected-graphs.html" class="Module">graph-theory.connected-undirected-graphs</a> <a id="120" class="Keyword">where</a>
+
+<a id="127" class="Keyword">open</a> <a id="132" class="Keyword">import</a> <a id="139" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="176" class="Keyword">using</a> <a id="182" class="Symbol">(</a><a id="183" href="foundation.propositional-truncations.html#1701" class="Postulate">type-trunc-Prop</a><a id="198" class="Symbol">)</a>
+<a id="200" class="Keyword">open</a> <a id="205" class="Keyword">import</a> <a id="212" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="239" class="Keyword">using</a> <a id="245" class="Symbol">(</a><a id="246" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="251" class="Symbol">;</a> <a id="253" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="255" class="Symbol">;</a> <a id="257" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="260" class="Symbol">;</a> <a id="262" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="266" class="Symbol">;</a> <a id="268" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="273" class="Symbol">)</a>
+
+<a id="276" class="Keyword">open</a> <a id="281" class="Keyword">import</a> <a id="288" href="graph-theory.paths-undirected-graphs.html" class="Module">graph-theory.paths-undirected-graphs</a> <a id="325" class="Keyword">using</a>
+  <a id="333" class="Symbol">(</a> <a id="335" href="graph-theory.paths-undirected-graphs.html#680" class="Datatype">path-Undirected-Graph</a><a id="356" class="Symbol">)</a>
+<a id="358" class="Keyword">open</a> <a id="363" class="Keyword">import</a> <a id="370" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a> <a id="401" class="Keyword">using</a>
+  <a id="409" class="Symbol">(</a> <a id="411" href="graph-theory.undirected-graphs.html#343" class="Function">Undirected-Graph</a><a id="427" class="Symbol">;</a> <a id="429" href="graph-theory.undirected-graphs.html#539" class="Function">vertex-Undirected-Graph</a><a id="452" class="Symbol">)</a>
+</pre>
+## Idea
+
+A graph is said to be connected if any point can be reached from any point by a path of edges
+
+## Definition
+
+<pre class="Agda"><a id="586" class="Keyword">module</a> <a id="593" href="graph-theory.connected-undirected-graphs.html#593" class="Module">_</a>
+  <a id="597" class="Symbol">{</a><a id="598" href="graph-theory.connected-undirected-graphs.html#598" class="Bound">l1</a> <a id="601" href="graph-theory.connected-undirected-graphs.html#601" class="Bound">l2</a> <a id="604" class="Symbol">:</a> <a id="606" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="611" class="Symbol">}</a> <a id="613" class="Symbol">(</a><a id="614" href="graph-theory.connected-undirected-graphs.html#614" class="Bound">G</a> <a id="616" class="Symbol">:</a> <a id="618" href="graph-theory.undirected-graphs.html#343" class="Function">Undirected-Graph</a> <a id="635" href="graph-theory.connected-undirected-graphs.html#598" class="Bound">l1</a> <a id="638" href="graph-theory.connected-undirected-graphs.html#601" class="Bound">l2</a><a id="640" class="Symbol">)</a>
+  <a id="644" class="Keyword">where</a>
+
+  <a id="653" href="graph-theory.connected-undirected-graphs.html#653" class="Function">is-connected-Undirected-Graph</a> <a id="683" class="Symbol">:</a> <a id="685" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="688" class="Symbol">(</a><a id="689" href="graph-theory.connected-undirected-graphs.html#598" class="Bound">l1</a> <a id="692" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="694" href="graph-theory.connected-undirected-graphs.html#601" class="Bound">l2</a> <a id="697" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="699" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="704" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="709" class="Symbol">)</a>
+  <a id="713" href="graph-theory.connected-undirected-graphs.html#653" class="Function">is-connected-Undirected-Graph</a> <a id="743" class="Symbol">=</a>
+    <a id="749" class="Symbol">(</a><a id="750" href="graph-theory.connected-undirected-graphs.html#750" class="Bound">x</a> <a id="752" href="graph-theory.connected-undirected-graphs.html#752" class="Bound">y</a> <a id="754" class="Symbol">:</a> <a id="756" href="graph-theory.undirected-graphs.html#539" class="Function">vertex-Undirected-Graph</a> <a id="780" href="graph-theory.connected-undirected-graphs.html#614" class="Bound">G</a><a id="781" class="Symbol">)</a> <a id="783" class="Symbol">→</a>
+    <a id="789" href="foundation.propositional-truncations.html#1701" class="Postulate">type-trunc-Prop</a> <a id="805" class="Symbol">(</a><a id="806" href="graph-theory.paths-undirected-graphs.html#680" class="Datatype">path-Undirected-Graph</a> <a id="828" href="graph-theory.connected-undirected-graphs.html#614" class="Bound">G</a> <a id="830" href="graph-theory.connected-undirected-graphs.html#750" class="Bound">x</a> <a id="832" href="graph-theory.connected-undirected-graphs.html#752" class="Bound">y</a><a id="833" class="Symbol">)</a>
+</pre>

@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
-  <title>Formalisation of the Symmetry Book</title>
+  <title>graph-theory.directed-graphs</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -23,36 +23,36 @@
 <body>
 <div class="powerby">
 <p>src/graph-theory/directed-graphs.lagda.md.</p>
-<p>Version of Tuesday, March 15, 2022, 10:52 AM</p>
+<p>Version of Wednesday, March 16, 2022, 10:38 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
-<header id="title-block-header">
-<h1 class="title">Formalisation of the Symmetry Book</h1>
-</header>
-<pre class="Agda"><a id="60" class="Symbol">{-#</a> <a id="64" class="Keyword">OPTIONS</a> <a id="72" class="Pragma">--without-K</a> <a id="84" class="Pragma">--exact-split</a> <a id="98" class="Pragma">--allow-unsolved-metas</a> <a id="121" class="Symbol">#-}</a>
+<h1 id="directed-graphs">Directed graphs</h1>
+<pre class="Agda"><a id="28" class="Symbol">{-#</a> <a id="32" class="Keyword">OPTIONS</a> <a id="40" class="Pragma">--without-K</a> <a id="52" class="Pragma">--exact-split</a> <a id="66" class="Symbol">#-}</a>
 
-<a id="126" class="Keyword">module</a> <a id="133" href="graph-theory.directed-graphs.html" class="Module">graph-theory.directed-graphs</a> <a id="162" class="Keyword">where</a>
+<a id="71" class="Keyword">module</a> <a id="78" href="graph-theory.directed-graphs.html" class="Module">graph-theory.directed-graphs</a> <a id="107" class="Keyword">where</a>
 
-<a id="169" class="Keyword">open</a> <a id="174" class="Keyword">import</a> <a id="181" href="univalent-foundations.html" class="Module">univalent-foundations</a> <a id="203" class="Keyword">public</a>
+<a id="114" class="Keyword">open</a> <a id="119" class="Keyword">import</a> <a id="126" href="univalent-foundations.html" class="Module">univalent-foundations</a> <a id="148" class="Keyword">public</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A graph consists of a type of vertices equipped with a binary, type valued relation of edges.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="Graph"></a><a id="287" href="graph-theory.directed-graphs.html#287" class="Function">Graph</a> <a id="293" class="Symbol">:</a> <a id="295" class="Symbol">(</a><a id="296" href="graph-theory.directed-graphs.html#296" class="Bound">l1</a> <a id="299" href="graph-theory.directed-graphs.html#299" class="Bound">l2</a> <a id="302" class="Symbol">:</a> <a id="304" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="309" class="Symbol">)</a> <a id="311" class="Symbol">→</a> <a id="313" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="316" class="Symbol">(</a><a id="317" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="322" href="graph-theory.directed-graphs.html#296" class="Bound">l1</a> <a id="325" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="327" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="332" href="graph-theory.directed-graphs.html#299" class="Bound">l2</a><a id="334" class="Symbol">)</a>
+<a id="336" href="graph-theory.directed-graphs.html#287" class="Function">Graph</a> <a id="342" href="graph-theory.directed-graphs.html#342" class="Bound">l1</a> <a id="345" href="graph-theory.directed-graphs.html#345" class="Bound">l2</a> <a id="348" class="Symbol">=</a> <a id="350" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="352" class="Symbol">(</a><a id="353" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="356" href="graph-theory.directed-graphs.html#342" class="Bound">l1</a><a id="358" class="Symbol">)</a> <a id="360" class="Symbol">(λ</a> <a id="363" href="graph-theory.directed-graphs.html#363" class="Bound">V</a> <a id="365" class="Symbol">→</a> <a id="367" href="graph-theory.directed-graphs.html#363" class="Bound">V</a> <a id="369" class="Symbol">→</a> <a id="371" href="graph-theory.directed-graphs.html#363" class="Bound">V</a> <a id="373" class="Symbol">→</a> <a id="375" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="378" href="graph-theory.directed-graphs.html#345" class="Bound">l2</a><a id="380" class="Symbol">)</a>
 
-<a id="Graph"></a><a id="211" href="graph-theory.directed-graphs.html#211" class="Function">Graph</a> <a id="217" class="Symbol">:</a> <a id="219" class="Symbol">(</a><a id="220" href="graph-theory.directed-graphs.html#220" class="Bound">l1</a> <a id="223" href="graph-theory.directed-graphs.html#223" class="Bound">l2</a> <a id="226" class="Symbol">:</a> <a id="228" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="233" class="Symbol">)</a> <a id="235" class="Symbol">→</a> <a id="237" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="240" class="Symbol">(</a><a id="241" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="246" href="graph-theory.directed-graphs.html#220" class="Bound">l1</a> <a id="249" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="251" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="256" href="graph-theory.directed-graphs.html#223" class="Bound">l2</a><a id="258" class="Symbol">)</a>
-<a id="260" href="graph-theory.directed-graphs.html#211" class="Function">Graph</a> <a id="266" href="graph-theory.directed-graphs.html#266" class="Bound">l1</a> <a id="269" href="graph-theory.directed-graphs.html#269" class="Bound">l2</a> <a id="272" class="Symbol">=</a> <a id="274" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="276" class="Symbol">(</a><a id="277" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="280" href="graph-theory.directed-graphs.html#266" class="Bound">l1</a><a id="282" class="Symbol">)</a> <a id="284" class="Symbol">(λ</a> <a id="287" href="graph-theory.directed-graphs.html#287" class="Bound">V</a> <a id="289" class="Symbol">→</a> <a id="291" href="graph-theory.directed-graphs.html#287" class="Bound">V</a> <a id="293" class="Symbol">→</a> <a id="295" href="graph-theory.directed-graphs.html#287" class="Bound">V</a> <a id="297" class="Symbol">→</a> <a id="299" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="302" href="graph-theory.directed-graphs.html#269" class="Bound">l2</a><a id="304" class="Symbol">)</a>
+<a id="383" class="Keyword">module</a> <a id="390" href="graph-theory.directed-graphs.html#390" class="Module">_</a>
+  <a id="394" class="Symbol">{</a><a id="395" href="graph-theory.directed-graphs.html#395" class="Bound">l1</a> <a id="398" href="graph-theory.directed-graphs.html#398" class="Bound">l2</a> <a id="401" class="Symbol">:</a> <a id="403" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="408" class="Symbol">}</a> <a id="410" class="Symbol">(</a><a id="411" href="graph-theory.directed-graphs.html#411" class="Bound">G</a> <a id="413" class="Symbol">:</a> <a id="415" href="graph-theory.directed-graphs.html#287" class="Function">Graph</a> <a id="421" href="graph-theory.directed-graphs.html#395" class="Bound">l1</a> <a id="424" href="graph-theory.directed-graphs.html#398" class="Bound">l2</a><a id="426" class="Symbol">)</a>
+  <a id="430" class="Keyword">where</a>
 
-<a id="307" class="Keyword">module</a> <a id="314" href="graph-theory.directed-graphs.html#314" class="Module">_</a>
-  <a id="318" class="Symbol">{</a><a id="319" href="graph-theory.directed-graphs.html#319" class="Bound">l1</a> <a id="322" href="graph-theory.directed-graphs.html#322" class="Bound">l2</a> <a id="325" class="Symbol">:</a> <a id="327" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="332" class="Symbol">}</a> <a id="334" class="Symbol">(</a><a id="335" href="graph-theory.directed-graphs.html#335" class="Bound">G</a> <a id="337" class="Symbol">:</a> <a id="339" href="graph-theory.directed-graphs.html#211" class="Function">Graph</a> <a id="345" href="graph-theory.directed-graphs.html#319" class="Bound">l1</a> <a id="348" href="graph-theory.directed-graphs.html#322" class="Bound">l2</a><a id="350" class="Symbol">)</a>
-  <a id="354" class="Keyword">where</a>
+  <a id="439" href="graph-theory.directed-graphs.html#439" class="Function">vertex-Graph</a> <a id="452" class="Symbol">:</a> <a id="454" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="457" href="graph-theory.directed-graphs.html#395" class="Bound">l1</a>
+  <a id="462" href="graph-theory.directed-graphs.html#439" class="Function">vertex-Graph</a> <a id="475" class="Symbol">=</a> <a id="477" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="481" href="graph-theory.directed-graphs.html#411" class="Bound">G</a>
 
-  <a id="363" href="graph-theory.directed-graphs.html#363" class="Function">vertex-Graph</a> <a id="376" class="Symbol">:</a> <a id="378" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="381" href="graph-theory.directed-graphs.html#319" class="Bound">l1</a>
-  <a id="386" href="graph-theory.directed-graphs.html#363" class="Function">vertex-Graph</a> <a id="399" class="Symbol">=</a> <a id="401" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="405" href="graph-theory.directed-graphs.html#335" class="Bound">G</a>
-
-  <a id="410" href="graph-theory.directed-graphs.html#410" class="Function">edge-Graph</a> <a id="421" class="Symbol">:</a> <a id="423" href="graph-theory.directed-graphs.html#363" class="Function">vertex-Graph</a> <a id="436" class="Symbol">→</a> <a id="438" href="graph-theory.directed-graphs.html#363" class="Function">vertex-Graph</a> <a id="451" class="Symbol">→</a> <a id="453" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="456" href="graph-theory.directed-graphs.html#322" class="Bound">l2</a>
-  <a id="461" href="graph-theory.directed-graphs.html#410" class="Function">edge-Graph</a> <a id="472" class="Symbol">=</a> <a id="474" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="478" href="graph-theory.directed-graphs.html#335" class="Bound">G</a>
-
+  <a id="486" href="graph-theory.directed-graphs.html#486" class="Function">edge-Graph</a> <a id="497" class="Symbol">:</a> <a id="499" href="graph-theory.directed-graphs.html#439" class="Function">vertex-Graph</a> <a id="512" class="Symbol">→</a> <a id="514" href="graph-theory.directed-graphs.html#439" class="Function">vertex-Graph</a> <a id="527" class="Symbol">→</a> <a id="529" href="Agda.Primitive.html#326" class="Primitive">UU</a> <a id="532" href="graph-theory.directed-graphs.html#398" class="Bound">l2</a>
+  <a id="537" href="graph-theory.directed-graphs.html#486" class="Function">edge-Graph</a> <a id="548" class="Symbol">=</a> <a id="550" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="554" href="graph-theory.directed-graphs.html#411" class="Bound">G</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-03-15)(4dc44ea) Merge pull request #104 from UniMath/ljubljana by noreply
+(2022-03-16)(7f6025e) Merge pull request #105 from UniMath/daily-challenge by noreply
 </pre>
 </body>
 </html>
