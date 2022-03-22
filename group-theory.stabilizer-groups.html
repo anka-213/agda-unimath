@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>group-theory.stabilizer-groups</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/group-theory/stabilizer-groups.lagda.md.</p>
+<p>Version of Tuesday, March 22, 2022, 05:03 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="stabilizer-groups">Stabilizer groups</h1>
+<pre class="Agda"><a id="30" class="Symbol">{-#</a> <a id="34" class="Keyword">OPTIONS</a> <a id="42" class="Pragma">--without-K</a> <a id="54" class="Pragma">--exact-split</a> <a id="68" class="Symbol">#-}</a>
+
+<a id="73" class="Keyword">module</a> <a id="80" href="group-theory.stabilizer-groups.html" class="Module">group-theory.stabilizer-groups</a> <a id="111" class="Keyword">where</a>
+
+<a id="118" class="Keyword">open</a> <a id="123" class="Keyword">import</a> <a id="130" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="162" class="Keyword">using</a> <a id="168" class="Symbol">(</a><a id="169" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="170" class="Symbol">)</a>
+<a id="172" class="Keyword">open</a> <a id="177" class="Keyword">import</a> <a id="184" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="210" class="Keyword">using</a> <a id="216" class="Symbol">(</a><a id="217" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="219" class="Symbol">)</a>
+<a id="221" class="Keyword">open</a> <a id="226" class="Keyword">import</a> <a id="233" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="260" class="Keyword">using</a> <a id="266" class="Symbol">(</a><a id="267" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="272" class="Symbol">;</a> <a id="274" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="276" class="Symbol">;</a> <a id="278" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="281" class="Symbol">)</a>
+
+<a id="284" class="Keyword">open</a> <a id="289" class="Keyword">import</a> <a id="296" href="group-theory.group-actions.html" class="Module">group-theory.group-actions</a> <a id="323" class="Keyword">using</a>
+  <a id="331" class="Symbol">(</a> <a id="333" href="group-theory.group-actions.html#1192" class="Function">Abstract-Group-Action</a><a id="354" class="Symbol">;</a> <a id="356" href="group-theory.group-actions.html#1501" class="Function">type-Abstract-Group-Action</a><a id="382" class="Symbol">;</a>
+    <a id="388" href="group-theory.group-actions.html#1980" class="Function">mul-Abstract-Group-Action</a><a id="413" class="Symbol">)</a>
+<a id="415" class="Keyword">open</a> <a id="420" class="Keyword">import</a> <a id="427" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="447" class="Keyword">using</a> <a id="453" class="Symbol">(</a><a id="454" href="group-theory.groups.html#1961" class="Function">Group</a><a id="459" class="Symbol">;</a> <a id="461" href="group-theory.groups.html#2204" class="Function">type-Group</a><a id="471" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>Given a G-set <code>X</code>, the stabilizer group at an element <code>x</code> of <code>X</code> is the subgroup of elements <code>g</code> of <code>G</code> that keep <code>x</code> fixed.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="636" class="Keyword">module</a> <a id="643" href="group-theory.stabilizer-groups.html#643" class="Module">_</a>
+  <a id="647" class="Symbol">{</a><a id="648" href="group-theory.stabilizer-groups.html#648" class="Bound">l1</a> <a id="651" href="group-theory.stabilizer-groups.html#651" class="Bound">l2</a> <a id="654" class="Symbol">:</a> <a id="656" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="661" class="Symbol">}</a> <a id="663" class="Symbol">(</a><a id="664" href="group-theory.stabilizer-groups.html#664" class="Bound">G</a> <a id="666" class="Symbol">:</a> <a id="668" href="group-theory.groups.html#1961" class="Function">Group</a> <a id="674" href="group-theory.stabilizer-groups.html#648" class="Bound">l1</a><a id="676" class="Symbol">)</a> <a id="678" class="Symbol">(</a><a id="679" href="group-theory.stabilizer-groups.html#679" class="Bound">X</a> <a id="681" class="Symbol">:</a> <a id="683" href="group-theory.group-actions.html#1192" class="Function">Abstract-Group-Action</a> <a id="705" href="group-theory.stabilizer-groups.html#664" class="Bound">G</a> <a id="707" href="group-theory.stabilizer-groups.html#651" class="Bound">l2</a><a id="709" class="Symbol">)</a>
+  <a id="713" class="Keyword">where</a>
+
+  <a id="722" href="group-theory.stabilizer-groups.html#722" class="Function">type-stabilizer-Abstract-Group-Action</a> <a id="760" class="Symbol">:</a>
+    <a id="766" href="group-theory.group-actions.html#1501" class="Function">type-Abstract-Group-Action</a> <a id="793" href="group-theory.stabilizer-groups.html#664" class="Bound">G</a> <a id="795" href="group-theory.stabilizer-groups.html#679" class="Bound">X</a> <a id="797" class="Symbol">→</a> <a id="799" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="802" class="Symbol">(</a><a id="803" href="group-theory.stabilizer-groups.html#648" class="Bound">l1</a> <a id="806" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="808" href="group-theory.stabilizer-groups.html#651" class="Bound">l2</a><a id="810" class="Symbol">)</a>
+  <a id="814" href="group-theory.stabilizer-groups.html#722" class="Function">type-stabilizer-Abstract-Group-Action</a> <a id="852" href="group-theory.stabilizer-groups.html#852" class="Bound">x</a> <a id="854" class="Symbol">=</a>
+    <a id="860" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="862" class="Symbol">(</a><a id="863" href="group-theory.groups.html#2204" class="Function">type-Group</a> <a id="874" href="group-theory.stabilizer-groups.html#664" class="Bound">G</a><a id="875" class="Symbol">)</a> <a id="877" class="Symbol">(λ</a> <a id="880" href="group-theory.stabilizer-groups.html#880" class="Bound">g</a> <a id="882" class="Symbol">→</a> <a id="884" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="887" class="Symbol">(</a><a id="888" href="group-theory.group-actions.html#1980" class="Function">mul-Abstract-Group-Action</a> <a id="914" href="group-theory.stabilizer-groups.html#664" class="Bound">G</a> <a id="916" href="group-theory.stabilizer-groups.html#679" class="Bound">X</a> <a id="918" href="group-theory.stabilizer-groups.html#880" class="Bound">g</a> <a id="920" href="group-theory.stabilizer-groups.html#852" class="Bound">x</a><a id="921" class="Symbol">)</a> <a id="923" href="group-theory.stabilizer-groups.html#852" class="Bound">x</a><a id="924" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-22)(dbc6823) Merge pull request #119 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>

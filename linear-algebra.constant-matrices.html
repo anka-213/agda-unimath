@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>linear-algebra.constant-matrices</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/linear-algebra/constant-matrices.lagda.md.</p>
+<p>Version of Tuesday, March 22, 2022, 05:03 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="constant-matrices">Constant matrices</h1>
+<pre class="Agda"><a id="30" class="Symbol">{-#</a> <a id="34" class="Keyword">OPTIONS</a> <a id="42" class="Pragma">--without-K</a> <a id="54" class="Pragma">--exact-split</a> <a id="68" class="Symbol">#-}</a>
+
+<a id="73" class="Keyword">module</a> <a id="80" href="linear-algebra.constant-matrices.html" class="Module">linear-algebra.constant-matrices</a> <a id="113" class="Keyword">where</a>
+
+<a id="120" class="Keyword">open</a> <a id="125" class="Keyword">import</a> <a id="132" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="173" class="Keyword">using</a> <a id="179" class="Symbol">(</a><a id="180" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="181" class="Symbol">)</a>
+
+<a id="184" class="Keyword">open</a> <a id="189" class="Keyword">import</a> <a id="196" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="223" class="Keyword">using</a> <a id="229" class="Symbol">(</a><a id="230" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="235" class="Symbol">;</a> <a id="237" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="239" class="Symbol">)</a>
+
+<a id="242" class="Keyword">open</a> <a id="247" class="Keyword">import</a> <a id="254" href="linear-algebra.constant-vectors.html" class="Module">linear-algebra.constant-vectors</a> <a id="286" class="Keyword">using</a> <a id="292" class="Symbol">(</a><a id="293" href="linear-algebra.constant-vectors.html#463" class="Function">constant-vec</a><a id="305" class="Symbol">)</a>
+<a id="307" class="Keyword">open</a> <a id="312" class="Keyword">import</a> <a id="319" href="linear-algebra.matrices.html" class="Module">linear-algebra.matrices</a> <a id="343" class="Keyword">using</a> <a id="349" class="Symbol">(</a><a id="350" href="linear-algebra.matrices.html#839" class="Function">matrix</a><a id="356" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>Constant matrices are matrices in which all elements are the same.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="constant-matrix"></a><a id="463" href="linear-algebra.constant-matrices.html#463" class="Function">constant-matrix</a> <a id="479" class="Symbol">:</a> <a id="481" class="Symbol">{</a><a id="482" href="linear-algebra.constant-matrices.html#482" class="Bound">l</a> <a id="484" class="Symbol">:</a> <a id="486" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="491" class="Symbol">}</a> <a id="493" class="Symbol">{</a><a id="494" href="linear-algebra.constant-matrices.html#494" class="Bound">A</a> <a id="496" class="Symbol">:</a> <a id="498" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="501" href="linear-algebra.constant-matrices.html#482" class="Bound">l</a><a id="502" class="Symbol">}</a> <a id="504" class="Symbol">{</a><a id="505" href="linear-algebra.constant-matrices.html#505" class="Bound">m</a> <a id="507" href="linear-algebra.constant-matrices.html#507" class="Bound">n</a> <a id="509" class="Symbol">:</a> <a id="511" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="512" class="Symbol">}</a> <a id="514" class="Symbol">→</a> <a id="516" href="linear-algebra.constant-matrices.html#494" class="Bound">A</a> <a id="518" class="Symbol">→</a> <a id="520" href="linear-algebra.matrices.html#839" class="Function">matrix</a> <a id="527" href="linear-algebra.constant-matrices.html#494" class="Bound">A</a> <a id="529" href="linear-algebra.constant-matrices.html#505" class="Bound">m</a> <a id="531" href="linear-algebra.constant-matrices.html#507" class="Bound">n</a>
+<a id="533" href="linear-algebra.constant-matrices.html#463" class="Function">constant-matrix</a> <a id="549" href="linear-algebra.constant-matrices.html#549" class="Bound">a</a> <a id="551" class="Symbol">=</a> <a id="553" href="linear-algebra.constant-vectors.html#463" class="Function">constant-vec</a> <a id="566" class="Symbol">(</a><a id="567" href="linear-algebra.constant-vectors.html#463" class="Function">constant-vec</a> <a id="580" href="linear-algebra.constant-matrices.html#549" class="Bound">a</a><a id="581" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-22)(dbc6823) Merge pull request #119 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>

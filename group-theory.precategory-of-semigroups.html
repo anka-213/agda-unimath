@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>group-theory.precategory-of-semigroups</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/group-theory/precategory-of-semigroups.lagda.md.</p>
+<p>Version of Tuesday, March 22, 2022, 05:03 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="the-precategory-of-semigroups">The precategory of semigroups</h1>
+<pre class="Agda"><a id="42" class="Symbol">{-#</a> <a id="46" class="Keyword">OPTIONS</a> <a id="54" class="Pragma">--without-K</a> <a id="66" class="Pragma">--exact-split</a> <a id="80" class="Symbol">#-}</a>
+
+<a id="85" class="Keyword">module</a> <a id="92" href="group-theory.precategory-of-semigroups.html" class="Module">group-theory.precategory-of-semigroups</a> <a id="131" class="Keyword">where</a>
+
+<a id="138" class="Keyword">open</a> <a id="143" class="Keyword">import</a> <a id="150" href="category-theory.large-precategories.html" class="Module">category-theory.large-precategories</a> <a id="186" class="Keyword">using</a>
+  <a id="194" class="Symbol">(</a> <a id="196" href="category-theory.large-precategories.html#654" class="Record">Large-Precat</a><a id="208" class="Symbol">;</a> <a id="210" href="category-theory.large-precategories.html#772" class="Field">obj-Large-Precat</a><a id="226" class="Symbol">;</a> <a id="228" href="category-theory.large-precategories.html#824" class="Field">hom-Large-Precat</a><a id="244" class="Symbol">;</a> <a id="246" href="category-theory.large-precategories.html#938" class="Field">comp-hom-Large-Precat</a><a id="267" class="Symbol">;</a>
+    <a id="273" href="category-theory.large-precategories.html#1189" class="Field">id-hom-Large-Precat</a><a id="292" class="Symbol">;</a> <a id="294" href="category-theory.large-precategories.html#1294" class="Field">associative-comp-hom-Large-Precat</a><a id="327" class="Symbol">;</a>
+    <a id="333" href="category-theory.large-precategories.html#1736" class="Field">left-unit-law-comp-hom-Large-Precat</a><a id="368" class="Symbol">;</a> <a id="370" href="category-theory.large-precategories.html#1956" class="Field">right-unit-law-comp-hom-Large-Precat</a><a id="406" class="Symbol">)</a>
+
+<a id="409" class="Keyword">open</a> <a id="414" class="Keyword">import</a> <a id="421" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="448" class="Keyword">using</a> <a id="454" class="Symbol">(</a><a id="455" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="459" class="Symbol">;</a> <a id="461" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="464" class="Symbol">)</a>
+
+<a id="467" class="Keyword">open</a> <a id="472" class="Keyword">import</a> <a id="479" href="group-theory.homomorphisms-semigroups.html" class="Module">group-theory.homomorphisms-semigroups</a> <a id="517" class="Keyword">using</a>
+  <a id="525" class="Symbol">(</a> <a id="527" href="group-theory.homomorphisms-semigroups.html#4414" class="Function">hom-Semigroup</a><a id="540" class="Symbol">;</a> <a id="542" href="group-theory.homomorphisms-semigroups.html#4948" class="Function">comp-hom-Semigroup</a><a id="560" class="Symbol">;</a> <a id="562" href="group-theory.homomorphisms-semigroups.html#4729" class="Function">id-hom-Semigroup</a><a id="578" class="Symbol">;</a>
+    <a id="584" href="group-theory.homomorphisms-semigroups.html#5530" class="Function">associative-comp-hom-Semigroup</a><a id="614" class="Symbol">;</a> <a id="616" href="group-theory.homomorphisms-semigroups.html#6121" class="Function">left-unit-law-comp-hom-Semigroup</a><a id="648" class="Symbol">;</a>
+    <a id="654" href="group-theory.homomorphisms-semigroups.html#6494" class="Function">right-unit-law-comp-hom-Semigroup</a><a id="687" class="Symbol">)</a>
+<a id="689" class="Keyword">open</a> <a id="694" class="Keyword">import</a> <a id="701" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="725" class="Keyword">using</a> <a id="731" class="Symbol">(</a><a id="732" href="group-theory.semigroups.html#737" class="Function">Semigroup</a><a id="741" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>Semigroups and semigroup homomorphisms form a precategory.</p>
+<h2 id="definition">Definition</h2>
+<h3 id="the-precategory-of-semigroups-1">The precategory of semigroups</h3>
+<pre class="Agda"><a id="875" class="Keyword">instance</a>
+  <a id="Semigroup-Large-Precat"></a><a id="886" href="group-theory.precategory-of-semigroups.html#886" class="Function">Semigroup-Large-Precat</a> <a id="909" class="Symbol">:</a> <a id="911" href="category-theory.large-precategories.html#654" class="Record">Large-Precat</a> <a id="924" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="929" class="Symbol">(λ</a> <a id="932" href="group-theory.precategory-of-semigroups.html#932" class="Bound">l1</a> <a id="935" href="group-theory.precategory-of-semigroups.html#935" class="Bound">l2</a> <a id="938" class="Symbol">→</a> <a id="940" href="group-theory.precategory-of-semigroups.html#932" class="Bound">l1</a> <a id="943" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="945" href="group-theory.precategory-of-semigroups.html#935" class="Bound">l2</a><a id="947" class="Symbol">)</a>
+  <a id="951" href="category-theory.large-precategories.html#772" class="Field">obj-Large-Precat</a> <a id="968" href="group-theory.precategory-of-semigroups.html#886" class="Function">Semigroup-Large-Precat</a> <a id="991" class="Symbol">=</a> <a id="993" href="group-theory.semigroups.html#737" class="Function">Semigroup</a>
+  <a id="1005" href="category-theory.large-precategories.html#824" class="Field">hom-Large-Precat</a> <a id="1022" href="group-theory.precategory-of-semigroups.html#886" class="Function">Semigroup-Large-Precat</a> <a id="1045" class="Symbol">=</a> <a id="1047" href="group-theory.homomorphisms-semigroups.html#4414" class="Function">hom-Semigroup</a>
+  <a id="1063" href="category-theory.large-precategories.html#938" class="Field">comp-hom-Large-Precat</a> <a id="1085" href="group-theory.precategory-of-semigroups.html#886" class="Function">Semigroup-Large-Precat</a> <a id="1108" class="Symbol">{</a><a id="1109" class="Argument">X</a> <a id="1111" class="Symbol">=</a> <a id="1113" href="group-theory.precategory-of-semigroups.html#1113" class="Bound">G</a><a id="1114" class="Symbol">}</a> <a id="1116" class="Symbol">{</a><a id="1117" href="group-theory.precategory-of-semigroups.html#1117" class="Bound">H</a><a id="1118" class="Symbol">}</a> <a id="1120" class="Symbol">{</a><a id="1121" href="group-theory.precategory-of-semigroups.html#1121" class="Bound">K</a><a id="1122" class="Symbol">}</a> <a id="1124" class="Symbol">=</a>
+    <a id="1130" href="group-theory.homomorphisms-semigroups.html#4948" class="Function">comp-hom-Semigroup</a> <a id="1149" href="group-theory.precategory-of-semigroups.html#1113" class="Bound">G</a> <a id="1151" href="group-theory.precategory-of-semigroups.html#1117" class="Bound">H</a> <a id="1153" href="group-theory.precategory-of-semigroups.html#1121" class="Bound">K</a>
+  <a id="1157" href="category-theory.large-precategories.html#1189" class="Field">id-hom-Large-Precat</a> <a id="1177" href="group-theory.precategory-of-semigroups.html#886" class="Function">Semigroup-Large-Precat</a> <a id="1200" class="Symbol">{</a><a id="1201" class="Argument">X</a> <a id="1203" class="Symbol">=</a> <a id="1205" href="group-theory.precategory-of-semigroups.html#1205" class="Bound">G</a><a id="1206" class="Symbol">}</a> <a id="1208" class="Symbol">=</a>
+    <a id="1214" href="group-theory.homomorphisms-semigroups.html#4729" class="Function">id-hom-Semigroup</a> <a id="1231" href="group-theory.precategory-of-semigroups.html#1205" class="Bound">G</a>
+  <a id="1235" href="category-theory.large-precategories.html#1294" class="Field">associative-comp-hom-Large-Precat</a> <a id="1269" href="group-theory.precategory-of-semigroups.html#886" class="Function">Semigroup-Large-Precat</a> <a id="1292" class="Symbol">{</a><a id="1293" class="Argument">X</a> <a id="1295" class="Symbol">=</a> <a id="1297" href="group-theory.precategory-of-semigroups.html#1297" class="Bound">G</a><a id="1298" class="Symbol">}</a> <a id="1300" class="Symbol">{</a><a id="1301" href="group-theory.precategory-of-semigroups.html#1301" class="Bound">H</a><a id="1302" class="Symbol">}</a> <a id="1304" class="Symbol">{</a><a id="1305" href="group-theory.precategory-of-semigroups.html#1305" class="Bound">K</a><a id="1306" class="Symbol">}</a> <a id="1308" class="Symbol">{</a><a id="1309" href="group-theory.precategory-of-semigroups.html#1309" class="Bound">L</a><a id="1310" class="Symbol">}</a> <a id="1312" class="Symbol">=</a>
+    <a id="1318" href="group-theory.homomorphisms-semigroups.html#5530" class="Function">associative-comp-hom-Semigroup</a> <a id="1349" href="group-theory.precategory-of-semigroups.html#1297" class="Bound">G</a> <a id="1351" href="group-theory.precategory-of-semigroups.html#1301" class="Bound">H</a> <a id="1353" href="group-theory.precategory-of-semigroups.html#1305" class="Bound">K</a> <a id="1355" href="group-theory.precategory-of-semigroups.html#1309" class="Bound">L</a>
+  <a id="1359" href="category-theory.large-precategories.html#1736" class="Field">left-unit-law-comp-hom-Large-Precat</a> <a id="1395" href="group-theory.precategory-of-semigroups.html#886" class="Function">Semigroup-Large-Precat</a> <a id="1418" class="Symbol">{</a><a id="1419" class="Argument">X</a> <a id="1421" class="Symbol">=</a> <a id="1423" href="group-theory.precategory-of-semigroups.html#1423" class="Bound">G</a><a id="1424" class="Symbol">}</a> <a id="1426" class="Symbol">{</a><a id="1427" href="group-theory.precategory-of-semigroups.html#1427" class="Bound">H</a><a id="1428" class="Symbol">}</a> <a id="1430" class="Symbol">=</a>
+    <a id="1436" href="group-theory.homomorphisms-semigroups.html#6121" class="Function">left-unit-law-comp-hom-Semigroup</a> <a id="1469" href="group-theory.precategory-of-semigroups.html#1423" class="Bound">G</a> <a id="1471" href="group-theory.precategory-of-semigroups.html#1427" class="Bound">H</a>
+  <a id="1475" href="category-theory.large-precategories.html#1956" class="Field">right-unit-law-comp-hom-Large-Precat</a> <a id="1512" href="group-theory.precategory-of-semigroups.html#886" class="Function">Semigroup-Large-Precat</a> <a id="1535" class="Symbol">{</a><a id="1536" class="Argument">X</a> <a id="1538" class="Symbol">=</a> <a id="1540" href="group-theory.precategory-of-semigroups.html#1540" class="Bound">G</a><a id="1541" class="Symbol">}</a> <a id="1543" class="Symbol">{</a><a id="1544" href="group-theory.precategory-of-semigroups.html#1544" class="Bound">H</a><a id="1545" class="Symbol">}</a> <a id="1547" class="Symbol">=</a>
+    <a id="1553" href="group-theory.homomorphisms-semigroups.html#6494" class="Function">right-unit-law-comp-hom-Semigroup</a> <a id="1587" href="group-theory.precategory-of-semigroups.html#1540" class="Bound">G</a> <a id="1589" href="group-theory.precategory-of-semigroups.html#1544" class="Bound">H</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-22)(dbc6823) Merge pull request #119 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>

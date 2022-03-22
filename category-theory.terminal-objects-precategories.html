@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>category-theory.terminal-objects-precategories</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/category-theory/terminal-objects-precategories.lagda.md.</p>
+<p>Version of Tuesday, March 22, 2022, 05:02 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="terminal-object-of-a-precategory">Terminal object of a precategory</h1>
+<pre class="Agda"><a id="45" class="Symbol">{-#</a> <a id="49" class="Keyword">OPTIONS</a> <a id="57" class="Pragma">--without-K</a> <a id="69" class="Pragma">--exact-split</a> <a id="83" class="Symbol">#-}</a>
+
+<a id="88" class="Keyword">module</a> <a id="95" href="category-theory.terminal-objects-precategories.html" class="Module">category-theory.terminal-objects-precategories</a> <a id="142" class="Keyword">where</a>
+
+<a id="149" class="Keyword">open</a> <a id="154" class="Keyword">import</a> <a id="161" href="category-theory.precategories.html" class="Module">category-theory.precategories</a> <a id="191" class="Keyword">using</a>
+  <a id="199" class="Symbol">(</a> <a id="201" href="category-theory.precategories.html#2242" class="Function">Precat</a><a id="207" class="Symbol">;</a> <a id="209" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a><a id="219" class="Symbol">;</a> <a id="221" href="category-theory.precategories.html#2674" class="Function">type-hom-Precat</a><a id="236" class="Symbol">)</a>
+<a id="238" class="Keyword">open</a> <a id="243" class="Keyword">import</a> <a id="250" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="280" class="Keyword">using</a> <a id="286" class="Symbol">(</a><a id="287" href="foundation-core.contractible-types.html#925" class="Function">is-contr</a><a id="295" class="Symbol">)</a>
+<a id="297" class="Keyword">open</a> <a id="302" class="Keyword">import</a> <a id="309" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="341" class="Keyword">using</a> <a id="347" class="Symbol">(</a><a id="348" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="349" class="Symbol">;</a> <a id="351" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="354" class="Symbol">;</a> <a id="356" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="359" class="Symbol">)</a>
+<a id="361" class="Keyword">open</a> <a id="366" class="Keyword">import</a> <a id="373" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a> <a id="404" class="Keyword">using</a> <a id="410" class="Symbol">(</a><a id="411" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="413" class="Symbol">)</a>
+<a id="415" class="Keyword">open</a> <a id="420" class="Keyword">import</a> <a id="427" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="454" class="Keyword">using</a> <a id="460" class="Symbol">(</a><a id="461" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="463" class="Symbol">;</a> <a id="465" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="470" class="Symbol">;</a> <a id="472" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="475" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The terminal object of a precategory (if it exists) is an object with the universal property that there is a unique morphism into it from any object.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="terminal-object"></a><a id="665" href="category-theory.terminal-objects-precategories.html#665" class="Function">terminal-object</a> <a id="681" class="Symbol">:</a> <a id="683" class="Symbol">{</a><a id="684" href="category-theory.terminal-objects-precategories.html#684" class="Bound">l1</a> <a id="687" href="category-theory.terminal-objects-precategories.html#687" class="Bound">l2</a> <a id="690" class="Symbol">:</a> <a id="692" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="697" class="Symbol">}</a> <a id="699" class="Symbol">(</a><a id="700" href="category-theory.terminal-objects-precategories.html#700" class="Bound">C</a> <a id="702" class="Symbol">:</a> <a id="704" href="category-theory.precategories.html#2242" class="Function">Precat</a> <a id="711" href="category-theory.terminal-objects-precategories.html#684" class="Bound">l1</a> <a id="714" href="category-theory.terminal-objects-precategories.html#687" class="Bound">l2</a><a id="716" class="Symbol">)</a> <a id="718" class="Symbol">→</a> <a id="720" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="723" class="Symbol">(</a><a id="724" href="category-theory.terminal-objects-precategories.html#684" class="Bound">l1</a> <a id="727" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="729" href="category-theory.terminal-objects-precategories.html#687" class="Bound">l2</a><a id="731" class="Symbol">)</a>
+<a id="733" href="category-theory.terminal-objects-precategories.html#665" class="Function">terminal-object</a> <a id="749" href="category-theory.terminal-objects-precategories.html#749" class="Bound">C</a> <a id="751" class="Symbol">=</a>
+  <a id="755" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="757" class="Symbol">(</a><a id="758" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="769" href="category-theory.terminal-objects-precategories.html#749" class="Bound">C</a><a id="770" class="Symbol">)</a> <a id="772" class="Symbol">λ</a> <a id="774" href="category-theory.terminal-objects-precategories.html#774" class="Bound">t</a> <a id="776" class="Symbol">→</a>
+    <a id="782" class="Symbol">(</a><a id="783" href="category-theory.terminal-objects-precategories.html#783" class="Bound">x</a> <a id="785" class="Symbol">:</a> <a id="787" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="798" href="category-theory.terminal-objects-precategories.html#749" class="Bound">C</a><a id="799" class="Symbol">)</a> <a id="801" class="Symbol">→</a> <a id="803" href="foundation-core.contractible-types.html#925" class="Function">is-contr</a> <a id="812" class="Symbol">(</a><a id="813" href="category-theory.precategories.html#2674" class="Function">type-hom-Precat</a> <a id="829" href="category-theory.terminal-objects-precategories.html#749" class="Bound">C</a> <a id="831" href="category-theory.terminal-objects-precategories.html#783" class="Bound">x</a> <a id="833" href="category-theory.terminal-objects-precategories.html#774" class="Bound">t</a><a id="834" class="Symbol">)</a>
+
+<a id="837" class="Keyword">module</a> <a id="844" href="category-theory.terminal-objects-precategories.html#844" class="Module">_</a> <a id="846" class="Symbol">{</a><a id="847" href="category-theory.terminal-objects-precategories.html#847" class="Bound">l1</a> <a id="850" href="category-theory.terminal-objects-precategories.html#850" class="Bound">l2</a> <a id="853" class="Symbol">:</a> <a id="855" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="860" class="Symbol">}</a> <a id="862" class="Symbol">(</a><a id="863" href="category-theory.terminal-objects-precategories.html#863" class="Bound">C</a> <a id="865" class="Symbol">:</a> <a id="867" href="category-theory.precategories.html#2242" class="Function">Precat</a> <a id="874" href="category-theory.terminal-objects-precategories.html#847" class="Bound">l1</a> <a id="877" href="category-theory.terminal-objects-precategories.html#850" class="Bound">l2</a><a id="879" class="Symbol">)</a>
+  <a id="883" class="Symbol">(</a><a id="884" href="category-theory.terminal-objects-precategories.html#884" class="Bound">t</a> <a id="886" class="Symbol">:</a> <a id="888" href="category-theory.terminal-objects-precategories.html#665" class="Function">terminal-object</a> <a id="904" href="category-theory.terminal-objects-precategories.html#863" class="Bound">C</a><a id="905" class="Symbol">)</a> <a id="907" class="Keyword">where</a>
+
+  <a id="916" href="category-theory.terminal-objects-precategories.html#916" class="Function">object-terminal-object</a> <a id="939" class="Symbol">:</a> <a id="941" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="952" href="category-theory.terminal-objects-precategories.html#863" class="Bound">C</a>
+  <a id="956" href="category-theory.terminal-objects-precategories.html#916" class="Function">object-terminal-object</a> <a id="979" class="Symbol">=</a> <a id="981" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="985" href="category-theory.terminal-objects-precategories.html#884" class="Bound">t</a>
+
+  <a id="990" href="category-theory.terminal-objects-precategories.html#990" class="Function">morphism-terminal-object</a> <a id="1015" class="Symbol">:</a>
+    <a id="1021" class="Symbol">(</a><a id="1022" href="category-theory.terminal-objects-precategories.html#1022" class="Bound">x</a> <a id="1024" class="Symbol">:</a> <a id="1026" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="1037" href="category-theory.terminal-objects-precategories.html#863" class="Bound">C</a><a id="1038" class="Symbol">)</a> <a id="1040" class="Symbol">→</a>
+    <a id="1046" href="category-theory.precategories.html#2674" class="Function">type-hom-Precat</a> <a id="1062" href="category-theory.terminal-objects-precategories.html#863" class="Bound">C</a> <a id="1064" href="category-theory.terminal-objects-precategories.html#1022" class="Bound">x</a> <a id="1066" href="category-theory.terminal-objects-precategories.html#916" class="Function">object-terminal-object</a>
+  <a id="1091" href="category-theory.terminal-objects-precategories.html#990" class="Function">morphism-terminal-object</a> <a id="1116" href="category-theory.terminal-objects-precategories.html#1116" class="Bound">x</a> <a id="1118" class="Symbol">=</a> <a id="1120" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1124" class="Symbol">(</a><a id="1125" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1129" href="category-theory.terminal-objects-precategories.html#884" class="Bound">t</a> <a id="1131" href="category-theory.terminal-objects-precategories.html#1116" class="Bound">x</a><a id="1132" class="Symbol">)</a>
+
+  <a id="1137" href="category-theory.terminal-objects-precategories.html#1137" class="Function">is-unique-morphism-terminal-object</a> <a id="1172" class="Symbol">:</a>
+    <a id="1178" class="Symbol">(</a><a id="1179" href="category-theory.terminal-objects-precategories.html#1179" class="Bound">x</a> <a id="1181" class="Symbol">:</a> <a id="1183" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="1194" href="category-theory.terminal-objects-precategories.html#863" class="Bound">C</a><a id="1195" class="Symbol">)</a> <a id="1197" class="Symbol">→</a>
+    <a id="1203" class="Symbol">(</a><a id="1204" href="category-theory.terminal-objects-precategories.html#1204" class="Bound">f</a> <a id="1206" class="Symbol">:</a> <a id="1208" href="category-theory.precategories.html#2674" class="Function">type-hom-Precat</a> <a id="1224" href="category-theory.terminal-objects-precategories.html#863" class="Bound">C</a> <a id="1226" href="category-theory.terminal-objects-precategories.html#1179" class="Bound">x</a> <a id="1228" href="category-theory.terminal-objects-precategories.html#916" class="Function">object-terminal-object</a><a id="1250" class="Symbol">)</a> <a id="1252" class="Symbol">→</a>
+    <a id="1258" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="1261" class="Symbol">(</a><a id="1262" href="category-theory.terminal-objects-precategories.html#990" class="Function">morphism-terminal-object</a> <a id="1287" href="category-theory.terminal-objects-precategories.html#1179" class="Bound">x</a><a id="1288" class="Symbol">)</a> <a id="1290" href="category-theory.terminal-objects-precategories.html#1204" class="Bound">f</a>
+  <a id="1294" href="category-theory.terminal-objects-precategories.html#1137" class="Function">is-unique-morphism-terminal-object</a> <a id="1329" href="category-theory.terminal-objects-precategories.html#1329" class="Bound">x</a> <a id="1331" class="Symbol">=</a> <a id="1333" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1337" class="Symbol">(</a><a id="1338" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1342" href="category-theory.terminal-objects-precategories.html#884" class="Bound">t</a> <a id="1344" href="category-theory.terminal-objects-precategories.html#1329" class="Bound">x</a><a id="1345" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-22)(dbc6823) Merge pull request #119 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>

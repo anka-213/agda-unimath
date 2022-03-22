@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>elementary-number-theory.group-of-integers</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/elementary-number-theory/group-of-integers.lagda.md.</p>
+<p>Version of Tuesday, March 22, 2022, 05:02 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="the-group-of-integers">The group of integers</h1>
+<pre class="Agda"><a id="34" class="Symbol">{-#</a> <a id="38" class="Keyword">OPTIONS</a> <a id="46" class="Pragma">--without-K</a> <a id="58" class="Pragma">--exact-split</a> <a id="72" class="Symbol">#-}</a>
+
+<a id="77" class="Keyword">module</a> <a id="84" href="elementary-number-theory.group-of-integers.html" class="Module">elementary-number-theory.group-of-integers</a> <a id="127" class="Keyword">where</a>
+
+<a id="134" class="Keyword">open</a> <a id="139" class="Keyword">import</a> <a id="146" href="elementary-number-theory.addition-integers.html" class="Module">elementary-number-theory.addition-integers</a> <a id="189" class="Keyword">using</a>
+  <a id="197" class="Symbol">(</a> <a id="199" href="elementary-number-theory.addition-integers.html#1489" class="Function">add-ℤ</a><a id="204" class="Symbol">;</a> <a id="206" href="elementary-number-theory.addition-integers.html#5297" class="Function">associative-add-ℤ</a><a id="223" class="Symbol">;</a> <a id="225" href="elementary-number-theory.addition-integers.html#1948" class="Function">left-unit-law-add-ℤ</a><a id="244" class="Symbol">;</a> <a id="246" href="elementary-number-theory.addition-integers.html#2042" class="Function">right-unit-law-add-ℤ</a><a id="266" class="Symbol">;</a>
+    <a id="272" href="elementary-number-theory.addition-integers.html#7226" class="Function">left-inverse-law-add-ℤ</a><a id="294" class="Symbol">;</a> <a id="296" href="elementary-number-theory.addition-integers.html#7735" class="Function">right-inverse-law-add-ℤ</a><a id="319" class="Symbol">)</a>
+<a id="321" class="Keyword">open</a> <a id="326" class="Keyword">import</a> <a id="333" href="elementary-number-theory.equality-integers.html" class="Module">elementary-number-theory.equality-integers</a> <a id="376" class="Keyword">using</a> <a id="382" class="Symbol">(</a><a id="383" href="elementary-number-theory.equality-integers.html#3338" class="Function">ℤ-Set</a><a id="388" class="Symbol">)</a>
+<a id="390" class="Keyword">open</a> <a id="395" class="Keyword">import</a> <a id="402" href="elementary-number-theory.integers.html" class="Module">elementary-number-theory.integers</a> <a id="436" class="Keyword">using</a> <a id="442" class="Symbol">(</a><a id="443" href="elementary-number-theory.integers.html#2041" class="Function">zero-ℤ</a><a id="449" class="Symbol">;</a> <a id="451" href="elementary-number-theory.integers.html#3749" class="Function">neg-ℤ</a><a id="456" class="Symbol">)</a>
+
+<a id="459" class="Keyword">open</a> <a id="464" class="Keyword">import</a> <a id="471" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="503" class="Keyword">using</a> <a id="509" class="Symbol">(</a><a id="510" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="511" class="Symbol">;</a> <a id="513" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="517" class="Symbol">;</a> <a id="519" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="522" class="Symbol">;</a> <a id="524" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="527" class="Symbol">)</a>
+<a id="529" class="Keyword">open</a> <a id="534" class="Keyword">import</a> <a id="541" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="568" class="Keyword">using</a> <a id="574" class="Symbol">(</a><a id="575" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="580" class="Symbol">)</a>
+
+<a id="583" class="Keyword">open</a> <a id="588" class="Keyword">import</a> <a id="595" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="615" class="Keyword">using</a> <a id="621" class="Symbol">(</a><a id="622" href="group-theory.groups.html#1961" class="Function">Group</a><a id="627" class="Symbol">)</a>
+<a id="629" class="Keyword">open</a> <a id="634" class="Keyword">import</a> <a id="641" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="665" class="Keyword">using</a> <a id="671" class="Symbol">(</a><a id="672" href="group-theory.semigroups.html#737" class="Function">Semigroup</a><a id="681" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The type of integers, equipped with a zero-element, addition, and negatives, forms a group.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="ℤ-Semigroup"></a><a id="813" href="elementary-number-theory.group-of-integers.html#813" class="Function">ℤ-Semigroup</a> <a id="825" class="Symbol">:</a> <a id="827" href="group-theory.semigroups.html#737" class="Function">Semigroup</a> <a id="837" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="843" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="847" href="elementary-number-theory.group-of-integers.html#813" class="Function">ℤ-Semigroup</a> <a id="859" class="Symbol">=</a> <a id="861" href="elementary-number-theory.equality-integers.html#3338" class="Function">ℤ-Set</a>
+<a id="867" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="871" class="Symbol">(</a><a id="872" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="876" href="elementary-number-theory.group-of-integers.html#813" class="Function">ℤ-Semigroup</a><a id="887" class="Symbol">)</a> <a id="889" class="Symbol">=</a> <a id="891" href="elementary-number-theory.addition-integers.html#1489" class="Function">add-ℤ</a>
+<a id="897" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="901" class="Symbol">(</a><a id="902" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="906" href="elementary-number-theory.group-of-integers.html#813" class="Function">ℤ-Semigroup</a><a id="917" class="Symbol">)</a> <a id="919" class="Symbol">=</a> <a id="921" href="elementary-number-theory.addition-integers.html#5297" class="Function">associative-add-ℤ</a>
+
+<a id="ℤ-Group"></a><a id="940" href="elementary-number-theory.group-of-integers.html#940" class="Function">ℤ-Group</a> <a id="948" class="Symbol">:</a> <a id="950" href="group-theory.groups.html#1961" class="Function">Group</a> <a id="956" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="962" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="966" href="elementary-number-theory.group-of-integers.html#940" class="Function">ℤ-Group</a> <a id="974" class="Symbol">=</a> <a id="976" href="elementary-number-theory.group-of-integers.html#813" class="Function">ℤ-Semigroup</a>
+<a id="988" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="992" class="Symbol">(</a><a id="993" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="997" class="Symbol">(</a><a id="998" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1002" href="elementary-number-theory.group-of-integers.html#940" class="Function">ℤ-Group</a><a id="1009" class="Symbol">))</a> <a id="1012" class="Symbol">=</a> <a id="1014" href="elementary-number-theory.integers.html#2041" class="Function">zero-ℤ</a>
+<a id="1021" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1025" class="Symbol">(</a><a id="1026" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1030" class="Symbol">(</a><a id="1031" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1035" class="Symbol">(</a><a id="1036" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1040" href="elementary-number-theory.group-of-integers.html#940" class="Function">ℤ-Group</a><a id="1047" class="Symbol">)))</a> <a id="1051" class="Symbol">=</a> <a id="1053" href="elementary-number-theory.addition-integers.html#1948" class="Function">left-unit-law-add-ℤ</a>
+<a id="1073" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1077" class="Symbol">(</a><a id="1078" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1082" class="Symbol">(</a><a id="1083" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1087" class="Symbol">(</a><a id="1088" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1092" href="elementary-number-theory.group-of-integers.html#940" class="Function">ℤ-Group</a><a id="1099" class="Symbol">)))</a> <a id="1103" class="Symbol">=</a> <a id="1105" href="elementary-number-theory.addition-integers.html#2042" class="Function">right-unit-law-add-ℤ</a>
+<a id="1126" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1130" class="Symbol">(</a><a id="1131" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1135" class="Symbol">(</a><a id="1136" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1140" href="elementary-number-theory.group-of-integers.html#940" class="Function">ℤ-Group</a><a id="1147" class="Symbol">))</a> <a id="1150" class="Symbol">=</a> <a id="1152" href="elementary-number-theory.integers.html#3749" class="Function">neg-ℤ</a>
+<a id="1158" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1162" class="Symbol">(</a><a id="1163" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1167" class="Symbol">(</a><a id="1168" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1172" class="Symbol">(</a><a id="1173" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1177" href="elementary-number-theory.group-of-integers.html#940" class="Function">ℤ-Group</a><a id="1184" class="Symbol">)))</a> <a id="1188" class="Symbol">=</a> <a id="1190" href="elementary-number-theory.addition-integers.html#7226" class="Function">left-inverse-law-add-ℤ</a>
+<a id="1213" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1217" class="Symbol">(</a><a id="1218" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1222" class="Symbol">(</a><a id="1223" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1227" class="Symbol">(</a><a id="1228" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1232" href="elementary-number-theory.group-of-integers.html#940" class="Function">ℤ-Group</a><a id="1239" class="Symbol">)))</a> <a id="1243" class="Symbol">=</a> <a id="1245" href="elementary-number-theory.addition-integers.html#7735" class="Function">right-inverse-law-add-ℤ</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-22)(dbc6823) Merge pull request #119 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>

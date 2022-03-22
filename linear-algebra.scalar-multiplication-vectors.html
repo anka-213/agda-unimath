@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>linear-algebra.scalar-multiplication-vectors</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/linear-algebra/scalar-multiplication-vectors.lagda.md.</p>
+<p>Version of Tuesday, March 22, 2022, 05:03 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="scalar-multiplication-of-vectors">Scalar multiplication of vectors</h1>
+<pre class="Agda"><a id="45" class="Symbol">{-#</a> <a id="49" class="Keyword">OPTIONS</a> <a id="57" class="Pragma">--without-K</a> <a id="69" class="Pragma">--exact-split</a> <a id="83" class="Symbol">#-}</a>
+
+<a id="88" class="Keyword">module</a> <a id="95" href="linear-algebra.scalar-multiplication-vectors.html" class="Module">linear-algebra.scalar-multiplication-vectors</a> <a id="140" class="Keyword">where</a>
+
+<a id="147" class="Keyword">open</a> <a id="152" class="Keyword">import</a> <a id="159" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="200" class="Keyword">using</a> <a id="206" class="Symbol">(</a><a id="207" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="208" class="Symbol">)</a>
+
+<a id="211" class="Keyword">open</a> <a id="216" class="Keyword">import</a> <a id="223" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="250" class="Keyword">using</a> <a id="256" class="Symbol">(</a><a id="257" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="262" class="Symbol">;</a> <a id="264" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="266" class="Symbol">)</a>
+
+<a id="269" class="Keyword">open</a> <a id="274" class="Keyword">import</a> <a id="281" href="linear-algebra.functoriality-vectors.html" class="Module">linear-algebra.functoriality-vectors</a> <a id="318" class="Keyword">using</a> <a id="324" class="Symbol">(</a><a id="325" href="linear-algebra.functoriality-vectors.html#572" class="Function">map-vec</a><a id="332" class="Symbol">)</a>
+<a id="334" class="Keyword">open</a> <a id="339" class="Keyword">import</a> <a id="346" href="linear-algebra.vectors.html" class="Module">linear-algebra.vectors</a> <a id="369" class="Keyword">using</a> <a id="375" class="Symbol">(</a><a id="376" href="linear-algebra.vectors.html#472" class="Datatype">vec</a><a id="379" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>Any operation <code>B → A → A</code> for some type <code>B</code> of formal scalars induces an operation <code>B → vec n A → vec n A</code>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="scalar-mul-vec"></a><a id="527" href="linear-algebra.scalar-multiplication-vectors.html#527" class="Function">scalar-mul-vec</a> <a id="542" class="Symbol">:</a>
+  <a id="546" class="Symbol">{</a><a id="547" href="linear-algebra.scalar-multiplication-vectors.html#547" class="Bound">l1</a> <a id="550" href="linear-algebra.scalar-multiplication-vectors.html#550" class="Bound">l2</a> <a id="553" class="Symbol">:</a> <a id="555" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="560" class="Symbol">}</a> <a id="562" class="Symbol">{</a><a id="563" href="linear-algebra.scalar-multiplication-vectors.html#563" class="Bound">B</a> <a id="565" class="Symbol">:</a> <a id="567" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="570" href="linear-algebra.scalar-multiplication-vectors.html#547" class="Bound">l1</a><a id="572" class="Symbol">}</a> <a id="574" class="Symbol">{</a><a id="575" href="linear-algebra.scalar-multiplication-vectors.html#575" class="Bound">A</a> <a id="577" class="Symbol">:</a> <a id="579" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="582" href="linear-algebra.scalar-multiplication-vectors.html#550" class="Bound">l2</a><a id="584" class="Symbol">}</a> <a id="586" class="Symbol">{</a><a id="587" href="linear-algebra.scalar-multiplication-vectors.html#587" class="Bound">n</a> <a id="589" class="Symbol">:</a> <a id="591" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="592" class="Symbol">}</a> <a id="594" class="Symbol">→</a>
+  <a id="598" class="Symbol">(</a><a id="599" href="linear-algebra.scalar-multiplication-vectors.html#563" class="Bound">B</a> <a id="601" class="Symbol">→</a> <a id="603" href="linear-algebra.scalar-multiplication-vectors.html#575" class="Bound">A</a> <a id="605" class="Symbol">→</a> <a id="607" href="linear-algebra.scalar-multiplication-vectors.html#575" class="Bound">A</a><a id="608" class="Symbol">)</a> <a id="610" class="Symbol">→</a> <a id="612" href="linear-algebra.scalar-multiplication-vectors.html#563" class="Bound">B</a> <a id="614" class="Symbol">→</a> <a id="616" href="linear-algebra.vectors.html#472" class="Datatype">vec</a> <a id="620" href="linear-algebra.scalar-multiplication-vectors.html#575" class="Bound">A</a> <a id="622" href="linear-algebra.scalar-multiplication-vectors.html#587" class="Bound">n</a> <a id="624" class="Symbol">→</a> <a id="626" href="linear-algebra.vectors.html#472" class="Datatype">vec</a> <a id="630" href="linear-algebra.scalar-multiplication-vectors.html#575" class="Bound">A</a> <a id="632" href="linear-algebra.scalar-multiplication-vectors.html#587" class="Bound">n</a>
+<a id="634" href="linear-algebra.scalar-multiplication-vectors.html#527" class="Function">scalar-mul-vec</a> <a id="649" href="linear-algebra.scalar-multiplication-vectors.html#649" class="Bound">μ</a> <a id="651" href="linear-algebra.scalar-multiplication-vectors.html#651" class="Bound">x</a> <a id="653" class="Symbol">=</a> <a id="655" href="linear-algebra.functoriality-vectors.html#572" class="Function">map-vec</a> <a id="663" class="Symbol">(</a><a id="664" href="linear-algebra.scalar-multiplication-vectors.html#649" class="Bound">μ</a> <a id="666" href="linear-algebra.scalar-multiplication-vectors.html#651" class="Bound">x</a><a id="667" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-22)(dbc6823) Merge pull request #119 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>
