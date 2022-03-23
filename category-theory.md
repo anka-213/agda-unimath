@@ -27,4 +27,5 @@
 <a id="1365" class="Keyword">open</a> <a id="1370" class="Keyword">import</a> <a id="1377" href="category-theory.natural-transformations-large-precategories.html" class="Module">category-theory.natural-transformations-large-precategories</a> <a id="1437" class="Keyword">public</a>
 <a id="1444" class="Keyword">open</a> <a id="1449" class="Keyword">import</a> <a id="1456" href="category-theory.natural-transformations-precategories.html" class="Module">category-theory.natural-transformations-precategories</a> <a id="1510" class="Keyword">public</a>
 <a id="1517" class="Keyword">open</a> <a id="1522" class="Keyword">import</a> <a id="1529" href="category-theory.precategories.html" class="Module">category-theory.precategories</a> <a id="1559" class="Keyword">public</a>
+<a id="1566" class="Keyword">open</a> <a id="1571" class="Keyword">import</a> <a id="1578" href="category-theory.slice-precategories.html" class="Module">category-theory.slice-precategories</a> <a id="1614" class="Keyword">public</a>
 </pre>
