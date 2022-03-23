@@ -514,15 +514,16 @@
 <a id="25369" class="Keyword">open</a> <a id="25374" class="Keyword">import</a> <a id="25381" href="univalent-combinatorics.ramsey-theory.html" class="Module">univalent-combinatorics.ramsey-theory</a>
 <a id="25419" class="Keyword">open</a> <a id="25424" class="Keyword">import</a> <a id="25431" href="univalent-combinatorics.retracts-of-finite-types.html" class="Module">univalent-combinatorics.retracts-of-finite-types</a>
 <a id="25480" class="Keyword">open</a> <a id="25485" class="Keyword">import</a> <a id="25492" href="univalent-combinatorics.skipping-element-standard-finite-types.html" class="Module">univalent-combinatorics.skipping-element-standard-finite-types</a>
-<a id="25555" class="Keyword">open</a> <a id="25560" class="Keyword">import</a> <a id="25567" href="univalent-combinatorics.standard-finite-pruned-trees.html" class="Module">univalent-combinatorics.standard-finite-pruned-trees</a>
-<a id="25620" class="Keyword">open</a> <a id="25625" class="Keyword">import</a> <a id="25632" href="univalent-combinatorics.standard-finite-trees.html" class="Module">univalent-combinatorics.standard-finite-trees</a>
-<a id="25678" class="Keyword">open</a> <a id="25683" class="Keyword">import</a> <a id="25690" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
-<a id="25736" class="Keyword">open</a> <a id="25741" class="Keyword">import</a> <a id="25748" href="univalent-combinatorics.sums-of-natural-numbers.html" class="Module">univalent-combinatorics.sums-of-natural-numbers</a>
-<a id="25796" class="Keyword">open</a> <a id="25801" class="Keyword">import</a> <a id="25808" href="univalent-combinatorics.surjective-maps.html" class="Module">univalent-combinatorics.surjective-maps</a>
-<a id="25848" class="Keyword">open</a> <a id="25853" class="Keyword">import</a> <a id="25860" href="wild-algebra.html" class="Module">wild-algebra</a>
-<a id="25873" class="Keyword">open</a> <a id="25878" class="Keyword">import</a> <a id="25885" href="wild-algebra.magmas.html" class="Module">wild-algebra.magmas</a>
-<a id="25905" class="Keyword">open</a> <a id="25910" class="Keyword">import</a> <a id="25917" href="wild-algebra.universal-property-lists-wild-monoids.html" class="Module">wild-algebra.universal-property-lists-wild-monoids</a>
-<a id="25968" class="Keyword">open</a> <a id="25973" class="Keyword">import</a> <a id="25980" href="wild-algebra.wild-groups.html" class="Module">wild-algebra.wild-groups</a>
-<a id="26005" class="Keyword">open</a> <a id="26010" class="Keyword">import</a> <a id="26017" href="wild-algebra.wild-monoids.html" class="Module">wild-algebra.wild-monoids</a>
-<a id="26043" class="Keyword">open</a> <a id="26048" class="Keyword">import</a> <a id="26055" href="wild-algebra.wild-unital-magmas.html" class="Module">wild-algebra.wild-unital-magmas</a>
+<a id="25555" class="Keyword">open</a> <a id="25560" class="Keyword">import</a> <a id="25567" href="univalent-combinatorics.species.html" class="Module">univalent-combinatorics.species</a>
+<a id="25599" class="Keyword">open</a> <a id="25604" class="Keyword">import</a> <a id="25611" href="univalent-combinatorics.standard-finite-pruned-trees.html" class="Module">univalent-combinatorics.standard-finite-pruned-trees</a>
+<a id="25664" class="Keyword">open</a> <a id="25669" class="Keyword">import</a> <a id="25676" href="univalent-combinatorics.standard-finite-trees.html" class="Module">univalent-combinatorics.standard-finite-trees</a>
+<a id="25722" class="Keyword">open</a> <a id="25727" class="Keyword">import</a> <a id="25734" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
+<a id="25780" class="Keyword">open</a> <a id="25785" class="Keyword">import</a> <a id="25792" href="univalent-combinatorics.sums-of-natural-numbers.html" class="Module">univalent-combinatorics.sums-of-natural-numbers</a>
+<a id="25840" class="Keyword">open</a> <a id="25845" class="Keyword">import</a> <a id="25852" href="univalent-combinatorics.surjective-maps.html" class="Module">univalent-combinatorics.surjective-maps</a>
+<a id="25892" class="Keyword">open</a> <a id="25897" class="Keyword">import</a> <a id="25904" href="wild-algebra.html" class="Module">wild-algebra</a>
+<a id="25917" class="Keyword">open</a> <a id="25922" class="Keyword">import</a> <a id="25929" href="wild-algebra.magmas.html" class="Module">wild-algebra.magmas</a>
+<a id="25949" class="Keyword">open</a> <a id="25954" class="Keyword">import</a> <a id="25961" href="wild-algebra.universal-property-lists-wild-monoids.html" class="Module">wild-algebra.universal-property-lists-wild-monoids</a>
+<a id="26012" class="Keyword">open</a> <a id="26017" class="Keyword">import</a> <a id="26024" href="wild-algebra.wild-groups.html" class="Module">wild-algebra.wild-groups</a>
+<a id="26049" class="Keyword">open</a> <a id="26054" class="Keyword">import</a> <a id="26061" href="wild-algebra.wild-monoids.html" class="Module">wild-algebra.wild-monoids</a>
+<a id="26087" class="Keyword">open</a> <a id="26092" class="Keyword">import</a> <a id="26099" href="wild-algebra.wild-unital-magmas.html" class="Module">wild-algebra.wild-unital-magmas</a>
 </pre>

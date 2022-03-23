@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>univalent-combinatorics.species</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/univalent-combinatorics/species.lagda.md.</p>
+<p>Version of Wednesday, March 23, 2022, 01:56 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="species">Species</h1>
+<pre class="Agda"><a id="20" class="Symbol">{-#</a> <a id="24" class="Keyword">OPTIONS</a> <a id="32" class="Pragma">--without-K</a> <a id="44" class="Pragma">--exact-split</a> <a id="58" class="Symbol">#-}</a>
+
+<a id="63" class="Keyword">module</a> <a id="70" href="univalent-combinatorics.species.html" class="Module">univalent-combinatorics.species</a> <a id="102" class="Keyword">where</a>
+
+<a id="109" class="Keyword">open</a> <a id="114" class="Keyword">import</a> <a id="121" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="148" class="Keyword">using</a> <a id="154" class="Symbol">(</a><a id="155" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="160" class="Symbol">;</a> <a id="162" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="164" class="Symbol">;</a> <a id="166" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="170" class="Symbol">)</a>
+
+<a id="173" class="Keyword">open</a> <a id="178" class="Keyword">import</a> <a id="185" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="222" class="Keyword">using</a> <a id="228" class="Symbol">(</a><a id="229" href="univalent-combinatorics.finite-types.html#4042" class="Function">𝔽</a><a id="230" class="Symbol">)</a>
+</pre>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="species"></a><a id="260" href="univalent-combinatorics.species.html#260" class="Function">species</a> <a id="268" class="Symbol">:</a> <a id="270" class="Symbol">(</a><a id="271" href="univalent-combinatorics.species.html#271" class="Bound">l</a> <a id="273" class="Symbol">:</a> <a id="275" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="280" class="Symbol">)</a> <a id="282" class="Symbol">→</a> <a id="284" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="287" class="Symbol">(</a><a id="288" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="293" href="univalent-combinatorics.species.html#271" class="Bound">l</a><a id="294" class="Symbol">)</a>
+<a id="296" href="univalent-combinatorics.species.html#260" class="Function">species</a> <a id="304" href="univalent-combinatorics.species.html#304" class="Bound">l</a> <a id="306" class="Symbol">=</a> <a id="308" href="univalent-combinatorics.finite-types.html#4042" class="Function">𝔽</a> <a id="310" class="Symbol">→</a> <a id="312" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="315" href="univalent-combinatorics.species.html#304" class="Bound">l</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-23)(9b16c87) Merge pull request #123 from UniMath/ljubljana by noreply
+</pre>
+</body>
+</html>
