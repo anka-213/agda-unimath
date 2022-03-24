@@ -9,5 +9,6 @@
 <a id="251" class="Keyword">open</a> <a id="256" class="Keyword">import</a> <a id="263" href="finite-group-theory.finite-groups.html" class="Module">finite-group-theory.finite-groups</a> <a id="297" class="Keyword">public</a>
 <a id="304" class="Keyword">open</a> <a id="309" class="Keyword">import</a> <a id="316" href="finite-group-theory.orbits-permutations.html" class="Module">finite-group-theory.orbits-permutations</a> <a id="356" class="Keyword">public</a>
 <a id="363" class="Keyword">open</a> <a id="368" class="Keyword">import</a> <a id="375" href="finite-group-theory.permutations.html" class="Module">finite-group-theory.permutations</a> <a id="408" class="Keyword">public</a>
-<a id="415" class="Keyword">open</a> <a id="420" class="Keyword">import</a> <a id="427" href="finite-group-theory.transpositions.html" class="Module">finite-group-theory.transpositions</a> <a id="462" class="Keyword">public</a>
+<a id="415" class="Keyword">open</a> <a id="420" class="Keyword">import</a> <a id="427" href="finite-group-theory.sign-homomorphism.html" class="Module">finite-group-theory.sign-homomorphism</a> <a id="465" class="Keyword">public</a>
+<a id="472" class="Keyword">open</a> <a id="477" class="Keyword">import</a> <a id="484" href="finite-group-theory.transpositions.html" class="Module">finite-group-theory.transpositions</a> <a id="519" class="Keyword">public</a>
 </pre>
