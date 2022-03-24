@@ -23,7 +23,7 @@
 <body>
 <div class="powerby">
 <p>src/foundation/small-types.lagda.md.</p>
-<p>Version of Wednesday, March 23, 2022, 05:16 PM</p>
+<p>Version of Thursday, March 24, 2022, 12:39 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -48,7 +48,7 @@
 <a id="760" class="Keyword">open</a> <a id="765" class="Keyword">import</a> <a id="772" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="798" class="Keyword">using</a> <a id="804" class="Symbol">(</a><a id="805" href="foundation.identity-types.html#3840" class="Function">equiv-tr</a><a id="813" class="Symbol">;</a> <a id="815" href="foundation-core.identity-types.html#1552" class="Function">inv</a><a id="818" class="Symbol">)</a>
 <a id="820" class="Keyword">open</a> <a id="825" class="Keyword">import</a> <a id="832" href="foundation.mere-equivalences.html" class="Module">foundation.mere-equivalences</a> <a id="861" class="Keyword">using</a> <a id="867" class="Symbol">(</a><a id="868" href="foundation.mere-equivalences.html#1406" class="Function">mere-equiv</a><a id="878" class="Symbol">)</a>
 <a id="880" class="Keyword">open</a> <a id="885" class="Keyword">import</a> <a id="892" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="929" class="Keyword">using</a>
-  <a id="937" class="Symbol">(</a> <a id="939" href="foundation.propositional-truncations.html#5148" class="Function">apply-universal-property-trunc-Prop</a><a id="974" class="Symbol">)</a>
+  <a id="937" class="Symbol">(</a> <a id="939" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a><a id="974" class="Symbol">)</a>
 <a id="976" class="Keyword">open</a> <a id="981" class="Keyword">import</a> <a id="988" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="1012" class="Keyword">using</a>
   <a id="1020" class="Symbol">(</a> <a id="1022" href="foundation-core.propositions.html#1246" class="Function">is-prop</a><a id="1029" class="Symbol">;</a> <a id="1031" href="foundation-core.propositions.html#3151" class="Function">is-prop-is-proof-irrelevant</a><a id="1058" class="Symbol">;</a> <a id="1060" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a><a id="1067" class="Symbol">)</a>
 <a id="1069" class="Keyword">open</a> <a id="1074" class="Keyword">import</a> <a id="1081" href="foundation.raising-universe-levels.html" class="Module">foundation.raising-universe-levels</a> <a id="1116" class="Keyword">using</a> <a id="1122" class="Symbol">(</a><a id="1123" href="foundation.raising-universe-levels.html#765" class="Datatype">raise</a><a id="1128" class="Symbol">;</a> <a id="1130" href="foundation.raising-universe-levels.html#1342" class="Function">equiv-raise</a><a id="1141" class="Symbol">)</a>
@@ -183,13 +183,13 @@
     <a id="5652" class="Symbol">(</a><a id="5653" href="foundation.small-types.html#5653" class="Bound">l</a> <a id="5655" class="Symbol">:</a> <a id="5657" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="5662" class="Symbol">)</a> <a id="5664" class="Symbol">{</a><a id="5665" href="foundation.small-types.html#5665" class="Bound">l1</a> <a id="5668" href="foundation.small-types.html#5668" class="Bound">l2</a> <a id="5671" class="Symbol">:</a> <a id="5673" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="5678" class="Symbol">}</a> <a id="5680" class="Symbol">{</a><a id="5681" href="foundation.small-types.html#5681" class="Bound">A</a> <a id="5683" class="Symbol">:</a> <a id="5685" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="5688" href="foundation.small-types.html#5665" class="Bound">l1</a><a id="5690" class="Symbol">}</a> <a id="5692" class="Symbol">{</a><a id="5693" href="foundation.small-types.html#5693" class="Bound">B</a> <a id="5695" class="Symbol">:</a> <a id="5697" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="5700" href="foundation.small-types.html#5668" class="Bound">l2</a><a id="5702" class="Symbol">}</a> <a id="5704" class="Symbol">→</a> <a id="5706" href="foundation.mere-equivalences.html#1406" class="Function">mere-equiv</a> <a id="5717" href="foundation.small-types.html#5681" class="Bound">A</a> <a id="5719" href="foundation.small-types.html#5693" class="Bound">B</a> <a id="5721" class="Symbol">→</a>
     <a id="5727" href="foundation.small-types.html#1594" class="Function">is-small</a> <a id="5736" href="foundation.small-types.html#5653" class="Bound">l</a> <a id="5738" href="foundation.small-types.html#5693" class="Bound">B</a> <a id="5740" class="Symbol">→</a> <a id="5742" href="foundation.small-types.html#1594" class="Function">is-small</a> <a id="5751" href="foundation.small-types.html#5653" class="Bound">l</a> <a id="5753" href="foundation.small-types.html#5681" class="Bound">A</a>
   <a id="5757" href="foundation.small-types.html#5626" class="Function">is-small-mere-equiv</a> <a id="5777" href="foundation.small-types.html#5777" class="Bound">l</a> <a id="5779" href="foundation.small-types.html#5779" class="Bound">e</a> <a id="5781" href="foundation.small-types.html#5781" class="Bound">H</a> <a id="5783" class="Symbol">=</a>
-    <a id="5789" href="foundation.propositional-truncations.html#5148" class="Function">apply-universal-property-trunc-Prop</a> <a id="5825" href="foundation.small-types.html#5779" class="Bound">e</a>
+    <a id="5789" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a> <a id="5825" href="foundation.small-types.html#5779" class="Bound">e</a>
       <a id="5833" class="Symbol">(</a> <a id="5835" href="foundation.small-types.html#5386" class="Function">is-small-Prop</a> <a id="5849" href="foundation.small-types.html#5777" class="Bound">l</a> <a id="5851" class="Symbol">_)</a>
       <a id="5860" class="Symbol">(</a> <a id="5862" class="Symbol">λ</a> <a id="5864" href="foundation.small-types.html#5864" class="Bound">e&#39;</a> <a id="5867" class="Symbol">→</a> <a id="5869" href="foundation.small-types.html#2647" class="Function">is-small-equiv</a> <a id="5884" href="foundation.small-types.html#5777" class="Bound">l</a> <a id="5886" class="Symbol">_</a> <a id="5888" href="foundation.small-types.html#5864" class="Bound">e&#39;</a> <a id="5891" href="foundation.small-types.html#5781" class="Bound">H</a><a id="5892" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-03-23)(35e48e5) Merge pull request #125 from UniMath/daily-challenge by noreply
+(2022-03-24)(57d207e) Merge pull request #128 from LeoMangel/leomangel by noreply
 </pre>
 </body>
 </html>

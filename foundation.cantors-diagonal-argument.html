@@ -23,7 +23,7 @@
 <body>
 <div class="powerby">
 <p>src/foundation/cantors-diagonal-argument.lagda.md.</p>
-<p>Version of Wednesday, March 23, 2022, 05:16 PM</p>
+<p>Version of Thursday, March 24, 2022, 12:38 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -39,7 +39,7 @@
 <a id="377" class="Keyword">open</a> <a id="382" class="Keyword">import</a> <a id="389" href="foundation.logical-equivalences.html" class="Module">foundation.logical-equivalences</a> <a id="421" class="Keyword">using</a> <a id="427" class="Symbol">(</a><a id="428" href="foundation.logical-equivalences.html#748" class="Function">iff-eq</a><a id="434" class="Symbol">)</a>
 <a id="436" class="Keyword">open</a> <a id="441" class="Keyword">import</a> <a id="448" href="foundation.negation.html" class="Module">foundation.negation</a> <a id="468" class="Keyword">using</a> <a id="474" class="Symbol">(</a><a id="475" href="foundation.negation.html#1157" class="Function">neg-Prop</a><a id="483" class="Symbol">;</a> <a id="485" href="foundation.negation.html#1908" class="Function">no-fixed-points-neg-Prop</a><a id="509" class="Symbol">;</a> <a id="511" href="foundation-core.negation.html#452" class="Function">¬</a><a id="512" class="Symbol">)</a>
 <a id="514" class="Keyword">open</a> <a id="519" class="Keyword">import</a> <a id="526" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="563" class="Keyword">using</a>
-  <a id="571" class="Symbol">(</a> <a id="573" href="foundation.propositional-truncations.html#5148" class="Function">apply-universal-property-trunc-Prop</a><a id="608" class="Symbol">)</a>
+  <a id="571" class="Symbol">(</a> <a id="573" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a><a id="608" class="Symbol">)</a>
 <a id="610" class="Keyword">open</a> <a id="615" class="Keyword">import</a> <a id="622" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="646" class="Keyword">using</a> <a id="652" class="Symbol">(</a><a id="653" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a><a id="660" class="Symbol">)</a>
 <a id="662" class="Keyword">open</a> <a id="667" class="Keyword">import</a> <a id="674" href="foundation.surjective-maps.html" class="Module">foundation.surjective-maps</a> <a id="701" class="Keyword">using</a> <a id="707" class="Symbol">(</a><a id="708" href="foundation.surjective-maps.html#1905" class="Function">is-surjective</a><a id="721" class="Symbol">)</a>
 <a id="723" class="Keyword">open</a> <a id="728" class="Keyword">import</a> <a id="735" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="762" class="Keyword">using</a> <a id="768" class="Symbol">(</a><a id="769" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="774" class="Symbol">;</a> <a id="776" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="778" class="Symbol">)</a>
@@ -62,14 +62,14 @@
   <a id="cantor"></a><a id="1314" href="foundation.cantors-diagonal-argument.html#1314" class="Function">cantor</a> <a id="1321" class="Symbol">:</a> <a id="1323" class="Symbol">{</a><a id="1324" href="foundation.cantors-diagonal-argument.html#1324" class="Bound">l1</a> <a id="1327" href="foundation.cantors-diagonal-argument.html#1327" class="Bound">l2</a> <a id="1330" class="Symbol">:</a> <a id="1332" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1337" class="Symbol">}</a> <a id="1339" class="Symbol">(</a><a id="1340" href="foundation.cantors-diagonal-argument.html#1340" class="Bound">X</a> <a id="1342" class="Symbol">:</a> <a id="1344" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1347" href="foundation.cantors-diagonal-argument.html#1324" class="Bound">l1</a><a id="1349" class="Symbol">)</a> <a id="1351" class="Symbol">(</a><a id="1352" href="foundation.cantors-diagonal-argument.html#1352" class="Bound">f</a> <a id="1354" class="Symbol">:</a> <a id="1356" href="foundation.cantors-diagonal-argument.html#1340" class="Bound">X</a> <a id="1358" class="Symbol">→</a> <a id="1360" class="Symbol">(</a><a id="1361" href="foundation.cantors-diagonal-argument.html#1340" class="Bound">X</a> <a id="1363" class="Symbol">→</a> <a id="1365" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a> <a id="1373" href="foundation.cantors-diagonal-argument.html#1327" class="Bound">l2</a><a id="1375" class="Symbol">))</a> <a id="1378" class="Symbol">→</a>
     <a id="1384" href="foundation-core.negation.html#452" class="Function">¬</a> <a id="1386" class="Symbol">(</a><a id="1387" href="foundation.surjective-maps.html#1905" class="Function">is-surjective</a> <a id="1401" href="foundation.cantors-diagonal-argument.html#1352" class="Bound">f</a><a id="1402" class="Symbol">)</a>
   <a id="1406" href="foundation.cantors-diagonal-argument.html#1314" class="Function">cantor</a> <a id="1413" href="foundation.cantors-diagonal-argument.html#1413" class="Bound">X</a> <a id="1415" href="foundation.cantors-diagonal-argument.html#1415" class="Bound">f</a> <a id="1417" href="foundation.cantors-diagonal-argument.html#1417" class="Bound">H</a> <a id="1419" class="Symbol">=</a>
-    <a id="1425" class="Symbol">(</a> <a id="1427" href="foundation.propositional-truncations.html#5148" class="Function">apply-universal-property-trunc-Prop</a>
+    <a id="1425" class="Symbol">(</a> <a id="1427" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a>
       <a id="1469" class="Symbol">(</a> <a id="1471" href="foundation.cantors-diagonal-argument.html#1417" class="Bound">H</a> <a id="1473" class="Symbol">(</a><a id="1474" href="foundation.cantors-diagonal-argument.html#933" class="Function">map-cantor</a> <a id="1485" href="foundation.cantors-diagonal-argument.html#1413" class="Bound">X</a> <a id="1487" href="foundation.cantors-diagonal-argument.html#1415" class="Bound">f</a><a id="1488" class="Symbol">))</a>
       <a id="1497" class="Symbol">(</a> <a id="1499" href="foundation-core.empty-types.html#2414" class="Function">empty-Prop</a><a id="1509" class="Symbol">)</a>
       <a id="1517" class="Symbol">(</a> <a id="1519" href="foundation.cantors-diagonal-argument.html#1070" class="Function">not-in-image-map-cantor</a> <a id="1543" href="foundation.cantors-diagonal-argument.html#1413" class="Bound">X</a> <a id="1545" href="foundation.cantors-diagonal-argument.html#1415" class="Bound">f</a><a id="1546" class="Symbol">))</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-03-23)(35e48e5) Merge pull request #125 from UniMath/daily-challenge by noreply
+(2022-03-24)(57d207e) Merge pull request #128 from LeoMangel/leomangel by noreply
 </pre>
 </body>
 </html>

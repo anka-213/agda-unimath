@@ -23,7 +23,7 @@
 <body>
 <div class="powerby">
 <p>src/polytopes/abstract-polytopes.lagda.md.</p>
-<p>Version of Wednesday, March 23, 2022, 05:17 PM</p>
+<p>Version of Thursday, March 24, 2022, 12:39 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -52,7 +52,7 @@ open import univalent-foundations
 <a id="688" class="Keyword">open</a> <a id="693" class="Keyword">import</a> <a id="700" href="foundation.disjunction.html" class="Module">foundation.disjunction</a> <a id="723" class="Keyword">using</a> <a id="729" class="Symbol">(</a><a id="730" href="foundation.disjunction.html#874" class="Function">disj-Prop</a><a id="739" class="Symbol">)</a>
 <a id="741" class="Keyword">open</a> <a id="746" class="Keyword">import</a> <a id="753" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="779" class="Keyword">using</a> <a id="785" class="Symbol">(</a><a id="786" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="788" class="Symbol">;</a> <a id="790" href="foundation-core.identity-types.html#4583" class="Function">tr</a><a id="792" class="Symbol">;</a> <a id="794" href="foundation-core.identity-types.html#1552" class="Function">inv</a><a id="797" class="Symbol">)</a>
 <a id="799" class="Keyword">open</a> <a id="804" class="Keyword">import</a> <a id="811" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="848" class="Keyword">using</a>
-  <a id="856" class="Symbol">(</a> <a id="858" href="foundation.propositional-truncations.html#5148" class="Function">apply-universal-property-trunc-Prop</a><a id="893" class="Symbol">)</a>
+  <a id="856" class="Symbol">(</a> <a id="858" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a><a id="893" class="Symbol">)</a>
 <a id="895" class="Keyword">open</a> <a id="900" class="Keyword">import</a> <a id="907" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="931" class="Keyword">using</a>
   <a id="939" class="Symbol">(</a> <a id="941" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a><a id="948" class="Symbol">;</a> <a id="950" href="foundation.propositions.html#1941" class="Function">Π-Prop</a><a id="956" class="Symbol">;</a> <a id="958" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a><a id="967" class="Symbol">;</a> <a id="969" href="foundation-core.propositions.html#1246" class="Function">is-prop</a><a id="976" class="Symbol">;</a> <a id="978" href="foundation-core.propositions.html#1491" class="Function">is-prop-type-Prop</a><a id="995" class="Symbol">)</a>
 <a id="997" class="Keyword">open</a> <a id="1002" class="Keyword">import</a> <a id="1009" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="1025" class="Keyword">using</a> <a id="1031" class="Symbol">(</a><a id="1032" href="foundation-core.sets.html#1177" class="Function">UU-Set</a><a id="1038" class="Symbol">;</a> <a id="1040" href="foundation-core.sets.html#1099" class="Function">is-set</a><a id="1046" class="Symbol">;</a> <a id="1048" href="foundation-core.sets.html#1407" class="Function">Id-Prop</a><a id="1055" class="Symbol">)</a>
@@ -409,7 +409,7 @@ open import univalent-foundations
   <a id="15133" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="15137" href="polytopes.abstract-polytopes.html#15045" class="Function">is-contr-face-bottom-dimension-Prepolytope</a> <a id="15180" class="Symbol">=</a>
     <a id="15186" href="polytopes.abstract-polytopes.html#14016" class="Function">face-least-element-Prepolytope</a>
   <a id="15219" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="15223" href="polytopes.abstract-polytopes.html#15045" class="Function">is-contr-face-bottom-dimension-Prepolytope</a> <a id="15266" href="polytopes.abstract-polytopes.html#15266" class="Bound">x</a> <a id="15268" class="Symbol">=</a>
-    <a id="15274" href="foundation.propositional-truncations.html#5148" class="Function">apply-universal-property-trunc-Prop</a>
+    <a id="15274" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a>
       <a id="15316" class="Symbol">(</a> <a id="15318" href="polytopes.abstract-polytopes.html#14300" class="Function">is-least-element-least-element-Prepolytope</a> <a id="15361" class="Symbol">(</a><a id="15362" href="polytopes.abstract-polytopes.html#8039" class="Function">element-face-Prepolytope</a> <a id="15387" href="polytopes.abstract-polytopes.html#15266" class="Bound">x</a><a id="15388" class="Symbol">))</a>
       <a id="15397" class="Symbol">(</a> <a id="15399" href="foundation-core.sets.html#1407" class="Function">Id-Prop</a>
         <a id="15415" class="Symbol">(</a> <a id="15417" href="polytopes.abstract-polytopes.html#6495" class="Function">face-prepolytope-Set</a> <a id="15438" href="univalent-combinatorics.standard-finite-types.html#7006" class="Function">zero-Fin</a><a id="15446" class="Symbol">)</a>
@@ -422,7 +422,7 @@ open import univalent-foundations
   <a id="15671" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="15675" href="polytopes.abstract-polytopes.html#15583" class="Function">is-contr-face-top-dimension-Prepolytope</a> <a id="15715" class="Symbol">=</a>
     <a id="15721" href="polytopes.abstract-polytopes.html#14517" class="Function">face-largest-element-Prepolytope</a>
   <a id="15756" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="15760" href="polytopes.abstract-polytopes.html#15583" class="Function">is-contr-face-top-dimension-Prepolytope</a> <a id="15800" href="polytopes.abstract-polytopes.html#15800" class="Bound">x</a> <a id="15802" class="Symbol">=</a>
-    <a id="15808" href="foundation.propositional-truncations.html#5148" class="Function">apply-universal-property-trunc-Prop</a>
+    <a id="15808" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a>
       <a id="15850" class="Symbol">(</a> <a id="15852" href="polytopes.abstract-polytopes.html#14816" class="Function">is-largest-element-largest-element-Prepolytope</a>
         <a id="15907" class="Symbol">(</a> <a id="15909" href="polytopes.abstract-polytopes.html#8039" class="Function">element-face-Prepolytope</a> <a id="15934" href="polytopes.abstract-polytopes.html#15800" class="Bound">x</a><a id="15935" class="Symbol">))</a>
       <a id="15944" class="Symbol">(</a> <a id="15946" href="foundation-core.sets.html#1407" class="Function">Id-Prop</a>
@@ -510,7 +510,7 @@ open import univalent-foundations
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-03-23)(35e48e5) Merge pull request #125 from UniMath/daily-challenge by noreply
+(2022-03-24)(57d207e) Merge pull request #128 from LeoMangel/leomangel by noreply
 </pre>
 </body>
 </html>
