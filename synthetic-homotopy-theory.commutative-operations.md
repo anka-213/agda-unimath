@@ -1,0 +1,19 @@
+# Commutative operations
+
+<pre class="Agda"><a id="35" class="Symbol">{-#</a> <a id="39" class="Keyword">OPTIONS</a> <a id="47" class="Pragma">--without-K</a> <a id="59" class="Pragma">--exact-split</a> <a id="73" class="Symbol">#-}</a>
+
+<a id="78" class="Keyword">module</a> <a id="85" href="synthetic-homotopy-theory.commutative-operations.html" class="Module">synthetic-homotopy-theory.commutative-operations</a> <a id="134" class="Keyword">where</a>
+
+<a id="141" class="Keyword">open</a> <a id="146" class="Keyword">import</a> <a id="153" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="180" class="Keyword">using</a> <a id="186" class="Symbol">(</a><a id="187" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="192" class="Symbol">;</a> <a id="194" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="196" class="Symbol">;</a> <a id="198" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="202" class="Symbol">;</a> <a id="204" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="207" class="Symbol">;</a> <a id="209" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="214" class="Symbol">)</a>
+<a id="216" class="Keyword">open</a> <a id="221" class="Keyword">import</a> <a id="228" href="foundation.unordered-pairs.html" class="Module">foundation.unordered-pairs</a> <a id="255" class="Keyword">using</a> <a id="261" class="Symbol">(</a><a id="262" href="foundation.unordered-pairs.html#2302" class="Function">unordered-pair</a><a id="276" class="Symbol">)</a>
+</pre>
+## Idea
+
+A binary operation $\mu : A \to A \to A$ is (coherently) commutative if it extends to an operation $\tilde{\mu} : \mathsf{unordered{-}pair}(A) → A$. Thus we simply say that a commutative operation on $A$ is a map from the unordered pairs in $A$ into $A$.
+
+## Definition
+
+<pre class="Agda"><a id="commutative-operation"></a><a id="571" href="synthetic-homotopy-theory.commutative-operations.html#571" class="Function">commutative-operation</a> <a id="593" class="Symbol">:</a>
+  <a id="597" class="Symbol">{</a><a id="598" href="synthetic-homotopy-theory.commutative-operations.html#598" class="Bound">l</a> <a id="600" class="Symbol">:</a> <a id="602" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="607" class="Symbol">}</a> <a id="609" class="Symbol">(</a><a id="610" href="synthetic-homotopy-theory.commutative-operations.html#610" class="Bound">A</a> <a id="612" class="Symbol">:</a> <a id="614" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="617" href="synthetic-homotopy-theory.commutative-operations.html#598" class="Bound">l</a><a id="618" class="Symbol">)</a> <a id="620" class="Symbol">→</a> <a id="622" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="625" class="Symbol">(</a><a id="626" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="631" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="637" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="639" href="synthetic-homotopy-theory.commutative-operations.html#598" class="Bound">l</a><a id="640" class="Symbol">)</a>
+<a id="642" href="synthetic-homotopy-theory.commutative-operations.html#571" class="Function">commutative-operation</a> <a id="664" href="synthetic-homotopy-theory.commutative-operations.html#664" class="Bound">A</a> <a id="666" class="Symbol">=</a> <a id="668" href="foundation.unordered-pairs.html#2302" class="Function">unordered-pair</a> <a id="683" href="synthetic-homotopy-theory.commutative-operations.html#664" class="Bound">A</a> <a id="685" class="Symbol">→</a> <a id="687" href="synthetic-homotopy-theory.commutative-operations.html#664" class="Bound">A</a>
+</pre>

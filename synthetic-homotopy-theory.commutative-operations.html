@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>synthetic-homotopy-theory.commutative-operations</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="powerby">
+<p>src/synthetic-homotopy-theory/commutative-operations.lagda.md.</p>
+<p>Version of Friday, March 25, 2022, 02:37 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="commutative-operations">Commutative operations</h1>
+<pre class="Agda"><a id="35" class="Symbol">{-#</a> <a id="39" class="Keyword">OPTIONS</a> <a id="47" class="Pragma">--without-K</a> <a id="59" class="Pragma">--exact-split</a> <a id="73" class="Symbol">#-}</a>
+
+<a id="78" class="Keyword">module</a> <a id="85" href="synthetic-homotopy-theory.commutative-operations.html" class="Module">synthetic-homotopy-theory.commutative-operations</a> <a id="134" class="Keyword">where</a>
+
+<a id="141" class="Keyword">open</a> <a id="146" class="Keyword">import</a> <a id="153" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="180" class="Keyword">using</a> <a id="186" class="Symbol">(</a><a id="187" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="192" class="Symbol">;</a> <a id="194" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="196" class="Symbol">;</a> <a id="198" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="202" class="Symbol">;</a> <a id="204" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="207" class="Symbol">;</a> <a id="209" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="214" class="Symbol">)</a>
+<a id="216" class="Keyword">open</a> <a id="221" class="Keyword">import</a> <a id="228" href="foundation.unordered-pairs.html" class="Module">foundation.unordered-pairs</a> <a id="255" class="Keyword">using</a> <a id="261" class="Symbol">(</a><a id="262" href="foundation.unordered-pairs.html#2302" class="Function">unordered-pair</a><a id="276" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A binary operation <span class="math inline">\(\mu : A \to A \to A\)</span> is (coherently) commutative if it extends to an operation <span class="math inline">\(\tilde{\mu} : \mathsf{unordered{-}pair}(A) → A\)</span>. Thus we simply say that a commutative operation on <span class="math inline">\(A\)</span> is a map from the unordered pairs in <span class="math inline">\(A\)</span> into <span class="math inline">\(A\)</span>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="commutative-operation"></a><a id="571" href="synthetic-homotopy-theory.commutative-operations.html#571" class="Function">commutative-operation</a> <a id="593" class="Symbol">:</a>
+  <a id="597" class="Symbol">{</a><a id="598" href="synthetic-homotopy-theory.commutative-operations.html#598" class="Bound">l</a> <a id="600" class="Symbol">:</a> <a id="602" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="607" class="Symbol">}</a> <a id="609" class="Symbol">(</a><a id="610" href="synthetic-homotopy-theory.commutative-operations.html#610" class="Bound">A</a> <a id="612" class="Symbol">:</a> <a id="614" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="617" href="synthetic-homotopy-theory.commutative-operations.html#598" class="Bound">l</a><a id="618" class="Symbol">)</a> <a id="620" class="Symbol">→</a> <a id="622" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="625" class="Symbol">(</a><a id="626" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="631" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="637" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="639" href="synthetic-homotopy-theory.commutative-operations.html#598" class="Bound">l</a><a id="640" class="Symbol">)</a>
+<a id="642" href="synthetic-homotopy-theory.commutative-operations.html#571" class="Function">commutative-operation</a> <a id="664" href="synthetic-homotopy-theory.commutative-operations.html#664" class="Bound">A</a> <a id="666" class="Symbol">=</a> <a id="668" href="foundation.unordered-pairs.html#2302" class="Function">unordered-pair</a> <a id="683" href="synthetic-homotopy-theory.commutative-operations.html#664" class="Bound">A</a> <a id="685" class="Symbol">→</a> <a id="687" href="synthetic-homotopy-theory.commutative-operations.html#664" class="Bound">A</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-03-25)(3c08733) Merge pull request #134 from UniMath/daily-challenge by noreply
+</pre>
+</body>
+</html>
