@@ -13,7 +13,7 @@
 <a id="403" class="Keyword">open</a> <a id="408" class="Keyword">import</a> <a id="415" href="linear-algebra.vectors.html" class="Module">linear-algebra.vectors</a> <a id="438" class="Keyword">using</a> <a id="444" class="Symbol">(</a><a id="445" href="linear-algebra.vectors.html#518" class="InductiveConstructor">empty-vec</a><a id="454" class="Symbol">;</a> <a id="456" href="linear-algebra.vectors.html#545" class="InductiveConstructor Operator">_∷_</a><a id="459" class="Symbol">)</a>
 <a id="461" class="Keyword">open</a> <a id="466" class="Keyword">import</a> <a id="473" href="linear-algebra.vectors-on-rings.html" class="Module">linear-algebra.vectors-on-rings</a> <a id="505" class="Keyword">using</a> <a id="511" class="Symbol">(</a><a id="512" href="linear-algebra.vectors-on-rings.html#1297" class="Function">vec-Ring</a><a id="520" class="Symbol">)</a>
 
-<a id="523" class="Keyword">open</a> <a id="528" class="Keyword">import</a> <a id="535" href="ring-theory.rings.html" class="Module">ring-theory.rings</a> <a id="553" class="Keyword">using</a> <a id="559" class="Symbol">(</a><a id="560" href="ring-theory.rings.html#1734" class="Function">Ring</a><a id="564" class="Symbol">;</a> <a id="566" href="ring-theory.rings.html#2030" class="Function">type-Ring</a><a id="575" class="Symbol">)</a>
+<a id="523" class="Keyword">open</a> <a id="528" class="Keyword">import</a> <a id="535" href="ring-theory.rings.html" class="Module">ring-theory.rings</a> <a id="553" class="Keyword">using</a> <a id="559" class="Symbol">(</a><a id="560" href="ring-theory.rings.html#1731" class="Function">Ring</a><a id="564" class="Symbol">;</a> <a id="566" href="ring-theory.rings.html#2027" class="Function">type-Ring</a><a id="575" class="Symbol">)</a>
 </pre>
 ## Definition
 

@@ -23,7 +23,7 @@
 <body>
 <div class="powerby">
 <p>src/ring-theory/nontrivial-rings.lagda.md.</p>
-<p>Version of Friday, March 25, 2022, 02:37 PM</p>
+<p>Version of Sunday, March 27, 2022, 06:50 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -36,18 +36,18 @@
 <a id="164" class="Keyword">open</a> <a id="169" class="Keyword">import</a> <a id="176" href="foundation.negation.html" class="Module">foundation.negation</a> <a id="196" class="Keyword">using</a> <a id="202" class="Symbol">(</a><a id="203" href="foundation-core.negation.html#452" class="Function">¬</a><a id="204" class="Symbol">)</a>
 <a id="206" class="Keyword">open</a> <a id="211" class="Keyword">import</a> <a id="218" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="245" class="Keyword">using</a> <a id="251" class="Symbol">(</a><a id="252" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="257" class="Symbol">;</a> <a id="259" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="261" class="Symbol">)</a>
 
-<a id="264" class="Keyword">open</a> <a id="269" class="Keyword">import</a> <a id="276" href="ring-theory.rings.html" class="Module">ring-theory.rings</a> <a id="294" class="Keyword">using</a> <a id="300" class="Symbol">(</a><a id="301" href="ring-theory.rings.html#1734" class="Function">Ring</a><a id="305" class="Symbol">;</a> <a id="307" href="ring-theory.rings.html#3110" class="Function">zero-Ring</a><a id="316" class="Symbol">;</a> <a id="318" href="ring-theory.rings.html#5263" class="Function">unit-Ring</a><a id="327" class="Symbol">)</a>
+<a id="264" class="Keyword">open</a> <a id="269" class="Keyword">import</a> <a id="276" href="ring-theory.rings.html" class="Module">ring-theory.rings</a> <a id="294" class="Keyword">using</a> <a id="300" class="Symbol">(</a><a id="301" href="ring-theory.rings.html#1731" class="Function">Ring</a><a id="305" class="Symbol">;</a> <a id="307" href="ring-theory.rings.html#3107" class="Function">zero-Ring</a><a id="316" class="Symbol">;</a> <a id="318" href="ring-theory.rings.html#5257" class="Function">unit-Ring</a><a id="327" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>Nontrivial rings are rings in which <code>0 ≠ 1</code>.</p>
 <h2 id="definition">Definition</h2>
 <pre class="Agda"><a id="is-nontrivial-Ring"></a><a id="412" href="ring-theory.nontrivial-rings.html#412" class="Function">is-nontrivial-Ring</a> <a id="431" class="Symbol">:</a>
-  <a id="435" class="Symbol">{</a> <a id="437" href="ring-theory.nontrivial-rings.html#437" class="Bound">l</a> <a id="439" class="Symbol">:</a> <a id="441" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="446" class="Symbol">}</a> <a id="448" class="Symbol">→</a> <a id="450" href="ring-theory.rings.html#1734" class="Function">Ring</a> <a id="455" href="ring-theory.nontrivial-rings.html#437" class="Bound">l</a> <a id="457" class="Symbol">→</a> <a id="459" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="462" href="ring-theory.nontrivial-rings.html#437" class="Bound">l</a>
-<a id="464" href="ring-theory.nontrivial-rings.html#412" class="Function">is-nontrivial-Ring</a> <a id="483" href="ring-theory.nontrivial-rings.html#483" class="Bound">R</a> <a id="485" class="Symbol">=</a> <a id="487" href="foundation-core.negation.html#452" class="Function">¬</a> <a id="489" class="Symbol">(</a><a id="490" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="493" class="Symbol">(</a><a id="494" href="ring-theory.rings.html#3110" class="Function">zero-Ring</a> <a id="504" href="ring-theory.nontrivial-rings.html#483" class="Bound">R</a><a id="505" class="Symbol">)</a> <a id="507" class="Symbol">(</a><a id="508" href="ring-theory.rings.html#5263" class="Function">unit-Ring</a> <a id="518" href="ring-theory.nontrivial-rings.html#483" class="Bound">R</a><a id="519" class="Symbol">))</a>
+  <a id="435" class="Symbol">{</a> <a id="437" href="ring-theory.nontrivial-rings.html#437" class="Bound">l</a> <a id="439" class="Symbol">:</a> <a id="441" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="446" class="Symbol">}</a> <a id="448" class="Symbol">→</a> <a id="450" href="ring-theory.rings.html#1731" class="Function">Ring</a> <a id="455" href="ring-theory.nontrivial-rings.html#437" class="Bound">l</a> <a id="457" class="Symbol">→</a> <a id="459" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="462" href="ring-theory.nontrivial-rings.html#437" class="Bound">l</a>
+<a id="464" href="ring-theory.nontrivial-rings.html#412" class="Function">is-nontrivial-Ring</a> <a id="483" href="ring-theory.nontrivial-rings.html#483" class="Bound">R</a> <a id="485" class="Symbol">=</a> <a id="487" href="foundation-core.negation.html#452" class="Function">¬</a> <a id="489" class="Symbol">(</a><a id="490" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="493" class="Symbol">(</a><a id="494" href="ring-theory.rings.html#3107" class="Function">zero-Ring</a> <a id="504" href="ring-theory.nontrivial-rings.html#483" class="Bound">R</a><a id="505" class="Symbol">)</a> <a id="507" class="Symbol">(</a><a id="508" href="ring-theory.rings.html#5257" class="Function">unit-Ring</a> <a id="518" href="ring-theory.nontrivial-rings.html#483" class="Bound">R</a><a id="519" class="Symbol">))</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-03-25)(3c08733) Merge pull request #134 from UniMath/daily-challenge by noreply
+(2022-03-27)(cdfd981) Merge pull request #135 from UniMath/daily-challenge by noreply
 </pre>
 </body>
 </html>

@@ -285,14 +285,14 @@ title: Formalisation of the Symmetry Book
       <a id="9547" class="Symbol">(</a> <a id="9549" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="9554" href="ring-theory.gaussian-integers.html#1995" class="Function">neg-ℤ[i]</a>
         <a id="9571" class="Symbol">(</a> <a id="9573" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="9578" href="ring-theory.gaussian-integers.html#3036" class="Function">left-inverse-law-add-ℤ[i]</a> <a id="9604" href="ring-theory.gaussian-integers.html#3225" class="Function">right-inverse-law-add-ℤ[i]</a><a id="9630" class="Symbol">)))</a>
 
-<a id="ℤ[i]-Ab"></a><a id="9635" href="ring-theory.gaussian-integers.html#9635" class="Function">ℤ[i]-Ab</a> <a id="9643" class="Symbol">:</a> <a id="9645" href="group-theory.abelian-groups.html#1588" class="Function">Ab</a> <a id="9648" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="ℤ[i]-Ab"></a><a id="9635" href="ring-theory.gaussian-integers.html#9635" class="Function">ℤ[i]-Ab</a> <a id="9643" class="Symbol">:</a> <a id="9645" href="group-theory.abelian-groups.html#1729" class="Function">Ab</a> <a id="9648" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
 <a id="9654" href="ring-theory.gaussian-integers.html#9635" class="Function">ℤ[i]-Ab</a> <a id="9662" class="Symbol">=</a>
   <a id="9666" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
     <a id="9675" class="Symbol">(</a> <a id="9677" href="ring-theory.gaussian-integers.html#9385" class="Function">ℤ[i]-Group</a><a id="9687" class="Symbol">)</a>
     <a id="9693" class="Symbol">(</a> <a id="9695" href="ring-theory.gaussian-integers.html#3418" class="Function">commutative-add-ℤ[i]</a><a id="9715" class="Symbol">)</a>
 
 
-<a id="ℤ[i]-Ring"></a><a id="9719" href="ring-theory.gaussian-integers.html#9719" class="Function">ℤ[i]-Ring</a> <a id="9729" class="Symbol">:</a> <a id="9731" href="ring-theory.rings.html#1734" class="Function">Ring</a> <a id="9736" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="ℤ[i]-Ring"></a><a id="9719" href="ring-theory.gaussian-integers.html#9719" class="Function">ℤ[i]-Ring</a> <a id="9729" class="Symbol">:</a> <a id="9731" href="ring-theory.rings.html#1731" class="Function">Ring</a> <a id="9736" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
 <a id="9742" href="ring-theory.gaussian-integers.html#9719" class="Function">ℤ[i]-Ring</a> <a id="9752" class="Symbol">=</a>
   <a id="9756" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
     <a id="9765" class="Symbol">(</a> <a id="9767" href="ring-theory.gaussian-integers.html#9635" class="Function">ℤ[i]-Ab</a><a id="9774" class="Symbol">)</a>
