@@ -25,7 +25,7 @@
     <a id="986" href="ring-theory.rings.html#4611" class="Function">associative-mul-Ring</a><a id="1006" class="Symbol">;</a> <a id="1008" href="ring-theory.rings.html#5257" class="Function">unit-Ring</a><a id="1017" class="Symbol">;</a> <a id="1019" href="ring-theory.rings.html#5368" class="Function">left-unit-law-mul-Ring</a><a id="1041" class="Symbol">;</a>
     <a id="1047" href="ring-theory.rings.html#4181" class="Function">commutative-add-Ring</a><a id="1067" class="Symbol">)</a>
 
-<a id="1070" class="Keyword">open</a> <a id="1075" class="Keyword">import</a> <a id="1082" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="1128" class="Keyword">using</a> <a id="1134" class="Symbol">(</a><a id="1135" href="univalent-combinatorics.standard-finite-types.html#2072" class="Function">Fin</a><a id="1138" class="Symbol">)</a>
+<a id="1070" class="Keyword">open</a> <a id="1075" class="Keyword">import</a> <a id="1082" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="1128" class="Keyword">using</a> <a id="1134" class="Symbol">(</a><a id="1135" href="univalent-combinatorics.standard-finite-types.html#2085" class="Function">Fin</a><a id="1138" class="Symbol">)</a>
 </pre>
 ## Idea
 

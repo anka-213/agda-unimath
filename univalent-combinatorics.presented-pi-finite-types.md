@@ -1,8 +1,10 @@
-# Finitely π-presented types
+---
+title: Finitely π-presented types
+---
 
-<pre class="Agda"><a id="39" class="Symbol">{-#</a> <a id="43" class="Keyword">OPTIONS</a> <a id="51" class="Pragma">--without-K</a> <a id="63" class="Pragma">--exact-split</a> <a id="77" class="Pragma">--allow-unsolved-metas</a> <a id="100" class="Symbol">#-}</a>
+<pre class="Agda"><a id="52" class="Symbol">{-#</a> <a id="56" class="Keyword">OPTIONS</a> <a id="64" class="Pragma">--without-K</a> <a id="76" class="Pragma">--exact-split</a> <a id="90" class="Pragma">--allow-unsolved-metas</a> <a id="113" class="Symbol">#-}</a>
 
-<a id="105" class="Keyword">module</a> <a id="112" href="univalent-combinatorics.presented-pi-finite-types.html" class="Module">univalent-combinatorics.presented-pi-finite-types</a> <a id="162" class="Keyword">where</a>
+<a id="118" class="Keyword">module</a> <a id="125" href="univalent-combinatorics.presented-pi-finite-types.html" class="Module">univalent-combinatorics.presented-pi-finite-types</a> <a id="175" class="Keyword">where</a>
 </pre>
 ## Idea
 
