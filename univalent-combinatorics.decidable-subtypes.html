@@ -23,7 +23,7 @@
 <body>
 <div class="powerby">
 <p>src/univalent-combinatorics/decidable-subtypes.lagda.md.</p>
-<p>Version of Tuesday, March 29, 2022, 05:10 PM</p>
+<p>Version of Tuesday, March 29, 2022, 09:35 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -49,12 +49,12 @@
 <p>Decidable subtypes of finite types are finite.</p>
 <h2 id="properties">Properties</h2>
 <pre class="Agda"><a id="649" class="Keyword">module</a> <a id="656" href="univalent-combinatorics.decidable-subtypes.html#656" class="Module">_</a>
-  <a id="660" class="Symbol">{</a><a id="661" href="univalent-combinatorics.decidable-subtypes.html#661" class="Bound">l1</a> <a id="664" href="univalent-combinatorics.decidable-subtypes.html#664" class="Bound">l2</a> <a id="667" class="Symbol">:</a> <a id="669" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="674" class="Symbol">}</a> <a id="676" class="Symbol">{</a><a id="677" href="univalent-combinatorics.decidable-subtypes.html#677" class="Bound">X</a> <a id="679" class="Symbol">:</a> <a id="681" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="684" href="univalent-combinatorics.decidable-subtypes.html#661" class="Bound">l1</a><a id="686" class="Symbol">}</a> <a id="688" class="Symbol">(</a><a id="689" href="univalent-combinatorics.decidable-subtypes.html#689" class="Bound">P</a> <a id="691" class="Symbol">:</a> <a id="693" href="foundation.decidable-subtypes.html#819" class="Function">decidable-subtype</a> <a id="711" href="univalent-combinatorics.decidable-subtypes.html#664" class="Bound">l2</a> <a id="714" href="univalent-combinatorics.decidable-subtypes.html#677" class="Bound">X</a><a id="715" class="Symbol">)</a>
+  <a id="660" class="Symbol">{</a><a id="661" href="univalent-combinatorics.decidable-subtypes.html#661" class="Bound">l1</a> <a id="664" href="univalent-combinatorics.decidable-subtypes.html#664" class="Bound">l2</a> <a id="667" class="Symbol">:</a> <a id="669" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="674" class="Symbol">}</a> <a id="676" class="Symbol">{</a><a id="677" href="univalent-combinatorics.decidable-subtypes.html#677" class="Bound">X</a> <a id="679" class="Symbol">:</a> <a id="681" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="684" href="univalent-combinatorics.decidable-subtypes.html#661" class="Bound">l1</a><a id="686" class="Symbol">}</a> <a id="688" class="Symbol">(</a><a id="689" href="univalent-combinatorics.decidable-subtypes.html#689" class="Bound">P</a> <a id="691" class="Symbol">:</a> <a id="693" href="foundation.decidable-subtypes.html#857" class="Function">decidable-subtype</a> <a id="711" href="univalent-combinatorics.decidable-subtypes.html#664" class="Bound">l2</a> <a id="714" href="univalent-combinatorics.decidable-subtypes.html#677" class="Bound">X</a><a id="715" class="Symbol">)</a>
   <a id="719" class="Keyword">where</a>
 
   <a id="728" class="Keyword">abstract</a>
     <a id="741" href="univalent-combinatorics.decidable-subtypes.html#741" class="Function">is-finite-decidable-subtype</a> <a id="769" class="Symbol">:</a>
-      <a id="777" href="univalent-combinatorics.finite-types.html#3664" class="Function">is-finite</a> <a id="787" href="univalent-combinatorics.decidable-subtypes.html#677" class="Bound">X</a> <a id="789" class="Symbol">→</a> <a id="791" href="univalent-combinatorics.finite-types.html#3664" class="Function">is-finite</a> <a id="801" class="Symbol">(</a><a id="802" href="foundation.decidable-subtypes.html#1625" class="Function">type-decidable-subtype</a> <a id="825" href="univalent-combinatorics.decidable-subtypes.html#689" class="Bound">P</a><a id="826" class="Symbol">)</a>
+      <a id="777" href="univalent-combinatorics.finite-types.html#3664" class="Function">is-finite</a> <a id="787" href="univalent-combinatorics.decidable-subtypes.html#677" class="Bound">X</a> <a id="789" class="Symbol">→</a> <a id="791" href="univalent-combinatorics.finite-types.html#3664" class="Function">is-finite</a> <a id="801" class="Symbol">(</a><a id="802" href="foundation.decidable-subtypes.html#1756" class="Function">type-decidable-subtype</a> <a id="825" href="univalent-combinatorics.decidable-subtypes.html#689" class="Bound">P</a><a id="826" class="Symbol">)</a>
     <a id="832" href="univalent-combinatorics.decidable-subtypes.html#741" class="Function">is-finite-decidable-subtype</a> <a id="860" href="univalent-combinatorics.decidable-subtypes.html#860" class="Bound">H</a> <a id="862" class="Symbol">=</a>
       <a id="870" href="univalent-combinatorics.dependent-sum-finite-types.html#2485" class="Function">is-finite-Σ</a> <a id="882" href="univalent-combinatorics.decidable-subtypes.html#860" class="Bound">H</a>
         <a id="892" class="Symbol">(</a> <a id="894" class="Symbol">λ</a> <a id="896" href="univalent-combinatorics.decidable-subtypes.html#896" class="Bound">x</a> <a id="898" class="Symbol">→</a>
@@ -64,7 +64,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-03-29)(622149a) Merge pull request #141 from UniMath/ljubljana by noreply
+(2022-03-29)(e987315) Update README.md by noreply
 </pre>
 </body>
 </html>
