@@ -21,4 +21,5 @@
 <a id="885" class="Keyword">open</a> <a id="890" class="Keyword">import</a> <a id="897" href="graph-theory.regular-undirected-graphs.html" class="Module">graph-theory.regular-undirected-graphs</a> <a id="936" class="Keyword">public</a>
 <a id="943" class="Keyword">open</a> <a id="948" class="Keyword">import</a> <a id="955" href="graph-theory.simple-undirected-graphs.html" class="Module">graph-theory.simple-undirected-graphs</a> <a id="993" class="Keyword">public</a>
 <a id="1000" class="Keyword">open</a> <a id="1005" class="Keyword">import</a> <a id="1012" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a> <a id="1043" class="Keyword">public</a>
+<a id="1050" class="Keyword">open</a> <a id="1055" class="Keyword">import</a> <a id="1062" href="graph-theory.voltage-graphs.html" class="Module">graph-theory.voltage-graphs</a> <a id="1090" class="Keyword">public</a>
 </pre>
