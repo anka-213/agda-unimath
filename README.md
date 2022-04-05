@@ -567,27 +567,28 @@ Welcome to the website of the `agda-unimath` formalization project.
 <a id="26481" class="Keyword">open</a> <a id="26486" class="Keyword">import</a> <a id="26493" href="univalent-combinatorics.lists.html" class="Module">univalent-combinatorics.lists</a>
 <a id="26523" class="Keyword">open</a> <a id="26528" class="Keyword">import</a> <a id="26535" href="univalent-combinatorics.maybe.html" class="Module">univalent-combinatorics.maybe</a>
 <a id="26565" class="Keyword">open</a> <a id="26570" class="Keyword">import</a> <a id="26577" href="univalent-combinatorics.orientations-cubes.html" class="Module">univalent-combinatorics.orientations-cubes</a>
-<a id="26620" class="Keyword">open</a> <a id="26625" class="Keyword">import</a> <a id="26632" href="univalent-combinatorics.pi-finite-types.html" class="Module">univalent-combinatorics.pi-finite-types</a>
-<a id="26672" class="Keyword">open</a> <a id="26677" class="Keyword">import</a> <a id="26684" href="univalent-combinatorics.pigeonhole-principle.html" class="Module">univalent-combinatorics.pigeonhole-principle</a>
-<a id="26729" class="Keyword">open</a> <a id="26734" class="Keyword">import</a> <a id="26741" href="univalent-combinatorics.presented-pi-finite-types.html" class="Module">univalent-combinatorics.presented-pi-finite-types</a>
-<a id="26791" class="Keyword">open</a> <a id="26796" class="Keyword">import</a> <a id="26803" href="univalent-combinatorics.ramsey-theory.html" class="Module">univalent-combinatorics.ramsey-theory</a>
-<a id="26841" class="Keyword">open</a> <a id="26846" class="Keyword">import</a> <a id="26853" href="univalent-combinatorics.retracts-of-finite-types.html" class="Module">univalent-combinatorics.retracts-of-finite-types</a>
-<a id="26902" class="Keyword">open</a> <a id="26907" class="Keyword">import</a> <a id="26914" href="univalent-combinatorics.skipping-element-standard-finite-types.html" class="Module">univalent-combinatorics.skipping-element-standard-finite-types</a>
-<a id="26977" class="Keyword">open</a> <a id="26982" class="Keyword">import</a> <a id="26989" href="univalent-combinatorics.species.html" class="Module">univalent-combinatorics.species</a>
-<a id="27021" class="Keyword">open</a> <a id="27026" class="Keyword">import</a> <a id="27033" href="univalent-combinatorics.standard-finite-pruned-trees.html" class="Module">univalent-combinatorics.standard-finite-pruned-trees</a>
-<a id="27086" class="Keyword">open</a> <a id="27091" class="Keyword">import</a> <a id="27098" href="univalent-combinatorics.standard-finite-trees.html" class="Module">univalent-combinatorics.standard-finite-trees</a>
-<a id="27144" class="Keyword">open</a> <a id="27149" class="Keyword">import</a> <a id="27156" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
-<a id="27202" class="Keyword">open</a> <a id="27207" class="Keyword">import</a> <a id="27214" href="univalent-combinatorics.sums-of-natural-numbers.html" class="Module">univalent-combinatorics.sums-of-natural-numbers</a>
-<a id="27262" class="Keyword">open</a> <a id="27267" class="Keyword">import</a> <a id="27274" href="univalent-combinatorics.surjective-maps.html" class="Module">univalent-combinatorics.surjective-maps</a>
+<a id="26620" class="Keyword">open</a> <a id="26625" class="Keyword">import</a> <a id="26632" href="univalent-combinatorics.petri-nets.html" class="Module">univalent-combinatorics.petri-nets</a>
+<a id="26667" class="Keyword">open</a> <a id="26672" class="Keyword">import</a> <a id="26679" href="univalent-combinatorics.pi-finite-types.html" class="Module">univalent-combinatorics.pi-finite-types</a>
+<a id="26719" class="Keyword">open</a> <a id="26724" class="Keyword">import</a> <a id="26731" href="univalent-combinatorics.pigeonhole-principle.html" class="Module">univalent-combinatorics.pigeonhole-principle</a>
+<a id="26776" class="Keyword">open</a> <a id="26781" class="Keyword">import</a> <a id="26788" href="univalent-combinatorics.presented-pi-finite-types.html" class="Module">univalent-combinatorics.presented-pi-finite-types</a>
+<a id="26838" class="Keyword">open</a> <a id="26843" class="Keyword">import</a> <a id="26850" href="univalent-combinatorics.ramsey-theory.html" class="Module">univalent-combinatorics.ramsey-theory</a>
+<a id="26888" class="Keyword">open</a> <a id="26893" class="Keyword">import</a> <a id="26900" href="univalent-combinatorics.retracts-of-finite-types.html" class="Module">univalent-combinatorics.retracts-of-finite-types</a>
+<a id="26949" class="Keyword">open</a> <a id="26954" class="Keyword">import</a> <a id="26961" href="univalent-combinatorics.skipping-element-standard-finite-types.html" class="Module">univalent-combinatorics.skipping-element-standard-finite-types</a>
+<a id="27024" class="Keyword">open</a> <a id="27029" class="Keyword">import</a> <a id="27036" href="univalent-combinatorics.species.html" class="Module">univalent-combinatorics.species</a>
+<a id="27068" class="Keyword">open</a> <a id="27073" class="Keyword">import</a> <a id="27080" href="univalent-combinatorics.standard-finite-pruned-trees.html" class="Module">univalent-combinatorics.standard-finite-pruned-trees</a>
+<a id="27133" class="Keyword">open</a> <a id="27138" class="Keyword">import</a> <a id="27145" href="univalent-combinatorics.standard-finite-trees.html" class="Module">univalent-combinatorics.standard-finite-trees</a>
+<a id="27191" class="Keyword">open</a> <a id="27196" class="Keyword">import</a> <a id="27203" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
+<a id="27249" class="Keyword">open</a> <a id="27254" class="Keyword">import</a> <a id="27261" href="univalent-combinatorics.sums-of-natural-numbers.html" class="Module">univalent-combinatorics.sums-of-natural-numbers</a>
+<a id="27309" class="Keyword">open</a> <a id="27314" class="Keyword">import</a> <a id="27321" href="univalent-combinatorics.surjective-maps.html" class="Module">univalent-combinatorics.surjective-maps</a>
 </pre>
 ## Wild algebra
 
-<pre class="Agda"><a id="27344" class="Keyword">open</a> <a id="27349" class="Keyword">import</a> <a id="27356" href="wild-algebra.html" class="Module">wild-algebra</a>
-<a id="27369" class="Keyword">open</a> <a id="27374" class="Keyword">import</a> <a id="27381" href="wild-algebra.magmas.html" class="Module">wild-algebra.magmas</a>
-<a id="27401" class="Keyword">open</a> <a id="27406" class="Keyword">import</a> <a id="27413" href="wild-algebra.universal-property-lists-wild-monoids.html" class="Module">wild-algebra.universal-property-lists-wild-monoids</a>
-<a id="27464" class="Keyword">open</a> <a id="27469" class="Keyword">import</a> <a id="27476" href="wild-algebra.wild-groups.html" class="Module">wild-algebra.wild-groups</a>
-<a id="27501" class="Keyword">open</a> <a id="27506" class="Keyword">import</a> <a id="27513" href="wild-algebra.wild-monoids.html" class="Module">wild-algebra.wild-monoids</a>
-<a id="27539" class="Keyword">open</a> <a id="27544" class="Keyword">import</a> <a id="27551" href="wild-algebra.wild-unital-magmas.html" class="Module">wild-algebra.wild-unital-magmas</a>
+<pre class="Agda"><a id="27391" class="Keyword">open</a> <a id="27396" class="Keyword">import</a> <a id="27403" href="wild-algebra.html" class="Module">wild-algebra</a>
+<a id="27416" class="Keyword">open</a> <a id="27421" class="Keyword">import</a> <a id="27428" href="wild-algebra.magmas.html" class="Module">wild-algebra.magmas</a>
+<a id="27448" class="Keyword">open</a> <a id="27453" class="Keyword">import</a> <a id="27460" href="wild-algebra.universal-property-lists-wild-monoids.html" class="Module">wild-algebra.universal-property-lists-wild-monoids</a>
+<a id="27511" class="Keyword">open</a> <a id="27516" class="Keyword">import</a> <a id="27523" href="wild-algebra.wild-groups.html" class="Module">wild-algebra.wild-groups</a>
+<a id="27548" class="Keyword">open</a> <a id="27553" class="Keyword">import</a> <a id="27560" href="wild-algebra.wild-monoids.html" class="Module">wild-algebra.wild-monoids</a>
+<a id="27586" class="Keyword">open</a> <a id="27591" class="Keyword">import</a> <a id="27598" href="wild-algebra.wild-unital-magmas.html" class="Module">wild-algebra.wild-unital-magmas</a>
 </pre>
 ## Everything
 
