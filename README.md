@@ -587,10 +587,16 @@ Welcome to the website of the `agda-unimath` formalization project.
 
 <pre class="Agda"><a id="27507" class="Keyword">open</a> <a id="27512" class="Keyword">import</a> <a id="27519" href="wild-algebra.html" class="Module">wild-algebra</a>
 <a id="27532" class="Keyword">open</a> <a id="27537" class="Keyword">import</a> <a id="27544" href="wild-algebra.magmas.html" class="Module">wild-algebra.magmas</a>
-<a id="27564" class="Keyword">open</a> <a id="27569" class="Keyword">import</a> <a id="27576" href="wild-algebra.universal-property-lists-wild-monoids.html" class="Module">wild-algebra.universal-property-lists-wild-monoids</a>
-<a id="27627" class="Keyword">open</a> <a id="27632" class="Keyword">import</a> <a id="27639" href="wild-algebra.wild-groups.html" class="Module">wild-algebra.wild-groups</a>
-<a id="27664" class="Keyword">open</a> <a id="27669" class="Keyword">import</a> <a id="27676" href="wild-algebra.wild-monoids.html" class="Module">wild-algebra.wild-monoids</a>
-<a id="27702" class="Keyword">open</a> <a id="27707" class="Keyword">import</a> <a id="27714" href="wild-algebra.wild-unital-magmas.html" class="Module">wild-algebra.wild-unital-magmas</a>
+<a id="27564" class="Keyword">open</a> <a id="27569" class="Keyword">import</a> <a id="27576" href="wild-algebra.morphisms-magmas.html" class="Module">wild-algebra.morphisms-magmas</a>
+<a id="27606" class="Keyword">open</a> <a id="27611" class="Keyword">import</a> <a id="27618" href="wild-algebra.morphisms-wild-unital-magmas.html" class="Module">wild-algebra.morphisms-wild-unital-magmas</a>
+<a id="27660" class="Keyword">open</a> <a id="27665" class="Keyword">import</a> <a id="27672" href="wild-algebra.universal-property-lists-wild-monoids.html" class="Module">wild-algebra.universal-property-lists-wild-monoids</a>
+<a id="27723" class="Keyword">open</a> <a id="27728" class="Keyword">import</a> <a id="27735" href="wild-algebra.wild-groups.html" class="Module">wild-algebra.wild-groups</a>
+<a id="27760" class="Keyword">open</a> <a id="27765" class="Keyword">import</a> <a id="27772" href="wild-algebra.wild-inverse-semigroups.html" class="Module">wild-algebra.wild-inverse-semigroups</a>
+<a id="27809" class="Keyword">open</a> <a id="27814" class="Keyword">import</a> <a id="27821" href="wild-algebra.wild-loops.html" class="Module">wild-algebra.wild-loops</a>
+<a id="27845" class="Keyword">open</a> <a id="27850" class="Keyword">import</a> <a id="27857" href="wild-algebra.wild-monoids.html" class="Module">wild-algebra.wild-monoids</a>
+<a id="27883" class="Keyword">open</a> <a id="27888" class="Keyword">import</a> <a id="27895" href="wild-algebra.wild-quasigroups.html" class="Module">wild-algebra.wild-quasigroups</a>
+<a id="27925" class="Keyword">open</a> <a id="27930" class="Keyword">import</a> <a id="27937" href="wild-algebra.wild-semigroups.html" class="Module">wild-algebra.wild-semigroups</a>
+<a id="27966" class="Keyword">open</a> <a id="27971" class="Keyword">import</a> <a id="27978" href="wild-algebra.wild-unital-magmas.html" class="Module">wild-algebra.wild-unital-magmas</a>
 </pre>
 ## Everything
 

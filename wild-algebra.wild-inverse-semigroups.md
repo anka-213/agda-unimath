@@ -1,0 +1,90 @@
+---
+title: Wild inverse semigroups
+---
+
+<pre class="Agda"><a id="49" class="Symbol">{-#</a> <a id="53" class="Keyword">OPTIONS</a> <a id="61" class="Pragma">--without-K</a> <a id="73" class="Pragma">--exact-split</a> <a id="87" class="Symbol">#-}</a>
+
+<a id="92" class="Keyword">module</a> <a id="99" href="wild-algebra.wild-inverse-semigroups.html" class="Module">wild-algebra.wild-inverse-semigroups</a> <a id="136" class="Keyword">where</a>
+
+<a id="143" class="Keyword">open</a> <a id="148" class="Keyword">import</a> <a id="155" href="foundation.automorphisms.html" class="Module">foundation.automorphisms</a>
+<a id="180" class="Keyword">open</a> <a id="185" class="Keyword">import</a> <a id="192" href="foundation.binary-equivalences.html" class="Module">foundation.binary-equivalences</a>
+<a id="223" class="Keyword">open</a> <a id="228" class="Keyword">import</a> <a id="235" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="267" class="Keyword">open</a> <a id="272" class="Keyword">import</a> <a id="279" href="foundation.equivalences.html" class="Module">foundation.equivalences</a>
+<a id="303" class="Keyword">open</a> <a id="308" class="Keyword">import</a> <a id="315" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="341" class="Keyword">open</a> <a id="346" class="Keyword">import</a> <a id="353" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="381" class="Keyword">open</a> <a id="386" class="Keyword">import</a> <a id="393" href="wild-algebra.magmas.html" class="Module">wild-algebra.magmas</a>
+<a id="413" class="Keyword">open</a> <a id="418" class="Keyword">import</a> <a id="425" href="wild-algebra.wild-quasigroups.html" class="Module">wild-algebra.wild-quasigroups</a>
+<a id="455" class="Keyword">open</a> <a id="460" class="Keyword">import</a> <a id="467" href="wild-algebra.wild-semigroups.html" class="Module">wild-algebra.wild-semigroups</a>
+</pre>
+## Idea
+
+A wild inverse semigroup is a wild semigroup of which the binary operation is a binary equivalence
+
+## Definition
+
+<pre class="Agda"><a id="Wild-Inverse-Semigroup"></a><a id="633" href="wild-algebra.wild-inverse-semigroups.html#633" class="Function">Wild-Inverse-Semigroup</a> <a id="656" class="Symbol">:</a> <a id="658" class="Symbol">(</a><a id="659" href="wild-algebra.wild-inverse-semigroups.html#659" class="Bound">l</a> <a id="661" class="Symbol">:</a> <a id="663" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="668" class="Symbol">)</a> <a id="670" class="Symbol">→</a> <a id="672" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="675" class="Symbol">(</a><a id="676" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="681" href="wild-algebra.wild-inverse-semigroups.html#659" class="Bound">l</a><a id="682" class="Symbol">)</a>
+<a id="684" href="wild-algebra.wild-inverse-semigroups.html#633" class="Function">Wild-Inverse-Semigroup</a> <a id="707" href="wild-algebra.wild-inverse-semigroups.html#707" class="Bound">l</a> <a id="709" class="Symbol">=</a>
+  <a id="713" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="715" class="Symbol">(</a><a id="716" href="wild-algebra.wild-semigroups.html#382" class="Function">Wild-Semigroup</a> <a id="731" href="wild-algebra.wild-inverse-semigroups.html#707" class="Bound">l</a><a id="732" class="Symbol">)</a> <a id="734" class="Symbol">(λ</a> <a id="737" href="wild-algebra.wild-inverse-semigroups.html#737" class="Bound">G</a> <a id="739" class="Symbol">→</a> <a id="741" href="foundation.binary-equivalences.html#948" class="Function">is-binary-equiv</a> <a id="757" class="Symbol">(</a><a id="758" href="wild-algebra.wild-semigroups.html#789" class="Function">mul-Wild-Semigroup</a> <a id="777" href="wild-algebra.wild-inverse-semigroups.html#737" class="Bound">G</a><a id="778" class="Symbol">))</a>
+
+<a id="782" class="Keyword">module</a> <a id="789" href="wild-algebra.wild-inverse-semigroups.html#789" class="Module">_</a>
+  <a id="793" class="Symbol">{</a><a id="794" href="wild-algebra.wild-inverse-semigroups.html#794" class="Bound">l</a> <a id="796" class="Symbol">:</a> <a id="798" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="803" class="Symbol">}</a> <a id="805" class="Symbol">(</a><a id="806" href="wild-algebra.wild-inverse-semigroups.html#806" class="Bound">G</a> <a id="808" class="Symbol">:</a> <a id="810" href="wild-algebra.wild-inverse-semigroups.html#633" class="Function">Wild-Inverse-Semigroup</a> <a id="833" href="wild-algebra.wild-inverse-semigroups.html#794" class="Bound">l</a><a id="834" class="Symbol">)</a>
+  <a id="838" class="Keyword">where</a>
+
+  <a id="847" href="wild-algebra.wild-inverse-semigroups.html#847" class="Function">wild-semigroup-Wild-Inverse-Semigroup</a> <a id="885" class="Symbol">:</a> <a id="887" href="wild-algebra.wild-semigroups.html#382" class="Function">Wild-Semigroup</a> <a id="902" href="wild-algebra.wild-inverse-semigroups.html#794" class="Bound">l</a>
+  <a id="906" href="wild-algebra.wild-inverse-semigroups.html#847" class="Function">wild-semigroup-Wild-Inverse-Semigroup</a> <a id="944" class="Symbol">=</a> <a id="946" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="950" href="wild-algebra.wild-inverse-semigroups.html#806" class="Bound">G</a>
+
+  <a id="955" href="wild-algebra.wild-inverse-semigroups.html#955" class="Function">magma-Wild-Inverse-Semigroup</a> <a id="984" class="Symbol">:</a> <a id="986" href="wild-algebra.magmas.html#887" class="Function">Magma</a> <a id="992" href="wild-algebra.wild-inverse-semigroups.html#794" class="Bound">l</a>
+  <a id="996" href="wild-algebra.wild-inverse-semigroups.html#955" class="Function">magma-Wild-Inverse-Semigroup</a> <a id="1025" class="Symbol">=</a>
+    <a id="1031" href="wild-algebra.wild-semigroups.html#638" class="Function">magma-Wild-Semigroup</a> <a id="1052" href="wild-algebra.wild-inverse-semigroups.html#847" class="Function">wild-semigroup-Wild-Inverse-Semigroup</a>
+
+  <a id="1093" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a> <a id="1121" class="Symbol">:</a> <a id="1123" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1126" href="wild-algebra.wild-inverse-semigroups.html#794" class="Bound">l</a>
+  <a id="1130" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a> <a id="1158" class="Symbol">=</a>
+    <a id="1164" href="wild-algebra.wild-semigroups.html#703" class="Function">type-Wild-Semigroup</a> <a id="1184" href="wild-algebra.wild-inverse-semigroups.html#847" class="Function">wild-semigroup-Wild-Inverse-Semigroup</a>
+
+  <a id="1225" href="wild-algebra.wild-inverse-semigroups.html#1225" class="Function">mul-Wild-Inverse-Semigroup</a> <a id="1252" class="Symbol">:</a>
+    <a id="1258" class="Symbol">(</a><a id="1259" href="wild-algebra.wild-inverse-semigroups.html#1259" class="Bound">x</a> <a id="1261" href="wild-algebra.wild-inverse-semigroups.html#1261" class="Bound">y</a> <a id="1263" class="Symbol">:</a> <a id="1265" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a><a id="1292" class="Symbol">)</a> <a id="1294" class="Symbol">→</a> <a id="1296" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a>
+  <a id="1326" href="wild-algebra.wild-inverse-semigroups.html#1225" class="Function">mul-Wild-Inverse-Semigroup</a> <a id="1353" class="Symbol">=</a>
+    <a id="1359" href="wild-algebra.wild-semigroups.html#789" class="Function">mul-Wild-Semigroup</a> <a id="1378" href="wild-algebra.wild-inverse-semigroups.html#847" class="Function">wild-semigroup-Wild-Inverse-Semigroup</a>
+
+  <a id="1419" href="wild-algebra.wild-inverse-semigroups.html#1419" class="Function">mul-Wild-Inverse-Semigroup&#39;</a> <a id="1447" class="Symbol">:</a>
+    <a id="1453" class="Symbol">(</a><a id="1454" href="wild-algebra.wild-inverse-semigroups.html#1454" class="Bound">x</a> <a id="1456" href="wild-algebra.wild-inverse-semigroups.html#1456" class="Bound">y</a> <a id="1458" class="Symbol">:</a> <a id="1460" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a><a id="1487" class="Symbol">)</a> <a id="1489" class="Symbol">→</a> <a id="1491" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a>
+  <a id="1521" href="wild-algebra.wild-inverse-semigroups.html#1419" class="Function">mul-Wild-Inverse-Semigroup&#39;</a> <a id="1549" class="Symbol">=</a>
+    <a id="1555" href="wild-algebra.wild-semigroups.html#917" class="Function">mul-Wild-Semigroup&#39;</a> <a id="1575" href="wild-algebra.wild-inverse-semigroups.html#847" class="Function">wild-semigroup-Wild-Inverse-Semigroup</a>
+
+  <a id="1616" href="wild-algebra.wild-inverse-semigroups.html#1616" class="Function">associative-mul-Wild-Inverse-Semigroup</a> <a id="1655" class="Symbol">:</a>
+    <a id="1661" class="Symbol">(</a><a id="1662" href="wild-algebra.wild-inverse-semigroups.html#1662" class="Bound">x</a> <a id="1664" href="wild-algebra.wild-inverse-semigroups.html#1664" class="Bound">y</a> <a id="1666" href="wild-algebra.wild-inverse-semigroups.html#1666" class="Bound">z</a> <a id="1668" class="Symbol">:</a> <a id="1670" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a><a id="1697" class="Symbol">)</a> <a id="1699" class="Symbol">→</a>
+    <a id="1705" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="1708" class="Symbol">(</a> <a id="1710" href="wild-algebra.wild-inverse-semigroups.html#1225" class="Function">mul-Wild-Inverse-Semigroup</a> <a id="1737" class="Symbol">(</a><a id="1738" href="wild-algebra.wild-inverse-semigroups.html#1225" class="Function">mul-Wild-Inverse-Semigroup</a> <a id="1765" href="wild-algebra.wild-inverse-semigroups.html#1662" class="Bound">x</a> <a id="1767" href="wild-algebra.wild-inverse-semigroups.html#1664" class="Bound">y</a><a id="1768" class="Symbol">)</a> <a id="1770" href="wild-algebra.wild-inverse-semigroups.html#1666" class="Bound">z</a><a id="1771" class="Symbol">)</a>
+       <a id="1780" class="Symbol">(</a> <a id="1782" href="wild-algebra.wild-inverse-semigroups.html#1225" class="Function">mul-Wild-Inverse-Semigroup</a> <a id="1809" href="wild-algebra.wild-inverse-semigroups.html#1662" class="Bound">x</a> <a id="1811" class="Symbol">(</a><a id="1812" href="wild-algebra.wild-inverse-semigroups.html#1225" class="Function">mul-Wild-Inverse-Semigroup</a> <a id="1839" href="wild-algebra.wild-inverse-semigroups.html#1664" class="Bound">y</a> <a id="1841" href="wild-algebra.wild-inverse-semigroups.html#1666" class="Bound">z</a><a id="1842" class="Symbol">))</a>
+  <a id="1847" href="wild-algebra.wild-inverse-semigroups.html#1616" class="Function">associative-mul-Wild-Inverse-Semigroup</a> <a id="1886" class="Symbol">=</a>
+    <a id="1892" href="wild-algebra.wild-semigroups.html#1048" class="Function">associative-mul-Wild-Semigroup</a> <a id="1923" href="wild-algebra.wild-inverse-semigroups.html#847" class="Function">wild-semigroup-Wild-Inverse-Semigroup</a>
+
+  <a id="1964" href="wild-algebra.wild-inverse-semigroups.html#1964" class="Function">is-binary-equiv-mul-Wild-Inverse-Semigroup</a> <a id="2007" class="Symbol">:</a>
+    <a id="2013" href="foundation.binary-equivalences.html#948" class="Function">is-binary-equiv</a> <a id="2029" href="wild-algebra.wild-inverse-semigroups.html#1225" class="Function">mul-Wild-Inverse-Semigroup</a>
+  <a id="2058" href="wild-algebra.wild-inverse-semigroups.html#1964" class="Function">is-binary-equiv-mul-Wild-Inverse-Semigroup</a> <a id="2101" class="Symbol">=</a> <a id="2103" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="2107" href="wild-algebra.wild-inverse-semigroups.html#806" class="Bound">G</a>
+
+  <a id="2112" href="wild-algebra.wild-inverse-semigroups.html#2112" class="Function">wild-quasigroup-Wild-Inverse-Semigroup</a> <a id="2151" class="Symbol">:</a> <a id="2153" href="wild-algebra.wild-quasigroups.html#483" class="Function">Wild-Quasigroup</a> <a id="2169" href="wild-algebra.wild-inverse-semigroups.html#794" class="Bound">l</a>
+  <a id="2173" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="2177" href="wild-algebra.wild-inverse-semigroups.html#2112" class="Function">wild-quasigroup-Wild-Inverse-Semigroup</a> <a id="2216" class="Symbol">=</a> <a id="2218" href="wild-algebra.wild-inverse-semigroups.html#955" class="Function">magma-Wild-Inverse-Semigroup</a>
+  <a id="2249" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="2253" href="wild-algebra.wild-inverse-semigroups.html#2112" class="Function">wild-quasigroup-Wild-Inverse-Semigroup</a> <a id="2292" class="Symbol">=</a>
+    <a id="2298" href="wild-algebra.wild-inverse-semigroups.html#1964" class="Function">is-binary-equiv-mul-Wild-Inverse-Semigroup</a>
+
+  <a id="2344" href="wild-algebra.wild-inverse-semigroups.html#2344" class="Function">is-equiv-mul-Wild-Inverse-Semigroup</a> <a id="2380" class="Symbol">:</a>
+    <a id="2386" class="Symbol">(</a><a id="2387" href="wild-algebra.wild-inverse-semigroups.html#2387" class="Bound">x</a> <a id="2389" class="Symbol">:</a> <a id="2391" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a><a id="2418" class="Symbol">)</a> <a id="2420" class="Symbol">→</a> <a id="2422" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a> <a id="2431" class="Symbol">(</a><a id="2432" href="wild-algebra.wild-inverse-semigroups.html#1225" class="Function">mul-Wild-Inverse-Semigroup</a> <a id="2459" href="wild-algebra.wild-inverse-semigroups.html#2387" class="Bound">x</a><a id="2460" class="Symbol">)</a>
+  <a id="2464" href="wild-algebra.wild-inverse-semigroups.html#2344" class="Function">is-equiv-mul-Wild-Inverse-Semigroup</a> <a id="2500" class="Symbol">=</a>
+    <a id="2506" href="wild-algebra.wild-quasigroups.html#1203" class="Function">is-equiv-mul-Wild-Quasigroup</a> <a id="2535" href="wild-algebra.wild-inverse-semigroups.html#2112" class="Function">wild-quasigroup-Wild-Inverse-Semigroup</a>
+
+  <a id="2577" href="wild-algebra.wild-inverse-semigroups.html#2577" class="Function">equiv-mul-Wild-Inverse-Semigroup</a> <a id="2610" class="Symbol">:</a>
+    <a id="2616" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a> <a id="2644" class="Symbol">→</a> <a id="2646" href="foundation.automorphisms.html#1210" class="Function">Aut</a> <a id="2650" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a>
+  <a id="2680" href="wild-algebra.wild-inverse-semigroups.html#2577" class="Function">equiv-mul-Wild-Inverse-Semigroup</a> <a id="2713" class="Symbol">=</a>
+    <a id="2719" href="wild-algebra.wild-quasigroups.html#1376" class="Function">equiv-mul-Wild-Quasigroup</a> <a id="2745" href="wild-algebra.wild-inverse-semigroups.html#2112" class="Function">wild-quasigroup-Wild-Inverse-Semigroup</a>
+
+  <a id="2787" href="wild-algebra.wild-inverse-semigroups.html#2787" class="Function">is-equiv-mul-Wild-Inverse-Semigroup&#39;</a> <a id="2824" class="Symbol">:</a>
+    <a id="2830" class="Symbol">(</a><a id="2831" href="wild-algebra.wild-inverse-semigroups.html#2831" class="Bound">x</a> <a id="2833" class="Symbol">:</a> <a id="2835" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a><a id="2862" class="Symbol">)</a> <a id="2864" class="Symbol">→</a> <a id="2866" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a> <a id="2875" class="Symbol">(</a><a id="2876" href="wild-algebra.wild-inverse-semigroups.html#1419" class="Function">mul-Wild-Inverse-Semigroup&#39;</a> <a id="2904" href="wild-algebra.wild-inverse-semigroups.html#2831" class="Bound">x</a><a id="2905" class="Symbol">)</a>
+  <a id="2909" href="wild-algebra.wild-inverse-semigroups.html#2787" class="Function">is-equiv-mul-Wild-Inverse-Semigroup&#39;</a> <a id="2946" class="Symbol">=</a>
+    <a id="2952" href="wild-algebra.wild-quasigroups.html#1584" class="Function">is-equiv-mul-Wild-Quasigroup&#39;</a> <a id="2982" href="wild-algebra.wild-inverse-semigroups.html#2112" class="Function">wild-quasigroup-Wild-Inverse-Semigroup</a>
+
+  <a id="3024" href="wild-algebra.wild-inverse-semigroups.html#3024" class="Function">equiv-mul-Wild-Inverse-Semigroup&#39;</a> <a id="3058" class="Symbol">:</a>
+    <a id="3064" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a> <a id="3092" class="Symbol">→</a> <a id="3094" href="foundation.automorphisms.html#1210" class="Function">Aut</a> <a id="3098" href="wild-algebra.wild-inverse-semigroups.html#1093" class="Function">type-Wild-Inverse-Semigroup</a>
+  <a id="3128" href="wild-algebra.wild-inverse-semigroups.html#3024" class="Function">equiv-mul-Wild-Inverse-Semigroup&#39;</a> <a id="3162" class="Symbol">=</a>
+    <a id="3168" href="wild-algebra.wild-quasigroups.html#1760" class="Function">equiv-mul-Wild-Quasigroup&#39;</a> <a id="3195" href="wild-algebra.wild-inverse-semigroups.html#2112" class="Function">wild-quasigroup-Wild-Inverse-Semigroup</a>
+</pre>
