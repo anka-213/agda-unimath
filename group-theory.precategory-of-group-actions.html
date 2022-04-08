@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/precategory-of-group-actions.lagda.md.</p>
-<p>Version of Friday, April  8, 2022, 09:30 AM</p>
+<p>Version of Friday, April  8, 2022, 12:24 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -43,7 +43,7 @@
 <a id="542" class="Keyword">open</a> <a id="547" class="Keyword">import</a> <a id="554" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="581" class="Keyword">using</a> <a id="587" class="Symbol">(</a><a id="588" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="593" class="Symbol">;</a> <a id="595" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="598" class="Symbol">;</a> <a id="600" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="604" class="Symbol">)</a>
 
 <a id="607" class="Keyword">open</a> <a id="612" class="Keyword">import</a> <a id="619" href="group-theory.group-actions.html" class="Module">group-theory.group-actions</a> <a id="646" class="Keyword">using</a> <a id="652" class="Symbol">(</a><a id="653" href="group-theory.group-actions.html#1192" class="Function">Abstract-Group-Action</a><a id="674" class="Symbol">)</a>
-<a id="676" class="Keyword">open</a> <a id="681" class="Keyword">import</a> <a id="688" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="708" class="Keyword">using</a> <a id="714" class="Symbol">(</a><a id="715" href="group-theory.groups.html#1961" class="Function">Group</a><a id="720" class="Symbol">)</a>
+<a id="676" class="Keyword">open</a> <a id="681" class="Keyword">import</a> <a id="688" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="708" class="Keyword">using</a> <a id="714" class="Symbol">(</a><a id="715" href="group-theory.groups.html#2398" class="Function">Group</a><a id="720" class="Symbol">)</a>
 <a id="722" class="Keyword">open</a> <a id="727" class="Keyword">import</a> <a id="734" href="group-theory.homomorphisms-group-actions.html" class="Module">group-theory.homomorphisms-group-actions</a> <a id="775" class="Keyword">using</a>
   <a id="783" class="Symbol">(</a> <a id="785" href="group-theory.homomorphisms-group-actions.html#6288" class="Function">hom-Abstract-Group-Action</a><a id="810" class="Symbol">;</a> <a id="812" href="group-theory.homomorphisms-group-actions.html#2841" class="Function">comp-hom-Abstract-Group-Action</a><a id="842" class="Symbol">;</a>
     <a id="848" href="group-theory.homomorphisms-group-actions.html#2481" class="Function">id-hom-Abstract-Group-Action</a><a id="876" class="Symbol">;</a> <a id="878" href="group-theory.homomorphisms-group-actions.html#6728" class="Function">associative-comp-hom-Abstract-Group-Action</a><a id="920" class="Symbol">;</a>
@@ -53,7 +53,7 @@
 <h2 id="definitions">Definitions</h2>
 <h3 id="the-large-precategory-of-g-sets">The large precategory of G-sets</h3>
 <pre class="Agda"><a id="1089" class="Keyword">module</a> <a id="1096" href="group-theory.precategory-of-group-actions.html#1096" class="Module">_</a>
-  <a id="1100" class="Symbol">{</a><a id="1101" href="group-theory.precategory-of-group-actions.html#1101" class="Bound">l1</a> <a id="1104" class="Symbol">:</a> <a id="1106" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1111" class="Symbol">}</a> <a id="1113" class="Symbol">(</a><a id="1114" href="group-theory.precategory-of-group-actions.html#1114" class="Bound">G</a> <a id="1116" class="Symbol">:</a> <a id="1118" href="group-theory.groups.html#1961" class="Function">Group</a> <a id="1124" href="group-theory.precategory-of-group-actions.html#1101" class="Bound">l1</a><a id="1126" class="Symbol">)</a>
+  <a id="1100" class="Symbol">{</a><a id="1101" href="group-theory.precategory-of-group-actions.html#1101" class="Bound">l1</a> <a id="1104" class="Symbol">:</a> <a id="1106" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1111" class="Symbol">}</a> <a id="1113" class="Symbol">(</a><a id="1114" href="group-theory.precategory-of-group-actions.html#1114" class="Bound">G</a> <a id="1116" class="Symbol">:</a> <a id="1118" href="group-theory.groups.html#2398" class="Function">Group</a> <a id="1124" href="group-theory.precategory-of-group-actions.html#1101" class="Bound">l1</a><a id="1126" class="Symbol">)</a>
   <a id="1130" class="Keyword">where</a>
 
   <a id="1139" href="group-theory.precategory-of-group-actions.html#1139" class="Function">Abstract-Group-Action-Large-Precat</a> <a id="1174" class="Symbol">:</a>
@@ -78,7 +78,7 @@
 </pre>
 <h3 id="the-small-precategory-of-g-sets">The small precategory of G-sets</h3>
 <pre class="Agda"><a id="2135" class="Keyword">module</a> <a id="2142" href="group-theory.precategory-of-group-actions.html#2142" class="Module">_</a>
-  <a id="2146" class="Symbol">{</a><a id="2147" href="group-theory.precategory-of-group-actions.html#2147" class="Bound">l1</a> <a id="2150" class="Symbol">:</a> <a id="2152" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2157" class="Symbol">}</a> <a id="2159" class="Symbol">(</a><a id="2160" href="group-theory.precategory-of-group-actions.html#2160" class="Bound">G</a> <a id="2162" class="Symbol">:</a> <a id="2164" href="group-theory.groups.html#1961" class="Function">Group</a> <a id="2170" href="group-theory.precategory-of-group-actions.html#2147" class="Bound">l1</a><a id="2172" class="Symbol">)</a>
+  <a id="2146" class="Symbol">{</a><a id="2147" href="group-theory.precategory-of-group-actions.html#2147" class="Bound">l1</a> <a id="2150" class="Symbol">:</a> <a id="2152" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2157" class="Symbol">}</a> <a id="2159" class="Symbol">(</a><a id="2160" href="group-theory.precategory-of-group-actions.html#2160" class="Bound">G</a> <a id="2162" class="Symbol">:</a> <a id="2164" href="group-theory.groups.html#2398" class="Function">Group</a> <a id="2170" href="group-theory.precategory-of-group-actions.html#2147" class="Bound">l1</a><a id="2172" class="Symbol">)</a>
   <a id="2176" class="Keyword">where</a>
 
   <a id="2185" href="group-theory.precategory-of-group-actions.html#2185" class="Function">Abstract-Group-Action-Precat</a> <a id="2214" class="Symbol">:</a> <a id="2216" class="Symbol">(</a><a id="2217" href="group-theory.precategory-of-group-actions.html#2217" class="Bound">l2</a> <a id="2220" class="Symbol">:</a> <a id="2222" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2227" class="Symbol">)</a> <a id="2229" class="Symbol">→</a> <a id="2231" href="category-theory.precategories.html#2242" class="Function">Precat</a> <a id="2238" class="Symbol">(</a><a id="2239" href="group-theory.precategory-of-group-actions.html#2147" class="Bound">l1</a> <a id="2242" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="2244" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="2249" href="group-theory.precategory-of-group-actions.html#2217" class="Bound">l2</a><a id="2251" class="Symbol">)</a> <a id="2253" class="Symbol">(</a><a id="2254" href="group-theory.precategory-of-group-actions.html#2147" class="Bound">l1</a> <a id="2257" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="2259" href="group-theory.precategory-of-group-actions.html#2217" class="Bound">l2</a><a id="2261" class="Symbol">)</a>
@@ -97,7 +97,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-08)(88efbcc) Merge pull request #155 from UniMath/daily-challenge by noreply
+(2022-04-08)(82adbd1) Merge pull request #156 from UniMath/ljubljana by noreply
 </pre>
 </body>
 </html>

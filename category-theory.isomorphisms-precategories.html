@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/category-theory/isomorphisms-precategories.lagda.md.</p>
-<p>Version of Friday, April  8, 2022, 09:29 AM</p>
+<p>Version of Friday, April  8, 2022, 12:23 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -45,7 +45,7 @@
   <a id="657" class="Symbol">(</a> <a id="659" href="foundation-core.propositions.html#2208" class="Function">is-proof-irrelevant</a><a id="678" class="Symbol">;</a> <a id="680" href="foundation-core.propositions.html#5805" class="Function">prod-Prop</a><a id="689" class="Symbol">;</a> <a id="691" href="foundation-core.propositions.html#1246" class="Function">is-prop</a><a id="698" class="Symbol">;</a>
     <a id="704" href="foundation-core.propositions.html#3151" class="Function">is-prop-is-proof-irrelevant</a><a id="731" class="Symbol">)</a>
 <a id="733" class="Keyword">open</a> <a id="738" class="Keyword">import</a> <a id="745" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="761" class="Keyword">using</a> <a id="767" class="Symbol">(</a><a id="768" href="foundation-core.sets.html#1407" class="Function">Id-Prop</a><a id="775" class="Symbol">;</a> <a id="777" href="foundation-core.sets.html#1099" class="Function">is-set</a><a id="783" class="Symbol">;</a> <a id="785" href="foundation-core.sets.html#1177" class="Function">UU-Set</a><a id="791" class="Symbol">)</a>
-<a id="793" class="Keyword">open</a> <a id="798" class="Keyword">import</a> <a id="805" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="825" class="Keyword">using</a> <a id="831" class="Symbol">(</a><a id="832" href="foundation-core.subtypes.html#2633" class="Function">eq-subtype</a><a id="842" class="Symbol">;</a> <a id="844" href="foundation-core.subtypes.html#4137" class="Function">is-set-is-subtype</a><a id="861" class="Symbol">)</a>
+<a id="793" class="Keyword">open</a> <a id="798" class="Keyword">import</a> <a id="805" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="825" class="Keyword">using</a> <a id="831" class="Symbol">(</a><a id="832" href="foundation-core.subtypes.html#2835" class="Function">eq-subtype</a><a id="842" class="Symbol">;</a> <a id="844" href="foundation-core.subtypes.html#4339" class="Function">is-set-is-subtype</a><a id="861" class="Symbol">)</a>
 <a id="863" class="Keyword">open</a> <a id="868" class="Keyword">import</a> <a id="875" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="902" class="Keyword">using</a> <a id="908" class="Symbol">(</a><a id="909" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="911" class="Symbol">;</a> <a id="913" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="918" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
@@ -135,7 +135,7 @@
       <a id="4326" class="Symbol">(</a> <a id="4328" href="category-theory.isomorphisms-precategories.html#4121" class="Function">is-proof-irrelevant-is-iso-Precat</a> <a id="4362" class="Symbol">{</a><a id="4363" href="category-theory.isomorphisms-precategories.html#4363" class="Bound">x</a><a id="4364" class="Symbol">}</a> <a id="4366" class="Symbol">{</a><a id="4367" href="category-theory.isomorphisms-precategories.html#4367" class="Bound">y</a><a id="4368" class="Symbol">}</a> <a id="4370" href="category-theory.isomorphisms-precategories.html#4370" class="Bound">f</a>
         <a id="4380" class="Symbol">(</a> <a id="4382" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="4387" href="category-theory.isomorphisms-precategories.html#4387" class="Bound">g</a> <a id="4389" class="Symbol">(</a><a id="4390" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="4395" href="category-theory.isomorphisms-precategories.html#4395" class="Bound">p</a> <a id="4397" href="category-theory.isomorphisms-precategories.html#4397" class="Bound">q</a><a id="4398" class="Symbol">)))</a>
         <a id="4410" class="Symbol">(</a> <a id="4412" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="4417" href="category-theory.isomorphisms-precategories.html#4417" class="Bound">g&#39;</a> <a id="4420" class="Symbol">(</a><a id="4421" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="4426" href="category-theory.isomorphisms-precategories.html#4426" class="Bound">p&#39;</a> <a id="4429" href="category-theory.isomorphisms-precategories.html#4429" class="Bound">q&#39;</a><a id="4431" class="Symbol">))</a> <a id="4434" class="Symbol">=</a>
-      <a id="4442" href="foundation-core.subtypes.html#2633" class="Function">eq-subtype</a>
+      <a id="4442" href="foundation-core.subtypes.html#2835" class="Function">eq-subtype</a>
         <a id="4461" class="Symbol">(</a> <a id="4463" class="Symbol">λ</a> <a id="4465" href="category-theory.isomorphisms-precategories.html#4465" class="Bound">h</a> <a id="4467" class="Symbol">→</a>
           <a id="4479" href="foundation-core.propositions.html#5805" class="Function">prod-Prop</a>
             <a id="4501" class="Symbol">(</a> <a id="4503" href="foundation-core.sets.html#1407" class="Function">Id-Prop</a>
@@ -166,7 +166,7 @@
 
   <a id="5483" href="category-theory.isomorphisms-precategories.html#5483" class="Function">is-set-iso-Precat</a> <a id="5501" class="Symbol">:</a> <a id="5503" class="Symbol">(</a><a id="5504" href="category-theory.isomorphisms-precategories.html#5504" class="Bound">x</a> <a id="5506" href="category-theory.isomorphisms-precategories.html#5506" class="Bound">y</a> <a id="5508" class="Symbol">:</a> <a id="5510" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="5521" href="category-theory.isomorphisms-precategories.html#5454" class="Bound">C</a><a id="5522" class="Symbol">)</a> <a id="5524" class="Symbol">→</a> <a id="5526" href="foundation-core.sets.html#1099" class="Function">is-set</a> <a id="5533" class="Symbol">(</a><a id="5534" href="category-theory.isomorphisms-precategories.html#1466" class="Function">iso-Precat</a> <a id="5545" href="category-theory.isomorphisms-precategories.html#5454" class="Bound">C</a> <a id="5547" href="category-theory.isomorphisms-precategories.html#5504" class="Bound">x</a> <a id="5549" href="category-theory.isomorphisms-precategories.html#5506" class="Bound">y</a><a id="5550" class="Symbol">)</a>
   <a id="5554" href="category-theory.isomorphisms-precategories.html#5483" class="Function">is-set-iso-Precat</a> <a id="5572" href="category-theory.isomorphisms-precategories.html#5572" class="Bound">x</a> <a id="5574" href="category-theory.isomorphisms-precategories.html#5574" class="Bound">y</a> <a id="5576" class="Symbol">=</a>
-    <a id="5582" href="foundation-core.subtypes.html#4137" class="Function">is-set-is-subtype</a>
+    <a id="5582" href="foundation-core.subtypes.html#4339" class="Function">is-set-is-subtype</a>
       <a id="5606" class="Symbol">(</a> <a id="5608" href="category-theory.isomorphisms-precategories.html#5024" class="Function">is-prop-is-iso-Precat</a> <a id="5630" href="category-theory.isomorphisms-precategories.html#5454" class="Bound">C</a><a id="5631" class="Symbol">)</a>
       <a id="5639" class="Symbol">(</a> <a id="5641" href="category-theory.precategories.html#2772" class="Function">is-set-type-hom-Precat</a> <a id="5664" href="category-theory.isomorphisms-precategories.html#5454" class="Bound">C</a> <a id="5666" href="category-theory.isomorphisms-precategories.html#5572" class="Bound">x</a> <a id="5668" href="category-theory.isomorphisms-precategories.html#5574" class="Bound">y</a><a id="5669" class="Symbol">)</a>
 
@@ -176,7 +176,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-08)(88efbcc) Merge pull request #155 from UniMath/daily-challenge by noreply
+(2022-04-08)(82adbd1) Merge pull request #156 from UniMath/ljubljana by noreply
 </pre>
 </body>
 </html>

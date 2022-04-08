@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/equivalences.lagda.md.</p>
-<p>Version of Friday, April  8, 2022, 09:30 AM</p>
+<p>Version of Friday, April  8, 2022, 12:24 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -77,7 +77,7 @@
     <a id="2312" href="foundation-core.identity-types.html#7592" class="Function">ap-concat</a><a id="2321" class="Symbol">;</a> <a id="2323" href="foundation-core.identity-types.html#6352" class="Function">ap-binary</a><a id="2332" class="Symbol">;</a> <a id="2334" href="foundation-core.identity-types.html#3421" class="Function">inv-con</a><a id="2341" class="Symbol">;</a> <a id="2343" href="foundation-core.identity-types.html#3117" class="Function">ap-comp</a><a id="2350" class="Symbol">;</a> <a id="2352" href="foundation-core.identity-types.html#3018" class="Function">ap-id</a><a id="2357" class="Symbol">;</a> <a id="2359" href="foundation-core.identity-types.html#4583" class="Function">tr</a><a id="2361" class="Symbol">;</a> <a id="2363" href="foundation-core.identity-types.html#7970" class="Function">apd</a><a id="2366" class="Symbol">)</a>
 <a id="2368" class="Keyword">open</a> <a id="2373" class="Keyword">import</a> <a id="2380" href="foundation.subtype-identity-principle.html" class="Module">foundation.subtype-identity-principle</a> <a id="2418" class="Keyword">using</a>
   <a id="2426" class="Symbol">(</a> <a id="2428" href="foundation-core.subtype-identity-principle.html#3178" class="Function">extensionality-subtype</a><a id="2450" class="Symbol">)</a>
-<a id="2452" class="Keyword">open</a> <a id="2457" class="Keyword">import</a> <a id="2464" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="2484" class="Keyword">using</a> <a id="2490" class="Symbol">(</a><a id="2491" href="foundation-core.subtypes.html#2951" class="Function">is-emb-pr1</a><a id="2501" class="Symbol">;</a> <a id="2503" href="foundation.subtypes.html#863" class="Function">equiv-subtype-equiv</a><a id="2522" class="Symbol">)</a>
+<a id="2452" class="Keyword">open</a> <a id="2457" class="Keyword">import</a> <a id="2464" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="2484" class="Keyword">using</a> <a id="2490" class="Symbol">(</a><a id="2491" href="foundation-core.subtypes.html#3153" class="Function">is-emb-pr1</a><a id="2501" class="Symbol">;</a> <a id="2503" href="foundation.subtypes.html#994" class="Function">equiv-subtype-equiv</a><a id="2522" class="Symbol">)</a>
 </pre>
 <h2 id="properties">Properties</h2>
 <h3 id="any-equivalence-is-an-embedding">Any equivalence is an embedding</h3>
@@ -364,7 +364,7 @@
   <a id="13751" class="Keyword">abstract</a>
     <a id="13764" href="foundation.equivalences.html#13764" class="Function">is-emb-map-equiv</a> <a id="13781" class="Symbol">:</a>
       <a id="13789" href="foundation-core.embeddings.html#980" class="Function">is-emb</a> <a id="13796" class="Symbol">(</a><a id="13797" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a> <a id="13807" class="Symbol">{</a><a id="13808" class="Argument">A</a> <a id="13810" class="Symbol">=</a> <a id="13812" href="foundation.equivalences.html#13134" class="Bound">A</a><a id="13813" class="Symbol">}</a> <a id="13815" class="Symbol">{</a><a id="13816" class="Argument">B</a> <a id="13818" class="Symbol">=</a> <a id="13820" href="foundation.equivalences.html#13146" class="Bound">B</a><a id="13821" class="Symbol">})</a>
-    <a id="13828" href="foundation.equivalences.html#13764" class="Function">is-emb-map-equiv</a> <a id="13845" class="Symbol">=</a> <a id="13847" href="foundation-core.subtypes.html#2951" class="Function">is-emb-pr1</a> <a id="13858" href="foundation.equivalences.html#13407" class="Function">is-property-is-equiv</a>
+    <a id="13828" href="foundation.equivalences.html#13764" class="Function">is-emb-map-equiv</a> <a id="13845" class="Symbol">=</a> <a id="13847" href="foundation-core.subtypes.html#3153" class="Function">is-emb-pr1</a> <a id="13858" href="foundation.equivalences.html#13407" class="Function">is-property-is-equiv</a>
 </pre>
 <h3 id="characterizing-the-identity-type-of-equivalences">Characterizing the identity type of equivalences</h3>
 <pre class="Agda"><a id="13946" class="Keyword">module</a> <a id="13953" href="foundation.equivalences.html#13953" class="Module">_</a>
@@ -503,7 +503,7 @@
   <a id="18402" class="Symbol">{</a><a id="18403" href="foundation.equivalences.html#18403" class="Bound">l1</a> <a id="18406" href="foundation.equivalences.html#18406" class="Bound">l2</a> <a id="18409" href="foundation.equivalences.html#18409" class="Bound">l3</a> <a id="18412" class="Symbol">:</a> <a id="18414" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="18419" class="Symbol">}</a> <a id="18421" class="Symbol">{</a><a id="18422" href="foundation.equivalences.html#18422" class="Bound">A</a> <a id="18424" class="Symbol">:</a> <a id="18426" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="18429" href="foundation.equivalences.html#18403" class="Bound">l1</a><a id="18431" class="Symbol">}</a> <a id="18433" class="Symbol">{</a><a id="18434" href="foundation.equivalences.html#18434" class="Bound">B</a> <a id="18436" class="Symbol">:</a> <a id="18438" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="18441" href="foundation.equivalences.html#18406" class="Bound">l2</a><a id="18443" class="Symbol">}</a> <a id="18445" class="Symbol">→</a>
   <a id="18449" class="Symbol">(</a><a id="18450" href="foundation.equivalences.html#18422" class="Bound">A</a> <a id="18452" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="18454" href="foundation.equivalences.html#18434" class="Bound">B</a><a id="18455" class="Symbol">)</a> <a id="18457" class="Symbol">→</a> <a id="18459" class="Symbol">(</a><a id="18460" href="foundation.equivalences.html#18460" class="Bound">C</a> <a id="18462" class="Symbol">:</a> <a id="18464" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="18467" href="foundation.equivalences.html#18409" class="Bound">l3</a><a id="18469" class="Symbol">)</a> <a id="18471" class="Symbol">→</a> <a id="18473" class="Symbol">(</a><a id="18474" href="foundation.equivalences.html#18434" class="Bound">B</a> <a id="18476" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="18478" href="foundation.equivalences.html#18460" class="Bound">C</a><a id="18479" class="Symbol">)</a> <a id="18481" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="18483" class="Symbol">(</a><a id="18484" href="foundation.equivalences.html#18422" class="Bound">A</a> <a id="18486" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="18488" href="foundation.equivalences.html#18460" class="Bound">C</a><a id="18489" class="Symbol">)</a>
 <a id="18491" href="foundation.equivalences.html#18378" class="Function">equiv-precomp-equiv</a> <a id="18511" href="foundation.equivalences.html#18511" class="Bound">e</a> <a id="18513" href="foundation.equivalences.html#18513" class="Bound">C</a> <a id="18515" class="Symbol">=</a>
-  <a id="18519" href="foundation.subtypes.html#863" class="Function">equiv-subtype-equiv</a>
+  <a id="18519" href="foundation.subtypes.html#994" class="Function">equiv-subtype-equiv</a>
     <a id="18543" class="Symbol">(</a> <a id="18545" href="foundation.equivalences.html#9340" class="Function">equiv-precomp</a> <a id="18559" href="foundation.equivalences.html#18511" class="Bound">e</a> <a id="18561" href="foundation.equivalences.html#18513" class="Bound">C</a><a id="18562" class="Symbol">)</a>
     <a id="18568" class="Symbol">(</a> <a id="18570" href="foundation.equivalences.html#13573" class="Function">is-equiv-Prop</a><a id="18583" class="Symbol">)</a>
     <a id="18589" class="Symbol">(</a> <a id="18591" href="foundation.equivalences.html#13573" class="Function">is-equiv-Prop</a><a id="18604" class="Symbol">)</a>
@@ -516,7 +516,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-08)(88efbcc) Merge pull request #155 from UniMath/daily-challenge by noreply
+(2022-04-08)(82adbd1) Merge pull request #156 from UniMath/ljubljana by noreply
 </pre>
 </body>
 </html>
