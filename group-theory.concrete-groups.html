@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/concrete-groups.lagda.md.</p>
-<p>Version of Saturday, April  9, 2022, 08:30 AM</p>
+<p>Version of Sunday, April 10, 2022, 08:00 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -45,7 +45,7 @@
   <a id="555" class="Symbol">(</a> <a id="557" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a><a id="592" class="Symbol">)</a>
 <a id="594" class="Keyword">open</a> <a id="599" class="Keyword">import</a> <a id="606" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="630" class="Keyword">using</a> <a id="636" class="Symbol">(</a><a id="637" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a><a id="644" class="Symbol">;</a> <a id="646" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a><a id="655" class="Symbol">)</a>
 <a id="657" class="Keyword">open</a> <a id="662" class="Keyword">import</a> <a id="669" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="685" class="Keyword">using</a> <a id="691" class="Symbol">(</a><a id="692" href="foundation-core.sets.html#1099" class="Function">is-set</a><a id="698" class="Symbol">;</a> <a id="700" href="foundation-core.sets.html#1177" class="Function">UU-Set</a><a id="706" class="Symbol">;</a> <a id="708" href="foundation.sets.html#2150" class="Function">is-set-Prop</a><a id="719" class="Symbol">)</a>
-<a id="721" class="Keyword">open</a> <a id="726" class="Keyword">import</a> <a id="733" href="foundation.subuniverses.html" class="Module">foundation.subuniverses</a> <a id="757" class="Keyword">using</a> <a id="763" class="Symbol">(</a><a id="764" href="foundation.subuniverses.html#5475" class="Function">UU-Trunc</a><a id="772" class="Symbol">)</a>
+<a id="721" class="Keyword">open</a> <a id="726" class="Keyword">import</a> <a id="733" href="foundation.subuniverses.html" class="Module">foundation.subuniverses</a> <a id="757" class="Keyword">using</a> <a id="763" class="Symbol">(</a><a id="764" href="foundation.subuniverses.html#5489" class="Function">UU-Trunc</a><a id="772" class="Symbol">)</a>
 <a id="774" class="Keyword">open</a> <a id="779" class="Keyword">import</a> <a id="786" href="foundation.truncated-types.html" class="Module">foundation.truncated-types</a> <a id="813" class="Keyword">using</a> <a id="819" class="Symbol">(</a><a id="820" href="foundation-core.truncated-types.html#1466" class="Function">is-trunc</a><a id="828" class="Symbol">)</a>
 <a id="830" class="Keyword">open</a> <a id="835" class="Keyword">import</a> <a id="842" href="foundation.truncation-levels.html" class="Module">foundation.truncation-levels</a> <a id="871" class="Keyword">using</a> <a id="877" class="Symbol">(</a><a id="878" href="foundation-core.truncation-levels.html#517" class="Function">one-𝕋</a><a id="883" class="Symbol">)</a>
 <a id="885" class="Keyword">open</a> <a id="890" class="Keyword">import</a> <a id="897" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="924" class="Keyword">using</a> <a id="930" class="Symbol">(</a><a id="931" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="933" class="Symbol">;</a> <a id="935" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="940" class="Symbol">;</a> <a id="942" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="945" class="Symbol">;</a> <a id="947" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="951" class="Symbol">)</a>
@@ -68,7 +68,7 @@
     <a id="1719" href="group-theory.higher-groups.html#6230" class="Function">htpy-hom-∞-Group</a><a id="1735" class="Symbol">;</a> <a id="1737" href="group-theory.higher-groups.html#6434" class="Function">extensionality-hom-∞-Group</a><a id="1763" class="Symbol">;</a>
     <a id="1769" href="group-theory.higher-groups.html#6932" class="Function">id-hom-∞-Group</a><a id="1783" class="Symbol">;</a> <a id="1785" href="group-theory.higher-groups.html#7092" class="Function">comp-hom-∞-Group</a><a id="1801" class="Symbol">;</a> <a id="1803" href="group-theory.higher-groups.html#7456" class="Function">assoc-comp-hom-∞-Group</a><a id="1825" class="Symbol">;</a>
     <a id="1831" href="group-theory.higher-groups.html#8007" class="Function">left-unit-law-comp-hom-∞-Group</a><a id="1861" class="Symbol">;</a> <a id="1863" href="group-theory.higher-groups.html#8302" class="Function">right-unit-law-comp-hom-∞-Group</a><a id="1894" class="Symbol">)</a>
-<a id="1896" class="Keyword">open</a> <a id="1901" class="Keyword">import</a> <a id="1908" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="1942" class="Keyword">using</a> <a id="1948" class="Symbol">(</a><a id="1949" href="group-theory.homomorphisms-groups.html#1566" class="Function">type-hom-Group</a><a id="1963" class="Symbol">)</a>
+<a id="1896" class="Keyword">open</a> <a id="1901" class="Keyword">import</a> <a id="1908" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="1942" class="Keyword">using</a> <a id="1948" class="Symbol">(</a><a id="1949" href="group-theory.homomorphisms-groups.html#1617" class="Function">type-hom-Group</a><a id="1963" class="Symbol">)</a>
 
 <a id="1966" class="Keyword">open</a> <a id="1971" class="Keyword">import</a> <a id="1978" href="synthetic-homotopy-theory.pointed-types.html" class="Module">synthetic-homotopy-theory.pointed-types</a> <a id="2018" class="Keyword">using</a> <a id="2024" class="Symbol">(</a><a id="2025" href="synthetic-homotopy-theory.pointed-types.html#392" class="Function">Pointed-Type</a><a id="2037" class="Symbol">)</a>
 
@@ -132,7 +132,7 @@
               <a id="4205" class="Symbol">(</a> <a id="4207" href="foundation.sets.html#2150" class="Function">is-set-Prop</a> <a id="4219" class="Symbol">(</a><a id="4220" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="4223" href="group-theory.concrete-groups.html#2571" class="Function">shape-Concrete-Group</a> <a id="4244" href="group-theory.concrete-groups.html#3898" class="Bound">Y</a><a id="4245" class="Symbol">))</a>
               <a id="4262" class="Symbol">(</a> <a id="4264" class="Symbol">λ</a> <a id="4266" class="Symbol">{</a> <a id="4268" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a> <a id="4273" class="Symbol">→</a> <a id="4275" href="group-theory.concrete-groups.html#3553" class="Function">is-set-type-Concrete-Group</a><a id="4301" class="Symbol">})})</a>
 
-  <a id="4309" href="group-theory.concrete-groups.html#4309" class="Function">classifying-1-type-Concrete-Group</a> <a id="4343" class="Symbol">:</a> <a id="4345" href="foundation.subuniverses.html#5475" class="Function">UU-Trunc</a> <a id="4354" href="foundation-core.truncation-levels.html#517" class="Function">one-𝕋</a> <a id="4360" href="group-theory.concrete-groups.html#2161" class="Bound">l</a>
+  <a id="4309" href="group-theory.concrete-groups.html#4309" class="Function">classifying-1-type-Concrete-Group</a> <a id="4343" class="Symbol">:</a> <a id="4345" href="foundation.subuniverses.html#5489" class="Function">UU-Trunc</a> <a id="4354" href="foundation-core.truncation-levels.html#517" class="Function">one-𝕋</a> <a id="4360" href="group-theory.concrete-groups.html#2161" class="Bound">l</a>
   <a id="4364" href="group-theory.concrete-groups.html#4309" class="Function">classifying-1-type-Concrete-Group</a> <a id="4398" class="Symbol">=</a>
     <a id="4404" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
       <a id="4415" href="group-theory.concrete-groups.html#2441" class="Function">classifying-type-Concrete-Group</a>
@@ -276,7 +276,7 @@
 
   <a id="9342" href="group-theory.concrete-groups.html#9342" class="Function">hom-group-hom-Concrete-Group</a> <a id="9371" class="Symbol">:</a>
     <a id="9377" href="group-theory.concrete-groups.html#7046" class="Function">hom-Concrete-Group</a> <a id="9396" class="Symbol">→</a>
-    <a id="9402" href="group-theory.homomorphisms-groups.html#1566" class="Function">type-hom-Group</a>
+    <a id="9402" href="group-theory.homomorphisms-groups.html#1617" class="Function">type-hom-Group</a>
       <a id="9423" class="Symbol">(</a> <a id="9425" href="group-theory.concrete-groups.html#6417" class="Function">abstract-group-Concrete-Group</a> <a id="9455" href="group-theory.concrete-groups.html#6988" class="Bound">G</a><a id="9456" class="Symbol">)</a>
       <a id="9464" class="Symbol">(</a> <a id="9466" href="group-theory.concrete-groups.html#6417" class="Function">abstract-group-Concrete-Group</a> <a id="9496" href="group-theory.concrete-groups.html#7012" class="Bound">H</a><a id="9497" class="Symbol">)</a>
   <a id="9501" href="group-theory.concrete-groups.html#9342" class="Function">hom-group-hom-Concrete-Group</a> <a id="9530" href="group-theory.concrete-groups.html#9530" class="Bound">f</a> <a id="9532" class="Symbol">=</a>
@@ -380,7 +380,7 @@ instance
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-09)(33e0b86) Merge pull request #158 from UniMath/daily-challenge by noreply
+(2022-04-10)(1290b81) Merge pull request #159 from UniMath/daily-challenge by noreply
 </pre>
 </body>
 </html>

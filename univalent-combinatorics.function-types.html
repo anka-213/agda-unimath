@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/function-types.lagda.md.</p>
-<p>Version of Saturday, April  9, 2022, 08:31 AM</p>
+<p>Version of Sunday, April 10, 2022, 08:00 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -45,7 +45,7 @@
 <a id="460" class="Keyword">open</a> <a id="465" class="Keyword">import</a> <a id="472" href="univalent-combinatorics.dependent-function-types.html" class="Module">univalent-combinatorics.dependent-function-types</a> <a id="521" class="Keyword">using</a>
   <a id="529" class="Symbol">(</a> <a id="531" href="univalent-combinatorics.dependent-function-types.html#2340" class="Function">count-Π</a><a id="538" class="Symbol">;</a> <a id="540" href="univalent-combinatorics.dependent-function-types.html#2665" class="Function">is-finite-Π</a><a id="551" class="Symbol">)</a>
 <a id="553" class="Keyword">open</a> <a id="558" class="Keyword">import</a> <a id="565" href="univalent-combinatorics.dependent-sum-finite-types.html" class="Module">univalent-combinatorics.dependent-sum-finite-types</a> <a id="616" class="Keyword">using</a>
-  <a id="624" class="Symbol">(</a> <a id="626" href="univalent-combinatorics.dependent-sum-finite-types.html#2480" class="Function">is-finite-Σ</a><a id="637" class="Symbol">)</a>
+  <a id="624" class="Symbol">(</a> <a id="626" href="univalent-combinatorics.dependent-sum-finite-types.html#2494" class="Function">is-finite-Σ</a><a id="637" class="Symbol">)</a>
 <a id="639" class="Keyword">open</a> <a id="644" class="Keyword">import</a> <a id="651" href="univalent-combinatorics.equality-finite-types.html" class="Module">univalent-combinatorics.equality-finite-types</a> <a id="697" class="Keyword">using</a>
   <a id="705" class="Symbol">(</a> <a id="707" href="univalent-combinatorics.equality-finite-types.html#3310" class="Function">is-finite-eq</a><a id="719" class="Symbol">;</a> <a id="721" href="univalent-combinatorics.equality-finite-types.html#1968" class="Function">has-decidable-equality-is-finite</a><a id="753" class="Symbol">)</a>
 <a id="755" class="Keyword">open</a> <a id="760" class="Keyword">import</a> <a id="767" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="804" class="Keyword">using</a>
@@ -77,16 +77,16 @@
     <a id="1632" class="Symbol">{</a><a id="1633" href="univalent-combinatorics.function-types.html#1633" class="Bound">l1</a> <a id="1636" href="univalent-combinatorics.function-types.html#1636" class="Bound">l2</a> <a id="1639" class="Symbol">:</a> <a id="1641" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1646" class="Symbol">}</a> <a id="1648" class="Symbol">{</a><a id="1649" href="univalent-combinatorics.function-types.html#1649" class="Bound">A</a> <a id="1651" class="Symbol">:</a> <a id="1653" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1656" href="univalent-combinatorics.function-types.html#1633" class="Bound">l1</a><a id="1658" class="Symbol">}</a> <a id="1660" class="Symbol">{</a><a id="1661" href="univalent-combinatorics.function-types.html#1661" class="Bound">B</a> <a id="1663" class="Symbol">:</a> <a id="1665" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1668" href="univalent-combinatorics.function-types.html#1636" class="Bound">l2</a><a id="1670" class="Symbol">}</a> <a id="1672" class="Symbol">→</a>
     <a id="1678" href="univalent-combinatorics.finite-types.html#3664" class="Function">is-finite</a> <a id="1688" href="univalent-combinatorics.function-types.html#1649" class="Bound">A</a> <a id="1690" class="Symbol">→</a> <a id="1692" href="univalent-combinatorics.finite-types.html#3664" class="Function">is-finite</a> <a id="1702" href="univalent-combinatorics.function-types.html#1661" class="Bound">B</a> <a id="1704" class="Symbol">→</a> <a id="1706" href="univalent-combinatorics.finite-types.html#3664" class="Function">is-finite</a> <a id="1716" class="Symbol">(</a><a id="1717" href="univalent-combinatorics.function-types.html#1649" class="Bound">A</a> <a id="1719" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="1721" href="univalent-combinatorics.function-types.html#1661" class="Bound">B</a><a id="1722" class="Symbol">)</a>
   <a id="1726" href="univalent-combinatorics.function-types.html#1614" class="Function">is-finite-≃</a> <a id="1738" href="univalent-combinatorics.function-types.html#1738" class="Bound">f</a> <a id="1740" href="univalent-combinatorics.function-types.html#1740" class="Bound">g</a> <a id="1742" class="Symbol">=</a>
-    <a id="1748" href="univalent-combinatorics.dependent-sum-finite-types.html#2480" class="Function">is-finite-Σ</a>
+    <a id="1748" href="univalent-combinatorics.dependent-sum-finite-types.html#2494" class="Function">is-finite-Σ</a>
       <a id="1766" class="Symbol">(</a> <a id="1768" href="univalent-combinatorics.function-types.html#1212" class="Function">is-finite-function-type</a> <a id="1792" href="univalent-combinatorics.function-types.html#1738" class="Bound">f</a> <a id="1794" href="univalent-combinatorics.function-types.html#1740" class="Bound">g</a><a id="1795" class="Symbol">)</a>
       <a id="1803" class="Symbol">(</a> <a id="1805" class="Symbol">λ</a> <a id="1807" href="univalent-combinatorics.function-types.html#1807" class="Bound">h</a> <a id="1809" class="Symbol">→</a>
         <a id="1819" href="univalent-combinatorics.cartesian-product-types.html#5311" class="Function">is-finite-prod</a>
-          <a id="1844" class="Symbol">(</a> <a id="1846" href="univalent-combinatorics.dependent-sum-finite-types.html#2480" class="Function">is-finite-Σ</a>
+          <a id="1844" class="Symbol">(</a> <a id="1846" href="univalent-combinatorics.dependent-sum-finite-types.html#2494" class="Function">is-finite-Σ</a>
             <a id="1870" class="Symbol">(</a> <a id="1872" href="univalent-combinatorics.function-types.html#1212" class="Function">is-finite-function-type</a> <a id="1896" href="univalent-combinatorics.function-types.html#1740" class="Bound">g</a> <a id="1898" href="univalent-combinatorics.function-types.html#1738" class="Bound">f</a><a id="1899" class="Symbol">)</a>
             <a id="1913" class="Symbol">(</a> <a id="1915" class="Symbol">λ</a> <a id="1917" href="univalent-combinatorics.function-types.html#1917" class="Bound">k</a> <a id="1919" class="Symbol">→</a>
               <a id="1935" href="univalent-combinatorics.dependent-function-types.html#2665" class="Function">is-finite-Π</a> <a id="1947" href="univalent-combinatorics.function-types.html#1740" class="Bound">g</a>
                 <a id="1965" class="Symbol">(</a> <a id="1967" class="Symbol">λ</a> <a id="1969" href="univalent-combinatorics.function-types.html#1969" class="Bound">y</a> <a id="1971" class="Symbol">→</a> <a id="1973" href="univalent-combinatorics.equality-finite-types.html#3310" class="Function">is-finite-eq</a> <a id="1986" class="Symbol">(</a><a id="1987" href="univalent-combinatorics.equality-finite-types.html#1968" class="Function">has-decidable-equality-is-finite</a> <a id="2020" href="univalent-combinatorics.function-types.html#1740" class="Bound">g</a><a id="2021" class="Symbol">))))</a>
-          <a id="2036" class="Symbol">(</a> <a id="2038" href="univalent-combinatorics.dependent-sum-finite-types.html#2480" class="Function">is-finite-Σ</a>
+          <a id="2036" class="Symbol">(</a> <a id="2038" href="univalent-combinatorics.dependent-sum-finite-types.html#2494" class="Function">is-finite-Σ</a>
             <a id="2062" class="Symbol">(</a> <a id="2064" href="univalent-combinatorics.function-types.html#1212" class="Function">is-finite-function-type</a> <a id="2088" href="univalent-combinatorics.function-types.html#1740" class="Bound">g</a> <a id="2090" href="univalent-combinatorics.function-types.html#1738" class="Bound">f</a><a id="2091" class="Symbol">)</a>
             <a id="2105" class="Symbol">(</a> <a id="2107" class="Symbol">λ</a> <a id="2109" href="univalent-combinatorics.function-types.html#2109" class="Bound">k</a> <a id="2111" class="Symbol">→</a>
               <a id="2127" href="univalent-combinatorics.dependent-function-types.html#2665" class="Function">is-finite-Π</a> <a id="2139" href="univalent-combinatorics.function-types.html#1738" class="Bound">f</a>
@@ -102,7 +102,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-09)(33e0b86) Merge pull request #158 from UniMath/daily-challenge by noreply
+(2022-04-10)(1290b81) Merge pull request #159 from UniMath/daily-challenge by noreply
 </pre>
 </body>
 </html>

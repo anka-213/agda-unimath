@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/monoids.lagda.md.</p>
-<p>Version of Saturday, April  9, 2022, 08:30 AM</p>
+<p>Version of Sunday, April 10, 2022, 08:00 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -40,7 +40,7 @@
   <a id="330" class="Symbol">(</a> <a id="332" href="foundation-core.propositions.html#2135" class="Function">all-elements-equal</a><a id="350" class="Symbol">;</a> <a id="352" href="foundation-core.propositions.html#2335" class="Function">is-prop-all-elements-equal</a><a id="378" class="Symbol">;</a> <a id="380" href="foundation-core.propositions.html#1246" class="Function">is-prop</a><a id="387" class="Symbol">;</a> <a id="389" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a><a id="396" class="Symbol">;</a>
     <a id="402" href="foundation-core.propositions.html#5805" class="Function">prod-Prop</a><a id="411" class="Symbol">;</a> <a id="413" href="foundation.propositions.html#1941" class="Function">Π-Prop</a><a id="419" class="Symbol">)</a>
 <a id="421" class="Keyword">open</a> <a id="426" class="Keyword">import</a> <a id="433" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="449" class="Keyword">using</a> <a id="455" class="Symbol">(</a><a id="456" href="foundation-core.sets.html#1177" class="Function">UU-Set</a><a id="462" class="Symbol">;</a> <a id="464" href="foundation-core.sets.html#1099" class="Function">is-set</a><a id="470" class="Symbol">;</a> <a id="472" href="foundation-core.sets.html#1291" class="Function">type-Set</a><a id="480" class="Symbol">;</a> <a id="482" href="foundation-core.sets.html#1407" class="Function">Id-Prop</a><a id="489" class="Symbol">)</a>
-<a id="491" class="Keyword">open</a> <a id="496" class="Keyword">import</a> <a id="503" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="523" class="Keyword">using</a> <a id="529" class="Symbol">(</a><a id="530" href="foundation-core.subtypes.html#2835" class="Function">eq-subtype</a><a id="540" class="Symbol">)</a>
+<a id="491" class="Keyword">open</a> <a id="496" class="Keyword">import</a> <a id="503" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="523" class="Keyword">using</a> <a id="529" class="Symbol">(</a><a id="530" href="foundation-core.subtypes.html#3210" class="Function">eq-subtype</a><a id="540" class="Symbol">)</a>
 <a id="542" class="Keyword">open</a> <a id="547" class="Keyword">import</a> <a id="554" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="581" class="Keyword">using</a> <a id="587" class="Symbol">(</a><a id="588" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="593" class="Symbol">;</a> <a id="595" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="597" class="Symbol">;</a> <a id="599" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="603" class="Symbol">)</a>
 
 <a id="606" class="Keyword">open</a> <a id="611" class="Keyword">import</a> <a id="618" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="642" class="Keyword">using</a>
@@ -112,7 +112,7 @@
   <a id="2669" href="group-theory.monoids.html#2567" class="Function">all-elements-equal-is-unital</a> <a id="2698" class="Symbol">(</a><a id="2699" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="2704" href="group-theory.monoids.html#2704" class="Bound">X</a> <a id="2706" class="Symbol">(</a><a id="2707" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="2712" href="group-theory.monoids.html#2712" class="Bound">μ</a> <a id="2714" href="group-theory.monoids.html#2714" class="Bound">assoc-μ</a><a id="2721" class="Symbol">))</a>
     <a id="2728" class="Symbol">(</a><a id="2729" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="2734" href="group-theory.monoids.html#2734" class="Bound">e</a> <a id="2736" class="Symbol">(</a><a id="2737" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="2742" href="group-theory.monoids.html#2742" class="Bound">left-unit-e</a> <a id="2754" href="group-theory.monoids.html#2754" class="Bound">right-unit-e</a><a id="2766" class="Symbol">))</a>
     <a id="2773" class="Symbol">(</a><a id="2774" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="2779" href="group-theory.monoids.html#2779" class="Bound">e&#39;</a> <a id="2782" class="Symbol">(</a><a id="2783" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="2788" href="group-theory.monoids.html#2788" class="Bound">left-unit-e&#39;</a> <a id="2801" href="group-theory.monoids.html#2801" class="Bound">right-unit-e&#39;</a><a id="2814" class="Symbol">))</a> <a id="2817" class="Symbol">=</a>
-    <a id="2823" href="foundation-core.subtypes.html#2835" class="Function">eq-subtype</a>
+    <a id="2823" href="foundation-core.subtypes.html#3210" class="Function">eq-subtype</a>
       <a id="2840" class="Symbol">(</a> <a id="2842" class="Symbol">λ</a> <a id="2844" href="group-theory.monoids.html#2844" class="Bound">e</a> <a id="2846" class="Symbol">→</a>
         <a id="2856" href="foundation-core.propositions.html#5805" class="Function">prod-Prop</a>
           <a id="2876" class="Symbol">(</a> <a id="2878" href="foundation.propositions.html#1941" class="Function">Π-Prop</a> <a id="2885" class="Symbol">(</a><a id="2886" href="foundation-core.sets.html#1291" class="Function">type-Set</a> <a id="2895" href="group-theory.monoids.html#2704" class="Bound">X</a><a id="2896" class="Symbol">)</a> <a id="2898" class="Symbol">(λ</a> <a id="2901" href="group-theory.monoids.html#2901" class="Bound">y</a> <a id="2903" class="Symbol">→</a> <a id="2905" href="foundation-core.sets.html#1407" class="Function">Id-Prop</a> <a id="2913" href="group-theory.monoids.html#2704" class="Bound">X</a> <a id="2915" class="Symbol">(</a><a id="2916" href="group-theory.monoids.html#2712" class="Bound">μ</a> <a id="2918" href="group-theory.monoids.html#2844" class="Bound">e</a> <a id="2920" href="group-theory.monoids.html#2901" class="Bound">y</a><a id="2921" class="Symbol">)</a> <a id="2923" href="group-theory.monoids.html#2901" class="Bound">y</a><a id="2924" class="Symbol">))</a>
@@ -131,7 +131,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-09)(33e0b86) Merge pull request #158 from UniMath/daily-challenge by noreply
+(2022-04-10)(1290b81) Merge pull request #159 from UniMath/daily-challenge by noreply
 </pre>
 </body>
 </html>

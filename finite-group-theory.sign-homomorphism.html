@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/finite-group-theory/sign-homomorphism.lagda.md.</p>
-<p>Version of Saturday, April  9, 2022, 08:30 AM</p>
+<p>Version of Sunday, April 10, 2022, 07:59 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -52,7 +52,7 @@
   <a id="871" class="Symbol">(</a> <a id="873" href="foundation.decidable-propositions.html#1883" class="Function">decidable-Prop</a><a id="887" class="Symbol">;</a> <a id="889" href="foundation.decidable-propositions.html#2141" class="Function">type-decidable-Prop</a><a id="908" class="Symbol">)</a>
 <a id="910" class="Keyword">open</a> <a id="915" class="Keyword">import</a> <a id="922" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="954" class="Keyword">using</a> <a id="960" class="Symbol">(</a><a id="961" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="962" class="Symbol">;</a> <a id="964" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="968" class="Symbol">;</a> <a id="970" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="973" class="Symbol">;</a> <a id="975" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="978" class="Symbol">)</a>
 <a id="980" class="Keyword">open</a> <a id="985" class="Keyword">import</a> <a id="992" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="1016" class="Keyword">using</a>
-  <a id="1024" class="Symbol">(</a> <a id="1026" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="1029" class="Symbol">;</a> <a id="1031" href="foundation-core.equivalences.html#7843" class="Function Operator">_∘e_</a><a id="1035" class="Symbol">;</a> <a id="1037" href="foundation.equivalences.html#14717" class="Function">eq-htpy-equiv</a><a id="1050" class="Symbol">;</a> <a id="1052" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a><a id="1061" class="Symbol">)</a>
+  <a id="1024" class="Symbol">(</a> <a id="1026" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="1029" class="Symbol">;</a> <a id="1031" href="foundation-core.equivalences.html#7843" class="Function Operator">_∘e_</a><a id="1035" class="Symbol">;</a> <a id="1037" href="foundation.equivalences.html#14741" class="Function">eq-htpy-equiv</a><a id="1050" class="Symbol">;</a> <a id="1052" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a><a id="1061" class="Symbol">)</a>
 <a id="1063" class="Keyword">open</a> <a id="1068" class="Keyword">import</a> <a id="1075" href="foundation.homotopies.html" class="Module">foundation.homotopies</a> <a id="1097" class="Keyword">using</a> <a id="1103" class="Symbol">(</a><a id="1104" href="foundation-core.homotopies.html#632" class="Function">refl-htpy</a><a id="1113" class="Symbol">)</a>
 <a id="1115" class="Keyword">open</a> <a id="1120" class="Keyword">import</a> <a id="1127" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="1153" class="Keyword">using</a> <a id="1159" class="Symbol">(</a><a id="1160" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="1162" class="Symbol">;</a> <a id="1164" href="foundation-core.identity-types.html#1552" class="Function">inv</a><a id="1167" class="Symbol">;</a> <a id="1169" href="foundation-core.identity-types.html#1239" class="Function Operator">_∙_</a><a id="1172" class="Symbol">;</a> <a id="1174" href="foundation-core.identity-types.html#2853" class="Function">ap</a><a id="1176" class="Symbol">;</a> <a id="1178" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="1182" class="Symbol">)</a>
 <a id="1184" class="Keyword">open</a> <a id="1189" class="Keyword">import</a> <a id="1196" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="1233" class="Keyword">using</a>
@@ -61,7 +61,7 @@
 <a id="1341" class="Keyword">open</a> <a id="1346" class="Keyword">import</a> <a id="1353" href="foundation.unit-type.html" class="Module">foundation.unit-type</a> <a id="1374" class="Keyword">using</a> <a id="1380" class="Symbol">(</a><a id="1381" href="foundation.unit-type.html#999" class="InductiveConstructor">star</a><a id="1385" class="Symbol">)</a>
 <a id="1387" class="Keyword">open</a> <a id="1392" class="Keyword">import</a> <a id="1399" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="1426" class="Keyword">using</a> <a id="1432" class="Symbol">(</a><a id="1433" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1438" class="Symbol">)</a>
 
-<a id="1441" class="Keyword">open</a> <a id="1446" class="Keyword">import</a> <a id="1453" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="1487" class="Keyword">using</a> <a id="1493" class="Symbol">(</a><a id="1494" href="group-theory.homomorphisms-groups.html#1566" class="Function">type-hom-Group</a><a id="1508" class="Symbol">)</a>
+<a id="1441" class="Keyword">open</a> <a id="1446" class="Keyword">import</a> <a id="1453" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="1487" class="Keyword">using</a> <a id="1493" class="Symbol">(</a><a id="1494" href="group-theory.homomorphisms-groups.html#1617" class="Function">type-hom-Group</a><a id="1508" class="Symbol">)</a>
 <a id="1510" class="Keyword">open</a> <a id="1515" class="Keyword">import</a> <a id="1522" href="group-theory.homomorphisms-semigroups.html" class="Module">group-theory.homomorphisms-semigroups</a> <a id="1560" class="Keyword">using</a> <a id="1566" class="Symbol">(</a><a id="1567" href="group-theory.homomorphisms-semigroups.html#1311" class="Function">preserves-mul</a><a id="1580" class="Symbol">)</a>
 <a id="1582" class="Keyword">open</a> <a id="1587" class="Keyword">import</a> <a id="1594" href="group-theory.symmetric-groups.html" class="Module">group-theory.symmetric-groups</a> <a id="1624" class="Keyword">using</a> <a id="1630" class="Symbol">(</a><a id="1631" href="group-theory.symmetric-groups.html#2105" class="Function">symmetric-Group</a><a id="1646" class="Symbol">)</a>
 
@@ -134,7 +134,7 @@
                         <a id="4479" class="Symbol">(</a> <a id="4481" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
                           <a id="4512" class="Symbol">(</a> <a id="4514" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="4518" class="Symbol">)</a>
                           <a id="4546" class="Symbol">(</a> <a id="4548" href="foundation-core.identity-types.html#1552" class="Function">inv</a>
-                            <a id="4580" class="Symbol">(</a> <a id="4582" href="foundation.equivalences.html#14717" class="Function">eq-htpy-equiv</a>
+                            <a id="4580" class="Symbol">(</a> <a id="4582" href="foundation.equivalences.html#14741" class="Function">eq-htpy-equiv</a>
                               <a id="4626" class="Symbol">(</a> <a id="4628" href="finite-group-theory.permutations.html#16883" class="Function">retr-permutation-list-transpositions-count</a>
                                 <a id="4703" class="Symbol">(</a> <a id="4705" href="univalent-combinatorics.finite-types.html#4664" class="Function">type-UU-Fin-Level</a> <a id="4723" href="finite-group-theory.sign-homomorphism.html#2678" class="Bound">X</a><a id="4724" class="Symbol">)</a>
                                 <a id="4758" class="Symbol">(</a> <a id="4760" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="4765" href="finite-group-theory.sign-homomorphism.html#2670" class="Bound">n</a> <a id="4767" href="finite-group-theory.sign-homomorphism.html#3397" class="Bound">h</a><a id="4768" class="Symbol">)</a>
@@ -153,7 +153,7 @@
                         <a id="5329" class="Symbol">(</a> <a id="5331" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a>
                           <a id="5362" class="Symbol">(</a> <a id="5364" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="5368" class="Symbol">)</a>
                           <a id="5396" class="Symbol">(</a> <a id="5398" href="foundation-core.identity-types.html#1552" class="Function">inv</a>
-                            <a id="5430" class="Symbol">(</a> <a id="5432" href="foundation.equivalences.html#14717" class="Function">eq-htpy-equiv</a>
+                            <a id="5430" class="Symbol">(</a> <a id="5432" href="foundation.equivalences.html#14741" class="Function">eq-htpy-equiv</a>
                               <a id="5476" class="Symbol">(</a> <a id="5478" href="finite-group-theory.permutations.html#16883" class="Function">retr-permutation-list-transpositions-count</a>
                                 <a id="5553" class="Symbol">(</a> <a id="5555" href="univalent-combinatorics.finite-types.html#4664" class="Function">type-UU-Fin-Level</a> <a id="5573" href="finite-group-theory.sign-homomorphism.html#2678" class="Bound">X</a><a id="5574" class="Symbol">)</a>
                                 <a id="5608" class="Symbol">(</a> <a id="5610" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="5615" href="finite-group-theory.sign-homomorphism.html#2670" class="Bound">n</a> <a id="5617" href="finite-group-theory.sign-homomorphism.html#3397" class="Bound">h</a><a id="5618" class="Symbol">)</a>
@@ -186,7 +186,7 @@
          <a id="6700" class="Symbol">(</a> <a id="6702" href="finite-group-theory.transpositions.html#9653" class="Function">permutation-list-transpositions</a>
            <a id="6745" class="Symbol">(</a> <a id="6747" href="finite-group-theory.sign-homomorphism.html#6281" class="Function">list-comp-f-g</a> <a id="6761" href="finite-group-theory.sign-homomorphism.html#6637" class="Bound">h</a><a id="6762" class="Symbol">))</a>
     <a id="6769" href="finite-group-theory.sign-homomorphism.html#6610" class="Function">eq-list-comp-f-g</a> <a id="6786" href="finite-group-theory.sign-homomorphism.html#6786" class="Bound">h</a> <a id="6788" class="Symbol">=</a>
-      <a id="6796" href="foundation.equivalences.html#14717" class="Function">eq-htpy-equiv</a>
+      <a id="6796" href="foundation.equivalences.html#14741" class="Function">eq-htpy-equiv</a>
         <a id="6818" class="Symbol">(</a> <a id="6820" class="Symbol">λ</a> <a id="6822" href="finite-group-theory.sign-homomorphism.html#6822" class="Bound">x</a> <a id="6824" class="Symbol">→</a>
           <a id="6836" class="Symbol">(</a> <a id="6838" href="foundation-core.identity-types.html#1552" class="Function">inv</a>
             <a id="6854" class="Symbol">(</a> <a id="6856" href="finite-group-theory.permutations.html#16883" class="Function">retr-permutation-list-transpositions-count</a>
@@ -228,7 +228,7 @@
       <a id="8063" class="Symbol">(</a> <a id="8065" href="finite-group-theory.sign-homomorphism.html#2712" class="Function">sign-homomorphism-Fin-two</a> <a id="8091" href="finite-group-theory.sign-homomorphism.html#7550" class="Bound">n</a> <a id="8093" href="finite-group-theory.sign-homomorphism.html#7558" class="Bound">X</a> <a id="8095" href="finite-group-theory.sign-homomorphism.html#7874" class="Bound">g</a><a id="8096" class="Symbol">))</a>
   
   <a id="8104" href="finite-group-theory.sign-homomorphism.html#8104" class="Function">sign-homomorphism</a> <a id="8122" class="Symbol">:</a>
-    <a id="8128" href="group-theory.homomorphisms-groups.html#1566" class="Function">type-hom-Group</a>
+    <a id="8128" href="group-theory.homomorphisms-groups.html#1617" class="Function">type-hom-Group</a>
       <a id="8149" class="Symbol">(</a> <a id="8151" href="group-theory.symmetric-groups.html#2105" class="Function">symmetric-Group</a> <a id="8167" class="Symbol">(</a><a id="8168" href="univalent-combinatorics.equality-finite-types.html#2518" class="Function">set-UU-Fin-Level</a> <a id="8185" href="finite-group-theory.sign-homomorphism.html#7558" class="Bound">X</a><a id="8186" class="Symbol">))</a>
       <a id="8195" class="Symbol">(</a> <a id="8197" href="group-theory.symmetric-groups.html#2105" class="Function">symmetric-Group</a> <a id="8213" class="Symbol">(</a><a id="8214" href="univalent-combinatorics.equality-standard-finite-types.html#3681" class="Function">Fin-Set</a> <a id="8222" class="Number">2</a><a id="8223" class="Symbol">))</a>
   <a id="8228" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="8232" href="finite-group-theory.sign-homomorphism.html#8104" class="Function">sign-homomorphism</a> <a id="8250" class="Symbol">=</a> <a id="8252" href="finite-group-theory.sign-homomorphism.html#7591" class="Function">map-sign-homomorphism</a>
@@ -236,7 +236,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-09)(33e0b86) Merge pull request #158 from UniMath/daily-challenge by noreply
+(2022-04-10)(1290b81) Merge pull request #159 from UniMath/daily-challenge by noreply
 </pre>
 </body>
 </html>

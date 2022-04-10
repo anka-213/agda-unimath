@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/ring-theory/homomorphisms-commutative-rings.lagda.md.</p>
-<p>Version of Saturday, April  9, 2022, 08:30 AM</p>
+<p>Version of Sunday, April 10, 2022, 08:00 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -38,18 +38,18 @@
 <a id="161" class="Keyword">open</a> <a id="166" class="Keyword">import</a> <a id="173" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="200" class="Keyword">using</a> <a id="206" class="Symbol">(</a><a id="207" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="212" class="Symbol">;</a> <a id="214" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="216" class="Symbol">;</a> <a id="218" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="221" class="Symbol">)</a>
 
 <a id="224" class="Keyword">open</a> <a id="229" class="Keyword">import</a> <a id="236" href="ring-theory.commutative-rings.html" class="Module">ring-theory.commutative-rings</a> <a id="266" class="Keyword">using</a> <a id="272" class="Symbol">(</a><a id="273" href="ring-theory.commutative-rings.html#1035" class="Function">Comm-Ring</a><a id="282" class="Symbol">;</a> <a id="284" href="ring-theory.commutative-rings.html#1176" class="Function">ring-Comm-Ring</a><a id="298" class="Symbol">)</a>
-<a id="300" class="Keyword">open</a> <a id="305" class="Keyword">import</a> <a id="312" href="ring-theory.homomorphisms-rings.html" class="Module">ring-theory.homomorphisms-rings</a> <a id="344" class="Keyword">using</a> <a id="350" class="Symbol">(</a><a id="351" href="ring-theory.homomorphisms-rings.html#3484" class="Function">type-hom-Ring</a><a id="364" class="Symbol">)</a>
+<a id="300" class="Keyword">open</a> <a id="305" class="Keyword">import</a> <a id="312" href="ring-theory.homomorphisms-rings.html" class="Module">ring-theory.homomorphisms-rings</a> <a id="344" class="Keyword">using</a> <a id="350" class="Symbol">(</a><a id="351" href="ring-theory.homomorphisms-rings.html#3835" class="Function">type-hom-Ring</a><a id="364" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>A morphism of commutative rings is just a morphism between their underlying rings.</p>
 <h2 id="definition">Definition</h2>
 <pre class="Agda"><a id="type-hom-Comm-Ring"></a><a id="487" href="ring-theory.homomorphisms-commutative-rings.html#487" class="Function">type-hom-Comm-Ring</a> <a id="506" class="Symbol">:</a>
   <a id="510" class="Symbol">{</a> <a id="512" href="ring-theory.homomorphisms-commutative-rings.html#512" class="Bound">l1</a> <a id="515" href="ring-theory.homomorphisms-commutative-rings.html#515" class="Bound">l2</a> <a id="518" class="Symbol">:</a> <a id="520" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="525" class="Symbol">}</a> <a id="527" class="Symbol">→</a> <a id="529" href="ring-theory.commutative-rings.html#1035" class="Function">Comm-Ring</a> <a id="539" href="ring-theory.homomorphisms-commutative-rings.html#512" class="Bound">l1</a> <a id="542" class="Symbol">→</a> <a id="544" href="ring-theory.commutative-rings.html#1035" class="Function">Comm-Ring</a> <a id="554" href="ring-theory.homomorphisms-commutative-rings.html#515" class="Bound">l2</a> <a id="557" class="Symbol">→</a> <a id="559" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="562" class="Symbol">(</a><a id="563" href="ring-theory.homomorphisms-commutative-rings.html#512" class="Bound">l1</a> <a id="566" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="568" href="ring-theory.homomorphisms-commutative-rings.html#515" class="Bound">l2</a><a id="570" class="Symbol">)</a>
-<a id="572" href="ring-theory.homomorphisms-commutative-rings.html#487" class="Function">type-hom-Comm-Ring</a> <a id="591" href="ring-theory.homomorphisms-commutative-rings.html#591" class="Bound">R1</a> <a id="594" href="ring-theory.homomorphisms-commutative-rings.html#594" class="Bound">R2</a> <a id="597" class="Symbol">=</a> <a id="599" href="ring-theory.homomorphisms-rings.html#3484" class="Function">type-hom-Ring</a> <a id="613" class="Symbol">(</a><a id="614" href="ring-theory.commutative-rings.html#1176" class="Function">ring-Comm-Ring</a> <a id="629" href="ring-theory.homomorphisms-commutative-rings.html#591" class="Bound">R1</a><a id="631" class="Symbol">)</a> <a id="633" class="Symbol">(</a><a id="634" href="ring-theory.commutative-rings.html#1176" class="Function">ring-Comm-Ring</a> <a id="649" href="ring-theory.homomorphisms-commutative-rings.html#594" class="Bound">R2</a><a id="651" class="Symbol">)</a>
+<a id="572" href="ring-theory.homomorphisms-commutative-rings.html#487" class="Function">type-hom-Comm-Ring</a> <a id="591" href="ring-theory.homomorphisms-commutative-rings.html#591" class="Bound">R1</a> <a id="594" href="ring-theory.homomorphisms-commutative-rings.html#594" class="Bound">R2</a> <a id="597" class="Symbol">=</a> <a id="599" href="ring-theory.homomorphisms-rings.html#3835" class="Function">type-hom-Ring</a> <a id="613" class="Symbol">(</a><a id="614" href="ring-theory.commutative-rings.html#1176" class="Function">ring-Comm-Ring</a> <a id="629" href="ring-theory.homomorphisms-commutative-rings.html#591" class="Bound">R1</a><a id="631" class="Symbol">)</a> <a id="633" class="Symbol">(</a><a id="634" href="ring-theory.commutative-rings.html#1176" class="Function">ring-Comm-Ring</a> <a id="649" href="ring-theory.homomorphisms-commutative-rings.html#594" class="Bound">R2</a><a id="651" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-09)(33e0b86) Merge pull request #158 from UniMath/daily-challenge by noreply
+(2022-04-10)(1290b81) Merge pull request #159 from UniMath/daily-challenge by noreply
 </pre>
 </body>
 </html>

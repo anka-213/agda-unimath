@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/order-theory/greatest-lower-bounds-posets.lagda.md.</p>
-<p>Version of Saturday, April  9, 2022, 08:30 AM</p>
+<p>Version of Sunday, April 10, 2022, 08:00 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -38,7 +38,7 @@
 <a id="272" class="Keyword">open</a> <a id="277" class="Keyword">import</a> <a id="284" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="308" class="Keyword">using</a>
   <a id="316" class="Symbol">(</a> <a id="318" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a><a id="325" class="Symbol">;</a> <a id="327" href="foundation-core.propositions.html#1246" class="Function">is-prop</a><a id="334" class="Symbol">;</a> <a id="336" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a><a id="345" class="Symbol">;</a> <a id="347" href="foundation-core.propositions.html#1491" class="Function">is-prop-type-Prop</a><a id="364" class="Symbol">;</a> <a id="366" href="foundation-core.propositions.html#2135" class="Function">all-elements-equal</a><a id="384" class="Symbol">;</a>
     <a id="390" href="foundation-core.propositions.html#2335" class="Function">is-prop-all-elements-equal</a><a id="416" class="Symbol">;</a> <a id="418" href="foundation-core.propositions.html#5805" class="Function">prod-Prop</a><a id="427" class="Symbol">;</a> <a id="429" href="foundation.propositions.html#1941" class="Function">Π-Prop</a><a id="435" class="Symbol">;</a> <a id="437" href="foundation.propositions.html#3552" class="Function">function-Prop</a><a id="450" class="Symbol">)</a>
-<a id="452" class="Keyword">open</a> <a id="457" class="Keyword">import</a> <a id="464" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="484" class="Keyword">using</a> <a id="490" class="Symbol">(</a><a id="491" href="foundation-core.subtypes.html#2835" class="Function">eq-subtype</a><a id="501" class="Symbol">)</a>
+<a id="452" class="Keyword">open</a> <a id="457" class="Keyword">import</a> <a id="464" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="484" class="Keyword">using</a> <a id="490" class="Symbol">(</a><a id="491" href="foundation-core.subtypes.html#3210" class="Function">eq-subtype</a><a id="501" class="Symbol">)</a>
 <a id="503" class="Keyword">open</a> <a id="508" class="Keyword">import</a> <a id="515" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="542" class="Keyword">using</a> <a id="548" class="Symbol">(</a><a id="549" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="554" class="Symbol">;</a> <a id="556" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="558" class="Symbol">;</a> <a id="560" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="563" class="Symbol">)</a>
 
 <a id="566" class="Keyword">open</a> <a id="571" class="Keyword">import</a> <a id="578" href="order-theory.posets.html" class="Module">order-theory.posets</a> <a id="598" class="Keyword">using</a>
@@ -97,7 +97,7 @@
     <a id="2570" class="Symbol">(</a><a id="2571" href="order-theory.greatest-lower-bounds-posets.html#2571" class="Bound">x</a> <a id="2573" href="order-theory.greatest-lower-bounds-posets.html#2573" class="Bound">y</a> <a id="2575" class="Symbol">:</a> <a id="2577" href="order-theory.posets.html#1145" class="Function">element-Poset</a> <a id="2591" href="order-theory.greatest-lower-bounds-posets.html#1038" class="Bound">P</a><a id="2592" class="Symbol">)</a> <a id="2594" class="Symbol">→</a>
     <a id="2600" href="foundation-core.propositions.html#2135" class="Function">all-elements-equal</a> <a id="2619" class="Symbol">(</a><a id="2620" href="order-theory.greatest-lower-bounds-posets.html#2336" class="Function">has-greatest-lower-bound-Poset</a> <a id="2651" href="order-theory.greatest-lower-bounds-posets.html#2571" class="Bound">x</a> <a id="2653" href="order-theory.greatest-lower-bounds-posets.html#2573" class="Bound">y</a><a id="2654" class="Symbol">)</a>
   <a id="2658" href="order-theory.greatest-lower-bounds-posets.html#2514" class="Function">all-elements-equal-has-greatest-lower-bound-Poset</a> <a id="2708" href="order-theory.greatest-lower-bounds-posets.html#2708" class="Bound">x</a> <a id="2710" href="order-theory.greatest-lower-bounds-posets.html#2710" class="Bound">y</a> <a id="2712" class="Symbol">(</a><a id="2713" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="2718" href="order-theory.greatest-lower-bounds-posets.html#2718" class="Bound">u</a> <a id="2720" href="order-theory.greatest-lower-bounds-posets.html#2720" class="Bound">H</a><a id="2721" class="Symbol">)</a> <a id="2723" class="Symbol">(</a><a id="2724" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="2729" href="order-theory.greatest-lower-bounds-posets.html#2729" class="Bound">v</a> <a id="2731" href="order-theory.greatest-lower-bounds-posets.html#2731" class="Bound">K</a><a id="2732" class="Symbol">)</a> <a id="2734" class="Symbol">=</a>
-    <a id="2740" href="foundation-core.subtypes.html#2835" class="Function">eq-subtype</a>
+    <a id="2740" href="foundation-core.subtypes.html#3210" class="Function">eq-subtype</a>
       <a id="2757" class="Symbol">(</a> <a id="2759" href="order-theory.greatest-lower-bounds-posets.html#1573" class="Function">is-greatest-lower-bound-poset-Prop</a> <a id="2794" href="order-theory.greatest-lower-bounds-posets.html#2708" class="Bound">x</a> <a id="2796" href="order-theory.greatest-lower-bounds-posets.html#2710" class="Bound">y</a><a id="2797" class="Symbol">)</a>
       <a id="2805" class="Symbol">(</a> <a id="2807" href="order-theory.posets.html#1983" class="Function">antisymmetric-leq-Poset</a> <a id="2831" href="order-theory.greatest-lower-bounds-posets.html#1038" class="Bound">P</a> <a id="2833" href="order-theory.greatest-lower-bounds-posets.html#2718" class="Bound">u</a> <a id="2835" href="order-theory.greatest-lower-bounds-posets.html#2729" class="Bound">v</a>
         <a id="2845" class="Symbol">(</a> <a id="2847" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="2851" href="order-theory.greatest-lower-bounds-posets.html#2731" class="Bound">K</a> <a id="2853" href="order-theory.greatest-lower-bounds-posets.html#2718" class="Bound">u</a> <a id="2855" class="Symbol">(</a><a id="2856" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="2860" href="order-theory.greatest-lower-bounds-posets.html#2720" class="Bound">H</a><a id="2861" class="Symbol">))</a>
@@ -118,7 +118,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-09)(33e0b86) Merge pull request #158 from UniMath/daily-challenge by noreply
+(2022-04-10)(1290b81) Merge pull request #159 from UniMath/daily-challenge by noreply
 </pre>
 </body>
 </html>
