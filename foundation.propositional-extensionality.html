@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/propositional-extensionality.lagda.md.</p>
-<p>Version of Friday, April 15, 2022, 03:49 PM</p>
+<p>Version of Thursday, April 21, 2022, 08:52 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -62,7 +62,7 @@
   <a id="1501" class="Symbol">(</a> <a id="1503" href="foundation-core.type-arithmetic-cartesian-product-types.html#3194" class="Function">right-unit-law-prod-is-contr</a><a id="1531" class="Symbol">;</a> <a id="1533" href="foundation-core.type-arithmetic-cartesian-product-types.html#3403" class="Function">left-unit-law-prod-is-contr</a><a id="1560" class="Symbol">)</a>
 <a id="1562" class="Keyword">open</a> <a id="1567" class="Keyword">import</a> <a id="1574" href="foundation.unit-type.html" class="Module">foundation.unit-type</a> <a id="1595" class="Keyword">using</a>
   <a id="1603" class="Symbol">(</a> <a id="1605" href="foundation.unit-type.html#3112" class="Function">raise-unit-Prop</a><a id="1620" class="Symbol">;</a> <a id="1622" href="foundation.unit-type.html#1298" class="Function">raise-star</a><a id="1632" class="Symbol">;</a> <a id="1634" href="foundation.unit-type.html#2797" class="Function">is-contr-raise-unit</a><a id="1653" class="Symbol">;</a> <a id="1655" href="foundation.unit-type.html#2965" class="Function">is-prop-raise-unit</a><a id="1673" class="Symbol">)</a>
-<a id="1675" class="Keyword">open</a> <a id="1680" class="Keyword">import</a> <a id="1687" href="foundation.univalence.html" class="Module">foundation.univalence</a> <a id="1709" class="Keyword">using</a> <a id="1715" class="Symbol">(</a><a id="1716" href="foundation.univalence.html#1331" class="Function">is-contr-total-equiv</a><a id="1736" class="Symbol">)</a>
+<a id="1675" class="Keyword">open</a> <a id="1680" class="Keyword">import</a> <a id="1687" href="foundation.univalence.html" class="Module">foundation.univalence</a> <a id="1709" class="Keyword">using</a> <a id="1715" class="Symbol">(</a><a id="1716" href="foundation.univalence.html#1532" class="Function">is-contr-total-equiv</a><a id="1736" class="Symbol">)</a>
 <a id="1738" class="Keyword">open</a> <a id="1743" class="Keyword">import</a> <a id="1750" href="foundation.universal-property-empty-type.html" class="Module">foundation.universal-property-empty-type</a> <a id="1791" class="Keyword">using</a>
   <a id="1799" class="Symbol">(</a> <a id="1801" href="foundation.universal-property-empty-type.html#1994" class="Function">universal-property-empty-is-empty</a><a id="1834" class="Symbol">)</a>
 <a id="1836" class="Keyword">open</a> <a id="1841" class="Keyword">import</a> <a id="1848" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="1875" class="Keyword">using</a> <a id="1881" class="Symbol">(</a><a id="1882" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1887" class="Symbol">;</a> <a id="1889" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="1893" class="Symbol">)</a>
@@ -83,7 +83,7 @@
         <a id="2317" class="Symbol">(</a> <a id="2319" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="2321" class="Symbol">(</a><a id="2322" href="foundation-core.propositions.html#1322" class="Function">UU-Prop</a> <a id="2330" href="foundation.propositional-extensionality.html#2137" class="Bound">l1</a><a id="2332" class="Symbol">)</a> <a id="2334" class="Symbol">(λ</a> <a id="2337" href="foundation.propositional-extensionality.html#2337" class="Bound">Q</a> <a id="2339" class="Symbol">→</a> <a id="2341" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a> <a id="2351" href="foundation.propositional-extensionality.html#2284" class="Bound">P</a> <a id="2353" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="2355" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a> <a id="2365" href="foundation.propositional-extensionality.html#2337" class="Bound">Q</a><a id="2366" class="Symbol">))</a>
         <a id="2377" class="Symbol">(</a> <a id="2379" href="foundation-core.functoriality-dependent-pair-types.html#6804" class="Function">equiv-tot</a> <a id="2389" class="Symbol">(</a><a id="2390" href="foundation.logical-equivalences.html#1534" class="Function">equiv-equiv-iff</a> <a id="2406" href="foundation.propositional-extensionality.html#2284" class="Bound">P</a><a id="2407" class="Symbol">))</a>
         <a id="2418" class="Symbol">(</a> <a id="2420" href="foundation-core.subtype-identity-principle.html#1572" class="Function">is-contr-total-Eq-subtype</a>
-          <a id="2456" class="Symbol">(</a> <a id="2458" href="foundation.univalence.html#1331" class="Function">is-contr-total-equiv</a> <a id="2479" class="Symbol">(</a><a id="2480" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a> <a id="2490" href="foundation.propositional-extensionality.html#2284" class="Bound">P</a><a id="2491" class="Symbol">))</a>
+          <a id="2456" class="Symbol">(</a> <a id="2458" href="foundation.univalence.html#1532" class="Function">is-contr-total-equiv</a> <a id="2479" class="Symbol">(</a><a id="2480" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a> <a id="2490" href="foundation.propositional-extensionality.html#2284" class="Bound">P</a><a id="2491" class="Symbol">))</a>
           <a id="2504" class="Symbol">(</a> <a id="2506" href="foundation.propositions.html#1170" class="Function">is-prop-is-prop</a><a id="2521" class="Symbol">)</a>
           <a id="2533" class="Symbol">(</a> <a id="2535" href="foundation-core.propositions.html#1424" class="Function">type-Prop</a> <a id="2545" href="foundation.propositional-extensionality.html#2284" class="Bound">P</a><a id="2546" class="Symbol">)</a>
           <a id="2558" class="Symbol">(</a> <a id="2560" href="foundation-core.equivalences.html#2480" class="Function">id-equiv</a><a id="2568" class="Symbol">)</a>
@@ -169,7 +169,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-15)(4d76ac6) Update README.lagda.md by noreply
+(2022-04-21)(93245e0) Merge pull request #168 from LeoMangel/leomangel by noreply
 </pre>
 </body>
 </html>
