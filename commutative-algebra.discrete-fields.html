@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/commutative-algebra/discrete-fields.lagda.md.</p>
-<p>Version of Friday, April 22, 2022, 10:45 AM</p>
+<p>Version of Friday, April 22, 2022, 02:58 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -36,22 +36,23 @@
 <a id="84" class="Keyword">module</a> <a id="91" href="commutative-algebra.discrete-fields.html" class="Module">commutative-algebra.discrete-fields</a> <a id="127" class="Keyword">where</a>
 
 <a id="134" class="Keyword">open</a> <a id="139" class="Keyword">import</a> <a id="146" href="commutative-algebra.commutative-rings.html" class="Module">commutative-algebra.commutative-rings</a> <a id="184" class="Keyword">using</a>
-  <a id="192" class="Symbol">(</a> <a id="194" href="commutative-algebra.commutative-rings.html#1043" class="Function">Comm-Ring</a><a id="203" class="Symbol">;</a> <a id="205" href="commutative-algebra.commutative-rings.html#1184" class="Function">ring-Comm-Ring</a><a id="219" class="Symbol">)</a>
+  <a id="192" class="Symbol">(</a> <a id="194" href="commutative-algebra.commutative-rings.html#1043" class="Function">Commutative-Ring</a><a id="210" class="Symbol">;</a> <a id="212" href="commutative-algebra.commutative-rings.html#1205" class="Function">ring-Commutative-Ring</a><a id="233" class="Symbol">)</a>
 
-<a id="222" class="Keyword">open</a> <a id="227" class="Keyword">import</a> <a id="234" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="261" class="Keyword">using</a> <a id="267" class="Symbol">(</a><a id="268" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="273" class="Symbol">;</a> <a id="275" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="277" class="Symbol">)</a>
+<a id="236" class="Keyword">open</a> <a id="241" class="Keyword">import</a> <a id="248" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="275" class="Keyword">using</a> <a id="281" class="Symbol">(</a><a id="282" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="287" class="Symbol">;</a> <a id="289" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="291" class="Symbol">)</a>
 
-<a id="280" class="Keyword">open</a> <a id="285" class="Keyword">import</a> <a id="292" href="ring-theory.division-rings.html" class="Module">ring-theory.division-rings</a> <a id="319" class="Keyword">using</a> <a id="325" class="Symbol">(</a><a id="326" href="ring-theory.division-rings.html#662" class="Function">is-division-Ring</a><a id="342" class="Symbol">)</a>
+<a id="294" class="Keyword">open</a> <a id="299" class="Keyword">import</a> <a id="306" href="ring-theory.division-rings.html" class="Module">ring-theory.division-rings</a> <a id="333" class="Keyword">using</a> <a id="339" class="Symbol">(</a><a id="340" href="ring-theory.division-rings.html#662" class="Function">is-division-Ring</a><a id="356" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>A discrete field is a commutative division ring. They are called discrete, because only nonzero elements are assumed to be invertible.</p>
 <h2 id="definition">Definition</h2>
-<pre class="Agda"><a id="is-discrete-field-Comm-Ring"></a><a id="517" href="commutative-algebra.discrete-fields.html#517" class="Function">is-discrete-field-Comm-Ring</a> <a id="545" class="Symbol">:</a>
-  <a id="549" class="Symbol">{</a> <a id="551" href="commutative-algebra.discrete-fields.html#551" class="Bound">l</a> <a id="553" class="Symbol">:</a> <a id="555" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="560" class="Symbol">}</a> <a id="562" class="Symbol">→</a> <a id="564" href="commutative-algebra.commutative-rings.html#1043" class="Function">Comm-Ring</a> <a id="574" href="commutative-algebra.discrete-fields.html#551" class="Bound">l</a> <a id="576" class="Symbol">→</a> <a id="578" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="581" href="commutative-algebra.discrete-fields.html#551" class="Bound">l</a>
-<a id="583" href="commutative-algebra.discrete-fields.html#517" class="Function">is-discrete-field-Comm-Ring</a> <a id="611" href="commutative-algebra.discrete-fields.html#611" class="Bound">R</a> <a id="613" class="Symbol">=</a> <a id="615" href="ring-theory.division-rings.html#662" class="Function">is-division-Ring</a> <a id="632" class="Symbol">(</a><a id="633" href="commutative-algebra.commutative-rings.html#1184" class="Function">ring-Comm-Ring</a> <a id="648" href="commutative-algebra.discrete-fields.html#611" class="Bound">R</a><a id="649" class="Symbol">)</a>
+<pre class="Agda"><a id="is-discrete-field-Commutative-Ring"></a><a id="531" href="commutative-algebra.discrete-fields.html#531" class="Function">is-discrete-field-Commutative-Ring</a> <a id="566" class="Symbol">:</a>
+  <a id="570" class="Symbol">{</a> <a id="572" href="commutative-algebra.discrete-fields.html#572" class="Bound">l</a> <a id="574" class="Symbol">:</a> <a id="576" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="581" class="Symbol">}</a> <a id="583" class="Symbol">→</a> <a id="585" href="commutative-algebra.commutative-rings.html#1043" class="Function">Commutative-Ring</a> <a id="602" href="commutative-algebra.discrete-fields.html#572" class="Bound">l</a> <a id="604" class="Symbol">→</a> <a id="606" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="609" href="commutative-algebra.discrete-fields.html#572" class="Bound">l</a>
+<a id="611" href="commutative-algebra.discrete-fields.html#531" class="Function">is-discrete-field-Commutative-Ring</a> <a id="646" href="commutative-algebra.discrete-fields.html#646" class="Bound">R</a> <a id="648" class="Symbol">=</a>
+  <a id="652" href="ring-theory.division-rings.html#662" class="Function">is-division-Ring</a> <a id="669" class="Symbol">(</a><a id="670" href="commutative-algebra.commutative-rings.html#1205" class="Function">ring-Commutative-Ring</a> <a id="692" href="commutative-algebra.discrete-fields.html#646" class="Bound">R</a><a id="693" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-04-22)(9db2193) Merge pull request #172 from EgbertRijke/ljubljana by noreply
+(2022-04-22)(be906f9) Merge pull request #173 from EgbertRijke/ljubljana by noreply
 </pre>
 </body>
 </html>
