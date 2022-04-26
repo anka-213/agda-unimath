@@ -7,7 +7,7 @@ title: Counting the elements of the fiber of a map
 <a id="112" class="Keyword">module</a> <a id="119" href="univalent-combinatorics.counting-fibers-of-maps.html" class="Module">univalent-combinatorics.counting-fibers-of-maps</a> <a id="167" class="Keyword">where</a>
 
 <a id="174" class="Keyword">open</a> <a id="179" class="Keyword">import</a> <a id="186" href="elementary-number-theory.sums-of-natural-numbers.html" class="Module">elementary-number-theory.sums-of-natural-numbers</a> <a id="235" class="Keyword">using</a>
-  <a id="243" class="Symbol">(</a> <a id="245" href="elementary-number-theory.sums-of-natural-numbers.html#1573" class="Function">sum-count-ℕ</a><a id="256" class="Symbol">)</a>
+  <a id="243" class="Symbol">(</a> <a id="245" href="elementary-number-theory.sums-of-natural-numbers.html#1640" class="Function">sum-count-ℕ</a><a id="256" class="Symbol">)</a>
 
 <a id="259" class="Keyword">open</a> <a id="264" class="Keyword">import</a> <a id="271" href="foundation.fibers-of-maps.html" class="Module">foundation.fibers-of-maps</a> <a id="297" class="Keyword">using</a> <a id="303" class="Symbol">(</a><a id="304" href="foundation-core.fibers-of-maps.html#928" class="Function">fib</a><a id="307" class="Symbol">;</a> <a id="309" href="foundation-core.fibers-of-maps.html#5261" class="Function">equiv-total-fib</a><a id="324" class="Symbol">)</a>
 <a id="326" class="Keyword">open</a> <a id="331" class="Keyword">import</a> <a id="338" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="364" class="Keyword">using</a> <a id="370" class="Symbol">(</a><a id="371" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="373" class="Symbol">)</a>
