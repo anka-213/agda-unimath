@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>The groupoid of main classes of Latin hypercubes</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/univalent-combinatorics/main-classes-of-latin-hypercubes.lagda.md.</p>
+<p>Version of Monday, May  2, 2022, 06:49 AM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">The groupoid of main classes of Latin hypercubes</h1>
+</header>
+<pre class="Agda"><a id="74" class="Symbol">{-#</a> <a id="78" class="Keyword">OPTIONS</a> <a id="86" class="Pragma">--without-K</a> <a id="98" class="Pragma">--exact-split</a> <a id="112" class="Symbol">#-}</a>
+
+<a id="117" class="Keyword">module</a> <a id="124" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html" class="Module">univalent-combinatorics.main-classes-of-latin-hypercubes</a> <a id="181" class="Keyword">where</a>
+
+<a id="188" class="Keyword">open</a> <a id="193" class="Keyword">import</a> <a id="200" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+
+<a id="242" class="Keyword">open</a> <a id="247" class="Keyword">import</a> <a id="254" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a>
+<a id="284" class="Keyword">open</a> <a id="289" class="Keyword">import</a> <a id="296" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="328" class="Keyword">open</a> <a id="333" class="Keyword">import</a> <a id="340" href="foundation.products-unordered-tuples-of-types.html" class="Module">foundation.products-unordered-tuples-of-types</a>
+<a id="386" class="Keyword">open</a> <a id="391" class="Keyword">import</a> <a id="398" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="425" class="Keyword">open</a> <a id="430" class="Keyword">import</a> <a id="437" href="foundation.unordered-tuples.html" class="Module">foundation.unordered-tuples</a>
+<a id="465" class="Keyword">open</a> <a id="470" class="Keyword">import</a> <a id="477" href="foundation.unordered-tuples-of-types.html" class="Module">foundation.unordered-tuples-of-types</a>
+</pre>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="Main-Class-Latin-Hypercube"></a><a id="542" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#542" class="Function">Main-Class-Latin-Hypercube</a> <a id="569" class="Symbol">:</a> <a id="571" class="Symbol">(</a><a id="572" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#572" class="Bound">l1</a> <a id="575" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#575" class="Bound">l2</a> <a id="578" class="Symbol">:</a> <a id="580" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="585" class="Symbol">)</a> <a id="587" class="Symbol">(</a><a id="588" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#588" class="Bound">n</a> <a id="590" class="Symbol">:</a> <a id="592" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="593" class="Symbol">)</a> <a id="595" class="Symbol">→</a> <a id="597" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="600" class="Symbol">(</a><a id="601" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="606" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#572" class="Bound">l1</a> <a id="609" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="611" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="616" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#575" class="Bound">l2</a><a id="618" class="Symbol">)</a>
+<a id="620" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#542" class="Function">Main-Class-Latin-Hypercube</a> <a id="647" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#647" class="Bound">l1</a> <a id="650" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#650" class="Bound">l2</a> <a id="653" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#653" class="Bound">n</a> <a id="655" class="Symbol">=</a>
+  <a id="659" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="661" class="Symbol">(</a> <a id="663" href="foundation.unordered-tuples-of-types.html#780" class="Function">unordered-tuple-types</a> <a id="685" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#647" class="Bound">l1</a> <a id="688" class="Symbol">(</a><a id="689" href="elementary-number-theory.natural-numbers.html#1478" class="InductiveConstructor">succ-ℕ</a> <a id="696" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#653" class="Bound">n</a><a id="697" class="Symbol">))</a>
+    <a id="704" class="Symbol">(</a> <a id="706" class="Symbol">λ</a> <a id="708" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#708" class="Bound">A</a> <a id="710" class="Symbol">→</a>
+      <a id="718" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="720" class="Symbol">(</a> <a id="722" href="foundation.products-unordered-tuples-of-types.html#1258" class="Function">product-unordered-tuple-types</a> <a id="752" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#708" class="Bound">A</a> <a id="754" class="Symbol">→</a> <a id="756" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="759" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#650" class="Bound">l2</a><a id="761" class="Symbol">)</a>
+        <a id="771" class="Symbol">(</a> <a id="773" class="Symbol">λ</a> <a id="775" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#775" class="Bound">R</a> <a id="777" class="Symbol">→</a>
+          <a id="789" class="Symbol">(</a> <a id="791" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#791" class="Bound">i</a> <a id="793" class="Symbol">:</a> <a id="795" href="foundation.unordered-tuples.html#1474" class="Function">type-unordered-tuple</a> <a id="816" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#708" class="Bound">A</a><a id="817" class="Symbol">)</a>
+          <a id="829" class="Symbol">(</a> <a id="831" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#831" class="Bound">f</a> <a id="833" class="Symbol">:</a> <a id="835" href="foundation.products-unordered-tuples-of-types.html#1258" class="Function">product-unordered-tuple-types</a>
+                <a id="881" class="Symbol">(</a><a id="882" href="foundation.unordered-tuples.html#2981" class="Function">unordered-tuple-complement-point-type-unordered-tuple</a> <a id="936" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#708" class="Bound">A</a> <a id="938" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#791" class="Bound">i</a><a id="939" class="Symbol">))</a> <a id="942" class="Symbol">→</a>
+          <a id="954" href="foundation-core.contractible-types.html#925" class="Function">is-contr</a>
+            <a id="975" class="Symbol">(</a> <a id="977" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="979" class="Symbol">(</a> <a id="981" href="foundation.unordered-tuples.html#2150" class="Function">element-unordered-tuple</a> <a id="1005" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#708" class="Bound">A</a> <a id="1007" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#791" class="Bound">i</a><a id="1008" class="Symbol">)</a>
+                <a id="1026" class="Symbol">(</a> <a id="1028" class="Symbol">λ</a> <a id="1030" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#1030" class="Bound">a</a> <a id="1032" class="Symbol">→</a>
+                  <a id="1052" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#775" class="Bound">R</a> <a id="1054" class="Symbol">(</a><a id="1055" href="foundation.products-unordered-tuples-of-types.html#2420" class="Function">map-equiv-pr-product-unordered-tuple-types</a> <a id="1098" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#708" class="Bound">A</a> <a id="1100" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#791" class="Bound">i</a> <a id="1102" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#831" class="Bound">f</a> <a id="1104" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html#1030" class="Bound">a</a><a id="1105" class="Symbol">)))))</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-05-02)(1e838d6) Merge pull request #177 from EgbertRijke/daily-challenge by noreply
+</pre>
+</body>
+</html>
