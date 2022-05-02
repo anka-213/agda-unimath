@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/orientations-cubes.lagda.md.</p>
-<p>Version of Monday, May  2, 2022, 06:49 AM</p>
+<p>Version of Monday, May  2, 2022, 11:19 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -49,7 +49,7 @@
 <a id="675" class="Keyword">open</a> <a id="680" class="Keyword">import</a> <a id="687" href="univalent-combinatorics.equality-finite-types.html" class="Module">univalent-combinatorics.equality-finite-types</a> <a id="733" class="Keyword">using</a>
   <a id="741" class="Symbol">(</a> <a id="743" href="univalent-combinatorics.equality-finite-types.html#3342" class="Function">is-finite-eq</a><a id="755" class="Symbol">;</a> <a id="757" href="univalent-combinatorics.equality-finite-types.html#1988" class="Function">has-decidable-equality-is-finite</a><a id="789" class="Symbol">)</a>
 <a id="791" class="Keyword">open</a> <a id="796" class="Keyword">import</a> <a id="803" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="840" class="Keyword">using</a>
-  <a id="848" class="Symbol">(</a> <a id="850" href="univalent-combinatorics.finite-types.html#12377" class="Function">number-of-elements-is-finite</a><a id="878" class="Symbol">;</a> <a id="880" href="univalent-combinatorics.finite-types.html#7055" class="Function">is-finite-empty</a><a id="895" class="Symbol">)</a>
+  <a id="848" class="Symbol">(</a> <a id="850" href="univalent-combinatorics.finite-types.html#13313" class="Function">number-of-elements-is-finite</a><a id="878" class="Symbol">;</a> <a id="880" href="univalent-combinatorics.finite-types.html#7404" class="Function">is-finite-empty</a><a id="895" class="Symbol">)</a>
 <a id="897" class="Keyword">open</a> <a id="902" class="Keyword">import</a> <a id="909" href="univalent-combinatorics.function-types.html" class="Module">univalent-combinatorics.function-types</a> <a id="948" class="Keyword">using</a>
   <a id="956" class="Symbol">(</a> <a id="958" href="univalent-combinatorics.function-types.html#1212" class="Function">is-finite-function-type</a><a id="981" class="Symbol">)</a>
 <a id="983" class="Keyword">open</a> <a id="988" class="Keyword">import</a> <a id="995" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="1041" class="Keyword">using</a>
@@ -62,7 +62,7 @@
     <a id="1201" class="Symbol">(</a> <a id="1203" class="Symbol">λ</a> <a id="1205" href="univalent-combinatorics.orientations-cubes.html#1205" class="Bound">h</a> <a id="1207" class="Symbol">→</a>
       <a id="1215" class="Symbol">(</a> <a id="1217" href="univalent-combinatorics.orientations-cubes.html#1217" class="Bound">x</a> <a id="1219" href="univalent-combinatorics.orientations-cubes.html#1219" class="Bound">y</a> <a id="1221" class="Symbol">:</a> <a id="1223" href="univalent-combinatorics.cubes.html#2202" class="Function">vertex-cube</a> <a id="1235" href="univalent-combinatorics.orientations-cubes.html#1164" class="Bound">X</a><a id="1236" class="Symbol">)</a> <a id="1238" class="Symbol">→</a>
         <a id="1248" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="1251" class="Symbol">(</a> <a id="1253" href="elementary-number-theory.iterating-functions.html#1086" class="Function">iterate</a>
-             <a id="1274" class="Symbol">(</a> <a id="1276" href="univalent-combinatorics.finite-types.html#12377" class="Function">number-of-elements-is-finite</a>
+             <a id="1274" class="Symbol">(</a> <a id="1276" href="univalent-combinatorics.finite-types.html#13313" class="Function">number-of-elements-is-finite</a>
                <a id="1320" class="Symbol">(</a> <a id="1322" href="univalent-combinatorics.dependent-sum-finite-types.html#2494" class="Function">is-finite-Σ</a>
                  <a id="1351" class="Symbol">(</a> <a id="1353" href="univalent-combinatorics.cubes.html#1270" class="Function">is-finite-dim-cube</a> <a id="1372" href="univalent-combinatorics.orientations-cubes.html#1164" class="Bound">X</a><a id="1373" class="Symbol">)</a>
                  <a id="1392" class="Symbol">(</a> <a id="1394" class="Symbol">λ</a> <a id="1396" href="univalent-combinatorics.orientations-cubes.html#1396" class="Bound">d</a> <a id="1398" class="Symbol">→</a>
@@ -72,14 +72,14 @@
                          <a id="1562" class="Symbol">(</a> <a id="1564" href="univalent-combinatorics.cubes.html#1990" class="Function">is-finite-axis-cube</a> <a id="1584" href="univalent-combinatorics.orientations-cubes.html#1164" class="Bound">X</a> <a id="1586" href="univalent-combinatorics.orientations-cubes.html#1396" class="Bound">d</a><a id="1587" class="Symbol">))</a>
                      <a id="1611" class="Symbol">{</a> <a id="1613" href="univalent-combinatorics.orientations-cubes.html#1217" class="Bound">x</a> <a id="1615" href="univalent-combinatorics.orientations-cubes.html#1396" class="Bound">d</a><a id="1616" class="Symbol">}</a>
                      <a id="1639" class="Symbol">{</a> <a id="1641" href="univalent-combinatorics.orientations-cubes.html#1219" class="Bound">y</a> <a id="1643" href="univalent-combinatorics.orientations-cubes.html#1396" class="Bound">d</a><a id="1644" class="Symbol">})</a>
-                     <a id="1668" class="Symbol">(</a> <a id="1670" href="univalent-combinatorics.finite-types.html#7055" class="Function">is-finite-empty</a><a id="1685" class="Symbol">))))</a>
+                     <a id="1668" class="Symbol">(</a> <a id="1670" href="univalent-combinatorics.finite-types.html#7404" class="Function">is-finite-empty</a><a id="1685" class="Symbol">))))</a>
              <a id="1703" class="Symbol">(</a> <a id="1705" href="univalent-combinatorics.standard-finite-types.html#7604" class="Function">succ-Fin</a><a id="1713" class="Symbol">)</a>
              <a id="1728" class="Symbol">(</a> <a id="1730" href="univalent-combinatorics.orientations-cubes.html#1205" class="Bound">h</a> <a id="1732" href="univalent-combinatorics.orientations-cubes.html#1217" class="Bound">x</a><a id="1733" class="Symbol">))</a>
            <a id="1747" class="Symbol">(</a> <a id="1749" href="univalent-combinatorics.orientations-cubes.html#1205" class="Bound">h</a> <a id="1751" href="univalent-combinatorics.orientations-cubes.html#1219" class="Bound">y</a><a id="1752" class="Symbol">))</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-02)(1e838d6) Merge pull request #177 from EgbertRijke/daily-challenge by noreply
+(2022-05-02)(6861f6e) Merge pull request #178 from EgbertRijke/daily-challenge by noreply
 </pre>
 </body>
 </html>
