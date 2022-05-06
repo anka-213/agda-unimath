@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/finite-group-theory/permutations.lagda.md.</p>
-<p>Version of Monday, May  2, 2022, 11:18 AM</p>
+<p>Version of Friday, May  6, 2022, 08:33 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -104,7 +104,7 @@
 <a id="3961" class="Keyword">open</a> <a id="3966" class="Keyword">import</a> <a id="3973" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="3997" class="Keyword">using</a> <a id="4003" class="Symbol">(</a><a id="4004" href="group-theory.semigroups.html#881" class="Function">set-Semigroup</a><a id="4017" class="Symbol">;</a> <a id="4019" href="group-theory.semigroups.html#1215" class="Function">mul-Semigroup</a><a id="4032" class="Symbol">)</a>
 <a id="4034" class="Keyword">open</a> <a id="4039" class="Keyword">import</a> <a id="4046" href="group-theory.subgroups-generated-by-subsets-groups.html" class="Module">group-theory.subgroups-generated-by-subsets-groups</a> <a id="4097" class="Keyword">using</a>
   <a id="4105" class="Symbol">(</a> <a id="4107" href="group-theory.subgroups-generated-by-subsets-groups.html#11007" class="Function">is-generating-subset-Group</a><a id="4133" class="Symbol">;</a> <a id="4135" href="group-theory.subgroups-generated-by-subsets-groups.html#6698" class="Function">subset-subgroup-subset-Group</a><a id="4163" class="Symbol">;</a> <a id="4165" href="group-theory.subgroups-generated-by-subsets-groups.html#2652" class="Function">ev-formal-combination-subset-Group</a><a id="4199" class="Symbol">)</a>
-<a id="4201" class="Keyword">open</a> <a id="4206" class="Keyword">import</a> <a id="4213" href="group-theory.symmetric-groups.html" class="Module">group-theory.symmetric-groups</a> <a id="4243" class="Keyword">using</a> <a id="4249" class="Symbol">(</a><a id="4250" href="group-theory.symmetric-groups.html#3442" class="Function">symmetric-Group</a><a id="4265" class="Symbol">)</a>
+<a id="4201" class="Keyword">open</a> <a id="4206" class="Keyword">import</a> <a id="4213" href="group-theory.symmetric-groups.html" class="Module">group-theory.symmetric-groups</a> <a id="4243" class="Keyword">using</a> <a id="4249" class="Symbol">(</a><a id="4250" href="group-theory.symmetric-groups.html#3491" class="Function">symmetric-Group</a><a id="4265" class="Symbol">)</a>
 
 <a id="4268" class="Keyword">open</a> <a id="4273" class="Keyword">import</a> <a id="4280" href="univalent-combinatorics.2-element-decidable-subtypes.html" class="Module">univalent-combinatorics.2-element-decidable-subtypes</a> <a id="4333" class="Keyword">using</a>
   <a id="4341" class="Symbol">(</a> <a id="4343" href="univalent-combinatorics.2-element-decidable-subtypes.html#10197" class="Function">standard-2-Element-Decidable-Subtype</a><a id="4379" class="Symbol">;</a> <a id="4381" href="univalent-combinatorics.2-element-decidable-subtypes.html#4438" class="Function">2-Element-Decidable-Subtype</a><a id="4408" class="Symbol">)</a>
@@ -416,13 +416,13 @@
 
   <a id="18516" href="finite-group-theory.permutations.html#18516" class="Function">is-generated-transposition-symmetric-Fin-Level</a> <a id="18563" class="Symbol">:</a>
     <a id="18569" href="group-theory.subgroups-generated-by-subsets-groups.html#11007" class="Function">is-generating-subset-Group</a>
-      <a id="18602" class="Symbol">(</a> <a id="18604" href="group-theory.symmetric-groups.html#3442" class="Function">symmetric-Group</a> <a id="18620" class="Symbol">(</a><a id="18621" href="univalent-combinatorics.equality-finite-types.html#2538" class="Function">set-UU-Fin-Level</a> <a id="18638" href="finite-group-theory.permutations.html#18482" class="Bound">X</a><a id="18639" class="Symbol">))</a>
+      <a id="18602" class="Symbol">(</a> <a id="18604" href="group-theory.symmetric-groups.html#3491" class="Function">symmetric-Group</a> <a id="18620" class="Symbol">(</a><a id="18621" href="univalent-combinatorics.equality-finite-types.html#2538" class="Function">set-UU-Fin-Level</a> <a id="18638" href="finite-group-theory.permutations.html#18482" class="Bound">X</a><a id="18639" class="Symbol">))</a>
       <a id="18648" class="Symbol">(</a> <a id="18650" href="finite-group-theory.transpositions.html#8340" class="Function">is-transposition-permutation-Prop</a><a id="18683" class="Symbol">)</a>
   <a id="18687" href="finite-group-theory.permutations.html#18516" class="Function">is-generated-transposition-symmetric-Fin-Level</a> <a id="18734" href="finite-group-theory.permutations.html#18734" class="Bound">f</a> <a id="18736" class="Symbol">_</a> <a id="18738" class="Symbol">=</a>
     <a id="18744" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a>
       <a id="18786" class="Symbol">(</a> <a id="18788" href="univalent-combinatorics.finite-types.html#5170" class="Function">has-cardinality-type-UU-Fin-Level</a> <a id="18822" href="finite-group-theory.permutations.html#18482" class="Bound">X</a><a id="18823" class="Symbol">)</a>
       <a id="18831" class="Symbol">(</a> <a id="18833" href="group-theory.subgroups-generated-by-subsets-groups.html#6698" class="Function">subset-subgroup-subset-Group</a>
-        <a id="18870" class="Symbol">(</a> <a id="18872" href="group-theory.symmetric-groups.html#3442" class="Function">symmetric-Group</a> <a id="18888" class="Symbol">(</a><a id="18889" href="univalent-combinatorics.equality-finite-types.html#2538" class="Function">set-UU-Fin-Level</a> <a id="18906" href="finite-group-theory.permutations.html#18482" class="Bound">X</a><a id="18907" class="Symbol">))</a>
+        <a id="18870" class="Symbol">(</a> <a id="18872" href="group-theory.symmetric-groups.html#3491" class="Function">symmetric-Group</a> <a id="18888" class="Symbol">(</a><a id="18889" href="univalent-combinatorics.equality-finite-types.html#2538" class="Function">set-UU-Fin-Level</a> <a id="18906" href="finite-group-theory.permutations.html#18482" class="Bound">X</a><a id="18907" class="Symbol">))</a>
         <a id="18918" class="Symbol">(</a> <a id="18920" href="finite-group-theory.transpositions.html#8340" class="Function">is-transposition-permutation-Prop</a><a id="18953" class="Symbol">)</a>
         <a id="18963" class="Symbol">(</a> <a id="18965" href="finite-group-theory.permutations.html#18734" class="Bound">f</a><a id="18966" class="Symbol">))</a>
       <a id="18975" class="Symbol">(</a> <a id="18977" class="Symbol">λ</a> <a id="18979" href="finite-group-theory.permutations.html#18979" class="Bound">h</a> <a id="18981" class="Symbol">→</a>
@@ -437,7 +437,7 @@
     <a id="19462" href="finite-group-theory.permutations.html#19462" class="Function">lemma</a> <a id="19468" class="Symbol">:</a> <a id="19470" class="Symbol">(</a><a id="19471" href="finite-group-theory.permutations.html#19471" class="Bound">l</a> <a id="19473" class="Symbol">:</a> <a id="19475" href="univalent-combinatorics.lists.html#2152" class="Datatype">list</a> <a id="19480" class="Symbol">(</a><a id="19481" href="univalent-combinatorics.2-element-decidable-subtypes.html#4438" class="Function">2-Element-Decidable-Subtype</a> <a id="19509" href="finite-group-theory.permutations.html#18461" class="Bound">l2</a> <a id="19512" class="Symbol">(</a><a id="19513" href="univalent-combinatorics.finite-types.html#5064" class="Function">type-UU-Fin-Level</a> <a id="19531" href="finite-group-theory.permutations.html#18482" class="Bound">X</a><a id="19532" class="Symbol">)))</a> <a id="19536" class="Symbol">→</a>
       <a id="19544" href="foundation-core.identity-types.html#641" class="Datatype">Id</a>
         <a id="19555" class="Symbol">(</a> <a id="19557" href="group-theory.subgroups-generated-by-subsets-groups.html#2652" class="Function">ev-formal-combination-subset-Group</a>
-          <a id="19602" class="Symbol">(</a> <a id="19604" href="group-theory.symmetric-groups.html#3442" class="Function">symmetric-Group</a> <a id="19620" class="Symbol">(</a><a id="19621" href="univalent-combinatorics.equality-finite-types.html#2538" class="Function">set-UU-Fin-Level</a> <a id="19638" href="finite-group-theory.permutations.html#18482" class="Bound">X</a><a id="19639" class="Symbol">))</a>
+          <a id="19602" class="Symbol">(</a> <a id="19604" href="group-theory.symmetric-groups.html#3491" class="Function">symmetric-Group</a> <a id="19620" class="Symbol">(</a><a id="19621" href="univalent-combinatorics.equality-finite-types.html#2538" class="Function">set-UU-Fin-Level</a> <a id="19638" href="finite-group-theory.permutations.html#18482" class="Bound">X</a><a id="19639" class="Symbol">))</a>
           <a id="19652" class="Symbol">(</a> <a id="19654" href="finite-group-theory.transpositions.html#8340" class="Function">is-transposition-permutation-Prop</a><a id="19687" class="Symbol">)</a>
           <a id="19699" class="Symbol">(</a> <a id="19701" href="univalent-combinatorics.lists.html#2502" class="Function">map-list</a>
             <a id="19722" class="Symbol">(</a> <a id="19724" class="Symbol">λ</a> <a id="19726" href="finite-group-theory.permutations.html#19726" class="Bound">x</a> <a id="19728" class="Symbol">→</a>
@@ -525,7 +525,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-02)(6861f6e) Merge pull request #178 from EgbertRijke/daily-challenge by noreply
+(2022-05-06)(50ba6c4) Merge pull request #179 from LeoMangel/leomangel by noreply
 </pre>
 </body>
 </html>
