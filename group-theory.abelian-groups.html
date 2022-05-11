@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/abelian-groups.lagda.md.</p>
-<p>Version of Friday, May  6, 2022, 08:34 PM</p>
+<p>Version of Wednesday, May 11, 2022, 03:34 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -63,7 +63,7 @@
 <a id="1689" class="Keyword">open</a> <a id="1694" class="Keyword">import</a> <a id="1701" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="1725" class="Keyword">using</a>
   <a id="1733" class="Symbol">(</a> <a id="1735" href="group-theory.semigroups.html#611" class="Function">has-associative-mul-Set</a><a id="1758" class="Symbol">;</a> <a id="1760" href="group-theory.semigroups.html#737" class="Function">Semigroup</a><a id="1769" class="Symbol">)</a>
 
-<a id="1772" class="Keyword">open</a> <a id="1777" class="Keyword">import</a> <a id="1784" href="univalent-combinatorics.lists.html" class="Module">univalent-combinatorics.lists</a> <a id="1814" class="Keyword">using</a> <a id="1820" class="Symbol">(</a><a id="1821" href="univalent-combinatorics.lists.html#2152" class="Datatype">list</a><a id="1825" class="Symbol">;</a> <a id="1827" href="univalent-combinatorics.lists.html#2847" class="Function">concat-list</a><a id="1838" class="Symbol">)</a>
+<a id="1772" class="Keyword">open</a> <a id="1777" class="Keyword">import</a> <a id="1784" href="univalent-combinatorics.lists.html" class="Module">univalent-combinatorics.lists</a> <a id="1814" class="Keyword">using</a> <a id="1820" class="Symbol">(</a><a id="1821" href="univalent-combinatorics.lists.html#2156" class="Datatype">list</a><a id="1825" class="Symbol">;</a> <a id="1827" href="univalent-combinatorics.lists.html#2851" class="Function">concat-list</a><a id="1838" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>Abelian groups are groups of which the group operation is commutative</p>
@@ -263,18 +263,18 @@
   <a id="7894" class="Symbol">{</a><a id="7895" href="group-theory.abelian-groups.html#7895" class="Bound">l</a> <a id="7897" class="Symbol">:</a> <a id="7899" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="7904" class="Symbol">}</a> <a id="7906" class="Symbol">(</a><a id="7907" href="group-theory.abelian-groups.html#7907" class="Bound">A</a> <a id="7909" class="Symbol">:</a> <a id="7911" href="group-theory.abelian-groups.html#2453" class="Function">Ab</a> <a id="7914" href="group-theory.abelian-groups.html#7895" class="Bound">l</a><a id="7915" class="Symbol">)</a>
   <a id="7919" class="Keyword">where</a>
   
-  <a id="7930" href="group-theory.abelian-groups.html#7930" class="Function">add-list-Ab</a> <a id="7942" class="Symbol">:</a> <a id="7944" href="univalent-combinatorics.lists.html#2152" class="Datatype">list</a> <a id="7949" class="Symbol">(</a><a id="7950" href="group-theory.abelian-groups.html#2667" class="Function">type-Ab</a> <a id="7958" href="group-theory.abelian-groups.html#7907" class="Bound">A</a><a id="7959" class="Symbol">)</a> <a id="7961" class="Symbol">→</a> <a id="7963" href="group-theory.abelian-groups.html#2667" class="Function">type-Ab</a> <a id="7971" href="group-theory.abelian-groups.html#7907" class="Bound">A</a>
+  <a id="7930" href="group-theory.abelian-groups.html#7930" class="Function">add-list-Ab</a> <a id="7942" class="Symbol">:</a> <a id="7944" href="univalent-combinatorics.lists.html#2156" class="Datatype">list</a> <a id="7949" class="Symbol">(</a><a id="7950" href="group-theory.abelian-groups.html#2667" class="Function">type-Ab</a> <a id="7958" href="group-theory.abelian-groups.html#7907" class="Bound">A</a><a id="7959" class="Symbol">)</a> <a id="7961" class="Symbol">→</a> <a id="7963" href="group-theory.abelian-groups.html#2667" class="Function">type-Ab</a> <a id="7971" href="group-theory.abelian-groups.html#7907" class="Bound">A</a>
   <a id="7975" href="group-theory.abelian-groups.html#7930" class="Function">add-list-Ab</a> <a id="7987" class="Symbol">=</a> <a id="7989" href="group-theory.groups.html#10359" class="Function">mul-list-Group</a> <a id="8004" class="Symbol">(</a><a id="8005" href="group-theory.abelian-groups.html#2521" class="Function">group-Ab</a> <a id="8014" href="group-theory.abelian-groups.html#7907" class="Bound">A</a><a id="8015" class="Symbol">)</a>
 
   <a id="8020" href="group-theory.abelian-groups.html#8020" class="Function">preserves-concat-add-list-Ab</a> <a id="8049" class="Symbol">:</a>
-    <a id="8055" class="Symbol">(</a><a id="8056" href="group-theory.abelian-groups.html#8056" class="Bound">l1</a> <a id="8059" href="group-theory.abelian-groups.html#8059" class="Bound">l2</a> <a id="8062" class="Symbol">:</a> <a id="8064" href="univalent-combinatorics.lists.html#2152" class="Datatype">list</a> <a id="8069" class="Symbol">(</a><a id="8070" href="group-theory.abelian-groups.html#2667" class="Function">type-Ab</a> <a id="8078" href="group-theory.abelian-groups.html#7907" class="Bound">A</a><a id="8079" class="Symbol">))</a> <a id="8082" class="Symbol">→</a>
-    <a id="8088" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="8091" class="Symbol">(</a> <a id="8093" href="group-theory.abelian-groups.html#7930" class="Function">add-list-Ab</a> <a id="8105" class="Symbol">(</a><a id="8106" href="univalent-combinatorics.lists.html#2847" class="Function">concat-list</a> <a id="8118" href="group-theory.abelian-groups.html#8056" class="Bound">l1</a> <a id="8121" href="group-theory.abelian-groups.html#8059" class="Bound">l2</a><a id="8123" class="Symbol">))</a>
+    <a id="8055" class="Symbol">(</a><a id="8056" href="group-theory.abelian-groups.html#8056" class="Bound">l1</a> <a id="8059" href="group-theory.abelian-groups.html#8059" class="Bound">l2</a> <a id="8062" class="Symbol">:</a> <a id="8064" href="univalent-combinatorics.lists.html#2156" class="Datatype">list</a> <a id="8069" class="Symbol">(</a><a id="8070" href="group-theory.abelian-groups.html#2667" class="Function">type-Ab</a> <a id="8078" href="group-theory.abelian-groups.html#7907" class="Bound">A</a><a id="8079" class="Symbol">))</a> <a id="8082" class="Symbol">→</a>
+    <a id="8088" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="8091" class="Symbol">(</a> <a id="8093" href="group-theory.abelian-groups.html#7930" class="Function">add-list-Ab</a> <a id="8105" class="Symbol">(</a><a id="8106" href="univalent-combinatorics.lists.html#2851" class="Function">concat-list</a> <a id="8118" href="group-theory.abelian-groups.html#8056" class="Bound">l1</a> <a id="8121" href="group-theory.abelian-groups.html#8059" class="Bound">l2</a><a id="8123" class="Symbol">))</a>
        <a id="8133" class="Symbol">(</a> <a id="8135" href="group-theory.abelian-groups.html#3014" class="Function">add-Ab</a> <a id="8142" href="group-theory.abelian-groups.html#7907" class="Bound">A</a> <a id="8144" class="Symbol">(</a><a id="8145" href="group-theory.abelian-groups.html#7930" class="Function">add-list-Ab</a> <a id="8157" href="group-theory.abelian-groups.html#8056" class="Bound">l1</a><a id="8159" class="Symbol">)</a> <a id="8161" class="Symbol">(</a><a id="8162" href="group-theory.abelian-groups.html#7930" class="Function">add-list-Ab</a> <a id="8174" href="group-theory.abelian-groups.html#8059" class="Bound">l2</a><a id="8176" class="Symbol">))</a>
   <a id="8181" href="group-theory.abelian-groups.html#8020" class="Function">preserves-concat-add-list-Ab</a> <a id="8210" class="Symbol">=</a> <a id="8212" href="group-theory.groups.html#10466" class="Function">preserves-concat-mul-list-Group</a> <a id="8244" class="Symbol">(</a><a id="8245" href="group-theory.abelian-groups.html#2521" class="Function">group-Ab</a> <a id="8254" href="group-theory.abelian-groups.html#7907" class="Bound">A</a><a id="8255" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-06)(50ba6c4) Merge pull request #179 from LeoMangel/leomangel by noreply
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
 </pre>
 </body>
 </html>

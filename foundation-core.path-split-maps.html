@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation-core/path-split-maps.lagda.md.</p>
-<p>Version of Friday, May  6, 2022, 08:33 PM</p>
+<p>Version of Wednesday, May 11, 2022, 03:34 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -47,7 +47,7 @@
 
 <a id="731" class="Keyword">open</a> <a id="736" class="Keyword">import</a> <a id="743" href="foundation-core.equivalences.html" class="Module">foundation-core.equivalences</a> <a id="772" class="Keyword">using</a>
   <a id="780" class="Symbol">(</a> <a id="782" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a><a id="790" class="Symbol">;</a> <a id="792" href="foundation-core.equivalences.html#2999" class="Function">is-equiv-has-inverse</a><a id="812" class="Symbol">;</a> <a id="814" href="foundation-core.equivalences.html#3828" class="Function">is-equiv-is-coherently-invertible</a><a id="847" class="Symbol">;</a>
-    <a id="853" href="foundation-core.equivalences.html#15380" class="Function">is-emb-is-equiv</a><a id="868" class="Symbol">)</a>
+    <a id="853" href="foundation-core.equivalences.html#15392" class="Function">is-emb-is-equiv</a><a id="868" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>A map <code>f : A → B</code> is said to be path split if it has a section and its action on identity types <code>Id x y → Id (f x) (f y)</code> has a section for each <code>x y : A</code>. By the fundamental theorem for identity types, it follows that a map is path-split if and only if it is an equivalence.</p>
@@ -69,7 +69,7 @@
     <a id="1532" href="foundation-core.path-split-maps.html#1532" class="Function">is-path-split-is-equiv</a> <a id="1555" class="Symbol">:</a> <a id="1557" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a> <a id="1566" href="foundation-core.path-split-maps.html#1495" class="Bound">f</a> <a id="1568" class="Symbol">→</a> <a id="1570" href="foundation-core.path-split-maps.html#1258" class="Function">is-path-split</a> <a id="1584" href="foundation-core.path-split-maps.html#1495" class="Bound">f</a>
     <a id="1590" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1594" class="Symbol">(</a><a id="1595" href="foundation-core.path-split-maps.html#1532" class="Function">is-path-split-is-equiv</a> <a id="1618" href="foundation-core.path-split-maps.html#1618" class="Bound">is-equiv-f</a><a id="1628" class="Symbol">)</a> <a id="1630" class="Symbol">=</a> <a id="1632" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1636" href="foundation-core.path-split-maps.html#1618" class="Bound">is-equiv-f</a>
     <a id="1651" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1655" class="Symbol">(</a><a id="1656" href="foundation-core.path-split-maps.html#1532" class="Function">is-path-split-is-equiv</a> <a id="1679" href="foundation-core.path-split-maps.html#1679" class="Bound">is-equiv-f</a><a id="1689" class="Symbol">)</a> <a id="1691" href="foundation-core.path-split-maps.html#1691" class="Bound">x</a> <a id="1693" href="foundation-core.path-split-maps.html#1693" class="Bound">y</a> <a id="1695" class="Symbol">=</a>
-      <a id="1703" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1707" class="Symbol">(</a><a id="1708" href="foundation-core.equivalences.html#15380" class="Function">is-emb-is-equiv</a> <a id="1724" href="foundation-core.path-split-maps.html#1679" class="Bound">is-equiv-f</a> <a id="1735" href="foundation-core.path-split-maps.html#1691" class="Bound">x</a> <a id="1737" href="foundation-core.path-split-maps.html#1693" class="Bound">y</a><a id="1738" class="Symbol">)</a>
+      <a id="1703" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1707" class="Symbol">(</a><a id="1708" href="foundation-core.equivalences.html#15392" class="Function">is-emb-is-equiv</a> <a id="1724" href="foundation-core.path-split-maps.html#1679" class="Bound">is-equiv-f</a> <a id="1735" href="foundation-core.path-split-maps.html#1691" class="Bound">x</a> <a id="1737" href="foundation-core.path-split-maps.html#1693" class="Bound">y</a><a id="1738" class="Symbol">)</a>
 
   <a id="1743" class="Keyword">abstract</a>
     <a id="1756" href="foundation-core.path-split-maps.html#1756" class="Function">is-coherently-invertible-is-path-split</a> <a id="1795" class="Symbol">:</a>
@@ -102,7 +102,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-06)(50ba6c4) Merge pull request #179 from LeoMangel/leomangel by noreply
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
 </pre>
 </body>
 </html>

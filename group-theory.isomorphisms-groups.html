@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/isomorphisms-groups.lagda.md.</p>
-<p>Version of Friday, May  6, 2022, 08:34 PM</p>
+<p>Version of Wednesday, May 11, 2022, 03:34 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -43,7 +43,7 @@
 <a id="483" class="Keyword">open</a> <a id="488" class="Keyword">import</a> <a id="495" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="525" class="Keyword">using</a>
   <a id="533" class="Symbol">(</a> <a id="535" href="foundation-core.contractible-types.html#925" class="Function">is-contr</a><a id="543" class="Symbol">;</a> <a id="545" href="foundation-core.contractible-types.html#3739" class="Function">is-contr-equiv&#39;</a><a id="560" class="Symbol">;</a> <a id="562" href="foundation-core.contractible-types.html#1970" class="Function">is-contr-total-path</a><a id="581" class="Symbol">)</a>
 <a id="583" class="Keyword">open</a> <a id="588" class="Keyword">import</a> <a id="595" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="627" class="Keyword">using</a> <a id="633" class="Symbol">(</a><a id="634" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="635" class="Symbol">;</a> <a id="637" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="641" class="Symbol">;</a> <a id="643" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="646" class="Symbol">;</a> <a id="648" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="651" class="Symbol">)</a>
-<a id="653" class="Keyword">open</a> <a id="658" class="Keyword">import</a> <a id="665" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="689" class="Keyword">using</a> <a id="695" class="Symbol">(</a><a id="696" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="699" class="Symbol">;</a> <a id="701" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a><a id="710" class="Symbol">;</a> <a id="712" href="foundation-core.equivalences.html#7843" class="Function Operator">_∘e_</a><a id="716" class="Symbol">)</a>
+<a id="653" class="Keyword">open</a> <a id="658" class="Keyword">import</a> <a id="665" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="689" class="Keyword">using</a> <a id="695" class="Symbol">(</a><a id="696" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="699" class="Symbol">;</a> <a id="701" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a><a id="710" class="Symbol">;</a> <a id="712" href="foundation-core.equivalences.html#7855" class="Function Operator">_∘e_</a><a id="716" class="Symbol">)</a>
 <a id="718" class="Keyword">open</a> <a id="723" class="Keyword">import</a> <a id="730" href="foundation.functoriality-dependent-pair-types.html" class="Module">foundation.functoriality-dependent-pair-types</a> <a id="776" class="Keyword">using</a> <a id="782" class="Symbol">(</a><a id="783" href="foundation-core.functoriality-dependent-pair-types.html#6804" class="Function">equiv-tot</a><a id="792" class="Symbol">)</a>
 <a id="794" class="Keyword">open</a> <a id="799" class="Keyword">import</a> <a id="806" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="832" class="Keyword">using</a> <a id="838" class="Symbol">(</a><a id="839" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="841" class="Symbol">)</a>
 <a id="843" class="Keyword">open</a> <a id="848" class="Keyword">import</a> <a id="855" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="875" class="Keyword">using</a> <a id="881" class="Symbol">(</a><a id="882" href="foundation-core.subtypes.html#4069" class="Function">equiv-ap-inclusion-subtype</a><a id="908" class="Symbol">)</a>
@@ -115,7 +115,7 @@
     <a id="3108" href="group-theory.isomorphisms-groups.html#3036" class="Function">extensionality-Group&#39;</a> <a id="3130" href="group-theory.isomorphisms-groups.html#3130" class="Bound">H</a> <a id="3132" class="Symbol">=</a>
       <a id="3140" class="Symbol">(</a> <a id="3142" href="group-theory.category-of-semigroups.html#1243" class="Function">extensionality-Semigroup</a>
         <a id="3175" class="Symbol">(</a> <a id="3177" href="group-theory.groups.html#2520" class="Function">semigroup-Group</a> <a id="3193" href="group-theory.isomorphisms-groups.html#2879" class="Bound">G</a><a id="3194" class="Symbol">)</a>
-        <a id="3204" class="Symbol">(</a> <a id="3206" href="group-theory.groups.html#2520" class="Function">semigroup-Group</a> <a id="3222" href="group-theory.isomorphisms-groups.html#3130" class="Bound">H</a><a id="3223" class="Symbol">))</a> <a id="3226" href="foundation-core.equivalences.html#7843" class="Function Operator">∘e</a>
+        <a id="3204" class="Symbol">(</a> <a id="3206" href="group-theory.groups.html#2520" class="Function">semigroup-Group</a> <a id="3222" href="group-theory.isomorphisms-groups.html#3130" class="Bound">H</a><a id="3223" class="Symbol">))</a> <a id="3226" href="foundation-core.equivalences.html#7855" class="Function Operator">∘e</a>
       <a id="3235" class="Symbol">(</a> <a id="3237" href="foundation-core.subtypes.html#4069" class="Function">equiv-ap-inclusion-subtype</a> <a id="3264" href="group-theory.groups.html#9696" class="Function">is-group-Prop</a> <a id="3278" class="Symbol">{</a><a id="3279" class="Argument">s</a> <a id="3281" class="Symbol">=</a> <a id="3283" href="group-theory.isomorphisms-groups.html#2879" class="Bound">G</a><a id="3284" class="Symbol">}</a> <a id="3286" class="Symbol">{</a><a id="3287" class="Argument">t</a> <a id="3289" class="Symbol">=</a> <a id="3291" href="group-theory.isomorphisms-groups.html#3130" class="Bound">H</a><a id="3292" class="Symbol">})</a>
 
   <a id="3298" class="Keyword">abstract</a>
@@ -147,7 +147,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-06)(50ba6c4) Merge pull request #179 from LeoMangel/leomangel by noreply
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
 </pre>
 </body>
 </html>

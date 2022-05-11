@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/symmetric-difference.lagda.md.</p>
-<p>Version of Friday, May  6, 2022, 08:34 PM</p>
+<p>Version of Wednesday, May 11, 2022, 03:35 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -35,9 +35,9 @@
 
 <a id="154" class="Keyword">open</a> <a id="159" class="Keyword">import</a> <a id="166" href="foundation.symmetric-difference.html" class="Module">foundation.symmetric-difference</a> <a id="198" class="Keyword">public</a>
 
-<a id="206" class="Keyword">open</a> <a id="211" class="Keyword">import</a> <a id="218" href="elementary-number-theory.addition-natural-numbers.html" class="Module">elementary-number-theory.addition-natural-numbers</a> <a id="268" class="Keyword">using</a> <a id="274" class="Symbol">(</a><a id="275" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a><a id="280" class="Symbol">)</a>
+<a id="206" class="Keyword">open</a> <a id="211" class="Keyword">import</a> <a id="218" href="elementary-number-theory.addition-natural-numbers.html" class="Module">elementary-number-theory.addition-natural-numbers</a> <a id="268" class="Keyword">using</a> <a id="274" class="Symbol">(</a><a id="275" href="elementary-number-theory.addition-natural-numbers.html#1160" class="Function">add-ℕ</a><a id="280" class="Symbol">)</a>
 <a id="282" class="Keyword">open</a> <a id="287" class="Keyword">import</a> <a id="294" href="elementary-number-theory.multiplication-natural-numbers.html" class="Module">elementary-number-theory.multiplication-natural-numbers</a> <a id="350" class="Keyword">using</a>
-  <a id="358" class="Symbol">(</a><a id="359" href="elementary-number-theory.multiplication-natural-numbers.html#1176" class="Function">mul-ℕ</a><a id="364" class="Symbol">;</a> <a id="366" href="elementary-number-theory.multiplication-natural-numbers.html#2119" class="Function">left-unit-law-mul-ℕ</a><a id="385" class="Symbol">)</a>
+  <a id="358" class="Symbol">(</a><a id="359" href="elementary-number-theory.multiplication-natural-numbers.html#1354" class="Function">mul-ℕ</a><a id="364" class="Symbol">;</a> <a id="366" href="elementary-number-theory.multiplication-natural-numbers.html#2279" class="Function">left-unit-law-mul-ℕ</a><a id="385" class="Symbol">)</a>
 <a id="387" class="Keyword">open</a> <a id="392" class="Keyword">import</a> <a id="399" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="440" class="Keyword">using</a> <a id="446" class="Symbol">(</a><a id="447" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="448" class="Symbol">)</a>
 
 <a id="451" class="Keyword">open</a> <a id="456" class="Keyword">import</a> <a id="463" href="foundation.coproduct-types.html" class="Module">foundation.coproduct-types</a> <a id="490" class="Keyword">using</a> <a id="496" class="Symbol">(</a><a id="497" href="foundation.coproduct-types.html#1168" class="Datatype">coprod</a><a id="503" class="Symbol">)</a>
@@ -71,13 +71,13 @@
 
   <a id="1890" href="univalent-combinatorics.symmetric-difference.html#1890" class="Function">eq-symmetric-difference</a> <a id="1914" class="Symbol">:</a>
     <a id="1920" href="foundation-core.identity-types.html#641" class="Datatype">Id</a>
-      <a id="1929" class="Symbol">(</a> <a id="1931" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a>
+      <a id="1929" class="Symbol">(</a> <a id="1931" href="elementary-number-theory.addition-natural-numbers.html#1160" class="Function">add-ℕ</a>
         <a id="1945" class="Symbol">(</a> <a id="1947" href="univalent-combinatorics.finite-types.html#13313" class="Function">number-of-elements-is-finite</a> <a id="1976" class="Symbol">(</a><a id="1977" href="univalent-combinatorics.decidable-subtypes.html#867" class="Function">is-finite-decidable-subtype</a> <a id="2005" href="univalent-combinatorics.symmetric-difference.html#1817" class="Bound">P</a> <a id="2007" href="univalent-combinatorics.symmetric-difference.html#1797" class="Bound">F</a><a id="2008" class="Symbol">))</a>        
         <a id="2027" class="Symbol">(</a> <a id="2029" href="univalent-combinatorics.finite-types.html#13313" class="Function">number-of-elements-is-finite</a> <a id="2058" class="Symbol">(</a><a id="2059" href="univalent-combinatorics.decidable-subtypes.html#867" class="Function">is-finite-decidable-subtype</a> <a id="2087" href="univalent-combinatorics.symmetric-difference.html#1848" class="Bound">Q</a> <a id="2089" href="univalent-combinatorics.symmetric-difference.html#1797" class="Bound">F</a><a id="2090" class="Symbol">)))</a>
-      <a id="2100" class="Symbol">(</a> <a id="2102" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a>
+      <a id="2100" class="Symbol">(</a> <a id="2102" href="elementary-number-theory.addition-natural-numbers.html#1160" class="Function">add-ℕ</a>
         <a id="2116" class="Symbol">(</a> <a id="2118" href="univalent-combinatorics.finite-types.html#13313" class="Function">number-of-elements-is-finite</a>
           <a id="2157" class="Symbol">(</a> <a id="2159" href="univalent-combinatorics.decidable-subtypes.html#867" class="Function">is-finite-decidable-subtype</a> <a id="2187" class="Symbol">(</a><a id="2188" href="foundation.symmetric-difference.html#1436" class="Function">symmetric-difference-decidable-subtype</a> <a id="2227" href="univalent-combinatorics.symmetric-difference.html#1786" class="Bound">X</a> <a id="2229" href="univalent-combinatorics.symmetric-difference.html#1817" class="Bound">P</a> <a id="2231" href="univalent-combinatorics.symmetric-difference.html#1848" class="Bound">Q</a><a id="2232" class="Symbol">)</a> <a id="2234" href="univalent-combinatorics.symmetric-difference.html#1797" class="Bound">F</a><a id="2235" class="Symbol">))</a>
-        <a id="2246" class="Symbol">(</a> <a id="2248" href="elementary-number-theory.multiplication-natural-numbers.html#1176" class="Function">mul-ℕ</a>
+        <a id="2246" class="Symbol">(</a> <a id="2248" href="elementary-number-theory.multiplication-natural-numbers.html#1354" class="Function">mul-ℕ</a>
           <a id="2264" class="Number">2</a>
           <a id="2276" class="Symbol">(</a> <a id="2278" href="univalent-combinatorics.finite-types.html#13313" class="Function">number-of-elements-is-finite</a>
             <a id="2319" class="Symbol">(</a> <a id="2321" href="univalent-combinatorics.decidable-subtypes.html#867" class="Function">is-finite-decidable-subtype</a>
@@ -106,7 +106,7 @@
             <a id="3374" class="Symbol">(</a> <a id="3376" href="univalent-combinatorics.coproduct-types.html#5036" class="Function">is-finite-coprod</a> <a id="3393" href="univalent-combinatorics.symmetric-difference.html#4174" class="Function">is-finite-intersection</a> <a id="3416" href="univalent-combinatorics.symmetric-difference.html#4174" class="Function">is-finite-intersection</a><a id="3438" class="Symbol">))</a> <a id="3441" href="foundation-core.identity-types.html#1239" class="Function Operator">∙</a>
           <a id="3453" class="Symbol">(</a> <a id="3455" href="foundation-core.identity-types.html#2853" class="Function">ap</a>
             <a id="3470" class="Symbol">(</a> <a id="3472" class="Symbol">λ</a> <a id="3474" href="univalent-combinatorics.symmetric-difference.html#3474" class="Bound">n</a> <a id="3476" class="Symbol">→</a>
-              <a id="3492" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a>
+              <a id="3492" href="elementary-number-theory.addition-natural-numbers.html#1160" class="Function">add-ℕ</a>
                 <a id="3514" class="Symbol">(</a> <a id="3516" href="univalent-combinatorics.symmetric-difference.html#4387" class="Function">number-of-elements-decidable-subtype-X</a>
                   <a id="3573" class="Symbol">(</a> <a id="3575" href="foundation.symmetric-difference.html#1436" class="Function">symmetric-difference-decidable-subtype</a> <a id="3614" href="univalent-combinatorics.symmetric-difference.html#1786" class="Bound">X</a> <a id="3616" href="univalent-combinatorics.symmetric-difference.html#1817" class="Bound">P</a> <a id="3618" href="univalent-combinatorics.symmetric-difference.html#1848" class="Bound">Q</a><a id="3619" class="Symbol">))</a>
                 <a id="3638" class="Symbol">(</a> <a id="3640" href="univalent-combinatorics.symmetric-difference.html#3474" class="Bound">n</a><a id="3641" class="Symbol">))</a>
@@ -114,12 +114,12 @@
               <a id="3678" class="Symbol">(</a> <a id="3680" href="univalent-combinatorics.coproduct-types.html#6727" class="Function">coprod-eq-is-finite</a> <a id="3700" href="univalent-combinatorics.symmetric-difference.html#4174" class="Function">is-finite-intersection</a> <a id="3723" href="univalent-combinatorics.symmetric-difference.html#4174" class="Function">is-finite-intersection</a><a id="3745" class="Symbol">))</a> <a id="3748" href="foundation-core.identity-types.html#1239" class="Function Operator">∙</a>
               <a id="3764" class="Symbol">(</a> <a id="3766" href="foundation-core.identity-types.html#2853" class="Function">ap</a>
                 <a id="3785" class="Symbol">(</a> <a id="3787" class="Symbol">λ</a> <a id="3789" href="univalent-combinatorics.symmetric-difference.html#3789" class="Bound">n</a> <a id="3791" class="Symbol">→</a>
-                  <a id="3811" href="elementary-number-theory.addition-natural-numbers.html#988" class="Function">add-ℕ</a>
+                  <a id="3811" href="elementary-number-theory.addition-natural-numbers.html#1160" class="Function">add-ℕ</a>
                     <a id="3837" class="Symbol">(</a> <a id="3839" href="univalent-combinatorics.symmetric-difference.html#3789" class="Bound">n</a><a id="3840" class="Symbol">)</a>
                     <a id="3862" class="Symbol">(</a> <a id="3864" href="univalent-combinatorics.symmetric-difference.html#4387" class="Function">number-of-elements-decidable-subtype-X</a>
                       <a id="3925" class="Symbol">(</a> <a id="3927" href="foundation.intersection.html#703" class="Function">intersection-decidable-subtype</a> <a id="3958" href="univalent-combinatorics.symmetric-difference.html#1786" class="Bound">X</a> <a id="3960" href="univalent-combinatorics.symmetric-difference.html#1817" class="Bound">P</a> <a id="3962" href="univalent-combinatorics.symmetric-difference.html#1848" class="Bound">Q</a><a id="3963" class="Symbol">)))</a>
                 <a id="3983" class="Symbol">(</a> <a id="3985" href="foundation-core.identity-types.html#1552" class="Function">inv</a>
-                  <a id="4007" class="Symbol">(</a> <a id="4009" href="elementary-number-theory.multiplication-natural-numbers.html#2119" class="Function">left-unit-law-mul-ℕ</a>
+                  <a id="4007" class="Symbol">(</a> <a id="4009" href="elementary-number-theory.multiplication-natural-numbers.html#2279" class="Function">left-unit-law-mul-ℕ</a>
                     <a id="4049" class="Symbol">(</a> <a id="4051" href="univalent-combinatorics.symmetric-difference.html#4387" class="Function">number-of-elements-decidable-subtype-X</a>
                       <a id="4112" class="Symbol">(</a> <a id="4114" href="foundation.intersection.html#703" class="Function">intersection-decidable-subtype</a> <a id="4145" href="univalent-combinatorics.symmetric-difference.html#1786" class="Bound">X</a> <a id="4147" href="univalent-combinatorics.symmetric-difference.html#1817" class="Bound">P</a> <a id="4149" href="univalent-combinatorics.symmetric-difference.html#1848" class="Bound">Q</a><a id="4150" class="Symbol">)))))))))</a>
     <a id="4164" class="Keyword">where</a>
@@ -148,7 +148,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-06)(50ba6c4) Merge pull request #179 from LeoMangel/leomangel by noreply
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
 </pre>
 </body>
 </html>

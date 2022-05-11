@@ -1,0 +1,30 @@
+# Pointed types
+
+<pre class="Agda"><a id="26" class="Symbol">{-#</a> <a id="30" class="Keyword">OPTIONS</a> <a id="38" class="Pragma">--without-K</a> <a id="50" class="Pragma">--exact-split</a> <a id="64" class="Symbol">#-}</a>
+
+<a id="69" class="Keyword">module</a> <a id="76" href="structured-types.pointed-types.html" class="Module">structured-types.pointed-types</a> <a id="107" class="Keyword">where</a>
+
+<a id="114" class="Keyword">open</a> <a id="119" class="Keyword">import</a> <a id="126" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="158" class="Keyword">using</a> <a id="164" class="Symbol">(</a><a id="165" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="166" class="Symbol">;</a> <a id="168" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="172" class="Symbol">;</a> <a id="174" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="177" class="Symbol">;</a> <a id="179" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="182" class="Symbol">)</a>
+<a id="184" class="Keyword">open</a> <a id="189" class="Keyword">import</a> <a id="196" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="223" class="Keyword">using</a> <a id="229" class="Symbol">(</a><a id="230" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="235" class="Symbol">;</a> <a id="237" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="239" class="Symbol">;</a> <a id="241" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="245" class="Symbol">)</a>
+</pre>
+## Idea
+
+A pointed type is a type `A` equipped with an element `a : A`.
+
+## Definition
+
+### The universe of pointed types
+
+<pre class="Agda"><a id="Pointed-Type"></a><a id="383" href="structured-types.pointed-types.html#383" class="Function">Pointed-Type</a> <a id="396" class="Symbol">:</a> <a id="398" class="Symbol">(</a><a id="399" href="structured-types.pointed-types.html#399" class="Bound">l</a> <a id="401" class="Symbol">:</a> <a id="403" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="408" class="Symbol">)</a> <a id="410" class="Symbol">→</a> <a id="412" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="415" class="Symbol">(</a><a id="416" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="421" href="structured-types.pointed-types.html#399" class="Bound">l</a><a id="422" class="Symbol">)</a>
+<a id="424" href="structured-types.pointed-types.html#383" class="Function">Pointed-Type</a> <a id="437" href="structured-types.pointed-types.html#437" class="Bound">l</a> <a id="439" class="Symbol">=</a> <a id="441" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="443" class="Symbol">(</a><a id="444" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="447" href="structured-types.pointed-types.html#437" class="Bound">l</a><a id="448" class="Symbol">)</a> <a id="450" class="Symbol">(λ</a> <a id="453" href="structured-types.pointed-types.html#453" class="Bound">X</a> <a id="455" class="Symbol">→</a> <a id="457" href="structured-types.pointed-types.html#453" class="Bound">X</a><a id="458" class="Symbol">)</a>
+
+<a id="461" class="Keyword">module</a> <a id="468" href="structured-types.pointed-types.html#468" class="Module">_</a>
+  <a id="472" class="Symbol">{</a><a id="473" href="structured-types.pointed-types.html#473" class="Bound">l</a> <a id="475" class="Symbol">:</a> <a id="477" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="482" class="Symbol">}</a> <a id="484" class="Symbol">(</a><a id="485" href="structured-types.pointed-types.html#485" class="Bound">A</a> <a id="487" class="Symbol">:</a> <a id="489" href="structured-types.pointed-types.html#383" class="Function">Pointed-Type</a> <a id="502" href="structured-types.pointed-types.html#473" class="Bound">l</a><a id="503" class="Symbol">)</a>
+  <a id="507" class="Keyword">where</a>
+  
+  <a id="518" href="structured-types.pointed-types.html#518" class="Function">type-Pointed-Type</a> <a id="536" class="Symbol">:</a> <a id="538" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="541" href="structured-types.pointed-types.html#473" class="Bound">l</a>
+  <a id="545" href="structured-types.pointed-types.html#518" class="Function">type-Pointed-Type</a> <a id="563" class="Symbol">=</a> <a id="565" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="569" href="structured-types.pointed-types.html#485" class="Bound">A</a>
+  
+  <a id="576" href="structured-types.pointed-types.html#576" class="Function">pt-Pointed-Type</a> <a id="592" class="Symbol">:</a> <a id="594" href="structured-types.pointed-types.html#518" class="Function">type-Pointed-Type</a>
+  <a id="614" href="structured-types.pointed-types.html#576" class="Function">pt-Pointed-Type</a> <a id="630" class="Symbol">=</a> <a id="632" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="636" href="structured-types.pointed-types.html#485" class="Bound">A</a>
+</pre>

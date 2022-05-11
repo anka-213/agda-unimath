@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/graph-theory/polygons.lagda.md.</p>
-<p>Version of Friday, May  6, 2022, 08:34 PM</p>
+<p>Version of Wednesday, May 11, 2022, 03:34 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -34,7 +34,7 @@
 <a id="87" class="Keyword">module</a> <a id="94" href="graph-theory.polygons.html" class="Module">graph-theory.polygons</a> <a id="116" class="Keyword">where</a>
 
 <a id="123" class="Keyword">open</a> <a id="128" class="Keyword">import</a> <a id="135" href="elementary-number-theory.modular-arithmetic.html" class="Module">elementary-number-theory.modular-arithmetic</a> <a id="179" class="Keyword">using</a>
-  <a id="187" class="Symbol">(</a> <a id="189" href="elementary-number-theory.modular-arithmetic.html#3446" class="Function">ℤ-Mod</a><a id="194" class="Symbol">;</a> <a id="196" href="elementary-number-theory.modular-arithmetic.html#5222" class="Function">succ-ℤ-Mod</a><a id="206" class="Symbol">;</a> <a id="208" href="elementary-number-theory.modular-arithmetic.html#4359" class="Function">is-set-ℤ-Mod</a><a id="220" class="Symbol">;</a> <a id="222" href="elementary-number-theory.modular-arithmetic.html#4091" class="Function">has-decidable-equality-ℤ-Mod</a><a id="250" class="Symbol">)</a>
+  <a id="187" class="Symbol">(</a> <a id="189" href="elementary-number-theory.modular-arithmetic.html#3523" class="Function">ℤ-Mod</a><a id="194" class="Symbol">;</a> <a id="196" href="elementary-number-theory.modular-arithmetic.html#5299" class="Function">succ-ℤ-Mod</a><a id="206" class="Symbol">;</a> <a id="208" href="elementary-number-theory.modular-arithmetic.html#4436" class="Function">is-set-ℤ-Mod</a><a id="220" class="Symbol">;</a> <a id="222" href="elementary-number-theory.modular-arithmetic.html#4168" class="Function">has-decidable-equality-ℤ-Mod</a><a id="250" class="Symbol">)</a>
 <a id="252" class="Keyword">open</a> <a id="257" class="Keyword">import</a> <a id="264" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="305" class="Keyword">using</a>
   <a id="313" class="Symbol">(</a> <a id="315" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="316" class="Symbol">;</a> <a id="318" href="elementary-number-theory.natural-numbers.html#1926" class="Function">is-nonzero-ℕ</a><a id="330" class="Symbol">;</a> <a id="332" href="elementary-number-theory.natural-numbers.html#2080" class="Function">is-not-one-ℕ</a><a id="344" class="Symbol">)</a>
 
@@ -70,7 +70,7 @@
 <h2 id="definition">Definition</h2>
 <h3 id="standard-polygons">Standard polygons</h3>
 <pre class="Agda"><a id="vertex-standard-polygon-Undirected-Graph"></a><a id="2000" href="graph-theory.polygons.html#2000" class="Function">vertex-standard-polygon-Undirected-Graph</a> <a id="2041" class="Symbol">:</a> <a id="2043" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a> <a id="2045" class="Symbol">→</a> <a id="2047" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="2050" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
-<a id="2056" href="graph-theory.polygons.html#2000" class="Function">vertex-standard-polygon-Undirected-Graph</a> <a id="2097" href="graph-theory.polygons.html#2097" class="Bound">k</a> <a id="2099" class="Symbol">=</a> <a id="2101" href="elementary-number-theory.modular-arithmetic.html#3446" class="Function">ℤ-Mod</a> <a id="2107" href="graph-theory.polygons.html#2097" class="Bound">k</a>
+<a id="2056" href="graph-theory.polygons.html#2000" class="Function">vertex-standard-polygon-Undirected-Graph</a> <a id="2097" href="graph-theory.polygons.html#2097" class="Bound">k</a> <a id="2099" class="Symbol">=</a> <a id="2101" href="elementary-number-theory.modular-arithmetic.html#3523" class="Function">ℤ-Mod</a> <a id="2107" href="graph-theory.polygons.html#2097" class="Bound">k</a>
 
 <a id="unordered-pair-vertices-standard-polygon-Undirected-Graph"></a><a id="2110" href="graph-theory.polygons.html#2110" class="Function">unordered-pair-vertices-standard-polygon-Undirected-Graph</a> <a id="2168" class="Symbol">:</a> <a id="2170" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a> <a id="2172" class="Symbol">→</a> <a id="2174" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="2177" class="Symbol">(</a><a id="2178" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="2183" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="2188" class="Symbol">)</a>
 <a id="2190" href="graph-theory.polygons.html#2110" class="Function">unordered-pair-vertices-standard-polygon-Undirected-Graph</a> <a id="2248" href="graph-theory.polygons.html#2248" class="Bound">k</a> <a id="2250" class="Symbol">=</a>
@@ -84,7 +84,7 @@
     <a id="2519" class="Symbol">(</a> <a id="2521" class="Symbol">λ</a> <a id="2523" href="graph-theory.polygons.html#2523" class="Bound">x</a> <a id="2525" class="Symbol">→</a>
       <a id="2533" href="foundation-core.fibers-of-maps.html#928" class="Function">fib</a>
         <a id="2545" class="Symbol">(</a> <a id="2547" href="foundation.unordered-pairs.html#3477" class="Function">element-unordered-pair</a> <a id="2570" href="graph-theory.polygons.html#2482" class="Bound">p</a><a id="2571" class="Symbol">)</a>
-        <a id="2581" class="Symbol">(</a> <a id="2583" href="elementary-number-theory.modular-arithmetic.html#5222" class="Function">succ-ℤ-Mod</a> <a id="2594" href="graph-theory.polygons.html#2480" class="Bound">k</a> <a id="2596" class="Symbol">(</a><a id="2597" href="foundation.unordered-pairs.html#3477" class="Function">element-unordered-pair</a> <a id="2620" href="graph-theory.polygons.html#2482" class="Bound">p</a> <a id="2622" href="graph-theory.polygons.html#2523" class="Bound">x</a><a id="2623" class="Symbol">)))</a>
+        <a id="2581" class="Symbol">(</a> <a id="2583" href="elementary-number-theory.modular-arithmetic.html#5299" class="Function">succ-ℤ-Mod</a> <a id="2594" href="graph-theory.polygons.html#2480" class="Bound">k</a> <a id="2596" class="Symbol">(</a><a id="2597" href="foundation.unordered-pairs.html#3477" class="Function">element-unordered-pair</a> <a id="2620" href="graph-theory.polygons.html#2482" class="Bound">p</a> <a id="2622" href="graph-theory.polygons.html#2523" class="Bound">x</a><a id="2623" class="Symbol">)))</a>
 
 <a id="standard-polygon-Undirected-Graph"></a><a id="2628" href="graph-theory.polygons.html#2628" class="Function">standard-polygon-Undirected-Graph</a> <a id="2662" class="Symbol">:</a> <a id="2664" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a> <a id="2666" class="Symbol">→</a> <a id="2668" href="graph-theory.undirected-graphs.html#785" class="Function">Undirected-Graph</a> <a id="2685" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="2691" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
 <a id="2697" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="2701" class="Symbol">(</a><a id="2702" href="graph-theory.polygons.html#2628" class="Function">standard-polygon-Undirected-Graph</a> <a id="2736" href="graph-theory.polygons.html#2736" class="Bound">k</a><a id="2737" class="Symbol">)</a> <a id="2739" class="Symbol">=</a>
@@ -120,7 +120,7 @@
   <a id="3608" href="graph-theory.polygons.html#3608" class="Function">edge-Polygon</a> <a id="3621" class="Symbol">:</a> <a id="3623" href="graph-theory.polygons.html#3489" class="Function">unordered-pair-vertices-Polygon</a> <a id="3655" class="Symbol">→</a> <a id="3657" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="3660" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
   <a id="3668" href="graph-theory.polygons.html#3608" class="Function">edge-Polygon</a> <a id="3681" class="Symbol">=</a> <a id="3683" href="graph-theory.undirected-graphs.html#1205" class="Function">edge-Undirected-Graph</a> <a id="3705" href="graph-theory.polygons.html#3134" class="Function">undirected-graph-Polygon</a>
 
-  <a id="3733" href="graph-theory.polygons.html#3733" class="Function">mere-equiv-vertex-Polygon</a> <a id="3759" class="Symbol">:</a> <a id="3761" href="foundation.mere-equivalences.html#1406" class="Function">mere-equiv</a> <a id="3772" class="Symbol">(</a><a id="3773" href="elementary-number-theory.modular-arithmetic.html#3446" class="Function">ℤ-Mod</a> <a id="3779" href="graph-theory.polygons.html#3098" class="Bound">k</a><a id="3780" class="Symbol">)</a> <a id="3782" href="graph-theory.polygons.html#3392" class="Function">vertex-Polygon</a>
+  <a id="3733" href="graph-theory.polygons.html#3733" class="Function">mere-equiv-vertex-Polygon</a> <a id="3759" class="Symbol">:</a> <a id="3761" href="foundation.mere-equivalences.html#1406" class="Function">mere-equiv</a> <a id="3772" class="Symbol">(</a><a id="3773" href="elementary-number-theory.modular-arithmetic.html#3523" class="Function">ℤ-Mod</a> <a id="3779" href="graph-theory.polygons.html#3098" class="Bound">k</a><a id="3780" class="Symbol">)</a> <a id="3782" href="graph-theory.polygons.html#3392" class="Function">vertex-Polygon</a>
   <a id="3799" href="graph-theory.polygons.html#3733" class="Function">mere-equiv-vertex-Polygon</a> <a id="3825" class="Symbol">=</a>
     <a id="3831" href="foundation.functoriality-propositional-truncation.html#1451" class="Function">functor-trunc-Prop</a>
       <a id="3856" class="Symbol">(</a> <a id="3858" href="graph-theory.equivalences-undirected-graphs.html#2222" class="Function">equiv-vertex-equiv-Undirected-Graph</a>
@@ -134,13 +134,13 @@
 
   <a id="4183" href="graph-theory.polygons.html#4183" class="Function">is-set-vertex-Polygon</a> <a id="4205" class="Symbol">:</a> <a id="4207" href="foundation-core.sets.html#1099" class="Function">is-set</a> <a id="4214" href="graph-theory.polygons.html#3392" class="Function">vertex-Polygon</a>
   <a id="4231" href="graph-theory.polygons.html#4183" class="Function">is-set-vertex-Polygon</a> <a id="4253" class="Symbol">=</a>
-    <a id="4259" href="foundation.mere-equivalences.html#3465" class="Function">is-set-mere-equiv&#39;</a> <a id="4278" href="graph-theory.polygons.html#3733" class="Function">mere-equiv-vertex-Polygon</a> <a id="4304" class="Symbol">(</a><a id="4305" href="elementary-number-theory.modular-arithmetic.html#4359" class="Function">is-set-ℤ-Mod</a> <a id="4318" href="graph-theory.polygons.html#3098" class="Bound">k</a><a id="4319" class="Symbol">)</a>
+    <a id="4259" href="foundation.mere-equivalences.html#3465" class="Function">is-set-mere-equiv&#39;</a> <a id="4278" href="graph-theory.polygons.html#3733" class="Function">mere-equiv-vertex-Polygon</a> <a id="4304" class="Symbol">(</a><a id="4305" href="elementary-number-theory.modular-arithmetic.html#4436" class="Function">is-set-ℤ-Mod</a> <a id="4318" href="graph-theory.polygons.html#3098" class="Bound">k</a><a id="4319" class="Symbol">)</a>
 
   <a id="4324" href="graph-theory.polygons.html#4324" class="Function">has-decidable-equality-vertex-Polygon</a> <a id="4362" class="Symbol">:</a> <a id="4364" href="foundation.decidable-equality.html#1785" class="Function">has-decidable-equality</a> <a id="4387" href="graph-theory.polygons.html#3392" class="Function">vertex-Polygon</a>
   <a id="4404" href="graph-theory.polygons.html#4324" class="Function">has-decidable-equality-vertex-Polygon</a> <a id="4442" class="Symbol">=</a>
     <a id="4448" href="foundation.mere-equivalences.html#4004" class="Function">has-decidable-equality-mere-equiv&#39;</a>
       <a id="4489" class="Symbol">(</a> <a id="4491" href="graph-theory.polygons.html#3733" class="Function">mere-equiv-vertex-Polygon</a><a id="4516" class="Symbol">)</a>
-      <a id="4524" class="Symbol">(</a> <a id="4526" href="elementary-number-theory.modular-arithmetic.html#4091" class="Function">has-decidable-equality-ℤ-Mod</a> <a id="4555" href="graph-theory.polygons.html#3098" class="Bound">k</a><a id="4556" class="Symbol">)</a>
+      <a id="4524" class="Symbol">(</a> <a id="4526" href="elementary-number-theory.modular-arithmetic.html#4168" class="Function">has-decidable-equality-ℤ-Mod</a> <a id="4555" href="graph-theory.polygons.html#3098" class="Bound">k</a><a id="4556" class="Symbol">)</a>
 
   <a id="4561" href="graph-theory.polygons.html#4561" class="Function">is-prop-edge-Polygon</a> <a id="4582" class="Symbol">:</a>
     <a id="4588" class="Symbol">(</a><a id="4589" href="graph-theory.polygons.html#4589" class="Bound">p</a> <a id="4591" class="Symbol">:</a> <a id="4593" href="graph-theory.polygons.html#3489" class="Function">unordered-pair-vertices-Polygon</a><a id="4624" class="Symbol">)</a> <a id="4626" class="Symbol">→</a> <a id="4628" href="foundation-core.propositions.html#1246" class="Function">is-prop</a> <a id="4636" class="Symbol">(</a><a id="4637" href="graph-theory.polygons.html#3608" class="Function">edge-Polygon</a> <a id="4650" href="graph-theory.polygons.html#4589" class="Bound">p</a><a id="4651" class="Symbol">)</a>
@@ -150,7 +150,7 @@
 <h3 id="the-type-of-vertices-of-a-polygon-is-a-set">The type of vertices of a polygon is a set</h3>
 <pre class="Agda"><a id="is-set-vertex-standard-polygon-Undirected-Graph"></a><a id="4761" href="graph-theory.polygons.html#4761" class="Function">is-set-vertex-standard-polygon-Undirected-Graph</a> <a id="4809" class="Symbol">:</a>
   <a id="4813" class="Symbol">(</a><a id="4814" href="graph-theory.polygons.html#4814" class="Bound">k</a> <a id="4816" class="Symbol">:</a> <a id="4818" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="4819" class="Symbol">)</a> <a id="4821" class="Symbol">→</a> <a id="4823" href="foundation-core.sets.html#1099" class="Function">is-set</a> <a id="4830" class="Symbol">(</a><a id="4831" href="graph-theory.polygons.html#2000" class="Function">vertex-standard-polygon-Undirected-Graph</a> <a id="4872" href="graph-theory.polygons.html#4814" class="Bound">k</a><a id="4873" class="Symbol">)</a>
-<a id="4875" href="graph-theory.polygons.html#4761" class="Function">is-set-vertex-standard-polygon-Undirected-Graph</a> <a id="4923" href="graph-theory.polygons.html#4923" class="Bound">k</a> <a id="4925" class="Symbol">=</a> <a id="4927" href="elementary-number-theory.modular-arithmetic.html#4359" class="Function">is-set-ℤ-Mod</a> <a id="4940" href="graph-theory.polygons.html#4923" class="Bound">k</a>
+<a id="4875" href="graph-theory.polygons.html#4761" class="Function">is-set-vertex-standard-polygon-Undirected-Graph</a> <a id="4923" href="graph-theory.polygons.html#4923" class="Bound">k</a> <a id="4925" class="Symbol">=</a> <a id="4927" href="elementary-number-theory.modular-arithmetic.html#4436" class="Function">is-set-ℤ-Mod</a> <a id="4940" href="graph-theory.polygons.html#4923" class="Bound">k</a>
 </pre>
 <h3 id="every-edge-is-between-distinct-points">Every edge is between distinct points</h3>
 <pre class="Agda"><a id="4998" class="Keyword">module</a> <a id="5005" href="graph-theory.polygons.html#5005" class="Module">_</a>
@@ -182,7 +182,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-06)(50ba6c4) Merge pull request #179 from LeoMangel/leomangel by noreply
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
 </pre>
 </body>
 </html>

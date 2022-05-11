@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Morphisms of magmas</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/structured-types/morphisms-magmas.lagda.md.</p>
+<p>Version of Wednesday, May 11, 2022, 03:35 AM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Morphisms of magmas</h1>
+</header>
+<pre class="Agda"><a id="45" class="Symbol">{-#</a> <a id="49" class="Keyword">OPTIONS</a> <a id="57" class="Pragma">--without-K</a> <a id="69" class="Pragma">--exact-split</a> <a id="83" class="Symbol">#-}</a>
+
+<a id="88" class="Keyword">module</a> <a id="95" href="structured-types.morphisms-magmas.html" class="Module">structured-types.morphisms-magmas</a> <a id="129" class="Keyword">where</a>
+
+<a id="136" class="Keyword">open</a> <a id="141" class="Keyword">import</a> <a id="148" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="180" class="Keyword">open</a> <a id="185" class="Keyword">import</a> <a id="192" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="218" class="Keyword">open</a> <a id="223" class="Keyword">import</a> <a id="230" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="258" class="Keyword">open</a> <a id="263" class="Keyword">import</a> <a id="270" href="structured-types.magmas.html" class="Module">structured-types.magmas</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A morphism of magmas from <code>M</code> to <code>N</code> is a map between their underlying type that preserves the binary operation</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="444" class="Keyword">module</a> <a id="451" href="structured-types.morphisms-magmas.html#451" class="Module">_</a>
+  <a id="455" class="Symbol">{</a><a id="456" href="structured-types.morphisms-magmas.html#456" class="Bound">l1</a> <a id="459" href="structured-types.morphisms-magmas.html#459" class="Bound">l2</a> <a id="462" class="Symbol">:</a> <a id="464" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="469" class="Symbol">}</a> <a id="471" class="Symbol">(</a><a id="472" href="structured-types.morphisms-magmas.html#472" class="Bound">M</a> <a id="474" class="Symbol">:</a> <a id="476" href="structured-types.magmas.html#744" class="Function">Magma</a> <a id="482" href="structured-types.morphisms-magmas.html#456" class="Bound">l1</a><a id="484" class="Symbol">)</a> <a id="486" class="Symbol">(</a><a id="487" href="structured-types.morphisms-magmas.html#487" class="Bound">N</a> <a id="489" class="Symbol">:</a> <a id="491" href="structured-types.magmas.html#744" class="Function">Magma</a> <a id="497" href="structured-types.morphisms-magmas.html#459" class="Bound">l2</a><a id="499" class="Symbol">)</a>
+  <a id="503" class="Keyword">where</a>
+  
+  <a id="514" href="structured-types.morphisms-magmas.html#514" class="Function">preserves-mul-Magma</a> <a id="534" class="Symbol">:</a> <a id="536" class="Symbol">(</a><a id="537" href="structured-types.magmas.html#866" class="Function">type-Magma</a> <a id="548" href="structured-types.morphisms-magmas.html#472" class="Bound">M</a> <a id="550" class="Symbol">→</a> <a id="552" href="structured-types.magmas.html#866" class="Function">type-Magma</a> <a id="563" href="structured-types.morphisms-magmas.html#487" class="Bound">N</a><a id="564" class="Symbol">)</a> <a id="566" class="Symbol">→</a> <a id="568" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="571" class="Symbol">(</a><a id="572" href="structured-types.morphisms-magmas.html#456" class="Bound">l1</a> <a id="575" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="577" href="structured-types.morphisms-magmas.html#459" class="Bound">l2</a><a id="579" class="Symbol">)</a>
+  <a id="583" href="structured-types.morphisms-magmas.html#514" class="Function">preserves-mul-Magma</a> <a id="603" href="structured-types.morphisms-magmas.html#603" class="Bound">f</a> <a id="605" class="Symbol">=</a>
+    <a id="611" class="Symbol">(</a><a id="612" href="structured-types.morphisms-magmas.html#612" class="Bound">x</a> <a id="614" href="structured-types.morphisms-magmas.html#614" class="Bound">y</a> <a id="616" class="Symbol">:</a> <a id="618" href="structured-types.magmas.html#866" class="Function">type-Magma</a> <a id="629" href="structured-types.morphisms-magmas.html#472" class="Bound">M</a><a id="630" class="Symbol">)</a> <a id="632" class="Symbol">→</a> <a id="634" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="637" class="Symbol">(</a><a id="638" href="structured-types.morphisms-magmas.html#603" class="Bound">f</a> <a id="640" class="Symbol">(</a><a id="641" href="structured-types.magmas.html#910" class="Function">mul-Magma</a> <a id="651" href="structured-types.morphisms-magmas.html#472" class="Bound">M</a> <a id="653" href="structured-types.morphisms-magmas.html#612" class="Bound">x</a> <a id="655" href="structured-types.morphisms-magmas.html#614" class="Bound">y</a><a id="656" class="Symbol">))</a> <a id="659" class="Symbol">(</a><a id="660" href="structured-types.magmas.html#910" class="Function">mul-Magma</a> <a id="670" href="structured-types.morphisms-magmas.html#487" class="Bound">N</a> <a id="672" class="Symbol">(</a><a id="673" href="structured-types.morphisms-magmas.html#603" class="Bound">f</a> <a id="675" href="structured-types.morphisms-magmas.html#612" class="Bound">x</a><a id="676" class="Symbol">)</a> <a id="678" class="Symbol">(</a><a id="679" href="structured-types.morphisms-magmas.html#603" class="Bound">f</a> <a id="681" href="structured-types.morphisms-magmas.html#614" class="Bound">y</a><a id="682" class="Symbol">))</a>
+
+  <a id="688" href="structured-types.morphisms-magmas.html#688" class="Function">hom-Magma</a> <a id="698" class="Symbol">:</a> <a id="700" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="703" class="Symbol">(</a><a id="704" href="structured-types.morphisms-magmas.html#456" class="Bound">l1</a> <a id="707" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="709" href="structured-types.morphisms-magmas.html#459" class="Bound">l2</a><a id="711" class="Symbol">)</a>
+  <a id="715" href="structured-types.morphisms-magmas.html#688" class="Function">hom-Magma</a> <a id="725" class="Symbol">=</a> <a id="727" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="729" class="Symbol">(</a><a id="730" href="structured-types.magmas.html#866" class="Function">type-Magma</a> <a id="741" href="structured-types.morphisms-magmas.html#472" class="Bound">M</a> <a id="743" class="Symbol">→</a> <a id="745" href="structured-types.magmas.html#866" class="Function">type-Magma</a> <a id="756" href="structured-types.morphisms-magmas.html#487" class="Bound">N</a><a id="757" class="Symbol">)</a> <a id="759" href="structured-types.morphisms-magmas.html#514" class="Function">preserves-mul-Magma</a>
+
+  <a id="782" href="structured-types.morphisms-magmas.html#782" class="Function">map-hom-Magma</a> <a id="796" class="Symbol">:</a> <a id="798" href="structured-types.morphisms-magmas.html#688" class="Function">hom-Magma</a> <a id="808" class="Symbol">→</a> <a id="810" href="structured-types.magmas.html#866" class="Function">type-Magma</a> <a id="821" href="structured-types.morphisms-magmas.html#472" class="Bound">M</a> <a id="823" class="Symbol">→</a> <a id="825" href="structured-types.magmas.html#866" class="Function">type-Magma</a> <a id="836" href="structured-types.morphisms-magmas.html#487" class="Bound">N</a>
+  <a id="840" href="structured-types.morphisms-magmas.html#782" class="Function">map-hom-Magma</a> <a id="854" class="Symbol">=</a> <a id="856" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a>
+
+  <a id="863" href="structured-types.morphisms-magmas.html#863" class="Function">preserves-mul-map-hom-Magma</a> <a id="891" class="Symbol">:</a>
+    <a id="897" class="Symbol">(</a><a id="898" href="structured-types.morphisms-magmas.html#898" class="Bound">f</a> <a id="900" class="Symbol">:</a> <a id="902" href="structured-types.morphisms-magmas.html#688" class="Function">hom-Magma</a><a id="911" class="Symbol">)</a> <a id="913" class="Symbol">→</a> <a id="915" href="structured-types.morphisms-magmas.html#514" class="Function">preserves-mul-Magma</a> <a id="935" class="Symbol">(</a><a id="936" href="structured-types.morphisms-magmas.html#782" class="Function">map-hom-Magma</a> <a id="950" href="structured-types.morphisms-magmas.html#898" class="Bound">f</a><a id="951" class="Symbol">)</a>
+  <a id="955" href="structured-types.morphisms-magmas.html#863" class="Function">preserves-mul-map-hom-Magma</a> <a id="983" class="Symbol">=</a> <a id="985" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
+</pre>
+</body>
+</html>

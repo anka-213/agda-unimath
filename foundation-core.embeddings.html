@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation-core/embeddings.lagda.md.</p>
-<p>Version of Friday, May  6, 2022, 08:33 PM</p>
+<p>Version of Wednesday, May 11, 2022, 03:34 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -35,7 +35,7 @@
 
 <a id="107" class="Keyword">open</a> <a id="112" class="Keyword">import</a> <a id="119" href="foundation-core.dependent-pair-types.html" class="Module">foundation-core.dependent-pair-types</a> <a id="156" class="Keyword">using</a> <a id="162" class="Symbol">(</a><a id="163" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="164" class="Symbol">;</a> <a id="166" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="170" class="Symbol">;</a> <a id="172" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="175" class="Symbol">;</a> <a id="177" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="180" class="Symbol">)</a>
 <a id="182" class="Keyword">open</a> <a id="187" class="Keyword">import</a> <a id="194" href="foundation-core.equivalences.html" class="Module">foundation-core.equivalences</a> <a id="223" class="Keyword">using</a>
-  <a id="231" class="Symbol">(</a> <a id="233" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a><a id="241" class="Symbol">;</a> <a id="243" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="246" class="Symbol">;</a> <a id="248" href="foundation-core.equivalences.html#10132" class="Function">is-equiv-htpy</a><a id="261" class="Symbol">;</a> <a id="263" href="foundation-core.equivalences.html#2309" class="Function">is-equiv-id</a><a id="274" class="Symbol">)</a>
+  <a id="231" class="Symbol">(</a> <a id="233" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a><a id="241" class="Symbol">;</a> <a id="243" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="246" class="Symbol">;</a> <a id="248" href="foundation-core.equivalences.html#10144" class="Function">is-equiv-htpy</a><a id="261" class="Symbol">;</a> <a id="263" href="foundation-core.equivalences.html#2309" class="Function">is-equiv-id</a><a id="274" class="Symbol">)</a>
 <a id="276" class="Keyword">open</a> <a id="281" class="Keyword">import</a> <a id="288" href="foundation-core.functions.html" class="Module">foundation-core.functions</a> <a id="314" class="Keyword">using</a> <a id="320" class="Symbol">(</a><a id="321" href="foundation-core.functions.html#309" class="Function">id</a><a id="323" class="Symbol">)</a>
 <a id="325" class="Keyword">open</a> <a id="330" class="Keyword">import</a> <a id="337" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a> <a id="368" class="Keyword">using</a>
   <a id="376" class="Symbol">(</a> <a id="378" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="380" class="Symbol">;</a> <a id="382" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="386" class="Symbol">;</a> <a id="388" href="foundation-core.identity-types.html#2853" class="Function">ap</a><a id="390" class="Symbol">;</a> <a id="392" href="foundation-core.identity-types.html#1552" class="Function">inv</a><a id="395" class="Symbol">;</a> <a id="397" href="foundation-core.identity-types.html#1239" class="Function Operator">_∙_</a><a id="400" class="Symbol">;</a> <a id="402" href="foundation-core.identity-types.html#3018" class="Function">ap-id</a><a id="407" class="Symbol">)</a>
@@ -76,7 +76,7 @@
   <a id="1614" class="Keyword">where</a>
 
   <a id="1623" href="foundation-core.embeddings.html#1623" class="Function">is-emb-id</a> <a id="1633" class="Symbol">:</a> <a id="1635" href="foundation-core.embeddings.html#980" class="Function">is-emb</a> <a id="1642" class="Symbol">(</a><a id="1643" href="foundation-core.functions.html#309" class="Function">id</a> <a id="1646" class="Symbol">{</a><a id="1647" class="Argument">A</a> <a id="1649" class="Symbol">=</a> <a id="1651" href="foundation-core.embeddings.html#1602" class="Bound">A</a><a id="1652" class="Symbol">})</a>
-  <a id="1657" href="foundation-core.embeddings.html#1623" class="Function">is-emb-id</a> <a id="1667" href="foundation-core.embeddings.html#1667" class="Bound">x</a> <a id="1669" href="foundation-core.embeddings.html#1669" class="Bound">y</a> <a id="1671" class="Symbol">=</a> <a id="1673" href="foundation-core.equivalences.html#10132" class="Function">is-equiv-htpy</a> <a id="1687" href="foundation-core.functions.html#309" class="Function">id</a> <a id="1690" href="foundation-core.identity-types.html#3018" class="Function">ap-id</a> <a id="1696" href="foundation-core.equivalences.html#2309" class="Function">is-equiv-id</a>
+  <a id="1657" href="foundation-core.embeddings.html#1623" class="Function">is-emb-id</a> <a id="1667" href="foundation-core.embeddings.html#1667" class="Bound">x</a> <a id="1669" href="foundation-core.embeddings.html#1669" class="Bound">y</a> <a id="1671" class="Symbol">=</a> <a id="1673" href="foundation-core.equivalences.html#10144" class="Function">is-equiv-htpy</a> <a id="1687" href="foundation-core.functions.html#309" class="Function">id</a> <a id="1690" href="foundation-core.identity-types.html#3018" class="Function">ap-id</a> <a id="1696" href="foundation-core.equivalences.html#2309" class="Function">is-equiv-id</a>
 
   <a id="1711" href="foundation-core.embeddings.html#1711" class="Function">id-emb</a> <a id="1718" class="Symbol">:</a> <a id="1720" href="foundation-core.embeddings.html#1602" class="Bound">A</a> <a id="1722" href="foundation-core.embeddings.html#1062" class="Function Operator">↪</a> <a id="1724" href="foundation-core.embeddings.html#1602" class="Bound">A</a>
   <a id="1728" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1732" href="foundation-core.embeddings.html#1711" class="Function">id-emb</a> <a id="1739" class="Symbol">=</a> <a id="1741" href="foundation-core.functions.html#309" class="Function">id</a>
@@ -93,7 +93,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-06)(50ba6c4) Merge pull request #179 from LeoMangel/leomangel by noreply
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
 </pre>
 </body>
 </html>

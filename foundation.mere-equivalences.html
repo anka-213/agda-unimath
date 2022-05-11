@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/mere-equivalences.lagda.md.</p>
-<p>Version of Friday, May  6, 2022, 08:34 PM</p>
+<p>Version of Wednesday, May 11, 2022, 03:34 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -36,7 +36,7 @@
 <a id="116" class="Keyword">open</a> <a id="121" class="Keyword">import</a> <a id="128" href="foundation.decidable-equality.html" class="Module">foundation.decidable-equality</a> <a id="158" class="Keyword">using</a>
   <a id="166" class="Symbol">(</a> <a id="168" href="foundation.decidable-equality.html#1785" class="Function">has-decidable-equality</a><a id="190" class="Symbol">;</a> <a id="192" href="foundation.decidable-equality.html#7766" class="Function">has-decidable-equality-Prop</a><a id="219" class="Symbol">;</a>
     <a id="225" href="foundation.decidable-equality.html#4533" class="Function">has-decidable-equality-equiv</a><a id="253" class="Symbol">;</a> <a id="255" href="foundation.decidable-equality.html#4811" class="Function">has-decidable-equality-equiv&#39;</a><a id="284" class="Symbol">)</a>
-<a id="286" class="Keyword">open</a> <a id="291" class="Keyword">import</a> <a id="298" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="322" class="Keyword">using</a> <a id="328" class="Symbol">(</a><a id="329" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="332" class="Symbol">;</a> <a id="334" href="foundation-core.equivalences.html#2480" class="Function">id-equiv</a><a id="342" class="Symbol">;</a> <a id="344" href="foundation-core.equivalences.html#5707" class="Function">inv-equiv</a><a id="353" class="Symbol">;</a> <a id="355" href="foundation-core.equivalences.html#7843" class="Function Operator">_∘e_</a><a id="359" class="Symbol">)</a>
+<a id="286" class="Keyword">open</a> <a id="291" class="Keyword">import</a> <a id="298" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="322" class="Keyword">using</a> <a id="328" class="Symbol">(</a><a id="329" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="332" class="Symbol">;</a> <a id="334" href="foundation-core.equivalences.html#2480" class="Function">id-equiv</a><a id="342" class="Symbol">;</a> <a id="344" href="foundation-core.equivalences.html#5707" class="Function">inv-equiv</a><a id="353" class="Symbol">;</a> <a id="355" href="foundation-core.equivalences.html#7855" class="Function Operator">_∘e_</a><a id="359" class="Symbol">)</a>
 <a id="361" class="Keyword">open</a> <a id="366" class="Keyword">import</a> <a id="373" href="foundation.functoriality-propositional-truncation.html" class="Module">foundation.functoriality-propositional-truncation</a> <a id="423" class="Keyword">using</a>
   <a id="431" class="Symbol">(</a> <a id="433" href="foundation.functoriality-propositional-truncation.html#1451" class="Function">functor-trunc-Prop</a><a id="451" class="Symbol">)</a>
 <a id="453" class="Keyword">open</a> <a id="458" class="Keyword">import</a> <a id="465" href="foundation.mere-equality.html" class="Module">foundation.mere-equality</a> <a id="490" class="Keyword">using</a> <a id="496" class="Symbol">(</a><a id="497" href="foundation.mere-equality.html#1100" class="Function">mere-eq</a><a id="504" class="Symbol">)</a>
@@ -95,7 +95,7 @@
       <a id="2509" class="Symbol">(</a> <a id="2511" class="Symbol">λ</a> <a id="2513" href="foundation.mere-equivalences.html#2513" class="Bound">e&#39;</a> <a id="2516" class="Symbol">→</a>
         <a id="2526" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a> <a id="2562" href="foundation.mere-equivalences.html#2428" class="Bound">f</a>
           <a id="2574" class="Symbol">(</a> <a id="2576" href="foundation.mere-equivalences.html#1292" class="Function">mere-equiv-Prop</a> <a id="2592" href="foundation.mere-equivalences.html#2415" class="Bound">X</a> <a id="2594" href="foundation.mere-equivalences.html#2423" class="Bound">Z</a><a id="2595" class="Symbol">)</a>
-          <a id="2607" class="Symbol">(</a> <a id="2609" class="Symbol">λ</a> <a id="2611" href="foundation.mere-equivalences.html#2611" class="Bound">f&#39;</a> <a id="2614" class="Symbol">→</a> <a id="2616" href="foundation.propositional-truncations.html#2096" class="Function">unit-trunc-Prop</a> <a id="2632" class="Symbol">(</a><a id="2633" href="foundation.mere-equivalences.html#2611" class="Bound">f&#39;</a> <a id="2636" href="foundation-core.equivalences.html#7843" class="Function Operator">∘e</a> <a id="2639" href="foundation.mere-equivalences.html#2513" class="Bound">e&#39;</a><a id="2641" class="Symbol">)))</a>
+          <a id="2607" class="Symbol">(</a> <a id="2609" class="Symbol">λ</a> <a id="2611" href="foundation.mere-equivalences.html#2611" class="Bound">f&#39;</a> <a id="2614" class="Symbol">→</a> <a id="2616" href="foundation.propositional-truncations.html#2096" class="Function">unit-trunc-Prop</a> <a id="2632" class="Symbol">(</a><a id="2633" href="foundation.mere-equivalences.html#2611" class="Bound">f&#39;</a> <a id="2636" href="foundation-core.equivalences.html#7855" class="Function Operator">∘e</a> <a id="2639" href="foundation.mere-equivalences.html#2513" class="Bound">e&#39;</a><a id="2641" class="Symbol">)))</a>
 </pre>
 <h3 id="truncated-types-are-closed-under-mere-equivalence">Truncated types are closed under mere equivalence</h3>
 <pre class="Agda"><a id="2713" class="Keyword">module</a> <a id="2720" href="foundation.mere-equivalences.html#2720" class="Module">_</a>
@@ -154,7 +154,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-06)(50ba6c4) Merge pull request #179 from LeoMangel/leomangel by noreply
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
 </pre>
 </body>
 </html>

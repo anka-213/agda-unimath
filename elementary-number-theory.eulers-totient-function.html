@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/elementary-number-theory/eulers-totient-function.lagda.md.</p>
-<p>Version of Friday, May  6, 2022, 08:33 PM</p>
+<p>Version of Wednesday, May 11, 2022, 03:34 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -37,7 +37,7 @@
 <a id="229" class="Keyword">open</a> <a id="234" class="Keyword">import</a> <a id="241" href="elementary-number-theory.relatively-prime-natural-numbers.html" class="Module">elementary-number-theory.relatively-prime-natural-numbers</a> <a id="299" class="Keyword">using</a>
   <a id="307" class="Symbol">(</a> <a id="309" href="elementary-number-theory.relatively-prime-natural-numbers.html#940" class="Function">relatively-prime-ℕ</a><a id="327" class="Symbol">;</a> <a id="329" href="elementary-number-theory.relatively-prime-natural-numbers.html#1456" class="Function">is-decidable-relatively-prime-ℕ</a><a id="360" class="Symbol">)</a>
 <a id="362" class="Keyword">open</a> <a id="367" class="Keyword">import</a> <a id="374" href="elementary-number-theory.sums-of-natural-numbers.html" class="Module">elementary-number-theory.sums-of-natural-numbers</a> <a id="423" class="Keyword">using</a>
-  <a id="431" class="Symbol">(</a> <a id="433" href="elementary-number-theory.sums-of-natural-numbers.html#1816" class="Function">bounded-sum-ℕ</a><a id="446" class="Symbol">)</a>
+  <a id="431" class="Symbol">(</a> <a id="433" href="elementary-number-theory.sums-of-natural-numbers.html#1823" class="Function">bounded-sum-ℕ</a><a id="446" class="Symbol">)</a>
 
 <a id="449" class="Keyword">open</a> <a id="454" class="Keyword">import</a> <a id="461" href="foundation.coproduct-types.html" class="Module">foundation.coproduct-types</a> <a id="488" class="Keyword">using</a> <a id="494" class="Symbol">(</a><a id="495" href="foundation.coproduct-types.html#1239" class="InductiveConstructor">inl</a><a id="498" class="Symbol">;</a> <a id="500" href="foundation.coproduct-types.html#1262" class="InductiveConstructor">inr</a><a id="503" class="Symbol">)</a>
 <a id="505" class="Keyword">open</a> <a id="510" class="Keyword">import</a> <a id="517" href="foundation.decidable-types.html" class="Module">foundation.decidable-types</a> <a id="544" class="Keyword">using</a> <a id="550" class="Symbol">(</a><a id="551" href="foundation.decidable-types.html#1905" class="Function">is-decidable</a><a id="563" class="Symbol">)</a>
@@ -47,7 +47,7 @@
 <h2 id="definition">Definition</h2>
 <pre class="Agda"><a id="eulers-totient-function"></a><a id="748" href="elementary-number-theory.eulers-totient-function.html#748" class="Function">eulers-totient-function</a> <a id="772" class="Symbol">:</a> <a id="774" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a> <a id="776" class="Symbol">→</a> <a id="778" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a>
 <a id="780" href="elementary-number-theory.eulers-totient-function.html#748" class="Function">eulers-totient-function</a> <a id="804" href="elementary-number-theory.eulers-totient-function.html#804" class="Bound">n</a> <a id="806" class="Symbol">=</a>
-  <a id="810" href="elementary-number-theory.sums-of-natural-numbers.html#1816" class="Function">bounded-sum-ℕ</a> <a id="824" href="elementary-number-theory.eulers-totient-function.html#804" class="Bound">n</a> <a id="826" class="Symbol">(λ</a> <a id="829" href="elementary-number-theory.eulers-totient-function.html#829" class="Bound">x</a> <a id="831" href="elementary-number-theory.eulers-totient-function.html#831" class="Bound">H</a> <a id="833" class="Symbol">→</a> <a id="835" href="elementary-number-theory.eulers-totient-function.html#947" class="Function">α</a> <a id="837" href="elementary-number-theory.eulers-totient-function.html#829" class="Bound">x</a><a id="838" class="Symbol">)</a>
+  <a id="810" href="elementary-number-theory.sums-of-natural-numbers.html#1823" class="Function">bounded-sum-ℕ</a> <a id="824" href="elementary-number-theory.eulers-totient-function.html#804" class="Bound">n</a> <a id="826" class="Symbol">(λ</a> <a id="829" href="elementary-number-theory.eulers-totient-function.html#829" class="Bound">x</a> <a id="831" href="elementary-number-theory.eulers-totient-function.html#831" class="Bound">H</a> <a id="833" class="Symbol">→</a> <a id="835" href="elementary-number-theory.eulers-totient-function.html#947" class="Function">α</a> <a id="837" href="elementary-number-theory.eulers-totient-function.html#829" class="Bound">x</a><a id="838" class="Symbol">)</a>
   <a id="842" class="Keyword">where</a>
   <a id="850" href="elementary-number-theory.eulers-totient-function.html#850" class="Function">α&#39;</a> <a id="853" class="Symbol">:</a> <a id="855" class="Symbol">(</a><a id="856" href="elementary-number-theory.eulers-totient-function.html#856" class="Bound">x</a> <a id="858" class="Symbol">:</a> <a id="860" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="861" class="Symbol">)</a> <a id="863" class="Symbol">→</a> <a id="865" href="foundation.decidable-types.html#1905" class="Function">is-decidable</a> <a id="878" class="Symbol">(</a><a id="879" href="elementary-number-theory.relatively-prime-natural-numbers.html#940" class="Function">relatively-prime-ℕ</a> <a id="898" href="elementary-number-theory.eulers-totient-function.html#856" class="Bound">x</a> <a id="900" href="elementary-number-theory.eulers-totient-function.html#804" class="Bound">n</a><a id="901" class="Symbol">)</a> <a id="903" class="Symbol">→</a> <a id="905" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a>
   <a id="909" href="elementary-number-theory.eulers-totient-function.html#850" class="Function">α&#39;</a> <a id="912" href="elementary-number-theory.eulers-totient-function.html#912" class="Bound">x</a> <a id="914" class="Symbol">(</a><a id="915" href="foundation.coproduct-types.html#1239" class="InductiveConstructor">inl</a> <a id="919" href="elementary-number-theory.eulers-totient-function.html#919" class="Bound">H</a><a id="920" class="Symbol">)</a> <a id="922" class="Symbol">=</a> <a id="924" class="Number">1</a>
@@ -57,7 +57,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-06)(50ba6c4) Merge pull request #179 from LeoMangel/leomangel by noreply
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
 </pre>
 </body>
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Wild quasigroups</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/structured-types/wild-quasigroups.lagda.md.</p>
+<p>Version of Wednesday, May 11, 2022, 03:35 AM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Wild quasigroups</h1>
+</header>
+<pre class="Agda"><a id="42" class="Symbol">{-#</a> <a id="46" class="Keyword">OPTIONS</a> <a id="54" class="Pragma">--without-K</a> <a id="66" class="Pragma">--exact-split</a> <a id="80" class="Symbol">#-}</a>
+
+<a id="85" class="Keyword">module</a> <a id="92" href="structured-types.wild-quasigroups.html" class="Module">structured-types.wild-quasigroups</a> <a id="126" class="Keyword">where</a>
+
+<a id="133" class="Keyword">open</a> <a id="138" class="Keyword">import</a> <a id="145" href="foundation.automorphisms.html" class="Module">foundation.automorphisms</a>
+<a id="170" class="Keyword">open</a> <a id="175" class="Keyword">import</a> <a id="182" href="foundation.binary-equivalences.html" class="Module">foundation.binary-equivalences</a>
+<a id="213" class="Keyword">open</a> <a id="218" class="Keyword">import</a> <a id="225" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="257" class="Keyword">open</a> <a id="262" class="Keyword">import</a> <a id="269" href="foundation.equivalences.html" class="Module">foundation.equivalences</a>
+<a id="293" class="Keyword">open</a> <a id="298" class="Keyword">import</a> <a id="305" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="333" class="Keyword">open</a> <a id="338" class="Keyword">import</a> <a id="345" href="structured-types.magmas.html" class="Module">structured-types.magmas</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A wild quasigroup is a type <code>A</code> equipped with a binary equivalence <code>μ : A → A → A</code>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="Wild-Quasigroup"></a><a id="491" href="structured-types.wild-quasigroups.html#491" class="Function">Wild-Quasigroup</a> <a id="507" class="Symbol">:</a> <a id="509" class="Symbol">(</a><a id="510" href="structured-types.wild-quasigroups.html#510" class="Bound">l</a> <a id="512" class="Symbol">:</a> <a id="514" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="519" class="Symbol">)</a> <a id="521" class="Symbol">→</a> <a id="523" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="526" class="Symbol">(</a><a id="527" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="532" href="structured-types.wild-quasigroups.html#510" class="Bound">l</a><a id="533" class="Symbol">)</a>
+<a id="535" href="structured-types.wild-quasigroups.html#491" class="Function">Wild-Quasigroup</a> <a id="551" href="structured-types.wild-quasigroups.html#551" class="Bound">l</a> <a id="553" class="Symbol">=</a> <a id="555" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="557" class="Symbol">(</a><a id="558" href="structured-types.magmas.html#744" class="Function">Magma</a> <a id="564" href="structured-types.wild-quasigroups.html#551" class="Bound">l</a><a id="565" class="Symbol">)</a> <a id="567" class="Symbol">(λ</a> <a id="570" href="structured-types.wild-quasigroups.html#570" class="Bound">M</a> <a id="572" class="Symbol">→</a> <a id="574" href="foundation.binary-equivalences.html#948" class="Function">is-binary-equiv</a> <a id="590" class="Symbol">(</a><a id="591" href="structured-types.magmas.html#910" class="Function">mul-Magma</a> <a id="601" href="structured-types.wild-quasigroups.html#570" class="Bound">M</a><a id="602" class="Symbol">))</a>
+
+<a id="606" class="Keyword">module</a> <a id="613" href="structured-types.wild-quasigroups.html#613" class="Module">_</a>
+  <a id="617" class="Symbol">{</a><a id="618" href="structured-types.wild-quasigroups.html#618" class="Bound">l</a> <a id="620" class="Symbol">:</a> <a id="622" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="627" class="Symbol">}</a> <a id="629" class="Symbol">(</a><a id="630" href="structured-types.wild-quasigroups.html#630" class="Bound">A</a> <a id="632" class="Symbol">:</a> <a id="634" href="structured-types.wild-quasigroups.html#491" class="Function">Wild-Quasigroup</a> <a id="650" href="structured-types.wild-quasigroups.html#618" class="Bound">l</a><a id="651" class="Symbol">)</a>
+  <a id="655" class="Keyword">where</a>
+
+  <a id="664" href="structured-types.wild-quasigroups.html#664" class="Function">magma-Wild-Quasigroup</a> <a id="686" class="Symbol">:</a> <a id="688" href="structured-types.magmas.html#744" class="Function">Magma</a> <a id="694" href="structured-types.wild-quasigroups.html#618" class="Bound">l</a>
+  <a id="698" href="structured-types.wild-quasigroups.html#664" class="Function">magma-Wild-Quasigroup</a> <a id="720" class="Symbol">=</a> <a id="722" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="726" href="structured-types.wild-quasigroups.html#630" class="Bound">A</a>
+
+  <a id="731" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a> <a id="752" class="Symbol">:</a> <a id="754" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="757" href="structured-types.wild-quasigroups.html#618" class="Bound">l</a>
+  <a id="761" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a> <a id="782" class="Symbol">=</a> <a id="784" href="structured-types.magmas.html#866" class="Function">type-Magma</a> <a id="795" href="structured-types.wild-quasigroups.html#664" class="Function">magma-Wild-Quasigroup</a>
+
+  <a id="820" href="structured-types.wild-quasigroups.html#820" class="Function">mul-Wild-Quasigroup</a> <a id="840" class="Symbol">:</a> <a id="842" class="Symbol">(</a><a id="843" href="structured-types.wild-quasigroups.html#843" class="Bound">x</a> <a id="845" href="structured-types.wild-quasigroups.html#845" class="Bound">y</a> <a id="847" class="Symbol">:</a> <a id="849" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a><a id="869" class="Symbol">)</a> <a id="871" class="Symbol">→</a> <a id="873" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a>
+  <a id="896" href="structured-types.wild-quasigroups.html#820" class="Function">mul-Wild-Quasigroup</a> <a id="916" class="Symbol">=</a> <a id="918" href="structured-types.magmas.html#910" class="Function">mul-Magma</a> <a id="928" href="structured-types.wild-quasigroups.html#664" class="Function">magma-Wild-Quasigroup</a>
+
+  <a id="953" href="structured-types.wild-quasigroups.html#953" class="Function">mul-Wild-Quasigroup&#39;</a> <a id="974" class="Symbol">:</a> <a id="976" class="Symbol">(</a><a id="977" href="structured-types.wild-quasigroups.html#977" class="Bound">x</a> <a id="979" href="structured-types.wild-quasigroups.html#979" class="Bound">y</a> <a id="981" class="Symbol">:</a> <a id="983" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a><a id="1003" class="Symbol">)</a> <a id="1005" class="Symbol">→</a> <a id="1007" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a>
+  <a id="1030" href="structured-types.wild-quasigroups.html#953" class="Function">mul-Wild-Quasigroup&#39;</a> <a id="1051" href="structured-types.wild-quasigroups.html#1051" class="Bound">x</a> <a id="1053" href="structured-types.wild-quasigroups.html#1053" class="Bound">y</a> <a id="1055" class="Symbol">=</a> <a id="1057" href="structured-types.wild-quasigroups.html#820" class="Function">mul-Wild-Quasigroup</a> <a id="1077" href="structured-types.wild-quasigroups.html#1053" class="Bound">y</a> <a id="1079" href="structured-types.wild-quasigroups.html#1051" class="Bound">x</a>
+
+  <a id="1084" href="structured-types.wild-quasigroups.html#1084" class="Function">is-binary-equiv-mul-Wild-Quasigroup</a> <a id="1120" class="Symbol">:</a>
+    <a id="1126" href="foundation.binary-equivalences.html#948" class="Function">is-binary-equiv</a> <a id="1142" href="structured-types.wild-quasigroups.html#820" class="Function">mul-Wild-Quasigroup</a>
+  <a id="1164" href="structured-types.wild-quasigroups.html#1084" class="Function">is-binary-equiv-mul-Wild-Quasigroup</a> <a id="1200" class="Symbol">=</a> <a id="1202" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1206" href="structured-types.wild-quasigroups.html#630" class="Bound">A</a>
+
+  <a id="1211" href="structured-types.wild-quasigroups.html#1211" class="Function">is-equiv-mul-Wild-Quasigroup</a> <a id="1240" class="Symbol">:</a>
+    <a id="1246" class="Symbol">(</a><a id="1247" href="structured-types.wild-quasigroups.html#1247" class="Bound">x</a> <a id="1249" class="Symbol">:</a> <a id="1251" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a><a id="1271" class="Symbol">)</a> <a id="1273" class="Symbol">→</a> <a id="1275" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a> <a id="1284" class="Symbol">(</a><a id="1285" href="structured-types.wild-quasigroups.html#820" class="Function">mul-Wild-Quasigroup</a> <a id="1305" href="structured-types.wild-quasigroups.html#1247" class="Bound">x</a><a id="1306" class="Symbol">)</a>
+  <a id="1310" href="structured-types.wild-quasigroups.html#1211" class="Function">is-equiv-mul-Wild-Quasigroup</a> <a id="1339" class="Symbol">=</a> <a id="1341" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1345" href="structured-types.wild-quasigroups.html#1084" class="Function">is-binary-equiv-mul-Wild-Quasigroup</a>
+
+  <a id="1384" href="structured-types.wild-quasigroups.html#1384" class="Function">equiv-mul-Wild-Quasigroup</a> <a id="1410" class="Symbol">:</a> <a id="1412" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a> <a id="1433" class="Symbol">→</a> <a id="1435" href="foundation.automorphisms.html#1210" class="Function">Aut</a> <a id="1439" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a>
+  <a id="1462" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1466" class="Symbol">(</a><a id="1467" href="structured-types.wild-quasigroups.html#1384" class="Function">equiv-mul-Wild-Quasigroup</a> <a id="1493" href="structured-types.wild-quasigroups.html#1493" class="Bound">x</a><a id="1494" class="Symbol">)</a> <a id="1496" class="Symbol">=</a> <a id="1498" href="structured-types.wild-quasigroups.html#820" class="Function">mul-Wild-Quasigroup</a> <a id="1518" href="structured-types.wild-quasigroups.html#1493" class="Bound">x</a>
+  <a id="1522" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1526" class="Symbol">(</a><a id="1527" href="structured-types.wild-quasigroups.html#1384" class="Function">equiv-mul-Wild-Quasigroup</a> <a id="1553" href="structured-types.wild-quasigroups.html#1553" class="Bound">x</a><a id="1554" class="Symbol">)</a> <a id="1556" class="Symbol">=</a> <a id="1558" href="structured-types.wild-quasigroups.html#1211" class="Function">is-equiv-mul-Wild-Quasigroup</a> <a id="1587" href="structured-types.wild-quasigroups.html#1553" class="Bound">x</a>
+
+  <a id="1592" href="structured-types.wild-quasigroups.html#1592" class="Function">is-equiv-mul-Wild-Quasigroup&#39;</a> <a id="1622" class="Symbol">:</a>
+    <a id="1628" class="Symbol">(</a><a id="1629" href="structured-types.wild-quasigroups.html#1629" class="Bound">x</a> <a id="1631" class="Symbol">:</a> <a id="1633" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a><a id="1653" class="Symbol">)</a> <a id="1655" class="Symbol">→</a> <a id="1657" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a> <a id="1666" class="Symbol">(</a><a id="1667" href="structured-types.wild-quasigroups.html#953" class="Function">mul-Wild-Quasigroup&#39;</a> <a id="1688" href="structured-types.wild-quasigroups.html#1629" class="Bound">x</a><a id="1689" class="Symbol">)</a>
+  <a id="1693" href="structured-types.wild-quasigroups.html#1592" class="Function">is-equiv-mul-Wild-Quasigroup&#39;</a> <a id="1723" class="Symbol">=</a> <a id="1725" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1729" href="structured-types.wild-quasigroups.html#1084" class="Function">is-binary-equiv-mul-Wild-Quasigroup</a>
+
+  <a id="1768" href="structured-types.wild-quasigroups.html#1768" class="Function">equiv-mul-Wild-Quasigroup&#39;</a> <a id="1795" class="Symbol">:</a> <a id="1797" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a> <a id="1818" class="Symbol">→</a> <a id="1820" href="foundation.automorphisms.html#1210" class="Function">Aut</a> <a id="1824" href="structured-types.wild-quasigroups.html#731" class="Function">type-Wild-Quasigroup</a>
+  <a id="1847" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1851" class="Symbol">(</a><a id="1852" href="structured-types.wild-quasigroups.html#1768" class="Function">equiv-mul-Wild-Quasigroup&#39;</a> <a id="1879" href="structured-types.wild-quasigroups.html#1879" class="Bound">x</a><a id="1880" class="Symbol">)</a> <a id="1882" class="Symbol">=</a> <a id="1884" href="structured-types.wild-quasigroups.html#953" class="Function">mul-Wild-Quasigroup&#39;</a> <a id="1905" href="structured-types.wild-quasigroups.html#1879" class="Bound">x</a>
+  <a id="1909" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1913" class="Symbol">(</a><a id="1914" href="structured-types.wild-quasigroups.html#1768" class="Function">equiv-mul-Wild-Quasigroup&#39;</a> <a id="1941" href="structured-types.wild-quasigroups.html#1941" class="Bound">x</a><a id="1942" class="Symbol">)</a> <a id="1944" class="Symbol">=</a> <a id="1946" href="structured-types.wild-quasigroups.html#1592" class="Function">is-equiv-mul-Wild-Quasigroup&#39;</a> <a id="1976" href="structured-types.wild-quasigroups.html#1941" class="Bound">x</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-05-10)(9677a50) Merge pull request #180 from EgbertRijke/daily-challenge by noreply
+</pre>
+</body>
+</html>
