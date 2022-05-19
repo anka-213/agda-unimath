@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Countable sets</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/set-theory/countable-sets.lagda.md.</p>
+<p>Version of Thursday, May 19, 2022, 05:16 AM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Countable sets</h1>
+</header>
+<pre class="Agda"><a id="40" class="Symbol">{-#</a> <a id="44" class="Keyword">OPTIONS</a> <a id="52" class="Pragma">--without-K</a> <a id="64" class="Pragma">--exact-split</a> <a id="78" class="Symbol">#-}</a>
+
+<a id="83" class="Keyword">module</a> <a id="90" href="set-theory.countable-sets.html" class="Module">set-theory.countable-sets</a> <a id="116" class="Keyword">where</a>
+
+<a id="123" class="Keyword">open</a> <a id="128" class="Keyword">import</a> <a id="135" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+
+<a id="177" class="Keyword">open</a> <a id="182" class="Keyword">import</a> <a id="189" href="foundation.existential-quantification.html" class="Module">foundation.existential-quantification</a>
+<a id="227" class="Keyword">open</a> <a id="232" class="Keyword">import</a> <a id="239" href="foundation.maybe.html" class="Module">foundation.maybe</a>
+<a id="256" class="Keyword">open</a> <a id="261" class="Keyword">import</a> <a id="268" href="foundation.propositions.html" class="Module">foundation.propositions</a>
+<a id="292" class="Keyword">open</a> <a id="297" class="Keyword">import</a> <a id="304" href="foundation.surjective-maps.html" class="Module">foundation.surjective-maps</a>
+<a id="331" class="Keyword">open</a> <a id="336" class="Keyword">import</a> <a id="343" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+</pre>
+<pre class="Agda"><a id="is-countable-Prop"></a><a id="383" href="set-theory.countable-sets.html#383" class="Function">is-countable-Prop</a> <a id="401" class="Symbol">:</a> <a id="403" class="Symbol">{</a><a id="404" href="set-theory.countable-sets.html#404" class="Bound">l</a> <a id="406" class="Symbol">:</a> <a id="408" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="413" class="Symbol">}</a> <a id="415" class="Symbol">→</a> <a id="417" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="420" href="set-theory.countable-sets.html#404" class="Bound">l</a> <a id="422" class="Symbol">→</a> <a id="424" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a> <a id="432" href="set-theory.countable-sets.html#404" class="Bound">l</a>
+<a id="434" href="set-theory.countable-sets.html#383" class="Function">is-countable-Prop</a> <a id="452" href="set-theory.countable-sets.html#452" class="Bound">X</a> <a id="454" class="Symbol">=</a> <a id="456" href="foundation.existential-quantification.html#1645" class="Function">∃-Prop</a> <a id="463" class="Symbol">{</a><a id="464" class="Argument">A</a> <a id="466" class="Symbol">=</a> <a id="468" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a> <a id="470" class="Symbol">→</a> <a id="472" href="foundation.maybe.html#1449" class="Function">Maybe</a> <a id="478" href="set-theory.countable-sets.html#452" class="Bound">X</a><a id="479" class="Symbol">}</a> <a id="481" href="foundation.surjective-maps.html#1905" class="Function">is-surjective</a>
+
+<a id="is-countable"></a><a id="496" href="set-theory.countable-sets.html#496" class="Function">is-countable</a> <a id="509" class="Symbol">:</a> <a id="511" class="Symbol">{</a><a id="512" href="set-theory.countable-sets.html#512" class="Bound">l</a> <a id="514" class="Symbol">:</a> <a id="516" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="521" class="Symbol">}</a> <a id="523" class="Symbol">→</a> <a id="525" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="528" href="set-theory.countable-sets.html#512" class="Bound">l</a> <a id="530" class="Symbol">→</a> <a id="532" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="535" href="set-theory.countable-sets.html#512" class="Bound">l</a>
+<a id="537" href="set-theory.countable-sets.html#496" class="Function">is-countable</a> <a id="550" href="set-theory.countable-sets.html#550" class="Bound">X</a> <a id="552" class="Symbol">=</a> <a id="554" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a> <a id="564" class="Symbol">(</a><a id="565" href="set-theory.countable-sets.html#383" class="Function">is-countable-Prop</a> <a id="583" href="set-theory.countable-sets.html#550" class="Bound">X</a><a id="584" class="Symbol">)</a>
+
+<a id="is-prop-is-countable"></a><a id="587" href="set-theory.countable-sets.html#587" class="Function">is-prop-is-countable</a> <a id="608" class="Symbol">:</a> <a id="610" class="Symbol">{</a><a id="611" href="set-theory.countable-sets.html#611" class="Bound">l</a> <a id="613" class="Symbol">:</a> <a id="615" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="620" class="Symbol">}</a> <a id="622" class="Symbol">(</a><a id="623" href="set-theory.countable-sets.html#623" class="Bound">X</a> <a id="625" class="Symbol">:</a> <a id="627" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="630" href="set-theory.countable-sets.html#611" class="Bound">l</a><a id="631" class="Symbol">)</a> <a id="633" class="Symbol">→</a> <a id="635" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="643" class="Symbol">(</a><a id="644" href="set-theory.countable-sets.html#496" class="Function">is-countable</a> <a id="657" href="set-theory.countable-sets.html#623" class="Bound">X</a><a id="658" class="Symbol">)</a>
+<a id="660" href="set-theory.countable-sets.html#587" class="Function">is-prop-is-countable</a> <a id="681" href="set-theory.countable-sets.html#681" class="Bound">X</a> <a id="683" class="Symbol">=</a> <a id="685" href="foundation-core.propositions.html#1549" class="Function">is-prop-type-Prop</a> <a id="703" class="Symbol">(</a><a id="704" href="set-theory.countable-sets.html#383" class="Function">is-countable-Prop</a> <a id="722" href="set-theory.countable-sets.html#681" class="Bound">X</a><a id="723" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-05-19)(8186d28) Merge pull request #186 from EgbertRijke/daily-challenge by noreply
+</pre>
+</body>
+</html>
