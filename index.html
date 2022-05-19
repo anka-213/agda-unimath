@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/README.lagda.md.</p>
-<p>Version of Wednesday, May 18, 2022, 07:46 PM</p>
+<p>Version of Thursday, May 19, 2022, 03:35 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -560,137 +560,138 @@ Egbert Rijke</p>
 <a id="27201" class="Keyword">open</a> <a id="27206" class="Keyword">import</a> <a id="27213" href="ring-theory.localizations-rings.html" class="Module">ring-theory.localizations-rings</a>
 <a id="27245" class="Keyword">open</a> <a id="27250" class="Keyword">import</a> <a id="27257" href="ring-theory.nontrivial-rings.html" class="Module">ring-theory.nontrivial-rings</a>
 <a id="27286" class="Keyword">open</a> <a id="27291" class="Keyword">import</a> <a id="27298" href="ring-theory.opposite-rings.html" class="Module">ring-theory.opposite-rings</a>
-<a id="27325" class="Keyword">open</a> <a id="27330" class="Keyword">import</a> <a id="27337" href="ring-theory.rings.html" class="Module">ring-theory.rings</a>
-<a id="27355" class="Keyword">open</a> <a id="27360" class="Keyword">import</a> <a id="27367" href="ring-theory.subsets-rings.html" class="Module">ring-theory.subsets-rings</a>
+<a id="27325" class="Keyword">open</a> <a id="27330" class="Keyword">import</a> <a id="27337" href="ring-theory.products-rings.html" class="Module">ring-theory.products-rings</a>
+<a id="27364" class="Keyword">open</a> <a id="27369" class="Keyword">import</a> <a id="27376" href="ring-theory.rings.html" class="Module">ring-theory.rings</a>
+<a id="27394" class="Keyword">open</a> <a id="27399" class="Keyword">import</a> <a id="27406" href="ring-theory.subsets-rings.html" class="Module">ring-theory.subsets-rings</a>
 </pre>
 <h2 id="structured-types">Structured types</h2>
-<pre class="Agda"><a id="27427" class="Keyword">open</a> <a id="27432" class="Keyword">import</a> <a id="27439" href="structured-types.html" class="Module">structured-types</a>
-<a id="27456" class="Keyword">open</a> <a id="27461" class="Keyword">import</a> <a id="27468" href="structured-types.equivalences-types-equipped-with-endomorphisms.html" class="Module">structured-types.equivalences-types-equipped-with-endomorphisms</a>
-<a id="27532" class="Keyword">open</a> <a id="27537" class="Keyword">import</a> <a id="27544" href="structured-types.finite-multiplication-magmas.html" class="Module">structured-types.finite-multiplication-magmas</a>
-<a id="27590" class="Keyword">open</a> <a id="27595" class="Keyword">import</a> <a id="27602" href="structured-types.magmas.html" class="Module">structured-types.magmas</a>
-<a id="27626" class="Keyword">open</a> <a id="27631" class="Keyword">import</a> <a id="27638" href="structured-types.mere-equivalences-types-equipped-with-endomorphisms.html" class="Module">structured-types.mere-equivalences-types-equipped-with-endomorphisms</a>
-<a id="27707" class="Keyword">open</a> <a id="27712" class="Keyword">import</a> <a id="27719" href="structured-types.morphisms-magmas.html" class="Module">structured-types.morphisms-magmas</a>
-<a id="27753" class="Keyword">open</a> <a id="27758" class="Keyword">import</a> <a id="27765" href="structured-types.morphisms-types-equipped-with-endomorphisms.html" class="Module">structured-types.morphisms-types-equipped-with-endomorphisms</a>
-<a id="27826" class="Keyword">open</a> <a id="27831" class="Keyword">import</a> <a id="27838" href="structured-types.morphisms-wild-unital-magmas.html" class="Module">structured-types.morphisms-wild-unital-magmas</a>
-<a id="27884" class="Keyword">open</a> <a id="27889" class="Keyword">import</a> <a id="27896" href="structured-types.pointed-dependent-functions.html" class="Module">structured-types.pointed-dependent-functions</a>
-<a id="27941" class="Keyword">open</a> <a id="27946" class="Keyword">import</a> <a id="27953" href="structured-types.pointed-equivalences.html" class="Module">structured-types.pointed-equivalences</a>
-<a id="27991" class="Keyword">open</a> <a id="27996" class="Keyword">import</a> <a id="28003" href="structured-types.pointed-families-of-types.html" class="Module">structured-types.pointed-families-of-types</a>
-<a id="28046" class="Keyword">open</a> <a id="28051" class="Keyword">import</a> <a id="28058" href="structured-types.pointed-homotopies.html" class="Module">structured-types.pointed-homotopies</a>
-<a id="28094" class="Keyword">open</a> <a id="28099" class="Keyword">import</a> <a id="28106" href="structured-types.pointed-maps.html" class="Module">structured-types.pointed-maps</a>
-<a id="28136" class="Keyword">open</a> <a id="28141" class="Keyword">import</a> <a id="28148" href="structured-types.pointed-types.html" class="Module">structured-types.pointed-types</a>
-<a id="28179" class="Keyword">open</a> <a id="28184" class="Keyword">import</a> <a id="28191" href="structured-types.types-equipped-with-endomorphisms.html" class="Module">structured-types.types-equipped-with-endomorphisms</a>
-<a id="28242" class="Keyword">open</a> <a id="28247" class="Keyword">import</a> <a id="28254" href="structured-types.universal-property-lists-wild-monoids.html" class="Module">structured-types.universal-property-lists-wild-monoids</a>
-<a id="28309" class="Keyword">open</a> <a id="28314" class="Keyword">import</a> <a id="28321" href="structured-types.wild-groups.html" class="Module">structured-types.wild-groups</a>
-<a id="28350" class="Keyword">open</a> <a id="28355" class="Keyword">import</a> <a id="28362" href="structured-types.wild-loops.html" class="Module">structured-types.wild-loops</a>
-<a id="28390" class="Keyword">open</a> <a id="28395" class="Keyword">import</a> <a id="28402" href="structured-types.wild-monoids.html" class="Module">structured-types.wild-monoids</a>
-<a id="28432" class="Keyword">open</a> <a id="28437" class="Keyword">import</a> <a id="28444" href="structured-types.wild-quasigroups.html" class="Module">structured-types.wild-quasigroups</a>
-<a id="28478" class="Keyword">open</a> <a id="28483" class="Keyword">import</a> <a id="28490" href="structured-types.wild-semigroups.html" class="Module">structured-types.wild-semigroups</a>
-<a id="28523" class="Keyword">open</a> <a id="28528" class="Keyword">import</a> <a id="28535" href="structured-types.wild-unital-magmas.html" class="Module">structured-types.wild-unital-magmas</a>
+<pre class="Agda"><a id="27466" class="Keyword">open</a> <a id="27471" class="Keyword">import</a> <a id="27478" href="structured-types.html" class="Module">structured-types</a>
+<a id="27495" class="Keyword">open</a> <a id="27500" class="Keyword">import</a> <a id="27507" href="structured-types.equivalences-types-equipped-with-endomorphisms.html" class="Module">structured-types.equivalences-types-equipped-with-endomorphisms</a>
+<a id="27571" class="Keyword">open</a> <a id="27576" class="Keyword">import</a> <a id="27583" href="structured-types.finite-multiplication-magmas.html" class="Module">structured-types.finite-multiplication-magmas</a>
+<a id="27629" class="Keyword">open</a> <a id="27634" class="Keyword">import</a> <a id="27641" href="structured-types.magmas.html" class="Module">structured-types.magmas</a>
+<a id="27665" class="Keyword">open</a> <a id="27670" class="Keyword">import</a> <a id="27677" href="structured-types.mere-equivalences-types-equipped-with-endomorphisms.html" class="Module">structured-types.mere-equivalences-types-equipped-with-endomorphisms</a>
+<a id="27746" class="Keyword">open</a> <a id="27751" class="Keyword">import</a> <a id="27758" href="structured-types.morphisms-magmas.html" class="Module">structured-types.morphisms-magmas</a>
+<a id="27792" class="Keyword">open</a> <a id="27797" class="Keyword">import</a> <a id="27804" href="structured-types.morphisms-types-equipped-with-endomorphisms.html" class="Module">structured-types.morphisms-types-equipped-with-endomorphisms</a>
+<a id="27865" class="Keyword">open</a> <a id="27870" class="Keyword">import</a> <a id="27877" href="structured-types.morphisms-wild-unital-magmas.html" class="Module">structured-types.morphisms-wild-unital-magmas</a>
+<a id="27923" class="Keyword">open</a> <a id="27928" class="Keyword">import</a> <a id="27935" href="structured-types.pointed-dependent-functions.html" class="Module">structured-types.pointed-dependent-functions</a>
+<a id="27980" class="Keyword">open</a> <a id="27985" class="Keyword">import</a> <a id="27992" href="structured-types.pointed-equivalences.html" class="Module">structured-types.pointed-equivalences</a>
+<a id="28030" class="Keyword">open</a> <a id="28035" class="Keyword">import</a> <a id="28042" href="structured-types.pointed-families-of-types.html" class="Module">structured-types.pointed-families-of-types</a>
+<a id="28085" class="Keyword">open</a> <a id="28090" class="Keyword">import</a> <a id="28097" href="structured-types.pointed-homotopies.html" class="Module">structured-types.pointed-homotopies</a>
+<a id="28133" class="Keyword">open</a> <a id="28138" class="Keyword">import</a> <a id="28145" href="structured-types.pointed-maps.html" class="Module">structured-types.pointed-maps</a>
+<a id="28175" class="Keyword">open</a> <a id="28180" class="Keyword">import</a> <a id="28187" href="structured-types.pointed-types.html" class="Module">structured-types.pointed-types</a>
+<a id="28218" class="Keyword">open</a> <a id="28223" class="Keyword">import</a> <a id="28230" href="structured-types.types-equipped-with-endomorphisms.html" class="Module">structured-types.types-equipped-with-endomorphisms</a>
+<a id="28281" class="Keyword">open</a> <a id="28286" class="Keyword">import</a> <a id="28293" href="structured-types.universal-property-lists-wild-monoids.html" class="Module">structured-types.universal-property-lists-wild-monoids</a>
+<a id="28348" class="Keyword">open</a> <a id="28353" class="Keyword">import</a> <a id="28360" href="structured-types.wild-groups.html" class="Module">structured-types.wild-groups</a>
+<a id="28389" class="Keyword">open</a> <a id="28394" class="Keyword">import</a> <a id="28401" href="structured-types.wild-loops.html" class="Module">structured-types.wild-loops</a>
+<a id="28429" class="Keyword">open</a> <a id="28434" class="Keyword">import</a> <a id="28441" href="structured-types.wild-monoids.html" class="Module">structured-types.wild-monoids</a>
+<a id="28471" class="Keyword">open</a> <a id="28476" class="Keyword">import</a> <a id="28483" href="structured-types.wild-quasigroups.html" class="Module">structured-types.wild-quasigroups</a>
+<a id="28517" class="Keyword">open</a> <a id="28522" class="Keyword">import</a> <a id="28529" href="structured-types.wild-semigroups.html" class="Module">structured-types.wild-semigroups</a>
+<a id="28562" class="Keyword">open</a> <a id="28567" class="Keyword">import</a> <a id="28574" href="structured-types.wild-unital-magmas.html" class="Module">structured-types.wild-unital-magmas</a>
 </pre>
 <h2 id="synthetic-homotopy-theory">Synthetic homotopy theory</h2>
-<pre class="Agda"><a id="28614" class="Keyword">open</a> <a id="28619" class="Keyword">import</a> <a id="28626" href="synthetic-homotopy-theory.html" class="Module">synthetic-homotopy-theory</a>
-<a id="28652" class="Keyword">open</a> <a id="28657" class="Keyword">import</a> <a id="28664" href="synthetic-homotopy-theory.23-pullbacks.html" class="Module">synthetic-homotopy-theory.23-pullbacks</a>
-<a id="28703" class="Keyword">open</a> <a id="28708" class="Keyword">import</a> <a id="28715" href="synthetic-homotopy-theory.24-pushouts.html" class="Module">synthetic-homotopy-theory.24-pushouts</a>
-<a id="28753" class="Keyword">open</a> <a id="28758" class="Keyword">import</a> <a id="28765" href="synthetic-homotopy-theory.25-cubical-diagrams.html" class="Module">synthetic-homotopy-theory.25-cubical-diagrams</a>
-<a id="28811" class="Keyword">open</a> <a id="28816" class="Keyword">import</a> <a id="28823" href="synthetic-homotopy-theory.26-descent.html" class="Module">synthetic-homotopy-theory.26-descent</a>
-<a id="28860" class="Keyword">open</a> <a id="28865" class="Keyword">import</a> <a id="28872" href="synthetic-homotopy-theory.26-id-pushout.html" class="Module">synthetic-homotopy-theory.26-id-pushout</a>
-<a id="28912" class="Keyword">open</a> <a id="28917" class="Keyword">import</a> <a id="28924" href="synthetic-homotopy-theory.27-sequences.html" class="Module">synthetic-homotopy-theory.27-sequences</a>
-<a id="28963" class="Keyword">open</a> <a id="28968" class="Keyword">import</a> <a id="28975" href="synthetic-homotopy-theory.circle.html" class="Module">synthetic-homotopy-theory.circle</a>
-<a id="29008" class="Keyword">open</a> <a id="29013" class="Keyword">import</a> <a id="29020" href="synthetic-homotopy-theory.cyclic-types.html" class="Module">synthetic-homotopy-theory.cyclic-types</a>
-<a id="29059" class="Keyword">open</a> <a id="29064" class="Keyword">import</a> <a id="29071" href="synthetic-homotopy-theory.double-loop-spaces.html" class="Module">synthetic-homotopy-theory.double-loop-spaces</a>
-<a id="29116" class="Keyword">open</a> <a id="29121" class="Keyword">import</a> <a id="29128" href="synthetic-homotopy-theory.functoriality-loop-spaces.html" class="Module">synthetic-homotopy-theory.functoriality-loop-spaces</a>
-<a id="29180" class="Keyword">open</a> <a id="29185" class="Keyword">import</a> <a id="29192" href="synthetic-homotopy-theory.groups-of-loops-in-1-types.html" class="Module">synthetic-homotopy-theory.groups-of-loops-in-1-types</a>
-<a id="29245" class="Keyword">open</a> <a id="29250" class="Keyword">import</a> <a id="29257" href="synthetic-homotopy-theory.infinite-cyclic-types.html" class="Module">synthetic-homotopy-theory.infinite-cyclic-types</a>
-<a id="29305" class="Keyword">open</a> <a id="29310" class="Keyword">import</a> <a id="29317" href="synthetic-homotopy-theory.interval-type.html" class="Module">synthetic-homotopy-theory.interval-type</a>
-<a id="29357" class="Keyword">open</a> <a id="29362" class="Keyword">import</a> <a id="29369" href="synthetic-homotopy-theory.iterated-loop-spaces.html" class="Module">synthetic-homotopy-theory.iterated-loop-spaces</a>
-<a id="29416" class="Keyword">open</a> <a id="29421" class="Keyword">import</a> <a id="29428" href="synthetic-homotopy-theory.loop-spaces.html" class="Module">synthetic-homotopy-theory.loop-spaces</a>
-<a id="29466" class="Keyword">open</a> <a id="29471" class="Keyword">import</a> <a id="29478" href="synthetic-homotopy-theory.spaces.html" class="Module">synthetic-homotopy-theory.spaces</a>
-<a id="29511" class="Keyword">open</a> <a id="29516" class="Keyword">import</a> <a id="29523" href="synthetic-homotopy-theory.triple-loop-spaces.html" class="Module">synthetic-homotopy-theory.triple-loop-spaces</a>
-<a id="29568" class="Keyword">open</a> <a id="29573" class="Keyword">import</a> <a id="29580" href="synthetic-homotopy-theory.universal-cover-circle.html" class="Module">synthetic-homotopy-theory.universal-cover-circle</a>
+<pre class="Agda"><a id="28653" class="Keyword">open</a> <a id="28658" class="Keyword">import</a> <a id="28665" href="synthetic-homotopy-theory.html" class="Module">synthetic-homotopy-theory</a>
+<a id="28691" class="Keyword">open</a> <a id="28696" class="Keyword">import</a> <a id="28703" href="synthetic-homotopy-theory.23-pullbacks.html" class="Module">synthetic-homotopy-theory.23-pullbacks</a>
+<a id="28742" class="Keyword">open</a> <a id="28747" class="Keyword">import</a> <a id="28754" href="synthetic-homotopy-theory.24-pushouts.html" class="Module">synthetic-homotopy-theory.24-pushouts</a>
+<a id="28792" class="Keyword">open</a> <a id="28797" class="Keyword">import</a> <a id="28804" href="synthetic-homotopy-theory.25-cubical-diagrams.html" class="Module">synthetic-homotopy-theory.25-cubical-diagrams</a>
+<a id="28850" class="Keyword">open</a> <a id="28855" class="Keyword">import</a> <a id="28862" href="synthetic-homotopy-theory.26-descent.html" class="Module">synthetic-homotopy-theory.26-descent</a>
+<a id="28899" class="Keyword">open</a> <a id="28904" class="Keyword">import</a> <a id="28911" href="synthetic-homotopy-theory.26-id-pushout.html" class="Module">synthetic-homotopy-theory.26-id-pushout</a>
+<a id="28951" class="Keyword">open</a> <a id="28956" class="Keyword">import</a> <a id="28963" href="synthetic-homotopy-theory.27-sequences.html" class="Module">synthetic-homotopy-theory.27-sequences</a>
+<a id="29002" class="Keyword">open</a> <a id="29007" class="Keyword">import</a> <a id="29014" href="synthetic-homotopy-theory.circle.html" class="Module">synthetic-homotopy-theory.circle</a>
+<a id="29047" class="Keyword">open</a> <a id="29052" class="Keyword">import</a> <a id="29059" href="synthetic-homotopy-theory.cyclic-types.html" class="Module">synthetic-homotopy-theory.cyclic-types</a>
+<a id="29098" class="Keyword">open</a> <a id="29103" class="Keyword">import</a> <a id="29110" href="synthetic-homotopy-theory.double-loop-spaces.html" class="Module">synthetic-homotopy-theory.double-loop-spaces</a>
+<a id="29155" class="Keyword">open</a> <a id="29160" class="Keyword">import</a> <a id="29167" href="synthetic-homotopy-theory.functoriality-loop-spaces.html" class="Module">synthetic-homotopy-theory.functoriality-loop-spaces</a>
+<a id="29219" class="Keyword">open</a> <a id="29224" class="Keyword">import</a> <a id="29231" href="synthetic-homotopy-theory.groups-of-loops-in-1-types.html" class="Module">synthetic-homotopy-theory.groups-of-loops-in-1-types</a>
+<a id="29284" class="Keyword">open</a> <a id="29289" class="Keyword">import</a> <a id="29296" href="synthetic-homotopy-theory.infinite-cyclic-types.html" class="Module">synthetic-homotopy-theory.infinite-cyclic-types</a>
+<a id="29344" class="Keyword">open</a> <a id="29349" class="Keyword">import</a> <a id="29356" href="synthetic-homotopy-theory.interval-type.html" class="Module">synthetic-homotopy-theory.interval-type</a>
+<a id="29396" class="Keyword">open</a> <a id="29401" class="Keyword">import</a> <a id="29408" href="synthetic-homotopy-theory.iterated-loop-spaces.html" class="Module">synthetic-homotopy-theory.iterated-loop-spaces</a>
+<a id="29455" class="Keyword">open</a> <a id="29460" class="Keyword">import</a> <a id="29467" href="synthetic-homotopy-theory.loop-spaces.html" class="Module">synthetic-homotopy-theory.loop-spaces</a>
+<a id="29505" class="Keyword">open</a> <a id="29510" class="Keyword">import</a> <a id="29517" href="synthetic-homotopy-theory.spaces.html" class="Module">synthetic-homotopy-theory.spaces</a>
+<a id="29550" class="Keyword">open</a> <a id="29555" class="Keyword">import</a> <a id="29562" href="synthetic-homotopy-theory.triple-loop-spaces.html" class="Module">synthetic-homotopy-theory.triple-loop-spaces</a>
+<a id="29607" class="Keyword">open</a> <a id="29612" class="Keyword">import</a> <a id="29619" href="synthetic-homotopy-theory.universal-cover-circle.html" class="Module">synthetic-homotopy-theory.universal-cover-circle</a>
 </pre>
 <h2 id="tutorials">Tutorials</h2>
-<pre class="Agda"><a id="29656" class="Keyword">open</a> <a id="29661" class="Keyword">import</a> <a id="29668" href="tutorials.basic-agda.html" class="Module">tutorials.basic-agda</a>
+<pre class="Agda"><a id="29695" class="Keyword">open</a> <a id="29700" class="Keyword">import</a> <a id="29707" href="tutorials.basic-agda.html" class="Module">tutorials.basic-agda</a>
 </pre>
 <h2 id="type-theories">Type theories</h2>
-<pre class="Agda"><a id="29720" class="Keyword">open</a> <a id="29725" class="Keyword">import</a> <a id="29732" href="type-theories.html" class="Module">type-theories</a>
-<a id="29746" class="Keyword">open</a> <a id="29751" class="Keyword">import</a> <a id="29758" href="type-theories.comprehension-type-theories.html" class="Module">type-theories.comprehension-type-theories</a>
-<a id="29800" class="Keyword">open</a> <a id="29805" class="Keyword">import</a> <a id="29812" href="type-theories.dependent-type-theories.html" class="Module">type-theories.dependent-type-theories</a>
-<a id="29850" class="Keyword">open</a> <a id="29855" class="Keyword">import</a> <a id="29862" href="type-theories.fibered-dependent-type-theories.html" class="Module">type-theories.fibered-dependent-type-theories</a>
-<a id="29908" class="Keyword">open</a> <a id="29913" class="Keyword">import</a> <a id="29920" href="type-theories.sections-dependent-type-theories.html" class="Module">type-theories.sections-dependent-type-theories</a>
-<a id="29967" class="Keyword">open</a> <a id="29972" class="Keyword">import</a> <a id="29979" href="type-theories.simple-type-theories.html" class="Module">type-theories.simple-type-theories</a>
-<a id="30014" class="Keyword">open</a> <a id="30019" class="Keyword">import</a> <a id="30026" href="type-theories.unityped-type-theories.html" class="Module">type-theories.unityped-type-theories</a>
+<pre class="Agda"><a id="29759" class="Keyword">open</a> <a id="29764" class="Keyword">import</a> <a id="29771" href="type-theories.html" class="Module">type-theories</a>
+<a id="29785" class="Keyword">open</a> <a id="29790" class="Keyword">import</a> <a id="29797" href="type-theories.comprehension-type-theories.html" class="Module">type-theories.comprehension-type-theories</a>
+<a id="29839" class="Keyword">open</a> <a id="29844" class="Keyword">import</a> <a id="29851" href="type-theories.dependent-type-theories.html" class="Module">type-theories.dependent-type-theories</a>
+<a id="29889" class="Keyword">open</a> <a id="29894" class="Keyword">import</a> <a id="29901" href="type-theories.fibered-dependent-type-theories.html" class="Module">type-theories.fibered-dependent-type-theories</a>
+<a id="29947" class="Keyword">open</a> <a id="29952" class="Keyword">import</a> <a id="29959" href="type-theories.sections-dependent-type-theories.html" class="Module">type-theories.sections-dependent-type-theories</a>
+<a id="30006" class="Keyword">open</a> <a id="30011" class="Keyword">import</a> <a id="30018" href="type-theories.simple-type-theories.html" class="Module">type-theories.simple-type-theories</a>
+<a id="30053" class="Keyword">open</a> <a id="30058" class="Keyword">import</a> <a id="30065" href="type-theories.unityped-type-theories.html" class="Module">type-theories.unityped-type-theories</a>
 </pre>
 <h2 id="univalent-combinatorics">Univalent combinatorics</h2>
-<pre class="Agda"><a id="30104" class="Keyword">open</a> <a id="30109" class="Keyword">import</a> <a id="30116" href="univalent-combinatorics.html" class="Module">univalent-combinatorics</a>
-<a id="30140" class="Keyword">open</a> <a id="30145" class="Keyword">import</a> <a id="30152" href="univalent-combinatorics.2-element-decidable-subtypes.html" class="Module">univalent-combinatorics.2-element-decidable-subtypes</a>
-<a id="30205" class="Keyword">open</a> <a id="30210" class="Keyword">import</a> <a id="30217" href="univalent-combinatorics.2-element-subtypes.html" class="Module">univalent-combinatorics.2-element-subtypes</a>
-<a id="30260" class="Keyword">open</a> <a id="30265" class="Keyword">import</a> <a id="30272" href="univalent-combinatorics.2-element-types.html" class="Module">univalent-combinatorics.2-element-types</a>
-<a id="30312" class="Keyword">open</a> <a id="30317" class="Keyword">import</a> <a id="30324" href="univalent-combinatorics.binomial-types.html" class="Module">univalent-combinatorics.binomial-types</a>
-<a id="30363" class="Keyword">open</a> <a id="30368" class="Keyword">import</a> <a id="30375" href="univalent-combinatorics.cartesian-product-types.html" class="Module">univalent-combinatorics.cartesian-product-types</a>
-<a id="30423" class="Keyword">open</a> <a id="30428" class="Keyword">import</a> <a id="30435" href="univalent-combinatorics.classical-finite-types.html" class="Module">univalent-combinatorics.classical-finite-types</a>
-<a id="30482" class="Keyword">open</a> <a id="30487" class="Keyword">import</a> <a id="30494" href="univalent-combinatorics.complements-isolated-points.html" class="Module">univalent-combinatorics.complements-isolated-points</a>
-<a id="30546" class="Keyword">open</a> <a id="30551" class="Keyword">import</a> <a id="30558" href="univalent-combinatorics.coproduct-types.html" class="Module">univalent-combinatorics.coproduct-types</a>
-<a id="30598" class="Keyword">open</a> <a id="30603" class="Keyword">import</a> <a id="30610" href="univalent-combinatorics.counting-decidable-subtypes.html" class="Module">univalent-combinatorics.counting-decidable-subtypes</a>
-<a id="30662" class="Keyword">open</a> <a id="30667" class="Keyword">import</a> <a id="30674" href="univalent-combinatorics.counting-dependent-pair-types.html" class="Module">univalent-combinatorics.counting-dependent-pair-types</a>
-<a id="30728" class="Keyword">open</a> <a id="30733" class="Keyword">import</a> <a id="30740" href="univalent-combinatorics.counting-fibers-of-maps.html" class="Module">univalent-combinatorics.counting-fibers-of-maps</a>
-<a id="30788" class="Keyword">open</a> <a id="30793" class="Keyword">import</a> <a id="30800" href="univalent-combinatorics.counting-maybe.html" class="Module">univalent-combinatorics.counting-maybe</a>
-<a id="30839" class="Keyword">open</a> <a id="30844" class="Keyword">import</a> <a id="30851" href="univalent-combinatorics.counting.html" class="Module">univalent-combinatorics.counting</a>
-<a id="30884" class="Keyword">open</a> <a id="30889" class="Keyword">import</a> <a id="30896" href="univalent-combinatorics.cubes.html" class="Module">univalent-combinatorics.cubes</a>
-<a id="30926" class="Keyword">open</a> <a id="30931" class="Keyword">import</a> <a id="30938" href="univalent-combinatorics.decidable-dependent-function-types.html" class="Module">univalent-combinatorics.decidable-dependent-function-types</a>
-<a id="30997" class="Keyword">open</a> <a id="31002" class="Keyword">import</a> <a id="31009" href="univalent-combinatorics.decidable-dependent-pair-types.html" class="Module">univalent-combinatorics.decidable-dependent-pair-types</a>
-<a id="31064" class="Keyword">open</a> <a id="31069" class="Keyword">import</a> <a id="31076" href="univalent-combinatorics.decidable-propositions.html" class="Module">univalent-combinatorics.decidable-propositions</a>
-<a id="31123" class="Keyword">open</a> <a id="31128" class="Keyword">import</a> <a id="31135" href="univalent-combinatorics.decidable-subtypes.html" class="Module">univalent-combinatorics.decidable-subtypes</a>
-<a id="31178" class="Keyword">open</a> <a id="31183" class="Keyword">import</a> <a id="31190" href="univalent-combinatorics.dedekind-finite-sets.html" class="Module">univalent-combinatorics.dedekind-finite-sets</a>
-<a id="31235" class="Keyword">open</a> <a id="31240" class="Keyword">import</a> <a id="31247" href="univalent-combinatorics.dependent-function-types.html" class="Module">univalent-combinatorics.dependent-function-types</a>
-<a id="31296" class="Keyword">open</a> <a id="31301" class="Keyword">import</a> <a id="31308" href="univalent-combinatorics.dependent-sum-finite-types.html" class="Module">univalent-combinatorics.dependent-sum-finite-types</a>
-<a id="31359" class="Keyword">open</a> <a id="31364" class="Keyword">import</a> <a id="31371" href="univalent-combinatorics.distributivity-of-set-truncation-over-finite-products.html" class="Module">univalent-combinatorics.distributivity-of-set-truncation-over-finite-products</a>
-<a id="31449" class="Keyword">open</a> <a id="31454" class="Keyword">import</a> <a id="31461" href="univalent-combinatorics.double-counting.html" class="Module">univalent-combinatorics.double-counting</a>
-<a id="31501" class="Keyword">open</a> <a id="31506" class="Keyword">import</a> <a id="31513" href="univalent-combinatorics.embeddings-standard-finite-types.html" class="Module">univalent-combinatorics.embeddings-standard-finite-types</a>
-<a id="31570" class="Keyword">open</a> <a id="31575" class="Keyword">import</a> <a id="31582" href="univalent-combinatorics.embeddings.html" class="Module">univalent-combinatorics.embeddings</a>
-<a id="31617" class="Keyword">open</a> <a id="31622" class="Keyword">import</a> <a id="31629" href="univalent-combinatorics.equality-finite-types.html" class="Module">univalent-combinatorics.equality-finite-types</a>
-<a id="31675" class="Keyword">open</a> <a id="31680" class="Keyword">import</a> <a id="31687" href="univalent-combinatorics.equality-standard-finite-types.html" class="Module">univalent-combinatorics.equality-standard-finite-types</a>
-<a id="31742" class="Keyword">open</a> <a id="31747" class="Keyword">import</a> <a id="31754" href="univalent-combinatorics.equivalences-cubes.html" class="Module">univalent-combinatorics.equivalences-cubes</a>
-<a id="31797" class="Keyword">open</a> <a id="31802" class="Keyword">import</a> <a id="31809" href="univalent-combinatorics.equivalences-standard-finite-types.html" class="Module">univalent-combinatorics.equivalences-standard-finite-types</a>
-<a id="31868" class="Keyword">open</a> <a id="31873" class="Keyword">import</a> <a id="31880" href="univalent-combinatorics.equivalences.html" class="Module">univalent-combinatorics.equivalences</a>
-<a id="31917" class="Keyword">open</a> <a id="31922" class="Keyword">import</a> <a id="31929" href="univalent-combinatorics.ferrers-diagrams.html" class="Module">univalent-combinatorics.ferrers-diagrams</a>
-<a id="31970" class="Keyword">open</a> <a id="31975" class="Keyword">import</a> <a id="31982" href="univalent-combinatorics.fibers-of-maps.html" class="Module">univalent-combinatorics.fibers-of-maps</a>
-<a id="32021" class="Keyword">open</a> <a id="32026" class="Keyword">import</a> <a id="32033" href="univalent-combinatorics.finite-choice.html" class="Module">univalent-combinatorics.finite-choice</a>
-<a id="32071" class="Keyword">open</a> <a id="32076" class="Keyword">import</a> <a id="32083" href="univalent-combinatorics.finite-connected-components.html" class="Module">univalent-combinatorics.finite-connected-components</a>
-<a id="32135" class="Keyword">open</a> <a id="32140" class="Keyword">import</a> <a id="32147" href="univalent-combinatorics.finite-presentations.html" class="Module">univalent-combinatorics.finite-presentations</a>
-<a id="32192" class="Keyword">open</a> <a id="32197" class="Keyword">import</a> <a id="32204" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
-<a id="32241" class="Keyword">open</a> <a id="32246" class="Keyword">import</a> <a id="32253" href="univalent-combinatorics.finitely-presented-types.html" class="Module">univalent-combinatorics.finitely-presented-types</a>
-<a id="32302" class="Keyword">open</a> <a id="32307" class="Keyword">import</a> <a id="32314" href="univalent-combinatorics.function-types.html" class="Module">univalent-combinatorics.function-types</a>
-<a id="32353" class="Keyword">open</a> <a id="32358" class="Keyword">import</a> <a id="32365" href="univalent-combinatorics.image-of-maps.html" class="Module">univalent-combinatorics.image-of-maps</a>
-<a id="32403" class="Keyword">open</a> <a id="32408" class="Keyword">import</a> <a id="32415" href="univalent-combinatorics.inequality-types-with-counting.html" class="Module">univalent-combinatorics.inequality-types-with-counting</a>
-<a id="32470" class="Keyword">open</a> <a id="32475" class="Keyword">import</a> <a id="32482" href="univalent-combinatorics.injective-maps.html" class="Module">univalent-combinatorics.injective-maps</a>
-<a id="32521" class="Keyword">open</a> <a id="32526" class="Keyword">import</a> <a id="32533" href="univalent-combinatorics.isotopies-latin-squares.html" class="Module">univalent-combinatorics.isotopies-latin-squares</a>
-<a id="32581" class="Keyword">open</a> <a id="32586" class="Keyword">import</a> <a id="32593" href="univalent-combinatorics.kuratowsky-finite-sets.html" class="Module">univalent-combinatorics.kuratowsky-finite-sets</a>
-<a id="32640" class="Keyword">open</a> <a id="32645" class="Keyword">import</a> <a id="32652" href="univalent-combinatorics.latin-squares.html" class="Module">univalent-combinatorics.latin-squares</a>
-<a id="32690" class="Keyword">open</a> <a id="32695" class="Keyword">import</a> <a id="32702" href="univalent-combinatorics.lists.html" class="Module">univalent-combinatorics.lists</a>
-<a id="32732" class="Keyword">open</a> <a id="32737" class="Keyword">import</a> <a id="32744" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html" class="Module">univalent-combinatorics.main-classes-of-latin-hypercubes</a>
-<a id="32801" class="Keyword">open</a> <a id="32806" class="Keyword">import</a> <a id="32813" href="univalent-combinatorics.main-classes-of-latin-squares.html" class="Module">univalent-combinatorics.main-classes-of-latin-squares</a>
-<a id="32867" class="Keyword">open</a> <a id="32872" class="Keyword">import</a> <a id="32879" href="univalent-combinatorics.maybe.html" class="Module">univalent-combinatorics.maybe</a>
-<a id="32909" class="Keyword">open</a> <a id="32914" class="Keyword">import</a> <a id="32921" href="univalent-combinatorics.orientations-complete-undirected-graph.html" class="Module">univalent-combinatorics.orientations-complete-undirected-graph</a>
-<a id="32984" class="Keyword">open</a> <a id="32989" class="Keyword">import</a> <a id="32996" href="univalent-combinatorics.orientations-cubes.html" class="Module">univalent-combinatorics.orientations-cubes</a>
-<a id="33039" class="Keyword">open</a> <a id="33044" class="Keyword">import</a> <a id="33051" href="univalent-combinatorics.petri-nets.html" class="Module">univalent-combinatorics.petri-nets</a>
-<a id="33086" class="Keyword">open</a> <a id="33091" class="Keyword">import</a> <a id="33098" href="univalent-combinatorics.pi-finite-types.html" class="Module">univalent-combinatorics.pi-finite-types</a>
-<a id="33138" class="Keyword">open</a> <a id="33143" class="Keyword">import</a> <a id="33150" href="univalent-combinatorics.pigeonhole-principle.html" class="Module">univalent-combinatorics.pigeonhole-principle</a>
-<a id="33195" class="Keyword">open</a> <a id="33200" class="Keyword">import</a> <a id="33207" href="univalent-combinatorics.presented-pi-finite-types.html" class="Module">univalent-combinatorics.presented-pi-finite-types</a>
-<a id="33257" class="Keyword">open</a> <a id="33262" class="Keyword">import</a> <a id="33269" href="univalent-combinatorics.ramsey-theory.html" class="Module">univalent-combinatorics.ramsey-theory</a>
-<a id="33307" class="Keyword">open</a> <a id="33312" class="Keyword">import</a> <a id="33319" href="univalent-combinatorics.retracts-of-finite-types.html" class="Module">univalent-combinatorics.retracts-of-finite-types</a>
-<a id="33368" class="Keyword">open</a> <a id="33373" class="Keyword">import</a> <a id="33380" href="univalent-combinatorics.skipping-element-standard-finite-types.html" class="Module">univalent-combinatorics.skipping-element-standard-finite-types</a>
-<a id="33443" class="Keyword">open</a> <a id="33448" class="Keyword">import</a> <a id="33455" href="univalent-combinatorics.species.html" class="Module">univalent-combinatorics.species</a>
-<a id="33487" class="Keyword">open</a> <a id="33492" class="Keyword">import</a> <a id="33499" href="univalent-combinatorics.standard-finite-pruned-trees.html" class="Module">univalent-combinatorics.standard-finite-pruned-trees</a>
-<a id="33552" class="Keyword">open</a> <a id="33557" class="Keyword">import</a> <a id="33564" href="univalent-combinatorics.standard-finite-trees.html" class="Module">univalent-combinatorics.standard-finite-trees</a>
-<a id="33610" class="Keyword">open</a> <a id="33615" class="Keyword">import</a> <a id="33622" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
-<a id="33668" class="Keyword">open</a> <a id="33673" class="Keyword">import</a> <a id="33680" href="univalent-combinatorics.sums-of-natural-numbers.html" class="Module">univalent-combinatorics.sums-of-natural-numbers</a>
-<a id="33728" class="Keyword">open</a> <a id="33733" class="Keyword">import</a> <a id="33740" href="univalent-combinatorics.surjective-maps.html" class="Module">univalent-combinatorics.surjective-maps</a>
-<a id="33780" class="Keyword">open</a> <a id="33785" class="Keyword">import</a> <a id="33792" href="univalent-combinatorics.symmetric-difference.html" class="Module">univalent-combinatorics.symmetric-difference</a>
-<a id="33837" class="Keyword">open</a> <a id="33842" class="Keyword">import</a> <a id="33849" href="univalent-combinatorics.universal-property-standard-finite-types.html" class="Module">univalent-combinatorics.universal-property-standard-finite-types</a>
+<pre class="Agda"><a id="30143" class="Keyword">open</a> <a id="30148" class="Keyword">import</a> <a id="30155" href="univalent-combinatorics.html" class="Module">univalent-combinatorics</a>
+<a id="30179" class="Keyword">open</a> <a id="30184" class="Keyword">import</a> <a id="30191" href="univalent-combinatorics.2-element-decidable-subtypes.html" class="Module">univalent-combinatorics.2-element-decidable-subtypes</a>
+<a id="30244" class="Keyword">open</a> <a id="30249" class="Keyword">import</a> <a id="30256" href="univalent-combinatorics.2-element-subtypes.html" class="Module">univalent-combinatorics.2-element-subtypes</a>
+<a id="30299" class="Keyword">open</a> <a id="30304" class="Keyword">import</a> <a id="30311" href="univalent-combinatorics.2-element-types.html" class="Module">univalent-combinatorics.2-element-types</a>
+<a id="30351" class="Keyword">open</a> <a id="30356" class="Keyword">import</a> <a id="30363" href="univalent-combinatorics.binomial-types.html" class="Module">univalent-combinatorics.binomial-types</a>
+<a id="30402" class="Keyword">open</a> <a id="30407" class="Keyword">import</a> <a id="30414" href="univalent-combinatorics.cartesian-product-types.html" class="Module">univalent-combinatorics.cartesian-product-types</a>
+<a id="30462" class="Keyword">open</a> <a id="30467" class="Keyword">import</a> <a id="30474" href="univalent-combinatorics.classical-finite-types.html" class="Module">univalent-combinatorics.classical-finite-types</a>
+<a id="30521" class="Keyword">open</a> <a id="30526" class="Keyword">import</a> <a id="30533" href="univalent-combinatorics.complements-isolated-points.html" class="Module">univalent-combinatorics.complements-isolated-points</a>
+<a id="30585" class="Keyword">open</a> <a id="30590" class="Keyword">import</a> <a id="30597" href="univalent-combinatorics.coproduct-types.html" class="Module">univalent-combinatorics.coproduct-types</a>
+<a id="30637" class="Keyword">open</a> <a id="30642" class="Keyword">import</a> <a id="30649" href="univalent-combinatorics.counting-decidable-subtypes.html" class="Module">univalent-combinatorics.counting-decidable-subtypes</a>
+<a id="30701" class="Keyword">open</a> <a id="30706" class="Keyword">import</a> <a id="30713" href="univalent-combinatorics.counting-dependent-pair-types.html" class="Module">univalent-combinatorics.counting-dependent-pair-types</a>
+<a id="30767" class="Keyword">open</a> <a id="30772" class="Keyword">import</a> <a id="30779" href="univalent-combinatorics.counting-fibers-of-maps.html" class="Module">univalent-combinatorics.counting-fibers-of-maps</a>
+<a id="30827" class="Keyword">open</a> <a id="30832" class="Keyword">import</a> <a id="30839" href="univalent-combinatorics.counting-maybe.html" class="Module">univalent-combinatorics.counting-maybe</a>
+<a id="30878" class="Keyword">open</a> <a id="30883" class="Keyword">import</a> <a id="30890" href="univalent-combinatorics.counting.html" class="Module">univalent-combinatorics.counting</a>
+<a id="30923" class="Keyword">open</a> <a id="30928" class="Keyword">import</a> <a id="30935" href="univalent-combinatorics.cubes.html" class="Module">univalent-combinatorics.cubes</a>
+<a id="30965" class="Keyword">open</a> <a id="30970" class="Keyword">import</a> <a id="30977" href="univalent-combinatorics.decidable-dependent-function-types.html" class="Module">univalent-combinatorics.decidable-dependent-function-types</a>
+<a id="31036" class="Keyword">open</a> <a id="31041" class="Keyword">import</a> <a id="31048" href="univalent-combinatorics.decidable-dependent-pair-types.html" class="Module">univalent-combinatorics.decidable-dependent-pair-types</a>
+<a id="31103" class="Keyword">open</a> <a id="31108" class="Keyword">import</a> <a id="31115" href="univalent-combinatorics.decidable-propositions.html" class="Module">univalent-combinatorics.decidable-propositions</a>
+<a id="31162" class="Keyword">open</a> <a id="31167" class="Keyword">import</a> <a id="31174" href="univalent-combinatorics.decidable-subtypes.html" class="Module">univalent-combinatorics.decidable-subtypes</a>
+<a id="31217" class="Keyword">open</a> <a id="31222" class="Keyword">import</a> <a id="31229" href="univalent-combinatorics.dedekind-finite-sets.html" class="Module">univalent-combinatorics.dedekind-finite-sets</a>
+<a id="31274" class="Keyword">open</a> <a id="31279" class="Keyword">import</a> <a id="31286" href="univalent-combinatorics.dependent-function-types.html" class="Module">univalent-combinatorics.dependent-function-types</a>
+<a id="31335" class="Keyword">open</a> <a id="31340" class="Keyword">import</a> <a id="31347" href="univalent-combinatorics.dependent-sum-finite-types.html" class="Module">univalent-combinatorics.dependent-sum-finite-types</a>
+<a id="31398" class="Keyword">open</a> <a id="31403" class="Keyword">import</a> <a id="31410" href="univalent-combinatorics.distributivity-of-set-truncation-over-finite-products.html" class="Module">univalent-combinatorics.distributivity-of-set-truncation-over-finite-products</a>
+<a id="31488" class="Keyword">open</a> <a id="31493" class="Keyword">import</a> <a id="31500" href="univalent-combinatorics.double-counting.html" class="Module">univalent-combinatorics.double-counting</a>
+<a id="31540" class="Keyword">open</a> <a id="31545" class="Keyword">import</a> <a id="31552" href="univalent-combinatorics.embeddings-standard-finite-types.html" class="Module">univalent-combinatorics.embeddings-standard-finite-types</a>
+<a id="31609" class="Keyword">open</a> <a id="31614" class="Keyword">import</a> <a id="31621" href="univalent-combinatorics.embeddings.html" class="Module">univalent-combinatorics.embeddings</a>
+<a id="31656" class="Keyword">open</a> <a id="31661" class="Keyword">import</a> <a id="31668" href="univalent-combinatorics.equality-finite-types.html" class="Module">univalent-combinatorics.equality-finite-types</a>
+<a id="31714" class="Keyword">open</a> <a id="31719" class="Keyword">import</a> <a id="31726" href="univalent-combinatorics.equality-standard-finite-types.html" class="Module">univalent-combinatorics.equality-standard-finite-types</a>
+<a id="31781" class="Keyword">open</a> <a id="31786" class="Keyword">import</a> <a id="31793" href="univalent-combinatorics.equivalences-cubes.html" class="Module">univalent-combinatorics.equivalences-cubes</a>
+<a id="31836" class="Keyword">open</a> <a id="31841" class="Keyword">import</a> <a id="31848" href="univalent-combinatorics.equivalences-standard-finite-types.html" class="Module">univalent-combinatorics.equivalences-standard-finite-types</a>
+<a id="31907" class="Keyword">open</a> <a id="31912" class="Keyword">import</a> <a id="31919" href="univalent-combinatorics.equivalences.html" class="Module">univalent-combinatorics.equivalences</a>
+<a id="31956" class="Keyword">open</a> <a id="31961" class="Keyword">import</a> <a id="31968" href="univalent-combinatorics.ferrers-diagrams.html" class="Module">univalent-combinatorics.ferrers-diagrams</a>
+<a id="32009" class="Keyword">open</a> <a id="32014" class="Keyword">import</a> <a id="32021" href="univalent-combinatorics.fibers-of-maps.html" class="Module">univalent-combinatorics.fibers-of-maps</a>
+<a id="32060" class="Keyword">open</a> <a id="32065" class="Keyword">import</a> <a id="32072" href="univalent-combinatorics.finite-choice.html" class="Module">univalent-combinatorics.finite-choice</a>
+<a id="32110" class="Keyword">open</a> <a id="32115" class="Keyword">import</a> <a id="32122" href="univalent-combinatorics.finite-connected-components.html" class="Module">univalent-combinatorics.finite-connected-components</a>
+<a id="32174" class="Keyword">open</a> <a id="32179" class="Keyword">import</a> <a id="32186" href="univalent-combinatorics.finite-presentations.html" class="Module">univalent-combinatorics.finite-presentations</a>
+<a id="32231" class="Keyword">open</a> <a id="32236" class="Keyword">import</a> <a id="32243" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
+<a id="32280" class="Keyword">open</a> <a id="32285" class="Keyword">import</a> <a id="32292" href="univalent-combinatorics.finitely-presented-types.html" class="Module">univalent-combinatorics.finitely-presented-types</a>
+<a id="32341" class="Keyword">open</a> <a id="32346" class="Keyword">import</a> <a id="32353" href="univalent-combinatorics.function-types.html" class="Module">univalent-combinatorics.function-types</a>
+<a id="32392" class="Keyword">open</a> <a id="32397" class="Keyword">import</a> <a id="32404" href="univalent-combinatorics.image-of-maps.html" class="Module">univalent-combinatorics.image-of-maps</a>
+<a id="32442" class="Keyword">open</a> <a id="32447" class="Keyword">import</a> <a id="32454" href="univalent-combinatorics.inequality-types-with-counting.html" class="Module">univalent-combinatorics.inequality-types-with-counting</a>
+<a id="32509" class="Keyword">open</a> <a id="32514" class="Keyword">import</a> <a id="32521" href="univalent-combinatorics.injective-maps.html" class="Module">univalent-combinatorics.injective-maps</a>
+<a id="32560" class="Keyword">open</a> <a id="32565" class="Keyword">import</a> <a id="32572" href="univalent-combinatorics.isotopies-latin-squares.html" class="Module">univalent-combinatorics.isotopies-latin-squares</a>
+<a id="32620" class="Keyword">open</a> <a id="32625" class="Keyword">import</a> <a id="32632" href="univalent-combinatorics.kuratowsky-finite-sets.html" class="Module">univalent-combinatorics.kuratowsky-finite-sets</a>
+<a id="32679" class="Keyword">open</a> <a id="32684" class="Keyword">import</a> <a id="32691" href="univalent-combinatorics.latin-squares.html" class="Module">univalent-combinatorics.latin-squares</a>
+<a id="32729" class="Keyword">open</a> <a id="32734" class="Keyword">import</a> <a id="32741" href="univalent-combinatorics.lists.html" class="Module">univalent-combinatorics.lists</a>
+<a id="32771" class="Keyword">open</a> <a id="32776" class="Keyword">import</a> <a id="32783" href="univalent-combinatorics.main-classes-of-latin-hypercubes.html" class="Module">univalent-combinatorics.main-classes-of-latin-hypercubes</a>
+<a id="32840" class="Keyword">open</a> <a id="32845" class="Keyword">import</a> <a id="32852" href="univalent-combinatorics.main-classes-of-latin-squares.html" class="Module">univalent-combinatorics.main-classes-of-latin-squares</a>
+<a id="32906" class="Keyword">open</a> <a id="32911" class="Keyword">import</a> <a id="32918" href="univalent-combinatorics.maybe.html" class="Module">univalent-combinatorics.maybe</a>
+<a id="32948" class="Keyword">open</a> <a id="32953" class="Keyword">import</a> <a id="32960" href="univalent-combinatorics.orientations-complete-undirected-graph.html" class="Module">univalent-combinatorics.orientations-complete-undirected-graph</a>
+<a id="33023" class="Keyword">open</a> <a id="33028" class="Keyword">import</a> <a id="33035" href="univalent-combinatorics.orientations-cubes.html" class="Module">univalent-combinatorics.orientations-cubes</a>
+<a id="33078" class="Keyword">open</a> <a id="33083" class="Keyword">import</a> <a id="33090" href="univalent-combinatorics.petri-nets.html" class="Module">univalent-combinatorics.petri-nets</a>
+<a id="33125" class="Keyword">open</a> <a id="33130" class="Keyword">import</a> <a id="33137" href="univalent-combinatorics.pi-finite-types.html" class="Module">univalent-combinatorics.pi-finite-types</a>
+<a id="33177" class="Keyword">open</a> <a id="33182" class="Keyword">import</a> <a id="33189" href="univalent-combinatorics.pigeonhole-principle.html" class="Module">univalent-combinatorics.pigeonhole-principle</a>
+<a id="33234" class="Keyword">open</a> <a id="33239" class="Keyword">import</a> <a id="33246" href="univalent-combinatorics.presented-pi-finite-types.html" class="Module">univalent-combinatorics.presented-pi-finite-types</a>
+<a id="33296" class="Keyword">open</a> <a id="33301" class="Keyword">import</a> <a id="33308" href="univalent-combinatorics.ramsey-theory.html" class="Module">univalent-combinatorics.ramsey-theory</a>
+<a id="33346" class="Keyword">open</a> <a id="33351" class="Keyword">import</a> <a id="33358" href="univalent-combinatorics.retracts-of-finite-types.html" class="Module">univalent-combinatorics.retracts-of-finite-types</a>
+<a id="33407" class="Keyword">open</a> <a id="33412" class="Keyword">import</a> <a id="33419" href="univalent-combinatorics.skipping-element-standard-finite-types.html" class="Module">univalent-combinatorics.skipping-element-standard-finite-types</a>
+<a id="33482" class="Keyword">open</a> <a id="33487" class="Keyword">import</a> <a id="33494" href="univalent-combinatorics.species.html" class="Module">univalent-combinatorics.species</a>
+<a id="33526" class="Keyword">open</a> <a id="33531" class="Keyword">import</a> <a id="33538" href="univalent-combinatorics.standard-finite-pruned-trees.html" class="Module">univalent-combinatorics.standard-finite-pruned-trees</a>
+<a id="33591" class="Keyword">open</a> <a id="33596" class="Keyword">import</a> <a id="33603" href="univalent-combinatorics.standard-finite-trees.html" class="Module">univalent-combinatorics.standard-finite-trees</a>
+<a id="33649" class="Keyword">open</a> <a id="33654" class="Keyword">import</a> <a id="33661" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
+<a id="33707" class="Keyword">open</a> <a id="33712" class="Keyword">import</a> <a id="33719" href="univalent-combinatorics.sums-of-natural-numbers.html" class="Module">univalent-combinatorics.sums-of-natural-numbers</a>
+<a id="33767" class="Keyword">open</a> <a id="33772" class="Keyword">import</a> <a id="33779" href="univalent-combinatorics.surjective-maps.html" class="Module">univalent-combinatorics.surjective-maps</a>
+<a id="33819" class="Keyword">open</a> <a id="33824" class="Keyword">import</a> <a id="33831" href="univalent-combinatorics.symmetric-difference.html" class="Module">univalent-combinatorics.symmetric-difference</a>
+<a id="33876" class="Keyword">open</a> <a id="33881" class="Keyword">import</a> <a id="33888" href="univalent-combinatorics.universal-property-standard-finite-types.html" class="Module">univalent-combinatorics.universal-property-standard-finite-types</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-18)(0cfa1f5) Merge pull request #183 from ElifUskuplu/master by noreply
+(2022-05-18)(15d4f0e) Merge pull request #184 from EgbertRijke/ljubljana by noreply
 </pre>
 </body>
 </html>
