@@ -6,8 +6,8 @@ title: Formalisation of the Symmetry Book
 
 <a id="126" class="Keyword">module</a> <a id="133" href="synthetic-homotopy-theory.25-cubical-diagrams.html" class="Module">synthetic-homotopy-theory.25-cubical-diagrams</a> <a id="179" class="Keyword">where</a>
 
-<a id="186" class="Keyword">open</a> <a id="191" class="Keyword">import</a> <a id="198" href="foundation.cones-pullbacks.html" class="Module">foundation.cones-pullbacks</a>
-<a id="225" class="Keyword">open</a> <a id="230" class="Keyword">import</a> <a id="237" href="foundation.commuting-squares.html" class="Module">foundation.commuting-squares</a>
+<a id="186" class="Keyword">open</a> <a id="191" class="Keyword">import</a> <a id="198" href="foundation.commuting-squares.html" class="Module">foundation.commuting-squares</a>
+<a id="227" class="Keyword">open</a> <a id="232" class="Keyword">import</a> <a id="239" href="foundation.cones-pullbacks.html" class="Module">foundation.cones-pullbacks</a>
 <a id="266" class="Keyword">open</a> <a id="271" class="Keyword">import</a> <a id="278" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a>
 <a id="308" class="Keyword">open</a> <a id="313" class="Keyword">import</a> <a id="320" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
 <a id="352" class="Keyword">open</a> <a id="357" class="Keyword">import</a> <a id="364" href="foundation.equality-dependent-pair-types.html" class="Module">foundation.equality-dependent-pair-types</a>
