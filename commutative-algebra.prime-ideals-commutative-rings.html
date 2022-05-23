@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Prime ideals in commutative rings</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/commutative-algebra/prime-ideals-commutative-rings.lagda.md.</p>
+<p>Version of Monday, May 23, 2022, 08:59 AM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Prime ideals in commutative rings</h1>
+</header>
+<pre class="Agda"><a id="59" class="Symbol">{-#</a> <a id="63" class="Keyword">OPTIONS</a> <a id="71" class="Pragma">--without-K</a> <a id="83" class="Pragma">--exact-split</a> <a id="97" class="Symbol">#-}</a>
+
+<a id="102" class="Keyword">module</a> <a id="109" href="commutative-algebra.prime-ideals-commutative-rings.html" class="Module">commutative-algebra.prime-ideals-commutative-rings</a> <a id="160" class="Keyword">where</a>
+
+<a id="167" class="Keyword">open</a> <a id="172" class="Keyword">import</a> <a id="179" href="commutative-algebra.commutative-rings.html" class="Module">commutative-algebra.commutative-rings</a>
+<a id="217" class="Keyword">open</a> <a id="222" class="Keyword">import</a> <a id="229" href="commutative-algebra.ideals-commutative-rings.html" class="Module">commutative-algebra.ideals-commutative-rings</a>
+
+<a id="275" class="Keyword">open</a> <a id="280" class="Keyword">import</a> <a id="287" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="319" class="Keyword">open</a> <a id="324" class="Keyword">import</a> <a id="331" href="foundation.disjunction.html" class="Module">foundation.disjunction</a>
+<a id="354" class="Keyword">open</a> <a id="359" class="Keyword">import</a> <a id="366" href="foundation.propositions.html" class="Module">foundation.propositions</a>
+<a id="390" class="Keyword">open</a> <a id="395" class="Keyword">import</a> <a id="402" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A prime ideal is an ideal <code>I</code> in a commutative ring <code>R</code> such that for every <code>a,b : R</code> whe have <code>ab ∈ I ⇒ (a ∈ I) ∨ (b ∈ I)</code>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="592" class="Keyword">module</a> <a id="599" href="commutative-algebra.prime-ideals-commutative-rings.html#599" class="Module">_</a>
+  <a id="603" class="Symbol">{</a><a id="604" href="commutative-algebra.prime-ideals-commutative-rings.html#604" class="Bound">l1</a> <a id="607" href="commutative-algebra.prime-ideals-commutative-rings.html#607" class="Bound">l2</a> <a id="610" class="Symbol">:</a> <a id="612" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="617" class="Symbol">}</a> <a id="619" class="Symbol">(</a><a id="620" href="commutative-algebra.prime-ideals-commutative-rings.html#620" class="Bound">R</a> <a id="622" class="Symbol">:</a> <a id="624" href="commutative-algebra.commutative-rings.html#1043" class="Function">Commutative-Ring</a> <a id="641" href="commutative-algebra.prime-ideals-commutative-rings.html#604" class="Bound">l1</a><a id="643" class="Symbol">)</a> <a id="645" class="Symbol">(</a><a id="646" href="commutative-algebra.prime-ideals-commutative-rings.html#646" class="Bound">I</a> <a id="648" class="Symbol">:</a> <a id="650" href="commutative-algebra.ideals-commutative-rings.html#2296" class="Function">ideal-Commutative-Ring</a> <a id="673" href="commutative-algebra.prime-ideals-commutative-rings.html#607" class="Bound">l2</a> <a id="676" href="commutative-algebra.prime-ideals-commutative-rings.html#620" class="Bound">R</a><a id="677" class="Symbol">)</a>
+  <a id="681" class="Keyword">where</a>
+  
+  <a id="692" href="commutative-algebra.prime-ideals-commutative-rings.html#692" class="Function">is-prime-ideal-commutative-ring-Prop</a> <a id="729" class="Symbol">:</a> <a id="731" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a> <a id="739" class="Symbol">(</a><a id="740" href="commutative-algebra.prime-ideals-commutative-rings.html#604" class="Bound">l1</a> <a id="743" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="745" href="commutative-algebra.prime-ideals-commutative-rings.html#607" class="Bound">l2</a><a id="747" class="Symbol">)</a>
+  <a id="751" href="commutative-algebra.prime-ideals-commutative-rings.html#692" class="Function">is-prime-ideal-commutative-ring-Prop</a> <a id="788" class="Symbol">=</a>
+    <a id="794" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a>
+      <a id="807" class="Symbol">(</a> <a id="809" href="commutative-algebra.commutative-rings.html#1392" class="Function">type-Commutative-Ring</a> <a id="831" href="commutative-algebra.prime-ideals-commutative-rings.html#620" class="Bound">R</a><a id="832" class="Symbol">)</a>
+      <a id="840" class="Symbol">(</a> <a id="842" class="Symbol">λ</a> <a id="844" href="commutative-algebra.prime-ideals-commutative-rings.html#844" class="Bound">a</a> <a id="846" class="Symbol">→</a>
+        <a id="856" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a>
+          <a id="873" class="Symbol">(</a> <a id="875" href="commutative-algebra.commutative-rings.html#1392" class="Function">type-Commutative-Ring</a> <a id="897" href="commutative-algebra.prime-ideals-commutative-rings.html#620" class="Bound">R</a><a id="898" class="Symbol">)</a>
+          <a id="910" class="Symbol">(</a> <a id="912" class="Symbol">λ</a> <a id="914" href="commutative-algebra.prime-ideals-commutative-rings.html#914" class="Bound">b</a> <a id="916" class="Symbol">→</a>
+            <a id="930" href="foundation-core.propositions.html#8283" class="Function">function-Prop</a>
+              <a id="958" class="Symbol">(</a> <a id="960" href="commutative-algebra.ideals-commutative-rings.html#2676" class="Function">is-in-ideal-Commutative-Ring</a> <a id="989" href="commutative-algebra.prime-ideals-commutative-rings.html#620" class="Bound">R</a> <a id="991" href="commutative-algebra.prime-ideals-commutative-rings.html#646" class="Bound">I</a> <a id="993" class="Symbol">(</a><a id="994" href="commutative-algebra.commutative-rings.html#1869" class="Function">mul-Commutative-Ring</a> <a id="1015" href="commutative-algebra.prime-ideals-commutative-rings.html#620" class="Bound">R</a> <a id="1017" href="commutative-algebra.prime-ideals-commutative-rings.html#844" class="Bound">a</a> <a id="1019" href="commutative-algebra.prime-ideals-commutative-rings.html#914" class="Bound">b</a><a id="1020" class="Symbol">))</a>
+              <a id="1037" class="Symbol">(</a> <a id="1039" href="foundation.disjunction.html#1135" class="Function">disj-Prop</a>
+                <a id="1065" class="Symbol">(</a> <a id="1067" href="commutative-algebra.ideals-commutative-rings.html#2572" class="Function">subset-ideal-Commutative-Ring</a> <a id="1097" href="commutative-algebra.prime-ideals-commutative-rings.html#620" class="Bound">R</a> <a id="1099" href="commutative-algebra.prime-ideals-commutative-rings.html#646" class="Bound">I</a> <a id="1101" href="commutative-algebra.prime-ideals-commutative-rings.html#844" class="Bound">a</a><a id="1102" class="Symbol">)</a>
+                <a id="1120" class="Symbol">(</a> <a id="1122" href="commutative-algebra.ideals-commutative-rings.html#2572" class="Function">subset-ideal-Commutative-Ring</a> <a id="1152" href="commutative-algebra.prime-ideals-commutative-rings.html#620" class="Bound">R</a> <a id="1154" href="commutative-algebra.prime-ideals-commutative-rings.html#646" class="Bound">I</a> <a id="1156" href="commutative-algebra.prime-ideals-commutative-rings.html#914" class="Bound">b</a><a id="1157" class="Symbol">))))</a>
+
+  <a id="1165" href="commutative-algebra.prime-ideals-commutative-rings.html#1165" class="Function">is-prime-ideal-Commutative-Ring</a> <a id="1197" class="Symbol">:</a> <a id="1199" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1202" class="Symbol">(</a><a id="1203" href="commutative-algebra.prime-ideals-commutative-rings.html#604" class="Bound">l1</a> <a id="1206" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1208" href="commutative-algebra.prime-ideals-commutative-rings.html#607" class="Bound">l2</a><a id="1210" class="Symbol">)</a>
+  <a id="1214" href="commutative-algebra.prime-ideals-commutative-rings.html#1165" class="Function">is-prime-ideal-Commutative-Ring</a> <a id="1246" class="Symbol">=</a>
+    <a id="1252" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a> <a id="1262" href="commutative-algebra.prime-ideals-commutative-rings.html#692" class="Function">is-prime-ideal-commutative-ring-Prop</a>
+
+  <a id="1302" href="commutative-algebra.prime-ideals-commutative-rings.html#1302" class="Function">is-prop-is-prime-ideal-Commutative-Ring</a> <a id="1342" class="Symbol">:</a>
+    <a id="1348" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="1356" href="commutative-algebra.prime-ideals-commutative-rings.html#1165" class="Function">is-prime-ideal-Commutative-Ring</a>
+  <a id="1390" href="commutative-algebra.prime-ideals-commutative-rings.html#1302" class="Function">is-prop-is-prime-ideal-Commutative-Ring</a> <a id="1430" class="Symbol">=</a>
+    <a id="1436" href="foundation-core.propositions.html#1549" class="Function">is-prop-type-Prop</a> <a id="1454" href="commutative-algebra.prime-ideals-commutative-rings.html#692" class="Function">is-prime-ideal-commutative-ring-Prop</a>
+
+<a id="prime-ideal-Commutative-Ring"></a><a id="1492" href="commutative-algebra.prime-ideals-commutative-rings.html#1492" class="Function">prime-ideal-Commutative-Ring</a> <a id="1521" class="Symbol">:</a>
+  <a id="1525" class="Symbol">{</a><a id="1526" href="commutative-algebra.prime-ideals-commutative-rings.html#1526" class="Bound">l1</a> <a id="1529" class="Symbol">:</a> <a id="1531" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1536" class="Symbol">}</a> <a id="1538" class="Symbol">(</a><a id="1539" href="commutative-algebra.prime-ideals-commutative-rings.html#1539" class="Bound">l2</a> <a id="1542" class="Symbol">:</a> <a id="1544" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1549" class="Symbol">)</a> <a id="1551" class="Symbol">→</a> <a id="1553" href="commutative-algebra.commutative-rings.html#1043" class="Function">Commutative-Ring</a> <a id="1570" href="commutative-algebra.prime-ideals-commutative-rings.html#1526" class="Bound">l1</a> <a id="1573" class="Symbol">→</a> <a id="1575" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1578" class="Symbol">(</a><a id="1579" href="commutative-algebra.prime-ideals-commutative-rings.html#1526" class="Bound">l1</a> <a id="1582" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1584" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1589" href="commutative-algebra.prime-ideals-commutative-rings.html#1539" class="Bound">l2</a><a id="1591" class="Symbol">)</a>
+<a id="1593" href="commutative-algebra.prime-ideals-commutative-rings.html#1492" class="Function">prime-ideal-Commutative-Ring</a> <a id="1622" href="commutative-algebra.prime-ideals-commutative-rings.html#1622" class="Bound">l2</a> <a id="1625" href="commutative-algebra.prime-ideals-commutative-rings.html#1625" class="Bound">R</a> <a id="1627" class="Symbol">=</a>
+  <a id="1631" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="1633" class="Symbol">(</a><a id="1634" href="commutative-algebra.ideals-commutative-rings.html#2296" class="Function">ideal-Commutative-Ring</a> <a id="1657" href="commutative-algebra.prime-ideals-commutative-rings.html#1622" class="Bound">l2</a> <a id="1660" href="commutative-algebra.prime-ideals-commutative-rings.html#1625" class="Bound">R</a><a id="1661" class="Symbol">)</a> <a id="1663" class="Symbol">(</a><a id="1664" href="commutative-algebra.prime-ideals-commutative-rings.html#1165" class="Function">is-prime-ideal-Commutative-Ring</a> <a id="1696" href="commutative-algebra.prime-ideals-commutative-rings.html#1625" class="Bound">R</a><a id="1697" class="Symbol">)</a>
+
+<a id="1700" class="Keyword">module</a> <a id="1707" href="commutative-algebra.prime-ideals-commutative-rings.html#1707" class="Module">_</a>
+  <a id="1711" class="Symbol">{</a><a id="1712" href="commutative-algebra.prime-ideals-commutative-rings.html#1712" class="Bound">l1</a> <a id="1715" href="commutative-algebra.prime-ideals-commutative-rings.html#1715" class="Bound">l2</a> <a id="1718" class="Symbol">:</a> <a id="1720" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1725" class="Symbol">}</a> <a id="1727" class="Symbol">(</a><a id="1728" href="commutative-algebra.prime-ideals-commutative-rings.html#1728" class="Bound">R</a> <a id="1730" class="Symbol">:</a> <a id="1732" href="commutative-algebra.commutative-rings.html#1043" class="Function">Commutative-Ring</a> <a id="1749" href="commutative-algebra.prime-ideals-commutative-rings.html#1712" class="Bound">l1</a><a id="1751" class="Symbol">)</a>
+  <a id="1755" class="Symbol">(</a><a id="1756" href="commutative-algebra.prime-ideals-commutative-rings.html#1756" class="Bound">P</a> <a id="1758" class="Symbol">:</a> <a id="1760" href="commutative-algebra.prime-ideals-commutative-rings.html#1492" class="Function">prime-ideal-Commutative-Ring</a> <a id="1789" href="commutative-algebra.prime-ideals-commutative-rings.html#1715" class="Bound">l2</a> <a id="1792" href="commutative-algebra.prime-ideals-commutative-rings.html#1728" class="Bound">R</a><a id="1793" class="Symbol">)</a>
+  <a id="1797" class="Keyword">where</a>
+
+  <a id="1806" href="commutative-algebra.prime-ideals-commutative-rings.html#1806" class="Function">ideal-prime-ideal-Commutative-Ring</a> <a id="1841" class="Symbol">:</a> <a id="1843" href="commutative-algebra.ideals-commutative-rings.html#2296" class="Function">ideal-Commutative-Ring</a> <a id="1866" href="commutative-algebra.prime-ideals-commutative-rings.html#1715" class="Bound">l2</a> <a id="1869" href="commutative-algebra.prime-ideals-commutative-rings.html#1728" class="Bound">R</a>
+  <a id="1873" href="commutative-algebra.prime-ideals-commutative-rings.html#1806" class="Function">ideal-prime-ideal-Commutative-Ring</a> <a id="1908" class="Symbol">=</a> <a id="1910" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="1914" href="commutative-algebra.prime-ideals-commutative-rings.html#1756" class="Bound">P</a>
+
+  <a id="1919" href="commutative-algebra.prime-ideals-commutative-rings.html#1919" class="Function">is-prime-ideal-ideal-prime-ideal-Commutative-Ring</a> <a id="1969" class="Symbol">:</a>
+    <a id="1975" href="commutative-algebra.prime-ideals-commutative-rings.html#1165" class="Function">is-prime-ideal-Commutative-Ring</a> <a id="2007" href="commutative-algebra.prime-ideals-commutative-rings.html#1728" class="Bound">R</a> <a id="2009" href="commutative-algebra.prime-ideals-commutative-rings.html#1806" class="Function">ideal-prime-ideal-Commutative-Ring</a>
+  <a id="2046" href="commutative-algebra.prime-ideals-commutative-rings.html#1919" class="Function">is-prime-ideal-ideal-prime-ideal-Commutative-Ring</a> <a id="2096" class="Symbol">=</a> <a id="2098" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="2102" href="commutative-algebra.prime-ideals-commutative-rings.html#1756" class="Bound">P</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-05-23)(96ecc71) Merge pull request #190 from EgbertRijke/ljubljana by noreply
+</pre>
+</body>
+</html>
