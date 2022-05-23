@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/elementary-number-theory/arithmetic-functions.lagda.md.</p>
-<p>Version of Monday, May 23, 2022, 08:59 AM</p>
+<p>Version of Monday, May 23, 2022, 02:17 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -37,21 +37,21 @@
 
 <a id="216" class="Keyword">open</a> <a id="221" class="Keyword">import</a> <a id="228" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="255" class="Keyword">using</a> <a id="261" class="Symbol">(</a><a id="262" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="267" class="Symbol">;</a> <a id="269" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="271" class="Symbol">)</a>
 
-<a id="274" class="Keyword">open</a> <a id="279" class="Keyword">import</a> <a id="286" href="ring-theory.rings.html" class="Module">ring-theory.rings</a> <a id="304" class="Keyword">using</a> <a id="310" class="Symbol">(</a><a id="311" href="ring-theory.rings.html#2466" class="Function">Ring</a><a id="315" class="Symbol">;</a> <a id="317" href="ring-theory.rings.html#2723" class="Function">type-Ring</a><a id="326" class="Symbol">)</a>
+<a id="274" class="Keyword">open</a> <a id="279" class="Keyword">import</a> <a id="286" href="ring-theory.rings.html" class="Module">ring-theory.rings</a> <a id="304" class="Keyword">using</a> <a id="310" class="Symbol">(</a><a id="311" href="ring-theory.rings.html#2508" class="Function">Ring</a><a id="315" class="Symbol">;</a> <a id="317" href="ring-theory.rings.html#2765" class="Function">type-Ring</a><a id="326" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>An arithmetic function is a function from the nonzero natural numbers into a (commutative) ring. The arithmetic functions form a ring under pointwise addition and dirichlet convolution.</p>
 <h2 id="definition">Definition</h2>
 <pre class="Agda"><a id="552" class="Keyword">module</a> <a id="559" href="elementary-number-theory.arithmetic-functions.html#559" class="Module">_</a>
-  <a id="563" class="Symbol">{</a><a id="564" href="elementary-number-theory.arithmetic-functions.html#564" class="Bound">l</a> <a id="566" class="Symbol">:</a> <a id="568" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="573" class="Symbol">}</a> <a id="575" class="Symbol">(</a><a id="576" href="elementary-number-theory.arithmetic-functions.html#576" class="Bound">R</a> <a id="578" class="Symbol">:</a> <a id="580" href="ring-theory.rings.html#2466" class="Function">Ring</a> <a id="585" href="elementary-number-theory.arithmetic-functions.html#564" class="Bound">l</a><a id="586" class="Symbol">)</a>
+  <a id="563" class="Symbol">{</a><a id="564" href="elementary-number-theory.arithmetic-functions.html#564" class="Bound">l</a> <a id="566" class="Symbol">:</a> <a id="568" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="573" class="Symbol">}</a> <a id="575" class="Symbol">(</a><a id="576" href="elementary-number-theory.arithmetic-functions.html#576" class="Bound">R</a> <a id="578" class="Symbol">:</a> <a id="580" href="ring-theory.rings.html#2508" class="Function">Ring</a> <a id="585" href="elementary-number-theory.arithmetic-functions.html#564" class="Bound">l</a><a id="586" class="Symbol">)</a>
   <a id="590" class="Keyword">where</a>
 
   <a id="599" href="elementary-number-theory.arithmetic-functions.html#599" class="Function">type-arithmetic-functions-Ring</a> <a id="630" class="Symbol">:</a> <a id="632" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="635" href="elementary-number-theory.arithmetic-functions.html#564" class="Bound">l</a>
-  <a id="639" href="elementary-number-theory.arithmetic-functions.html#599" class="Function">type-arithmetic-functions-Ring</a> <a id="670" class="Symbol">=</a> <a id="672" href="elementary-number-theory.nonzero-natural-numbers.html#710" class="Function">nonzero-ℕ</a> <a id="682" class="Symbol">→</a> <a id="684" href="ring-theory.rings.html#2723" class="Function">type-Ring</a> <a id="694" href="elementary-number-theory.arithmetic-functions.html#576" class="Bound">R</a>
+  <a id="639" href="elementary-number-theory.arithmetic-functions.html#599" class="Function">type-arithmetic-functions-Ring</a> <a id="670" class="Symbol">=</a> <a id="672" href="elementary-number-theory.nonzero-natural-numbers.html#710" class="Function">nonzero-ℕ</a> <a id="682" class="Symbol">→</a> <a id="684" href="ring-theory.rings.html#2765" class="Function">type-Ring</a> <a id="694" href="elementary-number-theory.arithmetic-functions.html#576" class="Bound">R</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-05-23)(96ecc71) Merge pull request #190 from EgbertRijke/ljubljana by noreply
+(2022-05-23)(5b5cfce) Merge pull request #191 from EgbertRijke/ljubljana by noreply
 </pre>
 </body>
 </html>
