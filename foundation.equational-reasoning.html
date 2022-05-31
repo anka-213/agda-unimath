@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>foundation.equational-reasoning</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/foundation/equational-reasoning.lagda.md.</p>
+<p>Version of Tuesday, May 31, 2022, 09:31 AM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="equational-reasoning">Equational reasoning</h1>
+Tom de Jong, 27 May 2022.
+<pre class="Agda"><a id="59" class="Symbol">{-#</a> <a id="63" class="Keyword">OPTIONS</a> <a id="71" class="Pragma">--without-K</a> <a id="83" class="Pragma">--exact-split</a> <a id="97" class="Symbol">#-}</a>
+
+<a id="102" class="Keyword">module</a> <a id="109" href="foundation.equational-reasoning.html" class="Module">foundation.equational-reasoning</a> <a id="141" class="Keyword">where</a>
+
+<a id="148" class="Keyword">open</a> <a id="153" class="Keyword">import</a> <a id="160" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="186" class="Keyword">using</a> <a id="192" class="Symbol">(</a><a id="193" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="196" class="Symbol">;</a> <a id="198" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a> <a id="203" class="Symbol">;</a> <a id="205" href="foundation-core.identity-types.html#1239" class="Function Operator">_∙_</a><a id="208" class="Symbol">)</a>
+<a id="210" class="Keyword">open</a> <a id="215" class="Keyword">import</a> <a id="222" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="246" class="Keyword">using</a> <a id="252" class="Symbol">(</a><a id="253" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a> <a id="257" class="Symbol">;</a> <a id="259" href="foundation-core.equivalences.html#7855" class="Function Operator">_∘e_</a> <a id="264" class="Symbol">;</a> <a id="266" href="foundation-core.equivalences.html#2480" class="Function">id-equiv</a><a id="274" class="Symbol">)</a>
+<a id="276" class="Keyword">open</a> <a id="281" class="Keyword">import</a> <a id="288" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="315" class="Keyword">using</a> <a id="321" class="Symbol">(</a><a id="322" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="327" class="Symbol">;</a> <a id="329" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="331" class="Symbol">)</a>
+<a id="333" class="Keyword">open</a> <a id="338" class="Keyword">import</a> <a id="345" href="order-theory.preorders.html" class="Module">order-theory.preorders</a> <a id="368" class="Keyword">using</a>
+  <a id="376" class="Symbol">(</a><a id="377" href="order-theory.preorders.html#531" class="Function">Preorder</a> <a id="386" class="Symbol">;</a> <a id="388" href="order-theory.preorders.html#873" class="Function">element-Preorder</a> <a id="405" class="Symbol">;</a> <a id="407" href="order-theory.preorders.html#1023" class="Function">leq-Preorder</a>
+  <a id="422" class="Symbol">;</a> <a id="424" href="order-theory.preorders.html#1385" class="Function">transitive-leq-Preorder</a> <a id="448" class="Symbol">;</a> <a id="450" href="order-theory.preorders.html#1280" class="Function">refl-leq-Preorder</a><a id="467" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>Often it’s convenient to reason by chains of (in)equalities or equivalences, i.e. to write a proof in the following form:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>X ≃⟨ equiv-1 ⟩</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A ≃⟨ equiv-2 ⟩</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>B ≃⟨ equiv-3 ⟩</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Y ∎</span></code></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x ≤⟨ ineq-1 ⟩</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>a ≤⟨ ineq-2 ⟩</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>b ≤⟨ ineq-3 ⟩</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>c ∎</span></code></pre></div>
+<p>where <code>equiv-x</code> and <code>ineq-x</code> are proofs of respectively the equivalences or inequalities. The symbol ∎ marks the end of a chain.</p>
+<p>Because we will want to have equational reasoning for both identifications and equivalences and we can’t use the same symbol twice, we use ∎ for identifications and ■ for equivalences in the code below.</p>
+<p>For inequalities we also need to pass the preorder as an argument.</p>
+<p>We write Agda code that allows for such reasoning. The code for equational reasoning for equalities and equivalences is based on Martín Escardó’s Agda code [1,2].</p>
+<h2 id="definitions">Definitions</h2>
+<h3 id="equational-reasoning-for-identifications">Equational reasoning for identifications</h3>
+<pre class="Agda"><a id="_=⟨_⟩_"></a><a id="1363" href="foundation.equational-reasoning.html#1363" class="Function Operator">_=⟨_⟩_</a> <a id="1370" class="Symbol">:</a> <a id="1372" class="Symbol">{</a><a id="1373" href="foundation.equational-reasoning.html#1373" class="Bound">l</a> <a id="1375" class="Symbol">:</a> <a id="1377" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1382" class="Symbol">}</a> <a id="1384" class="Symbol">{</a><a id="1385" href="foundation.equational-reasoning.html#1385" class="Bound">X</a> <a id="1387" class="Symbol">:</a> <a id="1389" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1392" href="foundation.equational-reasoning.html#1373" class="Bound">l</a><a id="1393" class="Symbol">}</a> <a id="1395" class="Symbol">(</a><a id="1396" href="foundation.equational-reasoning.html#1396" class="Bound">x</a> <a id="1398" class="Symbol">:</a> <a id="1400" href="foundation.equational-reasoning.html#1385" class="Bound">X</a><a id="1401" class="Symbol">)</a> <a id="1403" class="Symbol">{</a><a id="1404" href="foundation.equational-reasoning.html#1404" class="Bound">y</a> <a id="1406" href="foundation.equational-reasoning.html#1406" class="Bound">z</a> <a id="1408" class="Symbol">:</a> <a id="1410" href="foundation.equational-reasoning.html#1385" class="Bound">X</a><a id="1411" class="Symbol">}</a>
+       <a id="1420" class="Symbol">→</a> <a id="1422" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="1425" href="foundation.equational-reasoning.html#1396" class="Bound">x</a> <a id="1427" href="foundation.equational-reasoning.html#1404" class="Bound">y</a> <a id="1429" class="Symbol">→</a> <a id="1431" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="1434" href="foundation.equational-reasoning.html#1404" class="Bound">y</a> <a id="1436" href="foundation.equational-reasoning.html#1406" class="Bound">z</a> <a id="1438" class="Symbol">→</a> <a id="1440" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="1443" href="foundation.equational-reasoning.html#1396" class="Bound">x</a> <a id="1445" href="foundation.equational-reasoning.html#1406" class="Bound">z</a>
+<a id="1447" class="Symbol">_</a> <a id="1449" href="foundation.equational-reasoning.html#1363" class="Function Operator">=⟨</a> <a id="1452" href="foundation.equational-reasoning.html#1452" class="Bound">p</a> <a id="1454" href="foundation.equational-reasoning.html#1363" class="Function Operator">⟩</a> <a id="1456" href="foundation.equational-reasoning.html#1456" class="Bound">q</a> <a id="1458" class="Symbol">=</a> <a id="1460" href="foundation.equational-reasoning.html#1452" class="Bound">p</a> <a id="1462" href="foundation-core.identity-types.html#1239" class="Function Operator">∙</a> <a id="1464" href="foundation.equational-reasoning.html#1456" class="Bound">q</a>
+
+<a id="_∎"></a><a id="1467" href="foundation.equational-reasoning.html#1467" class="Function Operator">_∎</a> <a id="1470" class="Symbol">:</a> <a id="1472" class="Symbol">{</a><a id="1473" href="foundation.equational-reasoning.html#1473" class="Bound">l</a> <a id="1475" class="Symbol">:</a> <a id="1477" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1482" class="Symbol">}</a> <a id="1484" class="Symbol">{</a><a id="1485" href="foundation.equational-reasoning.html#1485" class="Bound">X</a> <a id="1487" class="Symbol">:</a> <a id="1489" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1492" href="foundation.equational-reasoning.html#1473" class="Bound">l</a><a id="1493" class="Symbol">}</a> <a id="1495" class="Symbol">(</a><a id="1496" href="foundation.equational-reasoning.html#1496" class="Bound">x</a> <a id="1498" class="Symbol">:</a> <a id="1500" href="foundation.equational-reasoning.html#1485" class="Bound">X</a><a id="1501" class="Symbol">)</a> <a id="1503" class="Symbol">→</a> <a id="1505" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="1508" href="foundation.equational-reasoning.html#1496" class="Bound">x</a> <a id="1510" href="foundation.equational-reasoning.html#1496" class="Bound">x</a>
+<a id="1512" href="foundation.equational-reasoning.html#1512" class="Bound">x</a> <a id="1514" href="foundation.equational-reasoning.html#1467" class="Function Operator">∎</a> <a id="1516" class="Symbol">=</a> <a id="1518" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a>
+</pre>
+<h3 id="equational-reasoning-for-equivalences">Equational reasoning for equivalences</h3>
+<pre class="Agda"><a id="_≃⟨_⟩_"></a><a id="1579" href="foundation.equational-reasoning.html#1579" class="Function Operator">_≃⟨_⟩_</a> <a id="1586" class="Symbol">:</a> <a id="1588" class="Symbol">{</a><a id="1589" href="foundation.equational-reasoning.html#1589" class="Bound">l1</a> <a id="1592" href="foundation.equational-reasoning.html#1592" class="Bound">l2</a> <a id="1595" href="foundation.equational-reasoning.html#1595" class="Bound">l3</a> <a id="1598" class="Symbol">:</a> <a id="1600" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1605" class="Symbol">}</a> <a id="1607" class="Symbol">(</a><a id="1608" href="foundation.equational-reasoning.html#1608" class="Bound">X</a> <a id="1610" class="Symbol">:</a> <a id="1612" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1615" href="foundation.equational-reasoning.html#1589" class="Bound">l1</a><a id="1617" class="Symbol">)</a> <a id="1619" class="Symbol">{</a><a id="1620" href="foundation.equational-reasoning.html#1620" class="Bound">Y</a> <a id="1622" class="Symbol">:</a> <a id="1624" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1627" href="foundation.equational-reasoning.html#1592" class="Bound">l2</a> <a id="1630" class="Symbol">}</a> <a id="1632" class="Symbol">{</a><a id="1633" href="foundation.equational-reasoning.html#1633" class="Bound">Z</a> <a id="1635" class="Symbol">:</a> <a id="1637" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1640" href="foundation.equational-reasoning.html#1595" class="Bound">l3</a><a id="1642" class="Symbol">}</a>
+       <a id="1651" class="Symbol">→</a> <a id="1653" href="foundation.equational-reasoning.html#1608" class="Bound">X</a> <a id="1655" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="1657" href="foundation.equational-reasoning.html#1620" class="Bound">Y</a> <a id="1659" class="Symbol">→</a> <a id="1661" href="foundation.equational-reasoning.html#1620" class="Bound">Y</a> <a id="1663" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="1665" href="foundation.equational-reasoning.html#1633" class="Bound">Z</a> <a id="1667" class="Symbol">→</a> <a id="1669" href="foundation.equational-reasoning.html#1608" class="Bound">X</a> <a id="1671" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="1673" href="foundation.equational-reasoning.html#1633" class="Bound">Z</a>
+<a id="1675" class="Symbol">_</a> <a id="1677" href="foundation.equational-reasoning.html#1579" class="Function Operator">≃⟨</a> <a id="1680" href="foundation.equational-reasoning.html#1680" class="Bound">f</a> <a id="1682" href="foundation.equational-reasoning.html#1579" class="Function Operator">⟩</a> <a id="1684" href="foundation.equational-reasoning.html#1684" class="Bound">g</a> <a id="1686" class="Symbol">=</a> <a id="1688" href="foundation.equational-reasoning.html#1684" class="Bound">g</a> <a id="1690" href="foundation-core.equivalences.html#7855" class="Function Operator">∘e</a> <a id="1693" href="foundation.equational-reasoning.html#1680" class="Bound">f</a>
+
+<a id="_■"></a><a id="1696" href="foundation.equational-reasoning.html#1696" class="Function Operator">_■</a> <a id="1699" class="Symbol">:</a> <a id="1701" class="Symbol">{</a><a id="1702" href="foundation.equational-reasoning.html#1702" class="Bound">l</a> <a id="1704" class="Symbol">:</a> <a id="1706" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1711" class="Symbol">}</a> <a id="1713" class="Symbol">(</a><a id="1714" href="foundation.equational-reasoning.html#1714" class="Bound">X</a> <a id="1716" class="Symbol">:</a> <a id="1718" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1721" href="foundation.equational-reasoning.html#1702" class="Bound">l</a><a id="1722" class="Symbol">)</a> <a id="1724" class="Symbol">→</a> <a id="1726" href="foundation.equational-reasoning.html#1714" class="Bound">X</a> <a id="1728" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="1730" href="foundation.equational-reasoning.html#1714" class="Bound">X</a>
+<a id="1732" href="foundation.equational-reasoning.html#1732" class="Bound">X</a> <a id="1734" href="foundation.equational-reasoning.html#1696" class="Function Operator">■</a> <a id="1736" class="Symbol">=</a> <a id="1738" href="foundation-core.equivalences.html#2480" class="Function">id-equiv</a>
+</pre>
+<h3 id="equational-reasoning-for-preorders">Equational reasoning for preorders</h3>
+<pre class="Agda"><a id="1800" class="Keyword">private</a>
+ <a id="transitivity"></a><a id="1809" href="foundation.equational-reasoning.html#1809" class="Function">transitivity</a> <a id="1822" class="Symbol">:</a> <a id="1824" class="Symbol">{</a><a id="1825" href="foundation.equational-reasoning.html#1825" class="Bound">l1</a> <a id="1828" href="foundation.equational-reasoning.html#1828" class="Bound">l2</a> <a id="1831" class="Symbol">:</a> <a id="1833" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1838" class="Symbol">}</a> <a id="1840" class="Symbol">(</a><a id="1841" href="foundation.equational-reasoning.html#1841" class="Bound">X</a> <a id="1843" class="Symbol">:</a> <a id="1845" href="order-theory.preorders.html#531" class="Function">Preorder</a> <a id="1854" href="foundation.equational-reasoning.html#1825" class="Bound">l1</a> <a id="1857" href="foundation.equational-reasoning.html#1828" class="Bound">l2</a><a id="1859" class="Symbol">)</a>
+                <a id="1877" class="Symbol">(</a><a id="1878" href="foundation.equational-reasoning.html#1878" class="Bound">x</a> <a id="1880" class="Symbol">:</a> <a id="1882" href="order-theory.preorders.html#873" class="Function">element-Preorder</a> <a id="1899" href="foundation.equational-reasoning.html#1841" class="Bound">X</a><a id="1900" class="Symbol">)</a> <a id="1902" class="Symbol">{</a><a id="1903" href="foundation.equational-reasoning.html#1903" class="Bound">y</a> <a id="1905" href="foundation.equational-reasoning.html#1905" class="Bound">z</a> <a id="1907" class="Symbol">:</a> <a id="1909" href="order-theory.preorders.html#873" class="Function">element-Preorder</a> <a id="1926" href="foundation.equational-reasoning.html#1841" class="Bound">X</a><a id="1927" class="Symbol">}</a>
+              <a id="1943" class="Symbol">→</a> <a id="1945" href="order-theory.preorders.html#1023" class="Function">leq-Preorder</a> <a id="1958" href="foundation.equational-reasoning.html#1841" class="Bound">X</a> <a id="1960" href="foundation.equational-reasoning.html#1878" class="Bound">x</a> <a id="1962" href="foundation.equational-reasoning.html#1903" class="Bound">y</a> <a id="1964" class="Symbol">→</a> <a id="1966" href="order-theory.preorders.html#1023" class="Function">leq-Preorder</a> <a id="1979" href="foundation.equational-reasoning.html#1841" class="Bound">X</a> <a id="1981" href="foundation.equational-reasoning.html#1903" class="Bound">y</a> <a id="1983" href="foundation.equational-reasoning.html#1905" class="Bound">z</a> <a id="1985" class="Symbol">→</a> <a id="1987" href="order-theory.preorders.html#1023" class="Function">leq-Preorder</a> <a id="2000" href="foundation.equational-reasoning.html#1841" class="Bound">X</a> <a id="2002" href="foundation.equational-reasoning.html#1878" class="Bound">x</a> <a id="2004" href="foundation.equational-reasoning.html#1905" class="Bound">z</a>
+ <a id="2007" href="foundation.equational-reasoning.html#1809" class="Function">transitivity</a> <a id="2020" href="foundation.equational-reasoning.html#2020" class="Bound">X</a> <a id="2022" href="foundation.equational-reasoning.html#2022" class="Bound">x</a> <a id="2024" class="Symbol">{</a><a id="2025" href="foundation.equational-reasoning.html#2025" class="Bound">y</a><a id="2026" class="Symbol">}</a> <a id="2028" class="Symbol">{</a><a id="2029" href="foundation.equational-reasoning.html#2029" class="Bound">z</a><a id="2030" class="Symbol">}</a> <a id="2032" href="foundation.equational-reasoning.html#2032" class="Bound">u</a> <a id="2034" href="foundation.equational-reasoning.html#2034" class="Bound">v</a> <a id="2036" class="Symbol">=</a> <a id="2038" href="order-theory.preorders.html#1385" class="Function">transitive-leq-Preorder</a> <a id="2062" href="foundation.equational-reasoning.html#2020" class="Bound">X</a> <a id="2064" href="foundation.equational-reasoning.html#2022" class="Bound">x</a> <a id="2066" href="foundation.equational-reasoning.html#2025" class="Bound">y</a> <a id="2068" href="foundation.equational-reasoning.html#2029" class="Bound">z</a> <a id="2070" href="foundation.equational-reasoning.html#2034" class="Bound">v</a> <a id="2072" href="foundation.equational-reasoning.html#2032" class="Bound">u</a>
+
+<a id="2075" class="Keyword">syntax</a> <a id="2082" href="foundation.equational-reasoning.html#1809" class="Function">transitivity</a> <a id="2095" class="Bound">X</a> <a id="2097" class="Bound">x</a> <a id="2099" class="Bound">u</a> <a id="2101" class="Bound">v</a> <a id="2103" class="Symbol">=</a> <a id="2105" class="Bound">x</a> <a id="2107" class="Function">≤⟨</a> <a id="2110" class="Bound">X</a> <a id="2112" class="Function">⟩[</a> <a id="2115" class="Bound">u</a> <a id="2117" class="Function">]</a> <a id="2119" class="Bound">v</a>
+<a id="2121" class="Keyword">infixr</a> <a id="2128" class="Number">0</a> <a id="2130" href="foundation.equational-reasoning.html#1809" class="Function">transitivity</a>
+
+<a id="2144" class="Keyword">private</a>
+ <a id="reflexivity"></a><a id="2153" href="foundation.equational-reasoning.html#2153" class="Function">reflexivity</a> <a id="2165" class="Symbol">:</a> <a id="2167" class="Symbol">{</a><a id="2168" href="foundation.equational-reasoning.html#2168" class="Bound">l1</a> <a id="2171" href="foundation.equational-reasoning.html#2171" class="Bound">l2</a> <a id="2174" class="Symbol">:</a> <a id="2176" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2181" class="Symbol">}</a> <a id="2183" class="Symbol">(</a><a id="2184" href="foundation.equational-reasoning.html#2184" class="Bound">X</a> <a id="2186" class="Symbol">:</a> <a id="2188" href="order-theory.preorders.html#531" class="Function">Preorder</a> <a id="2197" href="foundation.equational-reasoning.html#2168" class="Bound">l1</a> <a id="2200" href="foundation.equational-reasoning.html#2171" class="Bound">l2</a><a id="2202" class="Symbol">)</a>
+             <a id="2217" class="Symbol">→</a> <a id="2219" class="Symbol">(</a><a id="2220" href="foundation.equational-reasoning.html#2220" class="Bound">x</a> <a id="2222" class="Symbol">:</a> <a id="2224" href="order-theory.preorders.html#873" class="Function">element-Preorder</a> <a id="2241" href="foundation.equational-reasoning.html#2184" class="Bound">X</a><a id="2242" class="Symbol">)</a> <a id="2244" class="Symbol">→</a> <a id="2246" href="order-theory.preorders.html#1023" class="Function">leq-Preorder</a> <a id="2259" href="foundation.equational-reasoning.html#2184" class="Bound">X</a> <a id="2261" href="foundation.equational-reasoning.html#2220" class="Bound">x</a> <a id="2263" href="foundation.equational-reasoning.html#2220" class="Bound">x</a>
+ <a id="2266" href="foundation.equational-reasoning.html#2153" class="Function">reflexivity</a> <a id="2278" class="Symbol">=</a> <a id="2280" href="order-theory.preorders.html#1280" class="Function">refl-leq-Preorder</a>
+
+<a id="2299" class="Keyword">syntax</a> <a id="2306" href="foundation.equational-reasoning.html#2153" class="Function">reflexivity</a> <a id="2318" class="Bound">X</a> <a id="2320" class="Bound">x</a> <a id="2322" class="Symbol">=</a> <a id="2324" class="Bound">x</a> <a id="2326" class="Function">∎⟨</a> <a id="2329" class="Bound">X</a> <a id="2331" class="Function">⟩</a>
+<a id="2333" class="Keyword">infix</a> <a id="2339" class="Number">1</a> <a id="2341" href="foundation.equational-reasoning.html#2153" class="Function">reflexivity</a>
+</pre>
+<p>For a preorder <code>X</code> we thus write the chains as follows</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x ≤⟨ X ⟩<span class="co">[</span><span class="ot"> ineq-1 </span><span class="co">]</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>y ≤⟨ X ⟩<span class="co">[</span><span class="ot"> ineq-2 </span><span class="co">]</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>z ∎⟨ X ⟩</span></code></pre></div>
+<h2 id="references">References</h2>
+<ol type="1">
+<li>Martín Escardó. https://github.com/martinescardo/TypeTopology/blob/master/source/Id.lagda</li>
+<li>Martín Escardó. https://github.com/martinescardo/TypeTopology/blob/master/source/UF-Equiv.lagda</li>
+</ol>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-05-31)(76514b3) Merge pull request #194 from tomdjong/master by noreply
+</pre>
+</body>
+</html>
