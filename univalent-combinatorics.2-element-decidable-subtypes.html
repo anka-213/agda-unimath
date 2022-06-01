@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/2-element-decidable-subtypes.lagda.md.</p>
-<p>Version of Wednesday, June  1, 2022, 01:22 PM</p>
+<p>Version of Wednesday, June  1, 2022, 03:55 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -87,11 +87,11 @@
 <a id="2934" class="Keyword">open</a> <a id="2939" class="Keyword">import</a> <a id="2946" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="2973" class="Keyword">using</a> <a id="2979" class="Symbol">(</a><a id="2980" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2985" class="Symbol">;</a> <a id="2987" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="2989" class="Symbol">;</a> <a id="2991" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="2994" class="Symbol">;</a> <a id="2996" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="3000" class="Symbol">;</a> <a id="3002" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="3007" class="Symbol">)</a>
 
 <a id="3010" class="Keyword">open</a> <a id="3015" class="Keyword">import</a> <a id="3022" href="univalent-combinatorics.2-element-subtypes.html" class="Module">univalent-combinatorics.2-element-subtypes</a> <a id="3065" class="Keyword">using</a>
-  <a id="3073" class="Symbol">(</a> <a id="3075" href="univalent-combinatorics.2-element-subtypes.html#4881" class="Function">type-prop-standard-2-Element-Subtype</a><a id="3111" class="Symbol">;</a>
-    <a id="3117" href="univalent-combinatorics.2-element-subtypes.html#5009" class="Function">is-prop-type-prop-standard-2-Element-Subtype</a><a id="3161" class="Symbol">;</a>
-    <a id="3167" href="univalent-combinatorics.2-element-subtypes.html#5295" class="Function">subtype-standard-2-Element-Subtype</a><a id="3201" class="Symbol">;</a> <a id="3203" href="univalent-combinatorics.2-element-subtypes.html#5546" class="Function">type-standard-2-Element-Subtype</a><a id="3234" class="Symbol">;</a>
-    <a id="3240" href="univalent-combinatorics.2-element-subtypes.html#5676" class="Function">equiv-type-standard-2-Element-Subtype</a><a id="3277" class="Symbol">;</a>
-    <a id="3283" href="univalent-combinatorics.2-element-subtypes.html#6077" class="Function">has-two-elements-type-standard-2-Element-Subtype</a><a id="3331" class="Symbol">)</a>
+  <a id="3073" class="Symbol">(</a> <a id="3075" href="univalent-combinatorics.2-element-subtypes.html#4824" class="Function">type-prop-standard-2-Element-Subtype</a><a id="3111" class="Symbol">;</a>
+    <a id="3117" href="univalent-combinatorics.2-element-subtypes.html#4952" class="Function">is-prop-type-prop-standard-2-Element-Subtype</a><a id="3161" class="Symbol">;</a>
+    <a id="3167" href="univalent-combinatorics.2-element-subtypes.html#5238" class="Function">subtype-standard-2-Element-Subtype</a><a id="3201" class="Symbol">;</a> <a id="3203" href="univalent-combinatorics.2-element-subtypes.html#5489" class="Function">type-standard-2-Element-Subtype</a><a id="3234" class="Symbol">;</a>
+    <a id="3240" href="univalent-combinatorics.2-element-subtypes.html#5619" class="Function">equiv-type-standard-2-Element-Subtype</a><a id="3277" class="Symbol">;</a>
+    <a id="3283" href="univalent-combinatorics.2-element-subtypes.html#6020" class="Function">has-two-elements-type-standard-2-Element-Subtype</a><a id="3331" class="Symbol">)</a>
 <a id="3333" class="Keyword">open</a> <a id="3338" class="Keyword">import</a> <a id="3345" href="univalent-combinatorics.2-element-types.html" class="Module">univalent-combinatorics.2-element-types</a> <a id="3385" class="Keyword">using</a>
   <a id="3393" class="Symbol">(</a> <a id="3395" href="univalent-combinatorics.2-element-types.html#4450" class="Function">has-two-elements</a><a id="3411" class="Symbol">;</a> <a id="3413" href="univalent-combinatorics.2-element-types.html#4785" class="Function">2-Element-Type</a><a id="3427" class="Symbol">;</a> <a id="3429" href="univalent-combinatorics.2-element-types.html#22189" class="Function">swap-2-Element-Type</a><a id="3448" class="Symbol">;</a>
     <a id="3454" href="univalent-combinatorics.2-element-types.html#22430" class="Function">map-swap-2-Element-Type</a><a id="3477" class="Symbol">;</a> <a id="3479" href="univalent-combinatorics.2-element-types.html#23190" class="Function">compute-swap-2-Element-Type</a><a id="3506" class="Symbol">;</a>
@@ -193,14 +193,14 @@
 
   <a id="7670" href="univalent-combinatorics.2-element-decidable-subtypes.html#7670" class="Function">type-prop-standard-2-Element-Decidable-Subtype</a> <a id="7717" class="Symbol">:</a> <a id="7719" href="univalent-combinatorics.2-element-decidable-subtypes.html#7588" class="Bound">X</a> <a id="7721" class="Symbol">→</a> <a id="7723" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="7726" href="univalent-combinatorics.2-element-decidable-subtypes.html#7576" class="Bound">l</a>
   <a id="7730" href="univalent-combinatorics.2-element-decidable-subtypes.html#7670" class="Function">type-prop-standard-2-Element-Decidable-Subtype</a> <a id="7777" class="Symbol">=</a>
-    <a id="7783" href="univalent-combinatorics.2-element-subtypes.html#4881" class="Function">type-prop-standard-2-Element-Subtype</a>
+    <a id="7783" href="univalent-combinatorics.2-element-subtypes.html#4824" class="Function">type-prop-standard-2-Element-Subtype</a>
       <a id="7826" class="Symbol">(</a> <a id="7828" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="7833" href="univalent-combinatorics.2-element-decidable-subtypes.html#7588" class="Bound">X</a> <a id="7835" class="Symbol">(</a><a id="7836" href="foundation.decidable-equality.html#6960" class="Function">is-set-has-decidable-equality</a> <a id="7866" href="univalent-combinatorics.2-element-decidable-subtypes.html#7599" class="Bound">d</a><a id="7867" class="Symbol">))</a>
       <a id="7876" class="Symbol">(</a> <a id="7878" href="univalent-combinatorics.2-element-decidable-subtypes.html#7642" class="Bound">np</a><a id="7880" class="Symbol">)</a>
 
   <a id="7885" href="univalent-combinatorics.2-element-decidable-subtypes.html#7885" class="Function">is-prop-type-prop-standard-2-Element-Decidable-Subtype</a> <a id="7940" class="Symbol">:</a>
     <a id="7946" class="Symbol">(</a><a id="7947" href="univalent-combinatorics.2-element-decidable-subtypes.html#7947" class="Bound">z</a> <a id="7949" class="Symbol">:</a> <a id="7951" href="univalent-combinatorics.2-element-decidable-subtypes.html#7588" class="Bound">X</a><a id="7952" class="Symbol">)</a> <a id="7954" class="Symbol">→</a> <a id="7956" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="7964" class="Symbol">(</a><a id="7965" href="univalent-combinatorics.2-element-decidable-subtypes.html#7670" class="Function">type-prop-standard-2-Element-Decidable-Subtype</a> <a id="8012" href="univalent-combinatorics.2-element-decidable-subtypes.html#7947" class="Bound">z</a><a id="8013" class="Symbol">)</a>
   <a id="8017" href="univalent-combinatorics.2-element-decidable-subtypes.html#7885" class="Function">is-prop-type-prop-standard-2-Element-Decidable-Subtype</a> <a id="8072" class="Symbol">=</a>
-    <a id="8078" href="univalent-combinatorics.2-element-subtypes.html#5009" class="Function">is-prop-type-prop-standard-2-Element-Subtype</a>
+    <a id="8078" href="univalent-combinatorics.2-element-subtypes.html#4952" class="Function">is-prop-type-prop-standard-2-Element-Subtype</a>
       <a id="8129" class="Symbol">(</a> <a id="8131" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="8136" href="univalent-combinatorics.2-element-decidable-subtypes.html#7588" class="Bound">X</a> <a id="8138" class="Symbol">(</a><a id="8139" href="foundation.decidable-equality.html#6960" class="Function">is-set-has-decidable-equality</a> <a id="8169" href="univalent-combinatorics.2-element-decidable-subtypes.html#7599" class="Bound">d</a><a id="8170" class="Symbol">))</a>
       <a id="8179" class="Symbol">(</a> <a id="8181" href="univalent-combinatorics.2-element-decidable-subtypes.html#7642" class="Bound">np</a><a id="8183" class="Symbol">)</a>
 
@@ -211,7 +211,7 @@
 
   <a id="8437" href="univalent-combinatorics.2-element-decidable-subtypes.html#8437" class="Function">subtype-standard-2-Element-Decidable-Subtype</a> <a id="8482" class="Symbol">:</a> <a id="8484" href="foundation-core.subtypes.html#2197" class="Function">subtype</a> <a id="8492" href="univalent-combinatorics.2-element-decidable-subtypes.html#7576" class="Bound">l</a> <a id="8494" href="univalent-combinatorics.2-element-decidable-subtypes.html#7588" class="Bound">X</a>
   <a id="8498" href="univalent-combinatorics.2-element-decidable-subtypes.html#8437" class="Function">subtype-standard-2-Element-Decidable-Subtype</a> <a id="8543" class="Symbol">=</a>
-    <a id="8549" href="univalent-combinatorics.2-element-subtypes.html#5295" class="Function">subtype-standard-2-Element-Subtype</a>
+    <a id="8549" href="univalent-combinatorics.2-element-subtypes.html#5238" class="Function">subtype-standard-2-Element-Subtype</a>
       <a id="8590" class="Symbol">(</a> <a id="8592" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="8597" href="univalent-combinatorics.2-element-decidable-subtypes.html#7588" class="Bound">X</a> <a id="8599" class="Symbol">(</a><a id="8600" href="foundation.decidable-equality.html#6960" class="Function">is-set-has-decidable-equality</a> <a id="8630" href="univalent-combinatorics.2-element-decidable-subtypes.html#7599" class="Bound">d</a><a id="8631" class="Symbol">))</a>
       <a id="8640" class="Symbol">(</a> <a id="8642" href="univalent-combinatorics.2-element-decidable-subtypes.html#7642" class="Bound">np</a><a id="8644" class="Symbol">)</a>
       
@@ -225,21 +225,21 @@
 
   <a id="9130" href="univalent-combinatorics.2-element-decidable-subtypes.html#9130" class="Function">type-standard-2-Element-Decidable-Subtype</a> <a id="9172" class="Symbol">:</a> <a id="9174" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="9177" href="univalent-combinatorics.2-element-decidable-subtypes.html#7576" class="Bound">l</a>
   <a id="9181" href="univalent-combinatorics.2-element-decidable-subtypes.html#9130" class="Function">type-standard-2-Element-Decidable-Subtype</a> <a id="9223" class="Symbol">=</a>
-    <a id="9229" href="univalent-combinatorics.2-element-subtypes.html#5546" class="Function">type-standard-2-Element-Subtype</a>
+    <a id="9229" href="univalent-combinatorics.2-element-subtypes.html#5489" class="Function">type-standard-2-Element-Subtype</a>
       <a id="9267" class="Symbol">(</a> <a id="9269" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="9274" href="univalent-combinatorics.2-element-decidable-subtypes.html#7588" class="Bound">X</a> <a id="9276" class="Symbol">(</a><a id="9277" href="foundation.decidable-equality.html#6960" class="Function">is-set-has-decidable-equality</a> <a id="9307" href="univalent-combinatorics.2-element-decidable-subtypes.html#7599" class="Bound">d</a><a id="9308" class="Symbol">))</a>
       <a id="9317" class="Symbol">(</a> <a id="9319" href="univalent-combinatorics.2-element-decidable-subtypes.html#7642" class="Bound">np</a><a id="9321" class="Symbol">)</a>
 
   <a id="9326" href="univalent-combinatorics.2-element-decidable-subtypes.html#9326" class="Function">equiv-type-standard-2-Element-Decidable-Subtype</a> <a id="9374" class="Symbol">:</a>
     <a id="9380" href="univalent-combinatorics.standard-finite-types.html#2149" class="Function">Fin</a> <a id="9384" class="Number">2</a> <a id="9386" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="9388" href="univalent-combinatorics.2-element-decidable-subtypes.html#9130" class="Function">type-standard-2-Element-Decidable-Subtype</a>
   <a id="9432" href="univalent-combinatorics.2-element-decidable-subtypes.html#9326" class="Function">equiv-type-standard-2-Element-Decidable-Subtype</a> <a id="9480" class="Symbol">=</a>
-    <a id="9486" href="univalent-combinatorics.2-element-subtypes.html#5676" class="Function">equiv-type-standard-2-Element-Subtype</a>
+    <a id="9486" href="univalent-combinatorics.2-element-subtypes.html#5619" class="Function">equiv-type-standard-2-Element-Subtype</a>
       <a id="9530" class="Symbol">(</a> <a id="9532" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="9537" href="univalent-combinatorics.2-element-decidable-subtypes.html#7588" class="Bound">X</a> <a id="9539" class="Symbol">(</a><a id="9540" href="foundation.decidable-equality.html#6960" class="Function">is-set-has-decidable-equality</a> <a id="9570" href="univalent-combinatorics.2-element-decidable-subtypes.html#7599" class="Bound">d</a><a id="9571" class="Symbol">))</a>
       <a id="9580" class="Symbol">(</a> <a id="9582" href="univalent-combinatorics.2-element-decidable-subtypes.html#7642" class="Bound">np</a><a id="9584" class="Symbol">)</a>
 
   <a id="9589" href="univalent-combinatorics.2-element-decidable-subtypes.html#9589" class="Function">has-two-elements-type-standard-2-Element-Decidable-Subtype</a> <a id="9648" class="Symbol">:</a>
     <a id="9654" href="univalent-combinatorics.2-element-types.html#4450" class="Function">has-two-elements</a> <a id="9671" href="univalent-combinatorics.2-element-decidable-subtypes.html#9130" class="Function">type-standard-2-Element-Decidable-Subtype</a>
   <a id="9715" href="univalent-combinatorics.2-element-decidable-subtypes.html#9589" class="Function">has-two-elements-type-standard-2-Element-Decidable-Subtype</a> <a id="9774" class="Symbol">=</a>
-    <a id="9780" href="univalent-combinatorics.2-element-subtypes.html#6077" class="Function">has-two-elements-type-standard-2-Element-Subtype</a>
+    <a id="9780" href="univalent-combinatorics.2-element-subtypes.html#6020" class="Function">has-two-elements-type-standard-2-Element-Subtype</a>
       <a id="9835" class="Symbol">(</a> <a id="9837" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="9842" href="univalent-combinatorics.2-element-decidable-subtypes.html#7588" class="Bound">X</a> <a id="9844" class="Symbol">(</a><a id="9845" href="foundation.decidable-equality.html#6960" class="Function">is-set-has-decidable-equality</a> <a id="9875" href="univalent-combinatorics.2-element-decidable-subtypes.html#7599" class="Bound">d</a><a id="9876" class="Symbol">))</a>
       <a id="9885" class="Symbol">(</a> <a id="9887" href="univalent-combinatorics.2-element-decidable-subtypes.html#7642" class="Bound">np</a><a id="9889" class="Symbol">)</a>
 
@@ -425,7 +425,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-01)(f47a659) Merge pull request #196 from UniMath/equational-reasoning by noreply
+(2022-06-01)(ef6590c) Merge pull request #197 from UniMath/bonnevier by noreply
 </pre>
 </body>
 </html>
