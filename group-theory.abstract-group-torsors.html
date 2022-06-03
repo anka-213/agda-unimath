@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/abstract-group-torsors.lagda.md.</p>
-<p>Version of Friday, June  3, 2022, 09:13 AM</p>
+<p>Version of Friday, June  3, 2022, 02:43 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -80,7 +80,7 @@
   <a id="2483" class="Symbol">(</a> <a id="2485" href="group-theory.mere-equivalences-group-actions.html#703" class="Function">mere-equiv-Abstract-Group-Action-Prop</a><a id="2522" class="Symbol">)</a>
 <a id="2524" class="Keyword">open</a> <a id="2529" class="Keyword">import</a> <a id="2536" href="group-theory.principal-group-actions.html" class="Module">group-theory.principal-group-actions</a> <a id="2573" class="Keyword">using</a>
   <a id="2581" class="Symbol">(</a> <a id="2583" href="group-theory.principal-group-actions.html#665" class="Function">principal-Abstract-Group-Action</a><a id="2614" class="Symbol">)</a>
-<a id="2616" class="Keyword">open</a> <a id="2621" class="Keyword">import</a> <a id="2628" href="group-theory.symmetric-groups.html" class="Module">group-theory.symmetric-groups</a> <a id="2658" class="Keyword">using</a> <a id="2664" class="Symbol">(</a><a id="2665" href="group-theory.symmetric-groups.html#3491" class="Function">symmetric-Group</a><a id="2680" class="Symbol">)</a>
+<a id="2616" class="Keyword">open</a> <a id="2621" class="Keyword">import</a> <a id="2628" href="group-theory.symmetric-groups.html" class="Module">group-theory.symmetric-groups</a> <a id="2658" class="Keyword">using</a> <a id="2664" class="Symbol">(</a><a id="2665" href="group-theory.symmetric-groups.html#3527" class="Function">symmetric-Group</a><a id="2680" class="Symbol">)</a>
 
 <a id="2683" class="Keyword">module</a> <a id="2690" href="group-theory.abstract-group-torsors.html#2690" class="Module">_</a>
   <a id="2694" class="Symbol">{</a><a id="2695" href="group-theory.abstract-group-torsors.html#2695" class="Bound">l1</a> <a id="2698" href="group-theory.abstract-group-torsors.html#2698" class="Bound">l2</a> <a id="2701" class="Symbol">:</a> <a id="2703" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2708" class="Symbol">}</a> <a id="2710" class="Symbol">(</a><a id="2711" href="group-theory.abstract-group-torsors.html#2711" class="Bound">G</a> <a id="2713" class="Symbol">:</a> <a id="2715" href="group-theory.groups.html#2398" class="Function">Group</a> <a id="2721" href="group-theory.abstract-group-torsors.html#2695" class="Bound">l1</a><a id="2723" class="Symbol">)</a> <a id="2725" class="Symbol">(</a><a id="2726" href="group-theory.abstract-group-torsors.html#2726" class="Bound">X</a> <a id="2728" class="Symbol">:</a> <a id="2730" href="group-theory.group-actions.html#1192" class="Function">Abstract-Group-Action</a> <a id="2752" href="group-theory.abstract-group-torsors.html#2711" class="Bound">G</a> <a id="2754" href="group-theory.abstract-group-torsors.html#2698" class="Bound">l2</a><a id="2756" class="Symbol">)</a>
@@ -130,7 +130,7 @@
 
   <a id="4131" href="group-theory.abstract-group-torsors.html#4131" class="Function">mul-hom-Torsor-Abstract-Group</a> <a id="4161" class="Symbol">:</a>
     <a id="4167" class="Symbol">{</a><a id="4168" href="group-theory.abstract-group-torsors.html#4168" class="Bound">l</a> <a id="4170" class="Symbol">:</a> <a id="4172" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="4177" class="Symbol">}</a> <a id="4179" class="Symbol">(</a><a id="4180" href="group-theory.abstract-group-torsors.html#4180" class="Bound">X</a> <a id="4182" class="Symbol">:</a> <a id="4184" href="group-theory.abstract-group-torsors.html#3276" class="Function">Torsor-Abstract-Group</a> <a id="4206" href="group-theory.abstract-group-torsors.html#4168" class="Bound">l</a><a id="4207" class="Symbol">)</a> <a id="4209" class="Symbol">→</a>
-    <a id="4215" href="group-theory.homomorphisms-groups.html#1617" class="Function">type-hom-Group</a> <a id="4230" href="group-theory.abstract-group-torsors.html#3249" class="Bound">G</a> <a id="4232" class="Symbol">(</a><a id="4233" href="group-theory.symmetric-groups.html#3491" class="Function">symmetric-Group</a> <a id="4249" class="Symbol">(</a><a id="4250" href="group-theory.abstract-group-torsors.html#3574" class="Function">set-Torsor-Abstract-Group</a> <a id="4276" href="group-theory.abstract-group-torsors.html#4180" class="Bound">X</a><a id="4277" class="Symbol">))</a>
+    <a id="4215" href="group-theory.homomorphisms-groups.html#1617" class="Function">type-hom-Group</a> <a id="4230" href="group-theory.abstract-group-torsors.html#3249" class="Bound">G</a> <a id="4232" class="Symbol">(</a><a id="4233" href="group-theory.symmetric-groups.html#3527" class="Function">symmetric-Group</a> <a id="4249" class="Symbol">(</a><a id="4250" href="group-theory.abstract-group-torsors.html#3574" class="Function">set-Torsor-Abstract-Group</a> <a id="4276" href="group-theory.abstract-group-torsors.html#4180" class="Bound">X</a><a id="4277" class="Symbol">))</a>
   <a id="4282" href="group-theory.abstract-group-torsors.html#4131" class="Function">mul-hom-Torsor-Abstract-Group</a> <a id="4312" href="group-theory.abstract-group-torsors.html#4312" class="Bound">X</a> <a id="4314" class="Symbol">=</a> <a id="4316" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="4320" class="Symbol">(</a><a id="4321" href="group-theory.abstract-group-torsors.html#3433" class="Function">action-Torsor-Abstract-Group</a> <a id="4350" href="group-theory.abstract-group-torsors.html#4312" class="Bound">X</a><a id="4351" class="Symbol">)</a>
 
   <a id="4356" href="group-theory.abstract-group-torsors.html#4356" class="Function">equiv-mul-Torsor-Abstract-Group</a> <a id="4388" class="Symbol">:</a>
@@ -671,7 +671,7 @@ module _
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-03)(af4cf1b) Merge pull request #200 from EgbertRijke/h-spaces by noreply
+(2022-06-03)(bfbcabd) Merge pull request #201 from LeoMangel/leomangel by noreply
 </pre>
 </body>
 </html>
