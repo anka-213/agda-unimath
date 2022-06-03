@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/booleans.lagda.md.</p>
-<p>Version of Thursday, June  2, 2022, 10:37 AM</p>
+<p>Version of Friday, June  3, 2022, 09:13 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -38,7 +38,7 @@
 <a id="230" class="Keyword">open</a> <a id="235" class="Keyword">import</a> <a id="242" href="foundation-core.empty-types.html" class="Module">foundation-core.empty-types</a> <a id="270" class="Keyword">using</a> <a id="276" class="Symbol">(</a><a id="277" href="foundation-core.empty-types.html#1044" class="Datatype">empty</a><a id="282" class="Symbol">;</a> <a id="284" href="foundation-core.empty-types.html#2364" class="Function">is-prop-empty</a><a id="297" class="Symbol">)</a>
 <a id="299" class="Keyword">open</a> <a id="304" class="Keyword">import</a> <a id="311" href="foundation-core.equivalences.html" class="Module">foundation-core.equivalences</a> <a id="340" class="Keyword">using</a> <a id="346" class="Symbol">(</a><a id="347" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a><a id="355" class="Symbol">;</a> <a id="357" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="360" class="Symbol">)</a>
 <a id="362" class="Keyword">open</a> <a id="367" class="Keyword">import</a> <a id="374" href="foundation-core.functions.html" class="Module">foundation-core.functions</a> <a id="400" class="Keyword">using</a> <a id="406" class="Symbol">(</a><a id="407" href="foundation-core.functions.html#309" class="Function">id</a><a id="409" class="Symbol">;</a> <a id="411" href="foundation-core.functions.html#407" class="Function Operator">_∘_</a><a id="414" class="Symbol">)</a>
-<a id="416" class="Keyword">open</a> <a id="421" class="Keyword">import</a> <a id="428" href="foundation-core.homotopies.html" class="Module">foundation-core.homotopies</a> <a id="455" class="Keyword">using</a> <a id="461" class="Symbol">(</a><a id="462" href="foundation-core.homotopies.html#467" class="Function Operator">_~_</a><a id="465" class="Symbol">)</a>
+<a id="416" class="Keyword">open</a> <a id="421" class="Keyword">import</a> <a id="428" href="foundation-core.homotopies.html" class="Module">foundation-core.homotopies</a> <a id="455" class="Keyword">using</a> <a id="461" class="Symbol">(</a><a id="462" href="foundation-core.homotopies.html#545" class="Function Operator">_~_</a><a id="465" class="Symbol">)</a>
 <a id="467" class="Keyword">open</a> <a id="472" class="Keyword">import</a> <a id="479" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a> <a id="510" class="Keyword">using</a> <a id="516" class="Symbol">(</a><a id="517" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="519" class="Symbol">;</a> <a id="521" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="525" class="Symbol">;</a> <a id="527" href="foundation-core.identity-types.html#1552" class="Function">inv</a><a id="530" class="Symbol">)</a>
 <a id="532" class="Keyword">open</a> <a id="537" class="Keyword">import</a> <a id="544" href="foundation.injective-maps.html" class="Module">foundation.injective-maps</a> <a id="570" class="Keyword">using</a> <a id="576" class="Symbol">(</a><a id="577" href="foundation.injective-maps.html#1295" class="Function">is-injective</a><a id="589" class="Symbol">)</a>
 <a id="591" class="Keyword">open</a> <a id="596" class="Keyword">import</a> <a id="603" href="foundation-core.negation.html" class="Module">foundation-core.negation</a> <a id="628" class="Keyword">using</a> <a id="634" class="Symbol">(</a><a id="635" href="foundation-core.negation.html#452" class="Function">¬</a><a id="636" class="Symbol">)</a>
@@ -125,7 +125,7 @@
 <a id="2851" href="foundation.booleans.html#2801" class="Function">neq-neg-bool</a> <a id="2864" href="foundation.booleans.html#1098" class="InductiveConstructor">true</a> <a id="2869" class="Symbol">()</a>
 <a id="2872" href="foundation.booleans.html#2801" class="Function">neq-neg-bool</a> <a id="2885" href="foundation.booleans.html#1103" class="InductiveConstructor">false</a> <a id="2891" class="Symbol">()</a>
 
-<a id="neg-neg-bool"></a><a id="2895" href="foundation.booleans.html#2895" class="Function">neg-neg-bool</a> <a id="2908" class="Symbol">:</a> <a id="2910" class="Symbol">(</a><a id="2911" href="foundation.booleans.html#1814" class="Function">neg-bool</a> <a id="2920" href="foundation-core.functions.html#407" class="Function Operator">∘</a> <a id="2922" href="foundation.booleans.html#1814" class="Function">neg-bool</a><a id="2930" class="Symbol">)</a> <a id="2932" href="foundation-core.homotopies.html#467" class="Function Operator">~</a> <a id="2934" href="foundation-core.functions.html#309" class="Function">id</a>
+<a id="neg-neg-bool"></a><a id="2895" href="foundation.booleans.html#2895" class="Function">neg-neg-bool</a> <a id="2908" class="Symbol">:</a> <a id="2910" class="Symbol">(</a><a id="2911" href="foundation.booleans.html#1814" class="Function">neg-bool</a> <a id="2920" href="foundation-core.functions.html#407" class="Function Operator">∘</a> <a id="2922" href="foundation.booleans.html#1814" class="Function">neg-bool</a><a id="2930" class="Symbol">)</a> <a id="2932" href="foundation-core.homotopies.html#545" class="Function Operator">~</a> <a id="2934" href="foundation-core.functions.html#309" class="Function">id</a>
 <a id="2937" href="foundation.booleans.html#2895" class="Function">neg-neg-bool</a> <a id="2950" href="foundation.booleans.html#1098" class="InductiveConstructor">true</a> <a id="2955" class="Symbol">=</a> <a id="2957" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a>
 <a id="2962" href="foundation.booleans.html#2895" class="Function">neg-neg-bool</a> <a id="2975" href="foundation.booleans.html#1103" class="InductiveConstructor">false</a> <a id="2981" class="Symbol">=</a> <a id="2983" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a>
 
@@ -160,7 +160,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-02)(13cb512) Merge pull request #198 from EgbertRijke/domain-theory by noreply
+(2022-06-03)(af4cf1b) Merge pull request #200 from EgbertRijke/h-spaces by noreply
 </pre>
 </body>
 </html>

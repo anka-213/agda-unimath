@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/group-actions.lagda.md.</p>
-<p>Version of Thursday, June  2, 2022, 10:38 AM</p>
+<p>Version of Friday, June  3, 2022, 09:13 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -38,7 +38,7 @@
   <a id="224" class="Symbol">(</a> <a id="226" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="229" class="Symbol">;</a> <a id="231" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a><a id="240" class="Symbol">;</a> <a id="242" href="foundation.equivalences.html#13491" class="Function">eq-htpy-equiv</a><a id="255" class="Symbol">)</a>
 <a id="257" class="Keyword">open</a> <a id="262" class="Keyword">import</a> <a id="269" href="foundation.function-extensionality.html" class="Module">foundation.function-extensionality</a> <a id="304" class="Keyword">using</a> <a id="310" class="Symbol">(</a><a id="311" href="foundation-core.function-extensionality.html#964" class="Function">htpy-eq</a><a id="318" class="Symbol">)</a>
 <a id="320" class="Keyword">open</a> <a id="325" class="Keyword">import</a> <a id="332" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="353" class="Keyword">using</a> <a id="359" class="Symbol">(</a><a id="360" href="foundation-core.functions.html#309" class="Function">id</a><a id="362" class="Symbol">)</a>
-<a id="364" class="Keyword">open</a> <a id="369" class="Keyword">import</a> <a id="376" href="foundation.homotopies.html" class="Module">foundation.homotopies</a> <a id="398" class="Keyword">using</a> <a id="404" class="Symbol">(</a><a id="405" href="foundation-core.homotopies.html#467" class="Function Operator">_~_</a><a id="408" class="Symbol">)</a>
+<a id="364" class="Keyword">open</a> <a id="369" class="Keyword">import</a> <a id="376" href="foundation.homotopies.html" class="Module">foundation.homotopies</a> <a id="398" class="Keyword">using</a> <a id="404" class="Symbol">(</a><a id="405" href="foundation-core.homotopies.html#545" class="Function Operator">_~_</a><a id="408" class="Symbol">)</a>
 <a id="410" class="Keyword">open</a> <a id="415" class="Keyword">import</a> <a id="422" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="448" class="Keyword">using</a> <a id="454" class="Symbol">(</a><a id="455" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="457" class="Symbol">;</a> <a id="459" href="foundation-core.identity-types.html#2853" class="Function">ap</a><a id="461" class="Symbol">;</a> <a id="463" href="foundation-core.identity-types.html#1552" class="Function">inv</a><a id="466" class="Symbol">;</a> <a id="468" href="foundation-core.identity-types.html#1239" class="Function Operator">_∙_</a><a id="471" class="Symbol">;</a> <a id="473" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="477" class="Symbol">)</a>
 <a id="479" class="Keyword">open</a> <a id="484" class="Keyword">import</a> <a id="491" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="507" class="Keyword">using</a> <a id="513" class="Symbol">(</a><a id="514" href="foundation-core.sets.html#1177" class="Function">UU-Set</a><a id="520" class="Symbol">;</a> <a id="522" href="foundation-core.sets.html#1291" class="Function">type-Set</a><a id="530" class="Symbol">;</a> <a id="532" href="foundation-core.sets.html#1099" class="Function">is-set</a><a id="538" class="Symbol">;</a> <a id="540" href="foundation-core.sets.html#1342" class="Function">is-set-type-Set</a><a id="555" class="Symbol">)</a>
 <a id="557" class="Keyword">open</a> <a id="562" class="Keyword">import</a> <a id="569" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="596" class="Keyword">using</a> <a id="602" class="Symbol">(</a><a id="603" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="608" class="Symbol">;</a> <a id="610" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="612" class="Symbol">;</a> <a id="614" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="617" class="Symbol">;</a> <a id="619" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="623" class="Symbol">)</a>
@@ -90,7 +90,7 @@
   <a id="2274" href="group-theory.group-actions.html#2168" class="Function">mul-Abstract-Group-Action&#39;</a> <a id="2301" href="group-theory.group-actions.html#2301" class="Bound">x</a> <a id="2303" href="group-theory.group-actions.html#2303" class="Bound">g</a> <a id="2305" class="Symbol">=</a> <a id="2307" href="group-theory.group-actions.html#1980" class="Function">mul-Abstract-Group-Action</a> <a id="2333" href="group-theory.group-actions.html#2303" class="Bound">g</a> <a id="2335" href="group-theory.group-actions.html#2301" class="Bound">x</a>
 
   <a id="2340" href="group-theory.group-actions.html#2340" class="Function">preserves-unit-mul-Abstract-Group-Action</a> <a id="2381" class="Symbol">:</a>
-    <a id="2387" class="Symbol">(</a><a id="2388" href="group-theory.group-actions.html#1980" class="Function">mul-Abstract-Group-Action</a> <a id="2414" class="Symbol">(</a><a id="2415" href="group-theory.groups.html#3677" class="Function">unit-Group</a> <a id="2426" href="group-theory.group-actions.html#1366" class="Bound">G</a><a id="2427" class="Symbol">))</a> <a id="2430" href="foundation-core.homotopies.html#467" class="Function Operator">~</a> <a id="2432" href="foundation-core.functions.html#309" class="Function">id</a>
+    <a id="2387" class="Symbol">(</a><a id="2388" href="group-theory.group-actions.html#1980" class="Function">mul-Abstract-Group-Action</a> <a id="2414" class="Symbol">(</a><a id="2415" href="group-theory.groups.html#3677" class="Function">unit-Group</a> <a id="2426" href="group-theory.group-actions.html#1366" class="Bound">G</a><a id="2427" class="Symbol">))</a> <a id="2430" href="foundation-core.homotopies.html#545" class="Function Operator">~</a> <a id="2432" href="foundation-core.functions.html#309" class="Function">id</a>
   <a id="2437" href="group-theory.group-actions.html#2340" class="Function">preserves-unit-mul-Abstract-Group-Action</a> <a id="2478" class="Symbol">=</a>
     <a id="2484" href="foundation-core.function-extensionality.html#964" class="Function">htpy-eq</a>
       <a id="2498" class="Symbol">(</a> <a id="2500" href="foundation-core.identity-types.html#2853" class="Function">ap</a> <a id="2503" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a>
@@ -121,7 +121,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-02)(13cb512) Merge pull request #198 from EgbertRijke/domain-theory by noreply
+(2022-06-03)(af4cf1b) Merge pull request #200 from EgbertRijke/h-spaces by noreply
 </pre>
 </body>
 </html>
