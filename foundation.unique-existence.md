@@ -1,0 +1,21 @@
+---
+title: Unique existence
+---
+
+<pre class="Agda"><a id="42" class="Symbol">{-#</a> <a id="46" class="Keyword">OPTIONS</a> <a id="54" class="Pragma">--without-K</a> <a id="66" class="Pragma">--exact-split</a> <a id="80" class="Symbol">#-}</a>
+
+<a id="85" class="Keyword">module</a> <a id="92" href="foundation.unique-existence.html" class="Module">foundation.unique-existence</a> <a id="120" class="Keyword">where</a>
+
+<a id="127" class="Keyword">open</a> <a id="132" class="Keyword">import</a> <a id="139" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="169" class="Keyword">using</a> <a id="175" class="Symbol">(</a><a id="176" href="foundation-core.contractible-types.html#992" class="Function">is-contr</a><a id="184" class="Symbol">)</a>
+<a id="186" class="Keyword">open</a> <a id="191" class="Keyword">import</a> <a id="198" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="230" class="Keyword">using</a> <a id="236" class="Symbol">(</a><a id="237" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="238" class="Symbol">)</a>
+<a id="240" class="Keyword">open</a> <a id="245" class="Keyword">import</a> <a id="252" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="279" class="Keyword">using</a> <a id="285" class="Symbol">(</a><a id="286" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="288" class="Symbol">;</a> <a id="290" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="295" class="Symbol">;</a> <a id="297" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="300" class="Symbol">)</a>
+</pre>
+## Idea
+
+Unique existence `∃! A B` is defined as `Σ A B` being contractible.
+
+## Definition
+
+<pre class="Agda"><a id="∃!"></a><a id="408" href="foundation.unique-existence.html#408" class="Function">∃!</a> <a id="411" class="Symbol">:</a> <a id="413" class="Symbol">{</a><a id="414" href="foundation.unique-existence.html#414" class="Bound">l1</a> <a id="417" href="foundation.unique-existence.html#417" class="Bound">l2</a> <a id="420" class="Symbol">:</a> <a id="422" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="427" class="Symbol">}</a> <a id="429" class="Symbol">→</a> <a id="431" class="Symbol">(</a><a id="432" href="foundation.unique-existence.html#432" class="Bound">A</a> <a id="434" class="Symbol">:</a> <a id="436" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="439" href="foundation.unique-existence.html#414" class="Bound">l1</a><a id="441" class="Symbol">)</a> <a id="443" class="Symbol">→</a> <a id="445" class="Symbol">(</a><a id="446" href="foundation.unique-existence.html#432" class="Bound">A</a> <a id="448" class="Symbol">→</a> <a id="450" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="453" href="foundation.unique-existence.html#417" class="Bound">l2</a><a id="455" class="Symbol">)</a> <a id="457" class="Symbol">→</a> <a id="459" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="462" class="Symbol">(</a><a id="463" href="foundation.unique-existence.html#414" class="Bound">l1</a> <a id="466" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="468" href="foundation.unique-existence.html#417" class="Bound">l2</a><a id="470" class="Symbol">)</a>
+<a id="472" href="foundation.unique-existence.html#408" class="Function">∃!</a> <a id="475" href="foundation.unique-existence.html#475" class="Bound">A</a> <a id="477" href="foundation.unique-existence.html#477" class="Bound">B</a> <a id="479" class="Symbol">=</a> <a id="481" href="foundation-core.contractible-types.html#992" class="Function">is-contr</a> <a id="490" class="Symbol">(</a><a id="491" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a> <a id="493" href="foundation.unique-existence.html#475" class="Bound">A</a> <a id="495" href="foundation.unique-existence.html#477" class="Bound">B</a><a id="496" class="Symbol">)</a>
+</pre>

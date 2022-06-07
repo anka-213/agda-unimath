@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/abstract-group-torsors.lagda.md.</p>
-<p>Version of Friday, June  3, 2022, 02:43 PM</p>
+<p>Version of Tuesday, June  7, 2022, 12:25 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -41,7 +41,7 @@
 <a id="307" class="Keyword">open</a> <a id="312" class="Keyword">import</a> <a id="319" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="351" class="Keyword">using</a> <a id="357" class="Symbol">(</a><a id="358" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="359" class="Symbol">;</a> <a id="361" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="365" class="Symbol">;</a> <a id="367" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="370" class="Symbol">;</a> <a id="372" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="375" class="Symbol">)</a>
 <a id="377" class="Keyword">open</a> <a id="382" class="Keyword">import</a> <a id="389" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="413" class="Keyword">using</a>
   <a id="421" class="Symbol">(</a> <a id="423" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="426" class="Symbol">;</a> <a id="428" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a><a id="436" class="Symbol">;</a> <a id="438" href="foundation-core.equivalences.html#4173" class="Function">map-inv-is-equiv</a><a id="454" class="Symbol">;</a> <a id="456" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a><a id="465" class="Symbol">;</a> <a id="467" href="foundation-core.equivalences.html#5237" class="Function">isretr-map-inv-equiv</a><a id="487" class="Symbol">;</a>
-    <a id="493" href="foundation-core.equivalences.html#5105" class="Function">issec-map-inv-equiv</a><a id="512" class="Symbol">;</a> <a id="514" href="foundation.equivalences.html#12381" class="Function">is-equiv-Prop</a><a id="527" class="Symbol">;</a> <a id="529" href="foundation-core.equivalences.html#2999" class="Function">is-equiv-has-inverse</a><a id="549" class="Symbol">;</a> <a id="551" href="foundation-core.equivalences.html#7855" class="Function Operator">_∘e_</a><a id="555" class="Symbol">)</a>
+    <a id="493" href="foundation-core.equivalences.html#5105" class="Function">issec-map-inv-equiv</a><a id="512" class="Symbol">;</a> <a id="514" href="foundation.equivalences.html#12355" class="Function">is-equiv-Prop</a><a id="527" class="Symbol">;</a> <a id="529" href="foundation-core.equivalences.html#2999" class="Function">is-equiv-has-inverse</a><a id="549" class="Symbol">;</a> <a id="551" href="foundation-core.equivalences.html#7855" class="Function Operator">_∘e_</a><a id="555" class="Symbol">)</a>
 <a id="557" class="Keyword">open</a> <a id="562" class="Keyword">import</a> <a id="569" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="590" class="Keyword">using</a> <a id="596" class="Symbol">(</a><a id="597" href="foundation-core.functions.html#407" class="Function Operator">_∘_</a><a id="600" class="Symbol">;</a> <a id="602" href="foundation-core.functions.html#309" class="Function">id</a><a id="604" class="Symbol">)</a>
 <a id="606" class="Keyword">open</a> <a id="611" class="Keyword">import</a> <a id="618" href="foundation.fundamental-theorem-of-identity-types.html" class="Module">foundation.fundamental-theorem-of-identity-types</a> <a id="667" class="Keyword">using</a>
   <a id="675" class="Symbol">(</a> <a id="677" href="foundation-core.fundamental-theorem-of-identity-types.html#1888" class="Function">fundamental-theorem-id</a><a id="699" class="Symbol">)</a>
@@ -575,7 +575,7 @@
     <a id="21077" href="group-theory.abstract-group-torsors.html#20940" class="Function">is-equiv-Eq-equiv-Torsor-Abstract-Group</a> <a id="21117" href="group-theory.abstract-group-torsors.html#21117" class="Bound">X</a> <a id="21119" class="Symbol">=</a>
       <a id="21127" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a>
         <a id="21171" class="Symbol">(</a> <a id="21173" href="group-theory.abstract-group-torsors.html#4886" class="Function">is-torsor-action-Torsor-Abstract-Group</a> <a id="21212" href="group-theory.abstract-group-torsors.html#18215" class="Bound">G</a> <a id="21214" href="group-theory.abstract-group-torsors.html#21117" class="Bound">X</a><a id="21215" class="Symbol">)</a>
-        <a id="21225" class="Symbol">(</a> <a id="21227" href="foundation.equivalences.html#12381" class="Function">is-equiv-Prop</a> <a id="21241" class="Symbol">(</a><a id="21242" href="group-theory.abstract-group-torsors.html#18524" class="Function">Eq-equiv-Torsor-Abstract-Group</a> <a id="21273" href="group-theory.abstract-group-torsors.html#21117" class="Bound">X</a><a id="21274" class="Symbol">))</a>
+        <a id="21225" class="Symbol">(</a> <a id="21227" href="foundation.equivalences.html#12355" class="Function">is-equiv-Prop</a> <a id="21241" class="Symbol">(</a><a id="21242" href="group-theory.abstract-group-torsors.html#18524" class="Function">Eq-equiv-Torsor-Abstract-Group</a> <a id="21273" href="group-theory.abstract-group-torsors.html#21117" class="Bound">X</a><a id="21274" class="Symbol">))</a>
         <a id="21285" class="Symbol">(</a> <a id="21287" class="Symbol">λ</a> <a id="21289" href="group-theory.abstract-group-torsors.html#21289" class="Bound">e</a> <a id="21291" class="Symbol">→</a>
           <a id="21303" href="foundation-core.identity-types.html#4583" class="Function">tr</a> <a id="21306" class="Symbol">(</a> <a id="21308" class="Symbol">λ</a> <a id="21310" href="group-theory.abstract-group-torsors.html#21310" class="Bound">Y</a> <a id="21312" class="Symbol">→</a> <a id="21314" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a> <a id="21323" class="Symbol">(</a><a id="21324" href="group-theory.abstract-group-torsors.html#18524" class="Function">Eq-equiv-Torsor-Abstract-Group</a> <a id="21355" href="group-theory.abstract-group-torsors.html#21310" class="Bound">Y</a><a id="21356" class="Symbol">))</a>
              <a id="21372" class="Symbol">(</a> <a id="21374" href="group-theory.abstract-group-torsors.html#6872" class="Function">eq-equiv-Torsor-Abstract-Group</a> <a id="21405" href="group-theory.abstract-group-torsors.html#18215" class="Bound">G</a>
@@ -671,7 +671,7 @@ module _
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-03)(bfbcabd) Merge pull request #201 from LeoMangel/leomangel by noreply
+(2022-06-07)(7f87d03) Merge pull request #199 from UniMath/bonnevier by noreply
 </pre>
 </body>
 </html>

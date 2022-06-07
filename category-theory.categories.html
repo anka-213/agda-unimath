@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/category-theory/categories.lagda.md.</p>
-<p>Version of Friday, June  3, 2022, 02:42 PM</p>
+<p>Version of Tuesday, June  7, 2022, 12:24 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -42,7 +42,7 @@
 <a id="484" class="Keyword">open</a> <a id="489" class="Keyword">import</a> <a id="496" href="foundation.1-types.html" class="Module">foundation.1-types</a> <a id="515" class="Keyword">using</a> <a id="521" class="Symbol">(</a><a id="522" href="foundation-core.1-types.html#654" class="Function">is-1-type</a><a id="531" class="Symbol">;</a> <a id="533" href="foundation-core.1-types.html#720" class="Function">UU-1-Type</a><a id="542" class="Symbol">)</a>
 <a id="544" class="Keyword">open</a> <a id="549" class="Keyword">import</a> <a id="556" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="586" class="Keyword">using</a> <a id="592" class="Symbol">(</a><a id="593" href="foundation-core.contractible-types.html#3806" class="Function">is-contr-equiv&#39;</a><a id="608" class="Symbol">)</a>
 <a id="610" class="Keyword">open</a> <a id="615" class="Keyword">import</a> <a id="622" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="654" class="Keyword">using</a> <a id="660" class="Symbol">(</a><a id="661" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="662" class="Symbol">;</a> <a id="664" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="667" class="Symbol">;</a> <a id="669" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="672" class="Symbol">)</a>
-<a id="674" class="Keyword">open</a> <a id="679" class="Keyword">import</a> <a id="686" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="710" class="Keyword">using</a> <a id="716" class="Symbol">(</a><a id="717" href="foundation.equivalences.html#12381" class="Function">is-equiv-Prop</a><a id="730" class="Symbol">)</a>
+<a id="674" class="Keyword">open</a> <a id="679" class="Keyword">import</a> <a id="686" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="710" class="Keyword">using</a> <a id="716" class="Symbol">(</a><a id="717" href="foundation.equivalences.html#12355" class="Function">is-equiv-Prop</a><a id="730" class="Symbol">)</a>
 <a id="732" class="Keyword">open</a> <a id="737" class="Keyword">import</a> <a id="744" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="765" class="Keyword">using</a> <a id="771" class="Symbol">(</a><a id="772" href="foundation-core.functions.html#407" class="Function Operator">_∘_</a><a id="775" class="Symbol">;</a> <a id="777" href="foundation-core.functions.html#309" class="Function">id</a><a id="779" class="Symbol">)</a>
 <a id="781" class="Keyword">open</a> <a id="786" class="Keyword">import</a> <a id="793" href="foundation.functoriality-dependent-pair-types.html" class="Module">foundation.functoriality-dependent-pair-types</a> <a id="839" class="Keyword">using</a>
   <a id="847" class="Symbol">(</a> <a id="849" href="foundation-core.functoriality-dependent-pair-types.html#6804" class="Function">equiv-tot</a><a id="858" class="Symbol">)</a>
@@ -68,7 +68,7 @@
   <a id="1863" href="category-theory.categories.html#1817" class="Function">is-category-Precat-Prop</a> <a id="1887" class="Symbol">=</a>
     <a id="1893" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a> <a id="1900" class="Symbol">(</a><a id="1901" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="1912" href="category-theory.categories.html#1788" class="Bound">C</a><a id="1913" class="Symbol">)</a>
       <a id="1921" class="Symbol">(</a> <a id="1923" class="Symbol">λ</a> <a id="1925" href="category-theory.categories.html#1925" class="Bound">x</a> <a id="1927" class="Symbol">→</a>
-        <a id="1937" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a> <a id="1944" class="Symbol">(</a><a id="1945" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="1956" href="category-theory.categories.html#1788" class="Bound">C</a><a id="1957" class="Symbol">)</a> <a id="1959" class="Symbol">(λ</a> <a id="1962" href="category-theory.categories.html#1962" class="Bound">y</a> <a id="1964" class="Symbol">→</a> <a id="1966" href="foundation.equivalences.html#12381" class="Function">is-equiv-Prop</a> <a id="1980" class="Symbol">(</a><a id="1981" href="category-theory.isomorphisms-precategories.html#5178" class="Function">iso-eq-Precat</a> <a id="1995" href="category-theory.categories.html#1788" class="Bound">C</a> <a id="1997" href="category-theory.categories.html#1925" class="Bound">x</a> <a id="1999" href="category-theory.categories.html#1962" class="Bound">y</a><a id="2000" class="Symbol">)))</a>
+        <a id="1937" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a> <a id="1944" class="Symbol">(</a><a id="1945" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="1956" href="category-theory.categories.html#1788" class="Bound">C</a><a id="1957" class="Symbol">)</a> <a id="1959" class="Symbol">(λ</a> <a id="1962" href="category-theory.categories.html#1962" class="Bound">y</a> <a id="1964" class="Symbol">→</a> <a id="1966" href="foundation.equivalences.html#12355" class="Function">is-equiv-Prop</a> <a id="1980" class="Symbol">(</a><a id="1981" href="category-theory.isomorphisms-precategories.html#5178" class="Function">iso-eq-Precat</a> <a id="1995" href="category-theory.categories.html#1788" class="Bound">C</a> <a id="1997" href="category-theory.categories.html#1925" class="Bound">x</a> <a id="1999" href="category-theory.categories.html#1962" class="Bound">y</a><a id="2000" class="Symbol">)))</a>
 
   <a id="2007" href="category-theory.categories.html#2007" class="Function">is-category-Precat</a> <a id="2026" class="Symbol">:</a> <a id="2028" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="2031" class="Symbol">(</a><a id="2032" href="category-theory.categories.html#1772" class="Bound">l1</a> <a id="2035" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="2037" href="category-theory.categories.html#1775" class="Bound">l2</a><a id="2039" class="Symbol">)</a>
   <a id="2043" href="category-theory.categories.html#2007" class="Function">is-category-Precat</a> <a id="2062" class="Symbol">=</a> <a id="2064" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a> <a id="2074" href="category-theory.categories.html#1817" class="Function">is-category-Precat-Prop</a>
@@ -172,7 +172,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-03)(bfbcabd) Merge pull request #201 from LeoMangel/leomangel by noreply
+(2022-06-07)(7f87d03) Merge pull request #199 from UniMath/bonnevier by noreply
 </pre>
 </body>
 </html>
