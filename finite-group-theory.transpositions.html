@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/finite-group-theory/transpositions.lagda.md.</p>
-<p>Version of Monday, June 13, 2022, 02:30 PM</p>
+<p>Version of Monday, June 13, 2022, 03:13 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -81,7 +81,7 @@
 <a id="2605" class="Keyword">open</a> <a id="2610" class="Keyword">import</a> <a id="2617" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="2641" class="Keyword">using</a>
   <a id="2649" class="Symbol">(</a> <a id="2651" href="foundation-core.propositions.html#2707" class="Function">eq-is-prop</a><a id="2661" class="Symbol">;</a> <a id="2663" href="foundation-core.propositions.html#10900" class="Function">is-prop-is-prop</a><a id="2678" class="Symbol">;</a> <a id="2680" href="foundation-core.propositions.html#2393" class="Function">is-prop-all-elements-equal</a><a id="2706" class="Symbol">;</a> <a id="2708" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a><a id="2715" class="Symbol">;</a> <a id="2717" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a><a id="2726" class="Symbol">;</a>
     <a id="2732" href="foundation-core.propositions.html#1549" class="Function">is-prop-type-Prop</a><a id="2749" class="Symbol">;</a> <a id="2751" href="foundation-core.propositions.html#1295" class="Function">is-prop</a><a id="2758" class="Symbol">)</a>
-<a id="2760" class="Keyword">open</a> <a id="2765" class="Keyword">import</a> <a id="2772" href="foundation.propositional-extensionality.html" class="Module">foundation.propositional-extensionality</a> <a id="2812" class="Keyword">using</a> <a id="2818" class="Symbol">(</a><a id="2819" href="foundation.propositional-extensionality.html#3131" class="Function">eq-iff</a><a id="2825" class="Symbol">)</a>
+<a id="2760" class="Keyword">open</a> <a id="2765" class="Keyword">import</a> <a id="2772" href="foundation.propositional-extensionality.html" class="Module">foundation.propositional-extensionality</a> <a id="2812" class="Keyword">using</a> <a id="2818" class="Symbol">(</a><a id="2819" href="foundation.propositional-extensionality.html#3137" class="Function">eq-iff</a><a id="2825" class="Symbol">)</a>
 <a id="2827" class="Keyword">open</a> <a id="2832" class="Keyword">import</a> <a id="2839" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="2876" class="Keyword">using</a>
   <a id="2884" class="Symbol">(</a> <a id="2886" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a><a id="2921" class="Symbol">;</a> <a id="2923" href="foundation.propositional-truncations.html#2191" class="Function">is-prop-type-trunc-Prop</a><a id="2946" class="Symbol">;</a>
     <a id="2952" href="foundation.propositional-truncations.html#2096" class="Function">unit-trunc-Prop</a><a id="2967" class="Symbol">;</a> <a id="2969" href="foundation.propositional-truncations.html#2012" class="Function">type-trunc-Prop</a><a id="2984" class="Symbol">;</a> <a id="2986" href="foundation.propositional-truncations.html#2510" class="Function">trunc-Prop</a><a id="2996" class="Symbol">)</a>
@@ -360,7 +360,7 @@
               <a id="14055" class="Symbol">(</a> <a id="14057" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="14061" class="Symbol">(</a><a id="14062" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="14066" class="Symbol">(</a><a id="14067" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="14071" href="finite-group-theory.transpositions.html#13185" class="Function">two-elements-transposition</a><a id="14097" class="Symbol">)))</a>
               <a id="14115" class="Symbol">(</a> <a id="14117" href="finite-group-theory.transpositions.html#13882" class="Bound">x</a><a id="14118" class="Symbol">)}</a>
             <a id="14133" class="Symbol">{</a> <a id="14135" class="Argument">y</a> <a id="14137" class="Symbol">=</a> <a id="14139" href="foundation.decidable-propositions.html#2167" class="Function">prop-decidable-Prop</a> <a id="14159" class="Symbol">(</a><a id="14160" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="14164" href="finite-group-theory.transpositions.html#12769" class="Bound">Y</a> <a id="14166" href="finite-group-theory.transpositions.html#13882" class="Bound">x</a><a id="14167" class="Symbol">)}</a>
-            <a id="14182" class="Symbol">(</a> <a id="14184" href="foundation.propositional-extensionality.html#3131" class="Function">eq-iff</a>
+            <a id="14182" class="Symbol">(</a> <a id="14184" href="foundation.propositional-extensionality.html#3137" class="Function">eq-iff</a>
               <a id="14205" class="Symbol">(</a><a id="14206" href="finite-group-theory.transpositions.html#15945" class="Function">type-t-coprod-id</a> <a id="14223" href="finite-group-theory.transpositions.html#13882" class="Bound">x</a><a id="14224" class="Symbol">)</a>
               <a id="14240" class="Symbol">(</a><a id="14241" href="finite-group-theory.transpositions.html#17995" class="Function">coprod-id-type-t</a> <a id="14258" href="finite-group-theory.transpositions.html#13882" class="Bound">x</a><a id="14259" class="Symbol">)))</a>
           <a id="14273" class="Symbol">(</a> <a id="14275" href="foundation.equality-dependent-pair-types.html#1372" class="Function">eq-pair-Σ</a>
@@ -982,7 +982,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-13)(43f7860) Merge pull request #205 from EgbertRijke/unit-laws by noreply
+(2022-06-13)(eb831c8) Merge pull request #203 from EgbertRijke/ljubljana by noreply
 </pre>
 </body>
 </html>

@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/elementary-number-theory/equality-integers.lagda.md.</p>
-<p>Version of Monday, June 13, 2022, 02:30 PM</p>
+<p>Version of Monday, June 13, 2022, 03:13 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -57,7 +57,7 @@
 <a id="1197" class="Keyword">open</a> <a id="1202" class="Keyword">import</a> <a id="1209" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="1235" class="Keyword">using</a> <a id="1241" class="Symbol">(</a><a id="1242" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="1244" class="Symbol">;</a> <a id="1246" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="1250" class="Symbol">;</a> <a id="1252" href="foundation-core.identity-types.html#2853" class="Function">ap</a><a id="1254" class="Symbol">)</a>
 <a id="1256" class="Keyword">open</a> <a id="1261" class="Keyword">import</a> <a id="1268" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="1292" class="Keyword">using</a> <a id="1298" class="Symbol">(</a><a id="1299" href="foundation-core.propositions.html#1295" class="Function">is-prop</a><a id="1306" class="Symbol">;</a> <a id="1308" href="foundation-core.propositions.html#2707" class="Function">eq-is-prop</a><a id="1318" class="Symbol">)</a>
 <a id="1320" class="Keyword">open</a> <a id="1325" class="Keyword">import</a> <a id="1332" href="foundation.set-truncations.html" class="Module">foundation.set-truncations</a> <a id="1359" class="Keyword">using</a>
-  <a id="1367" class="Symbol">(</a> <a id="1369" href="foundation.set-truncations.html#3386" class="Postulate">type-trunc-Set</a><a id="1383" class="Symbol">;</a> <a id="1385" href="foundation.set-truncations.html#11287" class="Function">equiv-unit-trunc-Set</a><a id="1405" class="Symbol">)</a>
+  <a id="1367" class="Symbol">(</a> <a id="1369" href="foundation.set-truncations.html#3498" class="Postulate">type-trunc-Set</a><a id="1383" class="Symbol">;</a> <a id="1385" href="foundation.set-truncations.html#14769" class="Function">equiv-unit-trunc-Set</a><a id="1405" class="Symbol">)</a>
 <a id="1407" class="Keyword">open</a> <a id="1412" class="Keyword">import</a> <a id="1419" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="1435" class="Keyword">using</a> <a id="1441" class="Symbol">(</a><a id="1442" href="foundation-core.sets.html#1099" class="Function">is-set</a><a id="1448" class="Symbol">;</a> <a id="1450" href="foundation-core.sets.html#1177" class="Function">UU-Set</a><a id="1456" class="Symbol">)</a>
 <a id="1458" class="Keyword">open</a> <a id="1463" class="Keyword">import</a> <a id="1470" href="foundation.unit-type.html" class="Module">foundation.unit-type</a> <a id="1491" class="Keyword">using</a> <a id="1497" class="Symbol">(</a><a id="1498" href="foundation.unit-type.html#1075" class="Datatype">unit</a><a id="1502" class="Symbol">;</a> <a id="1504" href="foundation.unit-type.html#1099" class="InductiveConstructor">star</a><a id="1508" class="Symbol">;</a> <a id="1510" href="foundation.unit-type.html#3094" class="Function">is-set-unit</a><a id="1521" class="Symbol">;</a> <a id="1523" href="foundation.unit-type.html#2889" class="Function">is-prop-unit</a><a id="1535" class="Symbol">)</a>
 <a id="1537" class="Keyword">open</a> <a id="1542" class="Keyword">import</a> <a id="1549" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="1576" class="Keyword">using</a> <a id="1582" class="Symbol">(</a><a id="1583" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="1585" class="Symbol">;</a> <a id="1587" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="1592" class="Symbol">)</a>
@@ -119,8 +119,8 @@
 <a id="3373" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="3377" href="elementary-number-theory.equality-integers.html#3338" class="Function">ℤ-Set</a> <a id="3383" class="Symbol">=</a> <a id="3385" href="elementary-number-theory.equality-integers.html#3244" class="Function">is-set-ℤ</a>
 </pre>
 <h3 id="the-type-of-integers-is-its-own-set-truncation">The type of integers is its own set truncation</h3>
-<pre class="Agda"><a id="equiv-unit-trunc-ℤ-Set"></a><a id="3459" href="elementary-number-theory.equality-integers.html#3459" class="Function">equiv-unit-trunc-ℤ-Set</a> <a id="3482" class="Symbol">:</a> <a id="3484" href="elementary-number-theory.integers.html#1867" class="Function">ℤ</a> <a id="3486" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="3488" href="foundation.set-truncations.html#3386" class="Postulate">type-trunc-Set</a> <a id="3503" href="elementary-number-theory.integers.html#1867" class="Function">ℤ</a>
-<a id="3505" href="elementary-number-theory.equality-integers.html#3459" class="Function">equiv-unit-trunc-ℤ-Set</a> <a id="3528" class="Symbol">=</a> <a id="3530" href="foundation.set-truncations.html#11287" class="Function">equiv-unit-trunc-Set</a> <a id="3551" href="elementary-number-theory.equality-integers.html#3338" class="Function">ℤ-Set</a>
+<pre class="Agda"><a id="equiv-unit-trunc-ℤ-Set"></a><a id="3459" href="elementary-number-theory.equality-integers.html#3459" class="Function">equiv-unit-trunc-ℤ-Set</a> <a id="3482" class="Symbol">:</a> <a id="3484" href="elementary-number-theory.integers.html#1867" class="Function">ℤ</a> <a id="3486" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="3488" href="foundation.set-truncations.html#3498" class="Postulate">type-trunc-Set</a> <a id="3503" href="elementary-number-theory.integers.html#1867" class="Function">ℤ</a>
+<a id="3505" href="elementary-number-theory.equality-integers.html#3459" class="Function">equiv-unit-trunc-ℤ-Set</a> <a id="3528" class="Symbol">=</a> <a id="3530" href="foundation.set-truncations.html#14769" class="Function">equiv-unit-trunc-Set</a> <a id="3551" href="elementary-number-theory.equality-integers.html#3338" class="Function">ℤ-Set</a>
 </pre>
 <h3 id="equality-on-the-integers-is-a-proposition">Equality on the integers is a proposition</h3>
 <pre class="Agda"><a id="is-prop-Eq-ℤ"></a><a id="3617" href="elementary-number-theory.equality-integers.html#3617" class="Function">is-prop-Eq-ℤ</a> <a id="3630" class="Symbol">:</a>
@@ -165,7 +165,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-13)(43f7860) Merge pull request #205 from EgbertRijke/unit-laws by noreply
+(2022-06-13)(eb831c8) Merge pull request #203 from EgbertRijke/ljubljana by noreply
 </pre>
 </body>
 </html>
