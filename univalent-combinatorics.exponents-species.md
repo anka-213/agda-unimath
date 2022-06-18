@@ -1,0 +1,40 @@
+# Exponents of species
+
+<pre class="Agda"><a id="33" class="Symbol">{-#</a> <a id="37" class="Keyword">OPTIONS</a> <a id="45" class="Pragma">--without-K</a> <a id="57" class="Pragma">--exact-split</a> <a id="71" class="Symbol">#-}</a>
+
+<a id="76" class="Keyword">module</a> <a id="83" href="univalent-combinatorics.exponents-species.html" class="Module">univalent-combinatorics.exponents-species</a> <a id="125" class="Keyword">where</a>
+
+<a id="132" class="Keyword">open</a> <a id="137" class="Keyword">import</a> <a id="144" href="univalent-combinatorics.species.html" class="Module">univalent-combinatorics.species</a>
+
+<a id="177" class="Keyword">open</a> <a id="182" class="Keyword">import</a> <a id="189" href="foundation.coproduct-types.html" class="Module">foundation.coproduct-types</a> <a id="216" class="Keyword">using</a> <a id="222" class="Symbol">(</a><a id="223" href="foundation.coproduct-types.html#1168" class="Datatype">coprod</a><a id="229" class="Symbol">;</a> <a id="231" href="foundation.coproduct-types.html#1239" class="InductiveConstructor">inl</a><a id="234" class="Symbol">;</a> <a id="236" href="foundation.coproduct-types.html#1262" class="InductiveConstructor">inr</a><a id="239" class="Symbol">)</a>
+
+<a id="242" class="Keyword">open</a> <a id="247" class="Keyword">import</a> <a id="254" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a> <a id="286" class="Keyword">using</a> <a id="292" class="Symbol">(</a><a id="293" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="298" class="Symbol">;</a> <a id="300" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="302" class="Symbol">;</a> <a id="304" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="307" class="Symbol">)</a>
+
+<a id="310" class="Keyword">open</a> <a id="315" class="Keyword">import</a> <a id="322" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="349" class="Keyword">using</a> <a id="355" class="Symbol">(</a><a id="356" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="361" class="Symbol">;</a> <a id="363" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="365" class="Symbol">;</a> <a id="367" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="371" class="Symbol">;</a> <a id="373" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="378" class="Symbol">)</a>
+
+<a id="381" class="Keyword">open</a> <a id="386" class="Keyword">import</a> <a id="393" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="430" class="Keyword">using</a> <a id="436" class="Symbol">(</a><a id="437" href="univalent-combinatorics.finite-types.html#4455" class="Function">𝔽</a><a id="438" class="Symbol">)</a>
+
+<a id="441" class="Keyword">open</a> <a id="446" class="Keyword">import</a> <a id="453" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="477" class="Keyword">using</a> <a id="483" class="Symbol">(</a><a id="484" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="487" class="Symbol">;</a> <a id="489" href="foundation-core.equivalences.html#1807" class="Function">map-equiv</a><a id="498" class="Symbol">)</a>
+
+<a id="501" class="Keyword">open</a> <a id="506" class="Keyword">import</a> <a id="513" href="foundation-core.cartesian-product-types.html" class="Module">foundation-core.cartesian-product-types</a> <a id="553" class="Keyword">using</a> <a id="559" class="Symbol">(</a><a id="560" href="foundation-core.cartesian-product-types.html#577" class="Function Operator">_×_</a><a id="563" class="Symbol">;</a> <a id="565" href="foundation-core.cartesian-product-types.html#406" class="Function">prod</a><a id="569" class="Symbol">)</a>
+
+<a id="572" class="Keyword">open</a> <a id="577" class="Keyword">import</a> <a id="584" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
+
+<a id="622" class="Keyword">open</a> <a id="627" class="Keyword">import</a> <a id="634" href="univalent-combinatorics.morphisms-species.html" class="Module">univalent-combinatorics.morphisms-species</a>
+
+<a id="677" class="Keyword">open</a> <a id="682" class="Keyword">import</a> <a id="689" href="foundation-core.dependent-pair-types.html" class="Module">foundation-core.dependent-pair-types</a> <a id="726" class="Keyword">using</a> <a id="732" class="Symbol">(</a><a id="733" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="734" class="Symbol">;</a> <a id="736" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="740" class="Symbol">;</a> <a id="742" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="745" class="Symbol">;</a> <a id="747" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="750" class="Symbol">)</a>
+
+<a id="753" class="Keyword">open</a> <a id="758" class="Keyword">import</a> <a id="765" href="foundation.functoriality-coproduct-types.html" class="Module">foundation.functoriality-coproduct-types</a> 
+</pre># Idea
+
+## Definition
+### exponents of species on objects
+
+
+<pre class="Agda"><a id="_⇒ˢ_,_"></a><a id="880" href="univalent-combinatorics.exponents-species.html#880" class="Function Operator">_⇒ˢ_,_</a> <a id="887" class="Symbol">:</a> <a id="889" class="Symbol">{</a><a id="890" href="univalent-combinatorics.exponents-species.html#890" class="Bound">l1</a> <a id="893" href="univalent-combinatorics.exponents-species.html#893" class="Bound">l2</a> <a id="896" class="Symbol">:</a> <a id="898" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="903" class="Symbol">}</a> <a id="905" class="Symbol">→</a> <a id="907" href="univalent-combinatorics.species.html#273" class="Function">species</a> <a id="915" href="univalent-combinatorics.exponents-species.html#890" class="Bound">l1</a> <a id="918" class="Symbol">→</a> <a id="920" href="univalent-combinatorics.species.html#273" class="Function">species</a> <a id="928" href="univalent-combinatorics.exponents-species.html#893" class="Bound">l2</a> <a id="931" class="Symbol">→</a> <a id="933" href="univalent-combinatorics.finite-types.html#4455" class="Function">𝔽</a> <a id="935" class="Symbol">→</a> <a id="937" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="940" class="Symbol">(</a><a id="941" href="univalent-combinatorics.exponents-species.html#890" class="Bound">l1</a> <a id="944" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="946" href="univalent-combinatorics.exponents-species.html#893" class="Bound">l2</a><a id="948" class="Symbol">)</a>
+<a id="950" href="univalent-combinatorics.exponents-species.html#950" class="Bound">F</a> <a id="952" href="univalent-combinatorics.exponents-species.html#880" class="Function Operator">⇒ˢ</a> <a id="955" href="univalent-combinatorics.exponents-species.html#955" class="Bound">G</a> <a id="957" href="univalent-combinatorics.exponents-species.html#880" class="Function Operator">,</a> <a id="959" href="univalent-combinatorics.exponents-species.html#959" class="Bound">X</a> <a id="961" class="Symbol">=</a> <a id="963" href="univalent-combinatorics.exponents-species.html#950" class="Bound">F</a> <a id="965" href="univalent-combinatorics.exponents-species.html#959" class="Bound">X</a> <a id="967" class="Symbol">→</a> <a id="969" href="univalent-combinatorics.exponents-species.html#955" class="Bound">G</a> <a id="971" href="univalent-combinatorics.exponents-species.html#959" class="Bound">X</a>
+<a id="973" class="Comment">--_⇒ˢ_,_  F G X = (Y : 𝔽) → prod (X ≃ Y) (F Y) → G Y</a>
+</pre>
+<pre class="Agda"><a id="1040" class="Comment">--_⇒ˢ&#39;_,_ : {l1 l2 : Level} → species l1 → species l2 → ? → {!   !}</a>
+<a id="1108" class="Comment">--_⇒ˢ&#39;_,_ F G X = (Y : ?) → (X ≃ Y) (F Y) → G Y</a>
+</pre>

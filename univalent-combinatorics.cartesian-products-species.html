@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>univalent-combinatorics.cartesian-products-species</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/univalent-combinatorics/cartesian-products-species.lagda.md.</p>
+<p>Version of Saturday, June 18, 2022, 12:49 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<h1 id="cartesian-product-of-species">Cartesian product of species</h1>
+<pre class="Agda"><a id="41" class="Symbol">{-#</a> <a id="45" class="Keyword">OPTIONS</a> <a id="53" class="Pragma">--without-K</a> <a id="65" class="Pragma">--exact-split</a> <a id="79" class="Symbol">#-}</a>
+
+<a id="84" class="Keyword">module</a> <a id="91" href="univalent-combinatorics.cartesian-products-species.html" class="Module">univalent-combinatorics.cartesian-products-species</a> <a id="142" class="Keyword">where</a>
+
+<a id="149" class="Keyword">open</a> <a id="154" class="Keyword">import</a> <a id="161" href="univalent-combinatorics.species.html" class="Module">univalent-combinatorics.species</a>
+
+<a id="194" class="Keyword">open</a> <a id="199" class="Keyword">import</a> <a id="206" href="foundation-core.cartesian-product-types.html" class="Module">foundation-core.cartesian-product-types</a> <a id="246" class="Keyword">using</a> <a id="252" class="Symbol">(</a><a id="253" href="foundation-core.cartesian-product-types.html#577" class="Function Operator">_×_</a><a id="256" class="Symbol">)</a>
+
+<a id="259" class="Keyword">open</a> <a id="264" class="Keyword">import</a> <a id="271" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a> <a id="303" class="Keyword">using</a> <a id="309" class="Symbol">(</a><a id="310" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="315" class="Symbol">;</a> <a id="317" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="319" class="Symbol">;</a> <a id="321" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="324" class="Symbol">)</a>
+
+<a id="327" class="Keyword">open</a> <a id="332" class="Keyword">import</a> <a id="339" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="366" class="Keyword">using</a> <a id="372" class="Symbol">(</a><a id="373" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="378" class="Symbol">;</a> <a id="380" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="382" class="Symbol">;</a> <a id="384" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="388" class="Symbol">)</a>
+
+<a id="391" class="Keyword">open</a> <a id="396" class="Keyword">import</a> <a id="403" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="440" class="Keyword">using</a> <a id="446" class="Symbol">(</a><a id="447" href="univalent-combinatorics.finite-types.html#4455" class="Function">𝔽</a><a id="448" class="Symbol">)</a>
+</pre>
+<h1 id="idea">Idea</h1>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="species-prod"></a><a id="488" href="univalent-combinatorics.cartesian-products-species.html#488" class="Function">species-prod</a> <a id="501" class="Symbol">:</a>  <a id="504" class="Symbol">{</a><a id="505" href="univalent-combinatorics.cartesian-products-species.html#505" class="Bound">l1</a> <a id="508" href="univalent-combinatorics.cartesian-products-species.html#508" class="Bound">l2</a> <a id="511" class="Symbol">:</a> <a id="513" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="518" class="Symbol">}</a> <a id="520" class="Symbol">(</a><a id="521" href="univalent-combinatorics.cartesian-products-species.html#521" class="Bound">F</a> <a id="523" class="Symbol">:</a> <a id="525" href="univalent-combinatorics.species.html#273" class="Function">species</a> <a id="533" href="univalent-combinatorics.cartesian-products-species.html#505" class="Bound">l1</a><a id="535" class="Symbol">)</a> <a id="537" class="Symbol">(</a><a id="538" href="univalent-combinatorics.cartesian-products-species.html#538" class="Bound">G</a> <a id="540" class="Symbol">:</a> <a id="542" href="univalent-combinatorics.species.html#273" class="Function">species</a> <a id="550" href="univalent-combinatorics.cartesian-products-species.html#508" class="Bound">l2</a><a id="552" class="Symbol">)</a> <a id="554" class="Symbol">(</a><a id="555" href="univalent-combinatorics.cartesian-products-species.html#555" class="Bound">X</a> <a id="557" class="Symbol">:</a> <a id="559" href="univalent-combinatorics.finite-types.html#4455" class="Function">𝔽</a><a id="560" class="Symbol">)</a> <a id="562" class="Symbol">→</a> <a id="564" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="567" class="Symbol">(</a><a id="568" href="univalent-combinatorics.cartesian-products-species.html#505" class="Bound">l1</a> <a id="571" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="573" href="univalent-combinatorics.cartesian-products-species.html#508" class="Bound">l2</a><a id="575" class="Symbol">)</a>
+<a id="577" href="univalent-combinatorics.cartesian-products-species.html#488" class="Function">species-prod</a> <a id="590" href="univalent-combinatorics.cartesian-products-species.html#590" class="Bound">F</a> <a id="592" href="univalent-combinatorics.cartesian-products-species.html#592" class="Bound">G</a> <a id="594" href="univalent-combinatorics.cartesian-products-species.html#594" class="Bound">X</a> <a id="596" class="Symbol">=</a> <a id="598" class="Symbol">(</a><a id="599" href="univalent-combinatorics.cartesian-products-species.html#590" class="Bound">F</a> <a id="601" href="univalent-combinatorics.cartesian-products-species.html#594" class="Bound">X</a><a id="602" class="Symbol">)</a> <a id="604" href="foundation-core.cartesian-product-types.html#577" class="Function Operator">×</a> <a id="606" class="Symbol">(</a><a id="607" href="univalent-combinatorics.cartesian-products-species.html#592" class="Bound">G</a> <a id="609" href="univalent-combinatorics.cartesian-products-species.html#594" class="Bound">X</a><a id="610" class="Symbol">)</a>
+
+<a id="_×ˢ_,_"></a><a id="613" href="univalent-combinatorics.cartesian-products-species.html#613" class="Function Operator">_×ˢ_,_</a> <a id="620" class="Symbol">:</a>  <a id="623" class="Symbol">{</a><a id="624" href="univalent-combinatorics.cartesian-products-species.html#624" class="Bound">l1</a> <a id="627" href="univalent-combinatorics.cartesian-products-species.html#627" class="Bound">l2</a> <a id="630" class="Symbol">:</a> <a id="632" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="637" class="Symbol">}</a> <a id="639" class="Symbol">(</a><a id="640" href="univalent-combinatorics.cartesian-products-species.html#640" class="Bound">F</a> <a id="642" class="Symbol">:</a> <a id="644" href="univalent-combinatorics.species.html#273" class="Function">species</a> <a id="652" href="univalent-combinatorics.cartesian-products-species.html#624" class="Bound">l1</a><a id="654" class="Symbol">)</a> <a id="656" class="Symbol">(</a><a id="657" href="univalent-combinatorics.cartesian-products-species.html#657" class="Bound">G</a> <a id="659" class="Symbol">:</a> <a id="661" href="univalent-combinatorics.species.html#273" class="Function">species</a> <a id="669" href="univalent-combinatorics.cartesian-products-species.html#627" class="Bound">l2</a><a id="671" class="Symbol">)</a> <a id="673" class="Symbol">(</a><a id="674" href="univalent-combinatorics.cartesian-products-species.html#674" class="Bound">X</a> <a id="676" class="Symbol">:</a> <a id="678" href="univalent-combinatorics.finite-types.html#4455" class="Function">𝔽</a><a id="679" class="Symbol">)</a> <a id="681" class="Symbol">→</a> <a id="683" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="686" class="Symbol">(</a><a id="687" href="univalent-combinatorics.cartesian-products-species.html#624" class="Bound">l1</a> <a id="690" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="692" href="univalent-combinatorics.cartesian-products-species.html#627" class="Bound">l2</a><a id="694" class="Symbol">)</a>
+<a id="696" href="univalent-combinatorics.cartesian-products-species.html#696" class="Bound">F</a> <a id="698" href="univalent-combinatorics.cartesian-products-species.html#613" class="Function Operator">×ˢ</a> <a id="701" href="univalent-combinatorics.cartesian-products-species.html#701" class="Bound">G</a> <a id="703" href="univalent-combinatorics.cartesian-products-species.html#613" class="Function Operator">,</a> <a id="705" href="univalent-combinatorics.cartesian-products-species.html#705" class="Bound">X</a> <a id="707" class="Symbol">=</a> <a id="709" href="univalent-combinatorics.cartesian-products-species.html#488" class="Function">species-prod</a> <a id="722" href="univalent-combinatorics.cartesian-products-species.html#696" class="Bound">F</a> <a id="724" href="univalent-combinatorics.cartesian-products-species.html#701" class="Bound">G</a> <a id="726" href="univalent-combinatorics.cartesian-products-species.html#705" class="Bound">X</a> 
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-06-18)(b12303a) Merge pull request #209 from MatejJazbec/lograc-matej by noreply
+</pre>
+</body>
+</html>
