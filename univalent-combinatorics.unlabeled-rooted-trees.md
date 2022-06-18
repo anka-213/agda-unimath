@@ -4,7 +4,7 @@ title: Unlabelled rooted trees
 
 <pre class="Agda"><a id="49" class="Symbol">{-#</a> <a id="53" class="Keyword">OPTIONS</a> <a id="61" class="Pragma">--without-K</a> <a id="73" class="Pragma">--exact-split</a> <a id="87" class="Symbol">#-}</a>
 
-<a id="92" class="Keyword">module</a> <a id="99" href="univalent-combinatorics.unlabelled-rooted-trees.html" class="Module">univalent-combinatorics.unlabelled-rooted-trees</a> <a id="147" class="Keyword">where</a>
+<a id="92" class="Keyword">module</a> <a id="99" href="univalent-combinatorics.unlabeled-rooted-trees.html" class="Module">univalent-combinatorics.unlabeled-rooted-trees</a> <a id="146" class="Keyword">where</a>
 </pre>
 ## Idea
 
