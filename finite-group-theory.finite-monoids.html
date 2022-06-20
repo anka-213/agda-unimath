@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/finite-group-theory/finite-monoids.lagda.md.</p>
-<p>Version of Sunday, June 19, 2022, 09:40 AM</p>
+<p>Version of Monday, June 20, 2022, 02:27 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -60,7 +60,7 @@
 <a id="1232" class="Keyword">open</a> <a id="1237" class="Keyword">import</a> <a id="1244" href="univalent-combinatorics.decidable-dependent-pair-types.html" class="Module">univalent-combinatorics.decidable-dependent-pair-types</a> <a id="1299" class="Keyword">using</a>
   <a id="1307" class="Symbol">(</a> <a id="1309" href="univalent-combinatorics.decidable-dependent-pair-types.html#1952" class="Function">is-decidable-Σ-count</a><a id="1329" class="Symbol">)</a>
 <a id="1331" class="Keyword">open</a> <a id="1336" class="Keyword">import</a> <a id="1343" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="1380" class="Keyword">using</a>
-  <a id="1388" class="Symbol">(</a> <a id="1390" href="univalent-combinatorics.finite-types.html#4064" class="Function">is-finite</a><a id="1399" class="Symbol">;</a> <a id="1401" href="univalent-combinatorics.finite-types.html#3973" class="Function">is-finite-Prop</a><a id="1415" class="Symbol">;</a> <a id="1417" href="univalent-combinatorics.finite-types.html#9101" class="Function">is-finite-is-decidable-Prop</a><a id="1444" class="Symbol">)</a>
+  <a id="1388" class="Symbol">(</a> <a id="1390" href="univalent-combinatorics.finite-types.html#4248" class="Function">is-finite</a><a id="1399" class="Symbol">;</a> <a id="1401" href="univalent-combinatorics.finite-types.html#4157" class="Function">is-finite-Prop</a><a id="1415" class="Symbol">;</a> <a id="1417" href="univalent-combinatorics.finite-types.html#9285" class="Function">is-finite-is-decidable-Prop</a><a id="1444" class="Symbol">)</a>
 <a id="1446" class="Keyword">open</a> <a id="1451" class="Keyword">import</a> <a id="1458" href="univalent-combinatorics.pi-finite-types.html" class="Module">univalent-combinatorics.pi-finite-types</a> <a id="1498" class="Keyword">using</a>
   <a id="1506" class="Symbol">(</a> <a id="1508" href="univalent-combinatorics.pi-finite-types.html#8749" class="Function">is-π-finite</a><a id="1519" class="Symbol">;</a> <a id="1521" href="univalent-combinatorics.pi-finite-types.html#10955" class="Function">is-π-finite-equiv</a><a id="1538" class="Symbol">;</a> <a id="1540" href="univalent-combinatorics.pi-finite-types.html#34796" class="Function">is-π-finite-Σ</a><a id="1553" class="Symbol">;</a> <a id="1555" href="univalent-combinatorics.pi-finite-types.html#14748" class="Function">is-π-finite-is-finite</a><a id="1576" class="Symbol">;</a>
     <a id="1582" href="univalent-combinatorics.pi-finite-types.html#8027" class="Function">number-of-connected-components</a><a id="1612" class="Symbol">;</a> <a id="1614" href="univalent-combinatorics.pi-finite-types.html#8192" class="Function">mere-equiv-number-of-connected-components</a><a id="1655" class="Symbol">)</a>
@@ -77,13 +77,13 @@
 <h3 id="for-any-semigroup-of-order-n-the-type-of-multiplicative-units-is-finite">For any semigroup of order n, the type of multiplicative units is finite</h3>
 <pre class="Agda"><a id="is-finite-is-unital-Semigroup"></a><a id="2093" href="finite-group-theory.finite-monoids.html#2093" class="Function">is-finite-is-unital-Semigroup</a> <a id="2123" class="Symbol">:</a>
   <a id="2127" class="Symbol">{</a><a id="2128" href="finite-group-theory.finite-monoids.html#2128" class="Bound">l</a> <a id="2130" class="Symbol">:</a> <a id="2132" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2137" class="Symbol">}</a> <a id="2139" class="Symbol">{</a><a id="2140" href="finite-group-theory.finite-monoids.html#2140" class="Bound">n</a> <a id="2142" class="Symbol">:</a> <a id="2144" href="elementary-number-theory.natural-numbers.html#1444" class="Datatype">ℕ</a><a id="2145" class="Symbol">}</a> <a id="2147" class="Symbol">(</a><a id="2148" href="finite-group-theory.finite-monoids.html#2148" class="Bound">X</a> <a id="2150" class="Symbol">:</a> <a id="2152" href="finite-group-theory.finite-semigroups.html#2193" class="Function">Semigroup-of-Order</a> <a id="2171" href="finite-group-theory.finite-monoids.html#2128" class="Bound">l</a> <a id="2173" href="finite-group-theory.finite-monoids.html#2140" class="Bound">n</a><a id="2174" class="Symbol">)</a> <a id="2176" class="Symbol">→</a>
-  <a id="2180" href="univalent-combinatorics.finite-types.html#4064" class="Function">is-finite</a> <a id="2190" class="Symbol">(</a><a id="2191" href="group-theory.monoids.html#897" class="Function">is-unital-Semigroup</a> <a id="2211" class="Symbol">(</a><a id="2212" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="2216" href="finite-group-theory.finite-monoids.html#2148" class="Bound">X</a><a id="2217" class="Symbol">))</a>
+  <a id="2180" href="univalent-combinatorics.finite-types.html#4248" class="Function">is-finite</a> <a id="2190" class="Symbol">(</a><a id="2191" href="group-theory.monoids.html#897" class="Function">is-unital-Semigroup</a> <a id="2211" class="Symbol">(</a><a id="2212" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="2216" href="finite-group-theory.finite-monoids.html#2148" class="Bound">X</a><a id="2217" class="Symbol">))</a>
 <a id="2220" href="finite-group-theory.finite-monoids.html#2093" class="Function">is-finite-is-unital-Semigroup</a> <a id="2250" class="Symbol">{</a><a id="2251" href="finite-group-theory.finite-monoids.html#2251" class="Bound">l</a><a id="2252" class="Symbol">}</a> <a id="2254" class="Symbol">{</a><a id="2255" href="finite-group-theory.finite-monoids.html#2255" class="Bound">n</a><a id="2256" class="Symbol">}</a> <a id="2258" href="finite-group-theory.finite-monoids.html#2258" class="Bound">X</a> <a id="2260" class="Symbol">=</a>
   <a id="2264" href="foundation.propositional-truncations.html#5581" class="Function">apply-universal-property-trunc-Prop</a>
     <a id="2304" class="Symbol">(</a> <a id="2306" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="2310" href="finite-group-theory.finite-monoids.html#2258" class="Bound">X</a><a id="2311" class="Symbol">)</a>
-    <a id="2317" class="Symbol">(</a> <a id="2319" href="univalent-combinatorics.finite-types.html#3973" class="Function">is-finite-Prop</a> <a id="2334" class="Symbol">_)</a>
+    <a id="2317" class="Symbol">(</a> <a id="2319" href="univalent-combinatorics.finite-types.html#4157" class="Function">is-finite-Prop</a> <a id="2334" class="Symbol">_)</a>
     <a id="2341" class="Symbol">(</a> <a id="2343" class="Symbol">λ</a> <a id="2345" href="finite-group-theory.finite-monoids.html#2345" class="Bound">e</a> <a id="2347" class="Symbol">→</a>
-      <a id="2355" href="univalent-combinatorics.finite-types.html#9101" class="Function">is-finite-is-decidable-Prop</a>
+      <a id="2355" href="univalent-combinatorics.finite-types.html#9285" class="Function">is-finite-is-decidable-Prop</a>
         <a id="2391" class="Symbol">(</a> <a id="2393" href="group-theory.monoids.html#3269" class="Function">is-unital-Semigroup-Prop</a> <a id="2418" class="Symbol">(</a><a id="2419" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a> <a id="2423" href="finite-group-theory.finite-monoids.html#2258" class="Bound">X</a><a id="2424" class="Symbol">))</a>
         <a id="2435" class="Symbol">(</a> <a id="2437" href="univalent-combinatorics.decidable-dependent-pair-types.html#1952" class="Function">is-decidable-Σ-count</a>
           <a id="2468" class="Symbol">(</a> <a id="2470" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a> <a id="2475" href="finite-group-theory.finite-monoids.html#2255" class="Bound">n</a> <a id="2477" href="finite-group-theory.finite-monoids.html#2345" class="Bound">e</a><a id="2478" class="Symbol">)</a>
@@ -136,7 +136,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-19)(c273133) Merge pull request #214 from EgbertRijke/operations-species by noreply
+(2022-06-20)(0c9add9) Merge pull request #216 from EgbertRijke/operations-species by noreply
 </pre>
 </body>
 </html>
