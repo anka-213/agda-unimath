@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/universal-property-unit-type.lagda.md.</p>
-<p>Version of Monday, June 20, 2022, 02:27 PM</p>
+<p>Version of Saturday, June 25, 2022, 12:23 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -43,7 +43,7 @@
   <a id="498" class="Symbol">(</a> <a id="500" href="foundation-core.equivalences.html#1542" class="Function">is-equiv</a><a id="508" class="Symbol">;</a> <a id="510" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="513" class="Symbol">;</a> <a id="515" href="foundation.equivalences.html#9545" class="Function">is-equiv-is-equiv-precomp</a><a id="540" class="Symbol">;</a> <a id="542" href="foundation-core.equivalences.html#9634" class="Function">is-equiv-right-factor&#39;</a><a id="564" class="Symbol">;</a>
     <a id="570" href="foundation-core.equivalences.html#7183" class="Function">is-equiv-comp</a><a id="583" class="Symbol">;</a> <a id="585" href="foundation.equivalences.html#7843" class="Function">is-equiv-precomp-is-equiv</a><a id="610" class="Symbol">;</a> <a id="612" href="foundation-core.equivalences.html#11901" class="Function">is-equiv-is-section</a><a id="631" class="Symbol">)</a>
 <a id="633" class="Keyword">open</a> <a id="638" class="Keyword">import</a> <a id="645" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="666" class="Keyword">using</a> <a id="672" class="Symbol">(</a><a id="673" href="foundation-core.functions.html#925" class="Function">precomp</a><a id="680" class="Symbol">)</a>
-<a id="682" class="Keyword">open</a> <a id="687" class="Keyword">import</a> <a id="694" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="720" class="Keyword">using</a> <a id="726" class="Symbol">(</a><a id="727" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="731" class="Symbol">)</a>
+<a id="682" class="Keyword">open</a> <a id="687" class="Keyword">import</a> <a id="694" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="720" class="Keyword">using</a> <a id="726" class="Symbol">(</a><a id="727" href="foundation-core.identity-types.html#1807" class="InductiveConstructor">refl</a><a id="731" class="Symbol">)</a>
 <a id="733" class="Keyword">open</a> <a id="738" class="Keyword">import</a> <a id="745" href="foundation.unit-type.html" class="Module">foundation.unit-type</a> <a id="766" class="Keyword">using</a> <a id="772" class="Symbol">(</a><a id="773" href="foundation.unit-type.html#1075" class="Datatype">unit</a><a id="777" class="Symbol">;</a> <a id="779" href="foundation.unit-type.html#1099" class="InductiveConstructor">star</a><a id="783" class="Symbol">;</a> <a id="785" href="foundation.unit-type.html#2015" class="Function">is-contr-unit</a><a id="798" class="Symbol">;</a> <a id="800" href="foundation.unit-type.html#1589" class="Function">pt</a><a id="802" class="Symbol">)</a>
 <a id="804" class="Keyword">open</a> <a id="809" class="Keyword">import</a> <a id="816" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="843" class="Keyword">using</a> <a id="849" class="Symbol">(</a><a id="850" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="855" class="Symbol">;</a> <a id="857" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="859" class="Symbol">)</a>
 </pre>
@@ -114,7 +114,7 @@
       <a id="3141" class="Symbol">(</a> <a id="3143" class="Symbol">λ</a> <a id="3145" href="foundation.universal-property-unit-type.html#3145" class="Bound">f</a> <a id="3147" class="Symbol">→</a> <a id="3149" href="foundation.universal-property-unit-type.html#3145" class="Bound">f</a> <a id="3151" href="foundation.universal-property-unit-type.html#3099" class="Bound">x</a><a id="3152" class="Symbol">)</a>
       <a id="3160" class="Symbol">(</a> <a id="3162" href="foundation.universal-property-unit-type.html#1376" class="Function">ev-star&#39;</a> <a id="3171" href="foundation.universal-property-unit-type.html#3113" class="Bound">Y</a><a id="3172" class="Symbol">)</a>
       <a id="3180" class="Symbol">(</a> <a id="3182" href="foundation-core.functions.html#925" class="Function">precomp</a> <a id="3190" class="Symbol">(</a><a id="3191" href="foundation.unit-type.html#1589" class="Function">pt</a> <a id="3194" href="foundation.universal-property-unit-type.html#3099" class="Bound">x</a><a id="3195" class="Symbol">)</a> <a id="3197" href="foundation.universal-property-unit-type.html#3113" class="Bound">Y</a><a id="3198" class="Symbol">)</a>
-      <a id="3206" class="Symbol">(</a> <a id="3208" class="Symbol">λ</a> <a id="3210" href="foundation.universal-property-unit-type.html#3210" class="Bound">f</a> <a id="3212" class="Symbol">→</a> <a id="3214" href="foundation-core.identity-types.html#694" class="InductiveConstructor">refl</a><a id="3218" class="Symbol">)</a>
+      <a id="3206" class="Symbol">(</a> <a id="3208" class="Symbol">λ</a> <a id="3210" href="foundation.universal-property-unit-type.html#3210" class="Bound">f</a> <a id="3212" class="Symbol">→</a> <a id="3214" href="foundation-core.identity-types.html#1807" class="InductiveConstructor">refl</a><a id="3218" class="Symbol">)</a>
       <a id="3226" class="Symbol">(</a> <a id="3228" href="foundation.equivalences.html#7843" class="Function">is-equiv-precomp-is-equiv</a> <a id="3254" class="Symbol">(</a><a id="3255" href="foundation.unit-type.html#1589" class="Function">pt</a> <a id="3258" href="foundation.universal-property-unit-type.html#3099" class="Bound">x</a><a id="3259" class="Symbol">)</a> <a id="3261" href="foundation.universal-property-unit-type.html#3101" class="Bound">is-equiv-pt</a> <a id="3273" href="foundation.universal-property-unit-type.html#3113" class="Bound">Y</a><a id="3274" class="Symbol">)</a>
       <a id="3282" class="Symbol">(</a> <a id="3284" href="foundation.universal-property-unit-type.html#1935" class="Function">universal-property-unit</a> <a id="3308" href="foundation.universal-property-unit-type.html#3113" class="Bound">Y</a><a id="3309" class="Symbol">)</a>
 
@@ -139,7 +139,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-20)(0c9add9) Merge pull request #216 from EgbertRijke/operations-species by noreply
+(2022-06-25)(15925e3) Merge pull request #218 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>

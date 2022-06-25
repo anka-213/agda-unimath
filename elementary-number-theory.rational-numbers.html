@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/elementary-number-theory/rational-numbers.lagda.md.</p>
-<p>Version of Monday, June 20, 2022, 02:27 PM</p>
+<p>Version of Saturday, June 25, 2022, 12:22 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -47,7 +47,7 @@
   <a id="785" class="Symbol">(</a> <a id="787" href="elementary-number-theory.relatively-prime-integers.html#479" class="Function">is-relative-prime-ℤ</a><a id="806" class="Symbol">)</a>
 
 <a id="809" class="Keyword">open</a> <a id="814" class="Keyword">import</a> <a id="821" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="853" class="Keyword">using</a> <a id="859" class="Symbol">(</a><a id="860" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="861" class="Symbol">;</a> <a id="863" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="867" class="Symbol">;</a> <a id="869" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="872" class="Symbol">;</a> <a id="874" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="877" class="Symbol">)</a>
-<a id="879" class="Keyword">open</a> <a id="884" class="Keyword">import</a> <a id="891" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="917" class="Keyword">using</a> <a id="923" class="Symbol">(</a><a id="924" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="926" class="Symbol">;</a> <a id="928" href="foundation-core.identity-types.html#1552" class="Function">inv</a><a id="931" class="Symbol">)</a>
+<a id="879" class="Keyword">open</a> <a id="884" class="Keyword">import</a> <a id="891" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="917" class="Keyword">using</a> <a id="923" class="Symbol">(</a><a id="924" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a><a id="926" class="Symbol">;</a> <a id="928" href="foundation-core.identity-types.html#2716" class="Function">inv</a><a id="931" class="Symbol">)</a>
 <a id="933" class="Keyword">open</a> <a id="938" class="Keyword">import</a> <a id="945" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="972" class="Keyword">using</a> <a id="978" class="Symbol">(</a><a id="979" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="981" class="Symbol">;</a> <a id="983" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="988" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
@@ -70,7 +70,7 @@
 
 <a id="eq-reduce-numerator-fractions-ℤ"></a><a id="1774" href="elementary-number-theory.rational-numbers.html#1774" class="Function">eq-reduce-numerator-fractions-ℤ</a> <a id="1806" class="Symbol">:</a>
   <a id="1810" class="Symbol">(</a><a id="1811" href="elementary-number-theory.rational-numbers.html#1811" class="Bound">x</a> <a id="1813" class="Symbol">:</a> <a id="1815" href="elementary-number-theory.fractions.html#1041" class="Function">fractions-ℤ</a><a id="1826" class="Symbol">)</a> <a id="1828" class="Symbol">→</a>
-  <a id="1832" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="1835" class="Symbol">(</a> <a id="1837" href="elementary-number-theory.multiplication-integers.html#2216" class="Function">mul-ℤ</a>
+  <a id="1832" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a> <a id="1835" class="Symbol">(</a> <a id="1837" href="elementary-number-theory.multiplication-integers.html#2216" class="Function">mul-ℤ</a>
        <a id="1850" class="Symbol">(</a> <a id="1852" href="elementary-number-theory.rational-numbers.html#1648" class="Function">int-reduce-numerator-fractions-ℤ</a> <a id="1885" href="elementary-number-theory.rational-numbers.html#1811" class="Bound">x</a><a id="1886" class="Symbol">)</a>
        <a id="1895" class="Symbol">(</a> <a id="1897" href="elementary-number-theory.greatest-common-divisor-integers.html#4655" class="Function">gcd-ℤ</a> <a id="1903" class="Symbol">(</a><a id="1904" href="elementary-number-theory.fractions.html#1094" class="Function">numerator-fractions-ℤ</a> <a id="1926" href="elementary-number-theory.rational-numbers.html#1811" class="Bound">x</a><a id="1927" class="Symbol">)</a> <a id="1929" class="Symbol">(</a><a id="1930" href="elementary-number-theory.fractions.html#1271" class="Function">denominator-fractions-ℤ</a> <a id="1954" href="elementary-number-theory.rational-numbers.html#1811" class="Bound">x</a><a id="1955" class="Symbol">)))</a>
      <a id="1964" class="Symbol">(</a> <a id="1966" href="elementary-number-theory.fractions.html#1094" class="Function">numerator-fractions-ℤ</a> <a id="1988" href="elementary-number-theory.rational-numbers.html#1811" class="Bound">x</a><a id="1989" class="Symbol">)</a>
@@ -88,7 +88,7 @@
 
 <a id="eq-reduce-denominator-fractions-ℤ"></a><a id="2474" href="elementary-number-theory.rational-numbers.html#2474" class="Function">eq-reduce-denominator-fractions-ℤ</a> <a id="2508" class="Symbol">:</a>
   <a id="2512" class="Symbol">(</a><a id="2513" href="elementary-number-theory.rational-numbers.html#2513" class="Bound">x</a> <a id="2515" class="Symbol">:</a> <a id="2517" href="elementary-number-theory.fractions.html#1041" class="Function">fractions-ℤ</a><a id="2528" class="Symbol">)</a> <a id="2530" class="Symbol">→</a>
-  <a id="2534" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="2537" class="Symbol">(</a> <a id="2539" href="elementary-number-theory.multiplication-integers.html#2216" class="Function">mul-ℤ</a>
+  <a id="2534" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a> <a id="2537" class="Symbol">(</a> <a id="2539" href="elementary-number-theory.multiplication-integers.html#2216" class="Function">mul-ℤ</a>
        <a id="2552" class="Symbol">(</a> <a id="2554" href="elementary-number-theory.rational-numbers.html#2340" class="Function">int-reduce-denominator-fractions-ℤ</a> <a id="2589" href="elementary-number-theory.rational-numbers.html#2513" class="Bound">x</a><a id="2590" class="Symbol">)</a>
        <a id="2599" class="Symbol">(</a> <a id="2601" href="elementary-number-theory.greatest-common-divisor-integers.html#4655" class="Function">gcd-ℤ</a> <a id="2607" class="Symbol">(</a><a id="2608" href="elementary-number-theory.fractions.html#1094" class="Function">numerator-fractions-ℤ</a> <a id="2630" href="elementary-number-theory.rational-numbers.html#2513" class="Bound">x</a><a id="2631" class="Symbol">)</a> <a id="2633" class="Symbol">(</a><a id="2634" href="elementary-number-theory.fractions.html#1271" class="Function">denominator-fractions-ℤ</a> <a id="2658" href="elementary-number-theory.rational-numbers.html#2513" class="Bound">x</a><a id="2659" class="Symbol">)))</a>
      <a id="2668" class="Symbol">(</a> <a id="2670" href="elementary-number-theory.fractions.html#1271" class="Function">denominator-fractions-ℤ</a> <a id="2694" href="elementary-number-theory.rational-numbers.html#2513" class="Bound">x</a><a id="2695" class="Symbol">)</a>
@@ -100,7 +100,7 @@
 <a id="2901" href="elementary-number-theory.rational-numbers.html#2777" class="Function">is-positive-int-reduce-denominator-fractions-ℤ</a> <a id="2948" href="elementary-number-theory.rational-numbers.html#2948" class="Bound">x</a> <a id="2950" class="Symbol">=</a>
   <a id="2954" href="elementary-number-theory.multiplication-integers.html#19019" class="Function">is-positive-left-factor-mul-ℤ</a>
     <a id="2988" class="Symbol">(</a> <a id="2990" href="elementary-number-theory.integers.html#7828" class="Function">is-positive-eq-ℤ</a>
-      <a id="3013" class="Symbol">(</a> <a id="3015" href="foundation-core.identity-types.html#1552" class="Function">inv</a> <a id="3019" class="Symbol">(</a><a id="3020" href="elementary-number-theory.rational-numbers.html#2474" class="Function">eq-reduce-denominator-fractions-ℤ</a> <a id="3054" href="elementary-number-theory.rational-numbers.html#2948" class="Bound">x</a><a id="3055" class="Symbol">))</a>
+      <a id="3013" class="Symbol">(</a> <a id="3015" href="foundation-core.identity-types.html#2716" class="Function">inv</a> <a id="3019" class="Symbol">(</a><a id="3020" href="elementary-number-theory.rational-numbers.html#2474" class="Function">eq-reduce-denominator-fractions-ℤ</a> <a id="3054" href="elementary-number-theory.rational-numbers.html#2948" class="Bound">x</a><a id="3055" class="Symbol">))</a>
       <a id="3064" class="Symbol">(</a> <a id="3066" href="elementary-number-theory.fractions.html#1383" class="Function">is-positive-denominator-fractions-ℤ</a> <a id="3102" href="elementary-number-theory.rational-numbers.html#2948" class="Bound">x</a><a id="3103" class="Symbol">))</a>
     <a id="3110" class="Symbol">(</a> <a id="3112" href="elementary-number-theory.greatest-common-divisor-integers.html#6798" class="Function">is-positive-gcd-is-positive-right-ℤ</a>
       <a id="3154" class="Symbol">(</a> <a id="3156" href="elementary-number-theory.fractions.html#1094" class="Function">numerator-fractions-ℤ</a> <a id="3178" href="elementary-number-theory.rational-numbers.html#2948" class="Bound">x</a><a id="3179" class="Symbol">)</a>
@@ -123,7 +123,7 @@ is-reduced-reduce-fractions-ℤ x = {!!}
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-20)(0c9add9) Merge pull request #216 from EgbertRijke/operations-species by noreply
+(2022-06-25)(15925e3) Merge pull request #218 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>

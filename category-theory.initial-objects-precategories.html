@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/category-theory/initial-objects-precategories.lagda.md.</p>
-<p>Version of Monday, June 20, 2022, 02:26 PM</p>
+<p>Version of Saturday, June 25, 2022, 12:22 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -37,7 +37,7 @@
   <a id="197" class="Symbol">(</a> <a id="199" href="category-theory.precategories.html#2242" class="Function">Precat</a><a id="205" class="Symbol">;</a> <a id="207" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a><a id="217" class="Symbol">;</a> <a id="219" href="category-theory.precategories.html#2674" class="Function">type-hom-Precat</a><a id="234" class="Symbol">)</a>
 <a id="236" class="Keyword">open</a> <a id="241" class="Keyword">import</a> <a id="248" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="278" class="Keyword">using</a> <a id="284" class="Symbol">(</a><a id="285" href="foundation-core.contractible-types.html#992" class="Function">is-contr</a><a id="293" class="Symbol">)</a>
 <a id="295" class="Keyword">open</a> <a id="300" class="Keyword">import</a> <a id="307" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="339" class="Keyword">using</a> <a id="345" class="Symbol">(</a><a id="346" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="347" class="Symbol">;</a> <a id="349" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="352" class="Symbol">;</a> <a id="354" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="357" class="Symbol">)</a>
-<a id="359" class="Keyword">open</a> <a id="364" class="Keyword">import</a> <a id="371" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a> <a id="402" class="Keyword">using</a> <a id="408" class="Symbol">(</a><a id="409" href="foundation-core.identity-types.html#641" class="Datatype">Id</a><a id="411" class="Symbol">)</a>
+<a id="359" class="Keyword">open</a> <a id="364" class="Keyword">import</a> <a id="371" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a> <a id="402" class="Keyword">using</a> <a id="408" class="Symbol">(</a><a id="409" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a><a id="411" class="Symbol">)</a>
 <a id="413" class="Keyword">open</a> <a id="418" class="Keyword">import</a> <a id="425" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="452" class="Keyword">using</a> <a id="458" class="Symbol">(</a><a id="459" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="461" class="Symbol">;</a> <a id="463" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="468" class="Symbol">;</a> <a id="470" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="473" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
@@ -62,12 +62,12 @@
   <a id="1124" href="category-theory.initial-objects-precategories.html#1124" class="Function">is-unique-morphism-initial-object</a> <a id="1158" class="Symbol">:</a>
     <a id="1164" class="Symbol">(</a><a id="1165" href="category-theory.initial-objects-precategories.html#1165" class="Bound">x</a> <a id="1167" class="Symbol">:</a> <a id="1169" href="category-theory.precategories.html#2555" class="Function">obj-Precat</a> <a id="1180" href="category-theory.initial-objects-precategories.html#856" class="Bound">C</a><a id="1181" class="Symbol">)</a> <a id="1183" class="Symbol">→</a>
     <a id="1189" class="Symbol">(</a><a id="1190" href="category-theory.initial-objects-precategories.html#1190" class="Bound">f</a> <a id="1192" class="Symbol">:</a> <a id="1194" href="category-theory.precategories.html#2674" class="Function">type-hom-Precat</a> <a id="1210" href="category-theory.initial-objects-precategories.html#856" class="Bound">C</a> <a id="1212" href="category-theory.initial-objects-precategories.html#908" class="Function">object-initial-object</a> <a id="1234" href="category-theory.initial-objects-precategories.html#1165" class="Bound">x</a><a id="1235" class="Symbol">)</a> <a id="1237" class="Symbol">→</a>
-    <a id="1243" href="foundation-core.identity-types.html#641" class="Datatype">Id</a> <a id="1246" class="Symbol">(</a><a id="1247" href="category-theory.initial-objects-precategories.html#980" class="Function">morphism-initial-object</a> <a id="1271" href="category-theory.initial-objects-precategories.html#1165" class="Bound">x</a><a id="1272" class="Symbol">)</a> <a id="1274" href="category-theory.initial-objects-precategories.html#1190" class="Bound">f</a>
+    <a id="1243" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a> <a id="1246" class="Symbol">(</a><a id="1247" href="category-theory.initial-objects-precategories.html#980" class="Function">morphism-initial-object</a> <a id="1271" href="category-theory.initial-objects-precategories.html#1165" class="Bound">x</a><a id="1272" class="Symbol">)</a> <a id="1274" href="category-theory.initial-objects-precategories.html#1190" class="Bound">f</a>
   <a id="1278" href="category-theory.initial-objects-precategories.html#1124" class="Function">is-unique-morphism-initial-object</a> <a id="1312" href="category-theory.initial-objects-precategories.html#1312" class="Bound">x</a> <a id="1314" class="Symbol">=</a> <a id="1316" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1320" class="Symbol">(</a><a id="1321" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a> <a id="1325" href="category-theory.initial-objects-precategories.html#877" class="Bound">i</a> <a id="1327" href="category-theory.initial-objects-precategories.html#1312" class="Bound">x</a><a id="1328" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-20)(0c9add9) Merge pull request #216 from EgbertRijke/operations-species by noreply
+(2022-06-25)(15925e3) Merge pull request #218 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>
