@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation-core/path-split-maps.lagda.md.</p>
-<p>Version of Saturday, June 25, 2022, 12:23 PM</p>
+<p>Version of Monday, June 27, 2022, 07:28 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -41,7 +41,7 @@
 <a id="401" class="Keyword">open</a> <a id="406" class="Keyword">import</a> <a id="413" href="foundation-core.functions.html" class="Module">foundation-core.functions</a> <a id="439" class="Keyword">using</a> <a id="445" class="Symbol">(</a><a id="446" href="foundation-core.functions.html#407" class="Function Operator">_∘_</a><a id="449" class="Symbol">)</a>
 <a id="451" class="Keyword">open</a> <a id="456" class="Keyword">import</a> <a id="463" href="foundation-core.fundamental-theorem-of-identity-types.html" class="Module">foundation-core.fundamental-theorem-of-identity-types</a> <a id="517" class="Keyword">using</a>
   <a id="525" class="Symbol">(</a> <a id="527" href="foundation-core.fundamental-theorem-of-identity-types.html#4029" class="Function">fundamental-theorem-id-sec</a><a id="553" class="Symbol">)</a>
-<a id="555" class="Keyword">open</a> <a id="560" class="Keyword">import</a> <a id="567" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a> <a id="598" class="Keyword">using</a> <a id="604" class="Symbol">(</a><a id="605" href="foundation-core.identity-types.html#4017" class="Function">ap</a><a id="607" class="Symbol">;</a> <a id="609" href="foundation-core.identity-types.html#2716" class="Function">inv</a><a id="612" class="Symbol">)</a>
+<a id="555" class="Keyword">open</a> <a id="560" class="Keyword">import</a> <a id="567" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a> <a id="598" class="Keyword">using</a> <a id="604" class="Symbol">(</a><a id="605" href="foundation-core.identity-types.html#3990" class="Function">ap</a><a id="607" class="Symbol">;</a> <a id="609" href="foundation-core.identity-types.html#2716" class="Function">inv</a><a id="612" class="Symbol">)</a>
 <a id="614" class="Keyword">open</a> <a id="619" class="Keyword">import</a> <a id="626" href="foundation-core.sections.html" class="Module">foundation-core.sections</a> <a id="651" class="Keyword">using</a> <a id="657" class="Symbol">(</a><a id="658" href="foundation-core.sections.html#521" class="Function">sec</a><a id="661" class="Symbol">)</a>
 <a id="663" class="Keyword">open</a> <a id="668" class="Keyword">import</a> <a id="675" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a> <a id="707" class="Keyword">using</a> <a id="713" class="Symbol">(</a><a id="714" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="719" class="Symbol">;</a> <a id="721" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="723" class="Symbol">;</a> <a id="725" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="728" class="Symbol">)</a>
 
@@ -57,7 +57,7 @@
   <a id="1249" class="Keyword">where</a>
 
   <a id="1258" href="foundation-core.path-split-maps.html#1258" class="Function">is-path-split</a> <a id="1272" class="Symbol">:</a> <a id="1274" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1277" class="Symbol">(</a><a id="1278" href="foundation-core.path-split-maps.html#1196" class="Bound">l1</a> <a id="1281" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1283" href="foundation-core.path-split-maps.html#1199" class="Bound">l2</a><a id="1285" class="Symbol">)</a>
-  <a id="1289" href="foundation-core.path-split-maps.html#1258" class="Function">is-path-split</a> <a id="1303" class="Symbol">=</a> <a id="1305" href="foundation-core.sections.html#521" class="Function">sec</a> <a id="1309" href="foundation-core.path-split-maps.html#1236" class="Bound">f</a> <a id="1311" href="foundation-core.cartesian-product-types.html#577" class="Function Operator">×</a> <a id="1313" class="Symbol">((</a><a id="1315" href="foundation-core.path-split-maps.html#1315" class="Bound">x</a> <a id="1317" href="foundation-core.path-split-maps.html#1317" class="Bound">y</a> <a id="1319" class="Symbol">:</a> <a id="1321" href="foundation-core.path-split-maps.html#1212" class="Bound">A</a><a id="1322" class="Symbol">)</a> <a id="1324" class="Symbol">→</a> <a id="1326" href="foundation-core.sections.html#521" class="Function">sec</a> <a id="1330" class="Symbol">(</a><a id="1331" href="foundation-core.identity-types.html#4017" class="Function">ap</a> <a id="1334" href="foundation-core.path-split-maps.html#1236" class="Bound">f</a> <a id="1336" class="Symbol">{</a><a id="1337" class="Argument">x</a> <a id="1339" class="Symbol">=</a> <a id="1341" href="foundation-core.path-split-maps.html#1315" class="Bound">x</a><a id="1342" class="Symbol">}</a> <a id="1344" class="Symbol">{</a><a id="1345" class="Argument">y</a> <a id="1347" class="Symbol">=</a> <a id="1349" href="foundation-core.path-split-maps.html#1317" class="Bound">y</a><a id="1350" class="Symbol">}))</a>
+  <a id="1289" href="foundation-core.path-split-maps.html#1258" class="Function">is-path-split</a> <a id="1303" class="Symbol">=</a> <a id="1305" href="foundation-core.sections.html#521" class="Function">sec</a> <a id="1309" href="foundation-core.path-split-maps.html#1236" class="Bound">f</a> <a id="1311" href="foundation-core.cartesian-product-types.html#577" class="Function Operator">×</a> <a id="1313" class="Symbol">((</a><a id="1315" href="foundation-core.path-split-maps.html#1315" class="Bound">x</a> <a id="1317" href="foundation-core.path-split-maps.html#1317" class="Bound">y</a> <a id="1319" class="Symbol">:</a> <a id="1321" href="foundation-core.path-split-maps.html#1212" class="Bound">A</a><a id="1322" class="Symbol">)</a> <a id="1324" class="Symbol">→</a> <a id="1326" href="foundation-core.sections.html#521" class="Function">sec</a> <a id="1330" class="Symbol">(</a><a id="1331" href="foundation-core.identity-types.html#3990" class="Function">ap</a> <a id="1334" href="foundation-core.path-split-maps.html#1236" class="Bound">f</a> <a id="1336" class="Symbol">{</a><a id="1337" class="Argument">x</a> <a id="1339" class="Symbol">=</a> <a id="1341" href="foundation-core.path-split-maps.html#1315" class="Bound">x</a><a id="1342" class="Symbol">}</a> <a id="1344" class="Symbol">{</a><a id="1345" class="Argument">y</a> <a id="1347" class="Symbol">=</a> <a id="1349" href="foundation-core.path-split-maps.html#1317" class="Bound">y</a><a id="1350" class="Symbol">}))</a>
 </pre>
 <h2 id="properties">Properties</h2>
 <h3 id="a-map-is-path-split-if-and-only-if-it-is-an-equivalence">A map is path-split if and only if it is an equivalence</h3>
@@ -102,7 +102,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-25)(15925e3) Merge pull request #218 from EgbertRijke/equals by noreply
+(2022-06-27)(ad27db3) Merge pull request #219 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>
