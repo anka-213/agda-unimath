@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/counting-maybe.lagda.md.</p>
-<p>Version of Tuesday, June 28, 2022, 02:46 PM</p>
+<p>Version of Tuesday, June 28, 2022, 04:21 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -48,12 +48,12 @@
   <a id="633" class="Symbol">(</a> <a id="635" href="univalent-combinatorics.counting.html#1901" class="Function">count</a><a id="640" class="Symbol">;</a> <a id="642" href="univalent-combinatorics.counting.html#6015" class="Function">count-unit</a><a id="652" class="Symbol">;</a> <a id="654" href="univalent-combinatorics.counting.html#2029" class="Function">number-of-elements-count</a><a id="678" class="Symbol">;</a>
     <a id="684" href="univalent-combinatorics.counting.html#4160" class="Function">is-empty-is-zero-number-of-elements-count</a><a id="725" class="Symbol">)</a>
 <a id="727" class="Keyword">open</a> <a id="732" class="Keyword">import</a> <a id="739" href="univalent-combinatorics.coproduct-types.html" class="Module">univalent-combinatorics.coproduct-types</a> <a id="779" class="Keyword">using</a>
-  <a id="787" class="Symbol">(</a> <a id="789" href="univalent-combinatorics.coproduct-types.html#2705" class="Function">count-coprod</a><a id="801" class="Symbol">)</a>
+  <a id="787" class="Symbol">(</a> <a id="789" href="univalent-combinatorics.coproduct-types.html#2701" class="Function">count-coprod</a><a id="801" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>The elements of a type <code>X</code> can be counted if and only if the elements of <code>Maybe X</code> can be counted.</p>
 <pre class="Agda"><a id="count-Maybe"></a><a id="925" href="univalent-combinatorics.counting-maybe.html#925" class="Function">count-Maybe</a> <a id="937" class="Symbol">:</a> <a id="939" class="Symbol">{</a><a id="940" href="univalent-combinatorics.counting-maybe.html#940" class="Bound">l</a> <a id="942" class="Symbol">:</a> <a id="944" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="949" class="Symbol">}</a> <a id="951" class="Symbol">{</a><a id="952" href="univalent-combinatorics.counting-maybe.html#952" class="Bound">X</a> <a id="954" class="Symbol">:</a> <a id="956" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="959" href="univalent-combinatorics.counting-maybe.html#940" class="Bound">l</a><a id="960" class="Symbol">}</a> <a id="962" class="Symbol">→</a> <a id="964" href="univalent-combinatorics.counting.html#1901" class="Function">count</a> <a id="970" href="univalent-combinatorics.counting-maybe.html#952" class="Bound">X</a> <a id="972" class="Symbol">→</a> <a id="974" href="univalent-combinatorics.counting.html#1901" class="Function">count</a> <a id="980" class="Symbol">(</a><a id="981" href="foundation.maybe.html#1449" class="Function">Maybe</a> <a id="987" href="univalent-combinatorics.counting-maybe.html#952" class="Bound">X</a><a id="988" class="Symbol">)</a>
-<a id="990" href="univalent-combinatorics.counting-maybe.html#925" class="Function">count-Maybe</a> <a id="1002" class="Symbol">{</a><a id="1003" href="univalent-combinatorics.counting-maybe.html#1003" class="Bound">l</a><a id="1004" class="Symbol">}</a> <a id="1006" class="Symbol">{</a><a id="1007" href="univalent-combinatorics.counting-maybe.html#1007" class="Bound">X</a><a id="1008" class="Symbol">}</a> <a id="1010" href="univalent-combinatorics.counting-maybe.html#1010" class="Bound">e</a> <a id="1012" class="Symbol">=</a> <a id="1014" href="univalent-combinatorics.coproduct-types.html#2705" class="Function">count-coprod</a> <a id="1027" href="univalent-combinatorics.counting-maybe.html#1010" class="Bound">e</a> <a id="1029" href="univalent-combinatorics.counting.html#6015" class="Function">count-unit</a>
+<a id="990" href="univalent-combinatorics.counting-maybe.html#925" class="Function">count-Maybe</a> <a id="1002" class="Symbol">{</a><a id="1003" href="univalent-combinatorics.counting-maybe.html#1003" class="Bound">l</a><a id="1004" class="Symbol">}</a> <a id="1006" class="Symbol">{</a><a id="1007" href="univalent-combinatorics.counting-maybe.html#1007" class="Bound">X</a><a id="1008" class="Symbol">}</a> <a id="1010" href="univalent-combinatorics.counting-maybe.html#1010" class="Bound">e</a> <a id="1012" class="Symbol">=</a> <a id="1014" href="univalent-combinatorics.coproduct-types.html#2701" class="Function">count-coprod</a> <a id="1027" href="univalent-combinatorics.counting-maybe.html#1010" class="Bound">e</a> <a id="1029" href="univalent-combinatorics.counting.html#6015" class="Function">count-unit</a>
 
 <a id="1041" class="Keyword">abstract</a>
   <a id="is-nonzero-number-of-elements-count-Maybe"></a><a id="1052" href="univalent-combinatorics.counting-maybe.html#1052" class="Function">is-nonzero-number-of-elements-count-Maybe</a> <a id="1094" class="Symbol">:</a>
@@ -76,7 +76,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-28)(8475571) Merge pull request #221 from EgbertRijke/equals by noreply
+(2022-06-28)(b554df2) Merge pull request #217 from elisabethbonnevier/hott-set-theory by noreply
 </pre>
 </body>
 </html>
