@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/order-theory/total-posets.lagda.md.</p>
-<p>Version of Monday, June 27, 2022, 07:29 PM</p>
+<p>Version of Tuesday, June 28, 2022, 10:29 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -33,7 +33,7 @@
 
 <a id="78" class="Keyword">module</a> <a id="85" href="order-theory.total-posets.html" class="Module">order-theory.total-posets</a> <a id="111" class="Keyword">where</a>
 
-<a id="118" class="Keyword">open</a> <a id="123" class="Keyword">import</a> <a id="130" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="154" class="Keyword">using</a> <a id="160" class="Symbol">(</a><a id="161" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a><a id="168" class="Symbol">;</a> <a id="170" href="foundation-core.propositions.html#1295" class="Function">is-prop</a><a id="177" class="Symbol">)</a>
+<a id="118" class="Keyword">open</a> <a id="123" class="Keyword">import</a> <a id="130" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="154" class="Keyword">using</a> <a id="160" class="Symbol">(</a><a id="161" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a><a id="168" class="Symbol">;</a> <a id="170" href="foundation-core.propositions.html#1296" class="Function">is-prop</a><a id="177" class="Symbol">)</a>
 <a id="179" class="Keyword">open</a> <a id="184" class="Keyword">import</a> <a id="191" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="218" class="Keyword">using</a> <a id="224" class="Symbol">(</a><a id="225" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="230" class="Symbol">;</a> <a id="232" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="234" class="Symbol">;</a> <a id="236" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="239" class="Symbol">)</a>
 
 <a id="242" class="Keyword">open</a> <a id="247" class="Keyword">import</a> <a id="254" href="order-theory.posets.html" class="Module">order-theory.posets</a> <a id="274" class="Keyword">using</a>  <a id="281" class="Symbol">(</a><a id="282" href="order-theory.posets.html#731" class="Function">Poset</a><a id="287" class="Symbol">;</a> <a id="289" href="order-theory.posets.html#1145" class="Function">element-Poset</a><a id="302" class="Symbol">;</a> <a id="304" href="order-theory.posets.html#1761" class="Function">preorder-Poset</a><a id="318" class="Symbol">)</a>
@@ -53,7 +53,7 @@
   <a id="778" href="order-theory.total-posets.html#727" class="Function">incident-Poset</a> <a id="793" class="Symbol">=</a> <a id="795" href="order-theory.total-preorders.html#676" class="Function">incident-Preorder</a> <a id="813" class="Symbol">(</a><a id="814" href="order-theory.posets.html#1761" class="Function">preorder-Poset</a> <a id="829" href="order-theory.total-posets.html#571" class="Bound">X</a><a id="830" class="Symbol">)</a>
 
   <a id="835" href="order-theory.total-posets.html#835" class="Function">is-prop-incident-Poset</a> <a id="858" class="Symbol">:</a>
-    <a id="864" class="Symbol">(</a><a id="865" href="order-theory.total-posets.html#865" class="Bound">x</a> <a id="867" href="order-theory.total-posets.html#867" class="Bound">y</a> <a id="869" class="Symbol">:</a> <a id="871" href="order-theory.posets.html#1145" class="Function">element-Poset</a> <a id="885" href="order-theory.total-posets.html#571" class="Bound">X</a><a id="886" class="Symbol">)</a> <a id="888" class="Symbol">→</a> <a id="890" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="898" class="Symbol">(</a><a id="899" href="order-theory.total-posets.html#727" class="Function">incident-Poset</a> <a id="914" href="order-theory.total-posets.html#865" class="Bound">x</a> <a id="916" href="order-theory.total-posets.html#867" class="Bound">y</a><a id="917" class="Symbol">)</a>
+    <a id="864" class="Symbol">(</a><a id="865" href="order-theory.total-posets.html#865" class="Bound">x</a> <a id="867" href="order-theory.total-posets.html#867" class="Bound">y</a> <a id="869" class="Symbol">:</a> <a id="871" href="order-theory.posets.html#1145" class="Function">element-Poset</a> <a id="885" href="order-theory.total-posets.html#571" class="Bound">X</a><a id="886" class="Symbol">)</a> <a id="888" class="Symbol">→</a> <a id="890" href="foundation-core.propositions.html#1296" class="Function">is-prop</a> <a id="898" class="Symbol">(</a><a id="899" href="order-theory.total-posets.html#727" class="Function">incident-Poset</a> <a id="914" href="order-theory.total-posets.html#865" class="Bound">x</a> <a id="916" href="order-theory.total-posets.html#867" class="Bound">y</a><a id="917" class="Symbol">)</a>
   <a id="921" href="order-theory.total-posets.html#835" class="Function">is-prop-incident-Poset</a> <a id="944" class="Symbol">=</a> <a id="946" href="order-theory.total-preorders.html#799" class="Function">is-prop-incident-Preorder</a> <a id="972" class="Symbol">(</a><a id="973" href="order-theory.posets.html#1761" class="Function">preorder-Poset</a> <a id="988" href="order-theory.total-posets.html#571" class="Bound">X</a><a id="989" class="Symbol">)</a>
 
   <a id="994" href="order-theory.total-posets.html#994" class="Function">is-total-poset-Prop</a> <a id="1014" class="Symbol">:</a> <a id="1016" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a> <a id="1024" class="Symbol">(</a><a id="1025" href="order-theory.total-posets.html#555" class="Bound">l1</a> <a id="1028" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1030" href="order-theory.total-posets.html#558" class="Bound">l2</a><a id="1032" class="Symbol">)</a>
@@ -62,12 +62,12 @@
   <a id="1103" href="order-theory.total-posets.html#1103" class="Function">is-total-Poset</a> <a id="1118" class="Symbol">:</a> <a id="1120" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="1123" class="Symbol">(</a><a id="1124" href="order-theory.total-posets.html#555" class="Bound">l1</a> <a id="1127" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1129" href="order-theory.total-posets.html#558" class="Bound">l2</a><a id="1131" class="Symbol">)</a>
   <a id="1135" href="order-theory.total-posets.html#1103" class="Function">is-total-Poset</a> <a id="1150" class="Symbol">=</a> <a id="1152" href="order-theory.total-preorders.html#1167" class="Function">is-total-Preorder</a> <a id="1170" class="Symbol">(</a><a id="1171" href="order-theory.posets.html#1761" class="Function">preorder-Poset</a> <a id="1186" href="order-theory.total-posets.html#571" class="Bound">X</a><a id="1187" class="Symbol">)</a>
 
-  <a id="1192" href="order-theory.total-posets.html#1192" class="Function">is-prop-is-total-Poset</a> <a id="1215" class="Symbol">:</a> <a id="1217" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="1225" href="order-theory.total-posets.html#1103" class="Function">is-total-Poset</a>
+  <a id="1192" href="order-theory.total-posets.html#1192" class="Function">is-prop-is-total-Poset</a> <a id="1215" class="Symbol">:</a> <a id="1217" href="foundation-core.propositions.html#1296" class="Function">is-prop</a> <a id="1225" href="order-theory.total-posets.html#1103" class="Function">is-total-Poset</a>
   <a id="1242" href="order-theory.total-posets.html#1192" class="Function">is-prop-is-total-Poset</a> <a id="1265" class="Symbol">=</a> <a id="1267" href="order-theory.total-preorders.html#1258" class="Function">is-prop-is-total-Preorder</a> <a id="1293" class="Symbol">(</a><a id="1294" href="order-theory.posets.html#1761" class="Function">preorder-Poset</a> <a id="1309" href="order-theory.total-posets.html#571" class="Bound">X</a><a id="1310" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-27)(ad27db3) Merge pull request #219 from EgbertRijke/equals by noreply
+(2022-06-28)(730d3fb) Merge pull request #220 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>

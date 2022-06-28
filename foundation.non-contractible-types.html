@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/non-contractible-types.lagda.md.</p>
-<p>Version of Monday, June 27, 2022, 07:28 PM</p>
+<p>Version of Tuesday, June 28, 2022, 10:28 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -33,7 +33,7 @@
 
 <a id="78" class="Keyword">module</a> <a id="85" href="foundation.non-contractible-types.html" class="Module">foundation.non-contractible-types</a> <a id="119" class="Keyword">where</a>
 
-<a id="126" class="Keyword">open</a> <a id="131" class="Keyword">import</a> <a id="138" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="168" class="Keyword">using</a> <a id="174" class="Symbol">(</a><a id="175" href="foundation-core.contractible-types.html#992" class="Function">is-contr</a><a id="183" class="Symbol">;</a> <a id="185" href="foundation-core.contractible-types.html#1085" class="Function">center</a><a id="191" class="Symbol">;</a> <a id="193" href="foundation-core.contractible-types.html#1427" class="Function">contraction</a><a id="204" class="Symbol">)</a>
+<a id="126" class="Keyword">open</a> <a id="131" class="Keyword">import</a> <a id="138" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="168" class="Keyword">using</a> <a id="174" class="Symbol">(</a><a id="175" href="foundation-core.contractible-types.html#993" class="Function">is-contr</a><a id="183" class="Symbol">;</a> <a id="185" href="foundation-core.contractible-types.html#1085" class="Function">center</a><a id="191" class="Symbol">;</a> <a id="193" href="foundation-core.contractible-types.html#1425" class="Function">contraction</a><a id="204" class="Symbol">)</a>
 <a id="206" class="Keyword">open</a> <a id="211" class="Keyword">import</a> <a id="218" href="foundation.empty-types.html" class="Module">foundation.empty-types</a> <a id="241" class="Keyword">using</a> <a id="247" class="Symbol">(</a><a id="248" href="foundation-core.empty-types.html#1215" class="Function">is-empty</a><a id="256" class="Symbol">;</a> <a id="258" href="foundation-core.empty-types.html#1044" class="Datatype">empty</a><a id="263" class="Symbol">)</a>
 <a id="265" class="Keyword">open</a> <a id="270" class="Keyword">import</a> <a id="277" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="298" class="Keyword">using</a> <a id="304" class="Symbol">(</a><a id="305" href="foundation-core.functions.html#309" class="Function">id</a><a id="307" class="Symbol">)</a>
 <a id="309" class="Keyword">open</a> <a id="314" class="Keyword">import</a> <a id="321" href="foundation.negation.html" class="Module">foundation.negation</a> <a id="341" class="Keyword">using</a> <a id="347" class="Symbol">(</a><a id="348" href="foundation-core.negation.html#452" class="Function">¬</a><a id="349" class="Symbol">)</a>
@@ -43,7 +43,7 @@
 <p>A type <code>X</code> is non-contractible if it comes equipped with an element of type <code>¬ (is-contr X)</code>.</p>
 <h2 id="definition">Definition</h2>
 <pre class="Agda"><a id="is-not-contractible"></a><a id="540" href="foundation.non-contractible-types.html#540" class="Function">is-not-contractible</a> <a id="560" class="Symbol">:</a> <a id="562" class="Symbol">{</a><a id="563" href="foundation.non-contractible-types.html#563" class="Bound">l</a> <a id="565" class="Symbol">:</a> <a id="567" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="572" class="Symbol">}</a> <a id="574" class="Symbol">→</a> <a id="576" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="579" href="foundation.non-contractible-types.html#563" class="Bound">l</a> <a id="581" class="Symbol">→</a> <a id="583" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="586" href="foundation.non-contractible-types.html#563" class="Bound">l</a>
-<a id="588" href="foundation.non-contractible-types.html#540" class="Function">is-not-contractible</a> <a id="608" href="foundation.non-contractible-types.html#608" class="Bound">X</a> <a id="610" class="Symbol">=</a> <a id="612" href="foundation-core.negation.html#452" class="Function">¬</a> <a id="614" class="Symbol">(</a><a id="615" href="foundation-core.contractible-types.html#992" class="Function">is-contr</a> <a id="624" href="foundation.non-contractible-types.html#608" class="Bound">X</a><a id="625" class="Symbol">)</a>
+<a id="588" href="foundation.non-contractible-types.html#540" class="Function">is-not-contractible</a> <a id="608" href="foundation.non-contractible-types.html#608" class="Bound">X</a> <a id="610" class="Symbol">=</a> <a id="612" href="foundation-core.negation.html#452" class="Function">¬</a> <a id="614" class="Symbol">(</a><a id="615" href="foundation-core.contractible-types.html#993" class="Function">is-contr</a> <a id="624" href="foundation.non-contractible-types.html#608" class="Bound">X</a><a id="625" class="Symbol">)</a>
 </pre>
 <h2 id="properties">Properties</h2>
 <h3 id="empty-types-are-non-contractible">Empty types are non-contractible</h3>
@@ -56,7 +56,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-27)(ad27db3) Merge pull request #219 from EgbertRijke/equals by noreply
+(2022-06-28)(730d3fb) Merge pull request #220 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>

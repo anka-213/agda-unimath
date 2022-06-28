@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/order-theory/decidable-subposets.lagda.md.</p>
-<p>Version of Monday, June 27, 2022, 07:29 PM</p>
+<p>Version of Tuesday, June 28, 2022, 10:28 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -37,7 +37,7 @@
 <a id="191" class="Keyword">open</a> <a id="196" class="Keyword">import</a> <a id="203" href="foundation.decidable-subtypes.html" class="Module">foundation.decidable-subtypes</a> <a id="233" class="Keyword">using</a> <a id="239" class="Symbol">(</a><a id="240" href="foundation.decidable-subtypes.html#1971" class="Function">subtype-decidable-subtype</a><a id="265" class="Symbol">)</a>
 <a id="267" class="Keyword">open</a> <a id="272" class="Keyword">import</a> <a id="279" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="311" class="Keyword">using</a> <a id="317" class="Symbol">(</a><a id="318" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="319" class="Symbol">;</a> <a id="321" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="325" class="Symbol">;</a> <a id="327" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="330" class="Symbol">;</a> <a id="332" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="335" class="Symbol">)</a>
 <a id="337" class="Keyword">open</a> <a id="342" class="Keyword">import</a> <a id="349" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="375" class="Keyword">using</a> <a id="381" class="Symbol">(</a><a id="382" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a><a id="384" class="Symbol">)</a>
-<a id="386" class="Keyword">open</a> <a id="391" class="Keyword">import</a> <a id="398" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="422" class="Keyword">using</a> <a id="428" class="Symbol">(</a><a id="429" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a><a id="436" class="Symbol">;</a> <a id="438" href="foundation-core.propositions.html#1295" class="Function">is-prop</a><a id="445" class="Symbol">)</a>
+<a id="386" class="Keyword">open</a> <a id="391" class="Keyword">import</a> <a id="398" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="422" class="Keyword">using</a> <a id="428" class="Symbol">(</a><a id="429" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a><a id="436" class="Symbol">;</a> <a id="438" href="foundation-core.propositions.html#1296" class="Function">is-prop</a><a id="445" class="Symbol">)</a>
 <a id="447" class="Keyword">open</a> <a id="452" class="Keyword">import</a> <a id="459" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="486" class="Keyword">using</a> <a id="492" class="Symbol">(</a><a id="493" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="498" class="Symbol">;</a> <a id="500" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="502" class="Symbol">;</a> <a id="504" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="507" class="Symbol">)</a>
 
 <a id="510" class="Keyword">open</a> <a id="515" class="Keyword">import</a> <a id="522" href="order-theory.posets.html" class="Module">order-theory.posets</a> <a id="542" class="Keyword">using</a> <a id="548" class="Symbol">(</a><a id="549" href="order-theory.posets.html#731" class="Function">Poset</a><a id="554" class="Symbol">;</a> <a id="556" href="order-theory.posets.html#1145" class="Function">element-Poset</a><a id="569" class="Symbol">)</a>
@@ -73,7 +73,7 @@
 
   <a id="1568" href="order-theory.decidable-subposets.html#1568" class="Function">is-prop-leq-decidable-sub-Poset</a> <a id="1600" class="Symbol">:</a>
     <a id="1606" class="Symbol">(</a><a id="1607" href="order-theory.decidable-subposets.html#1607" class="Bound">x</a> <a id="1609" href="order-theory.decidable-subposets.html#1609" class="Bound">y</a> <a id="1611" class="Symbol">:</a> <a id="1613" href="order-theory.decidable-subposets.html#912" class="Function">element-decidable-sub-Poset</a><a id="1640" class="Symbol">)</a> <a id="1642" class="Symbol">→</a>
-    <a id="1648" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="1656" class="Symbol">(</a><a id="1657" href="order-theory.decidable-subposets.html#1417" class="Function">leq-decidable-sub-Poset</a> <a id="1681" href="order-theory.decidable-subposets.html#1607" class="Bound">x</a> <a id="1683" href="order-theory.decidable-subposets.html#1609" class="Bound">y</a><a id="1684" class="Symbol">)</a>
+    <a id="1648" href="foundation-core.propositions.html#1296" class="Function">is-prop</a> <a id="1656" class="Symbol">(</a><a id="1657" href="order-theory.decidable-subposets.html#1417" class="Function">leq-decidable-sub-Poset</a> <a id="1681" href="order-theory.decidable-subposets.html#1607" class="Bound">x</a> <a id="1683" href="order-theory.decidable-subposets.html#1609" class="Bound">y</a><a id="1684" class="Symbol">)</a>
   <a id="1688" href="order-theory.decidable-subposets.html#1568" class="Function">is-prop-leq-decidable-sub-Poset</a> <a id="1720" class="Symbol">=</a>
     <a id="1726" href="order-theory.subposets.html#1520" class="Function">is-prop-leq-sub-Poset</a> <a id="1748" href="order-theory.decidable-subposets.html#840" class="Bound">X</a> <a id="1750" class="Symbol">(</a><a id="1751" href="foundation.decidable-subtypes.html#1971" class="Function">subtype-decidable-subtype</a> <a id="1777" href="order-theory.decidable-subposets.html#860" class="Bound">S</a><a id="1778" class="Symbol">)</a>
 
@@ -94,7 +94,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-27)(ad27db3) Merge pull request #219 from EgbertRijke/equals by noreply
+(2022-06-28)(730d3fb) Merge pull request #220 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>

@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/order-theory/meet-semilattices.lagda.md.</p>
-<p>Version of Monday, June 27, 2022, 07:29 PM</p>
+<p>Version of Tuesday, June 28, 2022, 10:29 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -37,8 +37,8 @@
 <a id="177" class="Keyword">open</a> <a id="182" class="Keyword">import</a> <a id="189" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="221" class="Keyword">using</a> <a id="227" class="Symbol">(</a><a id="228" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="229" class="Symbol">;</a> <a id="231" href="foundation-core.dependent-pair-types.html#575" class="InductiveConstructor">pair</a><a id="235" class="Symbol">;</a> <a id="237" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="240" class="Symbol">;</a> <a id="242" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="245" class="Symbol">)</a>
 <a id="247" class="Keyword">open</a> <a id="252" class="Keyword">import</a> <a id="259" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="285" class="Keyword">using</a> <a id="291" class="Symbol">(</a><a id="292" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a><a id="294" class="Symbol">)</a>
 <a id="296" class="Keyword">open</a> <a id="301" class="Keyword">import</a> <a id="308" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="332" class="Keyword">using</a>
-  <a id="340" class="Symbol">(</a> <a id="342" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a><a id="349" class="Symbol">;</a> <a id="351" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a><a id="357" class="Symbol">;</a> <a id="359" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a><a id="368" class="Symbol">;</a> <a id="370" href="foundation-core.propositions.html#1295" class="Function">is-prop</a><a id="377" class="Symbol">;</a> <a id="379" href="foundation-core.propositions.html#1549" class="Function">is-prop-type-Prop</a><a id="396" class="Symbol">)</a>
-<a id="398" class="Keyword">open</a> <a id="403" class="Keyword">import</a> <a id="410" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="426" class="Keyword">using</a> <a id="432" class="Symbol">(</a><a id="433" href="foundation-core.sets.html#1099" class="Function">is-set</a><a id="439" class="Symbol">;</a> <a id="441" href="foundation-core.sets.html#1177" class="Function">UU-Set</a><a id="447" class="Symbol">)</a>
+  <a id="340" class="Symbol">(</a> <a id="342" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a><a id="349" class="Symbol">;</a> <a id="351" href="foundation-core.propositions.html#6681" class="Function">Π-Prop</a><a id="357" class="Symbol">;</a> <a id="359" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a><a id="368" class="Symbol">;</a> <a id="370" href="foundation-core.propositions.html#1296" class="Function">is-prop</a><a id="377" class="Symbol">;</a> <a id="379" href="foundation-core.propositions.html#1549" class="Function">is-prop-type-Prop</a><a id="396" class="Symbol">)</a>
+<a id="398" class="Keyword">open</a> <a id="403" class="Keyword">import</a> <a id="410" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="426" class="Keyword">using</a> <a id="432" class="Symbol">(</a><a id="433" href="foundation-core.sets.html#1100" class="Function">is-set</a><a id="439" class="Symbol">;</a> <a id="441" href="foundation-core.sets.html#1177" class="Function">UU-Set</a><a id="447" class="Symbol">)</a>
 <a id="449" class="Keyword">open</a> <a id="454" class="Keyword">import</a> <a id="461" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="488" class="Keyword">using</a> <a id="494" class="Symbol">(</a><a id="495" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="500" class="Symbol">;</a> <a id="502" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="504" class="Symbol">;</a> <a id="506" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="509" class="Symbol">;</a> <a id="511" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="515" class="Symbol">)</a>
 
 <a id="518" class="Keyword">open</a> <a id="523" class="Keyword">import</a> <a id="530" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="554" class="Keyword">using</a>
@@ -62,10 +62,10 @@
 
   <a id="1210" href="order-theory.meet-semilattices.html#1210" class="Function">is-meet-semilattice-poset-Prop</a> <a id="1241" class="Symbol">:</a> <a id="1243" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a> <a id="1251" class="Symbol">(</a><a id="1252" href="order-theory.meet-semilattices.html#1166" class="Bound">l1</a> <a id="1255" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1257" href="order-theory.meet-semilattices.html#1169" class="Bound">l2</a><a id="1259" class="Symbol">)</a>
   <a id="1263" href="order-theory.meet-semilattices.html#1210" class="Function">is-meet-semilattice-poset-Prop</a> <a id="1294" class="Symbol">=</a>
-    <a id="1300" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a>
+    <a id="1300" href="foundation-core.propositions.html#6681" class="Function">Π-Prop</a>
       <a id="1313" class="Symbol">(</a> <a id="1315" href="order-theory.posets.html#1145" class="Function">element-Poset</a> <a id="1329" href="order-theory.meet-semilattices.html#1182" class="Bound">P</a><a id="1330" class="Symbol">)</a>
       <a id="1338" class="Symbol">(</a> <a id="1340" class="Symbol">λ</a> <a id="1342" href="order-theory.meet-semilattices.html#1342" class="Bound">x</a> <a id="1344" class="Symbol">→</a>
-        <a id="1354" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a>
+        <a id="1354" href="foundation-core.propositions.html#6681" class="Function">Π-Prop</a>
           <a id="1371" class="Symbol">(</a> <a id="1373" href="order-theory.posets.html#1145" class="Function">element-Poset</a> <a id="1387" href="order-theory.meet-semilattices.html#1182" class="Bound">P</a><a id="1388" class="Symbol">)</a>
           <a id="1400" class="Symbol">(</a> <a id="1402" href="order-theory.greatest-lower-bounds-posets.html#3384" class="Function">has-greatest-binary-lower-bound-poset-Prop</a> <a id="1445" href="order-theory.meet-semilattices.html#1182" class="Bound">P</a> <a id="1447" href="order-theory.meet-semilattices.html#1342" class="Bound">x</a><a id="1448" class="Symbol">))</a>
 
@@ -73,7 +73,7 @@
   <a id="1497" href="order-theory.meet-semilattices.html#1454" class="Function">is-meet-semilattice-Poset</a> <a id="1523" class="Symbol">=</a> <a id="1525" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a> <a id="1535" href="order-theory.meet-semilattices.html#1210" class="Function">is-meet-semilattice-poset-Prop</a>
 
   <a id="1569" href="order-theory.meet-semilattices.html#1569" class="Function">is-prop-is-meet-semilattice-Poset</a> <a id="1603" class="Symbol">:</a>
-    <a id="1609" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="1617" href="order-theory.meet-semilattices.html#1454" class="Function">is-meet-semilattice-Poset</a>
+    <a id="1609" href="foundation-core.propositions.html#1296" class="Function">is-prop</a> <a id="1617" href="order-theory.meet-semilattices.html#1454" class="Function">is-meet-semilattice-Poset</a>
   <a id="1645" href="order-theory.meet-semilattices.html#1569" class="Function">is-prop-is-meet-semilattice-Poset</a> <a id="1679" class="Symbol">=</a>
     <a id="1685" href="foundation-core.propositions.html#1549" class="Function">is-prop-type-Prop</a> <a id="1703" href="order-theory.meet-semilattices.html#1210" class="Function">is-meet-semilattice-poset-Prop</a>
 
@@ -97,7 +97,7 @@
   <a id="2316" href="order-theory.meet-semilattices.html#2250" class="Function">leq-Meet-Semilattice</a> <a id="2337" class="Symbol">=</a> <a id="2339" href="order-theory.posets.html#1280" class="Function">leq-Poset</a> <a id="2349" href="order-theory.meet-semilattices.html#1930" class="Function">poset-Meet-Semilattice</a>
 
   <a id="2375" href="order-theory.meet-semilattices.html#2375" class="Function">is-prop-leq-Meet-Semilattice</a> <a id="2404" class="Symbol">:</a>
-    <a id="2410" class="Symbol">(</a><a id="2411" href="order-theory.meet-semilattices.html#2411" class="Bound">x</a> <a id="2413" href="order-theory.meet-semilattices.html#2413" class="Bound">y</a> <a id="2415" class="Symbol">:</a> <a id="2417" href="order-theory.meet-semilattices.html#2003" class="Function">element-Meet-Semilattice</a><a id="2441" class="Symbol">)</a> <a id="2443" class="Symbol">→</a> <a id="2445" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="2453" class="Symbol">(</a><a id="2454" href="order-theory.meet-semilattices.html#2250" class="Function">leq-Meet-Semilattice</a> <a id="2475" href="order-theory.meet-semilattices.html#2411" class="Bound">x</a> <a id="2477" href="order-theory.meet-semilattices.html#2413" class="Bound">y</a><a id="2478" class="Symbol">)</a>
+    <a id="2410" class="Symbol">(</a><a id="2411" href="order-theory.meet-semilattices.html#2411" class="Bound">x</a> <a id="2413" href="order-theory.meet-semilattices.html#2413" class="Bound">y</a> <a id="2415" class="Symbol">:</a> <a id="2417" href="order-theory.meet-semilattices.html#2003" class="Function">element-Meet-Semilattice</a><a id="2441" class="Symbol">)</a> <a id="2443" class="Symbol">→</a> <a id="2445" href="foundation-core.propositions.html#1296" class="Function">is-prop</a> <a id="2453" class="Symbol">(</a><a id="2454" href="order-theory.meet-semilattices.html#2250" class="Function">leq-Meet-Semilattice</a> <a id="2475" href="order-theory.meet-semilattices.html#2411" class="Bound">x</a> <a id="2477" href="order-theory.meet-semilattices.html#2413" class="Bound">y</a><a id="2478" class="Symbol">)</a>
   <a id="2482" href="order-theory.meet-semilattices.html#2375" class="Function">is-prop-leq-Meet-Semilattice</a> <a id="2511" class="Symbol">=</a> <a id="2513" href="order-theory.posets.html#1375" class="Function">is-prop-leq-Poset</a> <a id="2531" href="order-theory.meet-semilattices.html#1930" class="Function">poset-Meet-Semilattice</a>
 
   <a id="2557" href="order-theory.meet-semilattices.html#2557" class="Function">refl-leq-Meet-Semilattice</a> <a id="2583" class="Symbol">:</a>
@@ -116,7 +116,7 @@
     <a id="3089" href="order-theory.meet-semilattices.html#2250" class="Function">leq-Meet-Semilattice</a> <a id="3110" href="order-theory.meet-semilattices.html#2991" class="Bound">x</a> <a id="3112" href="order-theory.meet-semilattices.html#2995" class="Bound">z</a>
   <a id="3116" href="order-theory.meet-semilattices.html#2952" class="Function">transitive-leq-Meet-Semilattice</a> <a id="3148" class="Symbol">=</a> <a id="3150" href="order-theory.posets.html#1610" class="Function">transitive-leq-Poset</a> <a id="3171" href="order-theory.meet-semilattices.html#1930" class="Function">poset-Meet-Semilattice</a>
 
-  <a id="3197" href="order-theory.meet-semilattices.html#3197" class="Function">is-set-element-Meet-Semilattice</a> <a id="3229" class="Symbol">:</a> <a id="3231" href="foundation-core.sets.html#1099" class="Function">is-set</a> <a id="3238" href="order-theory.meet-semilattices.html#2003" class="Function">element-Meet-Semilattice</a>
+  <a id="3197" href="order-theory.meet-semilattices.html#3197" class="Function">is-set-element-Meet-Semilattice</a> <a id="3229" class="Symbol">:</a> <a id="3231" href="foundation-core.sets.html#1100" class="Function">is-set</a> <a id="3238" href="order-theory.meet-semilattices.html#2003" class="Function">element-Meet-Semilattice</a>
   <a id="3265" href="order-theory.meet-semilattices.html#3197" class="Function">is-set-element-Meet-Semilattice</a> <a id="3297" class="Symbol">=</a> <a id="3299" href="order-theory.posets.html#2125" class="Function">is-set-element-Poset</a> <a id="3320" href="order-theory.meet-semilattices.html#1930" class="Function">poset-Meet-Semilattice</a>
 
   <a id="3346" href="order-theory.meet-semilattices.html#3346" class="Function">element-meet-semilattice-Set</a> <a id="3375" class="Symbol">:</a> <a id="3377" href="foundation-core.sets.html#1177" class="Function">UU-Set</a> <a id="3384" href="order-theory.meet-semilattices.html#1875" class="Bound">l1</a>
@@ -153,7 +153,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-27)(ad27db3) Merge pull request #219 from EgbertRijke/equals by noreply
+(2022-06-28)(730d3fb) Merge pull request #220 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>

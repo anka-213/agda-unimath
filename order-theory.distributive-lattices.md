@@ -25,13 +25,13 @@ A distributive lattice is a lattice in which meets distribute over joins.
 
   <a id="491" href="order-theory.distributive-lattices.html#491" class="Function">is-distributive-lattice-Prop</a> <a id="520" class="Symbol">:</a> <a id="522" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a> <a id="530" href="order-theory.distributive-lattices.html#445" class="Bound">l1</a>
   <a id="535" href="order-theory.distributive-lattices.html#491" class="Function">is-distributive-lattice-Prop</a> <a id="564" class="Symbol">=</a>
-    <a id="570" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a>
+    <a id="570" href="foundation-core.propositions.html#6681" class="Function">Π-Prop</a>
       <a id="583" class="Symbol">(</a> <a id="585" href="order-theory.lattices.html#1311" class="Function">element-Lattice</a> <a id="601" href="order-theory.distributive-lattices.html#461" class="Bound">L</a><a id="602" class="Symbol">)</a>
       <a id="610" class="Symbol">(</a> <a id="612" class="Symbol">λ</a> <a id="614" href="order-theory.distributive-lattices.html#614" class="Bound">x</a> <a id="616" class="Symbol">→</a>
-        <a id="626" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a>
+        <a id="626" href="foundation-core.propositions.html#6681" class="Function">Π-Prop</a>
           <a id="643" class="Symbol">(</a> <a id="645" href="order-theory.lattices.html#1311" class="Function">element-Lattice</a> <a id="661" href="order-theory.distributive-lattices.html#461" class="Bound">L</a><a id="662" class="Symbol">)</a>
           <a id="674" class="Symbol">(</a> <a id="676" class="Symbol">λ</a> <a id="678" href="order-theory.distributive-lattices.html#678" class="Bound">y</a> <a id="680" class="Symbol">→</a>
-            <a id="694" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a>
+            <a id="694" href="foundation-core.propositions.html#6681" class="Function">Π-Prop</a>
               <a id="715" class="Symbol">(</a> <a id="717" href="order-theory.lattices.html#1311" class="Function">element-Lattice</a> <a id="733" href="order-theory.distributive-lattices.html#461" class="Bound">L</a><a id="734" class="Symbol">)</a>
               <a id="750" class="Symbol">(</a> <a id="752" class="Symbol">λ</a> <a id="754" href="order-theory.distributive-lattices.html#754" class="Bound">z</a> <a id="756" class="Symbol">→</a>
                 <a id="774" href="foundation-core.sets.html#1407" class="Function">Id-Prop</a>
@@ -42,7 +42,7 @@ A distributive lattice is a lattice in which meets distribute over joins.
   <a id="968" href="order-theory.distributive-lattices.html#968" class="Function">is-distributive-Lattice</a> <a id="992" class="Symbol">:</a> <a id="994" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="997" href="order-theory.distributive-lattices.html#445" class="Bound">l1</a>
   <a id="1002" href="order-theory.distributive-lattices.html#968" class="Function">is-distributive-Lattice</a> <a id="1026" class="Symbol">=</a> <a id="1028" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a> <a id="1038" href="order-theory.distributive-lattices.html#491" class="Function">is-distributive-lattice-Prop</a>
 
-  <a id="1070" href="order-theory.distributive-lattices.html#1070" class="Function">is-prop-is-distributive-Lattice</a> <a id="1102" class="Symbol">:</a> <a id="1104" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="1112" href="order-theory.distributive-lattices.html#968" class="Function">is-distributive-Lattice</a>
+  <a id="1070" href="order-theory.distributive-lattices.html#1070" class="Function">is-prop-is-distributive-Lattice</a> <a id="1102" class="Symbol">:</a> <a id="1104" href="foundation-core.propositions.html#1296" class="Function">is-prop</a> <a id="1112" href="order-theory.distributive-lattices.html#968" class="Function">is-distributive-Lattice</a>
   <a id="1138" href="order-theory.distributive-lattices.html#1070" class="Function">is-prop-is-distributive-Lattice</a> <a id="1170" class="Symbol">=</a>
     <a id="1176" href="foundation-core.propositions.html#1549" class="Function">is-prop-type-Prop</a> <a id="1194" href="order-theory.distributive-lattices.html#491" class="Function">is-distributive-lattice-Prop</a>
 

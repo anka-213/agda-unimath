@@ -25,7 +25,7 @@ A radical ideal in a ring R is a two-sided ideal I such that `1 + x` is a multip
   
   <a id="569" href="ring-theory.radical-ideals-rings.html#569" class="Function">is-radical-two-sided-ideal-ring-Prop</a> <a id="606" class="Symbol">:</a> <a id="608" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a> <a id="616" class="Symbol">(</a><a id="617" href="ring-theory.radical-ideals-rings.html#495" class="Bound">l1</a> <a id="620" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="622" href="ring-theory.radical-ideals-rings.html#498" class="Bound">l2</a><a id="624" class="Symbol">)</a>
   <a id="628" href="ring-theory.radical-ideals-rings.html#569" class="Function">is-radical-two-sided-ideal-ring-Prop</a> <a id="665" class="Symbol">=</a>
-    <a id="671" href="foundation-core.propositions.html#6683" class="Function">Π-Prop</a>
+    <a id="671" href="foundation-core.propositions.html#6681" class="Function">Π-Prop</a>
       <a id="684" class="Symbol">(</a> <a id="686" href="ring-theory.ideals-rings.html#6366" class="Function">type-two-sided-ideal-Ring</a> <a id="712" href="ring-theory.radical-ideals-rings.html#511" class="Bound">R</a> <a id="714" href="ring-theory.radical-ideals-rings.html#525" class="Bound">I</a><a id="715" class="Symbol">)</a>
       <a id="723" class="Symbol">(</a> <a id="725" class="Symbol">λ</a> <a id="727" href="ring-theory.radical-ideals-rings.html#727" class="Bound">x</a> <a id="729" class="Symbol">→</a>
         <a id="739" href="ring-theory.invertible-elements-rings.html#1321" class="Function">is-invertible-element-ring-Prop</a> <a id="771" href="ring-theory.radical-ideals-rings.html#511" class="Bound">R</a>
@@ -36,7 +36,7 @@ A radical ideal in a ring R is a two-sided ideal I such that `1 + x` is a multip
     <a id="940" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a> <a id="950" href="ring-theory.radical-ideals-rings.html#569" class="Function">is-radical-two-sided-ideal-ring-Prop</a>
 
   <a id="990" href="ring-theory.radical-ideals-rings.html#990" class="Function">is-prop-is-radical-two-sided-ideal-Ring</a> <a id="1030" class="Symbol">:</a>
-    <a id="1036" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="1044" href="ring-theory.radical-ideals-rings.html#853" class="Function">is-radical-two-sided-ideal-Ring</a>
+    <a id="1036" href="foundation-core.propositions.html#1296" class="Function">is-prop</a> <a id="1044" href="ring-theory.radical-ideals-rings.html#853" class="Function">is-radical-two-sided-ideal-Ring</a>
   <a id="1078" href="ring-theory.radical-ideals-rings.html#990" class="Function">is-prop-is-radical-two-sided-ideal-Ring</a> <a id="1118" class="Symbol">=</a>
     <a id="1124" href="foundation-core.propositions.html#1549" class="Function">is-prop-type-Prop</a> <a id="1142" href="ring-theory.radical-ideals-rings.html#569" class="Function">is-radical-two-sided-ideal-ring-Prop</a>
 </pre>

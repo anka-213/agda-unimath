@@ -46,7 +46,7 @@ Using the formula for composition of analytic endofunctors, we obtain a way to c
 ### The analytic unit for composition of species
 
 <pre class="Agda"><a id="analytic-unit-species"></a><a id="1384" href="univalent-combinatorics.composition-species.html#1384" class="Function">analytic-unit-species</a> <a id="1406" class="Symbol">:</a> <a id="1408" href="univalent-combinatorics.species.html#429" class="Function">species</a> <a id="1416" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
-<a id="1422" href="univalent-combinatorics.composition-species.html#1384" class="Function">analytic-unit-species</a> <a id="1444" href="univalent-combinatorics.composition-species.html#1444" class="Bound">X</a> <a id="1446" class="Symbol">=</a> <a id="1448" href="foundation-core.contractible-types.html#992" class="Function">is-contr</a> <a id="1457" class="Symbol">(</a><a id="1458" href="univalent-combinatorics.finite-types.html#4687" class="Function">type-𝔽</a> <a id="1465" href="univalent-combinatorics.composition-species.html#1444" class="Bound">X</a><a id="1466" class="Symbol">)</a>
+<a id="1422" href="univalent-combinatorics.composition-species.html#1384" class="Function">analytic-unit-species</a> <a id="1444" href="univalent-combinatorics.composition-species.html#1444" class="Bound">X</a> <a id="1446" class="Symbol">=</a> <a id="1448" href="foundation-core.contractible-types.html#993" class="Function">is-contr</a> <a id="1457" class="Symbol">(</a><a id="1458" href="univalent-combinatorics.finite-types.html#4687" class="Function">type-𝔽</a> <a id="1465" href="univalent-combinatorics.composition-species.html#1444" class="Bound">X</a><a id="1466" class="Symbol">)</a>
 </pre>
 ## Properties
 

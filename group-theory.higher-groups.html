@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/higher-groups.lagda.md.</p>
-<p>Version of Monday, June 27, 2022, 07:29 PM</p>
+<p>Version of Tuesday, June 28, 2022, 10:28 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -39,7 +39,7 @@
   <a id="191" class="Symbol">(</a> <a id="193" href="foundation.connected-types.html#1684" class="Function">is-path-connected</a><a id="210" class="Symbol">;</a> <a id="212" href="foundation.connected-types.html#2076" class="Function">mere-eq-is-path-connected</a><a id="237" class="Symbol">;</a>
     <a id="243" href="foundation.connected-types.html#3769" class="Function">apply-dependent-universal-property-is-path-connected</a><a id="295" class="Symbol">)</a>
 <a id="297" class="Keyword">open</a> <a id="302" class="Keyword">import</a> <a id="309" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="341" class="Keyword">using</a> <a id="347" class="Symbol">(</a><a id="348" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="349" class="Symbol">;</a> <a id="351" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="354" class="Symbol">;</a> <a id="356" href="foundation-core.dependent-pair-types.html#604" class="Field">pr2</a><a id="359" class="Symbol">)</a>
-<a id="361" class="Keyword">open</a> <a id="366" class="Keyword">import</a> <a id="373" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="397" class="Keyword">using</a> <a id="403" class="Symbol">(</a><a id="404" href="foundation-core.equivalences.html#1607" class="Function Operator">_≃_</a><a id="407" class="Symbol">;</a> <a id="409" href="foundation-core.equivalences.html#5022" class="Function">map-inv-equiv</a><a id="422" class="Symbol">)</a>
+<a id="361" class="Keyword">open</a> <a id="366" class="Keyword">import</a> <a id="373" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="397" class="Keyword">using</a> <a id="403" class="Symbol">(</a><a id="404" href="foundation-core.equivalences.html#1608" class="Function Operator">_≃_</a><a id="407" class="Symbol">;</a> <a id="409" href="foundation-core.equivalences.html#5023" class="Function">map-inv-equiv</a><a id="422" class="Symbol">)</a>
 <a id="424" class="Keyword">open</a> <a id="429" class="Keyword">import</a> <a id="436" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="462" class="Keyword">using</a> <a id="468" class="Symbol">(</a><a id="469" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a><a id="471" class="Symbol">;</a> <a id="473" href="foundation-core.identity-types.html#1807" class="InductiveConstructor">refl</a><a id="477" class="Symbol">)</a>
 <a id="479" class="Keyword">open</a> <a id="484" class="Keyword">import</a> <a id="491" href="foundation.mere-equality.html" class="Module">foundation.mere-equality</a> <a id="516" class="Keyword">using</a> <a id="522" class="Symbol">(</a><a id="523" href="foundation.mere-equality.html#1100" class="Function">mere-eq</a><a id="530" class="Symbol">)</a>
 <a id="532" class="Keyword">open</a> <a id="537" class="Keyword">import</a> <a id="544" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="568" class="Keyword">using</a> <a id="574" class="Symbol">(</a><a id="575" href="foundation-core.propositions.html#1380" class="Function">UU-Prop</a><a id="582" class="Symbol">;</a> <a id="584" href="foundation-core.propositions.html#1482" class="Function">type-Prop</a><a id="593" class="Symbol">)</a>
@@ -212,7 +212,7 @@
       <a id="6400" class="Symbol">(</a> <a id="6402" href="group-theory.higher-groups.html#6172" class="Bound">f</a><a id="6403" class="Symbol">)</a>
 
   <a id="6408" href="group-theory.higher-groups.html#6408" class="Function">extensionality-hom-∞-Group</a> <a id="6435" class="Symbol">:</a>
-    <a id="6441" class="Symbol">(</a><a id="6442" href="group-theory.higher-groups.html#6442" class="Bound">g</a> <a id="6444" class="Symbol">:</a> <a id="6446" href="group-theory.higher-groups.html#4270" class="Function">hom-∞-Group</a> <a id="6458" href="group-theory.higher-groups.html#6138" class="Bound">G</a> <a id="6460" href="group-theory.higher-groups.html#6155" class="Bound">H</a><a id="6461" class="Symbol">)</a> <a id="6463" class="Symbol">→</a> <a id="6465" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a> <a id="6468" href="group-theory.higher-groups.html#6172" class="Bound">f</a> <a id="6470" href="group-theory.higher-groups.html#6442" class="Bound">g</a> <a id="6472" href="foundation-core.equivalences.html#1607" class="Function Operator">≃</a> <a id="6474" href="group-theory.higher-groups.html#6204" class="Function">htpy-hom-∞-Group</a> <a id="6491" href="group-theory.higher-groups.html#6442" class="Bound">g</a>
+    <a id="6441" class="Symbol">(</a><a id="6442" href="group-theory.higher-groups.html#6442" class="Bound">g</a> <a id="6444" class="Symbol">:</a> <a id="6446" href="group-theory.higher-groups.html#4270" class="Function">hom-∞-Group</a> <a id="6458" href="group-theory.higher-groups.html#6138" class="Bound">G</a> <a id="6460" href="group-theory.higher-groups.html#6155" class="Bound">H</a><a id="6461" class="Symbol">)</a> <a id="6463" class="Symbol">→</a> <a id="6465" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a> <a id="6468" href="group-theory.higher-groups.html#6172" class="Bound">f</a> <a id="6470" href="group-theory.higher-groups.html#6442" class="Bound">g</a> <a id="6472" href="foundation-core.equivalences.html#1608" class="Function Operator">≃</a> <a id="6474" href="group-theory.higher-groups.html#6204" class="Function">htpy-hom-∞-Group</a> <a id="6491" href="group-theory.higher-groups.html#6442" class="Bound">g</a>
   <a id="6495" href="group-theory.higher-groups.html#6408" class="Function">extensionality-hom-∞-Group</a> <a id="6522" class="Symbol">=</a>
     <a id="6528" href="structured-types.pointed-homotopies.html#3058" class="Function">extensionality-pointed-map</a>
       <a id="6561" class="Symbol">(</a> <a id="6563" href="group-theory.higher-groups.html#1640" class="Function">classifying-pointed-type-∞-Group</a> <a id="6596" href="group-theory.higher-groups.html#6138" class="Bound">G</a><a id="6597" class="Symbol">)</a>
@@ -221,7 +221,7 @@
 
   <a id="6657" href="group-theory.higher-groups.html#6657" class="Function">eq-htpy-hom-∞-Group</a> <a id="6677" class="Symbol">:</a>
     <a id="6683" class="Symbol">(</a><a id="6684" href="group-theory.higher-groups.html#6684" class="Bound">g</a> <a id="6686" class="Symbol">:</a> <a id="6688" href="group-theory.higher-groups.html#4270" class="Function">hom-∞-Group</a> <a id="6700" href="group-theory.higher-groups.html#6138" class="Bound">G</a> <a id="6702" href="group-theory.higher-groups.html#6155" class="Bound">H</a><a id="6703" class="Symbol">)</a> <a id="6705" class="Symbol">→</a> <a id="6707" class="Symbol">(</a><a id="6708" href="group-theory.higher-groups.html#6204" class="Function">htpy-hom-∞-Group</a> <a id="6725" href="group-theory.higher-groups.html#6684" class="Bound">g</a><a id="6726" class="Symbol">)</a> <a id="6728" class="Symbol">→</a> <a id="6730" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a> <a id="6733" href="group-theory.higher-groups.html#6172" class="Bound">f</a> <a id="6735" href="group-theory.higher-groups.html#6684" class="Bound">g</a>
-  <a id="6739" href="group-theory.higher-groups.html#6657" class="Function">eq-htpy-hom-∞-Group</a> <a id="6759" href="group-theory.higher-groups.html#6759" class="Bound">g</a> <a id="6761" class="Symbol">=</a> <a id="6763" href="foundation-core.equivalences.html#5022" class="Function">map-inv-equiv</a> <a id="6777" class="Symbol">(</a><a id="6778" href="group-theory.higher-groups.html#6408" class="Function">extensionality-hom-∞-Group</a> <a id="6805" href="group-theory.higher-groups.html#6759" class="Bound">g</a><a id="6806" class="Symbol">)</a>
+  <a id="6739" href="group-theory.higher-groups.html#6657" class="Function">eq-htpy-hom-∞-Group</a> <a id="6759" href="group-theory.higher-groups.html#6759" class="Bound">g</a> <a id="6761" class="Symbol">=</a> <a id="6763" href="foundation-core.equivalences.html#5023" class="Function">map-inv-equiv</a> <a id="6777" class="Symbol">(</a><a id="6778" href="group-theory.higher-groups.html#6408" class="Function">extensionality-hom-∞-Group</a> <a id="6805" href="group-theory.higher-groups.html#6759" class="Bound">g</a><a id="6806" class="Symbol">)</a>
 
 <a id="6809" class="Comment">-- Wild category structure on higher groups</a>
 
@@ -283,7 +283,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-27)(ad27db3) Merge pull request #219 from EgbertRijke/equals by noreply
+(2022-06-28)(730d3fb) Merge pull request #220 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>

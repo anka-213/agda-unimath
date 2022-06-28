@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/category-theory/natural-transformations-precategories.lagda.md.</p>
-<p>Version of Monday, June 27, 2022, 07:28 PM</p>
+<p>Version of Tuesday, June 28, 2022, 10:27 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -41,7 +41,7 @@
 <a id="431" class="Keyword">open</a> <a id="436" class="Keyword">import</a> <a id="443" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="475" class="Keyword">using</a> <a id="481" class="Symbol">(</a><a id="482" href="foundation-core.dependent-pair-types.html#502" class="Record">Σ</a><a id="483" class="Symbol">;</a> <a id="485" href="foundation-core.dependent-pair-types.html#592" class="Field">pr1</a><a id="488" class="Symbol">)</a>
 <a id="490" class="Keyword">open</a> <a id="495" class="Keyword">import</a> <a id="502" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="528" class="Keyword">using</a> <a id="534" class="Symbol">(</a><a id="535" href="foundation-core.identity-types.html#1754" class="Datatype">Id</a><a id="537" class="Symbol">)</a>
 <a id="539" class="Keyword">open</a> <a id="544" class="Keyword">import</a> <a id="551" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="575" class="Keyword">using</a>
-  <a id="583" class="Symbol">(</a> <a id="585" href="foundation-core.propositions.html#1295" class="Function">is-prop</a><a id="592" class="Symbol">;</a> <a id="594" href="foundation-core.propositions.html#6147" class="Function">is-prop-Π</a><a id="603" class="Symbol">;</a> <a id="605" href="foundation-core.propositions.html#6908" class="Function">is-prop-Π&#39;</a><a id="615" class="Symbol">)</a>
+  <a id="583" class="Symbol">(</a> <a id="585" href="foundation-core.propositions.html#1296" class="Function">is-prop</a><a id="592" class="Symbol">;</a> <a id="594" href="foundation-core.propositions.html#6145" class="Function">is-prop-Π</a><a id="603" class="Symbol">;</a> <a id="605" href="foundation-core.propositions.html#6906" class="Function">is-prop-Π&#39;</a><a id="615" class="Symbol">)</a>
 <a id="617" class="Keyword">open</a> <a id="622" class="Keyword">import</a> <a id="629" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="656" class="Keyword">using</a> <a id="662" class="Symbol">(</a><a id="663" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="668" class="Symbol">;</a> <a id="670" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="672" class="Symbol">;</a> <a id="674" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="677" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
@@ -91,13 +91,13 @@
     <a id="2226" href="category-theory.precategories.html#2674" class="Function">type-hom-Precat</a> <a id="2242" href="category-theory.natural-transformations-precategories.html#2139" class="Bound">D</a>
       <a id="2250" class="Symbol">(</a> <a id="2252" href="category-theory.functors-precategories.html#1611" class="Function">obj-functor-Precat</a> <a id="2271" href="category-theory.natural-transformations-precategories.html#2120" class="Bound">C</a> <a id="2273" href="category-theory.natural-transformations-precategories.html#2139" class="Bound">D</a> <a id="2275" href="category-theory.natural-transformations-precategories.html#2161" class="Bound">F</a> <a id="2277" href="category-theory.natural-transformations-precategories.html#2202" class="Bound">x</a><a id="2278" class="Symbol">)</a>
       <a id="2286" class="Symbol">(</a> <a id="2288" href="category-theory.functors-precategories.html#1611" class="Function">obj-functor-Precat</a> <a id="2307" href="category-theory.natural-transformations-precategories.html#2120" class="Bound">C</a> <a id="2309" href="category-theory.natural-transformations-precategories.html#2139" class="Bound">D</a> <a id="2311" href="category-theory.natural-transformations-precategories.html#2163" class="Bound">G</a> <a id="2313" href="category-theory.natural-transformations-precategories.html#2202" class="Bound">x</a><a id="2314" class="Symbol">))</a> <a id="2317" class="Symbol">→</a>
-  <a id="2321" href="foundation-core.propositions.html#1295" class="Function">is-prop</a> <a id="2329" class="Symbol">(</a><a id="2330" href="category-theory.natural-transformations-precategories.html#1102" class="Function">is-nat-trans-Precat</a> <a id="2350" href="category-theory.natural-transformations-precategories.html#2120" class="Bound">C</a> <a id="2352" href="category-theory.natural-transformations-precategories.html#2139" class="Bound">D</a> <a id="2354" href="category-theory.natural-transformations-precategories.html#2161" class="Bound">F</a> <a id="2356" href="category-theory.natural-transformations-precategories.html#2163" class="Bound">G</a> <a id="2358" href="category-theory.natural-transformations-precategories.html#2193" class="Bound">γ</a><a id="2359" class="Symbol">)</a>
+  <a id="2321" href="foundation-core.propositions.html#1296" class="Function">is-prop</a> <a id="2329" class="Symbol">(</a><a id="2330" href="category-theory.natural-transformations-precategories.html#1102" class="Function">is-nat-trans-Precat</a> <a id="2350" href="category-theory.natural-transformations-precategories.html#2120" class="Bound">C</a> <a id="2352" href="category-theory.natural-transformations-precategories.html#2139" class="Bound">D</a> <a id="2354" href="category-theory.natural-transformations-precategories.html#2161" class="Bound">F</a> <a id="2356" href="category-theory.natural-transformations-precategories.html#2163" class="Bound">G</a> <a id="2358" href="category-theory.natural-transformations-precategories.html#2193" class="Bound">γ</a><a id="2359" class="Symbol">)</a>
 <a id="2361" href="category-theory.natural-transformations-precategories.html#2064" class="Function">is-prop-is-nat-trans-Precat</a> <a id="2389" href="category-theory.natural-transformations-precategories.html#2389" class="Bound">C</a> <a id="2391" href="category-theory.natural-transformations-precategories.html#2391" class="Bound">D</a> <a id="2393" href="category-theory.natural-transformations-precategories.html#2393" class="Bound">F</a> <a id="2395" href="category-theory.natural-transformations-precategories.html#2395" class="Bound">G</a> <a id="2397" href="category-theory.natural-transformations-precategories.html#2397" class="Bound">γ</a> <a id="2399" class="Symbol">=</a>
-  <a id="2403" href="foundation-core.propositions.html#6908" class="Function">is-prop-Π&#39;</a>
+  <a id="2403" href="foundation-core.propositions.html#6906" class="Function">is-prop-Π&#39;</a>
     <a id="2418" class="Symbol">(</a> <a id="2420" class="Symbol">λ</a> <a id="2422" href="category-theory.natural-transformations-precategories.html#2422" class="Bound">x</a> <a id="2424" class="Symbol">→</a>
-      <a id="2432" href="foundation-core.propositions.html#6908" class="Function">is-prop-Π&#39;</a>
+      <a id="2432" href="foundation-core.propositions.html#6906" class="Function">is-prop-Π&#39;</a>
         <a id="2451" class="Symbol">(</a> <a id="2453" class="Symbol">λ</a> <a id="2455" href="category-theory.natural-transformations-precategories.html#2455" class="Bound">y</a> <a id="2457" class="Symbol">→</a>
-          <a id="2469" href="foundation-core.propositions.html#6147" class="Function">is-prop-Π</a>
+          <a id="2469" href="foundation-core.propositions.html#6145" class="Function">is-prop-Π</a>
             <a id="2491" class="Symbol">(</a> <a id="2493" class="Symbol">λ</a> <a id="2495" href="category-theory.natural-transformations-precategories.html#2495" class="Bound">f</a> <a id="2497" class="Symbol">→</a>
               <a id="2513" href="category-theory.precategories.html#2772" class="Function">is-set-type-hom-Precat</a> <a id="2536" href="category-theory.natural-transformations-precategories.html#2391" class="Bound">D</a>
                 <a id="2554" class="Symbol">(</a> <a id="2556" href="category-theory.functors-precategories.html#1611" class="Function">obj-functor-Precat</a> <a id="2575" href="category-theory.natural-transformations-precategories.html#2389" class="Bound">C</a> <a id="2577" href="category-theory.natural-transformations-precategories.html#2391" class="Bound">D</a> <a id="2579" href="category-theory.natural-transformations-precategories.html#2393" class="Bound">F</a> <a id="2581" href="category-theory.natural-transformations-precategories.html#2422" class="Bound">x</a><a id="2582" class="Symbol">)</a>
@@ -107,7 +107,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-27)(ad27db3) Merge pull request #219 from EgbertRijke/equals by noreply
+(2022-06-28)(730d3fb) Merge pull request #220 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>
