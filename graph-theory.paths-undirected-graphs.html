@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/graph-theory/paths-undirected-graphs.lagda.md.</p>
-<p>Version of Tuesday, June 28, 2022, 10:28 AM</p>
+<p>Version of Tuesday, June 28, 2022, 02:46 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -33,7 +33,7 @@
 
 <a id="82" class="Keyword">module</a> <a id="89" href="graph-theory.paths-undirected-graphs.html" class="Module">graph-theory.paths-undirected-graphs</a> <a id="126" class="Keyword">where</a>
 
-<a id="133" class="Keyword">open</a> <a id="138" class="Keyword">import</a> <a id="145" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="172" class="Keyword">using</a> <a id="178" class="Symbol">(</a><a id="179" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="184" class="Symbol">;</a> <a id="186" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a><a id="188" class="Symbol">;</a> <a id="190" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="193" class="Symbol">;</a> <a id="195" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="199" class="Symbol">;</a> <a id="201" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="206" class="Symbol">)</a>
+<a id="133" class="Keyword">open</a> <a id="138" class="Keyword">import</a> <a id="145" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="172" class="Keyword">using</a> <a id="178" class="Symbol">(</a><a id="179" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="184" class="Symbol">;</a> <a id="186" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="188" class="Symbol">;</a> <a id="190" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="193" class="Symbol">;</a> <a id="195" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="199" class="Symbol">;</a> <a id="201" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="206" class="Symbol">)</a>
 <a id="208" class="Keyword">open</a> <a id="213" class="Keyword">import</a> <a id="220" href="foundation.unordered-pairs.html" class="Module">foundation.unordered-pairs</a> <a id="247" class="Keyword">using</a>
   <a id="255" class="Symbol">(</a> <a id="257" href="foundation.unordered-pairs.html#2381" class="Function">unordered-pair</a><a id="271" class="Symbol">;</a> <a id="273" href="foundation.unordered-pairs.html#2756" class="Function">type-unordered-pair</a><a id="292" class="Symbol">;</a> <a id="294" href="foundation.unordered-pairs.html#3477" class="Function">element-unordered-pair</a><a id="316" class="Symbol">;</a>
     <a id="322" href="foundation.unordered-pairs.html#3562" class="Function">other-element-unordered-pair</a><a id="350" class="Symbol">)</a>
@@ -51,7 +51,7 @@
 
   <a id="775" class="Keyword">data</a>
     <a id="784" href="graph-theory.paths-undirected-graphs.html#784" class="Datatype">path-Undirected-Graph</a> <a id="806" class="Symbol">(</a><a id="807" href="graph-theory.paths-undirected-graphs.html#807" class="Bound">x</a> <a id="809" class="Symbol">:</a> <a id="811" href="graph-theory.undirected-graphs.html#981" class="Function">vertex-Undirected-Graph</a> <a id="835" href="graph-theory.paths-undirected-graphs.html#736" class="Bound">G</a><a id="836" class="Symbol">)</a> <a id="838" class="Symbol">:</a>
-      <a id="846" href="graph-theory.undirected-graphs.html#981" class="Function">vertex-Undirected-Graph</a> <a id="870" href="graph-theory.paths-undirected-graphs.html#736" class="Bound">G</a> <a id="872" class="Symbol">→</a> <a id="874" href="foundation-core.universe-levels.html#222" class="Primitive">UU</a> <a id="877" class="Symbol">(</a><a id="878" href="graph-theory.paths-undirected-graphs.html#720" class="Bound">l1</a> <a id="881" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="883" href="graph-theory.paths-undirected-graphs.html#723" class="Bound">l2</a> <a id="886" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="888" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="893" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="898" class="Symbol">)</a>
+      <a id="846" href="graph-theory.undirected-graphs.html#981" class="Function">vertex-Undirected-Graph</a> <a id="870" href="graph-theory.paths-undirected-graphs.html#736" class="Bound">G</a> <a id="872" class="Symbol">→</a> <a id="874" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="877" class="Symbol">(</a><a id="878" href="graph-theory.paths-undirected-graphs.html#720" class="Bound">l1</a> <a id="881" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="883" href="graph-theory.paths-undirected-graphs.html#723" class="Bound">l2</a> <a id="886" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="888" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="893" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="898" class="Symbol">)</a>
       <a id="906" class="Keyword">where</a>
       <a id="918" href="graph-theory.paths-undirected-graphs.html#918" class="InductiveConstructor">refl-path-Undirected-Graph</a> <a id="945" class="Symbol">:</a> <a id="947" href="graph-theory.paths-undirected-graphs.html#784" class="Datatype">path-Undirected-Graph</a> <a id="969" href="graph-theory.paths-undirected-graphs.html#807" class="Bound">x</a> <a id="971" href="graph-theory.paths-undirected-graphs.html#807" class="Bound">x</a>
       <a id="979" href="graph-theory.paths-undirected-graphs.html#979" class="InductiveConstructor">cons-path-Undirected-Graph</a> <a id="1006" class="Symbol">:</a>
@@ -63,7 +63,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-28)(730d3fb) Merge pull request #220 from EgbertRijke/equals by noreply
+(2022-06-28)(8475571) Merge pull request #221 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>
