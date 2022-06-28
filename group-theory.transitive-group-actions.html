@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/transitive-group-actions.lagda.md.</p>
-<p>Version of Tuesday, June 28, 2022, 04:20 PM</p>
+<p>Version of Tuesday, June 28, 2022, 04:53 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -33,7 +33,7 @@
 
 <a id="80" class="Keyword">module</a> <a id="87" href="group-theory.transitive-group-actions.html" class="Module">group-theory.transitive-group-actions</a> <a id="125" class="Keyword">where</a>
 
-<a id="132" class="Keyword">open</a> <a id="137" class="Keyword">import</a> <a id="144" href="foundation.existential-quantification.html" class="Module">foundation.existential-quantification</a> <a id="182" class="Keyword">using</a> <a id="188" class="Symbol">(</a><a id="189" href="foundation.existential-quantification.html#1653" class="Function">∃-Prop</a><a id="195" class="Symbol">)</a>
+<a id="132" class="Keyword">open</a> <a id="137" class="Keyword">import</a> <a id="144" href="foundation.existential-quantification.html" class="Module">foundation.existential-quantification</a> <a id="182" class="Keyword">using</a> <a id="188" class="Symbol">(</a><a id="189" href="foundation.existential-quantification.html#1666" class="Function">∃-Prop</a><a id="195" class="Symbol">)</a>
 <a id="197" class="Keyword">open</a> <a id="202" class="Keyword">import</a> <a id="209" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="235" class="Keyword">using</a> <a id="241" class="Symbol">(</a><a id="242" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a><a id="244" class="Symbol">)</a>
 <a id="246" class="Keyword">open</a> <a id="251" class="Keyword">import</a> <a id="258" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="282" class="Keyword">using</a> <a id="288" class="Symbol">(</a><a id="289" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a><a id="296" class="Symbol">;</a> <a id="298" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a><a id="304" class="Symbol">)</a>
 <a id="306" class="Keyword">open</a> <a id="311" class="Keyword">import</a> <a id="318" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="345" class="Keyword">using</a> <a id="351" class="Symbol">(</a><a id="352" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="357" class="Symbol">;</a> <a id="359" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="362" class="Symbol">)</a>
@@ -57,11 +57,11 @@
       <a id="965" class="Symbol">(</a> <a id="967" class="Symbol">λ</a> <a id="969" href="group-theory.transitive-group-actions.html#969" class="Bound">x</a> <a id="971" class="Symbol">→</a>
         <a id="981" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a>
           <a id="998" class="Symbol">(</a> <a id="1000" href="group-theory.group-actions.html#1501" class="Function">type-Abstract-Group-Action</a> <a id="1027" href="group-theory.transitive-group-actions.html#754" class="Bound">G</a> <a id="1029" href="group-theory.transitive-group-actions.html#769" class="Bound">X</a><a id="1030" class="Symbol">)</a>
-          <a id="1042" class="Symbol">(</a> <a id="1044" class="Symbol">λ</a> <a id="1046" href="group-theory.transitive-group-actions.html#1046" class="Bound">y</a> <a id="1048" class="Symbol">→</a> <a id="1050" href="foundation.existential-quantification.html#1653" class="Function">∃-Prop</a> <a id="1057" class="Symbol">(</a><a id="1058" href="group-theory.groups.html#2711" class="Function">type-Group</a> <a id="1069" href="group-theory.transitive-group-actions.html#754" class="Bound">G</a><a id="1070" class="Symbol">)</a> <a id="1072" class="Symbol">(λ</a> <a id="1075" href="group-theory.transitive-group-actions.html#1075" class="Bound">g</a> <a id="1077" class="Symbol">→</a> <a id="1079" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a> <a id="1082" class="Symbol">(</a><a id="1083" href="group-theory.group-actions.html#1980" class="Function">mul-Abstract-Group-Action</a> <a id="1109" href="group-theory.transitive-group-actions.html#754" class="Bound">G</a> <a id="1111" href="group-theory.transitive-group-actions.html#769" class="Bound">X</a> <a id="1113" href="group-theory.transitive-group-actions.html#1075" class="Bound">g</a> <a id="1115" href="group-theory.transitive-group-actions.html#969" class="Bound">x</a><a id="1116" class="Symbol">)</a> <a id="1118" href="group-theory.transitive-group-actions.html#1046" class="Bound">y</a><a id="1119" class="Symbol">)))</a>
+          <a id="1042" class="Symbol">(</a> <a id="1044" class="Symbol">λ</a> <a id="1046" href="group-theory.transitive-group-actions.html#1046" class="Bound">y</a> <a id="1048" class="Symbol">→</a> <a id="1050" href="foundation.existential-quantification.html#1666" class="Function">∃-Prop</a> <a id="1057" class="Symbol">(</a><a id="1058" href="group-theory.groups.html#2711" class="Function">type-Group</a> <a id="1069" href="group-theory.transitive-group-actions.html#754" class="Bound">G</a><a id="1070" class="Symbol">)</a> <a id="1072" class="Symbol">(λ</a> <a id="1075" href="group-theory.transitive-group-actions.html#1075" class="Bound">g</a> <a id="1077" class="Symbol">→</a> <a id="1079" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a> <a id="1082" class="Symbol">(</a><a id="1083" href="group-theory.group-actions.html#1980" class="Function">mul-Abstract-Group-Action</a> <a id="1109" href="group-theory.transitive-group-actions.html#754" class="Bound">G</a> <a id="1111" href="group-theory.transitive-group-actions.html#769" class="Bound">X</a> <a id="1113" href="group-theory.transitive-group-actions.html#1075" class="Bound">g</a> <a id="1115" href="group-theory.transitive-group-actions.html#969" class="Bound">x</a><a id="1116" class="Symbol">)</a> <a id="1118" href="group-theory.transitive-group-actions.html#1046" class="Bound">y</a><a id="1119" class="Symbol">)))</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-28)(b554df2) Merge pull request #217 from elisabethbonnevier/hott-set-theory by noreply
+(2022-06-28)(59b0033) Merge pull request #222 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>
