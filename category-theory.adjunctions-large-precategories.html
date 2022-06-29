@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/category-theory/adjunctions-large-precategories.lagda.md.</p>
-<p>Version of Tuesday, June 28, 2022, 04:52 PM</p>
+<p>Version of Wednesday, June 29, 2022, 06:40 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -50,7 +50,7 @@
     <a id="872" href="category-theory.natural-transformations-large-precategories.html#1916" class="Field">obj-natural-transformation-Large-Precat</a><a id="911" class="Symbol">;</a>
     <a id="917" href="category-theory.natural-transformations-large-precategories.html#2131" class="Field">coherence-square-natural-transformation-Large-Precat</a><a id="969" class="Symbol">)</a>
 <a id="971" class="Keyword">open</a> <a id="976" class="Keyword">import</a> <a id="983" href="foundation.commuting-squares.html" class="Module">foundation.commuting-squares</a> <a id="1012" class="Keyword">using</a>
-  <a id="1020" class="Symbol">(</a> <a id="1022" href="foundation-core.commuting-squares.html#545" class="Function">coherence-square</a><a id="1038" class="Symbol">;</a> <a id="1040" href="foundation.commuting-squares.html#695" class="Function">coherence-square-inv-horizontal</a><a id="1071" class="Symbol">)</a>
+  <a id="1020" class="Symbol">(</a> <a id="1022" href="foundation-core.commuting-squares.html#545" class="Function">coherence-square</a><a id="1038" class="Symbol">;</a> <a id="1040" href="foundation.commuting-squares.html#708" class="Function">coherence-square-inv-horizontal</a><a id="1071" class="Symbol">)</a>
 <a id="1073" class="Keyword">open</a> <a id="1078" class="Keyword">import</a> <a id="1085" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="1109" class="Keyword">using</a>
   <a id="1117" class="Symbol">(</a> <a id="1119" href="foundation-core.equivalences.html#1621" class="Function Operator">_≃_</a><a id="1122" class="Symbol">;</a> <a id="1124" href="foundation-core.equivalences.html#1821" class="Function">map-equiv</a><a id="1133" class="Symbol">;</a> <a id="1135" href="foundation-core.equivalences.html#5721" class="Function">inv-equiv</a><a id="1144" class="Symbol">;</a> <a id="1146" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a><a id="1159" class="Symbol">)</a>
 <a id="1161" class="Keyword">open</a> <a id="1166" class="Keyword">import</a> <a id="1173" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="1199" class="Keyword">using</a> <a id="1205" class="Symbol">(</a><a id="1206" href="foundation-core.identity-types.html#1865" class="Function Operator">_＝_</a><a id="1209" class="Symbol">;</a> <a id="1211" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="1214" class="Symbol">;</a> <a id="1216" href="foundation-core.identity-types.html#2425" class="Function Operator">_∙_</a><a id="1219" class="Symbol">;</a> <a id="1221" href="foundation-core.identity-types.html#4003" class="Function">ap</a><a id="1223" class="Symbol">)</a>
@@ -144,7 +144,7 @@
       <a id="5288" class="Symbol">(</a> <a id="5290" href="category-theory.adjunctions-large-precategories.html#4211" class="Function">map-inv-equiv-is-adjoint-pair-Large-Precat</a> <a id="5333" href="category-theory.adjunctions-large-precategories.html#4677" class="Bound">H</a> <a id="5335" href="category-theory.adjunctions-large-precategories.html#4771" class="Bound">X2</a> <a id="5338" href="category-theory.adjunctions-large-precategories.html#4833" class="Bound">Y2</a><a id="5340" class="Symbol">)</a>
   <a id="5344" href="category-theory.adjunctions-large-precategories.html#4620" class="Function">naturality-inv-equiv-is-adjoint-pair-Large-Precat</a>
     <a id="5398" href="category-theory.adjunctions-large-precategories.html#5398" class="Bound">H</a> <a id="5400" class="Symbol">{</a><a id="5401" class="Argument">X1</a> <a id="5404" class="Symbol">=</a> <a id="5406" href="category-theory.adjunctions-large-precategories.html#5406" class="Bound">X1</a><a id="5408" class="Symbol">}</a> <a id="5410" class="Symbol">{</a><a id="5411" href="category-theory.adjunctions-large-precategories.html#5411" class="Bound">X2</a><a id="5413" class="Symbol">}</a> <a id="5415" class="Symbol">{</a><a id="5416" href="category-theory.adjunctions-large-precategories.html#5416" class="Bound">Y1</a><a id="5418" class="Symbol">}</a> <a id="5420" class="Symbol">{</a><a id="5421" href="category-theory.adjunctions-large-precategories.html#5421" class="Bound">Y2</a><a id="5423" class="Symbol">}</a> <a id="5425" href="category-theory.adjunctions-large-precategories.html#5425" class="Bound">f</a> <a id="5427" href="category-theory.adjunctions-large-precategories.html#5427" class="Bound">g</a> <a id="5429" class="Symbol">=</a>
-    <a id="5435" href="foundation.commuting-squares.html#695" class="Function">coherence-square-inv-horizontal</a>
+    <a id="5435" href="foundation.commuting-squares.html#708" class="Function">coherence-square-inv-horizontal</a>
       <a id="5473" class="Symbol">(</a> <a id="5475" href="category-theory.adjunctions-large-precategories.html#2356" class="Field">equiv-is-adjoint-pair-Large-Precat</a> <a id="5510" href="category-theory.adjunctions-large-precategories.html#5398" class="Bound">H</a> <a id="5512" href="category-theory.adjunctions-large-precategories.html#5406" class="Bound">X1</a> <a id="5515" href="category-theory.adjunctions-large-precategories.html#5416" class="Bound">Y1</a><a id="5517" class="Symbol">)</a>
       <a id="5525" class="Symbol">(</a> <a id="5527" class="Symbol">λ</a> <a id="5529" href="category-theory.adjunctions-large-precategories.html#5529" class="Bound">h</a> <a id="5531" class="Symbol">→</a>
         <a id="5541" href="category-theory.large-precategories.html#952" class="Field">comp-hom-Large-Precat</a> <a id="5563" href="category-theory.adjunctions-large-precategories.html#2157" class="Bound">C</a>
@@ -487,7 +487,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-28)(59b0033) Merge pull request #222 from EgbertRijke/equals by noreply
+(2022-06-29)(66e5c71) Merge pull request #223 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>

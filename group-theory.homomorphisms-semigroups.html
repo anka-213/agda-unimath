@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/homomorphisms-semigroups.lagda.md.</p>
-<p>Version of Tuesday, June 28, 2022, 04:53 PM</p>
+<p>Version of Wednesday, June 29, 2022, 06:41 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -39,7 +39,7 @@
 <a id="335" class="Keyword">open</a> <a id="340" class="Keyword">import</a> <a id="347" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="368" class="Keyword">using</a> <a id="374" class="Symbol">(</a><a id="375" href="foundation-core.functions.html#322" class="Function">id</a><a id="377" class="Symbol">;</a> <a id="379" href="foundation-core.functions.html#420" class="Function Operator">_∘_</a><a id="382" class="Symbol">)</a>
 <a id="384" class="Keyword">open</a> <a id="389" class="Keyword">import</a> <a id="396" href="foundation.fundamental-theorem-of-identity-types.html" class="Module">foundation.fundamental-theorem-of-identity-types</a> <a id="445" class="Keyword">using</a>
   <a id="453" class="Symbol">(</a> <a id="455" href="foundation-core.fundamental-theorem-of-identity-types.html#1904" class="Function">fundamental-theorem-id</a><a id="477" class="Symbol">)</a>
-<a id="479" class="Keyword">open</a> <a id="484" class="Keyword">import</a> <a id="491" href="foundation.homotopies.html" class="Module">foundation.homotopies</a> <a id="513" class="Keyword">using</a> <a id="519" class="Symbol">(</a><a id="520" href="foundation-core.homotopies.html#627" class="Function Operator">_~_</a><a id="523" class="Symbol">;</a> <a id="525" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a><a id="534" class="Symbol">;</a> <a id="536" href="foundation.homotopies.html#3137" class="Function">is-contr-total-htpy</a><a id="555" class="Symbol">)</a>
+<a id="479" class="Keyword">open</a> <a id="484" class="Keyword">import</a> <a id="491" href="foundation.homotopies.html" class="Module">foundation.homotopies</a> <a id="513" class="Keyword">using</a> <a id="519" class="Symbol">(</a><a id="520" href="foundation-core.homotopies.html#627" class="Function Operator">_~_</a><a id="523" class="Symbol">;</a> <a id="525" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a><a id="534" class="Symbol">;</a> <a id="536" href="foundation.homotopies.html#3155" class="Function">is-contr-total-htpy</a><a id="555" class="Symbol">)</a>
 <a id="557" class="Keyword">open</a> <a id="562" class="Keyword">import</a> <a id="569" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="595" class="Keyword">using</a> <a id="601" class="Symbol">(</a><a id="602" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a><a id="604" class="Symbol">;</a> <a id="606" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="610" class="Symbol">;</a> <a id="612" href="foundation-core.identity-types.html#4003" class="Function">ap</a><a id="614" class="Symbol">;</a> <a id="616" href="foundation-core.identity-types.html#2425" class="Function Operator">_∙_</a><a id="619" class="Symbol">)</a>
 <a id="621" class="Keyword">open</a> <a id="626" class="Keyword">import</a> <a id="633" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="657" class="Keyword">using</a>
   <a id="665" class="Symbol">(</a> <a id="667" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a><a id="674" class="Symbol">;</a> <a id="676" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a><a id="682" class="Symbol">;</a> <a id="684" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a><a id="693" class="Symbol">;</a> <a id="695" href="foundation-core.propositions.html#1309" class="Function">is-prop</a><a id="702" class="Symbol">;</a> <a id="704" href="foundation-core.propositions.html#1562" class="Function">is-prop-type-Prop</a><a id="721" class="Symbol">;</a> <a id="723" href="foundation-core.propositions.html#4298" class="Function">is-prop-is-equiv</a><a id="739" class="Symbol">;</a>
@@ -124,7 +124,7 @@
       <a id="3299" href="foundation-core.contractible-types.html#1006" class="Function">is-contr</a> <a id="3308" class="Symbol">(</a><a id="3309" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="3311" href="group-theory.homomorphisms-semigroups.html#2325" class="Function">type-hom-Semigroup</a> <a id="3330" class="Symbol">(</a><a id="3331" href="group-theory.homomorphisms-semigroups.html#2802" class="Function">htpy-hom-Semigroup</a> <a id="3350" href="group-theory.homomorphisms-semigroups.html#3267" class="Bound">f</a><a id="3351" class="Symbol">))</a>
     <a id="3358" href="group-theory.homomorphisms-semigroups.html#3224" class="Function">is-contr-total-htpy-hom-Semigroup</a> <a id="3392" href="group-theory.homomorphisms-semigroups.html#3392" class="Bound">f</a> <a id="3394" class="Symbol">=</a>
       <a id="3402" href="foundation-core.subtype-identity-principle.html#1586" class="Function">is-contr-total-Eq-subtype</a>
-        <a id="3436" class="Symbol">(</a> <a id="3438" href="foundation.homotopies.html#3137" class="Function">is-contr-total-htpy</a> <a id="3458" class="Symbol">(</a><a id="3459" href="group-theory.homomorphisms-semigroups.html#2463" class="Function">map-hom-Semigroup</a> <a id="3477" href="group-theory.homomorphisms-semigroups.html#3392" class="Bound">f</a><a id="3478" class="Symbol">))</a>
+        <a id="3436" class="Symbol">(</a> <a id="3438" href="foundation.homotopies.html#3155" class="Function">is-contr-total-htpy</a> <a id="3458" class="Symbol">(</a><a id="3459" href="group-theory.homomorphisms-semigroups.html#2463" class="Function">map-hom-Semigroup</a> <a id="3477" href="group-theory.homomorphisms-semigroups.html#3392" class="Bound">f</a><a id="3478" class="Symbol">))</a>
         <a id="3489" class="Symbol">(</a> <a id="3491" href="group-theory.homomorphisms-semigroups.html#2098" class="Function">is-prop-preserves-mul-Semigroup</a><a id="3522" class="Symbol">)</a>
         <a id="3532" class="Symbol">(</a> <a id="3534" href="group-theory.homomorphisms-semigroups.html#2463" class="Function">map-hom-Semigroup</a> <a id="3552" href="group-theory.homomorphisms-semigroups.html#3392" class="Bound">f</a><a id="3553" class="Symbol">)</a>
         <a id="3563" class="Symbol">(</a> <a id="3565" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a><a id="3574" class="Symbol">)</a>
@@ -216,7 +216,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-28)(59b0033) Merge pull request #222 from EgbertRijke/equals by noreply
+(2022-06-29)(66e5c71) Merge pull request #223 from EgbertRijke/equals by noreply
 </pre>
 </body>
 </html>

@@ -1,8 +1,10 @@
-# The subtype identity principle
+---
+title: The subtype identity principle
+---
 
-<pre class="Agda"><a id="43" class="Symbol">{-#</a> <a id="47" class="Keyword">OPTIONS</a> <a id="55" class="Pragma">--without-K</a> <a id="67" class="Pragma">--exact-split</a> <a id="81" class="Symbol">#-}</a>
+<pre class="Agda"><a id="56" class="Symbol">{-#</a> <a id="60" class="Keyword">OPTIONS</a> <a id="68" class="Pragma">--without-K</a> <a id="80" class="Pragma">--exact-split</a> <a id="94" class="Symbol">#-}</a>
 
-<a id="86" class="Keyword">module</a> <a id="93" href="foundation.subtype-identity-principle.html" class="Module">foundation.subtype-identity-principle</a> <a id="131" class="Keyword">where</a>
+<a id="99" class="Keyword">module</a> <a id="106" href="foundation.subtype-identity-principle.html" class="Module">foundation.subtype-identity-principle</a> <a id="144" class="Keyword">where</a>
 
-<a id="138" class="Keyword">open</a> <a id="143" class="Keyword">import</a> <a id="150" href="foundation-core.subtype-identity-principle.html" class="Module">foundation-core.subtype-identity-principle</a> <a id="193" class="Keyword">public</a>
+<a id="151" class="Keyword">open</a> <a id="156" class="Keyword">import</a> <a id="163" href="foundation-core.subtype-identity-principle.html" class="Module">foundation-core.subtype-identity-principle</a> <a id="206" class="Keyword">public</a>
 </pre>

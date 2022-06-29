@@ -1,10 +1,12 @@
-# Type arithmetic for dependent pair types
+---
+title: Type arithmetic for dependent pair types
+---
 
-<pre class="Agda"><a id="53" class="Symbol">{-#</a> <a id="57" class="Keyword">OPTIONS</a> <a id="65" class="Pragma">--without-K</a> <a id="77" class="Pragma">--exact-split</a> <a id="91" class="Symbol">#-}</a>
+<pre class="Agda"><a id="66" class="Symbol">{-#</a> <a id="70" class="Keyword">OPTIONS</a> <a id="78" class="Pragma">--without-K</a> <a id="90" class="Pragma">--exact-split</a> <a id="104" class="Symbol">#-}</a>
 
-<a id="96" class="Keyword">module</a> <a id="103" href="foundation.type-arithmetic-dependent-pair-types.html" class="Module">foundation.type-arithmetic-dependent-pair-types</a> <a id="151" class="Keyword">where</a>
+<a id="109" class="Keyword">module</a> <a id="116" href="foundation.type-arithmetic-dependent-pair-types.html" class="Module">foundation.type-arithmetic-dependent-pair-types</a> <a id="164" class="Keyword">where</a>
 
-<a id="158" class="Keyword">open</a> <a id="163" class="Keyword">import</a> <a id="170" href="foundation-core.type-arithmetic-dependent-pair-types.html" class="Module">foundation-core.type-arithmetic-dependent-pair-types</a> <a id="223" class="Keyword">public</a>
+<a id="171" class="Keyword">open</a> <a id="176" class="Keyword">import</a> <a id="183" href="foundation-core.type-arithmetic-dependent-pair-types.html" class="Module">foundation-core.type-arithmetic-dependent-pair-types</a> <a id="236" class="Keyword">public</a>
 </pre>
 ## Idea
 
