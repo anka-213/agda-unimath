@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Cantor space</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/set-theory/cantor-space.lagda.md.</p>
+<p>Version of Thursday, June 30, 2022, 04:24 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Cantor space</h1>
+</header>
+<pre class="Agda"><a id="38" class="Symbol">{-#</a> <a id="42" class="Keyword">OPTIONS</a> <a id="50" class="Pragma">--without-K</a> <a id="62" class="Pragma">--exact-split</a> <a id="76" class="Symbol">#-}</a>
+
+<a id="81" class="Keyword">module</a> <a id="88" href="set-theory.cantor-space.html" class="Module">set-theory.cantor-space</a> <a id="112" class="Keyword">where</a>
+
+<a id="119" class="Keyword">open</a> <a id="124" class="Keyword">import</a> <a id="131" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+
+<a id="173" class="Keyword">open</a> <a id="178" class="Keyword">import</a> <a id="185" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="213" class="Keyword">open</a> <a id="218" class="Keyword">import</a> <a id="225" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The Cantor space is the type of functions <code>ℕ → Fin 2</code>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="cantor-space"></a><a id="364" href="set-theory.cantor-space.html#364" class="Function">cantor-space</a> <a id="377" class="Symbol">:</a> <a id="379" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="382" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="388" href="set-theory.cantor-space.html#364" class="Function">cantor-space</a> <a id="401" class="Symbol">=</a> <a id="403" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a> <a id="405" class="Symbol">→</a> <a id="407" href="univalent-combinatorics.standard-finite-types.html#2149" class="Function">Fin</a> <a id="411" class="Number">2</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-06-30)(eaa9609) Merge pull request #226 from EgbertRijke/faro by noreply
+</pre>
+</body>
+</html>
