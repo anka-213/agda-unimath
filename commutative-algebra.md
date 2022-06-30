@@ -17,5 +17,5 @@ title: Commutative algebra
 <a id="618" class="Keyword">open</a> <a id="623" class="Keyword">import</a> <a id="630" href="commutative-algebra.isomorphisms-commutative-rings.html" class="Module">commutative-algebra.isomorphisms-commutative-rings</a> <a id="681" class="Keyword">public</a>
 <a id="688" class="Keyword">open</a> <a id="693" class="Keyword">import</a> <a id="700" href="commutative-algebra.local-commutative-rings.html" class="Module">commutative-algebra.local-commutative-rings</a> <a id="744" class="Keyword">public</a>
 <a id="751" class="Keyword">open</a> <a id="756" class="Keyword">import</a> <a id="763" href="commutative-algebra.prime-ideals-commutative-rings.html" class="Module">commutative-algebra.prime-ideals-commutative-rings</a> <a id="814" class="Keyword">public</a>
-<a id="821" class="Keyword">open</a> <a id="826" class="Keyword">import</a> <a id="833" href="commutative-algebra.zarisky-topology.html" class="Module">commutative-algebra.zarisky-topology</a> <a id="870" class="Keyword">public</a>
+<a id="821" class="Keyword">open</a> <a id="826" class="Keyword">import</a> <a id="833" href="commutative-algebra.zariski-topology.html" class="Module">commutative-algebra.zariski-topology</a> <a id="870" class="Keyword">public</a>
 </pre>
