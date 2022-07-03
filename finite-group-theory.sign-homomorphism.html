@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/finite-group-theory/sign-homomorphism.lagda.md.</p>
-<p>Version of Thursday, June 30, 2022, 04:23 PM</p>
+<p>Version of Sunday, July  3, 2022, 12:20 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -107,8 +107,8 @@
 <a id="4449" class="Keyword">open</a> <a id="4454" class="Keyword">import</a> <a id="4461" href="univalent-combinatorics.2-element-decidable-subtypes.html" class="Module">univalent-combinatorics.2-element-decidable-subtypes</a> <a id="4514" class="Keyword">using</a>
   <a id="4522" class="Symbol">(</a> <a id="4524" href="univalent-combinatorics.2-element-decidable-subtypes.html#4804" class="Function">2-Element-Decidable-Subtype</a><a id="4551" class="Symbol">;</a> <a id="4553" href="univalent-combinatorics.2-element-decidable-subtypes.html#10563" class="Function">standard-2-Element-Decidable-Subtype</a><a id="4589" class="Symbol">)</a>
 <a id="4591" class="Keyword">open</a> <a id="4596" class="Keyword">import</a> <a id="4603" href="univalent-combinatorics.2-element-types.html" class="Module">univalent-combinatorics.2-element-types</a> <a id="4643" class="Keyword">using</a>
-  <a id="4651" class="Symbol">(</a> <a id="4653" href="univalent-combinatorics.2-element-types.html#8394" class="Function">aut-point-Fin-two-ℕ</a><a id="4672" class="Symbol">;</a> <a id="4674" href="univalent-combinatorics.2-element-types.html#21133" class="Function">is-involution-aut-Fin-two-ℕ</a><a id="4701" class="Symbol">;</a>
-    <a id="4707" href="univalent-combinatorics.2-element-types.html#28339" class="Function">preserves-add-aut-point-Fin-two-ℕ</a><a id="4740" class="Symbol">)</a>
+  <a id="4651" class="Symbol">(</a> <a id="4653" href="univalent-combinatorics.2-element-types.html#8831" class="Function">aut-point-Fin-two-ℕ</a><a id="4672" class="Symbol">;</a> <a id="4674" href="univalent-combinatorics.2-element-types.html#21570" class="Function">is-involution-aut-Fin-two-ℕ</a><a id="4701" class="Symbol">;</a>
+    <a id="4707" href="univalent-combinatorics.2-element-types.html#28776" class="Function">preserves-add-aut-point-Fin-two-ℕ</a><a id="4740" class="Symbol">)</a>
 <a id="4742" class="Keyword">open</a> <a id="4747" class="Keyword">import</a> <a id="4754" href="univalent-combinatorics.counting.html" class="Module">univalent-combinatorics.counting</a> <a id="4787" class="Keyword">using</a>
   <a id="4795" class="Symbol">(</a> <a id="4797" href="univalent-combinatorics.counting.html#1901" class="Function">count</a><a id="4802" class="Symbol">;</a> <a id="4804" href="univalent-combinatorics.counting.html#2029" class="Function">number-of-elements-count</a><a id="4828" class="Symbol">;</a> <a id="4830" href="univalent-combinatorics.counting.html#2098" class="Function">equiv-count</a><a id="4841" class="Symbol">;</a> <a id="4843" href="univalent-combinatorics.counting.html#6142" class="Function">has-decidable-equality-count</a><a id="4871" class="Symbol">)</a>
 <a id="4873" class="Keyword">open</a> <a id="4878" class="Keyword">import</a> <a id="4885" href="univalent-combinatorics.equality-finite-types.html" class="Module">univalent-combinatorics.equality-finite-types</a> <a id="4931" class="Keyword">using</a>
@@ -258,15 +258,15 @@
 
   <a id="10820" href="finite-group-theory.sign-homomorphism.html#10820" class="Function">map-sign-homomorphism</a> <a id="10842" class="Symbol">:</a> <a id="10844" href="foundation.automorphisms.html#1297" class="Function">Aut</a> <a id="10848" class="Symbol">(</a><a id="10849" href="univalent-combinatorics.finite-types.html#5244" class="Function">type-UU-Fin-Level</a> <a id="10867" href="finite-group-theory.sign-homomorphism.html#10787" class="Bound">X</a><a id="10868" class="Symbol">)</a> <a id="10870" class="Symbol">→</a> <a id="10872" href="foundation.automorphisms.html#1297" class="Function">Aut</a> <a id="10876" class="Symbol">(</a><a id="10877" href="univalent-combinatorics.standard-finite-types.html#2149" class="Function">Fin</a> <a id="10881" class="Number">2</a><a id="10882" class="Symbol">)</a>
   <a id="10886" href="finite-group-theory.sign-homomorphism.html#10820" class="Function">map-sign-homomorphism</a> <a id="10908" href="finite-group-theory.sign-homomorphism.html#10908" class="Bound">f</a> <a id="10910" class="Symbol">=</a>
-    <a id="10916" href="univalent-combinatorics.2-element-types.html#8394" class="Function">aut-point-Fin-two-ℕ</a> <a id="10936" class="Symbol">(</a><a id="10937" href="finite-group-theory.sign-homomorphism.html#5931" class="Function">sign-homomorphism-Fin-two</a> <a id="10963" href="finite-group-theory.sign-homomorphism.html#10779" class="Bound">n</a> <a id="10965" href="finite-group-theory.sign-homomorphism.html#10787" class="Bound">X</a> <a id="10967" href="finite-group-theory.sign-homomorphism.html#10908" class="Bound">f</a><a id="10968" class="Symbol">)</a>
+    <a id="10916" href="univalent-combinatorics.2-element-types.html#8831" class="Function">aut-point-Fin-two-ℕ</a> <a id="10936" class="Symbol">(</a><a id="10937" href="finite-group-theory.sign-homomorphism.html#5931" class="Function">sign-homomorphism-Fin-two</a> <a id="10963" href="finite-group-theory.sign-homomorphism.html#10779" class="Bound">n</a> <a id="10965" href="finite-group-theory.sign-homomorphism.html#10787" class="Bound">X</a> <a id="10967" href="finite-group-theory.sign-homomorphism.html#10908" class="Bound">f</a><a id="10968" class="Symbol">)</a>
 
   <a id="10973" href="finite-group-theory.sign-homomorphism.html#10973" class="Function">preserves-comp-map-sign-homomorphism</a> <a id="11010" class="Symbol">:</a>
     <a id="11016" href="group-theory.homomorphisms-semigroups.html#1311" class="Function">preserves-mul</a> <a id="11030" href="foundation-core.equivalences.html#7869" class="Function Operator">_∘e_</a> <a id="11035" href="foundation-core.equivalences.html#7869" class="Function Operator">_∘e_</a> <a id="11040" href="finite-group-theory.sign-homomorphism.html#10820" class="Function">map-sign-homomorphism</a>
   <a id="11064" href="finite-group-theory.sign-homomorphism.html#10973" class="Function">preserves-comp-map-sign-homomorphism</a> <a id="11101" href="finite-group-theory.sign-homomorphism.html#11101" class="Bound">f</a> <a id="11103" href="finite-group-theory.sign-homomorphism.html#11103" class="Bound">g</a> <a id="11105" class="Symbol">=</a>
     <a id="11111" class="Symbol">(</a> <a id="11113" href="foundation-core.identity-types.html#4003" class="Function">ap</a>
-      <a id="11122" class="Symbol">(</a> <a id="11124" href="univalent-combinatorics.2-element-types.html#8394" class="Function">aut-point-Fin-two-ℕ</a><a id="11143" class="Symbol">)</a>
+      <a id="11122" class="Symbol">(</a> <a id="11124" href="univalent-combinatorics.2-element-types.html#8831" class="Function">aut-point-Fin-two-ℕ</a><a id="11143" class="Symbol">)</a>
       <a id="11151" class="Symbol">(</a> <a id="11153" href="finite-group-theory.sign-homomorphism.html#6095" class="Function">preserves-add-sign-homomorphism-Fin-two</a> <a id="11193" href="finite-group-theory.sign-homomorphism.html#10779" class="Bound">n</a> <a id="11195" href="finite-group-theory.sign-homomorphism.html#10787" class="Bound">X</a> <a id="11197" href="finite-group-theory.sign-homomorphism.html#11101" class="Bound">f</a> <a id="11199" href="finite-group-theory.sign-homomorphism.html#11103" class="Bound">g</a><a id="11200" class="Symbol">))</a> <a id="11203" href="foundation-core.identity-types.html#2425" class="Function Operator">∙</a>
-    <a id="11209" class="Symbol">(</a> <a id="11211" href="univalent-combinatorics.2-element-types.html#28339" class="Function">preserves-add-aut-point-Fin-two-ℕ</a>
+    <a id="11209" class="Symbol">(</a> <a id="11211" href="univalent-combinatorics.2-element-types.html#28776" class="Function">preserves-add-aut-point-Fin-two-ℕ</a>
       <a id="11251" class="Symbol">(</a> <a id="11253" href="finite-group-theory.sign-homomorphism.html#5931" class="Function">sign-homomorphism-Fin-two</a> <a id="11279" href="finite-group-theory.sign-homomorphism.html#10779" class="Bound">n</a> <a id="11281" href="finite-group-theory.sign-homomorphism.html#10787" class="Bound">X</a> <a id="11283" href="finite-group-theory.sign-homomorphism.html#11101" class="Bound">f</a><a id="11284" class="Symbol">)</a>
       <a id="11292" class="Symbol">(</a> <a id="11294" href="finite-group-theory.sign-homomorphism.html#5931" class="Function">sign-homomorphism-Fin-two</a> <a id="11320" href="finite-group-theory.sign-homomorphism.html#10779" class="Bound">n</a> <a id="11322" href="finite-group-theory.sign-homomorphism.html#10787" class="Bound">X</a> <a id="11324" href="finite-group-theory.sign-homomorphism.html#11103" class="Bound">g</a><a id="11325" class="Symbol">))</a>
   
@@ -287,7 +287,7 @@
         <a id="11824" class="Symbol">(</a> <a id="11826" href="finite-group-theory.transpositions.html#8449" class="Function">transposition</a> <a id="11840" href="finite-group-theory.sign-homomorphism.html#11612" class="Bound">Y</a><a id="11841" class="Symbol">))</a>
       <a id="11850" href="univalent-combinatorics.standard-finite-types.html#11858" class="Function">equiv-succ-Fin</a>
   <a id="11867" href="finite-group-theory.sign-homomorphism.html#11569" class="Function">eq-sign-homomorphism-transposition</a> <a id="11902" href="finite-group-theory.sign-homomorphism.html#11902" class="Bound">Y</a> <a id="11904" class="Symbol">=</a>
-    <a id="11910" href="foundation-core.identity-types.html#4003" class="Function">ap</a> <a id="11913" href="univalent-combinatorics.2-element-types.html#8394" class="Function">aut-point-Fin-two-ℕ</a>
+    <a id="11910" href="foundation-core.identity-types.html#4003" class="Function">ap</a> <a id="11913" href="univalent-combinatorics.2-element-types.html#8831" class="Function">aut-point-Fin-two-ℕ</a>
       <a id="11939" class="Symbol">(</a> <a id="11941" href="foundation-core.identity-types.html#4003" class="Function">ap</a> <a id="11944" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a>
         <a id="11956" class="Symbol">{</a> <a id="11958" class="Argument">x</a> <a id="11960" class="Symbol">=</a> <a id="11962" href="foundation-core.contractible-types.html#1098" class="Function">center</a> <a id="11969" class="Symbol">(</a><a id="11970" href="finite-group-theory.permutations.html#20688" class="Function">is-contr-parity-transposition-permutation</a> <a id="12012" href="finite-group-theory.sign-homomorphism.html#10779" class="Bound">n</a> <a id="12014" href="finite-group-theory.sign-homomorphism.html#10787" class="Bound">X</a> <a id="12016" class="Symbol">(</a><a id="12017" href="finite-group-theory.transpositions.html#8449" class="Function">transposition</a> <a id="12031" href="finite-group-theory.sign-homomorphism.html#11902" class="Bound">Y</a><a id="12032" class="Symbol">))}</a>
         <a id="12044" class="Symbol">{</a> <a id="12046" class="Argument">y</a> <a id="12048" class="Symbol">=</a>
@@ -823,7 +823,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-06-30)(eaa9609) Merge pull request #226 from EgbertRijke/faro by noreply
+(2022-07-03)(1e1746f) Merge pull request #227 from EgbertRijke/hydrocarbons by noreply
 </pre>
 </body>
 </html>

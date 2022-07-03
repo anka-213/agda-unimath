@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Complete undirected graphs</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/graph-theory/complete-undirected-graphs.lagda.md.</p>
+<p>Version of Sunday, July  3, 2022, 12:21 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Complete undirected graphs</h1>
+</header>
+<pre class="Agda"><a id="52" class="Symbol">{-#</a> <a id="56" class="Keyword">OPTIONS</a> <a id="64" class="Pragma">--without-K</a> <a id="76" class="Pragma">--exact-split</a> <a id="90" class="Symbol">#-}</a>
+
+<a id="95" class="Keyword">module</a> <a id="102" href="graph-theory.complete-undirected-graphs.html" class="Module">graph-theory.complete-undirected-graphs</a> <a id="142" class="Keyword">where</a>
+
+<a id="149" class="Keyword">open</a> <a id="154" class="Keyword">import</a> <a id="161" href="graph-theory.complete-multipartite-graphs.html" class="Module">graph-theory.complete-multipartite-graphs</a>
+<a id="203" class="Keyword">open</a> <a id="208" class="Keyword">import</a> <a id="215" href="graph-theory.finite-graphs.html" class="Module">graph-theory.finite-graphs</a>
+
+<a id="243" class="Keyword">open</a> <a id="248" class="Keyword">import</a> <a id="255" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A complete undirected graph is a complete multipartite graph in which every block has exactly one vertex. In other words, it is an undirected graph in which every vertex is connected to every other vertex.</p>
+<p>There are many ways of presenting complete undirected graphs. For example, the type of edges in a complete undirected graph is a 2-element subtype of the type of its vertices.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="complete-Undirected-Graph-𝔽"></a><a id="713" href="graph-theory.complete-undirected-graphs.html#713" class="Function">complete-Undirected-Graph-𝔽</a> <a id="741" class="Symbol">:</a> <a id="743" href="univalent-combinatorics.finite-types.html#4635" class="Function">𝔽</a> <a id="745" class="Symbol">→</a> <a id="747" href="graph-theory.finite-graphs.html#1298" class="Function">Undirected-Graph-𝔽</a>
+<a id="766" href="graph-theory.complete-undirected-graphs.html#713" class="Function">complete-Undirected-Graph-𝔽</a> <a id="794" href="graph-theory.complete-undirected-graphs.html#794" class="Bound">X</a> <a id="796" class="Symbol">=</a> <a id="798" href="graph-theory.complete-multipartite-graphs.html#826" class="Function">complete-multipartite-Undirected-Graph-𝔽</a> <a id="839" href="graph-theory.complete-undirected-graphs.html#794" class="Bound">X</a> <a id="841" class="Symbol">(λ</a> <a id="844" href="graph-theory.complete-undirected-graphs.html#844" class="Bound">x</a> <a id="846" class="Symbol">→</a> <a id="848" href="univalent-combinatorics.finite-types.html#8664" class="Function">unit-𝔽</a><a id="854" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-07-03)(1e1746f) Merge pull request #227 from EgbertRijke/hydrocarbons by noreply
+</pre>
+</body>
+</html>

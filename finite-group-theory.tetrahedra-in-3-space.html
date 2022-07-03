@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Tetrahedra in 3-dimensional space</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/finite-group-theory/tetrahedra-in-3-space.lagda.md.</p>
+<p>Version of Sunday, July  3, 2022, 12:20 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Tetrahedra in 3-dimensional space</h1>
+</header>
+<pre class="Agda"><a id="59" class="Symbol">{-#</a> <a id="63" class="Keyword">OPTIONS</a> <a id="71" class="Pragma">--without-K</a> <a id="83" class="Pragma">--exact-split</a> <a id="97" class="Symbol">#-}</a>
+
+<a id="102" class="Keyword">module</a> <a id="109" href="finite-group-theory.tetrahedra-in-3-space.html" class="Module">finite-group-theory.tetrahedra-in-3-space</a> <a id="151" class="Keyword">where</a>
+
+<a id="158" class="Keyword">open</a> <a id="163" class="Keyword">import</a> <a id="170" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="202" class="Keyword">open</a> <a id="207" class="Keyword">import</a> <a id="214" href="foundation.empty-types.html" class="Module">foundation.empty-types</a>
+<a id="237" class="Keyword">open</a> <a id="242" class="Keyword">import</a> <a id="249" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="277" class="Keyword">open</a> <a id="282" class="Keyword">import</a> <a id="289" href="univalent-combinatorics.2-element-decidable-subtypes.html" class="Module">univalent-combinatorics.2-element-decidable-subtypes</a>
+<a id="342" class="Keyword">open</a> <a id="347" class="Keyword">import</a> <a id="354" href="univalent-combinatorics.cyclic-types.html" class="Module">univalent-combinatorics.cyclic-types</a>
+<a id="391" class="Keyword">open</a> <a id="396" class="Keyword">import</a> <a id="403" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The type of tetrahedra in 3-dimensional space is a type of tetrahedra that can be rotated, but not reflected. In other words, the symmetry group of the tetrahedra in 3-dimensional space is the alternating group <code>A₄</code>.</p>
+<p>Note that any rotation of a tetrahedron in 3-space induces a rotation on the set of opposing pairs of edges. There are three such pairs of edges.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="tetrahedron-in-3-space"></a><a id="842" href="finite-group-theory.tetrahedra-in-3-space.html#842" class="Function">tetrahedron-in-3-space</a> <a id="865" class="Symbol">:</a> <a id="867" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="870" class="Symbol">(</a><a id="871" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="876" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="881" class="Symbol">)</a>
+<a id="883" href="finite-group-theory.tetrahedra-in-3-space.html#842" class="Function">tetrahedron-in-3-space</a> <a id="906" class="Symbol">=</a>
+  <a id="910" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="912" class="Symbol">(</a> <a id="914" href="univalent-combinatorics.finite-types.html#5610" class="Function">UU-Fin</a> <a id="921" class="Number">4</a><a id="922" class="Symbol">)</a>
+    <a id="928" class="Symbol">(</a> <a id="930" class="Symbol">λ</a> <a id="932" href="finite-group-theory.tetrahedra-in-3-space.html#932" class="Bound">X</a> <a id="934" class="Symbol">→</a>
+      <a id="942" href="univalent-combinatorics.cyclic-types.html#5286" class="Function">cyclic-structure</a> <a id="959" class="Number">3</a>
+        <a id="969" class="Symbol">(</a> <a id="971" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="973" class="Symbol">(</a> <a id="975" href="univalent-combinatorics.2-element-decidable-subtypes.html#4804" class="Function">2-Element-Decidable-Subtype</a> <a id="1003" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+              <a id="1023" class="Symbol">(</a> <a id="1025" href="univalent-combinatorics.2-element-decidable-subtypes.html#4804" class="Function">2-Element-Decidable-Subtype</a> <a id="1053" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+                <a id="1075" class="Symbol">(</a> <a id="1077" href="univalent-combinatorics.finite-types.html#5672" class="Function">type-UU-Fin</a> <a id="1089" href="finite-group-theory.tetrahedra-in-3-space.html#932" class="Bound">X</a><a id="1090" class="Symbol">)))</a>
+            <a id="1106" class="Symbol">(</a> <a id="1108" class="Symbol">λ</a> <a id="1110" href="finite-group-theory.tetrahedra-in-3-space.html#1110" class="Bound">Q</a> <a id="1112" class="Symbol">→</a>
+              <a id="1128" class="Symbol">(</a><a id="1129" href="finite-group-theory.tetrahedra-in-3-space.html#1129" class="Bound">x</a> <a id="1131" class="Symbol">:</a> <a id="1133" href="univalent-combinatorics.finite-types.html#5672" class="Function">type-UU-Fin</a> <a id="1145" href="finite-group-theory.tetrahedra-in-3-space.html#932" class="Bound">X</a><a id="1146" class="Symbol">)</a> <a id="1148" class="Symbol">→</a>
+              <a id="1164" href="foundation-core.empty-types.html#1228" class="Function">is-empty</a>
+                <a id="1189" class="Symbol">(</a> <a id="1191" class="Symbol">(</a><a id="1192" href="finite-group-theory.tetrahedra-in-3-space.html#1192" class="Bound">P</a> <a id="1194" class="Symbol">:</a> <a id="1196" href="univalent-combinatorics.2-element-decidable-subtypes.html#6306" class="Function">type-2-Element-Decidable-Subtype</a> <a id="1229" href="finite-group-theory.tetrahedra-in-3-space.html#1110" class="Bound">Q</a><a id="1230" class="Symbol">)</a> <a id="1232" class="Symbol">→</a>
+                  <a id="1252" href="univalent-combinatorics.2-element-decidable-subtypes.html#5685" class="Function">is-in-2-Element-Decidable-Subtype</a>
+                    <a id="1306" class="Symbol">(</a><a id="1307" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1311" href="finite-group-theory.tetrahedra-in-3-space.html#1192" class="Bound">P</a><a id="1312" class="Symbol">)</a>
+                    <a id="1334" class="Symbol">(</a> <a id="1336" href="finite-group-theory.tetrahedra-in-3-space.html#1129" class="Bound">x</a><a id="1337" class="Symbol">)))))</a>
+
+<a id="1344" class="Keyword">module</a> <a id="1351" href="finite-group-theory.tetrahedra-in-3-space.html#1351" class="Module">_</a>
+  <a id="1355" class="Symbol">(</a><a id="1356" href="finite-group-theory.tetrahedra-in-3-space.html#1356" class="Bound">T</a> <a id="1358" class="Symbol">:</a> <a id="1360" href="finite-group-theory.tetrahedra-in-3-space.html#842" class="Function">tetrahedron-in-3-space</a><a id="1382" class="Symbol">)</a>
+  <a id="1386" class="Keyword">where</a>
+
+  <a id="1395" href="finite-group-theory.tetrahedra-in-3-space.html#1395" class="Function">vertex-tetrahedron-in-3-space</a> <a id="1425" class="Symbol">:</a> <a id="1427" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1430" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+  <a id="1438" href="finite-group-theory.tetrahedra-in-3-space.html#1395" class="Function">vertex-tetrahedron-in-3-space</a> <a id="1468" class="Symbol">=</a> <a id="1470" href="univalent-combinatorics.finite-types.html#5672" class="Function">type-UU-Fin</a> <a id="1482" class="Symbol">(</a><a id="1483" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1487" href="finite-group-theory.tetrahedra-in-3-space.html#1356" class="Bound">T</a><a id="1488" class="Symbol">)</a>
+
+  <a id="1493" href="finite-group-theory.tetrahedra-in-3-space.html#1493" class="Function">cyclic-structure-tetrahedron-in-3-space</a> <a id="1533" class="Symbol">:</a>
+    <a id="1539" href="univalent-combinatorics.cyclic-types.html#5286" class="Function">cyclic-structure</a> <a id="1556" class="Number">3</a>
+      <a id="1564" class="Symbol">(</a> <a id="1566" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="1568" class="Symbol">(</a> <a id="1570" href="univalent-combinatorics.2-element-decidable-subtypes.html#4804" class="Function">2-Element-Decidable-Subtype</a> <a id="1598" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+            <a id="1616" class="Symbol">(</a> <a id="1618" href="univalent-combinatorics.2-element-decidable-subtypes.html#4804" class="Function">2-Element-Decidable-Subtype</a> <a id="1646" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+              <a id="1666" class="Symbol">(</a> <a id="1668" href="finite-group-theory.tetrahedra-in-3-space.html#1395" class="Function">vertex-tetrahedron-in-3-space</a><a id="1697" class="Symbol">)))</a>
+          <a id="1711" class="Symbol">(</a> <a id="1713" class="Symbol">λ</a> <a id="1715" href="finite-group-theory.tetrahedra-in-3-space.html#1715" class="Bound">Q</a> <a id="1717" class="Symbol">→</a>
+            <a id="1731" class="Symbol">(</a><a id="1732" href="finite-group-theory.tetrahedra-in-3-space.html#1732" class="Bound">x</a> <a id="1734" class="Symbol">:</a> <a id="1736" href="finite-group-theory.tetrahedra-in-3-space.html#1395" class="Function">vertex-tetrahedron-in-3-space</a><a id="1765" class="Symbol">)</a> <a id="1767" class="Symbol">→</a>
+            <a id="1781" href="foundation-core.empty-types.html#1228" class="Function">is-empty</a>
+              <a id="1804" class="Symbol">(</a> <a id="1806" class="Symbol">(</a><a id="1807" href="finite-group-theory.tetrahedra-in-3-space.html#1807" class="Bound">P</a> <a id="1809" class="Symbol">:</a> <a id="1811" href="univalent-combinatorics.2-element-decidable-subtypes.html#6306" class="Function">type-2-Element-Decidable-Subtype</a> <a id="1844" href="finite-group-theory.tetrahedra-in-3-space.html#1715" class="Bound">Q</a><a id="1845" class="Symbol">)</a> <a id="1847" class="Symbol">→</a>
+                <a id="1865" href="univalent-combinatorics.2-element-decidable-subtypes.html#5685" class="Function">is-in-2-Element-Decidable-Subtype</a>
+                  <a id="1917" class="Symbol">(</a><a id="1918" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1922" href="finite-group-theory.tetrahedra-in-3-space.html#1807" class="Bound">P</a><a id="1923" class="Symbol">)</a>
+                  <a id="1943" class="Symbol">(</a> <a id="1945" href="finite-group-theory.tetrahedra-in-3-space.html#1732" class="Bound">x</a><a id="1946" class="Symbol">))))</a>
+  <a id="1953" href="finite-group-theory.tetrahedra-in-3-space.html#1493" class="Function">cyclic-structure-tetrahedron-in-3-space</a> <a id="1993" class="Symbol">=</a> <a id="1995" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1999" href="finite-group-theory.tetrahedra-in-3-space.html#1356" class="Bound">T</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-07-03)(1e1746f) Merge pull request #227 from EgbertRijke/hydrocarbons by noreply
+</pre>
+</body>
+</html>
