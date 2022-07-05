@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Alkanes</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/organic-chemistry/alkanes.lagda.md.</p>
+<p>Version of Tuesday, July  5, 2022, 05:56 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Alkanes</h1>
+</header>
+<pre class="Agda"><a id="33" class="Symbol">{-#</a> <a id="37" class="Keyword">OPTIONS</a> <a id="45" class="Pragma">--without-K</a> <a id="57" class="Pragma">--exact-split</a> <a id="71" class="Symbol">#-}</a>
+
+<a id="76" class="Keyword">module</a> <a id="83" href="organic-chemistry.alkanes.html" class="Module">organic-chemistry.alkanes</a> <a id="109" class="Keyword">where</a>
+
+<a id="116" class="Keyword">open</a> <a id="121" class="Keyword">import</a> <a id="128" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="156" class="Keyword">open</a> <a id="161" class="Keyword">import</a> <a id="168" href="organic-chemistry.saturated-carbons.html" class="Module">organic-chemistry.saturated-carbons</a>
+<a id="204" class="Keyword">open</a> <a id="209" class="Keyword">import</a> <a id="216" href="organic-chemistry.hydrocarbons.html" class="Module">organic-chemistry.hydrocarbons</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>An <strong>alkane</strong> is a hydrocarbon that only has saturated carbons, i.e., it does not have any double or triple carbon-carbon bonds.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="is-alkane-hydrocarbon"></a><a id="414" href="organic-chemistry.alkanes.html#414" class="Function">is-alkane-hydrocarbon</a> <a id="436" class="Symbol">:</a> <a id="438" href="organic-chemistry.hydrocarbons.html#1564" class="Function">hydrocarbon</a> <a id="450" class="Symbol">→</a> <a id="452" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a>
+<a id="455" href="organic-chemistry.alkanes.html#414" class="Function">is-alkane-hydrocarbon</a> <a id="477" href="organic-chemistry.alkanes.html#477" class="Bound">H</a> <a id="479" class="Symbol">=</a> <a id="481" class="Symbol">∀</a> <a id="483" href="organic-chemistry.alkanes.html#483" class="Bound">c</a> <a id="485" class="Symbol">→</a> <a id="487" href="organic-chemistry.saturated-carbons.html#823" class="Function">is-saturated-carbon-hydrocarbon</a> <a id="519" href="organic-chemistry.alkanes.html#477" class="Bound">H</a> <a id="521" href="organic-chemistry.alkanes.html#483" class="Bound">c</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-07-05)(f5db74f) Merge pull request #231 from plt-amy/alkanes-enes-ynes by noreply
+</pre>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Alkynes</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/organic-chemistry/alkynes.lagda.md.</p>
+<p>Version of Tuesday, July  5, 2022, 05:56 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Alkynes</h1>
+</header>
+<pre class="Agda"><a id="33" class="Symbol">{-#</a> <a id="37" class="Keyword">OPTIONS</a> <a id="45" class="Pragma">--without-K</a> <a id="57" class="Pragma">--exact-split</a> <a id="71" class="Symbol">#-}</a>
+
+<a id="76" class="Keyword">module</a> <a id="83" href="organic-chemistry.alkynes.html" class="Module">organic-chemistry.alkynes</a> <a id="109" class="Keyword">where</a>
+
+<a id="116" class="Keyword">open</a> <a id="121" class="Keyword">import</a> <a id="128" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+
+<a id="170" class="Keyword">open</a> <a id="175" class="Keyword">import</a> <a id="182" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="214" class="Keyword">open</a> <a id="219" class="Keyword">import</a> <a id="226" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="253" class="Keyword">open</a> <a id="258" class="Keyword">import</a> <a id="265" href="foundation.embeddings.html" class="Module">foundation.embeddings</a>
+
+<a id="288" class="Keyword">open</a> <a id="293" class="Keyword">import</a> <a id="300" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
+
+<a id="338" class="Keyword">open</a> <a id="343" class="Keyword">import</a> <a id="350" href="organic-chemistry.saturated-carbons.html" class="Module">organic-chemistry.saturated-carbons</a>
+<a id="386" class="Keyword">open</a> <a id="391" class="Keyword">import</a> <a id="398" href="organic-chemistry.hydrocarbons.html" class="Module">organic-chemistry.hydrocarbons</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>An <strong>n-alkyne</strong> is a hydrocarbon equipped with a choice of <span class="math inline">\(n\)</span> carbons, each of which has a triple bond.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="n-alkyne"></a><a id="572" href="organic-chemistry.alkynes.html#572" class="Function">n-alkyne</a> <a id="581" class="Symbol">:</a> <a id="583" href="organic-chemistry.hydrocarbons.html#1564" class="Function">hydrocarbon</a> <a id="595" class="Symbol">→</a> <a id="597" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a> <a id="599" class="Symbol">→</a> <a id="601" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="604" class="Symbol">(</a><a id="605" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="610" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="615" class="Symbol">)</a>
+<a id="617" href="organic-chemistry.alkynes.html#572" class="Function">n-alkyne</a> <a id="626" href="organic-chemistry.alkynes.html#626" class="Bound">H</a> <a id="628" href="organic-chemistry.alkynes.html#628" class="Bound">n</a> <a id="630" class="Symbol">=</a>
+  <a id="634" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="636" class="Symbol">(</a><a id="637" href="univalent-combinatorics.finite-types.html#5610" class="Function">UU-Fin</a> <a id="644" href="organic-chemistry.alkynes.html#628" class="Bound">n</a><a id="645" class="Symbol">)</a> <a id="647" class="Symbol">λ</a> <a id="649" href="organic-chemistry.alkynes.html#649" class="Bound">carbons</a> <a id="657" class="Symbol">→</a>
+    <a id="663" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="665" class="Symbol">(</a><a id="666" href="univalent-combinatorics.finite-types.html#5672" class="Function">type-UU-Fin</a> <a id="678" href="organic-chemistry.alkynes.html#649" class="Bound">carbons</a> <a id="686" href="foundation-core.embeddings.html#1074" class="Function Operator">↪</a> <a id="688" href="organic-chemistry.hydrocarbons.html#2657" class="Function">vertex-hydrocarbon</a> <a id="707" href="organic-chemistry.alkynes.html#626" class="Bound">H</a><a id="708" class="Symbol">)</a> <a id="710" class="Symbol">λ</a> <a id="712" href="organic-chemistry.alkynes.html#712" class="Bound">embed-carbons</a> <a id="726" class="Symbol">→</a>
+      <a id="734" class="Symbol">(</a><a id="735" href="organic-chemistry.alkynes.html#735" class="Bound">c</a> <a id="737" class="Symbol">:</a> <a id="739" href="univalent-combinatorics.finite-types.html#5672" class="Function">type-UU-Fin</a> <a id="751" href="organic-chemistry.alkynes.html#649" class="Bound">carbons</a><a id="758" class="Symbol">)</a> <a id="760" class="Symbol">→</a> <a id="762" href="organic-chemistry.saturated-carbons.html#1828" class="Function">has-triple-bond-hydrocarbon</a> <a id="790" href="organic-chemistry.alkynes.html#626" class="Bound">H</a> <a id="792" class="Symbol">(</a><a id="793" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="797" href="organic-chemistry.alkynes.html#712" class="Bound">embed-carbons</a> <a id="811" href="organic-chemistry.alkynes.html#735" class="Bound">c</a><a id="812" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-07-05)(f5db74f) Merge pull request #231 from plt-amy/alkanes-enes-ynes by noreply
+</pre>
+</body>
+</html>
