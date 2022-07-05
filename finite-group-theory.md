@@ -13,5 +13,6 @@
 <a id="472" class="Keyword">open</a> <a id="477" class="Keyword">import</a> <a id="484" href="finite-group-theory.orbits-permutations.html" class="Module">finite-group-theory.orbits-permutations</a> <a id="524" class="Keyword">public</a>
 <a id="531" class="Keyword">open</a> <a id="536" class="Keyword">import</a> <a id="543" href="finite-group-theory.permutations.html" class="Module">finite-group-theory.permutations</a> <a id="576" class="Keyword">public</a>
 <a id="583" class="Keyword">open</a> <a id="588" class="Keyword">import</a> <a id="595" href="finite-group-theory.sign-homomorphism.html" class="Module">finite-group-theory.sign-homomorphism</a> <a id="633" class="Keyword">public</a>
-<a id="640" class="Keyword">open</a> <a id="645" class="Keyword">import</a> <a id="652" href="finite-group-theory.transpositions.html" class="Module">finite-group-theory.transpositions</a> <a id="687" class="Keyword">public</a>
+<a id="640" class="Keyword">open</a> <a id="645" class="Keyword">import</a> <a id="652" href="finite-group-theory.tetrahedra-in-3-space.html" class="Module">finite-group-theory.tetrahedra-in-3-space</a> <a id="694" class="Keyword">public</a>
+<a id="701" class="Keyword">open</a> <a id="706" class="Keyword">import</a> <a id="713" href="finite-group-theory.transpositions.html" class="Module">finite-group-theory.transpositions</a> <a id="748" class="Keyword">public</a>
 </pre>
