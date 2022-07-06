@@ -77,7 +77,7 @@ title: Cyclic types
 <a id="3723" class="Keyword">open</a> <a id="3728" class="Keyword">import</a> <a id="3735" href="synthetic-homotopy-theory.loop-spaces.html" class="Module">synthetic-homotopy-theory.loop-spaces</a> <a id="3773" class="Keyword">using</a> <a id="3779" class="Symbol">(</a><a id="3780" href="synthetic-homotopy-theory.loop-spaces.html#1115" class="Function">type-Ω</a><a id="3786" class="Symbol">)</a>
 
 <a id="3789" class="Keyword">open</a> <a id="3794" class="Keyword">import</a> <a id="3801" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="3847" class="Keyword">using</a>
-  <a id="3855" class="Symbol">(</a> <a id="3857" href="univalent-combinatorics.standard-finite-types.html#2149" class="Function">Fin</a><a id="3860" class="Symbol">;</a> <a id="3862" href="univalent-combinatorics.standard-finite-types.html#7668" class="Function">succ-Fin</a><a id="3870" class="Symbol">;</a> <a id="3872" href="univalent-combinatorics.standard-finite-types.html#7792" class="Function">Fin-Endo</a><a id="3880" class="Symbol">)</a>
+  <a id="3855" class="Symbol">(</a> <a id="3857" href="univalent-combinatorics.standard-finite-types.html#2293" class="Function">Fin</a><a id="3860" class="Symbol">;</a> <a id="3862" href="univalent-combinatorics.standard-finite-types.html#7812" class="Function">succ-Fin</a><a id="3870" class="Symbol">;</a> <a id="3872" href="univalent-combinatorics.standard-finite-types.html#7936" class="Function">Fin-Endo</a><a id="3880" class="Symbol">)</a>
 </pre>
 ## Idea
 

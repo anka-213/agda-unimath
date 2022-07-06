@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/2-element-subtypes.lagda.md.</p>
-<p>Version of Tuesday, July  5, 2022, 05:57 PM</p>
+<p>Version of Wednesday, July  6, 2022, 04:34 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -79,7 +79,7 @@
     <a id="2408" href="univalent-combinatorics.2-element-types.html#22867" class="Function">map-swap-2-Element-Type</a><a id="2431" class="Symbol">;</a> <a id="2433" href="univalent-combinatorics.2-element-types.html#23627" class="Function">compute-swap-2-Element-Type</a><a id="2460" class="Symbol">;</a>
     <a id="2466" href="univalent-combinatorics.2-element-types.html#6081" class="Function">is-inhabited-2-Element-Type</a><a id="2493" class="Symbol">)</a>
 <a id="2495" class="Keyword">open</a> <a id="2500" class="Keyword">import</a> <a id="2507" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="2553" class="Keyword">using</a>
-  <a id="2561" class="Symbol">(</a> <a id="2563" href="univalent-combinatorics.standard-finite-types.html#2149" class="Function">Fin</a><a id="2566" class="Symbol">;</a> <a id="2568" href="univalent-combinatorics.standard-finite-types.html#4439" class="Function">is-contr-Fin-one-ℕ</a><a id="2586" class="Symbol">)</a>
+  <a id="2561" class="Symbol">(</a> <a id="2563" href="univalent-combinatorics.standard-finite-types.html#2293" class="Function">Fin</a><a id="2566" class="Symbol">;</a> <a id="2568" href="univalent-combinatorics.standard-finite-types.html#4583" class="Function">is-contr-Fin-one-ℕ</a><a id="2586" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>A 2-element subtype of a type <code>A</code> is a subtype <code>P</code> of <code>A</code> of which its underlying type <code>Σ A P</code> has cardinality 2. Such a subtype is said to be decidable if the proposition <code>P x</code> is decidable for every <code>x : A</code>.</p>
@@ -158,13 +158,13 @@
     <a id="5568" href="foundation-core.subtypes.html#2555" class="Function">type-subtype</a> <a id="5581" href="univalent-combinatorics.2-element-subtypes.html#5238" class="Function">subtype-standard-2-Element-Subtype</a>
 
   <a id="5619" href="univalent-combinatorics.2-element-subtypes.html#5619" class="Function">equiv-type-standard-2-Element-Subtype</a> <a id="5657" class="Symbol">:</a>
-    <a id="5663" href="univalent-combinatorics.standard-finite-types.html#2149" class="Function">Fin</a> <a id="5667" class="Number">2</a> <a id="5669" href="foundation-core.equivalences.html#1621" class="Function Operator">≃</a> <a id="5671" href="univalent-combinatorics.2-element-subtypes.html#5489" class="Function">type-standard-2-Element-Subtype</a>
+    <a id="5663" href="univalent-combinatorics.standard-finite-types.html#2293" class="Function">Fin</a> <a id="5667" class="Number">2</a> <a id="5669" href="foundation-core.equivalences.html#1621" class="Function Operator">≃</a> <a id="5671" href="univalent-combinatorics.2-element-subtypes.html#5489" class="Function">type-standard-2-Element-Subtype</a>
   <a id="5705" href="univalent-combinatorics.2-element-subtypes.html#5619" class="Function">equiv-type-standard-2-Element-Subtype</a> <a id="5743" class="Symbol">=</a>
     <a id="5749" class="Symbol">(</a> <a id="5751" href="foundation-core.equivalences.html#5721" class="Function">inv-equiv</a>
       <a id="5767" class="Symbol">(</a> <a id="5769" href="foundation.type-arithmetic-coproduct-types.html#7387" class="Function">left-distributive-Σ-coprod</a> <a id="5796" class="Symbol">(</a><a id="5797" href="foundation-core.sets.html#1304" class="Function">type-Set</a> <a id="5806" href="univalent-combinatorics.2-element-subtypes.html#4762" class="Bound">X</a><a id="5807" class="Symbol">)</a> <a id="5809" class="Symbol">(</a><a id="5810" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a> <a id="5813" href="univalent-combinatorics.2-element-subtypes.html#4777" class="Bound">x</a><a id="5814" class="Symbol">)</a> <a id="5816" class="Symbol">(</a><a id="5817" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a> <a id="5820" href="univalent-combinatorics.2-element-subtypes.html#4779" class="Bound">y</a><a id="5821" class="Symbol">)))</a> <a id="5825" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
     <a id="5832" class="Symbol">(</a> <a id="5834" href="foundation.functoriality-coproduct-types.html#4586" class="Function">equiv-coprod</a>
       <a id="5853" class="Symbol">(</a> <a id="5855" href="foundation-core.contractible-types.html#4311" class="Function">equiv-is-contr</a>
-        <a id="5878" class="Symbol">(</a> <a id="5880" href="univalent-combinatorics.standard-finite-types.html#4439" class="Function">is-contr-Fin-one-ℕ</a><a id="5898" class="Symbol">)</a>
+        <a id="5878" class="Symbol">(</a> <a id="5880" href="univalent-combinatorics.standard-finite-types.html#4583" class="Function">is-contr-Fin-one-ℕ</a><a id="5898" class="Symbol">)</a>
         <a id="5908" class="Symbol">(</a> <a id="5910" href="foundation-core.contractible-types.html#2046" class="Function">is-contr-total-path</a> <a id="5930" href="univalent-combinatorics.2-element-subtypes.html#4777" class="Bound">x</a><a id="5931" class="Symbol">))</a>
       <a id="5940" class="Symbol">(</a> <a id="5942" href="foundation-core.contractible-types.html#4311" class="Function">equiv-is-contr</a>
         <a id="5965" class="Symbol">(</a> <a id="5967" href="foundation.unit-type.html#2024" class="Function">is-contr-unit</a><a id="5980" class="Symbol">)</a>
@@ -289,7 +289,7 @@ module _
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-05)(f5db74f) Merge pull request #231 from plt-amy/alkanes-enes-ynes by noreply
+(2022-07-06)(93fe279) Merge pull request #233 from plt-amy/min-max-finite-types by noreply
 </pre>
 </body>
 </html>

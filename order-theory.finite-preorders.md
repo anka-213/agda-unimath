@@ -38,7 +38,7 @@
   <a id="1801" class="Symbol">(</a> <a id="1803" href="univalent-combinatorics.finite-types.html#4153" class="Function">is-finite-Prop</a><a id="1817" class="Symbol">;</a> <a id="1819" href="univalent-combinatorics.finite-types.html#4244" class="Function">is-finite</a><a id="1828" class="Symbol">;</a> <a id="1830" href="univalent-combinatorics.finite-types.html#4635" class="Function">𝔽</a><a id="1831" class="Symbol">;</a> <a id="1833" href="univalent-combinatorics.finite-types.html#4683" class="Function">type-𝔽</a><a id="1839" class="Symbol">;</a> <a id="1841" href="univalent-combinatorics.finite-types.html#4734" class="Function">is-finite-type-𝔽</a><a id="1857" class="Symbol">;</a>
     <a id="1863" href="univalent-combinatorics.finite-types.html#13493" class="Function">number-of-elements-is-finite</a><a id="1891" class="Symbol">;</a> <a id="1893" href="univalent-combinatorics.finite-types.html#13670" class="Function">mere-equiv-is-finite</a><a id="1913" class="Symbol">)</a>
 <a id="1915" class="Keyword">open</a> <a id="1920" class="Keyword">import</a> <a id="1927" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="1973" class="Keyword">using</a>
-  <a id="1981" class="Symbol">(</a> <a id="1983" href="univalent-combinatorics.standard-finite-types.html#2149" class="Function">Fin</a><a id="1986" class="Symbol">)</a>
+  <a id="1981" class="Symbol">(</a> <a id="1983" href="univalent-combinatorics.standard-finite-types.html#2293" class="Function">Fin</a><a id="1986" class="Symbol">)</a>
 </pre>
 ## Finite preorders
 
@@ -119,7 +119,7 @@ We say that a preorder X is finite if X has finitely many elements and the order
     <a id="4558" href="univalent-combinatorics.finite-types.html#13493" class="Function">number-of-elements-is-finite</a> <a id="4587" href="order-theory.finite-preorders.html#4318" class="Function">is-finite-element-Finite-Preorder</a>
 
   <a id="4624" href="order-theory.finite-preorders.html#4624" class="Function">mere-equiv-element-Finite-Preorder</a> <a id="4659" class="Symbol">:</a>
-    <a id="4665" href="foundation.mere-equivalences.html#1415" class="Function">mere-equiv</a> <a id="4676" class="Symbol">(</a><a id="4677" href="univalent-combinatorics.standard-finite-types.html#2149" class="Function">Fin</a> <a id="4681" href="order-theory.finite-preorders.html#4476" class="Function">number-of-elements-Finite-Preorder</a><a id="4715" class="Symbol">)</a> <a id="4717" href="order-theory.finite-preorders.html#4219" class="Function">element-Finite-Preorder</a>
+    <a id="4665" href="foundation.mere-equivalences.html#1415" class="Function">mere-equiv</a> <a id="4676" class="Symbol">(</a><a id="4677" href="univalent-combinatorics.standard-finite-types.html#2293" class="Function">Fin</a> <a id="4681" href="order-theory.finite-preorders.html#4476" class="Function">number-of-elements-Finite-Preorder</a><a id="4715" class="Symbol">)</a> <a id="4717" href="order-theory.finite-preorders.html#4219" class="Function">element-Finite-Preorder</a>
   <a id="4743" href="order-theory.finite-preorders.html#4624" class="Function">mere-equiv-element-Finite-Preorder</a> <a id="4778" class="Symbol">=</a>
     <a id="4784" href="univalent-combinatorics.finite-types.html#13670" class="Function">mere-equiv-is-finite</a> <a id="4805" href="order-theory.finite-preorders.html#4318" class="Function">is-finite-element-Finite-Preorder</a>
 

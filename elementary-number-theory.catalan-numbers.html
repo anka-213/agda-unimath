@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/elementary-number-theory/catalan-numbers.lagda.md.</p>
-<p>Version of Tuesday, July  5, 2022, 05:55 PM</p>
+<p>Version of Wednesday, July  6, 2022, 04:32 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -49,7 +49,7 @@
 <a id="728" class="Keyword">open</a> <a id="733" class="Keyword">import</a> <a id="740" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="767" class="Keyword">using</a> <a id="773" class="Symbol">(</a><a id="774" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="776" class="Symbol">;</a> <a id="778" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="783" class="Symbol">)</a>
 
 <a id="786" class="Keyword">open</a> <a id="791" class="Keyword">import</a> <a id="798" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="844" class="Keyword">using</a>
-  <a id="852" class="Symbol">(</a> <a id="854" href="univalent-combinatorics.standard-finite-types.html#5670" class="Function">nat-Fin</a><a id="861" class="Symbol">;</a> <a id="863" href="univalent-combinatorics.standard-finite-types.html#5771" class="Function">strict-upper-bound-nat-Fin</a><a id="889" class="Symbol">)</a>
+  <a id="852" class="Symbol">(</a> <a id="854" href="univalent-combinatorics.standard-finite-types.html#5814" class="Function">nat-Fin</a><a id="861" class="Symbol">;</a> <a id="863" href="univalent-combinatorics.standard-finite-types.html#5915" class="Function">strict-upper-bound-nat-Fin</a><a id="889" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>The Catalan numbers are a sequence of natural numbers that occur in several combinatorics problems.</p>
@@ -61,15 +61,15 @@
       <a id="1133" href="elementary-number-theory.sums-of-natural-numbers.html#1432" class="Function">sum-Fin-ℕ</a> <a id="1143" class="Symbol">{</a><a id="1144" class="Argument">k</a> <a id="1146" class="Symbol">=</a> <a id="1148" href="elementary-number-theory.catalan-numbers.html#1121" class="Bound">k</a><a id="1149" class="Symbol">}</a>
         <a id="1159" class="Symbol">(</a> <a id="1161" class="Symbol">λ</a> <a id="1163" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a> <a id="1165" class="Symbol">→</a>
           <a id="1177" href="elementary-number-theory.multiplication-natural-numbers.html#1358" class="Function">mul-ℕ</a>
-            <a id="1195" class="Symbol">(</a> <a id="1197" href="elementary-number-theory.catalan-numbers.html#1123" class="Bound">C</a> <a id="1199" class="Symbol">(</a> <a id="1201" href="univalent-combinatorics.standard-finite-types.html#5670" class="Function">nat-Fin</a> <a id="1209" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1210" class="Symbol">)</a>
-                <a id="1228" class="Symbol">(</a> <a id="1230" href="elementary-number-theory.inequality-natural-numbers.html#13330" class="Function">leq-le-ℕ</a> <a id="1239" class="Symbol">{</a><a id="1240" class="Argument">x</a> <a id="1242" class="Symbol">=</a> <a id="1244" href="univalent-combinatorics.standard-finite-types.html#5670" class="Function">nat-Fin</a> <a id="1252" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1253" class="Symbol">}</a> <a id="1255" class="Symbol">(</a><a id="1256" href="univalent-combinatorics.standard-finite-types.html#5771" class="Function">strict-upper-bound-nat-Fin</a> <a id="1283" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1284" class="Symbol">)))</a>
-            <a id="1300" class="Symbol">(</a> <a id="1302" href="elementary-number-theory.catalan-numbers.html#1123" class="Bound">C</a> <a id="1304" class="Symbol">(</a> <a id="1306" href="elementary-number-theory.distance-natural-numbers.html#1255" class="Function">dist-ℕ</a> <a id="1313" class="Symbol">(</a><a id="1314" href="univalent-combinatorics.standard-finite-types.html#5670" class="Function">nat-Fin</a> <a id="1322" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1323" class="Symbol">)</a> <a id="1325" href="elementary-number-theory.catalan-numbers.html#1121" class="Bound">k</a><a id="1326" class="Symbol">)</a>
+            <a id="1195" class="Symbol">(</a> <a id="1197" href="elementary-number-theory.catalan-numbers.html#1123" class="Bound">C</a> <a id="1199" class="Symbol">(</a> <a id="1201" href="univalent-combinatorics.standard-finite-types.html#5814" class="Function">nat-Fin</a> <a id="1209" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1210" class="Symbol">)</a>
+                <a id="1228" class="Symbol">(</a> <a id="1230" href="elementary-number-theory.inequality-natural-numbers.html#13330" class="Function">leq-le-ℕ</a> <a id="1239" class="Symbol">{</a><a id="1240" class="Argument">x</a> <a id="1242" class="Symbol">=</a> <a id="1244" href="univalent-combinatorics.standard-finite-types.html#5814" class="Function">nat-Fin</a> <a id="1252" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1253" class="Symbol">}</a> <a id="1255" class="Symbol">(</a><a id="1256" href="univalent-combinatorics.standard-finite-types.html#5915" class="Function">strict-upper-bound-nat-Fin</a> <a id="1283" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1284" class="Symbol">)))</a>
+            <a id="1300" class="Symbol">(</a> <a id="1302" href="elementary-number-theory.catalan-numbers.html#1123" class="Bound">C</a> <a id="1304" class="Symbol">(</a> <a id="1306" href="elementary-number-theory.distance-natural-numbers.html#1255" class="Function">dist-ℕ</a> <a id="1313" class="Symbol">(</a><a id="1314" href="univalent-combinatorics.standard-finite-types.html#5814" class="Function">nat-Fin</a> <a id="1322" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1323" class="Symbol">)</a> <a id="1325" href="elementary-number-theory.catalan-numbers.html#1121" class="Bound">k</a><a id="1326" class="Symbol">)</a>
                 <a id="1344" class="Symbol">(</a> <a id="1346" href="elementary-number-theory.distance-natural-numbers.html#6955" class="Function">leq-dist-ℕ</a>
-                  <a id="1375" class="Symbol">(</a> <a id="1377" href="univalent-combinatorics.standard-finite-types.html#5670" class="Function">nat-Fin</a> <a id="1385" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1386" class="Symbol">)</a>
+                  <a id="1375" class="Symbol">(</a> <a id="1377" href="univalent-combinatorics.standard-finite-types.html#5814" class="Function">nat-Fin</a> <a id="1385" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1386" class="Symbol">)</a>
                   <a id="1406" class="Symbol">(</a> <a id="1408" href="elementary-number-theory.catalan-numbers.html#1121" class="Bound">k</a><a id="1409" class="Symbol">)</a>
                   <a id="1429" class="Symbol">(</a> <a id="1431" href="elementary-number-theory.inequality-natural-numbers.html#13330" class="Function">leq-le-ℕ</a>
-                    <a id="1460" class="Symbol">{</a> <a id="1462" class="Argument">x</a> <a id="1464" class="Symbol">=</a> <a id="1466" href="univalent-combinatorics.standard-finite-types.html#5670" class="Function">nat-Fin</a> <a id="1474" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1475" class="Symbol">}</a>
-                    <a id="1497" class="Symbol">(</a> <a id="1499" href="univalent-combinatorics.standard-finite-types.html#5771" class="Function">strict-upper-bound-nat-Fin</a> <a id="1526" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1527" class="Symbol">))))))</a>
+                    <a id="1460" class="Symbol">{</a> <a id="1462" class="Argument">x</a> <a id="1464" class="Symbol">=</a> <a id="1466" href="univalent-combinatorics.standard-finite-types.html#5814" class="Function">nat-Fin</a> <a id="1474" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1475" class="Symbol">}</a>
+                    <a id="1497" class="Symbol">(</a> <a id="1499" href="univalent-combinatorics.standard-finite-types.html#5915" class="Function">strict-upper-bound-nat-Fin</a> <a id="1526" href="elementary-number-theory.catalan-numbers.html#1163" class="Bound">i</a><a id="1527" class="Symbol">))))))</a>
 
 <a id="catalan-numbers-binomial"></a><a id="1535" href="elementary-number-theory.catalan-numbers.html#1535" class="Function">catalan-numbers-binomial</a> <a id="1560" class="Symbol">:</a> <a id="1562" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a> <a id="1564" class="Symbol">→</a> <a id="1566" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a>
 <a id="1568" href="elementary-number-theory.catalan-numbers.html#1535" class="Function">catalan-numbers-binomial</a> <a id="1593" href="elementary-number-theory.catalan-numbers.html#1593" class="Bound">n</a> <a id="1595" class="Symbol">=</a>
@@ -77,7 +77,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-05)(f5db74f) Merge pull request #231 from plt-amy/alkanes-enes-ynes by noreply
+(2022-07-06)(93fe279) Merge pull request #233 from plt-amy/min-max-finite-types by noreply
 </pre>
 </body>
 </html>
