@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Quotients of finite types</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/univalent-combinatorics/quotients-finite-types.lagda.md.</p>
+<p>Version of Wednesday, July  6, 2022, 09:43 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Quotients of finite types</h1>
+</header>
+<pre class="Agda"><a id="51" class="Symbol">{-#</a> <a id="55" class="Keyword">OPTIONS</a> <a id="63" class="Pragma">--without-K</a> <a id="75" class="Pragma">--exact-split</a> <a id="89" class="Pragma">--allow-unsolved-metas</a> <a id="112" class="Symbol">#-}</a>
+
+<a id="117" class="Keyword">module</a> <a id="124" href="univalent-combinatorics.quotients-finite-types.html" class="Module">univalent-combinatorics.quotients-finite-types</a> <a id="171" class="Keyword">where</a>
+
+<a id="178" class="Keyword">open</a> <a id="183" class="Keyword">import</a> <a id="190" href="foundation.equivalence-classes.html" class="Module">foundation.equivalence-classes</a>
+<a id="221" class="Keyword">open</a> <a id="226" class="Keyword">import</a> <a id="233" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="261" class="Keyword">open</a> <a id="266" class="Keyword">import</a> <a id="273" href="univalent-combinatorics.decidable-equivalence-relations.html" class="Module">univalent-combinatorics.decidable-equivalence-relations</a>
+<a id="329" class="Keyword">open</a> <a id="334" class="Keyword">import</a> <a id="341" href="univalent-combinatorics.image-of-maps.html" class="Module">univalent-combinatorics.image-of-maps</a>
+<a id="379" class="Keyword">open</a> <a id="384" class="Keyword">import</a> <a id="391" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The quotient of a finite type by a decidable equivalence relation is again a finite type. In this file we set up some infrastructure for such quotients.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="619" class="Keyword">module</a> <a id="626" href="univalent-combinatorics.quotients-finite-types.html#626" class="Module">_</a>
+  <a id="630" class="Symbol">(</a><a id="631" href="univalent-combinatorics.quotients-finite-types.html#631" class="Bound">X</a> <a id="633" class="Symbol">:</a> <a id="635" href="univalent-combinatorics.finite-types.html#4635" class="Function">𝔽</a><a id="636" class="Symbol">)</a> <a id="638" class="Symbol">(</a><a id="639" href="univalent-combinatorics.quotients-finite-types.html#639" class="Bound">R</a> <a id="641" class="Symbol">:</a> <a id="643" href="univalent-combinatorics.decidable-equivalence-relations.html#663" class="Function">Decidable-Equivalence-Relation-𝔽</a> <a id="676" href="univalent-combinatorics.quotients-finite-types.html#631" class="Bound">X</a><a id="677" class="Symbol">)</a>
+  <a id="681" class="Keyword">where</a>
+
+  <a id="690" href="univalent-combinatorics.quotients-finite-types.html#690" class="Function">equivalence-class-Decidable-Equivalence-Relation-𝔽</a> <a id="741" class="Symbol">:</a> <a id="743" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="746" class="Symbol">(</a><a id="747" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="752" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="757" class="Symbol">)</a>
+  <a id="761" href="univalent-combinatorics.quotients-finite-types.html#690" class="Function">equivalence-class-Decidable-Equivalence-Relation-𝔽</a> <a id="812" class="Symbol">=</a>
+    <a id="818" href="foundation.equivalence-classes.html#2706" class="Function">equivalence-class</a>
+      <a id="842" class="Symbol">(</a> <a id="844" href="univalent-combinatorics.decidable-equivalence-relations.html#2144" class="Function">equivalence-relation-Decidable-Equivalence-Relation-𝔽</a> <a id="898" href="univalent-combinatorics.quotients-finite-types.html#631" class="Bound">X</a> <a id="900" href="univalent-combinatorics.quotients-finite-types.html#639" class="Bound">R</a><a id="901" class="Symbol">)</a>
+
+  <a id="906" href="univalent-combinatorics.quotients-finite-types.html#906" class="Function">is-finite-equivalence-class-Decidable-Equivalence-Relation-𝔽&#39;</a> <a id="968" class="Symbol">:</a>
+    <a id="974" href="univalent-combinatorics.finite-types.html#4244" class="Function">is-finite</a> <a id="984" href="univalent-combinatorics.quotients-finite-types.html#690" class="Function">equivalence-class-Decidable-Equivalence-Relation-𝔽</a>
+  <a id="1037" href="univalent-combinatorics.quotients-finite-types.html#906" class="Function">is-finite-equivalence-class-Decidable-Equivalence-Relation-𝔽&#39;</a> <a id="1099" class="Symbol">=</a>
+    <a id="1105" href="univalent-combinatorics.image-of-maps.html#1501" class="Function">is-finite-im</a>
+      <a id="1124" class="Symbol">(</a> <a id="1126" href="univalent-combinatorics.finite-types.html#4734" class="Function">is-finite-type-𝔽</a> <a id="1143" href="univalent-combinatorics.quotients-finite-types.html#631" class="Bound">X</a><a id="1144" class="Symbol">)</a>
+      <a id="1152" class="Hole">{!!}</a>
+
+  <a id="1160" href="univalent-combinatorics.quotients-finite-types.html#1160" class="Function">quotient-𝔽</a> <a id="1171" class="Symbol">:</a> <a id="1173" href="univalent-combinatorics.finite-types.html#4635" class="Function">𝔽</a>
+  <a id="1177" href="univalent-combinatorics.quotients-finite-types.html#1160" class="Function">quotient-𝔽</a> <a id="1188" class="Symbol">=</a> <a id="1190" class="Hole">{!!}</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-07-06)(0810395) Merge pull request #236 from EgbertRijke/operations-species by noreply
+</pre>
+</body>
+</html>

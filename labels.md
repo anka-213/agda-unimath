@@ -450,7 +450,7 @@ The following names are taken from the Latex code of the book using the regex `\
 <pre class="Agda"><a id="ch:subgroups"></a><a id="10784" href="labels.html#10784" class="UnsolvedMeta Function">ch:subgroups</a> <a id="10797" class="Symbol">=</a> <a id="10799" class="Hole">{!!}</a>
 <a id="sec:subgp-overview"></a><a id="10804" href="labels.html#10804" class="UnsolvedMeta Function">sec:subgp-overview</a> <a id="10823" class="Symbol">=</a> <a id="10825" class="Hole">{!!}</a>
 <a id="sec:subgroups"></a><a id="10830" href="labels.html#10830" class="UnsolvedMeta Function">sec:subgroups</a> <a id="10844" class="Symbol">=</a> <a id="10846" class="Hole">{!!}</a>
-<a id="def:typeofmono"></a><a id="10851" href="labels.html#10851" class="Function">def:typeofmono</a> <a id="10866" class="Symbol">=</a> <a id="10868" href="group-theory.concrete-subgroups.html#1212" class="Function">mono-Concrete-Group</a>
+<a id="def:typeofmono"></a><a id="10851" href="labels.html#10851" class="Function">def:typeofmono</a> <a id="10866" class="Symbol">=</a> <a id="10868" href="group-theory.concrete-subgroups.html#1700" class="Function">mono-Concrete-Group</a>
 <a id="ex:sigma2inSigma3"></a><a id="10888" href="labels.html#10888" class="UnsolvedMeta Function">ex:sigma2inSigma3</a> <a id="10906" class="Symbol">=</a> <a id="10908" class="Hole">{!!}</a>
 <a id="ex:prodinclismono"></a><a id="10913" href="labels.html#10913" class="UnsolvedMeta Function">ex:prodinclismono</a> <a id="10931" class="Symbol">=</a> <a id="10933" class="Hole">{!!}</a>
 <a id="lem:setofsubgroups"></a><a id="10938" href="labels.html#10938" class="UnsolvedMeta Function">lem:setofsubgroups</a> <a id="10957" class="Symbol">=</a> <a id="10959" class="Hole">{!!}</a>

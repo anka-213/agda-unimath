@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/finite-types.lagda.md.</p>
-<p>Version of Wednesday, July  6, 2022, 04:34 PM</p>
+<p>Version of Wednesday, July  6, 2022, 09:43 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -58,7 +58,7 @@
   <a id="1252" class="Symbol">(</a> <a id="1254" href="foundation.decidable-equality.html#1799" class="Function">has-decidable-equality</a><a id="1276" class="Symbol">;</a> <a id="1278" href="foundation.decidable-equality.html#7773" class="Function">has-decidable-equality-Prop</a><a id="1305" class="Symbol">;</a>
     <a id="1311" href="foundation.decidable-equality.html#4824" class="Function">has-decidable-equality-equiv&#39;</a><a id="1340" class="Symbol">)</a>
 <a id="1342" class="Keyword">open</a> <a id="1347" class="Keyword">import</a> <a id="1354" href="foundation.decidable-propositions.html" class="Module">foundation.decidable-propositions</a> <a id="1388" class="Keyword">using</a>
-  <a id="1396" class="Symbol">(</a> <a id="1398" href="foundation.decidable-propositions.html#2032" class="Function">decidable-Prop</a><a id="1412" class="Symbol">;</a> <a id="1414" href="foundation.decidable-propositions.html#5334" class="Function">equiv-bool-decidable-Prop</a><a id="1439" class="Symbol">)</a>
+  <a id="1396" class="Symbol">(</a> <a id="1398" href="foundation.decidable-propositions.html#2357" class="Function">decidable-Prop</a><a id="1412" class="Symbol">;</a> <a id="1414" href="foundation.decidable-propositions.html#6128" class="Function">equiv-bool-decidable-Prop</a><a id="1439" class="Symbol">)</a>
 <a id="1441" class="Keyword">open</a> <a id="1446" class="Keyword">import</a> <a id="1453" href="foundation.decidable-types.html" class="Module">foundation.decidable-types</a> <a id="1480" class="Keyword">using</a>
   <a id="1488" class="Symbol">(</a> <a id="1490" href="foundation.decidable-types.html#1918" class="Function">is-decidable</a><a id="1502" class="Symbol">;</a> <a id="1504" href="foundation.decidable-types.html#2200" class="Function">is-inhabited-or-empty</a><a id="1525" class="Symbol">;</a> <a id="1527" href="foundation.decidable-types.html#7459" class="Function">is-inhabited-or-empty-Prop</a><a id="1553" class="Symbol">;</a>
     <a id="1559" href="foundation.decidable-types.html#5063" class="Function">is-decidable-iff</a><a id="1575" class="Symbol">)</a>
@@ -320,9 +320,9 @@
 <a id="10322" href="univalent-combinatorics.finite-types.html#10290" class="Function">is-finite-bool</a> <a id="10337" class="Symbol">=</a> <a id="10339" href="univalent-combinatorics.finite-types.html#6503" class="Function">is-finite-equiv</a> <a id="10355" href="univalent-combinatorics.standard-finite-types.html#5559" class="Function">equiv-bool-Fin-two-ℕ</a> <a id="10376" href="univalent-combinatorics.finite-types.html#9654" class="Function">is-finite-Fin</a>
 </pre>
 <h3 id="the-type-of-decidable-propositions-of-any-universe-level-is-finite">The type of decidable propositions of any universe level is finite</h3>
-<pre class="Agda"><a id="is-finite-decidable-Prop"></a><a id="10475" href="univalent-combinatorics.finite-types.html#10475" class="Function">is-finite-decidable-Prop</a> <a id="10500" class="Symbol">:</a> <a id="10502" class="Symbol">{</a><a id="10503" href="univalent-combinatorics.finite-types.html#10503" class="Bound">l</a> <a id="10505" class="Symbol">:</a> <a id="10507" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="10512" class="Symbol">}</a> <a id="10514" class="Symbol">→</a> <a id="10516" href="univalent-combinatorics.finite-types.html#4244" class="Function">is-finite</a> <a id="10526" class="Symbol">(</a><a id="10527" href="foundation.decidable-propositions.html#2032" class="Function">decidable-Prop</a> <a id="10542" href="univalent-combinatorics.finite-types.html#10503" class="Bound">l</a><a id="10543" class="Symbol">)</a>
+<pre class="Agda"><a id="is-finite-decidable-Prop"></a><a id="10475" href="univalent-combinatorics.finite-types.html#10475" class="Function">is-finite-decidable-Prop</a> <a id="10500" class="Symbol">:</a> <a id="10502" class="Symbol">{</a><a id="10503" href="univalent-combinatorics.finite-types.html#10503" class="Bound">l</a> <a id="10505" class="Symbol">:</a> <a id="10507" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="10512" class="Symbol">}</a> <a id="10514" class="Symbol">→</a> <a id="10516" href="univalent-combinatorics.finite-types.html#4244" class="Function">is-finite</a> <a id="10526" class="Symbol">(</a><a id="10527" href="foundation.decidable-propositions.html#2357" class="Function">decidable-Prop</a> <a id="10542" href="univalent-combinatorics.finite-types.html#10503" class="Bound">l</a><a id="10543" class="Symbol">)</a>
 <a id="10545" href="univalent-combinatorics.finite-types.html#10475" class="Function">is-finite-decidable-Prop</a> <a id="10570" class="Symbol">{</a><a id="10571" href="univalent-combinatorics.finite-types.html#10571" class="Bound">l</a><a id="10572" class="Symbol">}</a> <a id="10574" class="Symbol">=</a>
-  <a id="10578" href="univalent-combinatorics.finite-types.html#7043" class="Function">is-finite-equiv&#39;</a> <a id="10595" href="foundation.decidable-propositions.html#5334" class="Function">equiv-bool-decidable-Prop</a> <a id="10621" href="univalent-combinatorics.finite-types.html#10290" class="Function">is-finite-bool</a>
+  <a id="10578" href="univalent-combinatorics.finite-types.html#7043" class="Function">is-finite-equiv&#39;</a> <a id="10595" href="foundation.decidable-propositions.html#6128" class="Function">equiv-bool-decidable-Prop</a> <a id="10621" href="univalent-combinatorics.finite-types.html#10290" class="Function">is-finite-bool</a>
 </pre>
 <h3 id="the-types-ℤ-mod-k-are-finite-for-nonzero-natural-numbers-k">The types <code>ℤ-Mod k</code> are finite for nonzero natural numbers <code>k</code></h3>
 <pre class="Agda"><a id="10717" class="Keyword">abstract</a>
@@ -688,7 +688,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-06)(93fe279) Merge pull request #233 from plt-amy/min-max-finite-types by noreply
+(2022-07-06)(0810395) Merge pull request #236 from EgbertRijke/operations-species by noreply
 </pre>
 </body>
 </html>

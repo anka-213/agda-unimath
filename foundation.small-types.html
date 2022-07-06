@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/small-types.lagda.md.</p>
-<p>Version of Wednesday, July  6, 2022, 04:33 PM</p>
+<p>Version of Wednesday, July  6, 2022, 09:42 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -39,7 +39,7 @@
 <a id="162" class="Keyword">open</a> <a id="167" class="Keyword">import</a> <a id="174" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="204" class="Keyword">using</a>
   <a id="212" class="Symbol">(</a> <a id="214" href="foundation-core.contractible-types.html#1006" class="Function">is-contr</a><a id="222" class="Symbol">;</a> <a id="224" href="foundation-core.contractible-types.html#4311" class="Function">equiv-is-contr</a><a id="238" class="Symbol">;</a> <a id="240" href="foundation-core.contractible-types.html#3813" class="Function">is-contr-equiv&#39;</a><a id="255" class="Symbol">)</a>
 <a id="257" class="Keyword">open</a> <a id="262" class="Keyword">import</a> <a id="269" href="foundation.decidable-propositions.html" class="Module">foundation.decidable-propositions</a> <a id="303" class="Keyword">using</a>
-  <a id="311" class="Symbol">(</a> <a id="313" href="foundation.decidable-propositions.html#2032" class="Function">decidable-Prop</a><a id="327" class="Symbol">;</a> <a id="329" href="foundation.decidable-propositions.html#5334" class="Function">equiv-bool-decidable-Prop</a><a id="354" class="Symbol">)</a>
+  <a id="311" class="Symbol">(</a> <a id="313" href="foundation.decidable-propositions.html#2357" class="Function">decidable-Prop</a><a id="327" class="Symbol">;</a> <a id="329" href="foundation.decidable-propositions.html#6128" class="Function">equiv-bool-decidable-Prop</a><a id="354" class="Symbol">)</a>
 <a id="356" class="Keyword">open</a> <a id="361" class="Keyword">import</a> <a id="368" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="400" class="Keyword">using</a> <a id="406" class="Symbol">(</a><a id="407" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="408" class="Symbol">;</a> <a id="410" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="414" class="Symbol">;</a> <a id="416" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="419" class="Symbol">;</a> <a id="421" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="424" class="Symbol">)</a>
 <a id="426" class="Keyword">open</a> <a id="431" class="Keyword">import</a> <a id="438" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="462" class="Keyword">using</a>
   <a id="470" class="Symbol">(</a> <a id="472" href="foundation-core.equivalences.html#1621" class="Function Operator">_≃_</a><a id="475" class="Symbol">;</a> <a id="477" href="foundation-core.equivalences.html#1821" class="Function">map-equiv</a><a id="486" class="Symbol">;</a> <a id="488" href="foundation-core.equivalences.html#1876" class="Function">is-equiv-map-equiv</a><a id="506" class="Symbol">;</a> <a id="508" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a><a id="521" class="Symbol">;</a> <a id="523" href="foundation-core.equivalences.html#7869" class="Function Operator">_∘e_</a><a id="527" class="Symbol">;</a> <a id="529" href="foundation-core.equivalences.html#5721" class="Function">inv-equiv</a><a id="538" class="Symbol">;</a>
@@ -158,10 +158,10 @@
 <h3 id="the-type-of-decidable-propositions-in-any-universe-is-small">The type of decidable propositions in any universe is small</h3>
 <pre class="Agda"><a id="4773" class="Keyword">abstract</a>
   <a id="is-small-decidable-Prop"></a><a id="4784" href="foundation.small-types.html#4784" class="Function">is-small-decidable-Prop</a> <a id="4808" class="Symbol">:</a>
-    <a id="4814" class="Symbol">(</a><a id="4815" href="foundation.small-types.html#4815" class="Bound">l1</a> <a id="4818" href="foundation.small-types.html#4818" class="Bound">l2</a> <a id="4821" class="Symbol">:</a> <a id="4823" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="4828" class="Symbol">)</a> <a id="4830" class="Symbol">→</a> <a id="4832" href="foundation.small-types.html#1607" class="Function">is-small</a> <a id="4841" href="foundation.small-types.html#4818" class="Bound">l2</a> <a id="4844" class="Symbol">(</a><a id="4845" href="foundation.decidable-propositions.html#2032" class="Function">decidable-Prop</a> <a id="4860" href="foundation.small-types.html#4815" class="Bound">l1</a><a id="4862" class="Symbol">)</a>
+    <a id="4814" class="Symbol">(</a><a id="4815" href="foundation.small-types.html#4815" class="Bound">l1</a> <a id="4818" href="foundation.small-types.html#4818" class="Bound">l2</a> <a id="4821" class="Symbol">:</a> <a id="4823" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="4828" class="Symbol">)</a> <a id="4830" class="Symbol">→</a> <a id="4832" href="foundation.small-types.html#1607" class="Function">is-small</a> <a id="4841" href="foundation.small-types.html#4818" class="Bound">l2</a> <a id="4844" class="Symbol">(</a><a id="4845" href="foundation.decidable-propositions.html#2357" class="Function">decidable-Prop</a> <a id="4860" href="foundation.small-types.html#4815" class="Bound">l1</a><a id="4862" class="Symbol">)</a>
   <a id="4866" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="4870" class="Symbol">(</a><a id="4871" href="foundation.small-types.html#4784" class="Function">is-small-decidable-Prop</a> <a id="4895" href="foundation.small-types.html#4895" class="Bound">l1</a> <a id="4898" href="foundation.small-types.html#4898" class="Bound">l2</a><a id="4900" class="Symbol">)</a> <a id="4902" class="Symbol">=</a> <a id="4904" href="foundation.raising-universe-levels.html#973" class="Datatype">raise</a> <a id="4910" href="foundation.small-types.html#4898" class="Bound">l2</a> <a id="4913" href="foundation.booleans.html#1184" class="Datatype">bool</a>
   <a id="4920" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="4924" class="Symbol">(</a><a id="4925" href="foundation.small-types.html#4784" class="Function">is-small-decidable-Prop</a> <a id="4949" href="foundation.small-types.html#4949" class="Bound">l1</a> <a id="4952" href="foundation.small-types.html#4952" class="Bound">l2</a><a id="4954" class="Symbol">)</a> <a id="4956" class="Symbol">=</a>
-    <a id="4962" href="foundation.raising-universe-levels.html#1550" class="Function">equiv-raise</a> <a id="4974" href="foundation.small-types.html#4952" class="Bound">l2</a> <a id="4977" href="foundation.booleans.html#1184" class="Datatype">bool</a> <a id="4982" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a> <a id="4985" href="foundation.decidable-propositions.html#5334" class="Function">equiv-bool-decidable-Prop</a>
+    <a id="4962" href="foundation.raising-universe-levels.html#1550" class="Function">equiv-raise</a> <a id="4974" href="foundation.small-types.html#4952" class="Bound">l2</a> <a id="4977" href="foundation.booleans.html#1184" class="Datatype">bool</a> <a id="4982" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a> <a id="4985" href="foundation.decidable-propositions.html#6128" class="Function">equiv-bool-decidable-Prop</a>
 </pre>
 <h3 id="being-small-is-a-property">Being small is a property</h3>
 <pre class="Agda"><a id="5055" class="Keyword">abstract</a>
@@ -192,7 +192,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-06)(93fe279) Merge pull request #233 from plt-amy/min-max-finite-types by noreply
+(2022-07-06)(0810395) Merge pull request #236 from EgbertRijke/operations-species by noreply
 </pre>
 </body>
 </html>
