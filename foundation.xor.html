@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/xor.lagda.md.</p>
-<p>Version of Friday, July  8, 2022, 10:14 AM</p>
+<p>Version of Friday, July  8, 2022, 11:22 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -47,7 +47,7 @@
   <a id="606" class="Symbol">(</a> <a id="608" href="foundation.decidable-types.html#1918" class="Function">is-decidable</a><a id="620" class="Symbol">;</a> <a id="622" href="foundation.decidable-types.html#2966" class="Function">is-decidable-coprod</a><a id="641" class="Symbol">;</a> <a id="643" href="foundation.decidable-types.html#3336" class="Function">is-decidable-prod</a><a id="660" class="Symbol">;</a> <a id="662" href="foundation.decidable-types.html#4753" class="Function">is-decidable-neg</a><a id="678" class="Symbol">)</a>
 <a id="680" class="Keyword">open</a> <a id="685" class="Keyword">import</a> <a id="692" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="724" class="Keyword">using</a> <a id="730" class="Symbol">(</a><a id="731" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="732" class="Symbol">;</a> <a id="734" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="737" class="Symbol">;</a> <a id="739" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="742" class="Symbol">;</a> <a id="744" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="748" class="Symbol">)</a>
 <a id="750" class="Keyword">open</a> <a id="755" class="Keyword">import</a> <a id="762" href="foundation.empty-types.html" class="Module">foundation.empty-types</a> <a id="785" class="Keyword">using</a> <a id="791" class="Symbol">(</a><a id="792" href="foundation-core.empty-types.html#1160" class="Function">ex-falso</a><a id="800" class="Symbol">)</a>
-<a id="802" class="Keyword">open</a> <a id="807" class="Keyword">import</a> <a id="814" href="foundation.equality-dependent-pair-types.html" class="Module">foundation.equality-dependent-pair-types</a> <a id="855" class="Keyword">using</a> <a id="861" class="Symbol">(</a><a id="862" href="foundation.equality-dependent-pair-types.html#1375" class="Function">eq-pair-Σ</a><a id="871" class="Symbol">)</a>
+<a id="802" class="Keyword">open</a> <a id="807" class="Keyword">import</a> <a id="814" href="foundation.equality-dependent-pair-types.html" class="Module">foundation.equality-dependent-pair-types</a> <a id="855" class="Keyword">using</a> <a id="861" class="Symbol">(</a><a id="862" href="foundation.equality-dependent-pair-types.html#1481" class="Function">eq-pair-Σ</a><a id="871" class="Symbol">)</a>
 <a id="873" class="Keyword">open</a> <a id="878" class="Keyword">import</a> <a id="885" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="909" class="Keyword">using</a>
   <a id="917" class="Symbol">(</a> <a id="919" href="foundation-core.equivalences.html#1621" class="Function Operator">_≃_</a><a id="922" class="Symbol">;</a> <a id="924" href="foundation-core.equivalences.html#7869" class="Function Operator">_∘e_</a><a id="928" class="Symbol">;</a> <a id="930" href="foundation-core.equivalences.html#5721" class="Function">inv-equiv</a><a id="939" class="Symbol">;</a> <a id="941" href="foundation-core.equivalences.html#1556" class="Function">is-equiv</a><a id="949" class="Symbol">;</a> <a id="951" href="foundation-core.equivalences.html#2494" class="Function">id-equiv</a><a id="959" class="Symbol">)</a>
 <a id="961" class="Keyword">open</a> <a id="966" class="Keyword">import</a> <a id="973" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="994" class="Keyword">using</a> <a id="1000" class="Symbol">(</a><a id="1001" href="foundation-core.functions.html#420" class="Function Operator">_∘_</a><a id="1004" class="Symbol">)</a>
@@ -151,7 +151,7 @@
   <a id="4956" href="foundation.xor.html#4956" class="Function">cases-is-prop-type-commutative-xor-Prop</a> <a id="4996" class="Symbol">:</a>
     <a id="5002" href="foundation.decidable-types.html#1918" class="Function">is-decidable</a> <a id="5015" class="Symbol">(</a><a id="5016" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="5020" href="foundation.xor.html#4787" class="Bound">x</a> <a id="5022" href="foundation-core.identity-types.html#1865" class="Function Operator">＝</a> <a id="5024" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="5028" href="foundation.xor.html#4789" class="Bound">y</a><a id="5029" class="Symbol">)</a> <a id="5031" class="Symbol">→</a> <a id="5033" href="foundation.xor.html#4787" class="Bound">x</a> <a id="5035" href="foundation-core.identity-types.html#1865" class="Function Operator">＝</a> <a id="5037" href="foundation.xor.html#4789" class="Bound">y</a>
   <a id="5041" href="foundation.xor.html#4956" class="Function">cases-is-prop-type-commutative-xor-Prop</a> <a id="5081" class="Symbol">(</a><a id="5082" href="foundation.coproduct-types.html#1253" class="InductiveConstructor">inl</a> <a id="5086" href="foundation.xor.html#5086" class="Bound">p</a><a id="5087" class="Symbol">)</a> <a id="5089" class="Symbol">=</a>
-    <a id="5095" href="foundation.equality-dependent-pair-types.html#1375" class="Function">eq-pair-Σ</a>
+    <a id="5095" href="foundation.equality-dependent-pair-types.html#1481" class="Function">eq-pair-Σ</a>
       <a id="5111" class="Symbol">(</a> <a id="5113" href="foundation.xor.html#5086" class="Bound">p</a><a id="5114" class="Symbol">)</a>
       <a id="5122" class="Symbol">(</a> <a id="5124" href="foundation-core.propositions.html#2719" class="Function">eq-is-prop</a> <a id="5135" class="Symbol">(</a><a id="5136" href="foundation-core.propositions.html#5725" class="Function">is-prop-prod</a> <a id="5149" class="Symbol">(</a><a id="5150" href="foundation-core.propositions.html#1562" class="Function">is-prop-type-Prop</a> <a id="5168" class="Symbol">(</a><a id="5169" href="foundation.xor.html#4784" class="Bound">P</a> <a id="5171" class="Symbol">(</a><a id="5172" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="5176" href="foundation.xor.html#4789" class="Bound">y</a><a id="5177" class="Symbol">)))</a> <a id="5181" href="foundation.negation.html#955" class="Function">is-prop-neg</a><a id="5192" class="Symbol">))</a>
   <a id="5197" href="foundation.xor.html#4956" class="Function">cases-is-prop-type-commutative-xor-Prop</a> <a id="5237" class="Symbol">(</a><a id="5238" href="foundation.coproduct-types.html#1276" class="InductiveConstructor">inr</a> <a id="5242" href="foundation.xor.html#5242" class="Bound">np</a><a id="5244" class="Symbol">)</a> <a id="5246" class="Symbol">=</a>
@@ -371,7 +371,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-08)(e4fb606) Merge pull request #239 from EgbertRijke/operations-species by noreply
+(2022-07-08)(cf7f35a) Merge pull request #240 from LeoMangel/leomangel by noreply
 </pre>
 </body>
 </html>
