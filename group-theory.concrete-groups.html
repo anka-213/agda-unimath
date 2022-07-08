@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/concrete-groups.lagda.md.</p>
-<p>Version of Friday, July  8, 2022, 12:43 PM</p>
+<p>Version of Friday, July  8, 2022, 02:32 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -35,7 +35,7 @@
 
 <a id="103" class="Keyword">module</a> <a id="110" href="group-theory.concrete-groups.html" class="Module">group-theory.concrete-groups</a> <a id="139" class="Keyword">where</a>
 
-<a id="146" class="Keyword">open</a> <a id="151" class="Keyword">import</a> <a id="158" href="foundation.1-types.html" class="Module">foundation.1-types</a> <a id="177" class="Keyword">using</a> <a id="183" class="Symbol">(</a><a id="184" href="foundation-core.1-types.html#1083" class="Function">Id-Set</a><a id="190" class="Symbol">)</a>
+<a id="146" class="Keyword">open</a> <a id="151" class="Keyword">import</a> <a id="158" href="foundation.1-types.html" class="Module">foundation.1-types</a> <a id="177" class="Keyword">using</a> <a id="183" class="Symbol">(</a><a id="184" href="foundation-core.1-types.html#1222" class="Function">Id-Set</a><a id="190" class="Symbol">)</a>
 <a id="192" class="Keyword">open</a> <a id="197" class="Keyword">import</a> <a id="204" href="foundation.connected-types.html" class="Module">foundation.connected-types</a> <a id="231" class="Keyword">using</a> <a id="237" class="Symbol">(</a><a id="238" href="foundation.connected-types.html#1697" class="Function">is-path-connected</a><a id="255" class="Symbol">)</a>
 <a id="257" class="Keyword">open</a> <a id="262" class="Keyword">import</a> <a id="269" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="301" class="Keyword">using</a> <a id="307" class="Symbol">(</a><a id="308" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="309" class="Symbol">;</a> <a id="311" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="314" class="Symbol">;</a> <a id="316" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="319" class="Symbol">;</a> <a id="321" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="325" class="Symbol">)</a>
 <a id="327" class="Keyword">open</a> <a id="332" class="Keyword">import</a> <a id="339" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="363" class="Keyword">using</a> <a id="369" class="Symbol">(</a><a id="370" href="foundation-core.equivalences.html#1621" class="Function Operator">_≃_</a><a id="373" class="Symbol">;</a> <a id="375" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a><a id="388" class="Symbol">)</a>
@@ -139,7 +139,7 @@
 
   <a id="4446" href="group-theory.concrete-groups.html#4446" class="Function">Id-BG-Set</a> <a id="4456" class="Symbol">:</a>
     <a id="4462" class="Symbol">(</a><a id="4463" href="group-theory.concrete-groups.html#4463" class="Bound">X</a> <a id="4465" href="group-theory.concrete-groups.html#4465" class="Bound">Y</a> <a id="4467" class="Symbol">:</a> <a id="4469" href="group-theory.concrete-groups.html#2389" class="Function">classifying-type-Concrete-Group</a><a id="4500" class="Symbol">)</a> <a id="4502" class="Symbol">→</a> <a id="4504" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="4511" href="group-theory.concrete-groups.html#2109" class="Bound">l</a>
-  <a id="4515" href="group-theory.concrete-groups.html#4446" class="Function">Id-BG-Set</a> <a id="4525" href="group-theory.concrete-groups.html#4525" class="Bound">X</a> <a id="4527" href="group-theory.concrete-groups.html#4527" class="Bound">Y</a> <a id="4529" class="Symbol">=</a> <a id="4531" href="foundation-core.1-types.html#1083" class="Function">Id-Set</a> <a id="4538" href="group-theory.concrete-groups.html#4257" class="Function">classifying-1-type-Concrete-Group</a> <a id="4572" href="group-theory.concrete-groups.html#4525" class="Bound">X</a> <a id="4574" href="group-theory.concrete-groups.html#4527" class="Bound">Y</a>
+  <a id="4515" href="group-theory.concrete-groups.html#4446" class="Function">Id-BG-Set</a> <a id="4525" href="group-theory.concrete-groups.html#4525" class="Bound">X</a> <a id="4527" href="group-theory.concrete-groups.html#4527" class="Bound">Y</a> <a id="4529" class="Symbol">=</a> <a id="4531" href="foundation-core.1-types.html#1222" class="Function">Id-Set</a> <a id="4538" href="group-theory.concrete-groups.html#4257" class="Function">classifying-1-type-Concrete-Group</a> <a id="4572" href="group-theory.concrete-groups.html#4525" class="Bound">X</a> <a id="4574" href="group-theory.concrete-groups.html#4527" class="Bound">Y</a>
 
   <a id="4579" href="group-theory.concrete-groups.html#4579" class="Function">unit-Concrete-Group</a> <a id="4599" class="Symbol">:</a> <a id="4601" href="group-theory.concrete-groups.html#3411" class="Function">type-Concrete-Group</a>
   <a id="4623" href="group-theory.concrete-groups.html#4579" class="Function">unit-Concrete-Group</a> <a id="4643" class="Symbol">=</a> <a id="4645" href="group-theory.higher-groups.html#2760" class="Function">unit-∞-Group</a> <a id="4658" href="group-theory.concrete-groups.html#2154" class="Function">∞-group-Concrete-Group</a>
@@ -379,7 +379,7 @@ instance
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-08)(d36c1ba) Merge pull request #241 from EgbertRijke/research-in-teams by noreply
+(2022-07-08)(000b79d) Merge pull request #242 from EgbertRijke/n-element-types by noreply
 </pre>
 </body>
 </html>

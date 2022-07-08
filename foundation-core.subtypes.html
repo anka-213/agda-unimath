@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation-core/subtypes.lagda.md.</p>
-<p>Version of Friday, July  8, 2022, 12:42 PM</p>
+<p>Version of Friday, July  8, 2022, 02:32 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -58,7 +58,7 @@
 <a id="1281" class="Keyword">open</a> <a id="1286" class="Keyword">import</a> <a id="1293" href="foundation-core.sets.html" class="Module">foundation-core.sets</a> <a id="1314" class="Keyword">using</a> <a id="1320" class="Symbol">(</a><a id="1321" href="foundation-core.sets.html#1113" class="Function">is-set</a><a id="1327" class="Symbol">;</a> <a id="1329" href="foundation-core.sets.html#1190" class="Function">UU-Set</a><a id="1335" class="Symbol">;</a> <a id="1337" href="foundation-core.sets.html#1304" class="Function">type-Set</a><a id="1345" class="Symbol">;</a> <a id="1347" href="foundation-core.sets.html#1355" class="Function">is-set-type-Set</a><a id="1362" class="Symbol">)</a>
 <a id="1364" class="Keyword">open</a> <a id="1369" class="Keyword">import</a> <a id="1376" href="foundation-core.subtype-identity-principle.html" class="Module">foundation-core.subtype-identity-principle</a> <a id="1419" class="Keyword">using</a>
   <a id="1427" class="Symbol">(</a> <a id="1429" href="foundation-core.subtype-identity-principle.html#1586" class="Function">is-contr-total-Eq-subtype</a><a id="1454" class="Symbol">;</a> <a id="1456" href="foundation-core.subtype-identity-principle.html#3190" class="Function">extensionality-subtype</a><a id="1478" class="Symbol">)</a>
-<a id="1480" class="Keyword">open</a> <a id="1485" class="Keyword">import</a> <a id="1492" href="foundation-core.truncated-types.html" class="Module">foundation-core.truncated-types</a> <a id="1524" class="Keyword">using</a> <a id="1530" class="Symbol">(</a><a id="1531" href="foundation-core.truncated-types.html#1741" class="Function">is-trunc</a><a id="1539" class="Symbol">;</a> <a id="1541" href="foundation-core.truncated-types.html#5217" class="Function">is-trunc-is-emb</a><a id="1556" class="Symbol">)</a>
+<a id="1480" class="Keyword">open</a> <a id="1485" class="Keyword">import</a> <a id="1492" href="foundation-core.truncated-types.html" class="Module">foundation-core.truncated-types</a> <a id="1524" class="Keyword">using</a> <a id="1530" class="Symbol">(</a><a id="1531" href="foundation-core.truncated-types.html#1741" class="Function">is-trunc</a><a id="1539" class="Symbol">;</a> <a id="1541" href="foundation-core.truncated-types.html#5216" class="Function">is-trunc-is-emb</a><a id="1556" class="Symbol">)</a>
 <a id="1558" class="Keyword">open</a> <a id="1563" class="Keyword">import</a> <a id="1570" href="foundation-core.truncation-levels.html" class="Module">foundation-core.truncation-levels</a> <a id="1604" class="Keyword">using</a>
   <a id="1612" class="Symbol">(</a> <a id="1614" href="foundation-core.truncation-levels.html#395" class="Datatype">𝕋</a><a id="1615" class="Symbol">;</a> <a id="1617" href="foundation-core.truncation-levels.html#416" class="InductiveConstructor">neg-two-𝕋</a><a id="1626" class="Symbol">;</a> <a id="1628" href="foundation-core.truncation-levels.html#448" class="Function">neg-one-𝕋</a><a id="1637" class="Symbol">;</a> <a id="1639" href="foundation-core.truncation-levels.html#492" class="Function">zero-𝕋</a><a id="1645" class="Symbol">;</a> <a id="1647" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a><a id="1653" class="Symbol">)</a>
 <a id="1655" class="Keyword">open</a> <a id="1660" class="Keyword">import</a> <a id="1667" href="foundation-core.type-arithmetic-dependent-pair-types.html" class="Module">foundation-core.type-arithmetic-dependent-pair-types</a> <a id="1720" class="Keyword">using</a>
@@ -167,7 +167,7 @@
     <a id="4847" href="foundation-core.subtypes.html#4847" class="Function">is-trunc-type-subtype</a> <a id="4869" class="Symbol">:</a>
       <a id="4877" href="foundation-core.truncated-types.html#1741" class="Function">is-trunc</a> <a id="4886" class="Symbol">(</a><a id="4887" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a> <a id="4894" href="foundation-core.subtypes.html#4783" class="Bound">k</a><a id="4895" class="Symbol">)</a> <a id="4897" href="foundation-core.subtypes.html#4791" class="Bound">A</a> <a id="4899" class="Symbol">→</a> <a id="4901" href="foundation-core.truncated-types.html#1741" class="Function">is-trunc</a> <a id="4910" class="Symbol">(</a><a id="4911" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a> <a id="4918" href="foundation-core.subtypes.html#4783" class="Bound">k</a><a id="4919" class="Symbol">)</a> <a id="4921" class="Symbol">(</a><a id="4922" href="foundation-core.subtypes.html#2555" class="Function">type-subtype</a> <a id="4935" href="foundation-core.subtypes.html#4803" class="Bound">P</a><a id="4936" class="Symbol">)</a>
     <a id="4942" href="foundation-core.subtypes.html#4847" class="Function">is-trunc-type-subtype</a> <a id="4964" class="Symbol">=</a>
-      <a id="4972" href="foundation-core.truncated-types.html#5217" class="Function">is-trunc-is-emb</a> <a id="4988" href="foundation-core.subtypes.html#4783" class="Bound">k</a>
+      <a id="4972" href="foundation-core.truncated-types.html#5216" class="Function">is-trunc-is-emb</a> <a id="4988" href="foundation-core.subtypes.html#4783" class="Bound">k</a>
         <a id="4998" class="Symbol">(</a> <a id="5000" href="foundation-core.subtypes.html#2621" class="Function">inclusion-subtype</a> <a id="5018" href="foundation-core.subtypes.html#4803" class="Bound">P</a><a id="5019" class="Symbol">)</a>
         <a id="5029" class="Symbol">(</a> <a id="5031" href="foundation-core.subtypes.html#3701" class="Function">is-emb-inclusion-subtype</a> <a id="5056" href="foundation-core.subtypes.html#4803" class="Bound">P</a><a id="5057" class="Symbol">)</a>
 
@@ -248,7 +248,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-08)(d36c1ba) Merge pull request #241 from EgbertRijke/research-in-teams by noreply
+(2022-07-08)(000b79d) Merge pull request #242 from EgbertRijke/n-element-types by noreply
 </pre>
 </body>
 </html>
