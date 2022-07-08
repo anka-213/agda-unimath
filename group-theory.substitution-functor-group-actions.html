@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/substitution-functor-group-actions.lagda.md.</p>
-<p>Version of Friday, July  8, 2022, 02:32 PM</p>
+<p>Version of Friday, July  8, 2022, 05:12 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -42,7 +42,7 @@
 
 <a id="394" class="Keyword">open</a> <a id="399" class="Keyword">import</a> <a id="406" href="foundation.cartesian-product-types.html" class="Module">foundation.cartesian-product-types</a> <a id="441" class="Keyword">using</a> <a id="447" class="Symbol">(</a><a id="448" href="foundation-core.cartesian-product-types.html#590" class="Function Operator">_×_</a><a id="451" class="Symbol">)</a>
 <a id="453" class="Keyword">open</a> <a id="458" class="Keyword">import</a> <a id="465" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="497" class="Keyword">using</a> <a id="503" class="Symbol">(</a><a id="504" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="505" class="Symbol">;</a> <a id="507" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="511" class="Symbol">;</a> <a id="513" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="516" class="Symbol">;</a> <a id="518" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="521" class="Symbol">)</a>
-<a id="523" class="Keyword">open</a> <a id="528" class="Keyword">import</a> <a id="535" href="foundation.equivalence-classes.html" class="Module">foundation.equivalence-classes</a> <a id="566" class="Keyword">using</a> <a id="572" class="Symbol">(</a><a id="573" href="foundation.equivalence-classes.html#3674" class="Function">equivalence-class-Set</a><a id="594" class="Symbol">)</a>
+<a id="523" class="Keyword">open</a> <a id="528" class="Keyword">import</a> <a id="535" href="foundation.equivalence-classes.html" class="Module">foundation.equivalence-classes</a> <a id="566" class="Keyword">using</a> <a id="572" class="Symbol">(</a><a id="573" href="foundation.equivalence-classes.html#3666" class="Function">equivalence-class-Set</a><a id="594" class="Symbol">)</a>
 <a id="596" class="Keyword">open</a> <a id="601" class="Keyword">import</a> <a id="608" href="foundation.equivalence-relations.html" class="Module">foundation.equivalence-relations</a> <a id="641" class="Keyword">using</a> <a id="647" class="Symbol">(</a><a id="648" href="foundation.equivalence-relations.html#970" class="Function">Eq-Rel</a><a id="654" class="Symbol">)</a>
 <a id="656" class="Keyword">open</a> <a id="661" class="Keyword">import</a> <a id="668" href="foundation.existential-quantification.html" class="Module">foundation.existential-quantification</a> <a id="706" class="Keyword">using</a> <a id="712" class="Symbol">(</a><a id="713" href="foundation.existential-quantification.html#1666" class="Function">∃-Prop</a><a id="719" class="Symbol">;</a> <a id="721" href="foundation.existential-quantification.html#2238" class="Function">intro-∃</a><a id="728" class="Symbol">)</a>
 <a id="730" class="Keyword">open</a> <a id="735" class="Keyword">import</a> <a id="742" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="768" class="Keyword">using</a> <a id="774" class="Symbol">(</a><a id="775" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a><a id="777" class="Symbol">;</a> <a id="779" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="783" class="Symbol">;</a> <a id="785" href="foundation-core.identity-types.html#4003" class="Function">ap</a><a id="787" class="Symbol">;</a> <a id="789" href="foundation-core.identity-types.html#2425" class="Function Operator">_∙_</a><a id="792" class="Symbol">;</a> <a id="794" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="797" class="Symbol">)</a>
@@ -226,7 +226,7 @@
     <a id="8467" class="Symbol">{</a><a id="8468" href="group-theory.substitution-functor-group-actions.html#8468" class="Bound">l3</a> <a id="8471" class="Symbol">:</a> <a id="8473" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="8478" class="Symbol">}</a> <a id="8480" class="Symbol">→</a> <a id="8482" href="group-theory.group-actions.html#1192" class="Function">Abstract-Group-Action</a> <a id="8504" href="group-theory.substitution-functor-group-actions.html#4822" class="Bound">G</a> <a id="8506" href="group-theory.substitution-functor-group-actions.html#8468" class="Bound">l3</a> <a id="8509" class="Symbol">→</a>
     <a id="8515" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="8522" class="Symbol">(</a><a id="8523" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="8528" href="group-theory.substitution-functor-group-actions.html#4806" class="Bound">l1</a> <a id="8531" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="8533" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="8538" href="group-theory.substitution-functor-group-actions.html#4809" class="Bound">l2</a> <a id="8541" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="8543" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="8548" href="group-theory.substitution-functor-group-actions.html#8468" class="Bound">l3</a><a id="8550" class="Symbol">)</a>
   <a id="8554" href="group-theory.substitution-functor-group-actions.html#8416" class="Function">set-left-adjoint-subst-Abstract-Group-Action</a> <a id="8599" href="group-theory.substitution-functor-group-actions.html#8599" class="Bound">X</a> <a id="8601" class="Symbol">=</a>
-    <a id="8607" href="foundation.equivalence-classes.html#3674" class="Function">equivalence-class-Set</a> <a id="8629" class="Symbol">(</a><a id="8630" href="group-theory.substitution-functor-group-actions.html#5700" class="Function">Eq-Rel-obj-left-adjoint-subst-Abstract-Group-Action</a> <a id="8682" href="group-theory.substitution-functor-group-actions.html#8599" class="Bound">X</a><a id="8683" class="Symbol">)</a>
+    <a id="8607" href="foundation.equivalence-classes.html#3666" class="Function">equivalence-class-Set</a> <a id="8629" class="Symbol">(</a><a id="8630" href="group-theory.substitution-functor-group-actions.html#5700" class="Function">Eq-Rel-obj-left-adjoint-subst-Abstract-Group-Action</a> <a id="8682" href="group-theory.substitution-functor-group-actions.html#8599" class="Bound">X</a><a id="8683" class="Symbol">)</a>
 
 <a id="8686" class="Comment">{-
   obj-left-adjoint-subst-Abstract-Group-Action :
@@ -240,7 +240,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-08)(000b79d) Merge pull request #242 from EgbertRijke/n-element-types by noreply
+(2022-07-08)(3756edd) Merge pull request #244 from EgbertRijke/coproducts by noreply
 </pre>
 </body>
 </html>

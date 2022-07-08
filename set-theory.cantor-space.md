@@ -19,5 +19,5 @@ The Cantor space is the type of functions `ℕ → Fin 2`.
 ## Definition
 
 <pre class="Agda"><a id="cantor-space"></a><a id="364" href="set-theory.cantor-space.html#364" class="Function">cantor-space</a> <a id="377" class="Symbol">:</a> <a id="379" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="382" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
-<a id="388" href="set-theory.cantor-space.html#364" class="Function">cantor-space</a> <a id="401" class="Symbol">=</a> <a id="403" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="405" class="Symbol">→</a> <a id="407" href="univalent-combinatorics.standard-finite-types.html#2396" class="Function">Fin</a> <a id="411" class="Number">2</a>
+<a id="388" href="set-theory.cantor-space.html#364" class="Function">cantor-space</a> <a id="401" class="Symbol">=</a> <a id="403" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="405" class="Symbol">→</a> <a id="407" href="univalent-combinatorics.standard-finite-types.html#2393" class="Function">Fin</a> <a id="411" class="Number">2</a>
 </pre>

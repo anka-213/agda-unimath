@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/double-counting.lagda.md.</p>
-<p>Version of Friday, July  8, 2022, 02:33 PM</p>
+<p>Version of Friday, July  8, 2022, 05:12 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -43,7 +43,7 @@
 <a id="413" class="Keyword">open</a> <a id="418" class="Keyword">import</a> <a id="425" href="univalent-combinatorics.counting.html" class="Module">univalent-combinatorics.counting</a> <a id="458" class="Keyword">using</a>
   <a id="466" class="Symbol">(</a> <a id="468" href="univalent-combinatorics.counting.html#1901" class="Function">count</a><a id="473" class="Symbol">;</a> <a id="475" href="univalent-combinatorics.counting.html#2029" class="Function">number-of-elements-count</a><a id="499" class="Symbol">)</a>
 <a id="501" class="Keyword">open</a> <a id="506" class="Keyword">import</a> <a id="513" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="559" class="Keyword">using</a>
-  <a id="567" class="Symbol">(</a> <a id="569" href="univalent-combinatorics.standard-finite-types.html#12929" class="Function">is-injective-Fin</a><a id="585" class="Symbol">)</a>
+  <a id="567" class="Symbol">(</a> <a id="569" href="univalent-combinatorics.standard-finite-types.html#12921" class="Function">is-injective-Fin</a><a id="585" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>Given two countings of the same type, we obtain the same number of its elements. Likewise, given two countings of equivalent types, we obtain the same number of their elements.</p>
@@ -53,7 +53,7 @@
     <a id="890" class="Symbol">(</a><a id="891" href="univalent-combinatorics.double-counting.html#891" class="Bound">count-B</a> <a id="899" class="Symbol">:</a> <a id="901" href="univalent-combinatorics.counting.html#1901" class="Function">count</a> <a id="907" href="univalent-combinatorics.double-counting.html#855" class="Bound">B</a><a id="908" class="Symbol">)</a> <a id="910" class="Symbol">(</a><a id="911" href="univalent-combinatorics.double-counting.html#911" class="Bound">e</a> <a id="913" class="Symbol">:</a> <a id="915" href="univalent-combinatorics.double-counting.html#843" class="Bound">A</a> <a id="917" href="foundation-core.equivalences.html#1621" class="Function Operator">≃</a> <a id="919" href="univalent-combinatorics.double-counting.html#855" class="Bound">B</a><a id="920" class="Symbol">)</a> <a id="922" class="Symbol">→</a>
     <a id="928" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a> <a id="931" class="Symbol">(</a><a id="932" href="univalent-combinatorics.counting.html#2029" class="Function">number-of-elements-count</a> <a id="957" href="univalent-combinatorics.double-counting.html#867" class="Bound">count-A</a><a id="964" class="Symbol">)</a> <a id="966" class="Symbol">(</a><a id="967" href="univalent-combinatorics.counting.html#2029" class="Function">number-of-elements-count</a> <a id="992" href="univalent-combinatorics.double-counting.html#891" class="Bound">count-B</a><a id="999" class="Symbol">)</a>
   <a id="1003" href="univalent-combinatorics.double-counting.html#798" class="Function">double-counting-equiv</a> <a id="1025" class="Symbol">(</a><a id="1026" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="1031" href="univalent-combinatorics.double-counting.html#1031" class="Bound">k</a> <a id="1033" href="univalent-combinatorics.double-counting.html#1033" class="Bound">f</a><a id="1034" class="Symbol">)</a> <a id="1036" class="Symbol">(</a><a id="1037" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="1042" href="univalent-combinatorics.double-counting.html#1042" class="Bound">l</a> <a id="1044" href="univalent-combinatorics.double-counting.html#1044" class="Bound">g</a><a id="1045" class="Symbol">)</a> <a id="1047" href="univalent-combinatorics.double-counting.html#1047" class="Bound">e</a> <a id="1049" class="Symbol">=</a>
-    <a id="1055" href="univalent-combinatorics.standard-finite-types.html#12929" class="Function">is-injective-Fin</a> <a id="1072" class="Symbol">((</a><a id="1074" href="foundation-core.equivalences.html#5721" class="Function">inv-equiv</a> <a id="1084" href="univalent-combinatorics.double-counting.html#1044" class="Bound">g</a> <a id="1086" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a> <a id="1089" href="univalent-combinatorics.double-counting.html#1047" class="Bound">e</a><a id="1090" class="Symbol">)</a> <a id="1092" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a> <a id="1095" href="univalent-combinatorics.double-counting.html#1033" class="Bound">f</a><a id="1096" class="Symbol">)</a>
+    <a id="1055" href="univalent-combinatorics.standard-finite-types.html#12921" class="Function">is-injective-Fin</a> <a id="1072" class="Symbol">((</a><a id="1074" href="foundation-core.equivalences.html#5721" class="Function">inv-equiv</a> <a id="1084" href="univalent-combinatorics.double-counting.html#1044" class="Bound">g</a> <a id="1086" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a> <a id="1089" href="univalent-combinatorics.double-counting.html#1047" class="Bound">e</a><a id="1090" class="Symbol">)</a> <a id="1092" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a> <a id="1095" href="univalent-combinatorics.double-counting.html#1033" class="Bound">f</a><a id="1096" class="Symbol">)</a>
 
 <a id="1099" class="Keyword">abstract</a>
   <a id="double-counting"></a><a id="1110" href="univalent-combinatorics.double-counting.html#1110" class="Function">double-counting</a> <a id="1126" class="Symbol">:</a>
@@ -64,7 +64,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-08)(000b79d) Merge pull request #242 from EgbertRijke/n-element-types by noreply
+(2022-07-08)(3756edd) Merge pull request #244 from EgbertRijke/coproducts by noreply
 </pre>
 </body>
 </html>
