@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/elementary-number-theory/triangular-numbers.lagda.md.</p>
-<p>Version of Thursday, July  7, 2022, 09:33 PM</p>
+<p>Version of Friday, July  8, 2022, 10:13 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -35,17 +35,17 @@
 
 <a id="91" class="Keyword">module</a> <a id="98" href="elementary-number-theory.triangular-numbers.html" class="Module">elementary-number-theory.triangular-numbers</a> <a id="142" class="Keyword">where</a>
 
-<a id="149" class="Keyword">open</a> <a id="154" class="Keyword">import</a> <a id="161" href="elementary-number-theory.addition-natural-numbers.html" class="Module">elementary-number-theory.addition-natural-numbers</a> <a id="211" class="Keyword">using</a> <a id="217" class="Symbol">(</a><a id="218" href="elementary-number-theory.addition-natural-numbers.html#1164" class="Function">add-ℕ</a><a id="223" class="Symbol">)</a>
-<a id="225" class="Keyword">open</a> <a id="230" class="Keyword">import</a> <a id="237" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="278" class="Keyword">using</a> <a id="284" class="Symbol">(</a><a id="285" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a><a id="286" class="Symbol">;</a> <a id="288" href="elementary-number-theory.natural-numbers.html#1492" class="InductiveConstructor">succ-ℕ</a><a id="294" class="Symbol">)</a>
+<a id="149" class="Keyword">open</a> <a id="154" class="Keyword">import</a> <a id="161" href="elementary-number-theory.addition-natural-numbers.html" class="Module">elementary-number-theory.addition-natural-numbers</a> <a id="211" class="Keyword">using</a> <a id="217" class="Symbol">(</a><a id="218" href="elementary-number-theory.addition-natural-numbers.html#1096" class="Function">add-ℕ</a><a id="223" class="Symbol">)</a>
+<a id="225" class="Keyword">open</a> <a id="230" class="Keyword">import</a> <a id="237" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="278" class="Keyword">using</a> <a id="284" class="Symbol">(</a><a id="285" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a><a id="286" class="Symbol">;</a> <a id="288" href="elementary-number-theory.natural-numbers.html#1564" class="InductiveConstructor">succ-ℕ</a><a id="294" class="Symbol">)</a>
 </pre>
 <h2 id="definition">Definition</h2>
-<pre class="Agda"><a id="triangular-number-ℕ"></a><a id="324" href="elementary-number-theory.triangular-numbers.html#324" class="Function">triangular-number-ℕ</a> <a id="344" class="Symbol">:</a> <a id="346" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a> <a id="348" class="Symbol">→</a> <a id="350" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a>
+<pre class="Agda"><a id="triangular-number-ℕ"></a><a id="324" href="elementary-number-theory.triangular-numbers.html#324" class="Function">triangular-number-ℕ</a> <a id="344" class="Symbol">:</a> <a id="346" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="348" class="Symbol">→</a> <a id="350" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a>
 <a id="352" href="elementary-number-theory.triangular-numbers.html#324" class="Function">triangular-number-ℕ</a> <a id="372" class="Number">0</a> <a id="374" class="Symbol">=</a> <a id="376" class="Number">0</a>
-<a id="378" href="elementary-number-theory.triangular-numbers.html#324" class="Function">triangular-number-ℕ</a> <a id="398" class="Symbol">(</a><a id="399" href="elementary-number-theory.natural-numbers.html#1492" class="InductiveConstructor">succ-ℕ</a> <a id="406" href="elementary-number-theory.triangular-numbers.html#406" class="Bound">n</a><a id="407" class="Symbol">)</a> <a id="409" class="Symbol">=</a> <a id="411" href="elementary-number-theory.addition-natural-numbers.html#1164" class="Function">add-ℕ</a> <a id="417" class="Symbol">(</a><a id="418" href="elementary-number-theory.triangular-numbers.html#324" class="Function">triangular-number-ℕ</a> <a id="438" href="elementary-number-theory.triangular-numbers.html#406" class="Bound">n</a><a id="439" class="Symbol">)</a> <a id="441" class="Symbol">(</a><a id="442" href="elementary-number-theory.natural-numbers.html#1492" class="InductiveConstructor">succ-ℕ</a> <a id="449" href="elementary-number-theory.triangular-numbers.html#406" class="Bound">n</a><a id="450" class="Symbol">)</a>
+<a id="378" href="elementary-number-theory.triangular-numbers.html#324" class="Function">triangular-number-ℕ</a> <a id="398" class="Symbol">(</a><a id="399" href="elementary-number-theory.natural-numbers.html#1564" class="InductiveConstructor">succ-ℕ</a> <a id="406" href="elementary-number-theory.triangular-numbers.html#406" class="Bound">n</a><a id="407" class="Symbol">)</a> <a id="409" class="Symbol">=</a> <a id="411" href="elementary-number-theory.addition-natural-numbers.html#1096" class="Function">add-ℕ</a> <a id="417" class="Symbol">(</a><a id="418" href="elementary-number-theory.triangular-numbers.html#324" class="Function">triangular-number-ℕ</a> <a id="438" href="elementary-number-theory.triangular-numbers.html#406" class="Bound">n</a><a id="439" class="Symbol">)</a> <a id="441" class="Symbol">(</a><a id="442" href="elementary-number-theory.natural-numbers.html#1564" class="InductiveConstructor">succ-ℕ</a> <a id="449" href="elementary-number-theory.triangular-numbers.html#406" class="Bound">n</a><a id="450" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-07)(7e167b0) Merge pull request #237 from EgbertRijke/operations-species by noreply
+(2022-07-08)(e4fb606) Merge pull request #239 from EgbertRijke/operations-species by noreply
 </pre>
 </body>
 </html>

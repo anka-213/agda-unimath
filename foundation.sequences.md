@@ -20,7 +20,7 @@ A sequence of elements in a type `A` is a map `ℕ → A`.
 ### Sequences of elements of a type
 
 <pre class="Agda"><a id="sequence"></a><a id="369" href="foundation.sequences.html#369" class="Function">sequence</a> <a id="378" class="Symbol">:</a> <a id="380" class="Symbol">{</a><a id="381" href="foundation.sequences.html#381" class="Bound">l</a> <a id="383" class="Symbol">:</a> <a id="385" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="390" class="Symbol">}</a> <a id="392" class="Symbol">→</a> <a id="394" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="397" href="foundation.sequences.html#381" class="Bound">l</a> <a id="399" class="Symbol">→</a> <a id="401" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="404" href="foundation.sequences.html#381" class="Bound">l</a>
-<a id="406" href="foundation.sequences.html#369" class="Function">sequence</a> <a id="415" href="foundation.sequences.html#415" class="Bound">A</a> <a id="417" class="Symbol">=</a> <a id="419" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a> <a id="421" class="Symbol">→</a> <a id="423" href="foundation.sequences.html#415" class="Bound">A</a>
+<a id="406" href="foundation.sequences.html#369" class="Function">sequence</a> <a id="415" href="foundation.sequences.html#415" class="Bound">A</a> <a id="417" class="Symbol">=</a> <a id="419" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="421" class="Symbol">→</a> <a id="423" href="foundation.sequences.html#415" class="Bound">A</a>
 </pre>
 ### Functoriality of sequences
 

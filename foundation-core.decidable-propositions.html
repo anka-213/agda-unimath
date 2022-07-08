@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Decidable propositions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/foundation-core/decidable-propositions.lagda.md.</p>
+<p>Version of Friday, July  8, 2022, 10:13 AM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Decidable propositions</h1>
+</header>
+<pre class="Agda"><a id="48" class="Symbol">{-#</a> <a id="52" class="Keyword">OPTIONS</a> <a id="60" class="Pragma">--without-K</a> <a id="72" class="Pragma">--exact-split</a> <a id="86" class="Symbol">#-}</a>
+
+<a id="91" class="Keyword">module</a> <a id="98" href="foundation-core.decidable-propositions.html" class="Module">foundation-core.decidable-propositions</a> <a id="137" class="Keyword">where</a>
+
+<a id="144" class="Keyword">open</a> <a id="149" class="Keyword">import</a> <a id="156" href="foundation-core.cartesian-product-types.html" class="Module">foundation-core.cartesian-product-types</a>
+<a id="196" class="Keyword">open</a> <a id="201" class="Keyword">import</a> <a id="208" href="foundation-core.dependent-pair-types.html" class="Module">foundation-core.dependent-pair-types</a>
+<a id="245" class="Keyword">open</a> <a id="250" class="Keyword">import</a> <a id="257" href="foundation-core.functoriality-dependent-pair-types.html" class="Module">foundation-core.functoriality-dependent-pair-types</a>
+<a id="308" class="Keyword">open</a> <a id="313" class="Keyword">import</a> <a id="320" href="foundation-core.propositions.html" class="Module">foundation-core.propositions</a>
+<a id="349" class="Keyword">open</a> <a id="354" class="Keyword">import</a> <a id="361" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a>
+
+<a id="394" class="Keyword">open</a> <a id="399" class="Keyword">import</a> <a id="406" href="foundation.decidable-types.html" class="Module">foundation.decidable-types</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A decidable proposition is a proposition that has a decidable underlying type.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="is-decidable-prop"></a><a id="550" href="foundation-core.decidable-propositions.html#550" class="Function">is-decidable-prop</a> <a id="568" class="Symbol">:</a> <a id="570" class="Symbol">{</a><a id="571" href="foundation-core.decidable-propositions.html#571" class="Bound">l</a> <a id="573" class="Symbol">:</a> <a id="575" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="580" class="Symbol">}</a> <a id="582" class="Symbol">→</a> <a id="584" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="587" href="foundation-core.decidable-propositions.html#571" class="Bound">l</a> <a id="589" class="Symbol">→</a> <a id="591" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="594" href="foundation-core.decidable-propositions.html#571" class="Bound">l</a>
+<a id="596" href="foundation-core.decidable-propositions.html#550" class="Function">is-decidable-prop</a> <a id="614" href="foundation-core.decidable-propositions.html#614" class="Bound">A</a> <a id="616" class="Symbol">=</a> <a id="618" href="foundation-core.propositions.html#1309" class="Function">is-prop</a> <a id="626" href="foundation-core.decidable-propositions.html#614" class="Bound">A</a> <a id="628" href="foundation-core.cartesian-product-types.html#590" class="Function Operator">×</a> <a id="630" href="foundation.decidable-types.html#1918" class="Function">is-decidable</a> <a id="643" href="foundation-core.decidable-propositions.html#614" class="Bound">A</a>
+
+<a id="decidable-Prop"></a><a id="646" href="foundation-core.decidable-propositions.html#646" class="Function">decidable-Prop</a> <a id="661" class="Symbol">:</a>
+  <a id="665" class="Symbol">(</a><a id="666" href="foundation-core.decidable-propositions.html#666" class="Bound">l</a> <a id="668" class="Symbol">:</a> <a id="670" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="675" class="Symbol">)</a> <a id="677" class="Symbol">→</a> <a id="679" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="682" class="Symbol">(</a><a id="683" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="688" href="foundation-core.decidable-propositions.html#666" class="Bound">l</a><a id="689" class="Symbol">)</a>
+<a id="691" href="foundation-core.decidable-propositions.html#646" class="Function">decidable-Prop</a> <a id="706" href="foundation-core.decidable-propositions.html#706" class="Bound">l</a> <a id="708" class="Symbol">=</a> <a id="710" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="712" class="Symbol">(</a><a id="713" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="716" href="foundation-core.decidable-propositions.html#706" class="Bound">l</a><a id="717" class="Symbol">)</a> <a id="719" href="foundation-core.decidable-propositions.html#550" class="Function">is-decidable-prop</a>
+
+<a id="738" class="Keyword">module</a> <a id="745" href="foundation-core.decidable-propositions.html#745" class="Module">_</a>
+  <a id="749" class="Symbol">{</a><a id="750" href="foundation-core.decidable-propositions.html#750" class="Bound">l</a> <a id="752" class="Symbol">:</a> <a id="754" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="759" class="Symbol">}</a> <a id="761" class="Symbol">(</a><a id="762" href="foundation-core.decidable-propositions.html#762" class="Bound">P</a> <a id="764" class="Symbol">:</a> <a id="766" href="foundation-core.decidable-propositions.html#646" class="Function">decidable-Prop</a> <a id="781" href="foundation-core.decidable-propositions.html#750" class="Bound">l</a><a id="782" class="Symbol">)</a>
+  <a id="786" class="Keyword">where</a>
+
+  <a id="795" href="foundation-core.decidable-propositions.html#795" class="Function">prop-decidable-Prop</a> <a id="815" class="Symbol">:</a> <a id="817" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a> <a id="825" href="foundation-core.decidable-propositions.html#750" class="Bound">l</a>
+  <a id="829" href="foundation-core.decidable-propositions.html#795" class="Function">prop-decidable-Prop</a> <a id="849" class="Symbol">=</a> <a id="851" href="foundation-core.functoriality-dependent-pair-types.html#1894" class="Function">tot</a> <a id="855" class="Symbol">(λ</a> <a id="858" href="foundation-core.decidable-propositions.html#858" class="Bound">x</a> <a id="860" class="Symbol">→</a> <a id="862" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="865" class="Symbol">)</a> <a id="867" href="foundation-core.decidable-propositions.html#762" class="Bound">P</a>
+
+  <a id="872" href="foundation-core.decidable-propositions.html#872" class="Function">type-decidable-Prop</a> <a id="892" class="Symbol">:</a> <a id="894" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="897" href="foundation-core.decidable-propositions.html#750" class="Bound">l</a>
+  <a id="901" href="foundation-core.decidable-propositions.html#872" class="Function">type-decidable-Prop</a> <a id="921" class="Symbol">=</a> <a id="923" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a> <a id="933" href="foundation-core.decidable-propositions.html#795" class="Function">prop-decidable-Prop</a>
+
+  <a id="956" class="Keyword">abstract</a>
+    <a id="969" href="foundation-core.decidable-propositions.html#969" class="Function">is-prop-type-decidable-Prop</a> <a id="997" class="Symbol">:</a> <a id="999" href="foundation-core.propositions.html#1309" class="Function">is-prop</a> <a id="1007" href="foundation-core.decidable-propositions.html#872" class="Function">type-decidable-Prop</a>
+    <a id="1031" href="foundation-core.decidable-propositions.html#969" class="Function">is-prop-type-decidable-Prop</a> <a id="1059" class="Symbol">=</a> <a id="1061" href="foundation-core.propositions.html#1562" class="Function">is-prop-type-Prop</a> <a id="1079" href="foundation-core.decidable-propositions.html#795" class="Function">prop-decidable-Prop</a>
+
+  <a id="1102" href="foundation-core.decidable-propositions.html#1102" class="Function">is-decidable-type-decidable-Prop</a> <a id="1135" class="Symbol">:</a> <a id="1137" href="foundation.decidable-types.html#1918" class="Function">is-decidable</a> <a id="1150" href="foundation-core.decidable-propositions.html#872" class="Function">type-decidable-Prop</a>
+  <a id="1172" href="foundation-core.decidable-propositions.html#1102" class="Function">is-decidable-type-decidable-Prop</a> <a id="1205" class="Symbol">=</a> <a id="1207" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1211" class="Symbol">(</a><a id="1212" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1216" href="foundation-core.decidable-propositions.html#762" class="Bound">P</a><a id="1217" class="Symbol">)</a>
+
+  <a id="1222" href="foundation-core.decidable-propositions.html#1222" class="Function">is-decidable-prop-type-decidable-Prop</a> <a id="1260" class="Symbol">:</a> <a id="1262" href="foundation-core.decidable-propositions.html#550" class="Function">is-decidable-prop</a> <a id="1280" href="foundation-core.decidable-propositions.html#872" class="Function">type-decidable-Prop</a>
+  <a id="1302" href="foundation-core.decidable-propositions.html#1222" class="Function">is-decidable-prop-type-decidable-Prop</a> <a id="1340" class="Symbol">=</a> <a id="1342" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1346" href="foundation-core.decidable-propositions.html#762" class="Bound">P</a>
+
+  <a id="1351" href="foundation-core.decidable-propositions.html#1351" class="Function">is-decidable-prop-decidable-Prop</a> <a id="1384" class="Symbol">:</a> <a id="1386" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a> <a id="1394" href="foundation-core.decidable-propositions.html#750" class="Bound">l</a>
+  <a id="1398" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1402" href="foundation-core.decidable-propositions.html#1351" class="Function">is-decidable-prop-decidable-Prop</a> <a id="1435" class="Symbol">=</a> <a id="1437" href="foundation.decidable-types.html#1918" class="Function">is-decidable</a> <a id="1450" href="foundation-core.decidable-propositions.html#872" class="Function">type-decidable-Prop</a>
+  <a id="1472" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1476" href="foundation-core.decidable-propositions.html#1351" class="Function">is-decidable-prop-decidable-Prop</a> <a id="1509" class="Symbol">=</a>
+    <a id="1515" href="foundation.decidable-types.html#7664" class="Function">is-prop-is-decidable</a> <a id="1536" href="foundation-core.decidable-propositions.html#969" class="Function">is-prop-type-decidable-Prop</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-07-08)(e4fb606) Merge pull request #239 from EgbertRijke/operations-species by noreply
+</pre>
+</body>
+</html>

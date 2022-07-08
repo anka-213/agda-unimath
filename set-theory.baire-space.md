@@ -17,5 +17,5 @@ The Baire space is the type of functions `ℕ → ℕ`.
 ## Definition
 
 <pre class="Agda"><a id="baire-space"></a><a id="298" href="set-theory.baire-space.html#298" class="Function">baire-space</a> <a id="310" class="Symbol">:</a> <a id="312" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="315" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
-<a id="321" href="set-theory.baire-space.html#298" class="Function">baire-space</a> <a id="333" class="Symbol">=</a> <a id="335" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a> <a id="337" class="Symbol">→</a> <a id="339" href="elementary-number-theory.natural-numbers.html#1458" class="Datatype">ℕ</a>
+<a id="321" href="set-theory.baire-space.html#298" class="Function">baire-space</a> <a id="333" class="Symbol">=</a> <a id="335" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="337" class="Symbol">→</a> <a id="339" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a>
 </pre>

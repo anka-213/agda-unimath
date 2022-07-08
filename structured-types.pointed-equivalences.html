@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/structured-types/pointed-equivalences.lagda.md.</p>
-<p>Version of Thursday, July  7, 2022, 09:34 PM</p>
+<p>Version of Friday, July  8, 2022, 10:14 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -57,7 +57,7 @@
   <a id="1358" class="Symbol">(</a> <a id="1360" href="foundation.structure-identity-principle.html#1355" class="Function">is-contr-total-Eq-structure</a><a id="1387" class="Symbol">;</a> <a id="1389" href="foundation.structure-identity-principle.html#2994" class="Function">extensionality-Σ</a><a id="1405" class="Symbol">)</a>
 <a id="1407" class="Keyword">open</a> <a id="1412" class="Keyword">import</a> <a id="1419" href="foundation.type-arithmetic-dependent-pair-types.html" class="Module">foundation.type-arithmetic-dependent-pair-types</a> <a id="1467" class="Keyword">using</a>
   <a id="1475" class="Symbol">(</a> <a id="1477" href="foundation-core.type-arithmetic-dependent-pair-types.html#11512" class="Function">equiv-right-swap-Σ</a><a id="1495" class="Symbol">)</a>
-<a id="1497" class="Keyword">open</a> <a id="1502" class="Keyword">import</a> <a id="1509" href="foundation.univalence.html" class="Module">foundation.univalence</a> <a id="1531" class="Keyword">using</a> <a id="1537" class="Symbol">(</a><a id="1538" href="foundation.univalence.html#1398" class="Function">equiv-univalence</a><a id="1554" class="Symbol">)</a>
+<a id="1497" class="Keyword">open</a> <a id="1502" class="Keyword">import</a> <a id="1509" href="foundation.univalence.html" class="Module">foundation.univalence</a> <a id="1531" class="Keyword">using</a> <a id="1537" class="Symbol">(</a><a id="1538" href="foundation-core.univalence.html#2255" class="Function">equiv-univalence</a><a id="1554" class="Symbol">)</a>
 <a id="1556" class="Keyword">open</a> <a id="1561" class="Keyword">import</a> <a id="1568" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="1595" class="Keyword">using</a> <a id="1601" class="Symbol">(</a><a id="1602" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1607" class="Symbol">;</a> <a id="1609" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="1611" class="Symbol">;</a> <a id="1613" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="1616" class="Symbol">)</a>
 
 <a id="1619" class="Keyword">open</a> <a id="1624" class="Keyword">import</a> <a id="1631" href="structured-types.pointed-homotopies.html" class="Module">structured-types.pointed-homotopies</a> <a id="1667" class="Keyword">using</a>
@@ -261,7 +261,7 @@
       <a id="8855" class="Symbol">(</a> <a id="8857" class="Symbol">λ</a> <a id="8859" href="structured-types.pointed-equivalences.html#8859" class="Bound">b</a> <a id="8861" href="structured-types.pointed-equivalences.html#8861" class="Bound">e</a> <a id="8863" class="Symbol">→</a> <a id="8865" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a> <a id="8868" class="Symbol">(</a><a id="8869" href="foundation-core.equivalences.html#1821" class="Function">map-equiv</a> <a id="8879" href="structured-types.pointed-equivalences.html#8861" class="Bound">e</a> <a id="8881" class="Symbol">(</a><a id="8882" href="structured-types.pointed-types.html#576" class="Function">pt-Pointed-Type</a> <a id="8898" href="structured-types.pointed-equivalences.html#8690" class="Bound">A</a><a id="8899" class="Symbol">))</a> <a id="8902" href="structured-types.pointed-equivalences.html#8859" class="Bound">b</a><a id="8903" class="Symbol">)</a>
       <a id="8911" class="Symbol">(</a> <a id="8913" href="foundation-core.equivalences.html#2494" class="Function">id-equiv</a><a id="8921" class="Symbol">)</a>
       <a id="8929" class="Symbol">(</a> <a id="8931" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="8935" class="Symbol">)</a>
-      <a id="8943" class="Symbol">(</a> <a id="8945" class="Symbol">λ</a> <a id="8947" href="structured-types.pointed-equivalences.html#8947" class="Bound">B</a> <a id="8949" class="Symbol">→</a> <a id="8951" href="foundation.univalence.html#1398" class="Function">equiv-univalence</a><a id="8967" class="Symbol">)</a>
+      <a id="8943" class="Symbol">(</a> <a id="8945" class="Symbol">λ</a> <a id="8947" href="structured-types.pointed-equivalences.html#8947" class="Bound">B</a> <a id="8949" class="Symbol">→</a> <a id="8951" href="foundation-core.univalence.html#2255" class="Function">equiv-univalence</a><a id="8967" class="Symbol">)</a>
       <a id="8975" class="Symbol">(</a> <a id="8977" class="Symbol">λ</a> <a id="8979" href="structured-types.pointed-equivalences.html#8979" class="Bound">a</a> <a id="8981" class="Symbol">→</a> <a id="8983" href="foundation-core.equivalences.html#2494" class="Function">id-equiv</a><a id="8991" class="Symbol">)</a>
 
   <a id="8996" href="structured-types.pointed-equivalences.html#8996" class="Function">eq-pointed-equiv</a> <a id="9013" class="Symbol">:</a> <a id="9015" class="Symbol">(</a><a id="9016" href="structured-types.pointed-equivalences.html#9016" class="Bound">B</a> <a id="9018" class="Symbol">:</a> <a id="9020" href="structured-types.pointed-types.html#383" class="Function">Pointed-Type</a> <a id="9033" href="structured-types.pointed-equivalences.html#8677" class="Bound">l1</a><a id="9035" class="Symbol">)</a> <a id="9037" class="Symbol">→</a> <a id="9039" href="structured-types.pointed-equivalences.html#8690" class="Bound">A</a> <a id="9041" href="structured-types.pointed-equivalences.html#7578" class="Function Operator">≃*</a> <a id="9044" href="structured-types.pointed-equivalences.html#9016" class="Bound">B</a> <a id="9046" class="Symbol">→</a> <a id="9048" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a> <a id="9051" href="structured-types.pointed-equivalences.html#8690" class="Bound">A</a> <a id="9053" href="structured-types.pointed-equivalences.html#9016" class="Bound">B</a>
@@ -499,7 +499,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-07)(7e167b0) Merge pull request #237 from EgbertRijke/operations-species by noreply
+(2022-07-08)(e4fb606) Merge pull request #239 from EgbertRijke/operations-species by noreply
 </pre>
 </body>
 </html>

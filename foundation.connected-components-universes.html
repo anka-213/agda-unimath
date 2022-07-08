@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/connected-components-universes.lagda.md.</p>
-<p>Version of Thursday, July  7, 2022, 09:33 PM</p>
+<p>Version of Friday, July  8, 2022, 10:14 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -56,8 +56,8 @@
 <a id="1115" class="Keyword">open</a> <a id="1120" class="Keyword">import</a> <a id="1127" href="foundation.subtype-identity-principle.html" class="Module">foundation.subtype-identity-principle</a> <a id="1165" class="Keyword">using</a>
   <a id="1173" class="Symbol">(</a> <a id="1175" href="foundation-core.subtype-identity-principle.html#1586" class="Function">is-contr-total-Eq-subtype</a><a id="1200" class="Symbol">)</a>
 <a id="1202" class="Keyword">open</a> <a id="1207" class="Keyword">import</a> <a id="1214" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="1234" class="Keyword">using</a> <a id="1240" class="Symbol">(</a><a id="1241" href="foundation-core.subtypes.html#2555" class="Function">type-subtype</a><a id="1253" class="Symbol">)</a>
-<a id="1255" class="Keyword">open</a> <a id="1260" class="Keyword">import</a> <a id="1267" href="foundation.subuniverses.html" class="Module">foundation.subuniverses</a> <a id="1291" class="Keyword">using</a> <a id="1297" class="Symbol">(</a><a id="1298" href="foundation.subuniverses.html#4225" class="Function">eq-equiv-subuniverse</a><a id="1318" class="Symbol">)</a>
-<a id="1320" class="Keyword">open</a> <a id="1325" class="Keyword">import</a> <a id="1332" href="foundation.univalence.html" class="Module">foundation.univalence</a> <a id="1354" class="Keyword">using</a> <a id="1360" class="Symbol">(</a><a id="1361" href="foundation.univalence.html#1546" class="Function">is-contr-total-equiv</a><a id="1381" class="Symbol">)</a>
+<a id="1255" class="Keyword">open</a> <a id="1260" class="Keyword">import</a> <a id="1267" href="foundation.subuniverses.html" class="Module">foundation.subuniverses</a> <a id="1291" class="Keyword">using</a> <a id="1297" class="Symbol">(</a><a id="1298" href="foundation.subuniverses.html#3975" class="Function">eq-equiv-subuniverse</a><a id="1318" class="Symbol">)</a>
+<a id="1320" class="Keyword">open</a> <a id="1325" class="Keyword">import</a> <a id="1332" href="foundation.univalence.html" class="Module">foundation.univalence</a> <a id="1354" class="Keyword">using</a> <a id="1360" class="Symbol">(</a><a id="1361" href="foundation-core.univalence.html#2403" class="Function">is-contr-total-equiv</a><a id="1381" class="Symbol">)</a>
 <a id="1383" class="Keyword">open</a> <a id="1388" class="Keyword">import</a> <a id="1395" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="1422" class="Keyword">using</a> <a id="1428" class="Symbol">(</a><a id="1429" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1434" class="Symbol">;</a> <a id="1436" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="1438" class="Symbol">;</a> <a id="1440" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="1444" class="Symbol">;</a> <a id="1446" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="1449" class="Symbol">;</a> <a id="1451" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="1456" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
@@ -116,7 +116,7 @@
     <a id="3507" href="foundation-core.contractible-types.html#1006" class="Function">is-contr</a> <a id="3516" class="Symbol">(</a><a id="3517" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="3519" class="Symbol">(</a><a id="3520" href="foundation.connected-components-universes.html#1794" class="Function">component-UU-Level</a> <a id="3539" href="foundation.connected-components-universes.html#3444" class="Bound">l1</a> <a id="3542" href="foundation.connected-components-universes.html#3460" class="Bound">A</a><a id="3543" class="Symbol">)</a> <a id="3545" class="Symbol">(</a><a id="3546" href="foundation.connected-components-universes.html#2827" class="Function">equiv-component-UU-Level</a> <a id="3571" href="foundation.connected-components-universes.html#3472" class="Bound">X</a><a id="3572" class="Symbol">))</a>
   <a id="3577" href="foundation.connected-components-universes.html#3397" class="Function">is-contr-total-equiv-component-UU-Level</a> <a id="3617" href="foundation.connected-components-universes.html#3617" class="Bound">X</a> <a id="3619" class="Symbol">=</a>
     <a id="3625" href="foundation-core.subtype-identity-principle.html#1586" class="Function">is-contr-total-Eq-subtype</a>
-      <a id="3657" class="Symbol">(</a> <a id="3659" href="foundation.univalence.html#1546" class="Function">is-contr-total-equiv</a> <a id="3680" class="Symbol">(</a><a id="3681" href="foundation.connected-components-universes.html#1945" class="Function">type-component-UU-Level</a> <a id="3705" href="foundation.connected-components-universes.html#3617" class="Bound">X</a><a id="3706" class="Symbol">))</a>
+      <a id="3657" class="Symbol">(</a> <a id="3659" href="foundation-core.univalence.html#2403" class="Function">is-contr-total-equiv</a> <a id="3680" class="Symbol">(</a><a id="3681" href="foundation.connected-components-universes.html#1945" class="Function">type-component-UU-Level</a> <a id="3705" href="foundation.connected-components-universes.html#3617" class="Bound">X</a><a id="3706" class="Symbol">))</a>
       <a id="3715" class="Symbol">(</a> <a id="3717" class="Symbol">λ</a> <a id="3719" href="foundation.connected-components-universes.html#3719" class="Bound">Y</a> <a id="3721" class="Symbol">→</a> <a id="3723" href="foundation.mere-equivalences.html#1538" class="Function">is-prop-mere-equiv</a> <a id="3742" class="Symbol">_</a> <a id="3744" href="foundation.connected-components-universes.html#3719" class="Bound">Y</a><a id="3745" class="Symbol">)</a>
       <a id="3753" class="Symbol">(</a> <a id="3755" href="foundation.connected-components-universes.html#1945" class="Function">type-component-UU-Level</a> <a id="3779" href="foundation.connected-components-universes.html#3617" class="Bound">X</a><a id="3780" class="Symbol">)</a>
       <a id="3788" class="Symbol">(</a> <a id="3790" href="foundation-core.equivalences.html#2494" class="Function">id-equiv</a><a id="3798" class="Symbol">)</a>
@@ -178,7 +178,7 @@
   <a id="5745" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="5749" class="Symbol">(</a><a id="5750" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="5754" class="Symbol">(</a><a id="5755" href="foundation.connected-components-universes.html#5585" class="Function">is-contr-component-UU-Level-empty</a> <a id="5789" href="foundation.connected-components-universes.html#5789" class="Bound">l</a><a id="5790" class="Symbol">))</a> <a id="5793" class="Symbol">=</a>
     <a id="5799" href="foundation.propositional-truncations.html#2132" class="Function">unit-trunc-Prop</a> <a id="5815" class="Symbol">(</a><a id="5816" href="foundation.raising-universe-levels.html#1550" class="Function">equiv-raise</a> <a id="5828" href="foundation.connected-components-universes.html#5789" class="Bound">l</a> <a id="5830" href="foundation-core.empty-types.html#1057" class="Datatype">empty</a><a id="5835" class="Symbol">)</a>
   <a id="5839" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="5843" class="Symbol">(</a><a id="5844" href="foundation.connected-components-universes.html#5585" class="Function">is-contr-component-UU-Level-empty</a> <a id="5878" href="foundation.connected-components-universes.html#5878" class="Bound">l</a><a id="5879" class="Symbol">)</a> <a id="5881" href="foundation.connected-components-universes.html#5881" class="Bound">X</a> <a id="5883" class="Symbol">=</a>
-    <a id="5889" href="foundation.subuniverses.html#4225" class="Function">eq-equiv-subuniverse</a>
+    <a id="5889" href="foundation.subuniverses.html#3975" class="Function">eq-equiv-subuniverse</a>
       <a id="5916" class="Symbol">(</a> <a id="5918" href="foundation.mere-equivalences.html#1301" class="Function">mere-equiv-Prop</a> <a id="5934" href="foundation-core.empty-types.html#1057" class="Datatype">empty</a><a id="5939" class="Symbol">)</a>
       <a id="5947" class="Symbol">(</a> <a id="5949" href="foundation-core.empty-types.html#2113" class="Function">equiv-is-empty</a>
         <a id="5972" class="Symbol">(</a> <a id="5974" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a> <a id="5988" class="Symbol">(</a><a id="5989" href="foundation.raising-universe-levels.html#1550" class="Function">equiv-raise</a> <a id="6001" href="foundation.connected-components-universes.html#5878" class="Bound">l</a> <a id="6003" href="foundation-core.empty-types.html#1057" class="Datatype">empty</a><a id="6008" class="Symbol">))</a>
@@ -207,7 +207,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-07)(7e167b0) Merge pull request #237 from EgbertRijke/operations-species by noreply
+(2022-07-08)(e4fb606) Merge pull request #239 from EgbertRijke/operations-species by noreply
 </pre>
 </body>
 </html>

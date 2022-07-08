@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/connected-types.lagda.md.</p>
-<p>Version of Thursday, July  7, 2022, 09:33 PM</p>
+<p>Version of Friday, July  8, 2022, 10:14 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -36,7 +36,7 @@
 <a id="84" class="Keyword">module</a> <a id="91" href="foundation.connected-types.html" class="Module">foundation.connected-types</a> <a id="118" class="Keyword">where</a>
 
 <a id="125" class="Keyword">open</a> <a id="130" class="Keyword">import</a> <a id="137" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="167" class="Keyword">using</a>
-  <a id="175" class="Symbol">(</a> <a id="177" href="foundation.contractible-types.html#1345" class="Function">is-contr-Prop</a><a id="190" class="Symbol">;</a> <a id="192" href="foundation-core.contractible-types.html#1098" class="Function">center</a><a id="198" class="Symbol">;</a> <a id="200" href="foundation-core.contractible-types.html#1311" class="Function">eq-is-contr</a><a id="211" class="Symbol">)</a>
+  <a id="175" class="Symbol">(</a> <a id="177" href="foundation.contractible-types.html#1563" class="Function">is-contr-Prop</a><a id="190" class="Symbol">;</a> <a id="192" href="foundation-core.contractible-types.html#1098" class="Function">center</a><a id="198" class="Symbol">;</a> <a id="200" href="foundation-core.contractible-types.html#1311" class="Function">eq-is-contr</a><a id="211" class="Symbol">)</a>
 <a id="213" class="Keyword">open</a> <a id="218" class="Keyword">import</a> <a id="225" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="257" class="Keyword">using</a> <a id="263" class="Symbol">(</a><a id="264" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="265" class="Symbol">;</a> <a id="267" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="271" class="Symbol">;</a> <a id="273" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="276" class="Symbol">;</a> <a id="278" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="281" class="Symbol">)</a>
 <a id="283" class="Keyword">open</a> <a id="288" class="Keyword">import</a> <a id="295" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="319" class="Keyword">using</a> <a id="325" class="Symbol">(</a><a id="326" href="foundation-core.equivalences.html#1621" class="Function Operator">_≃_</a><a id="329" class="Symbol">;</a> <a id="331" href="foundation-core.equivalences.html#7869" class="Function Operator">_∘e_</a><a id="335" class="Symbol">;</a> <a id="337" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a><a id="350" class="Symbol">)</a>
 <a id="352" class="Keyword">open</a> <a id="357" class="Keyword">import</a> <a id="364" href="foundation.fiber-inclusions.html" class="Module">foundation.fiber-inclusions</a> <a id="392" class="Keyword">using</a> <a id="398" class="Symbol">(</a><a id="399" href="foundation.fiber-inclusions.html#2114" class="Function">fiber-inclusion</a><a id="414" class="Symbol">)</a>
@@ -63,7 +63,7 @@
 <h2 id="idea">Idea</h2>
 <p>A type is said to be connected if its type of connected components, i.e., its set truncation, is contractible.</p>
 <pre class="Agda"><a id="is-path-connected-Prop"></a><a id="1580" href="foundation.connected-types.html#1580" class="Function">is-path-connected-Prop</a> <a id="1603" class="Symbol">:</a> <a id="1605" class="Symbol">{</a><a id="1606" href="foundation.connected-types.html#1606" class="Bound">l</a> <a id="1608" class="Symbol">:</a> <a id="1610" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1615" class="Symbol">}</a> <a id="1617" class="Symbol">→</a> <a id="1619" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1622" href="foundation.connected-types.html#1606" class="Bound">l</a> <a id="1624" class="Symbol">→</a> <a id="1626" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a> <a id="1634" href="foundation.connected-types.html#1606" class="Bound">l</a>
-<a id="1636" href="foundation.connected-types.html#1580" class="Function">is-path-connected-Prop</a> <a id="1659" href="foundation.connected-types.html#1659" class="Bound">A</a> <a id="1661" class="Symbol">=</a> <a id="1663" href="foundation.contractible-types.html#1345" class="Function">is-contr-Prop</a> <a id="1677" class="Symbol">(</a><a id="1678" href="foundation.set-truncations.html#4001" class="Function">type-trunc-Set</a> <a id="1693" href="foundation.connected-types.html#1659" class="Bound">A</a><a id="1694" class="Symbol">)</a>
+<a id="1636" href="foundation.connected-types.html#1580" class="Function">is-path-connected-Prop</a> <a id="1659" href="foundation.connected-types.html#1659" class="Bound">A</a> <a id="1661" class="Symbol">=</a> <a id="1663" href="foundation.contractible-types.html#1563" class="Function">is-contr-Prop</a> <a id="1677" class="Symbol">(</a><a id="1678" href="foundation.set-truncations.html#4001" class="Function">type-trunc-Set</a> <a id="1693" href="foundation.connected-types.html#1659" class="Bound">A</a><a id="1694" class="Symbol">)</a>
 
 <a id="is-path-connected"></a><a id="1697" href="foundation.connected-types.html#1697" class="Function">is-path-connected</a> <a id="1715" class="Symbol">:</a> <a id="1717" class="Symbol">{</a><a id="1718" href="foundation.connected-types.html#1718" class="Bound">l</a> <a id="1720" class="Symbol">:</a> <a id="1722" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1727" class="Symbol">}</a> <a id="1729" class="Symbol">→</a> <a id="1731" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1734" href="foundation.connected-types.html#1718" class="Bound">l</a> <a id="1736" class="Symbol">→</a> <a id="1738" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1741" href="foundation.connected-types.html#1718" class="Bound">l</a>
 <a id="1743" href="foundation.connected-types.html#1697" class="Function">is-path-connected</a> <a id="1761" href="foundation.connected-types.html#1761" class="Bound">A</a> <a id="1763" class="Symbol">=</a> <a id="1765" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a> <a id="1775" class="Symbol">(</a><a id="1776" href="foundation.connected-types.html#1580" class="Function">is-path-connected-Prop</a> <a id="1799" href="foundation.connected-types.html#1761" class="Bound">A</a><a id="1800" class="Symbol">)</a>
@@ -162,7 +162,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-07)(7e167b0) Merge pull request #237 from EgbertRijke/operations-species by noreply
+(2022-07-08)(e4fb606) Merge pull request #239 from EgbertRijke/operations-species by noreply
 </pre>
 </body>
 </html>

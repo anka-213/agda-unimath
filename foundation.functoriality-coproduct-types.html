@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/functoriality-coproduct-types.lagda.md.</p>
-<p>Version of Thursday, July  7, 2022, 09:33 PM</p>
+<p>Version of Friday, July  8, 2022, 10:14 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -52,7 +52,7 @@
 <a id="956" class="Keyword">open</a> <a id="961" class="Keyword">import</a> <a id="968" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="989" class="Keyword">using</a> <a id="995" class="Symbol">(</a><a id="996" href="foundation-core.functions.html#322" class="Function">id</a><a id="998" class="Symbol">;</a> <a id="1000" href="foundation-core.functions.html#420" class="Function Operator">_∘_</a><a id="1003" class="Symbol">)</a>
 <a id="1005" class="Keyword">open</a> <a id="1010" class="Keyword">import</a> <a id="1017" href="foundation.functoriality-cartesian-product-types.html" class="Module">foundation.functoriality-cartesian-product-types</a> <a id="1066" class="Keyword">using</a> <a id="1072" class="Symbol">(</a><a id="1073" href="foundation.functoriality-cartesian-product-types.html#3179" class="Function">equiv-prod</a><a id="1083" class="Symbol">)</a>
 <a id="1085" class="Keyword">open</a> <a id="1090" class="Keyword">import</a> <a id="1097" href="foundation.functoriality-dependent-function-types.html" class="Module">foundation.functoriality-dependent-function-types</a> <a id="1147" class="Keyword">using</a>
-  <a id="1155" class="Symbol">(</a> <a id="1157" href="foundation-core.functoriality-dependent-function-types.html#2222" class="Function">equiv-map-Π</a><a id="1168" class="Symbol">)</a>
+  <a id="1155" class="Symbol">(</a> <a id="1157" href="foundation-core.functoriality-dependent-function-types.html#2227" class="Function">equiv-map-Π</a><a id="1168" class="Symbol">)</a>
 <a id="1170" class="Keyword">open</a> <a id="1175" class="Keyword">import</a> <a id="1182" href="foundation.functoriality-dependent-pair-types.html" class="Module">foundation.functoriality-dependent-pair-types</a> <a id="1228" class="Keyword">using</a> <a id="1234" class="Symbol">(</a><a id="1235" href="foundation-core.functoriality-dependent-pair-types.html#6817" class="Function">equiv-tot</a><a id="1244" class="Symbol">)</a>
 <a id="1246" class="Keyword">open</a> <a id="1251" class="Keyword">import</a> <a id="1258" href="foundation.homotopies.html" class="Module">foundation.homotopies</a> <a id="1280" class="Keyword">using</a>
   <a id="1288" class="Symbol">(</a> <a id="1290" href="foundation-core.homotopies.html#627" class="Function Operator">_~_</a><a id="1293" class="Symbol">;</a> <a id="1295" href="foundation-core.homotopies.html#998" class="Function">inv-htpy</a><a id="1303" class="Symbol">;</a> <a id="1305" href="foundation-core.homotopies.html#1167" class="Function Operator">_∙h_</a><a id="1309" class="Symbol">;</a> <a id="1311" href="foundation.homotopies.html#3395" class="Function">is-contr-total-htpy&#39;</a><a id="1331" class="Symbol">;</a> <a id="1333" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a><a id="1342" class="Symbol">)</a>
@@ -171,9 +171,9 @@
     <a id="5391" class="Symbol">(</a> <a id="5393" href="foundation-core.functoriality-dependent-pair-types.html#6817" class="Function">equiv-tot</a>
       <a id="5409" class="Symbol">(</a> <a id="5411" class="Symbol">λ</a> <a id="5413" href="foundation.functoriality-coproduct-types.html#5413" class="Bound">fg&#39;</a> <a id="5417" class="Symbol">→</a>
         <a id="5427" class="Symbol">(</a> <a id="5429" class="Symbol">(</a> <a id="5431" href="foundation.functoriality-cartesian-product-types.html#3179" class="Function">equiv-prod</a>
-            <a id="5454" class="Symbol">(</a> <a id="5456" href="foundation-core.functoriality-dependent-function-types.html#2222" class="Function">equiv-map-Π</a>
+            <a id="5454" class="Symbol">(</a> <a id="5456" href="foundation-core.functoriality-dependent-function-types.html#2227" class="Function">equiv-map-Π</a>
               <a id="5482" class="Symbol">(</a> <a id="5484" class="Symbol">λ</a> <a id="5486" href="foundation.functoriality-coproduct-types.html#5486" class="Bound">a</a> <a id="5488" class="Symbol">→</a> <a id="5490" href="foundation.equality-coproduct-types.html#4951" class="Function">compute-eq-coprod-inl-inl</a> <a id="5516" class="Symbol">(</a><a id="5517" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="5521" href="foundation.functoriality-coproduct-types.html#5413" class="Bound">fg&#39;</a> <a id="5525" href="foundation.functoriality-coproduct-types.html#5486" class="Bound">a</a><a id="5526" class="Symbol">)</a> <a id="5528" class="Symbol">(</a><a id="5529" href="foundation.functoriality-coproduct-types.html#5247" class="Bound">f</a> <a id="5531" href="foundation.functoriality-coproduct-types.html#5486" class="Bound">a</a><a id="5532" class="Symbol">)))</a>
-            <a id="5548" class="Symbol">(</a> <a id="5550" href="foundation-core.functoriality-dependent-function-types.html#2222" class="Function">equiv-map-Π</a>
+            <a id="5548" class="Symbol">(</a> <a id="5550" href="foundation-core.functoriality-dependent-function-types.html#2227" class="Function">equiv-map-Π</a>
               <a id="5576" class="Symbol">(</a> <a id="5578" class="Symbol">λ</a> <a id="5580" href="foundation.functoriality-coproduct-types.html#5580" class="Bound">c</a> <a id="5582" class="Symbol">→</a> <a id="5584" href="foundation.equality-coproduct-types.html#7993" class="Function">compute-eq-coprod-inr-inr</a> <a id="5610" class="Symbol">(</a><a id="5611" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="5615" href="foundation.functoriality-coproduct-types.html#5413" class="Bound">fg&#39;</a> <a id="5619" href="foundation.functoriality-coproduct-types.html#5580" class="Bound">c</a><a id="5620" class="Symbol">)</a> <a id="5622" class="Symbol">(</a><a id="5623" href="foundation.functoriality-coproduct-types.html#5249" class="Bound">g</a> <a id="5625" href="foundation.functoriality-coproduct-types.html#5580" class="Bound">c</a><a id="5626" class="Symbol">))))</a> <a id="5631" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
           <a id="5644" class="Symbol">(</a> <a id="5646" href="foundation.universal-property-coproduct-types.html#1645" class="Function">equiv-dependent-universal-property-coprod</a>
             <a id="5700" class="Symbol">(</a> <a id="5702" class="Symbol">λ</a> <a id="5704" href="foundation.functoriality-coproduct-types.html#5704" class="Bound">x</a> <a id="5706" class="Symbol">→</a>
@@ -333,7 +333,7 @@ is-emb-map-coprod (pair f g) =
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-07)(7e167b0) Merge pull request #237 from EgbertRijke/operations-species by noreply
+(2022-07-08)(e4fb606) Merge pull request #239 from EgbertRijke/operations-species by noreply
 </pre>
 </body>
 </html>
