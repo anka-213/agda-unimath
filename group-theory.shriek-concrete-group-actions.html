@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Shriek of concrete group homomorphisms</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/group-theory/shriek-concrete-group-actions.lagda.md.</p>
+<p>Version of Friday, July  8, 2022, 11:24 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Shriek of concrete group homomorphisms</h1>
+</header>
+<pre class="Agda"><a id="64" class="Symbol">{-#</a> <a id="68" class="Keyword">OPTIONS</a> <a id="76" class="Pragma">--without-K</a> <a id="88" class="Pragma">--exact-split</a> <a id="102" class="Symbol">#-}</a>
+
+<a id="107" class="Keyword">module</a> <a id="114" href="group-theory.shriek-concrete-group-actions.html" class="Module">group-theory.shriek-concrete-group-actions</a> <a id="157" class="Keyword">where</a>
+
+<a id="164" class="Keyword">open</a> <a id="169" class="Keyword">import</a> <a id="176" href="foundation.cartesian-product-types.html" class="Module">foundation.cartesian-product-types</a>
+<a id="211" class="Keyword">open</a> <a id="216" class="Keyword">import</a> <a id="223" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="255" class="Keyword">open</a> <a id="260" class="Keyword">import</a> <a id="267" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="293" class="Keyword">open</a> <a id="298" class="Keyword">import</a> <a id="305" href="foundation.set-truncations.html" class="Module">foundation.set-truncations</a>
+<a id="332" class="Keyword">open</a> <a id="337" class="Keyword">import</a> <a id="344" href="foundation.sets.html" class="Module">foundation.sets</a>
+<a id="360" class="Keyword">open</a> <a id="365" class="Keyword">import</a> <a id="372" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="400" class="Keyword">open</a> <a id="405" class="Keyword">import</a> <a id="412" href="group-theory.concrete-group-actions.html" class="Module">group-theory.concrete-group-actions</a>
+<a id="448" class="Keyword">open</a> <a id="453" class="Keyword">import</a> <a id="460" href="group-theory.concrete-groups.html" class="Module">group-theory.concrete-groups</a>
+<a id="489" class="Keyword">open</a> <a id="494" class="Keyword">import</a> <a id="501" href="group-theory.homomorphisms-concrete-group-actions.html" class="Module">group-theory.homomorphisms-concrete-group-actions</a>
+<a id="551" class="Keyword">open</a> <a id="556" class="Keyword">import</a> <a id="563" href="group-theory.substitutions-concrete-group-actions.html" class="Module">group-theory.substitutions-concrete-group-actions</a>
+</pre>
+<h2 id="definition">Definition</h2>
+<h3 id="operations-on-group-actions">Operations on group actions</h3>
+<pre class="Agda"><a id="674" class="Keyword">module</a> <a id="681" href="group-theory.shriek-concrete-group-actions.html#681" class="Module">_</a>
+  <a id="685" class="Symbol">{</a><a id="686" href="group-theory.shriek-concrete-group-actions.html#686" class="Bound">l1</a> <a id="689" href="group-theory.shriek-concrete-group-actions.html#689" class="Bound">l2</a> <a id="692" class="Symbol">:</a> <a id="694" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="699" class="Symbol">}</a> <a id="701" class="Symbol">(</a><a id="702" href="group-theory.shriek-concrete-group-actions.html#702" class="Bound">G</a> <a id="704" class="Symbol">:</a> <a id="706" href="group-theory.concrete-groups.html#1988" class="Function">Concrete-Group</a> <a id="721" href="group-theory.shriek-concrete-group-actions.html#686" class="Bound">l1</a><a id="723" class="Symbol">)</a> <a id="725" class="Symbol">(</a><a id="726" href="group-theory.shriek-concrete-group-actions.html#726" class="Bound">H</a> <a id="728" class="Symbol">:</a> <a id="730" href="group-theory.concrete-groups.html#1988" class="Function">Concrete-Group</a> <a id="745" href="group-theory.shriek-concrete-group-actions.html#689" class="Bound">l2</a><a id="747" class="Symbol">)</a>
+  <a id="751" class="Symbol">(</a><a id="752" href="group-theory.shriek-concrete-group-actions.html#752" class="Bound">f</a> <a id="754" class="Symbol">:</a> <a id="756" href="group-theory.concrete-groups.html#6994" class="Function">hom-Concrete-Group</a> <a id="775" href="group-theory.shriek-concrete-group-actions.html#702" class="Bound">G</a> <a id="777" href="group-theory.shriek-concrete-group-actions.html#726" class="Bound">H</a><a id="778" class="Symbol">)</a>
+  <a id="782" class="Keyword">where</a>
+
+  <a id="791" href="group-theory.shriek-concrete-group-actions.html#791" class="Function">left-adjoint-subst-action-Concrete-Group</a> <a id="832" class="Symbol">:</a>
+    <a id="838" class="Symbol">{</a><a id="839" href="group-theory.shriek-concrete-group-actions.html#839" class="Bound">l</a> <a id="841" class="Symbol">:</a> <a id="843" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="848" class="Symbol">}</a> <a id="850" class="Symbol">→</a> <a id="852" class="Symbol">(</a><a id="853" href="group-theory.concrete-group-actions.html#794" class="Function">action-Concrete-Group</a> <a id="875" href="group-theory.shriek-concrete-group-actions.html#839" class="Bound">l</a> <a id="877" href="group-theory.shriek-concrete-group-actions.html#702" class="Bound">G</a><a id="878" class="Symbol">)</a> <a id="880" class="Symbol">→</a>
+    <a id="886" class="Symbol">(</a><a id="887" href="group-theory.concrete-group-actions.html#794" class="Function">action-Concrete-Group</a> <a id="909" class="Symbol">(</a><a id="910" href="group-theory.shriek-concrete-group-actions.html#686" class="Bound">l1</a> <a id="913" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="915" href="group-theory.shriek-concrete-group-actions.html#689" class="Bound">l2</a> <a id="918" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="920" href="group-theory.shriek-concrete-group-actions.html#839" class="Bound">l</a><a id="921" class="Symbol">)</a> <a id="923" href="group-theory.shriek-concrete-group-actions.html#726" class="Bound">H</a><a id="924" class="Symbol">)</a>
+  <a id="928" href="group-theory.shriek-concrete-group-actions.html#791" class="Function">left-adjoint-subst-action-Concrete-Group</a> <a id="969" href="group-theory.shriek-concrete-group-actions.html#969" class="Bound">X</a> <a id="971" href="group-theory.shriek-concrete-group-actions.html#971" class="Bound">y</a> <a id="973" class="Symbol">=</a>
+    <a id="979" href="foundation.set-truncations.html#4197" class="Function">trunc-Set</a>
+      <a id="995" class="Symbol">(</a> <a id="997" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="999" class="Symbol">(</a> <a id="1001" href="group-theory.concrete-groups.html#2389" class="Function">classifying-type-Concrete-Group</a> <a id="1033" href="group-theory.shriek-concrete-group-actions.html#702" class="Bound">G</a><a id="1034" class="Symbol">)</a>
+          <a id="1046" class="Symbol">(</a> <a id="1048" class="Symbol">λ</a> <a id="1050" href="group-theory.shriek-concrete-group-actions.html#1050" class="Bound">x</a> <a id="1052" class="Symbol">→</a>
+            <a id="1066" href="foundation-core.sets.html#1304" class="Function">type-Set</a> <a id="1075" class="Symbol">(</a><a id="1076" href="group-theory.shriek-concrete-group-actions.html#969" class="Bound">X</a> <a id="1078" href="group-theory.shriek-concrete-group-actions.html#1050" class="Bound">x</a><a id="1079" class="Symbol">)</a> <a id="1081" href="foundation-core.cartesian-product-types.html#590" class="Function Operator">×</a> <a id="1083" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a> <a id="1086" class="Symbol">(</a><a id="1087" href="group-theory.concrete-groups.html#7344" class="Function">classifying-map-hom-Concrete-Group</a> <a id="1122" href="group-theory.shriek-concrete-group-actions.html#702" class="Bound">G</a> <a id="1124" href="group-theory.shriek-concrete-group-actions.html#726" class="Bound">H</a> <a id="1126" href="group-theory.shriek-concrete-group-actions.html#752" class="Bound">f</a> <a id="1128" href="group-theory.shriek-concrete-group-actions.html#1050" class="Bound">x</a><a id="1129" class="Symbol">)</a> <a id="1131" href="group-theory.shriek-concrete-group-actions.html#971" class="Bound">y</a><a id="1132" class="Symbol">))</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-07-09)(d08ef3f) Merge pull request #245 from EgbertRijke/group-theory by noreply
+</pre>
+</body>
+</html>

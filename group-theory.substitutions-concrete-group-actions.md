@@ -1,0 +1,28 @@
+---
+title: Substitution of concrete group actions along concrete group homomorphisms
+---
+
+<pre class="Agda"><a id="99" class="Symbol">{-#</a> <a id="103" class="Keyword">OPTIONS</a> <a id="111" class="Pragma">--without-K</a> <a id="123" class="Pragma">--exact-split</a> <a id="137" class="Symbol">#-}</a>
+
+<a id="142" class="Keyword">module</a> <a id="149" href="group-theory.substitutions-concrete-group-actions.html" class="Module">group-theory.substitutions-concrete-group-actions</a> <a id="199" class="Keyword">where</a>
+
+<a id="206" class="Keyword">open</a> <a id="211" class="Keyword">import</a> <a id="218" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="246" class="Keyword">open</a> <a id="251" class="Keyword">import</a> <a id="258" href="group-theory.concrete-group-actions.html" class="Module">group-theory.concrete-group-actions</a>
+<a id="294" class="Keyword">open</a> <a id="299" class="Keyword">import</a> <a id="306" href="group-theory.concrete-groups.html" class="Module">group-theory.concrete-groups</a>
+</pre>
+## Definition
+
+### Substitution of concrete group actions
+
+<pre class="Agda"><a id="407" class="Keyword">module</a> <a id="414" href="group-theory.substitutions-concrete-group-actions.html#414" class="Module">_</a>
+  <a id="418" class="Symbol">{</a><a id="419" href="group-theory.substitutions-concrete-group-actions.html#419" class="Bound">l1</a> <a id="422" href="group-theory.substitutions-concrete-group-actions.html#422" class="Bound">l2</a> <a id="425" class="Symbol">:</a> <a id="427" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="432" class="Symbol">}</a> <a id="434" class="Symbol">(</a><a id="435" href="group-theory.substitutions-concrete-group-actions.html#435" class="Bound">G</a> <a id="437" class="Symbol">:</a> <a id="439" href="group-theory.concrete-groups.html#1988" class="Function">Concrete-Group</a> <a id="454" href="group-theory.substitutions-concrete-group-actions.html#419" class="Bound">l1</a><a id="456" class="Symbol">)</a> <a id="458" class="Symbol">(</a><a id="459" href="group-theory.substitutions-concrete-group-actions.html#459" class="Bound">H</a> <a id="461" class="Symbol">:</a> <a id="463" href="group-theory.concrete-groups.html#1988" class="Function">Concrete-Group</a> <a id="478" href="group-theory.substitutions-concrete-group-actions.html#422" class="Bound">l2</a><a id="480" class="Symbol">)</a>
+  <a id="484" class="Symbol">(</a><a id="485" href="group-theory.substitutions-concrete-group-actions.html#485" class="Bound">f</a> <a id="487" class="Symbol">:</a> <a id="489" href="group-theory.concrete-groups.html#6994" class="Function">hom-Concrete-Group</a> <a id="508" href="group-theory.substitutions-concrete-group-actions.html#435" class="Bound">G</a> <a id="510" href="group-theory.substitutions-concrete-group-actions.html#459" class="Bound">H</a><a id="511" class="Symbol">)</a>
+  <a id="515" class="Keyword">where</a>
+
+  <a id="524" href="group-theory.substitutions-concrete-group-actions.html#524" class="Function">subst-action-Concrete-Group</a> <a id="552" class="Symbol">:</a>
+    <a id="558" class="Symbol">{</a><a id="559" href="group-theory.substitutions-concrete-group-actions.html#559" class="Bound">l</a> <a id="561" class="Symbol">:</a> <a id="563" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="568" class="Symbol">}</a> <a id="570" class="Symbol">→</a>
+    <a id="576" href="group-theory.concrete-group-actions.html#794" class="Function">action-Concrete-Group</a> <a id="598" href="group-theory.substitutions-concrete-group-actions.html#559" class="Bound">l</a> <a id="600" href="group-theory.substitutions-concrete-group-actions.html#459" class="Bound">H</a> <a id="602" class="Symbol">→</a> <a id="604" href="group-theory.concrete-group-actions.html#794" class="Function">action-Concrete-Group</a> <a id="626" href="group-theory.substitutions-concrete-group-actions.html#559" class="Bound">l</a> <a id="628" href="group-theory.substitutions-concrete-group-actions.html#435" class="Bound">G</a>
+  <a id="632" href="group-theory.substitutions-concrete-group-actions.html#524" class="Function">subst-action-Concrete-Group</a> <a id="660" href="group-theory.substitutions-concrete-group-actions.html#660" class="Bound">Y</a> <a id="662" href="group-theory.substitutions-concrete-group-actions.html#662" class="Bound">x</a> <a id="664" class="Symbol">=</a>
+    <a id="670" href="group-theory.substitutions-concrete-group-actions.html#660" class="Bound">Y</a> <a id="672" class="Symbol">(</a><a id="673" href="group-theory.concrete-groups.html#7344" class="Function">classifying-map-hom-Concrete-Group</a> <a id="708" href="group-theory.substitutions-concrete-group-actions.html#435" class="Bound">G</a> <a id="710" href="group-theory.substitutions-concrete-group-actions.html#459" class="Bound">H</a> <a id="712" href="group-theory.substitutions-concrete-group-actions.html#485" class="Bound">f</a> <a id="714" href="group-theory.substitutions-concrete-group-actions.html#662" class="Bound">x</a><a id="715" class="Symbol">)</a>
+</pre>
