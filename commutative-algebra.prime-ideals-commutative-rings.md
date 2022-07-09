@@ -89,7 +89,7 @@ A prime ideal is an ideal `I` in a commutative ring `R` such that for every `a,b
     <a id="3068" href="commutative-algebra.ideals-commutative-rings.html#3167" class="Function">is-ideal-subset-ideal-Commutative-Ring</a> <a id="3107" href="commutative-algebra.prime-ideals-commutative-rings.html#1766" class="Bound">R</a> <a id="3109" href="commutative-algebra.prime-ideals-commutative-rings.html#1844" class="Function">ideal-prime-ideal-Commutative-Ring</a>
 
   <a id="3147" href="commutative-algebra.prime-ideals-commutative-rings.html#3147" class="Function">is-additive-subgroup-subset-prime-ideal-Commutative-Ring</a> <a id="3204" class="Symbol">:</a>
-    <a id="3210" href="ring-theory.ideals-rings.html#1089" class="Function">is-additive-subgroup-subset-Ring</a>
+    <a id="3210" href="ring-theory.ideals-rings.html#1096" class="Function">is-additive-subgroup-subset-Ring</a>
       <a id="3249" class="Symbol">(</a> <a id="3251" href="commutative-algebra.commutative-rings.html#1676" class="Function">ring-Commutative-Ring</a> <a id="3273" href="commutative-algebra.prime-ideals-commutative-rings.html#1766" class="Bound">R</a><a id="3274" class="Symbol">)</a>
       <a id="3282" class="Symbol">(</a> <a id="3284" href="commutative-algebra.prime-ideals-commutative-rings.html#2145" class="Function">subset-prime-ideal-Commutative-Ring</a><a id="3319" class="Symbol">)</a>
   <a id="3323" href="commutative-algebra.prime-ideals-commutative-rings.html#3147" class="Function">is-additive-subgroup-subset-prime-ideal-Commutative-Ring</a> <a id="3380" class="Symbol">=</a>
