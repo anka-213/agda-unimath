@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/loop-groups-sets.lagda.md.</p>
-<p>Version of Saturday, July  9, 2022, 01:04 PM</p>
+<p>Version of Saturday, July  9, 2022, 02:09 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -59,7 +59,7 @@
 <a id="1463" class="Keyword">open</a> <a id="1468" class="Keyword">import</a> <a id="1475" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="1502" class="Keyword">using</a> <a id="1508" class="Symbol">(</a><a id="1509" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="1511" class="Symbol">;</a> <a id="1513" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1518" class="Symbol">;</a> <a id="1520" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="1523" class="Symbol">;</a> <a id="1525" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="1529" class="Symbol">)</a>
 
 <a id="1532" class="Keyword">open</a> <a id="1537" class="Keyword">import</a> <a id="1544" href="group-theory.automorphism-groups.html" class="Module">group-theory.automorphism-groups</a> <a id="1577" class="Keyword">using</a> <a id="1583" class="Symbol">(</a><a id="1584" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a><a id="1602" class="Symbol">)</a>
-<a id="1604" class="Keyword">open</a> <a id="1609" class="Keyword">import</a> <a id="1616" href="group-theory.concrete-groups.html" class="Module">group-theory.concrete-groups</a> <a id="1645" class="Keyword">using</a> <a id="1651" class="Symbol">(</a><a id="1652" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a><a id="1681" class="Symbol">)</a>
+<a id="1604" class="Keyword">open</a> <a id="1609" class="Keyword">import</a> <a id="1616" href="group-theory.concrete-groups.html" class="Module">group-theory.concrete-groups</a> <a id="1645" class="Keyword">using</a> <a id="1651" class="Symbol">(</a><a id="1652" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a><a id="1681" class="Symbol">)</a>
 <a id="1683" class="Keyword">open</a> <a id="1688" class="Keyword">import</a> <a id="1695" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="1715" class="Keyword">using</a> <a id="1721" class="Symbol">(</a><a id="1722" href="group-theory.groups.html#2481" class="Function">Group</a><a id="1727" class="Symbol">;</a> <a id="1729" href="group-theory.groups.html#1971" class="Function">is-group&#39;</a><a id="1738" class="Symbol">;</a> <a id="1740" href="group-theory.groups.html#2603" class="Function">semigroup-Group</a><a id="1755" class="Symbol">)</a>
 <a id="1757" class="Keyword">open</a> <a id="1762" class="Keyword">import</a> <a id="1769" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="1803" class="Keyword">using</a>
   <a id="1811" class="Symbol">(</a> <a id="1813" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a><a id="1827" class="Symbol">;</a> <a id="1829" href="group-theory.homomorphisms-groups.html#2256" class="Function">comp-hom-Group</a><a id="1843" class="Symbol">;</a> <a id="1845" href="group-theory.homomorphisms-groups.html#2087" class="Function">id-hom-Group</a><a id="1857" class="Symbol">)</a>
@@ -215,7 +215,7 @@
   <a id="7557" href="group-theory.loop-groups-sets.html#7557" class="Function">hom-abstract-automorphism-group-loop-group-Set</a> <a id="7604" class="Symbol">:</a>
     <a id="7610" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a>
       <a id="7631" class="Symbol">(</a> <a id="7633" href="group-theory.loop-groups-sets.html#3440" class="Function">loop-group-Set</a> <a id="7648" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a><a id="7649" class="Symbol">)</a>
-      <a id="7657" class="Symbol">(</a> <a id="7659" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a>
+      <a id="7657" class="Symbol">(</a> <a id="7659" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a>
         <a id="7697" class="Symbol">(</a> <a id="7699" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a> <a id="7718" class="Symbol">(</a><a id="7719" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="7726" href="group-theory.loop-groups-sets.html#7520" class="Bound">l</a><a id="7727" class="Symbol">)</a> <a id="7729" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a> <a id="7731" href="foundation.sets.html#1209" class="Function">is-1-type-UU-Set</a><a id="7747" class="Symbol">))</a>
   <a id="7752" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="7756" href="group-theory.loop-groups-sets.html#7557" class="Function">hom-abstract-automorphism-group-loop-group-Set</a> <a id="7803" href="group-theory.loop-groups-sets.html#7803" class="Bound">p</a> <a id="7805" class="Symbol">=</a>
     <a id="7811" href="foundation.equality-dependent-pair-types.html#1481" class="Function">eq-pair-Σ</a>
@@ -257,7 +257,7 @@
 
   <a id="9128" href="group-theory.loop-groups-sets.html#9128" class="Function">hom-inv-abstract-automorphism-group-loop-group-Set</a> <a id="9179" class="Symbol">:</a>
     <a id="9185" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a>
-      <a id="9206" class="Symbol">(</a> <a id="9208" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a>
+      <a id="9206" class="Symbol">(</a> <a id="9208" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a>
         <a id="9246" class="Symbol">(</a> <a id="9248" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a> <a id="9267" class="Symbol">(</a><a id="9268" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="9275" href="group-theory.loop-groups-sets.html#7520" class="Bound">l</a><a id="9276" class="Symbol">)</a> <a id="9278" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a> <a id="9280" href="foundation.sets.html#1209" class="Function">is-1-type-UU-Set</a><a id="9296" class="Symbol">))</a>
       <a id="9305" class="Symbol">(</a> <a id="9307" href="group-theory.loop-groups-sets.html#3440" class="Function">loop-group-Set</a> <a id="9322" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a><a id="9323" class="Symbol">)</a>
   <a id="9327" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="9331" href="group-theory.loop-groups-sets.html#9128" class="Function">hom-inv-abstract-automorphism-group-loop-group-Set</a> <a id="9382" href="group-theory.loop-groups-sets.html#9382" class="Bound">p</a> <a id="9384" class="Symbol">=</a>
@@ -271,15 +271,15 @@
   <a id="9641" href="group-theory.loop-groups-sets.html#9641" class="Function">is-sec-hom-inv-abstract-automorphism-group-loop-group-Set</a> <a id="9699" class="Symbol">:</a>
     <a id="9705" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a>
       <a id="9714" class="Symbol">(</a> <a id="9716" href="group-theory.homomorphisms-groups.html#2256" class="Function">comp-hom-Group</a>
-        <a id="9739" class="Symbol">(</a> <a id="9741" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a>
+        <a id="9739" class="Symbol">(</a> <a id="9741" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a>
           <a id="9781" class="Symbol">(</a> <a id="9783" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a> <a id="9802" class="Symbol">(</a><a id="9803" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="9810" href="group-theory.loop-groups-sets.html#7520" class="Bound">l</a><a id="9811" class="Symbol">)</a> <a id="9813" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a> <a id="9815" href="foundation.sets.html#1209" class="Function">is-1-type-UU-Set</a><a id="9831" class="Symbol">))</a>
         <a id="9842" class="Symbol">(</a> <a id="9844" href="group-theory.loop-groups-sets.html#3440" class="Function">loop-group-Set</a> <a id="9859" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a><a id="9860" class="Symbol">)</a>
-        <a id="9870" class="Symbol">(</a> <a id="9872" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a>
+        <a id="9870" class="Symbol">(</a> <a id="9872" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a>
           <a id="9912" class="Symbol">(</a> <a id="9914" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a> <a id="9933" class="Symbol">(</a><a id="9934" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="9941" href="group-theory.loop-groups-sets.html#7520" class="Bound">l</a><a id="9942" class="Symbol">)</a> <a id="9944" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a> <a id="9946" href="foundation.sets.html#1209" class="Function">is-1-type-UU-Set</a><a id="9962" class="Symbol">))</a>
         <a id="9973" class="Symbol">(</a> <a id="9975" href="group-theory.loop-groups-sets.html#7557" class="Function">hom-abstract-automorphism-group-loop-group-Set</a><a id="10021" class="Symbol">)</a>
         <a id="10031" class="Symbol">(</a> <a id="10033" href="group-theory.loop-groups-sets.html#9128" class="Function">hom-inv-abstract-automorphism-group-loop-group-Set</a><a id="10083" class="Symbol">))</a>
       <a id="10092" class="Symbol">(</a> <a id="10094" href="group-theory.homomorphisms-groups.html#2087" class="Function">id-hom-Group</a>
-        <a id="10115" class="Symbol">(</a> <a id="10117" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a>
+        <a id="10115" class="Symbol">(</a> <a id="10117" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a>
           <a id="10157" class="Symbol">(</a> <a id="10159" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a> <a id="10178" class="Symbol">(</a><a id="10179" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="10186" href="group-theory.loop-groups-sets.html#7520" class="Bound">l</a><a id="10187" class="Symbol">)</a> <a id="10189" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a> <a id="10191" href="foundation.sets.html#1209" class="Function">is-1-type-UU-Set</a><a id="10207" class="Symbol">)))</a>
   <a id="10213" href="group-theory.loop-groups-sets.html#9641" class="Function">is-sec-hom-inv-abstract-automorphism-group-loop-group-Set</a> <a id="10271" class="Symbol">=</a>
     <a id="10277" href="foundation.equality-dependent-pair-types.html#1481" class="Function">eq-pair-Σ</a>
@@ -302,10 +302,10 @@
       <a id="10987" class="Symbol">(</a> <a id="10989" href="foundation-core.propositions.html#2719" class="Function">eq-is-prop</a>
         <a id="11008" class="Symbol">(</a> <a id="11010" href="group-theory.homomorphisms-semigroups.html#2111" class="Function">is-prop-preserves-mul-Semigroup</a>
           <a id="11052" class="Symbol">(</a> <a id="11054" href="group-theory.groups.html#2603" class="Function">semigroup-Group</a>
-            <a id="11082" class="Symbol">(</a> <a id="11084" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a>
+            <a id="11082" class="Symbol">(</a> <a id="11084" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a>
               <a id="11128" class="Symbol">(</a> <a id="11130" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a> <a id="11149" class="Symbol">(</a><a id="11150" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="11157" href="group-theory.loop-groups-sets.html#7520" class="Bound">l</a><a id="11158" class="Symbol">)</a> <a id="11160" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a> <a id="11162" href="foundation.sets.html#1209" class="Function">is-1-type-UU-Set</a><a id="11178" class="Symbol">)))</a>
           <a id="11192" class="Symbol">(</a> <a id="11194" href="group-theory.groups.html#2603" class="Function">semigroup-Group</a>
-            <a id="11222" class="Symbol">(</a> <a id="11224" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a>
+            <a id="11222" class="Symbol">(</a> <a id="11224" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a>
               <a id="11268" class="Symbol">(</a> <a id="11270" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a> <a id="11289" class="Symbol">(</a><a id="11290" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="11297" href="group-theory.loop-groups-sets.html#7520" class="Bound">l</a><a id="11298" class="Symbol">)</a> <a id="11300" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a> <a id="11302" href="foundation.sets.html#1209" class="Function">is-1-type-UU-Set</a><a id="11318" class="Symbol">)))</a>
           <a id="11332" class="Symbol">(</a> <a id="11334" href="foundation-core.functions.html#322" class="Function">id</a><a id="11336" class="Symbol">)))</a>
 
@@ -313,7 +313,7 @@
     <a id="11408" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a>
       <a id="11417" class="Symbol">(</a> <a id="11419" href="group-theory.homomorphisms-groups.html#2256" class="Function">comp-hom-Group</a>
         <a id="11442" class="Symbol">(</a> <a id="11444" href="group-theory.loop-groups-sets.html#3440" class="Function">loop-group-Set</a> <a id="11459" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a><a id="11460" class="Symbol">)</a>
-        <a id="11470" class="Symbol">(</a> <a id="11472" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a>
+        <a id="11470" class="Symbol">(</a> <a id="11472" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a>
           <a id="11512" class="Symbol">(</a> <a id="11514" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a> <a id="11533" class="Symbol">(</a><a id="11534" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="11541" href="group-theory.loop-groups-sets.html#7520" class="Bound">l</a><a id="11542" class="Symbol">)</a> <a id="11544" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a> <a id="11546" href="foundation.sets.html#1209" class="Function">is-1-type-UU-Set</a><a id="11562" class="Symbol">))</a>
         <a id="11573" class="Symbol">(</a> <a id="11575" href="group-theory.loop-groups-sets.html#3440" class="Function">loop-group-Set</a> <a id="11590" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a><a id="11591" class="Symbol">)</a>
         <a id="11601" class="Symbol">(</a> <a id="11603" href="group-theory.loop-groups-sets.html#9128" class="Function">hom-inv-abstract-automorphism-group-loop-group-Set</a><a id="11653" class="Symbol">)</a>
@@ -345,7 +345,7 @@
   <a id="12552" href="group-theory.loop-groups-sets.html#12552" class="Function">iso-abstract-automorphism-group-loop-group-Set</a> <a id="12599" class="Symbol">:</a>
     <a id="12605" href="group-theory.isomorphisms-groups.html#1714" class="Function">type-iso-Group</a>
       <a id="12626" class="Symbol">(</a> <a id="12628" href="group-theory.loop-groups-sets.html#3440" class="Function">loop-group-Set</a> <a id="12643" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a><a id="12644" class="Symbol">)</a>
-      <a id="12652" class="Symbol">(</a> <a id="12654" href="group-theory.concrete-groups.html#6346" class="Function">abstract-group-Concrete-Group</a>
+      <a id="12652" class="Symbol">(</a> <a id="12654" href="group-theory.concrete-groups.html#6405" class="Function">abstract-group-Concrete-Group</a>
         <a id="12692" class="Symbol">(</a> <a id="12694" href="group-theory.automorphism-groups.html#1171" class="Function">Automorphism-Group</a> <a id="12713" class="Symbol">(</a><a id="12714" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="12721" href="group-theory.loop-groups-sets.html#7520" class="Bound">l</a><a id="12722" class="Symbol">)</a> <a id="12724" href="group-theory.loop-groups-sets.html#7532" class="Bound">X</a> <a id="12726" href="foundation.sets.html#1209" class="Function">is-1-type-UU-Set</a><a id="12742" class="Symbol">))</a>
   <a id="12747" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="12751" href="group-theory.loop-groups-sets.html#12552" class="Function">iso-abstract-automorphism-group-loop-group-Set</a> <a id="12798" class="Symbol">=</a> <a id="12800" href="group-theory.loop-groups-sets.html#7557" class="Function">hom-abstract-automorphism-group-loop-group-Set</a>
   <a id="12849" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="12853" class="Symbol">(</a><a id="12854" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="12858" href="group-theory.loop-groups-sets.html#12552" class="Function">iso-abstract-automorphism-group-loop-group-Set</a><a id="12904" class="Symbol">)</a> <a id="12906" class="Symbol">=</a> <a id="12908" href="group-theory.loop-groups-sets.html#9128" class="Function">hom-inv-abstract-automorphism-group-loop-group-Set</a>
@@ -379,7 +379,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-09)(380085a) Merge pull request #248 from EgbertRijke/group-theory by noreply
+(2022-07-09)(ebc36bf) Merge pull request #249 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
