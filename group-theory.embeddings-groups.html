@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/embeddings-groups.lagda.md.</p>
-<p>Version of Saturday, July  9, 2022, 09:49 AM</p>
+<p>Version of Saturday, July  9, 2022, 10:53 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -43,8 +43,8 @@
   <a id="376" class="Symbol">(</a> <a id="378" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a><a id="392" class="Symbol">;</a> <a id="394" href="group-theory.homomorphisms-groups.html#1759" class="Function">map-hom-Group</a><a id="407" class="Symbol">)</a>
 <a id="409" class="Keyword">open</a> <a id="414" class="Keyword">import</a> <a id="421" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="441" class="Keyword">using</a> <a id="447" class="Symbol">(</a><a id="448" href="group-theory.groups.html#2481" class="Function">Group</a><a id="453" class="Symbol">;</a> <a id="455" href="group-theory.groups.html#2724" class="Function">type-Group</a><a id="465" class="Symbol">)</a>
 <a id="467" class="Keyword">open</a> <a id="472" class="Keyword">import</a> <a id="479" href="group-theory.subgroups.html" class="Module">group-theory.subgroups</a> <a id="502" class="Keyword">using</a>
-  <a id="510" class="Symbol">(</a> <a id="512" href="group-theory.subgroups.html#4518" class="Function">Subgroup</a><a id="520" class="Symbol">;</a> <a id="522" href="group-theory.subgroups.html#8998" class="Function">group-Subgroup</a><a id="536" class="Symbol">;</a> <a id="538" href="group-theory.subgroups.html#10253" class="Function">inclusion-group-Subgroup</a><a id="562" class="Symbol">;</a>
-    <a id="568" href="group-theory.subgroups.html#6417" class="Function">is-emb-inclusion-group-Subgroup</a><a id="599" class="Symbol">)</a>
+  <a id="510" class="Symbol">(</a> <a id="512" href="group-theory.subgroups.html#4533" class="Function">Subgroup</a><a id="520" class="Symbol">;</a> <a id="522" href="group-theory.subgroups.html#8956" class="Function">group-Subgroup</a><a id="536" class="Symbol">;</a> <a id="538" href="group-theory.subgroups.html#10211" class="Function">inclusion-group-Subgroup</a><a id="562" class="Symbol">;</a>
+    <a id="568" href="group-theory.subgroups.html#6375" class="Function">is-emb-inclusion-group-Subgroup</a><a id="599" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>Embeddings of groups are group homomorphisms of which the underlying map is an embedding</p>
@@ -77,17 +77,17 @@
 
 <a id="emb-group-slice-Subgroup"></a><a id="1516" href="group-theory.embeddings-groups.html#1516" class="Function">emb-group-slice-Subgroup</a> <a id="1541" class="Symbol">:</a>
   <a id="1545" class="Symbol">{</a> <a id="1547" href="group-theory.embeddings-groups.html#1547" class="Bound">l1</a> <a id="1550" href="group-theory.embeddings-groups.html#1550" class="Bound">l2</a> <a id="1553" class="Symbol">:</a> <a id="1555" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1560" class="Symbol">}</a> <a id="1562" class="Symbol">(</a><a id="1563" href="group-theory.embeddings-groups.html#1563" class="Bound">G</a> <a id="1565" class="Symbol">:</a> <a id="1567" href="group-theory.groups.html#2481" class="Function">Group</a> <a id="1573" href="group-theory.embeddings-groups.html#1547" class="Bound">l1</a><a id="1575" class="Symbol">)</a> <a id="1577" class="Symbol">→</a>
-  <a id="1581" href="group-theory.subgroups.html#4518" class="Function">Subgroup</a> <a id="1590" href="group-theory.embeddings-groups.html#1550" class="Bound">l2</a> <a id="1593" href="group-theory.embeddings-groups.html#1563" class="Bound">G</a> <a id="1595" class="Symbol">→</a> <a id="1597" href="group-theory.embeddings-groups.html#1375" class="Function">emb-Group-Slice</a> <a id="1613" class="Symbol">(</a><a id="1614" href="group-theory.embeddings-groups.html#1547" class="Bound">l1</a> <a id="1617" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1619" href="group-theory.embeddings-groups.html#1550" class="Bound">l2</a><a id="1621" class="Symbol">)</a> <a id="1623" href="group-theory.embeddings-groups.html#1563" class="Bound">G</a>
+  <a id="1581" href="group-theory.subgroups.html#4533" class="Function">Subgroup</a> <a id="1590" href="group-theory.embeddings-groups.html#1550" class="Bound">l2</a> <a id="1593" href="group-theory.embeddings-groups.html#1563" class="Bound">G</a> <a id="1595" class="Symbol">→</a> <a id="1597" href="group-theory.embeddings-groups.html#1375" class="Function">emb-Group-Slice</a> <a id="1613" class="Symbol">(</a><a id="1614" href="group-theory.embeddings-groups.html#1547" class="Bound">l1</a> <a id="1617" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1619" href="group-theory.embeddings-groups.html#1550" class="Bound">l2</a><a id="1621" class="Symbol">)</a> <a id="1623" href="group-theory.embeddings-groups.html#1563" class="Bound">G</a>
 <a id="1625" href="group-theory.embeddings-groups.html#1516" class="Function">emb-group-slice-Subgroup</a> <a id="1650" href="group-theory.embeddings-groups.html#1650" class="Bound">G</a> <a id="1652" href="group-theory.embeddings-groups.html#1652" class="Bound">P</a> <a id="1654" class="Symbol">=</a>
   <a id="1658" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a>
-    <a id="1667" class="Symbol">(</a> <a id="1669" href="group-theory.subgroups.html#8998" class="Function">group-Subgroup</a> <a id="1684" href="group-theory.embeddings-groups.html#1650" class="Bound">G</a> <a id="1686" href="group-theory.embeddings-groups.html#1652" class="Bound">P</a><a id="1687" class="Symbol">)</a>
+    <a id="1667" class="Symbol">(</a> <a id="1669" href="group-theory.subgroups.html#8956" class="Function">group-Subgroup</a> <a id="1684" href="group-theory.embeddings-groups.html#1650" class="Bound">G</a> <a id="1686" href="group-theory.embeddings-groups.html#1652" class="Bound">P</a><a id="1687" class="Symbol">)</a>
     <a id="1693" class="Symbol">(</a> <a id="1695" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a>
-      <a id="1706" class="Symbol">(</a> <a id="1708" href="group-theory.subgroups.html#10253" class="Function">inclusion-group-Subgroup</a> <a id="1733" href="group-theory.embeddings-groups.html#1650" class="Bound">G</a> <a id="1735" href="group-theory.embeddings-groups.html#1652" class="Bound">P</a><a id="1736" class="Symbol">)</a>
-      <a id="1744" class="Symbol">(</a> <a id="1746" href="group-theory.subgroups.html#6417" class="Function">is-emb-inclusion-group-Subgroup</a> <a id="1778" href="group-theory.embeddings-groups.html#1650" class="Bound">G</a> <a id="1780" href="group-theory.embeddings-groups.html#1652" class="Bound">P</a><a id="1781" class="Symbol">))</a>
+      <a id="1706" class="Symbol">(</a> <a id="1708" href="group-theory.subgroups.html#10211" class="Function">inclusion-group-Subgroup</a> <a id="1733" href="group-theory.embeddings-groups.html#1650" class="Bound">G</a> <a id="1735" href="group-theory.embeddings-groups.html#1652" class="Bound">P</a><a id="1736" class="Symbol">)</a>
+      <a id="1744" class="Symbol">(</a> <a id="1746" href="group-theory.subgroups.html#6375" class="Function">is-emb-inclusion-group-Subgroup</a> <a id="1778" href="group-theory.embeddings-groups.html#1650" class="Bound">G</a> <a id="1780" href="group-theory.embeddings-groups.html#1652" class="Bound">P</a><a id="1781" class="Symbol">))</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-09)(3bde09f) Merge pull request #246 from EgbertRijke/group-theory by noreply
+(2022-07-09)(e9c56c6) Merge pull request #247 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

@@ -1,5 +1,5 @@
 ---
-title: Conjucation in groups
+title: Conjugation in groups
 ---
 
 <pre class="Agda"><a id="47" class="Symbol">{-#</a> <a id="51" class="Keyword">OPTIONS</a> <a id="59" class="Pragma">--without-K</a> <a id="71" class="Pragma">--exact-split</a> <a id="85" class="Symbol">#-}</a>
