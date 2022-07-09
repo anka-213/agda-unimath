@@ -1,0 +1,41 @@
+---
+title: Free higher group actions
+---
+
+<pre class="Agda"><a id="51" class="Symbol">{-#</a> <a id="55" class="Keyword">OPTIONS</a> <a id="63" class="Pragma">--without-K</a> <a id="75" class="Pragma">--exact-split</a> <a id="89" class="Symbol">#-}</a>
+
+<a id="94" class="Keyword">module</a> <a id="101" href="group-theory.free-higher-group-actions.html" class="Module">group-theory.free-higher-group-actions</a> <a id="140" class="Keyword">where</a>
+
+<a id="147" class="Keyword">open</a> <a id="152" class="Keyword">import</a> <a id="159" href="foundation.propositions.html" class="Module">foundation.propositions</a>
+<a id="183" class="Keyword">open</a> <a id="188" class="Keyword">import</a> <a id="195" href="foundation.sets.html" class="Module">foundation.sets</a>
+<a id="211" class="Keyword">open</a> <a id="216" class="Keyword">import</a> <a id="223" href="foundation.subtypes.html" class="Module">foundation.subtypes</a>
+<a id="243" class="Keyword">open</a> <a id="248" class="Keyword">import</a> <a id="255" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="283" class="Keyword">open</a> <a id="288" class="Keyword">import</a> <a id="295" href="group-theory.higher-group-actions.html" class="Module">group-theory.higher-group-actions</a>
+<a id="329" class="Keyword">open</a> <a id="334" class="Keyword">import</a> <a id="341" href="group-theory.higher-groups.html" class="Module">group-theory.higher-groups</a>
+<a id="368" class="Keyword">open</a> <a id="373" class="Keyword">import</a> <a id="380" href="group-theory.orbits-higher-group-actions.html" class="Module">group-theory.orbits-higher-group-actions</a>
+</pre>
+## Idea
+
+A higher group action is said to be free if its type of orbits is a set.
+
+## Definition
+
+<pre class="Agda"><a id="532" class="Keyword">module</a> <a id="539" href="group-theory.free-higher-group-actions.html#539" class="Module">_</a>
+  <a id="543" class="Symbol">{</a><a id="544" href="group-theory.free-higher-group-actions.html#544" class="Bound">l1</a> <a id="547" href="group-theory.free-higher-group-actions.html#547" class="Bound">l2</a> <a id="550" class="Symbol">:</a> <a id="552" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="557" class="Symbol">}</a> <a id="559" class="Symbol">(</a><a id="560" href="group-theory.free-higher-group-actions.html#560" class="Bound">G</a> <a id="562" class="Symbol">:</a> <a id="564" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="572" href="group-theory.free-higher-group-actions.html#544" class="Bound">l1</a><a id="574" class="Symbol">)</a> <a id="576" class="Symbol">(</a><a id="577" href="group-theory.free-higher-group-actions.html#577" class="Bound">X</a> <a id="579" class="Symbol">:</a> <a id="581" href="group-theory.higher-group-actions.html#329" class="Function">action-∞-Group</a> <a id="596" href="group-theory.free-higher-group-actions.html#547" class="Bound">l2</a> <a id="599" href="group-theory.free-higher-group-actions.html#560" class="Bound">G</a><a id="600" class="Symbol">)</a>
+  <a id="604" class="Keyword">where</a>
+  
+  <a id="615" href="group-theory.free-higher-group-actions.html#615" class="Function">is-free-action-∞-Group-Prop</a> <a id="643" class="Symbol">:</a> <a id="645" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a> <a id="653" class="Symbol">(</a><a id="654" href="group-theory.free-higher-group-actions.html#544" class="Bound">l1</a> <a id="657" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="659" href="group-theory.free-higher-group-actions.html#547" class="Bound">l2</a><a id="661" class="Symbol">)</a>
+  <a id="665" href="group-theory.free-higher-group-actions.html#615" class="Function">is-free-action-∞-Group-Prop</a> <a id="693" class="Symbol">=</a> <a id="695" href="foundation.sets.html#2530" class="Function">is-set-Prop</a> <a id="707" class="Symbol">(</a><a id="708" href="group-theory.orbits-higher-group-actions.html#454" class="Function">orbit-action-∞-Group</a> <a id="729" href="group-theory.free-higher-group-actions.html#560" class="Bound">G</a> <a id="731" href="group-theory.free-higher-group-actions.html#577" class="Bound">X</a><a id="732" class="Symbol">)</a>
+
+  <a id="737" href="group-theory.free-higher-group-actions.html#737" class="Function">is-free-action-∞-Group</a> <a id="760" class="Symbol">:</a> <a id="762" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="765" class="Symbol">(</a><a id="766" href="group-theory.free-higher-group-actions.html#544" class="Bound">l1</a> <a id="769" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="771" href="group-theory.free-higher-group-actions.html#547" class="Bound">l2</a><a id="773" class="Symbol">)</a>
+  <a id="777" href="group-theory.free-higher-group-actions.html#737" class="Function">is-free-action-∞-Group</a> <a id="800" class="Symbol">=</a> <a id="802" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a> <a id="812" href="group-theory.free-higher-group-actions.html#615" class="Function">is-free-action-∞-Group-Prop</a>
+
+  <a id="843" href="group-theory.free-higher-group-actions.html#843" class="Function">is-prop-is-free-action-∞-Group</a> <a id="874" class="Symbol">:</a> <a id="876" href="foundation-core.propositions.html#1309" class="Function">is-prop</a> <a id="884" href="group-theory.free-higher-group-actions.html#737" class="Function">is-free-action-∞-Group</a>
+  <a id="909" href="group-theory.free-higher-group-actions.html#843" class="Function">is-prop-is-free-action-∞-Group</a> <a id="940" class="Symbol">=</a> <a id="942" href="foundation-core.propositions.html#1562" class="Function">is-prop-type-Prop</a> <a id="960" href="group-theory.free-higher-group-actions.html#615" class="Function">is-free-action-∞-Group-Prop</a>
+
+<a id="free-action-∞-Group"></a><a id="989" href="group-theory.free-higher-group-actions.html#989" class="Function">free-action-∞-Group</a> <a id="1009" class="Symbol">:</a>
+  <a id="1013" class="Symbol">{</a><a id="1014" href="group-theory.free-higher-group-actions.html#1014" class="Bound">l1</a> <a id="1017" class="Symbol">:</a> <a id="1019" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1024" class="Symbol">}</a> <a id="1026" class="Symbol">(</a><a id="1027" href="group-theory.free-higher-group-actions.html#1027" class="Bound">l2</a> <a id="1030" class="Symbol">:</a> <a id="1032" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1037" class="Symbol">)</a> <a id="1039" class="Symbol">→</a> <a id="1041" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="1049" href="group-theory.free-higher-group-actions.html#1014" class="Bound">l1</a> <a id="1052" class="Symbol">→</a> <a id="1054" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1057" class="Symbol">(</a><a id="1058" href="group-theory.free-higher-group-actions.html#1014" class="Bound">l1</a> <a id="1061" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1063" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1068" href="group-theory.free-higher-group-actions.html#1027" class="Bound">l2</a><a id="1070" class="Symbol">)</a>
+<a id="1072" href="group-theory.free-higher-group-actions.html#989" class="Function">free-action-∞-Group</a> <a id="1092" href="group-theory.free-higher-group-actions.html#1092" class="Bound">l2</a> <a id="1095" href="group-theory.free-higher-group-actions.html#1095" class="Bound">G</a> <a id="1097" class="Symbol">=</a>
+  <a id="1101" href="foundation-core.subtypes.html#2555" class="Function">type-subtype</a> <a id="1114" class="Symbol">(</a><a id="1115" href="group-theory.free-higher-group-actions.html#615" class="Function">is-free-action-∞-Group-Prop</a> <a id="1143" class="Symbol">{</a><a id="1144" class="Argument">l2</a> <a id="1147" class="Symbol">=</a> <a id="1149" href="group-theory.free-higher-group-actions.html#1092" class="Bound">l2</a><a id="1151" class="Symbol">}</a> <a id="1153" href="group-theory.free-higher-group-actions.html#1095" class="Bound">G</a><a id="1154" class="Symbol">)</a>
+</pre>

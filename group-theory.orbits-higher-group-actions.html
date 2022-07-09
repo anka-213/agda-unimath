@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Orbits of higher group actions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/group-theory/orbits-higher-group-actions.lagda.md.</p>
+<p>Version of Saturday, July  9, 2022, 09:58 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Orbits of higher group actions</h1>
+</header>
+<pre class="Agda"><a id="56" class="Symbol">{-#</a> <a id="60" class="Keyword">OPTIONS</a> <a id="68" class="Pragma">--without-K</a> <a id="80" class="Pragma">--exact-split</a> <a id="94" class="Symbol">#-}</a>
+
+<a id="99" class="Keyword">module</a> <a id="106" href="group-theory.orbits-higher-group-actions.html" class="Module">group-theory.orbits-higher-group-actions</a> <a id="147" class="Keyword">where</a>
+
+<a id="154" class="Keyword">open</a> <a id="159" class="Keyword">import</a> <a id="166" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="198" class="Keyword">open</a> <a id="203" class="Keyword">import</a> <a id="210" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="238" class="Keyword">open</a> <a id="243" class="Keyword">import</a> <a id="250" href="group-theory.higher-group-actions.html" class="Module">group-theory.higher-group-actions</a>
+<a id="284" class="Keyword">open</a> <a id="289" class="Keyword">import</a> <a id="296" href="group-theory.higher-groups.html" class="Module">group-theory.higher-groups</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The type of orbits of a higher group action <code>X</code> acted upon by <code>G</code> is the total space of <code>X</code>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="orbit-action-∞-Group"></a><a id="454" href="group-theory.orbits-higher-group-actions.html#454" class="Function">orbit-action-∞-Group</a> <a id="475" class="Symbol">:</a>
+  <a id="479" class="Symbol">{</a><a id="480" href="group-theory.orbits-higher-group-actions.html#480" class="Bound">l1</a> <a id="483" href="group-theory.orbits-higher-group-actions.html#483" class="Bound">l2</a> <a id="486" class="Symbol">:</a> <a id="488" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="493" class="Symbol">}</a> <a id="495" class="Symbol">(</a><a id="496" href="group-theory.orbits-higher-group-actions.html#496" class="Bound">G</a> <a id="498" class="Symbol">:</a> <a id="500" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="508" href="group-theory.orbits-higher-group-actions.html#480" class="Bound">l1</a><a id="510" class="Symbol">)</a> <a id="512" class="Symbol">(</a><a id="513" href="group-theory.orbits-higher-group-actions.html#513" class="Bound">X</a> <a id="515" class="Symbol">:</a> <a id="517" href="group-theory.higher-group-actions.html#329" class="Function">action-∞-Group</a> <a id="532" href="group-theory.orbits-higher-group-actions.html#483" class="Bound">l2</a> <a id="535" href="group-theory.orbits-higher-group-actions.html#496" class="Bound">G</a><a id="536" class="Symbol">)</a> <a id="538" class="Symbol">→</a> <a id="540" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="543" class="Symbol">(</a><a id="544" href="group-theory.orbits-higher-group-actions.html#480" class="Bound">l1</a> <a id="547" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="549" href="group-theory.orbits-higher-group-actions.html#483" class="Bound">l2</a><a id="551" class="Symbol">)</a>
+<a id="553" href="group-theory.orbits-higher-group-actions.html#454" class="Function">orbit-action-∞-Group</a> <a id="574" href="group-theory.orbits-higher-group-actions.html#574" class="Bound">G</a> <a id="576" href="group-theory.orbits-higher-group-actions.html#576" class="Bound">X</a> <a id="578" class="Symbol">=</a> <a id="580" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="582" class="Symbol">(</a><a id="583" href="group-theory.higher-groups.html#1895" class="Function">classifying-type-∞-Group</a> <a id="608" href="group-theory.orbits-higher-group-actions.html#574" class="Bound">G</a><a id="609" class="Symbol">)</a> <a id="611" href="group-theory.orbits-higher-group-actions.html#576" class="Bound">X</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-07-09)(4a05d1a) Merge pull request #252 from EgbertRijke/group-theory by noreply
+</pre>
+</body>
+</html>
