@@ -33,7 +33,7 @@ title: Examples of higher groups
       <a id="761" href="group-theory.examples-higher-groups.html#524" class="Function">classifying-type-ℤ-∞-Group</a>
       <a id="794" href="group-theory.examples-higher-groups.html#599" class="Function">shape-ℤ-∞-Group</a>
 
-  <a id="813" href="group-theory.examples-higher-groups.html#813" class="Function">ℤ-∞-Group</a> <a id="823" class="Symbol">:</a> <a id="825" href="group-theory.higher-groups.html#1637" class="Function">∞-Group</a> <a id="833" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+  <a id="813" href="group-theory.examples-higher-groups.html#813" class="Function">ℤ-∞-Group</a> <a id="823" class="Symbol">:</a> <a id="825" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="833" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
   <a id="841" href="group-theory.examples-higher-groups.html#813" class="Function">ℤ-∞-Group</a> <a id="851" class="Symbol">=</a>
     <a id="857" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a>
       <a id="868" href="group-theory.examples-higher-groups.html#651" class="Function">classifying-pointed-type-ℤ-∞-Group</a>
@@ -61,7 +61,7 @@ title: Examples of higher groups
   <a id="1516" href="group-theory.examples-higher-groups.html#1402" class="Function">is-path-connected-classifying-type-symmetric-∞-Group</a> <a id="1569" class="Symbol">=</a>
     <a id="1575" href="foundation.connected-components-universes.html#6389" class="Function">is-path-connected-component-UU</a> <a id="1606" href="group-theory.examples-higher-groups.html#955" class="Bound">X</a>
   
-  <a id="1613" href="group-theory.examples-higher-groups.html#1613" class="Function">symmetric-∞-Group</a> <a id="1631" class="Symbol">:</a> <a id="1633" href="group-theory.higher-groups.html#1637" class="Function">∞-Group</a> <a id="1641" class="Symbol">(</a><a id="1642" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1647" href="group-theory.examples-higher-groups.html#943" class="Bound">l</a><a id="1648" class="Symbol">)</a>
+  <a id="1613" href="group-theory.examples-higher-groups.html#1613" class="Function">symmetric-∞-Group</a> <a id="1631" class="Symbol">:</a> <a id="1633" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="1641" class="Symbol">(</a><a id="1642" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1647" href="group-theory.examples-higher-groups.html#943" class="Bound">l</a><a id="1648" class="Symbol">)</a>
   <a id="1652" href="group-theory.examples-higher-groups.html#1613" class="Function">symmetric-∞-Group</a> <a id="1670" class="Symbol">=</a>
     <a id="1676" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a>
       <a id="1687" href="group-theory.examples-higher-groups.html#1205" class="Function">classifying-pointed-type-symmetric-∞-Group</a>

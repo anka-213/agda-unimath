@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/torsors.lagda.md.</p>
-<p>Version of Saturday, July  9, 2022, 02:09 PM</p>
+<p>Version of Saturday, July  9, 2022, 05:14 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -72,7 +72,7 @@
 <a id="1992" class="Keyword">open</a> <a id="1997" class="Keyword">import</a> <a id="2004" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="2024" class="Keyword">using</a>
   <a id="2032" class="Symbol">(</a> <a id="2034" href="group-theory.groups.html#2481" class="Function">Group</a><a id="2039" class="Symbol">;</a> <a id="2041" href="group-theory.groups.html#2724" class="Function">type-Group</a><a id="2051" class="Symbol">;</a> <a id="2053" href="group-theory.groups.html#3768" class="Function">unit-Group</a><a id="2063" class="Symbol">;</a> <a id="2065" href="group-theory.groups.html#2969" class="Function">mul-Group</a><a id="2074" class="Symbol">;</a> <a id="2076" href="group-theory.groups.html#4315" class="Function">right-unit-law-Group</a><a id="2096" class="Symbol">;</a>
     <a id="2102" href="group-theory.groups.html#6222" class="Function">equiv-mul-Group&#39;</a><a id="2118" class="Symbol">;</a> <a id="2120" href="group-theory.groups.html#3318" class="Function">associative-mul-Group</a><a id="2141" class="Symbol">;</a> <a id="2143" href="group-theory.groups.html#4185" class="Function">left-unit-law-Group</a><a id="2162" class="Symbol">;</a> <a id="2164" href="group-theory.groups.html#2776" class="Function">is-set-type-Group</a><a id="2181" class="Symbol">)</a>
-<a id="2183" class="Keyword">open</a> <a id="2188" class="Keyword">import</a> <a id="2195" href="group-theory.higher-groups.html" class="Module">group-theory.higher-groups</a> <a id="2222" class="Keyword">using</a> <a id="2228" class="Symbol">(</a><a id="2229" href="group-theory.higher-groups.html#1637" class="Function">∞-Group</a><a id="2236" class="Symbol">)</a>
+<a id="2183" class="Keyword">open</a> <a id="2188" class="Keyword">import</a> <a id="2195" href="group-theory.higher-groups.html" class="Module">group-theory.higher-groups</a> <a id="2222" class="Keyword">using</a> <a id="2228" class="Symbol">(</a><a id="2229" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a><a id="2236" class="Symbol">)</a>
 <a id="2238" class="Keyword">open</a> <a id="2243" class="Keyword">import</a> <a id="2250" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="2284" class="Keyword">using</a> <a id="2290" class="Symbol">(</a><a id="2291" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a><a id="2305" class="Symbol">)</a>
 <a id="2307" class="Keyword">open</a> <a id="2312" class="Keyword">import</a> <a id="2319" href="group-theory.isomorphisms-groups.html" class="Module">group-theory.isomorphisms-groups</a> <a id="2352" class="Keyword">using</a>
   <a id="2360" class="Symbol">(</a> <a id="2362" href="group-theory.isomorphisms-groups.html#1714" class="Function">type-iso-Group</a><a id="2376" class="Symbol">;</a> <a id="2378" href="group-theory.isomorphisms-groups.html#2470" class="Function">iso-equiv-Group</a><a id="2393" class="Symbol">)</a>
@@ -632,7 +632,7 @@
         <a id="23342" class="Symbol">(</a> <a id="23344" href="group-theory.torsors.html#5066" class="Function">principal-Torsor-Abstract-Group</a> <a id="23376" href="group-theory.torsors.html#18192" class="Bound">G</a><a id="23377" class="Symbol">)</a>
         <a id="23387" class="Symbol">(</a> <a id="23389" href="group-theory.torsors.html#22731" class="Bound">q</a><a id="23390" class="Symbol">)))</a>
 
-  <a id="23397" href="group-theory.torsors.html#23397" class="Function">∞-group-Group</a> <a id="23411" class="Symbol">:</a> <a id="23413" href="group-theory.higher-groups.html#1637" class="Function">∞-Group</a> <a id="23421" class="Symbol">(</a><a id="23422" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="23427" href="group-theory.torsors.html#18179" class="Bound">l1</a><a id="23429" class="Symbol">)</a>
+  <a id="23397" href="group-theory.torsors.html#23397" class="Function">∞-group-Group</a> <a id="23411" class="Symbol">:</a> <a id="23413" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="23421" class="Symbol">(</a><a id="23422" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="23427" href="group-theory.torsors.html#18179" class="Bound">l1</a><a id="23429" class="Symbol">)</a>
   <a id="23433" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="23437" class="Symbol">(</a><a id="23438" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="23442" href="group-theory.torsors.html#23397" class="Function">∞-group-Group</a><a id="23455" class="Symbol">)</a> <a id="23457" class="Symbol">=</a> <a id="23459" href="group-theory.torsors.html#3253" class="Function">Torsor-Abstract-Group</a> <a id="23481" href="group-theory.torsors.html#18192" class="Bound">G</a> <a id="23483" href="group-theory.torsors.html#18179" class="Bound">l1</a>
   <a id="23488" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="23492" class="Symbol">(</a><a id="23493" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="23497" href="group-theory.torsors.html#23397" class="Function">∞-group-Group</a><a id="23510" class="Symbol">)</a> <a id="23512" class="Symbol">=</a> <a id="23514" href="group-theory.torsors.html#5066" class="Function">principal-Torsor-Abstract-Group</a> <a id="23546" href="group-theory.torsors.html#18192" class="Bound">G</a>
   <a id="23550" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="23554" href="group-theory.torsors.html#23397" class="Function">∞-group-Group</a> <a id="23568" class="Symbol">=</a> <a id="23570" href="group-theory.torsors.html#17879" class="Function">is-path-connected-Torsor-Abstract-Group</a> <a id="23610" href="group-theory.torsors.html#18192" class="Bound">G</a>
@@ -671,7 +671,7 @@ module _
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-09)(ebc36bf) Merge pull request #249 from EgbertRijke/group-theory by noreply
+(2022-07-09)(900ee35) Merge pull request #250 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

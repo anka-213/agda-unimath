@@ -49,4 +49,9 @@ title: Transitive concrete group actions
   <a id="1615" href="group-theory.transitive-concrete-group-actions.html#1615" class="Function">action-transitive-action-Concrete-Group</a> <a id="1655" class="Symbol">:</a>
     <a id="1661" href="group-theory.concrete-group-actions.html#807" class="Function">action-Concrete-Group</a> <a id="1683" href="group-theory.transitive-concrete-group-actions.html#1522" class="Bound">l2</a> <a id="1686" href="group-theory.transitive-concrete-group-actions.html#1535" class="Bound">G</a>
   <a id="1690" href="group-theory.transitive-concrete-group-actions.html#1615" class="Function">action-transitive-action-Concrete-Group</a> <a id="1730" class="Symbol">=</a> <a id="1732" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1736" href="group-theory.transitive-concrete-group-actions.html#1561" class="Bound">X</a>
+
+  <a id="1741" href="group-theory.transitive-concrete-group-actions.html#1741" class="Function">is-transitive-transitive-action-Concrete-Group</a> <a id="1788" class="Symbol">:</a>
+    <a id="1794" href="group-theory.transitive-concrete-group-actions.html#765" class="Function">is-transitive-action-Concrete-Group</a> <a id="1830" href="group-theory.transitive-concrete-group-actions.html#1535" class="Bound">G</a>
+      <a id="1838" href="group-theory.transitive-concrete-group-actions.html#1615" class="Function">action-transitive-action-Concrete-Group</a>
+  <a id="1880" href="group-theory.transitive-concrete-group-actions.html#1741" class="Function">is-transitive-transitive-action-Concrete-Group</a> <a id="1927" class="Symbol">=</a> <a id="1929" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1933" href="group-theory.transitive-concrete-group-actions.html#1561" class="Bound">X</a>
 </pre>

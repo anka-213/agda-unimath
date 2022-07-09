@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/structured-types.lagda.md.</p>
-<p>Version of Saturday, July  9, 2022, 02:10 PM</p>
+<p>Version of Saturday, July  9, 2022, 05:14 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -38,31 +38,32 @@
 <pre class="Agda"><a id="124" class="Keyword">open</a> <a id="129" class="Keyword">import</a> <a id="136" href="structured-types.coherent-h-spaces.html" class="Module">structured-types.coherent-h-spaces</a> <a id="171" class="Keyword">public</a>
 <a id="178" class="Keyword">open</a> <a id="183" class="Keyword">import</a> <a id="190" href="structured-types.contractible-pointed-types.html" class="Module">structured-types.contractible-pointed-types</a> <a id="234" class="Keyword">public</a>
 <a id="241" class="Keyword">open</a> <a id="246" class="Keyword">import</a> <a id="253" href="structured-types.equivalences-types-equipped-with-endomorphisms.html" class="Module">structured-types.equivalences-types-equipped-with-endomorphisms</a> <a id="317" class="Keyword">public</a>
-<a id="324" class="Keyword">open</a> <a id="329" class="Keyword">import</a> <a id="336" href="structured-types.finite-multiplication-magmas.html" class="Module">structured-types.finite-multiplication-magmas</a> <a id="382" class="Keyword">public</a>
-<a id="389" class="Keyword">open</a> <a id="394" class="Keyword">import</a> <a id="401" href="structured-types.magmas.html" class="Module">structured-types.magmas</a> <a id="425" class="Keyword">public</a>
-<a id="432" class="Keyword">open</a> <a id="437" class="Keyword">import</a> <a id="444" href="structured-types.mere-equivalences-types-equipped-with-endomorphisms.html" class="Module">structured-types.mere-equivalences-types-equipped-with-endomorphisms</a> <a id="513" class="Keyword">public</a>
-<a id="520" class="Keyword">open</a> <a id="525" class="Keyword">import</a> <a id="532" href="structured-types.morphisms-coherent-h-spaces.html" class="Module">structured-types.morphisms-coherent-h-spaces</a> <a id="577" class="Keyword">public</a>
-<a id="584" class="Keyword">open</a> <a id="589" class="Keyword">import</a> <a id="596" href="structured-types.morphisms-magmas.html" class="Module">structured-types.morphisms-magmas</a> <a id="630" class="Keyword">public</a>
-<a id="637" class="Keyword">open</a> <a id="642" class="Keyword">import</a> <a id="649" href="structured-types.morphisms-types-equipped-with-endomorphisms.html" class="Module">structured-types.morphisms-types-equipped-with-endomorphisms</a> <a id="710" class="Keyword">public</a>
-<a id="717" class="Keyword">open</a> <a id="722" class="Keyword">import</a> <a id="729" href="structured-types.pointed-dependent-functions.html" class="Module">structured-types.pointed-dependent-functions</a> <a id="774" class="Keyword">public</a>
-<a id="781" class="Keyword">open</a> <a id="786" class="Keyword">import</a> <a id="793" href="structured-types.pointed-equivalences.html" class="Module">structured-types.pointed-equivalences</a> <a id="831" class="Keyword">public</a>
-<a id="838" class="Keyword">open</a> <a id="843" class="Keyword">import</a> <a id="850" href="structured-types.pointed-families-of-types.html" class="Module">structured-types.pointed-families-of-types</a> <a id="893" class="Keyword">public</a>
-<a id="900" class="Keyword">open</a> <a id="905" class="Keyword">import</a> <a id="912" href="structured-types.pointed-homotopies.html" class="Module">structured-types.pointed-homotopies</a> <a id="948" class="Keyword">public</a>
-<a id="955" class="Keyword">open</a> <a id="960" class="Keyword">import</a> <a id="967" href="structured-types.pointed-maps.html" class="Module">structured-types.pointed-maps</a> <a id="997" class="Keyword">public</a>
-<a id="1004" class="Keyword">open</a> <a id="1009" class="Keyword">import</a> <a id="1016" href="structured-types.pointed-types.html" class="Module">structured-types.pointed-types</a> <a id="1047" class="Keyword">public</a>
-<a id="1054" class="Keyword">open</a> <a id="1059" class="Keyword">import</a> <a id="1066" href="structured-types.pointed-types-equipped-with-automorphisms.html" class="Module">structured-types.pointed-types-equipped-with-automorphisms</a> <a id="1125" class="Keyword">public</a>
-<a id="1132" class="Keyword">open</a> <a id="1137" class="Keyword">import</a> <a id="1144" href="structured-types.types-equipped-with-automorphisms.html" class="Module">structured-types.types-equipped-with-automorphisms</a> <a id="1195" class="Keyword">public</a>
-<a id="1202" class="Keyword">open</a> <a id="1207" class="Keyword">import</a> <a id="1214" href="structured-types.types-equipped-with-endomorphisms.html" class="Module">structured-types.types-equipped-with-endomorphisms</a> <a id="1265" class="Keyword">public</a>
-<a id="1272" class="Keyword">open</a> <a id="1277" class="Keyword">import</a> <a id="1284" href="structured-types.universal-property-lists-wild-monoids.html" class="Module">structured-types.universal-property-lists-wild-monoids</a> <a id="1339" class="Keyword">public</a>
-<a id="1346" class="Keyword">open</a> <a id="1351" class="Keyword">import</a> <a id="1358" href="structured-types.wild-groups.html" class="Module">structured-types.wild-groups</a> <a id="1387" class="Keyword">public</a>
-<a id="1394" class="Keyword">open</a> <a id="1399" class="Keyword">import</a> <a id="1406" href="structured-types.wild-loops.html" class="Module">structured-types.wild-loops</a> <a id="1434" class="Keyword">public</a>
-<a id="1441" class="Keyword">open</a> <a id="1446" class="Keyword">import</a> <a id="1453" href="structured-types.wild-monoids.html" class="Module">structured-types.wild-monoids</a> <a id="1483" class="Keyword">public</a>
-<a id="1490" class="Keyword">open</a> <a id="1495" class="Keyword">import</a> <a id="1502" href="structured-types.wild-quasigroups.html" class="Module">structured-types.wild-quasigroups</a> <a id="1536" class="Keyword">public</a>
-<a id="1543" class="Keyword">open</a> <a id="1548" class="Keyword">import</a> <a id="1555" href="structured-types.wild-semigroups.html" class="Module">structured-types.wild-semigroups</a> <a id="1588" class="Keyword">public</a>
+<a id="324" class="Keyword">open</a> <a id="329" class="Keyword">import</a> <a id="336" href="structured-types.faithful-pointed-maps.html" class="Module">structured-types.faithful-pointed-maps</a> <a id="375" class="Keyword">public</a>
+<a id="382" class="Keyword">open</a> <a id="387" class="Keyword">import</a> <a id="394" href="structured-types.finite-multiplication-magmas.html" class="Module">structured-types.finite-multiplication-magmas</a> <a id="440" class="Keyword">public</a>
+<a id="447" class="Keyword">open</a> <a id="452" class="Keyword">import</a> <a id="459" href="structured-types.magmas.html" class="Module">structured-types.magmas</a> <a id="483" class="Keyword">public</a>
+<a id="490" class="Keyword">open</a> <a id="495" class="Keyword">import</a> <a id="502" href="structured-types.mere-equivalences-types-equipped-with-endomorphisms.html" class="Module">structured-types.mere-equivalences-types-equipped-with-endomorphisms</a> <a id="571" class="Keyword">public</a>
+<a id="578" class="Keyword">open</a> <a id="583" class="Keyword">import</a> <a id="590" href="structured-types.morphisms-coherent-h-spaces.html" class="Module">structured-types.morphisms-coherent-h-spaces</a> <a id="635" class="Keyword">public</a>
+<a id="642" class="Keyword">open</a> <a id="647" class="Keyword">import</a> <a id="654" href="structured-types.morphisms-magmas.html" class="Module">structured-types.morphisms-magmas</a> <a id="688" class="Keyword">public</a>
+<a id="695" class="Keyword">open</a> <a id="700" class="Keyword">import</a> <a id="707" href="structured-types.morphisms-types-equipped-with-endomorphisms.html" class="Module">structured-types.morphisms-types-equipped-with-endomorphisms</a> <a id="768" class="Keyword">public</a>
+<a id="775" class="Keyword">open</a> <a id="780" class="Keyword">import</a> <a id="787" href="structured-types.pointed-dependent-functions.html" class="Module">structured-types.pointed-dependent-functions</a> <a id="832" class="Keyword">public</a>
+<a id="839" class="Keyword">open</a> <a id="844" class="Keyword">import</a> <a id="851" href="structured-types.pointed-equivalences.html" class="Module">structured-types.pointed-equivalences</a> <a id="889" class="Keyword">public</a>
+<a id="896" class="Keyword">open</a> <a id="901" class="Keyword">import</a> <a id="908" href="structured-types.pointed-families-of-types.html" class="Module">structured-types.pointed-families-of-types</a> <a id="951" class="Keyword">public</a>
+<a id="958" class="Keyword">open</a> <a id="963" class="Keyword">import</a> <a id="970" href="structured-types.pointed-homotopies.html" class="Module">structured-types.pointed-homotopies</a> <a id="1006" class="Keyword">public</a>
+<a id="1013" class="Keyword">open</a> <a id="1018" class="Keyword">import</a> <a id="1025" href="structured-types.pointed-maps.html" class="Module">structured-types.pointed-maps</a> <a id="1055" class="Keyword">public</a>
+<a id="1062" class="Keyword">open</a> <a id="1067" class="Keyword">import</a> <a id="1074" href="structured-types.pointed-types.html" class="Module">structured-types.pointed-types</a> <a id="1105" class="Keyword">public</a>
+<a id="1112" class="Keyword">open</a> <a id="1117" class="Keyword">import</a> <a id="1124" href="structured-types.pointed-types-equipped-with-automorphisms.html" class="Module">structured-types.pointed-types-equipped-with-automorphisms</a> <a id="1183" class="Keyword">public</a>
+<a id="1190" class="Keyword">open</a> <a id="1195" class="Keyword">import</a> <a id="1202" href="structured-types.types-equipped-with-automorphisms.html" class="Module">structured-types.types-equipped-with-automorphisms</a> <a id="1253" class="Keyword">public</a>
+<a id="1260" class="Keyword">open</a> <a id="1265" class="Keyword">import</a> <a id="1272" href="structured-types.types-equipped-with-endomorphisms.html" class="Module">structured-types.types-equipped-with-endomorphisms</a> <a id="1323" class="Keyword">public</a>
+<a id="1330" class="Keyword">open</a> <a id="1335" class="Keyword">import</a> <a id="1342" href="structured-types.universal-property-lists-wild-monoids.html" class="Module">structured-types.universal-property-lists-wild-monoids</a> <a id="1397" class="Keyword">public</a>
+<a id="1404" class="Keyword">open</a> <a id="1409" class="Keyword">import</a> <a id="1416" href="structured-types.wild-groups.html" class="Module">structured-types.wild-groups</a> <a id="1445" class="Keyword">public</a>
+<a id="1452" class="Keyword">open</a> <a id="1457" class="Keyword">import</a> <a id="1464" href="structured-types.wild-loops.html" class="Module">structured-types.wild-loops</a> <a id="1492" class="Keyword">public</a>
+<a id="1499" class="Keyword">open</a> <a id="1504" class="Keyword">import</a> <a id="1511" href="structured-types.wild-monoids.html" class="Module">structured-types.wild-monoids</a> <a id="1541" class="Keyword">public</a>
+<a id="1548" class="Keyword">open</a> <a id="1553" class="Keyword">import</a> <a id="1560" href="structured-types.wild-quasigroups.html" class="Module">structured-types.wild-quasigroups</a> <a id="1594" class="Keyword">public</a>
+<a id="1601" class="Keyword">open</a> <a id="1606" class="Keyword">import</a> <a id="1613" href="structured-types.wild-semigroups.html" class="Module">structured-types.wild-semigroups</a> <a id="1646" class="Keyword">public</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-09)(ebc36bf) Merge pull request #249 from EgbertRijke/group-theory by noreply
+(2022-07-09)(900ee35) Merge pull request #250 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
