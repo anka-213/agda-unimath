@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/higher-groups.lagda.md.</p>
-<p>Version of Sunday, July 10, 2022, 12:23 AM</p>
+<p>Version of Sunday, July 10, 2022, 10:13 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -36,8 +36,8 @@
 <a id="82" class="Keyword">module</a> <a id="89" href="group-theory.higher-groups.html" class="Module">group-theory.higher-groups</a> <a id="116" class="Keyword">where</a>
 
 <a id="123" class="Keyword">open</a> <a id="128" class="Keyword">import</a> <a id="135" href="foundation.connected-types.html" class="Module">foundation.connected-types</a> <a id="162" class="Keyword">using</a>
-  <a id="170" class="Symbol">(</a> <a id="172" href="foundation.connected-types.html#1697" class="Function">is-path-connected</a><a id="189" class="Symbol">;</a> <a id="191" href="foundation.connected-types.html#2089" class="Function">mere-eq-is-path-connected</a><a id="216" class="Symbol">;</a>
-    <a id="222" href="foundation.connected-types.html#3782" class="Function">apply-dependent-universal-property-is-path-connected</a><a id="274" class="Symbol">)</a>
+  <a id="170" class="Symbol">(</a> <a id="172" href="foundation.connected-types.html#1757" class="Function">is-path-connected</a><a id="189" class="Symbol">;</a> <a id="191" href="foundation.connected-types.html#2146" class="Function">mere-eq-is-path-connected</a><a id="216" class="Symbol">;</a>
+    <a id="222" href="foundation.connected-types.html#3839" class="Function">apply-dependent-universal-property-is-path-connected</a><a id="274" class="Symbol">)</a>
 <a id="276" class="Keyword">open</a> <a id="281" class="Keyword">import</a> <a id="288" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="320" class="Keyword">using</a> <a id="326" class="Symbol">(</a><a id="327" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="328" class="Symbol">;</a> <a id="330" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="333" class="Symbol">;</a> <a id="335" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="338" class="Symbol">)</a>
 <a id="340" class="Keyword">open</a> <a id="345" class="Keyword">import</a> <a id="352" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="376" class="Keyword">using</a> <a id="382" class="Symbol">(</a><a id="383" href="foundation-core.equivalences.html#1621" class="Function Operator">_≃_</a><a id="386" class="Symbol">;</a> <a id="388" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a><a id="401" class="Symbol">)</a>
 <a id="403" class="Keyword">open</a> <a id="408" class="Keyword">import</a> <a id="415" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="441" class="Keyword">using</a> <a id="447" class="Symbol">(</a><a id="448" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a><a id="450" class="Symbol">;</a> <a id="452" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="456" class="Symbol">)</a>
@@ -67,7 +67,7 @@
 <p>An ∞-group is just a pointed connected type. Its underlying type is its loop space, and the classifying type is the pointed connected type itself.</p>
 <h2 id="definition">Definition</h2>
 <pre class="Agda"><a id="∞-Group"></a><a id="1633" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="1641" class="Symbol">:</a> <a id="1643" class="Symbol">(</a><a id="1644" href="group-theory.higher-groups.html#1644" class="Bound">l</a> <a id="1646" class="Symbol">:</a> <a id="1648" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1653" class="Symbol">)</a> <a id="1655" class="Symbol">→</a> <a id="1657" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1660" class="Symbol">(</a><a id="1661" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1666" href="group-theory.higher-groups.html#1644" class="Bound">l</a><a id="1667" class="Symbol">)</a>
-<a id="1669" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="1677" href="group-theory.higher-groups.html#1677" class="Bound">l</a> <a id="1679" class="Symbol">=</a> <a id="1681" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="1683" class="Symbol">(</a><a id="1684" href="structured-types.pointed-types.html#383" class="Function">Pointed-Type</a> <a id="1697" href="group-theory.higher-groups.html#1677" class="Bound">l</a><a id="1698" class="Symbol">)</a> <a id="1700" class="Symbol">(λ</a> <a id="1703" href="group-theory.higher-groups.html#1703" class="Bound">X</a> <a id="1705" class="Symbol">→</a> <a id="1707" href="foundation.connected-types.html#1697" class="Function">is-path-connected</a> <a id="1725" class="Symbol">(</a><a id="1726" href="structured-types.pointed-types.html#518" class="Function">type-Pointed-Type</a> <a id="1744" href="group-theory.higher-groups.html#1703" class="Bound">X</a><a id="1745" class="Symbol">))</a>
+<a id="1669" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="1677" href="group-theory.higher-groups.html#1677" class="Bound">l</a> <a id="1679" class="Symbol">=</a> <a id="1681" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="1683" class="Symbol">(</a><a id="1684" href="structured-types.pointed-types.html#383" class="Function">Pointed-Type</a> <a id="1697" href="group-theory.higher-groups.html#1677" class="Bound">l</a><a id="1698" class="Symbol">)</a> <a id="1700" class="Symbol">(λ</a> <a id="1703" href="group-theory.higher-groups.html#1703" class="Bound">X</a> <a id="1705" class="Symbol">→</a> <a id="1707" href="foundation.connected-types.html#1757" class="Function">is-path-connected</a> <a id="1725" class="Symbol">(</a><a id="1726" href="structured-types.pointed-types.html#518" class="Function">type-Pointed-Type</a> <a id="1744" href="group-theory.higher-groups.html#1703" class="Bound">X</a><a id="1745" class="Symbol">))</a>
 
 <a id="1749" class="Keyword">module</a> <a id="1756" href="group-theory.higher-groups.html#1756" class="Module">_</a>
   <a id="1760" class="Symbol">{</a><a id="1761" href="group-theory.higher-groups.html#1761" class="Bound">l</a> <a id="1763" class="Symbol">:</a> <a id="1765" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1770" class="Symbol">}</a> <a id="1772" class="Symbol">(</a><a id="1773" href="group-theory.higher-groups.html#1773" class="Bound">G</a> <a id="1775" class="Symbol">:</a> <a id="1777" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="1785" href="group-theory.higher-groups.html#1761" class="Bound">l</a><a id="1786" class="Symbol">)</a>
@@ -85,13 +85,13 @@
     <a id="2077" href="structured-types.pointed-types.html#576" class="Function">pt-Pointed-Type</a> <a id="2093" href="group-theory.higher-groups.html#1799" class="Function">classifying-pointed-type-∞-Group</a>
 
   <a id="2129" href="group-theory.higher-groups.html#2129" class="Function">is-path-connected-classifying-type-∞-Group</a> <a id="2172" class="Symbol">:</a>
-    <a id="2178" href="foundation.connected-types.html#1697" class="Function">is-path-connected</a> <a id="2196" href="group-theory.higher-groups.html#1895" class="Function">classifying-type-∞-Group</a>
+    <a id="2178" href="foundation.connected-types.html#1757" class="Function">is-path-connected</a> <a id="2196" href="group-theory.higher-groups.html#1895" class="Function">classifying-type-∞-Group</a>
   <a id="2223" href="group-theory.higher-groups.html#2129" class="Function">is-path-connected-classifying-type-∞-Group</a> <a id="2266" class="Symbol">=</a> <a id="2268" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="2272" href="group-theory.higher-groups.html#1773" class="Bound">G</a>
 
   <a id="2277" href="group-theory.higher-groups.html#2277" class="Function">mere-eq-classifying-type-∞-Group</a> <a id="2310" class="Symbol">:</a>
     <a id="2316" class="Symbol">(</a><a id="2317" href="group-theory.higher-groups.html#2317" class="Bound">X</a> <a id="2319" href="group-theory.higher-groups.html#2319" class="Bound">Y</a> <a id="2321" class="Symbol">:</a> <a id="2323" href="group-theory.higher-groups.html#1895" class="Function">classifying-type-∞-Group</a><a id="2347" class="Symbol">)</a> <a id="2349" class="Symbol">→</a> <a id="2351" href="foundation.mere-equality.html#1109" class="Function">mere-eq</a> <a id="2359" href="group-theory.higher-groups.html#2317" class="Bound">X</a> <a id="2361" href="group-theory.higher-groups.html#2319" class="Bound">Y</a>
   <a id="2365" href="group-theory.higher-groups.html#2277" class="Function">mere-eq-classifying-type-∞-Group</a> <a id="2398" class="Symbol">=</a>
-    <a id="2404" href="foundation.connected-types.html#2089" class="Function">mere-eq-is-path-connected</a>
+    <a id="2404" href="foundation.connected-types.html#2146" class="Function">mere-eq-is-path-connected</a>
       <a id="2436" href="group-theory.higher-groups.html#2129" class="Function">is-path-connected-classifying-type-∞-Group</a>
 
   <a id="2482" href="group-theory.higher-groups.html#2482" class="Function">elim-prop-classifying-type-∞-Group</a> <a id="2517" class="Symbol">:</a>
@@ -99,7 +99,7 @@
     <a id="2586" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a> <a id="2596" class="Symbol">(</a><a id="2597" href="group-theory.higher-groups.html#2537" class="Bound">P</a> <a id="2599" href="group-theory.higher-groups.html#2014" class="Function">shape-∞-Group</a><a id="2612" class="Symbol">)</a> <a id="2614" class="Symbol">→</a>
     <a id="2620" class="Symbol">((</a><a id="2622" href="group-theory.higher-groups.html#2622" class="Bound">X</a> <a id="2624" class="Symbol">:</a> <a id="2626" href="group-theory.higher-groups.html#1895" class="Function">classifying-type-∞-Group</a><a id="2650" class="Symbol">)</a> <a id="2652" class="Symbol">→</a> <a id="2654" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a> <a id="2664" class="Symbol">(</a><a id="2665" href="group-theory.higher-groups.html#2537" class="Bound">P</a> <a id="2667" href="group-theory.higher-groups.html#2622" class="Bound">X</a><a id="2668" class="Symbol">))</a>
   <a id="2673" href="group-theory.higher-groups.html#2482" class="Function">elim-prop-classifying-type-∞-Group</a> <a id="2708" class="Symbol">=</a>
-    <a id="2714" href="foundation.connected-types.html#3782" class="Function">apply-dependent-universal-property-is-path-connected</a>
+    <a id="2714" href="foundation.connected-types.html#3839" class="Function">apply-dependent-universal-property-is-path-connected</a>
       <a id="2773" href="group-theory.higher-groups.html#2014" class="Function">shape-∞-Group</a>
       <a id="2793" href="group-theory.higher-groups.html#2129" class="Function">is-path-connected-classifying-type-∞-Group</a>
 
@@ -148,7 +148,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-10)(796f51f) Merge pull request #253 from EgbertRijke/group-theory by noreply
+(2022-07-10)(9f1e917) Merge pull request #254 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

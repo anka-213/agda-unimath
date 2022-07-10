@@ -1,0 +1,33 @@
+---
+title: Normal subgroups of concrete groups
+---
+
+<pre class="Agda"><a id="61" class="Symbol">{-#</a> <a id="65" class="Keyword">OPTIONS</a> <a id="73" class="Pragma">--without-K</a> <a id="85" class="Pragma">--exact-split</a> <a id="99" class="Symbol">#-}</a>
+
+<a id="104" class="Keyword">module</a> <a id="111" href="group-theory.normal-subgroups-concrete-groups.html" class="Module">group-theory.normal-subgroups-concrete-groups</a> <a id="157" class="Keyword">where</a>
+
+<a id="164" class="Keyword">open</a> <a id="169" class="Keyword">import</a> <a id="176" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="204" class="Keyword">open</a> <a id="209" class="Keyword">import</a> <a id="216" href="group-theory.concrete-groups.html" class="Module">group-theory.concrete-groups</a>
+<a id="245" class="Keyword">open</a> <a id="250" class="Keyword">import</a> <a id="257" href="group-theory.subgroups-concrete-groups.html" class="Module">group-theory.subgroups-concrete-groups</a>
+</pre>
+## Idea
+
+A normal subgroup is a fixed point of the conjugation action on the (large) set of all subgroups
+
+## Definition
+
+<pre class="Agda"><a id="normal-subgroup-Concrete-Group"></a><a id="431" href="group-theory.normal-subgroups-concrete-groups.html#431" class="Function">normal-subgroup-Concrete-Group</a> <a id="462" class="Symbol">:</a>
+  <a id="466" class="Symbol">{</a><a id="467" href="group-theory.normal-subgroups-concrete-groups.html#467" class="Bound">l1</a> <a id="470" class="Symbol">:</a> <a id="472" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="477" class="Symbol">}</a> <a id="479" class="Symbol">(</a><a id="480" href="group-theory.normal-subgroups-concrete-groups.html#480" class="Bound">l2</a> <a id="483" class="Symbol">:</a> <a id="485" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="490" class="Symbol">)</a> <a id="492" class="Symbol">(</a><a id="493" href="group-theory.normal-subgroups-concrete-groups.html#493" class="Bound">G</a> <a id="495" class="Symbol">:</a> <a id="497" href="group-theory.concrete-groups.html#2028" class="Function">Concrete-Group</a> <a id="512" href="group-theory.normal-subgroups-concrete-groups.html#467" class="Bound">l1</a><a id="514" class="Symbol">)</a> <a id="516" class="Symbol">→</a> <a id="518" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="521" class="Symbol">(</a><a id="522" href="group-theory.normal-subgroups-concrete-groups.html#467" class="Bound">l1</a> <a id="525" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="527" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="532" href="group-theory.normal-subgroups-concrete-groups.html#480" class="Bound">l2</a><a id="534" class="Symbol">)</a>
+<a id="536" href="group-theory.normal-subgroups-concrete-groups.html#431" class="Function">normal-subgroup-Concrete-Group</a> <a id="567" href="group-theory.normal-subgroups-concrete-groups.html#567" class="Bound">l2</a> <a id="570" href="group-theory.normal-subgroups-concrete-groups.html#570" class="Bound">G</a> <a id="572" class="Symbol">=</a>
+  <a id="576" class="Symbol">(</a><a id="577" href="group-theory.normal-subgroups-concrete-groups.html#577" class="Bound">u</a> <a id="579" class="Symbol">:</a> <a id="581" href="group-theory.concrete-groups.html#2429" class="Function">classifying-type-Concrete-Group</a> <a id="613" href="group-theory.normal-subgroups-concrete-groups.html#570" class="Bound">G</a><a id="614" class="Symbol">)</a> <a id="616" class="Symbol">→</a>
+  <a id="620" href="group-theory.subgroups-concrete-groups.html#1183" class="Function">subgroup-action-Concrete-Group</a> <a id="651" href="group-theory.normal-subgroups-concrete-groups.html#567" class="Bound">l2</a> <a id="654" href="group-theory.normal-subgroups-concrete-groups.html#570" class="Bound">G</a> <a id="656" href="group-theory.normal-subgroups-concrete-groups.html#577" class="Bound">u</a>
+
+<a id="659" class="Keyword">module</a> <a id="666" href="group-theory.normal-subgroups-concrete-groups.html#666" class="Module">_</a>
+  <a id="670" class="Symbol">{</a><a id="671" href="group-theory.normal-subgroups-concrete-groups.html#671" class="Bound">l1</a> <a id="674" href="group-theory.normal-subgroups-concrete-groups.html#674" class="Bound">l2</a> <a id="677" class="Symbol">:</a> <a id="679" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="684" class="Symbol">}</a> <a id="686" class="Symbol">(</a><a id="687" href="group-theory.normal-subgroups-concrete-groups.html#687" class="Bound">G</a> <a id="689" class="Symbol">:</a> <a id="691" href="group-theory.concrete-groups.html#2028" class="Function">Concrete-Group</a> <a id="706" href="group-theory.normal-subgroups-concrete-groups.html#671" class="Bound">l1</a><a id="708" class="Symbol">)</a>
+  <a id="712" class="Symbol">(</a><a id="713" href="group-theory.normal-subgroups-concrete-groups.html#713" class="Bound">H</a> <a id="715" class="Symbol">:</a> <a id="717" href="group-theory.normal-subgroups-concrete-groups.html#431" class="Function">normal-subgroup-Concrete-Group</a> <a id="748" href="group-theory.normal-subgroups-concrete-groups.html#674" class="Bound">l2</a> <a id="751" href="group-theory.normal-subgroups-concrete-groups.html#687" class="Bound">G</a><a id="752" class="Symbol">)</a>
+  <a id="756" class="Keyword">where</a>
+
+  <a id="765" href="group-theory.normal-subgroups-concrete-groups.html#765" class="Function">subgroup-normal-subgroup-Concrete-Group</a> <a id="805" class="Symbol">:</a> <a id="807" href="group-theory.subgroups-concrete-groups.html#1482" class="Function">subgroup-Concrete-Group</a> <a id="831" href="group-theory.normal-subgroups-concrete-groups.html#674" class="Bound">l2</a> <a id="834" href="group-theory.normal-subgroups-concrete-groups.html#687" class="Bound">G</a>
+  <a id="838" href="group-theory.normal-subgroups-concrete-groups.html#765" class="Function">subgroup-normal-subgroup-Concrete-Group</a> <a id="878" class="Symbol">=</a> <a id="880" href="group-theory.normal-subgroups-concrete-groups.html#713" class="Bound">H</a> <a id="882" class="Symbol">(</a><a id="883" href="group-theory.concrete-groups.html#2559" class="Function">shape-Concrete-Group</a> <a id="904" href="group-theory.normal-subgroups-concrete-groups.html#687" class="Bound">G</a><a id="905" class="Symbol">)</a>
+</pre>
