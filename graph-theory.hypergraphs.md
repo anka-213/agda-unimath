@@ -1,0 +1,36 @@
+---
+title: Hypergraphs
+---
+
+<pre class="Agda"><a id="37" class="Symbol">{-#</a> <a id="41" class="Keyword">OPTIONS</a> <a id="49" class="Pragma">--without-K</a> <a id="61" class="Pragma">--exact-split</a> <a id="75" class="Symbol">#-}</a>
+
+<a id="80" class="Keyword">module</a> <a id="87" href="graph-theory.hypergraphs.html" class="Module">graph-theory.hypergraphs</a> <a id="112" class="Keyword">where</a>
+
+<a id="119" class="Keyword">open</a> <a id="124" class="Keyword">import</a> <a id="131" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+
+<a id="173" class="Keyword">open</a> <a id="178" class="Keyword">import</a> <a id="185" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="217" class="Keyword">open</a> <a id="222" class="Keyword">import</a> <a id="229" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="256" class="Keyword">open</a> <a id="261" class="Keyword">import</a> <a id="268" href="foundation.unordered-tuples.html" class="Module">foundation.unordered-tuples</a>
+</pre>
+## Idea
+
+A `k`-hypergraph consists of a type `V` of vertices and a family `E` of types indexed by the unordered `k`-tuples of vertices.
+
+## Definition
+
+<pre class="Agda"><a id="Hypergraph"></a><a id="461" href="graph-theory.hypergraphs.html#461" class="Function">Hypergraph</a> <a id="472" class="Symbol">:</a> <a id="474" class="Symbol">(</a><a id="475" href="graph-theory.hypergraphs.html#475" class="Bound">l1</a> <a id="478" href="graph-theory.hypergraphs.html#478" class="Bound">l2</a> <a id="481" class="Symbol">:</a> <a id="483" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="488" class="Symbol">)</a> <a id="490" class="Symbol">(</a><a id="491" href="graph-theory.hypergraphs.html#491" class="Bound">k</a> <a id="493" class="Symbol">:</a> <a id="495" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a><a id="496" class="Symbol">)</a> <a id="498" class="Symbol">→</a> <a id="500" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="503" class="Symbol">(</a><a id="504" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="509" href="graph-theory.hypergraphs.html#475" class="Bound">l1</a> <a id="512" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="514" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="519" href="graph-theory.hypergraphs.html#478" class="Bound">l2</a><a id="521" class="Symbol">)</a>
+<a id="523" href="graph-theory.hypergraphs.html#461" class="Function">Hypergraph</a> <a id="534" href="graph-theory.hypergraphs.html#534" class="Bound">l1</a> <a id="537" href="graph-theory.hypergraphs.html#537" class="Bound">l2</a> <a id="540" href="graph-theory.hypergraphs.html#540" class="Bound">k</a> <a id="542" class="Symbol">=</a> <a id="544" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="546" class="Symbol">(</a><a id="547" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="550" href="graph-theory.hypergraphs.html#534" class="Bound">l1</a><a id="552" class="Symbol">)</a> <a id="554" class="Symbol">(λ</a> <a id="557" href="graph-theory.hypergraphs.html#557" class="Bound">V</a> <a id="559" class="Symbol">→</a> <a id="561" href="foundation.unordered-tuples.html#1180" class="Function">unordered-tuple</a> <a id="577" href="graph-theory.hypergraphs.html#540" class="Bound">k</a> <a id="579" href="graph-theory.hypergraphs.html#557" class="Bound">V</a> <a id="581" class="Symbol">→</a> <a id="583" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="586" href="graph-theory.hypergraphs.html#537" class="Bound">l2</a><a id="588" class="Symbol">)</a>
+
+<a id="591" class="Keyword">module</a> <a id="598" href="graph-theory.hypergraphs.html#598" class="Module">_</a>
+  <a id="602" class="Symbol">{</a><a id="603" href="graph-theory.hypergraphs.html#603" class="Bound">l1</a> <a id="606" href="graph-theory.hypergraphs.html#606" class="Bound">l2</a> <a id="609" class="Symbol">:</a> <a id="611" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="616" class="Symbol">}</a> <a id="618" class="Symbol">{</a><a id="619" href="graph-theory.hypergraphs.html#619" class="Bound">k</a> <a id="621" class="Symbol">:</a> <a id="623" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a><a id="624" class="Symbol">}</a> <a id="626" class="Symbol">(</a><a id="627" href="graph-theory.hypergraphs.html#627" class="Bound">G</a> <a id="629" class="Symbol">:</a> <a id="631" href="graph-theory.hypergraphs.html#461" class="Function">Hypergraph</a> <a id="642" href="graph-theory.hypergraphs.html#603" class="Bound">l1</a> <a id="645" href="graph-theory.hypergraphs.html#606" class="Bound">l2</a> <a id="648" href="graph-theory.hypergraphs.html#619" class="Bound">k</a><a id="649" class="Symbol">)</a>
+  <a id="653" class="Keyword">where</a>
+
+  <a id="662" href="graph-theory.hypergraphs.html#662" class="Function">vertex-Hypergraph</a> <a id="680" class="Symbol">:</a> <a id="682" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="685" href="graph-theory.hypergraphs.html#603" class="Bound">l1</a>
+  <a id="690" href="graph-theory.hypergraphs.html#662" class="Function">vertex-Hypergraph</a> <a id="708" class="Symbol">=</a> <a id="710" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="714" href="graph-theory.hypergraphs.html#627" class="Bound">G</a>
+
+  <a id="719" href="graph-theory.hypergraphs.html#719" class="Function">unordered-tuple-vertices-Hypergraph</a> <a id="755" class="Symbol">:</a> <a id="757" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="760" class="Symbol">(</a><a id="761" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="766" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="772" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="774" href="graph-theory.hypergraphs.html#603" class="Bound">l1</a><a id="776" class="Symbol">)</a>
+  <a id="780" href="graph-theory.hypergraphs.html#719" class="Function">unordered-tuple-vertices-Hypergraph</a> <a id="816" class="Symbol">=</a> <a id="818" href="foundation.unordered-tuples.html#1180" class="Function">unordered-tuple</a> <a id="834" href="graph-theory.hypergraphs.html#619" class="Bound">k</a> <a id="836" href="graph-theory.hypergraphs.html#662" class="Function">vertex-Hypergraph</a>
+
+  <a id="857" href="graph-theory.hypergraphs.html#857" class="Function">simplex-Hypergraph</a> <a id="876" class="Symbol">:</a> <a id="878" href="graph-theory.hypergraphs.html#719" class="Function">unordered-tuple-vertices-Hypergraph</a> <a id="914" class="Symbol">→</a> <a id="916" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="919" href="graph-theory.hypergraphs.html#606" class="Bound">l2</a>
+  <a id="924" href="graph-theory.hypergraphs.html#857" class="Function">simplex-Hypergraph</a> <a id="943" class="Symbol">=</a> <a id="945" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="949" href="graph-theory.hypergraphs.html#627" class="Bound">G</a>
+</pre>
