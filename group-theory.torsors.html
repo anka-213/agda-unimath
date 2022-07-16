@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/torsors.lagda.md.</p>
-<p>Version of Friday, July 15, 2022, 09:51 PM</p>
+<p>Version of Saturday, July 16, 2022, 12:13 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -73,7 +73,7 @@
   <a id="2032" class="Symbol">(</a> <a id="2034" href="group-theory.groups.html#2481" class="Function">Group</a><a id="2039" class="Symbol">;</a> <a id="2041" href="group-theory.groups.html#2724" class="Function">type-Group</a><a id="2051" class="Symbol">;</a> <a id="2053" href="group-theory.groups.html#3768" class="Function">unit-Group</a><a id="2063" class="Symbol">;</a> <a id="2065" href="group-theory.groups.html#2969" class="Function">mul-Group</a><a id="2074" class="Symbol">;</a> <a id="2076" href="group-theory.groups.html#4315" class="Function">right-unit-law-Group</a><a id="2096" class="Symbol">;</a>
     <a id="2102" href="group-theory.groups.html#6222" class="Function">equiv-mul-Group&#39;</a><a id="2118" class="Symbol">;</a> <a id="2120" href="group-theory.groups.html#3318" class="Function">associative-mul-Group</a><a id="2141" class="Symbol">;</a> <a id="2143" href="group-theory.groups.html#4185" class="Function">left-unit-law-Group</a><a id="2162" class="Symbol">;</a> <a id="2164" href="group-theory.groups.html#2776" class="Function">is-set-type-Group</a><a id="2181" class="Symbol">)</a>
 <a id="2183" class="Keyword">open</a> <a id="2188" class="Keyword">import</a> <a id="2195" href="group-theory.higher-groups.html" class="Module">group-theory.higher-groups</a> <a id="2222" class="Keyword">using</a> <a id="2228" class="Symbol">(</a><a id="2229" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a><a id="2236" class="Symbol">)</a>
-<a id="2238" class="Keyword">open</a> <a id="2243" class="Keyword">import</a> <a id="2250" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="2284" class="Keyword">using</a> <a id="2290" class="Symbol">(</a><a id="2291" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a><a id="2305" class="Symbol">)</a>
+<a id="2238" class="Keyword">open</a> <a id="2243" class="Keyword">import</a> <a id="2250" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="2284" class="Keyword">using</a> <a id="2290" class="Symbol">(</a><a id="2291" href="group-theory.homomorphisms-groups.html#1635" class="Function">type-hom-Group</a><a id="2305" class="Symbol">)</a>
 <a id="2307" class="Keyword">open</a> <a id="2312" class="Keyword">import</a> <a id="2319" href="group-theory.isomorphisms-groups.html" class="Module">group-theory.isomorphisms-groups</a> <a id="2352" class="Keyword">using</a>
   <a id="2360" class="Symbol">(</a> <a id="2362" href="group-theory.isomorphisms-groups.html#1714" class="Function">type-iso-Group</a><a id="2376" class="Symbol">;</a> <a id="2378" href="group-theory.isomorphisms-groups.html#2470" class="Function">iso-equiv-Group</a><a id="2393" class="Symbol">)</a>
 <a id="2395" class="Keyword">open</a> <a id="2400" class="Keyword">import</a> <a id="2407" href="group-theory.mere-equivalences-group-actions.html" class="Module">group-theory.mere-equivalences-group-actions</a> <a id="2452" class="Keyword">using</a>
@@ -130,7 +130,7 @@
 
   <a id="4108" href="group-theory.torsors.html#4108" class="Function">mul-hom-Torsor-Abstract-Group</a> <a id="4138" class="Symbol">:</a>
     <a id="4144" class="Symbol">{</a><a id="4145" href="group-theory.torsors.html#4145" class="Bound">l</a> <a id="4147" class="Symbol">:</a> <a id="4149" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="4154" class="Symbol">}</a> <a id="4156" class="Symbol">(</a><a id="4157" href="group-theory.torsors.html#4157" class="Bound">X</a> <a id="4159" class="Symbol">:</a> <a id="4161" href="group-theory.torsors.html#3253" class="Function">Torsor-Abstract-Group</a> <a id="4183" href="group-theory.torsors.html#4145" class="Bound">l</a><a id="4184" class="Symbol">)</a> <a id="4186" class="Symbol">→</a>
-    <a id="4192" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a> <a id="4207" href="group-theory.torsors.html#3226" class="Bound">G</a> <a id="4209" class="Symbol">(</a><a id="4210" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="4226" class="Symbol">(</a><a id="4227" href="group-theory.torsors.html#3551" class="Function">set-Torsor-Abstract-Group</a> <a id="4253" href="group-theory.torsors.html#4157" class="Bound">X</a><a id="4254" class="Symbol">))</a>
+    <a id="4192" href="group-theory.homomorphisms-groups.html#1635" class="Function">type-hom-Group</a> <a id="4207" href="group-theory.torsors.html#3226" class="Bound">G</a> <a id="4209" class="Symbol">(</a><a id="4210" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="4226" class="Symbol">(</a><a id="4227" href="group-theory.torsors.html#3551" class="Function">set-Torsor-Abstract-Group</a> <a id="4253" href="group-theory.torsors.html#4157" class="Bound">X</a><a id="4254" class="Symbol">))</a>
   <a id="4259" href="group-theory.torsors.html#4108" class="Function">mul-hom-Torsor-Abstract-Group</a> <a id="4289" href="group-theory.torsors.html#4289" class="Bound">X</a> <a id="4291" class="Symbol">=</a> <a id="4293" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="4297" class="Symbol">(</a><a id="4298" href="group-theory.torsors.html#3410" class="Function">action-Torsor-Abstract-Group</a> <a id="4327" href="group-theory.torsors.html#4289" class="Bound">X</a><a id="4328" class="Symbol">)</a>
 
   <a id="4333" href="group-theory.torsors.html#4333" class="Function">equiv-mul-Torsor-Abstract-Group</a> <a id="4365" class="Symbol">:</a>
@@ -671,7 +671,7 @@ module _
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-15)(34017d2) Merge pull request #259 from EgbertRijke/group-theory by noreply
+(2022-07-16)(f2cb709) Merge pull request #260 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/cayleys-theorem.lagda.md.</p>
-<p>Version of Friday, July 15, 2022, 09:51 PM</p>
+<p>Version of Saturday, July 16, 2022, 12:13 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -48,7 +48,7 @@
   <a id="613" class="Symbol">(</a> <a id="615" href="group-theory.groups.html#2481" class="Function">Group</a><a id="620" class="Symbol">;</a> <a id="622" href="group-theory.groups.html#2724" class="Function">type-Group</a><a id="632" class="Symbol">;</a> <a id="634" href="group-theory.groups.html#2664" class="Function">set-Group</a><a id="643" class="Symbol">;</a> <a id="645" href="group-theory.groups.html#5609" class="Function">equiv-mul-Group</a><a id="660" class="Symbol">;</a> <a id="662" href="group-theory.groups.html#3318" class="Function">associative-mul-Group</a><a id="683" class="Symbol">;</a>
     <a id="689" href="group-theory.groups.html#4315" class="Function">right-unit-law-Group</a><a id="709" class="Symbol">;</a> <a id="711" href="group-theory.groups.html#3768" class="Function">unit-Group</a><a id="721" class="Symbol">;</a> <a id="723" href="group-theory.groups.html#2776" class="Function">is-set-type-Group</a><a id="740" class="Symbol">)</a>
 <a id="742" class="Keyword">open</a> <a id="747" class="Keyword">import</a> <a id="754" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="788" class="Keyword">using</a>
-  <a id="796" class="Symbol">(</a> <a id="798" href="group-theory.homomorphisms-groups.html#1464" class="Function">preserves-mul-Group</a><a id="817" class="Symbol">;</a> <a id="819" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a><a id="833" class="Symbol">)</a>
+  <a id="796" class="Symbol">(</a> <a id="798" href="group-theory.homomorphisms-groups.html#1469" class="Function">preserves-mul-Group</a><a id="817" class="Symbol">;</a> <a id="819" href="group-theory.homomorphisms-groups.html#1635" class="Function">type-hom-Group</a><a id="833" class="Symbol">)</a>
 <a id="835" class="Keyword">open</a> <a id="840" class="Keyword">import</a> <a id="847" href="group-theory.symmetric-groups.html" class="Module">group-theory.symmetric-groups</a> <a id="877" class="Keyword">using</a> <a id="883" class="Symbol">(</a><a id="884" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a><a id="899" class="Symbol">)</a>
 </pre>
 <pre class="Agda"><a id="914" class="Keyword">module</a> <a id="921" href="group-theory.cayleys-theorem.html#921" class="Module">_</a>
@@ -60,11 +60,11 @@
   <a id="1052" href="group-theory.cayleys-theorem.html#966" class="Function">map-Cayleys-theorem</a> <a id="1072" href="group-theory.cayleys-theorem.html#1072" class="Bound">x</a> <a id="1074" class="Symbol">=</a> <a id="1076" href="group-theory.groups.html#5609" class="Function">equiv-mul-Group</a> <a id="1092" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a> <a id="1094" href="group-theory.cayleys-theorem.html#1072" class="Bound">x</a>
   
   <a id="1101" href="group-theory.cayleys-theorem.html#1101" class="Function">preserves-mul-map-Cayleys-theorem</a> <a id="1135" class="Symbol">:</a>
-    <a id="1141" href="group-theory.homomorphisms-groups.html#1464" class="Function">preserves-mul-Group</a> <a id="1161" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a> <a id="1163" class="Symbol">(</a><a id="1164" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="1180" class="Symbol">(</a><a id="1181" href="group-theory.groups.html#2664" class="Function">set-Group</a> <a id="1191" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a><a id="1192" class="Symbol">))</a> <a id="1195" href="group-theory.cayleys-theorem.html#966" class="Function">map-Cayleys-theorem</a>
+    <a id="1141" href="group-theory.homomorphisms-groups.html#1469" class="Function">preserves-mul-Group</a> <a id="1161" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a> <a id="1163" class="Symbol">(</a><a id="1164" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="1180" class="Symbol">(</a><a id="1181" href="group-theory.groups.html#2664" class="Function">set-Group</a> <a id="1191" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a><a id="1192" class="Symbol">))</a> <a id="1195" href="group-theory.cayleys-theorem.html#966" class="Function">map-Cayleys-theorem</a>
   <a id="1217" href="group-theory.cayleys-theorem.html#1101" class="Function">preserves-mul-map-Cayleys-theorem</a> <a id="1251" href="group-theory.cayleys-theorem.html#1251" class="Bound">x</a> <a id="1253" href="group-theory.cayleys-theorem.html#1253" class="Bound">y</a> <a id="1255" class="Symbol">=</a>
     <a id="1261" href="foundation.equivalences.html#13529" class="Function">eq-htpy-equiv</a> <a id="1275" class="Symbol">(λ</a> <a id="1278" href="group-theory.cayleys-theorem.html#1278" class="Bound">z</a> <a id="1280" class="Symbol">→</a> <a id="1282" href="group-theory.groups.html#3318" class="Function">associative-mul-Group</a> <a id="1304" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a> <a id="1306" href="group-theory.cayleys-theorem.html#1251" class="Bound">x</a> <a id="1308" href="group-theory.cayleys-theorem.html#1253" class="Bound">y</a> <a id="1310" href="group-theory.cayleys-theorem.html#1278" class="Bound">z</a><a id="1311" class="Symbol">)</a>
 
-  <a id="1316" href="group-theory.cayleys-theorem.html#1316" class="Function">hom-Cayleys-theorem</a> <a id="1336" class="Symbol">:</a> <a id="1338" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a> <a id="1353" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a> <a id="1355" class="Symbol">(</a><a id="1356" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="1372" class="Symbol">(</a><a id="1373" href="group-theory.groups.html#2664" class="Function">set-Group</a> <a id="1383" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a><a id="1384" class="Symbol">))</a>
+  <a id="1316" href="group-theory.cayleys-theorem.html#1316" class="Function">hom-Cayleys-theorem</a> <a id="1336" class="Symbol">:</a> <a id="1338" href="group-theory.homomorphisms-groups.html#1635" class="Function">type-hom-Group</a> <a id="1353" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a> <a id="1355" class="Symbol">(</a><a id="1356" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="1372" class="Symbol">(</a><a id="1373" href="group-theory.groups.html#2664" class="Function">set-Group</a> <a id="1383" href="group-theory.cayleys-theorem.html#939" class="Bound">G</a><a id="1384" class="Symbol">))</a>
   <a id="1389" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1393" href="group-theory.cayleys-theorem.html#1316" class="Function">hom-Cayleys-theorem</a> <a id="1413" class="Symbol">=</a> <a id="1415" href="group-theory.cayleys-theorem.html#966" class="Function">map-Cayleys-theorem</a>
   <a id="1437" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1441" href="group-theory.cayleys-theorem.html#1316" class="Function">hom-Cayleys-theorem</a> <a id="1461" class="Symbol">=</a> <a id="1463" href="group-theory.cayleys-theorem.html#1101" class="Function">preserves-mul-map-Cayleys-theorem</a>
 
@@ -86,7 +86,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-15)(34017d2) Merge pull request #259 from EgbertRijke/group-theory by noreply
+(2022-07-16)(f2cb709) Merge pull request #260 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

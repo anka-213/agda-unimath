@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/finite-group-theory/sign-homomorphism.lagda.md.</p>
-<p>Version of Friday, July 15, 2022, 09:50 PM</p>
+<p>Version of Saturday, July 16, 2022, 12:12 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -97,9 +97,9 @@
     <a id="3801" href="group-theory.concrete-groups.html#8025" class="Function">map-hom-Concrete-Group</a><a id="3823" class="Symbol">)</a>
 <a id="3825" class="Keyword">open</a> <a id="3830" class="Keyword">import</a> <a id="3837" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="3857" class="Keyword">using</a> <a id="3863" class="Symbol">(</a><a id="3864" href="group-theory.groups.html#2664" class="Function">set-Group</a><a id="3873" class="Symbol">)</a>
 <a id="3875" class="Keyword">open</a> <a id="3880" class="Keyword">import</a> <a id="3887" href="group-theory.homomorphisms-generated-subgroups.html" class="Module">group-theory.homomorphisms-generated-subgroups</a> <a id="3934" class="Keyword">using</a>
-  <a id="3942" class="Symbol">(</a> <a id="3944" href="group-theory.homomorphisms-generated-subgroups.html#10930" class="Function">restriction-generating-subset-Group</a><a id="3979" class="Symbol">)</a>
+  <a id="3942" class="Symbol">(</a> <a id="3944" href="group-theory.homomorphisms-generated-subgroups.html#10919" class="Function">restriction-generating-subset-Group</a><a id="3979" class="Symbol">)</a>
 <a id="3981" class="Keyword">open</a> <a id="3986" class="Keyword">import</a> <a id="3993" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="4027" class="Keyword">using</a>
-  <a id="4035" class="Symbol">(</a> <a id="4037" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a><a id="4051" class="Symbol">;</a> <a id="4053" href="group-theory.homomorphisms-groups.html#2685" class="Function">htpy-hom-Group</a><a id="4067" class="Symbol">;</a> <a id="4069" href="group-theory.homomorphisms-groups.html#2256" class="Function">comp-hom-Group</a><a id="4083" class="Symbol">;</a> <a id="4085" href="group-theory.homomorphisms-groups.html#1759" class="Function">map-hom-Group</a><a id="4098" class="Symbol">)</a>
+  <a id="4035" class="Symbol">(</a> <a id="4037" href="group-theory.homomorphisms-groups.html#1635" class="Function">type-hom-Group</a><a id="4051" class="Symbol">;</a> <a id="4053" href="group-theory.homomorphisms-groups.html#2690" class="Function">htpy-hom-Group</a><a id="4067" class="Symbol">;</a> <a id="4069" href="group-theory.homomorphisms-groups.html#2261" class="Function">comp-hom-Group</a><a id="4083" class="Symbol">;</a> <a id="4085" href="group-theory.homomorphisms-groups.html#1764" class="Function">map-hom-Group</a><a id="4098" class="Symbol">)</a>
 <a id="4100" class="Keyword">open</a> <a id="4105" class="Keyword">import</a> <a id="4112" href="group-theory.homomorphisms-semigroups.html" class="Module">group-theory.homomorphisms-semigroups</a> <a id="4150" class="Keyword">using</a> <a id="4156" class="Symbol">(</a><a id="4157" href="group-theory.homomorphisms-semigroups.html#1324" class="Function">preserves-mul</a><a id="4170" class="Symbol">)</a>
 <a id="4172" class="Keyword">open</a> <a id="4177" class="Keyword">import</a> <a id="4184" href="group-theory.isomorphisms-groups.html" class="Module">group-theory.isomorphisms-groups</a> <a id="4217" class="Keyword">using</a> <a id="4223" class="Symbol">(</a><a id="4224" href="group-theory.isomorphisms-groups.html#1806" class="Function">hom-iso-Group</a><a id="4237" class="Symbol">;</a> <a id="4239" href="group-theory.isomorphisms-groups.html#2087" class="Function">hom-inv-iso-Group</a><a id="4256" class="Symbol">)</a>
 <a id="4258" class="Keyword">open</a> <a id="4263" class="Keyword">import</a> <a id="4270" href="group-theory.symmetric-groups.html" class="Module">group-theory.symmetric-groups</a> <a id="4300" class="Keyword">using</a>
@@ -271,7 +271,7 @@
       <a id="11206" class="Symbol">(</a> <a id="11208" href="finite-group-theory.sign-homomorphism.html#5799" class="Function">sign-homomorphism-Fin-two</a> <a id="11234" href="finite-group-theory.sign-homomorphism.html#10691" class="Bound">n</a> <a id="11236" href="finite-group-theory.sign-homomorphism.html#10699" class="Bound">X</a> <a id="11238" href="finite-group-theory.sign-homomorphism.html#11017" class="Bound">g</a><a id="11239" class="Symbol">))</a>
   
   <a id="11247" href="finite-group-theory.sign-homomorphism.html#11247" class="Function">sign-homomorphism</a> <a id="11265" class="Symbol">:</a>
-    <a id="11271" href="group-theory.homomorphisms-groups.html#1630" class="Function">type-hom-Group</a>
+    <a id="11271" href="group-theory.homomorphisms-groups.html#1635" class="Function">type-hom-Group</a>
       <a id="11292" class="Symbol">(</a> <a id="11294" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="11310" class="Symbol">(</a><a id="11311" href="univalent-combinatorics.finite-types.html#15252" class="Function">set-UU-Fin-Level</a> <a id="11328" href="finite-group-theory.sign-homomorphism.html#10691" class="Bound">n</a> <a id="11330" href="finite-group-theory.sign-homomorphism.html#10699" class="Bound">X</a><a id="11331" class="Symbol">))</a>
       <a id="11340" class="Symbol">(</a> <a id="11342" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="11358" class="Symbol">(</a><a id="11359" href="univalent-combinatorics.standard-finite-types.html#2285" class="Function">Fin-Set</a> <a id="11367" class="Number">2</a><a id="11368" class="Symbol">))</a>
   <a id="11373" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="11377" href="finite-group-theory.sign-homomorphism.html#11247" class="Function">sign-homomorphism</a> <a id="11395" class="Symbol">=</a> <a id="11397" href="finite-group-theory.sign-homomorphism.html#10732" class="Function">map-sign-homomorphism</a>
@@ -280,7 +280,7 @@
   <a id="11485" href="finite-group-theory.sign-homomorphism.html#11485" class="Function">eq-sign-homomorphism-transposition</a> <a id="11520" class="Symbol">:</a>
     <a id="11526" class="Symbol">(</a> <a id="11528" href="finite-group-theory.sign-homomorphism.html#11528" class="Bound">Y</a> <a id="11530" class="Symbol">:</a> <a id="11532" href="univalent-combinatorics.2-element-decidable-subtypes.html#4845" class="Function">2-Element-Decidable-Subtype</a> <a id="11560" href="finite-group-theory.sign-homomorphism.html#10679" class="Bound">l</a> <a id="11562" class="Symbol">(</a><a id="11563" href="univalent-combinatorics.finite-types.html#5484" class="Function">type-UU-Fin-Level</a> <a id="11581" href="finite-group-theory.sign-homomorphism.html#10691" class="Bound">n</a> <a id="11583" href="finite-group-theory.sign-homomorphism.html#10699" class="Bound">X</a><a id="11584" class="Symbol">))</a> <a id="11587" class="Symbol">→</a>
     <a id="11593" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a>
-      <a id="11602" class="Symbol">(</a> <a id="11604" href="group-theory.homomorphisms-groups.html#1759" class="Function">map-hom-Group</a>
+      <a id="11602" class="Symbol">(</a> <a id="11604" href="group-theory.homomorphisms-groups.html#1764" class="Function">map-hom-Group</a>
         <a id="11626" class="Symbol">(</a> <a id="11628" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="11644" class="Symbol">(</a><a id="11645" href="univalent-combinatorics.finite-types.html#15252" class="Function">set-UU-Fin-Level</a> <a id="11662" href="finite-group-theory.sign-homomorphism.html#10691" class="Bound">n</a> <a id="11664" href="finite-group-theory.sign-homomorphism.html#10699" class="Bound">X</a><a id="11665" class="Symbol">))</a>
         <a id="11676" class="Symbol">(</a> <a id="11678" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="11694" class="Symbol">(</a><a id="11695" href="univalent-combinatorics.standard-finite-types.html#2285" class="Function">Fin-Set</a> <a id="11703" class="Number">2</a><a id="11704" class="Symbol">))</a>
         <a id="11715" class="Symbol">(</a> <a id="11717" href="finite-group-theory.sign-homomorphism.html#11247" class="Function">sign-homomorphism</a><a id="11734" class="Symbol">)</a>
@@ -303,7 +303,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-15)(34017d2) Merge pull request #259 from EgbertRijke/group-theory by noreply
+(2022-07-16)(f2cb709) Merge pull request #260 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
