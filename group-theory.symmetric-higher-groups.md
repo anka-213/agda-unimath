@@ -6,15 +6,15 @@ title: Symmetric higher groups
 
 <a id="92" class="Keyword">module</a> <a id="99" href="group-theory.symmetric-higher-groups.html" class="Module">group-theory.symmetric-higher-groups</a> <a id="136" class="Keyword">where</a>
 
-<a id="143" class="Keyword">open</a> <a id="148" class="Keyword">import</a> <a id="155" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
-<a id="187" class="Keyword">open</a> <a id="192" class="Keyword">import</a> <a id="199" href="foundation.connected-components-universes.html" class="Module">foundation.connected-components-universes</a>
-<a id="241" class="Keyword">open</a> <a id="246" class="Keyword">import</a> <a id="253" href="foundation.connected-types.html" class="Module">foundation.connected-types</a>
-<a id="280" class="Keyword">open</a> <a id="285" class="Keyword">import</a> <a id="292" href="foundation.mere-equivalences.html" class="Module">foundation.mere-equivalences</a>
-<a id="321" class="Keyword">open</a> <a id="326" class="Keyword">import</a> <a id="333" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="143" class="Keyword">open</a> <a id="148" class="Keyword">import</a> <a id="155" href="foundation.0-connected-types.html" class="Module">foundation.0-connected-types</a>
+<a id="184" class="Keyword">open</a> <a id="189" class="Keyword">import</a> <a id="196" href="foundation.connected-components-universes.html" class="Module">foundation.connected-components-universes</a>
+<a id="238" class="Keyword">open</a> <a id="243" class="Keyword">import</a> <a id="250" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="282" class="Keyword">open</a> <a id="287" class="Keyword">import</a> <a id="294" href="foundation.mere-equivalences.html" class="Module">foundation.mere-equivalences</a>
+<a id="323" class="Keyword">open</a> <a id="328" class="Keyword">import</a> <a id="335" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
 
-<a id="361" class="Keyword">open</a> <a id="366" class="Keyword">import</a> <a id="373" href="group-theory.higher-groups.html" class="Module">group-theory.higher-groups</a>
+<a id="363" class="Keyword">open</a> <a id="368" class="Keyword">import</a> <a id="375" href="group-theory.higher-groups.html" class="Module">group-theory.higher-groups</a>
 
-<a id="401" class="Keyword">open</a> <a id="406" class="Keyword">import</a> <a id="413" href="structured-types.pointed-types.html" class="Module">structured-types.pointed-types</a>
+<a id="403" class="Keyword">open</a> <a id="408" class="Keyword">import</a> <a id="415" href="structured-types.pointed-types.html" class="Module">structured-types.pointed-types</a>
 </pre>
 ## Idea
 
@@ -22,31 +22,31 @@ The symmetric higher group of a type `X` is the connected component of the unive
 
 ## Definition
 
-<pre class="Agda"><a id="574" class="Keyword">module</a> <a id="581" href="group-theory.symmetric-higher-groups.html#581" class="Module">_</a>
-  <a id="585" class="Symbol">{</a><a id="586" href="group-theory.symmetric-higher-groups.html#586" class="Bound">l</a> <a id="588" class="Symbol">:</a> <a id="590" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="595" class="Symbol">}</a> <a id="597" class="Symbol">(</a><a id="598" href="group-theory.symmetric-higher-groups.html#598" class="Bound">X</a> <a id="600" class="Symbol">:</a> <a id="602" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="605" href="group-theory.symmetric-higher-groups.html#586" class="Bound">l</a><a id="606" class="Symbol">)</a>
-  <a id="610" class="Keyword">where</a>
+<pre class="Agda"><a id="576" class="Keyword">module</a> <a id="583" href="group-theory.symmetric-higher-groups.html#583" class="Module">_</a>
+  <a id="587" class="Symbol">{</a><a id="588" href="group-theory.symmetric-higher-groups.html#588" class="Bound">l</a> <a id="590" class="Symbol">:</a> <a id="592" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="597" class="Symbol">}</a> <a id="599" class="Symbol">(</a><a id="600" href="group-theory.symmetric-higher-groups.html#600" class="Bound">X</a> <a id="602" class="Symbol">:</a> <a id="604" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="607" href="group-theory.symmetric-higher-groups.html#588" class="Bound">l</a><a id="608" class="Symbol">)</a>
+  <a id="612" class="Keyword">where</a>
 
-  <a id="619" href="group-theory.symmetric-higher-groups.html#619" class="Function">classifying-type-symmetric-∞-Group</a> <a id="654" class="Symbol">:</a> <a id="656" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="659" class="Symbol">(</a><a id="660" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="665" href="group-theory.symmetric-higher-groups.html#586" class="Bound">l</a><a id="666" class="Symbol">)</a>
-  <a id="670" href="group-theory.symmetric-higher-groups.html#619" class="Function">classifying-type-symmetric-∞-Group</a> <a id="705" class="Symbol">=</a> <a id="707" href="foundation.connected-components-universes.html#2320" class="Function">component-UU</a> <a id="720" href="group-theory.symmetric-higher-groups.html#598" class="Bound">X</a>
+  <a id="621" href="group-theory.symmetric-higher-groups.html#621" class="Function">classifying-type-symmetric-∞-Group</a> <a id="656" class="Symbol">:</a> <a id="658" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="661" class="Symbol">(</a><a id="662" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="667" href="group-theory.symmetric-higher-groups.html#588" class="Bound">l</a><a id="668" class="Symbol">)</a>
+  <a id="672" href="group-theory.symmetric-higher-groups.html#621" class="Function">classifying-type-symmetric-∞-Group</a> <a id="707" class="Symbol">=</a> <a id="709" href="foundation.connected-components-universes.html#2316" class="Function">component-UU</a> <a id="722" href="group-theory.symmetric-higher-groups.html#600" class="Bound">X</a>
 
-  <a id="725" href="group-theory.symmetric-higher-groups.html#725" class="Function">shape-symmetric-∞-Group</a> <a id="749" class="Symbol">:</a> <a id="751" href="group-theory.symmetric-higher-groups.html#619" class="Function">classifying-type-symmetric-∞-Group</a>
-  <a id="788" href="group-theory.symmetric-higher-groups.html#725" class="Function">shape-symmetric-∞-Group</a> <a id="812" class="Symbol">=</a>
-    <a id="818" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="823" href="group-theory.symmetric-higher-groups.html#598" class="Bound">X</a> <a id="825" class="Symbol">(</a><a id="826" href="foundation.mere-equivalences.html#1771" class="Function">refl-mere-equiv</a> <a id="842" href="group-theory.symmetric-higher-groups.html#598" class="Bound">X</a><a id="843" class="Symbol">)</a>
+  <a id="727" href="group-theory.symmetric-higher-groups.html#727" class="Function">shape-symmetric-∞-Group</a> <a id="751" class="Symbol">:</a> <a id="753" href="group-theory.symmetric-higher-groups.html#621" class="Function">classifying-type-symmetric-∞-Group</a>
+  <a id="790" href="group-theory.symmetric-higher-groups.html#727" class="Function">shape-symmetric-∞-Group</a> <a id="814" class="Symbol">=</a>
+    <a id="820" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="825" href="group-theory.symmetric-higher-groups.html#600" class="Bound">X</a> <a id="827" class="Symbol">(</a><a id="828" href="foundation.mere-equivalences.html#1771" class="Function">refl-mere-equiv</a> <a id="844" href="group-theory.symmetric-higher-groups.html#600" class="Bound">X</a><a id="845" class="Symbol">)</a>
 
-  <a id="848" href="group-theory.symmetric-higher-groups.html#848" class="Function">classifying-pointed-type-symmetric-∞-Group</a> <a id="891" class="Symbol">:</a> <a id="893" href="structured-types.pointed-types.html#383" class="Function">Pointed-Type</a> <a id="906" class="Symbol">(</a><a id="907" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="912" href="group-theory.symmetric-higher-groups.html#586" class="Bound">l</a><a id="913" class="Symbol">)</a>
-  <a id="917" href="group-theory.symmetric-higher-groups.html#848" class="Function">classifying-pointed-type-symmetric-∞-Group</a> <a id="960" class="Symbol">=</a>
-    <a id="966" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a>
-      <a id="977" href="group-theory.symmetric-higher-groups.html#619" class="Function">classifying-type-symmetric-∞-Group</a>
-      <a id="1018" href="group-theory.symmetric-higher-groups.html#725" class="Function">shape-symmetric-∞-Group</a>
+  <a id="850" href="group-theory.symmetric-higher-groups.html#850" class="Function">classifying-pointed-type-symmetric-∞-Group</a> <a id="893" class="Symbol">:</a> <a id="895" href="structured-types.pointed-types.html#383" class="Function">Pointed-Type</a> <a id="908" class="Symbol">(</a><a id="909" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="914" href="group-theory.symmetric-higher-groups.html#588" class="Bound">l</a><a id="915" class="Symbol">)</a>
+  <a id="919" href="group-theory.symmetric-higher-groups.html#850" class="Function">classifying-pointed-type-symmetric-∞-Group</a> <a id="962" class="Symbol">=</a>
+    <a id="968" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a>
+      <a id="979" href="group-theory.symmetric-higher-groups.html#621" class="Function">classifying-type-symmetric-∞-Group</a>
+      <a id="1020" href="group-theory.symmetric-higher-groups.html#727" class="Function">shape-symmetric-∞-Group</a>
 
-  <a id="1045" href="group-theory.symmetric-higher-groups.html#1045" class="Function">is-path-connected-classifying-type-symmetric-∞-Group</a> <a id="1098" class="Symbol">:</a>
-    <a id="1104" href="foundation.connected-types.html#1757" class="Function">is-path-connected</a> <a id="1122" href="group-theory.symmetric-higher-groups.html#619" class="Function">classifying-type-symmetric-∞-Group</a>
-  <a id="1159" href="group-theory.symmetric-higher-groups.html#1045" class="Function">is-path-connected-classifying-type-symmetric-∞-Group</a> <a id="1212" class="Symbol">=</a>
-    <a id="1218" href="foundation.connected-components-universes.html#6389" class="Function">is-path-connected-component-UU</a> <a id="1249" href="group-theory.symmetric-higher-groups.html#598" class="Bound">X</a>
+  <a id="1047" href="group-theory.symmetric-higher-groups.html#1047" class="Function">is-0-connected-classifying-type-symmetric-∞-Group</a> <a id="1097" class="Symbol">:</a>
+    <a id="1103" href="foundation.0-connected-types.html#1755" class="Function">is-0-connected</a> <a id="1118" href="group-theory.symmetric-higher-groups.html#621" class="Function">classifying-type-symmetric-∞-Group</a>
+  <a id="1155" href="group-theory.symmetric-higher-groups.html#1047" class="Function">is-0-connected-classifying-type-symmetric-∞-Group</a> <a id="1205" class="Symbol">=</a>
+    <a id="1211" href="foundation.connected-components-universes.html#6382" class="Function">is-0-connected-component-UU</a> <a id="1239" href="group-theory.symmetric-higher-groups.html#600" class="Bound">X</a>
   
-  <a id="1256" href="group-theory.symmetric-higher-groups.html#1256" class="Function">symmetric-∞-Group</a> <a id="1274" class="Symbol">:</a> <a id="1276" href="group-theory.higher-groups.html#1633" class="Function">∞-Group</a> <a id="1284" class="Symbol">(</a><a id="1285" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1290" href="group-theory.symmetric-higher-groups.html#586" class="Bound">l</a><a id="1291" class="Symbol">)</a>
-  <a id="1295" href="group-theory.symmetric-higher-groups.html#1256" class="Function">symmetric-∞-Group</a> <a id="1313" class="Symbol">=</a>
-    <a id="1319" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a>
-      <a id="1330" href="group-theory.symmetric-higher-groups.html#848" class="Function">classifying-pointed-type-symmetric-∞-Group</a>
-      <a id="1379" href="group-theory.symmetric-higher-groups.html#1045" class="Function">is-path-connected-classifying-type-symmetric-∞-Group</a>
+  <a id="1246" href="group-theory.symmetric-higher-groups.html#1246" class="Function">symmetric-∞-Group</a> <a id="1264" class="Symbol">:</a> <a id="1266" href="group-theory.higher-groups.html#1626" class="Function">∞-Group</a> <a id="1274" class="Symbol">(</a><a id="1275" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1280" href="group-theory.symmetric-higher-groups.html#588" class="Bound">l</a><a id="1281" class="Symbol">)</a>
+  <a id="1285" href="group-theory.symmetric-higher-groups.html#1246" class="Function">symmetric-∞-Group</a> <a id="1303" class="Symbol">=</a>
+    <a id="1309" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a>
+      <a id="1320" href="group-theory.symmetric-higher-groups.html#850" class="Function">classifying-pointed-type-symmetric-∞-Group</a>
+      <a id="1369" href="group-theory.symmetric-higher-groups.html#1047" class="Function">is-0-connected-classifying-type-symmetric-∞-Group</a>
 </pre>

@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/graph-theory/orientations-undirected-graphs.lagda.md.</p>
-<p>Version of Saturday, July 16, 2022, 11:45 PM</p>
+<p>Version of Sunday, July 17, 2022, 10:42 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -40,7 +40,7 @@
   <a id="344" class="Symbol">(</a> <a id="346" href="graph-theory.undirected-graphs.html#785" class="Function">Undirected-Graph</a><a id="362" class="Symbol">;</a> <a id="364" href="graph-theory.undirected-graphs.html#1050" class="Function">unordered-pair-vertices-Undirected-Graph</a><a id="404" class="Symbol">;</a>
     <a id="410" href="graph-theory.undirected-graphs.html#1651" class="Function">edge-Undirected-Graph</a><a id="431" class="Symbol">;</a> <a id="433" href="graph-theory.undirected-graphs.html#981" class="Function">vertex-Undirected-Graph</a><a id="456" class="Symbol">)</a>
 
-<a id="459" class="Keyword">open</a> <a id="464" class="Keyword">import</a> <a id="471" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="508" class="Keyword">using</a> <a id="514" class="Symbol">(</a><a id="515" href="univalent-combinatorics.finite-types.html#5918" class="Function">type-UU-Fin</a><a id="526" class="Symbol">)</a>
+<a id="459" class="Keyword">open</a> <a id="464" class="Keyword">import</a> <a id="471" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="508" class="Keyword">using</a> <a id="514" class="Symbol">(</a><a id="515" href="univalent-combinatorics.finite-types.html#5914" class="Function">type-UU-Fin</a><a id="526" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>An orientation of an undirected graph is a function that picks a direction for every edge.</p>
@@ -52,7 +52,7 @@
   <a id="724" href="graph-theory.orientations-undirected-graphs.html#724" class="Function">orientation-Undirected-Graph</a> <a id="753" class="Symbol">:</a> <a id="755" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="758" class="Symbol">(</a><a id="759" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="764" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="770" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="772" href="graph-theory.orientations-undirected-graphs.html#669" class="Bound">l1</a> <a id="775" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="777" href="graph-theory.orientations-undirected-graphs.html#672" class="Bound">l2</a><a id="779" class="Symbol">)</a>
   <a id="783" href="graph-theory.orientations-undirected-graphs.html#724" class="Function">orientation-Undirected-Graph</a> <a id="812" class="Symbol">=</a>
     <a id="818" class="Symbol">(</a> <a id="820" href="graph-theory.orientations-undirected-graphs.html#820" class="Bound">p</a> <a id="822" class="Symbol">:</a> <a id="824" href="graph-theory.undirected-graphs.html#1050" class="Function">unordered-pair-vertices-Undirected-Graph</a> <a id="865" href="graph-theory.orientations-undirected-graphs.html#685" class="Bound">G</a><a id="866" class="Symbol">)</a> <a id="868" class="Symbol">→</a>
-    <a id="874" href="graph-theory.undirected-graphs.html#1651" class="Function">edge-Undirected-Graph</a> <a id="896" href="graph-theory.orientations-undirected-graphs.html#685" class="Bound">G</a> <a id="898" href="graph-theory.orientations-undirected-graphs.html#820" class="Bound">p</a> <a id="900" class="Symbol">→</a> <a id="902" href="univalent-combinatorics.finite-types.html#5918" class="Function">type-UU-Fin</a> <a id="914" class="Number">2</a> <a id="916" class="Symbol">(</a><a id="917" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="921" href="graph-theory.orientations-undirected-graphs.html#820" class="Bound">p</a><a id="922" class="Symbol">)</a>
+    <a id="874" href="graph-theory.undirected-graphs.html#1651" class="Function">edge-Undirected-Graph</a> <a id="896" href="graph-theory.orientations-undirected-graphs.html#685" class="Bound">G</a> <a id="898" href="graph-theory.orientations-undirected-graphs.html#820" class="Bound">p</a> <a id="900" class="Symbol">→</a> <a id="902" href="univalent-combinatorics.finite-types.html#5914" class="Function">type-UU-Fin</a> <a id="914" class="Number">2</a> <a id="916" class="Symbol">(</a><a id="917" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="921" href="graph-theory.orientations-undirected-graphs.html#820" class="Bound">p</a><a id="922" class="Symbol">)</a>
 
   <a id="927" href="graph-theory.orientations-undirected-graphs.html#927" class="Function">source-edge-orientation-Undirected-Graph</a> <a id="968" class="Symbol">:</a>
     <a id="974" href="graph-theory.orientations-undirected-graphs.html#724" class="Function">orientation-Undirected-Graph</a> <a id="1003" class="Symbol">→</a>
@@ -63,7 +63,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-17)(c568133) Merge pull request #261 from EgbertRijke/group-theory by noreply
+(2022-07-17)(f2a5bf5) Merge pull request #262 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
