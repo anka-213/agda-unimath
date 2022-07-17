@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/connected-components-universes.lagda.md.</p>
-<p>Version of Sunday, July 17, 2022, 01:51 PM</p>
+<p>Version of Sunday, July 17, 2022, 08:04 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -36,7 +36,7 @@
 <a id="102" class="Keyword">module</a> <a id="109" href="foundation.connected-components-universes.html" class="Module">foundation.connected-components-universes</a> <a id="151" class="Keyword">where</a>
 
 <a id="158" class="Keyword">open</a> <a id="163" class="Keyword">import</a> <a id="170" href="foundation.0-connected-types.html" class="Module">foundation.0-connected-types</a> <a id="199" class="Keyword">using</a>
-  <a id="207" class="Symbol">(</a> <a id="209" href="foundation.0-connected-types.html#1755" class="Function">is-0-connected</a><a id="223" class="Symbol">;</a> <a id="225" href="foundation.0-connected-types.html#2331" class="Function">is-0-connected-mere-eq</a><a id="247" class="Symbol">)</a>
+  <a id="207" class="Symbol">(</a> <a id="209" href="foundation.0-connected-types.html#1858" class="Function">is-0-connected</a><a id="223" class="Symbol">;</a> <a id="225" href="foundation.0-connected-types.html#2434" class="Function">is-0-connected-mere-eq</a><a id="247" class="Symbol">)</a>
 <a id="249" class="Keyword">open</a> <a id="254" class="Keyword">import</a> <a id="261" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a> <a id="291" class="Keyword">using</a> <a id="297" class="Symbol">(</a><a id="298" href="foundation-core.contractible-types.html#1006" class="Function">is-contr</a><a id="306" class="Symbol">)</a>
 <a id="308" class="Keyword">open</a> <a id="313" class="Keyword">import</a> <a id="320" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="352" class="Keyword">using</a> <a id="358" class="Symbol">(</a><a id="359" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="360" class="Symbol">;</a> <a id="362" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="366" class="Symbol">;</a> <a id="368" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="371" class="Symbol">;</a> <a id="373" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="376" class="Symbol">)</a>
 <a id="378" class="Keyword">open</a> <a id="383" class="Keyword">import</a> <a id="390" href="foundation.empty-types.html" class="Module">foundation.empty-types</a> <a id="413" class="Keyword">using</a>
@@ -196,9 +196,9 @@
 <h3 id="the-connected-components-of-universes-are-0-connected">The connected components of universes are 0 connected</h3>
 <pre class="Agda"><a id="6371" class="Keyword">abstract</a>
   <a id="is-0-connected-component-UU"></a><a id="6382" href="foundation.connected-components-universes.html#6382" class="Function">is-0-connected-component-UU</a> <a id="6410" class="Symbol">:</a>
-    <a id="6416" class="Symbol">{</a><a id="6417" href="foundation.connected-components-universes.html#6417" class="Bound">l</a> <a id="6419" class="Symbol">:</a> <a id="6421" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="6426" class="Symbol">}</a> <a id="6428" class="Symbol">(</a><a id="6429" href="foundation.connected-components-universes.html#6429" class="Bound">X</a> <a id="6431" class="Symbol">:</a> <a id="6433" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="6436" href="foundation.connected-components-universes.html#6417" class="Bound">l</a><a id="6437" class="Symbol">)</a> <a id="6439" class="Symbol">→</a> <a id="6441" href="foundation.0-connected-types.html#1755" class="Function">is-0-connected</a> <a id="6456" class="Symbol">(</a><a id="6457" href="foundation.connected-components-universes.html#2316" class="Function">component-UU</a> <a id="6470" href="foundation.connected-components-universes.html#6429" class="Bound">X</a><a id="6471" class="Symbol">)</a>
+    <a id="6416" class="Symbol">{</a><a id="6417" href="foundation.connected-components-universes.html#6417" class="Bound">l</a> <a id="6419" class="Symbol">:</a> <a id="6421" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="6426" class="Symbol">}</a> <a id="6428" class="Symbol">(</a><a id="6429" href="foundation.connected-components-universes.html#6429" class="Bound">X</a> <a id="6431" class="Symbol">:</a> <a id="6433" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="6436" href="foundation.connected-components-universes.html#6417" class="Bound">l</a><a id="6437" class="Symbol">)</a> <a id="6439" class="Symbol">→</a> <a id="6441" href="foundation.0-connected-types.html#1858" class="Function">is-0-connected</a> <a id="6456" class="Symbol">(</a><a id="6457" href="foundation.connected-components-universes.html#2316" class="Function">component-UU</a> <a id="6470" href="foundation.connected-components-universes.html#6429" class="Bound">X</a><a id="6471" class="Symbol">)</a>
   <a id="6475" href="foundation.connected-components-universes.html#6382" class="Function">is-0-connected-component-UU</a> <a id="6503" href="foundation.connected-components-universes.html#6503" class="Bound">X</a> <a id="6505" class="Symbol">=</a>
-    <a id="6511" href="foundation.0-connected-types.html#2331" class="Function">is-0-connected-mere-eq</a>
+    <a id="6511" href="foundation.0-connected-types.html#2434" class="Function">is-0-connected-mere-eq</a>
       <a id="6540" class="Symbol">(</a> <a id="6542" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="6547" href="foundation.connected-components-universes.html#6503" class="Bound">X</a> <a id="6549" class="Symbol">(</a><a id="6550" href="foundation.mere-equivalences.html#1771" class="Function">refl-mere-equiv</a> <a id="6566" href="foundation.connected-components-universes.html#6503" class="Bound">X</a><a id="6567" class="Symbol">))</a>
       <a id="6576" class="Symbol">(</a> <a id="6578" class="Symbol">λ</a> <a id="6580" href="foundation.connected-components-universes.html#6580" class="Bound">Y</a> <a id="6582" class="Symbol">→</a>
         <a id="6592" href="foundation.functoriality-propositional-truncation.html#1456" class="Function">map-trunc-Prop</a>
@@ -207,7 +207,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-17)(ac7164a) Merge pull request #263 from EgbertRijke/group-theory by noreply
+(2022-07-17)(adc6b65) Merge pull request #264 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

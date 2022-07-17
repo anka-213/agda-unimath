@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory.lagda.md.</p>
-<p>Version of Sunday, July 17, 2022, 01:52 PM</p>
+<p>Version of Sunday, July 17, 2022, 08:05 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -80,45 +80,46 @@
 <a id="2471" class="Keyword">open</a> <a id="2476" class="Keyword">import</a> <a id="2483" href="group-theory.isomorphisms-semigroups.html" class="Module">group-theory.isomorphisms-semigroups</a> <a id="2520" class="Keyword">public</a>
 <a id="2527" class="Keyword">open</a> <a id="2532" class="Keyword">import</a> <a id="2539" href="group-theory.loop-groups-sets.html" class="Module">group-theory.loop-groups-sets</a> <a id="2569" class="Keyword">public</a>
 <a id="2576" class="Keyword">open</a> <a id="2581" class="Keyword">import</a> <a id="2588" href="group-theory.kernels.html" class="Module">group-theory.kernels</a> <a id="2609" class="Keyword">public</a>
-<a id="2616" class="Keyword">open</a> <a id="2621" class="Keyword">import</a> <a id="2628" href="group-theory.mere-equivalences-group-actions.html" class="Module">group-theory.mere-equivalences-group-actions</a> <a id="2673" class="Keyword">public</a>
-<a id="2680" class="Keyword">open</a> <a id="2685" class="Keyword">import</a> <a id="2692" href="group-theory.monoid-actions.html" class="Module">group-theory.monoid-actions</a> <a id="2720" class="Keyword">public</a>
-<a id="2727" class="Keyword">open</a> <a id="2732" class="Keyword">import</a> <a id="2739" href="group-theory.monoids.html" class="Module">group-theory.monoids</a> <a id="2760" class="Keyword">public</a>
-<a id="2767" class="Keyword">open</a> <a id="2772" class="Keyword">import</a> <a id="2779" href="group-theory.monomorphisms-concrete-groups.html" class="Module">group-theory.monomorphisms-concrete-groups</a> <a id="2822" class="Keyword">public</a>
-<a id="2829" class="Keyword">open</a> <a id="2834" class="Keyword">import</a> <a id="2841" href="group-theory.monomorphisms-groups.html" class="Module">group-theory.monomorphisms-groups</a> <a id="2875" class="Keyword">public</a>
-<a id="2882" class="Keyword">open</a> <a id="2887" class="Keyword">import</a> <a id="2894" href="group-theory.normal-subgroups.html" class="Module">group-theory.normal-subgroups</a> <a id="2924" class="Keyword">public</a>
-<a id="2931" class="Keyword">open</a> <a id="2936" class="Keyword">import</a> <a id="2943" href="group-theory.normal-subgroups-concrete-groups.html" class="Module">group-theory.normal-subgroups-concrete-groups</a> <a id="2989" class="Keyword">public</a>
-<a id="2996" class="Keyword">open</a> <a id="3001" class="Keyword">import</a> <a id="3008" href="group-theory.orbit-stabilizer-theorem-concrete-groups.html" class="Module">group-theory.orbit-stabilizer-theorem-concrete-groups</a> <a id="3062" class="Keyword">public</a>
-<a id="3069" class="Keyword">open</a> <a id="3074" class="Keyword">import</a> <a id="3081" href="group-theory.orbits-monoid-actions.html" class="Module">group-theory.orbits-monoid-actions</a> <a id="3116" class="Keyword">public</a>
-<a id="3123" class="Keyword">open</a> <a id="3128" class="Keyword">import</a> <a id="3135" href="group-theory.orbits-concrete-group-actions.html" class="Module">group-theory.orbits-concrete-group-actions</a> <a id="3178" class="Keyword">public</a>
-<a id="3185" class="Keyword">open</a> <a id="3190" class="Keyword">import</a> <a id="3197" href="group-theory.orbits-group-actions.html" class="Module">group-theory.orbits-group-actions</a> <a id="3231" class="Keyword">public</a>
-<a id="3238" class="Keyword">open</a> <a id="3243" class="Keyword">import</a> <a id="3250" href="group-theory.orbits-higher-group-actions.html" class="Module">group-theory.orbits-higher-group-actions</a> <a id="3291" class="Keyword">public</a>
-<a id="3298" class="Keyword">open</a> <a id="3303" class="Keyword">import</a> <a id="3310" href="group-theory.orbits-monoid-actions.html" class="Module">group-theory.orbits-monoid-actions</a> <a id="3345" class="Keyword">public</a>
-<a id="3352" class="Keyword">open</a> <a id="3357" class="Keyword">import</a> <a id="3364" href="group-theory.precategory-of-group-actions.html" class="Module">group-theory.precategory-of-group-actions</a> <a id="3406" class="Keyword">public</a>
-<a id="3413" class="Keyword">open</a> <a id="3418" class="Keyword">import</a> <a id="3425" href="group-theory.precategory-of-groups.html" class="Module">group-theory.precategory-of-groups</a> <a id="3460" class="Keyword">public</a>
-<a id="3467" class="Keyword">open</a> <a id="3472" class="Keyword">import</a> <a id="3479" href="group-theory.precategory-of-semigroups.html" class="Module">group-theory.precategory-of-semigroups</a> <a id="3518" class="Keyword">public</a>
-<a id="3525" class="Keyword">open</a> <a id="3530" class="Keyword">import</a> <a id="3537" href="group-theory.principal-group-actions.html" class="Module">group-theory.principal-group-actions</a> <a id="3574" class="Keyword">public</a>
-<a id="3581" class="Keyword">open</a> <a id="3586" class="Keyword">import</a> <a id="3593" href="group-theory.principal-torsors-concrete-groups.html" class="Module">group-theory.principal-torsors-concrete-groups</a> <a id="3640" class="Keyword">public</a>
-<a id="3647" class="Keyword">open</a> <a id="3652" class="Keyword">import</a> <a id="3659" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="3683" class="Keyword">public</a>
-<a id="3690" class="Keyword">open</a> <a id="3695" class="Keyword">import</a> <a id="3702" href="group-theory.sheargroups.html" class="Module">group-theory.sheargroups</a> <a id="3727" class="Keyword">public</a>
-<a id="3734" class="Keyword">open</a> <a id="3739" class="Keyword">import</a> <a id="3746" href="group-theory.shriek-concrete-group-actions.html" class="Module">group-theory.shriek-concrete-group-actions</a> <a id="3789" class="Keyword">public</a>
-<a id="3796" class="Keyword">open</a> <a id="3801" class="Keyword">import</a> <a id="3808" href="group-theory.stabilizer-groups.html" class="Module">group-theory.stabilizer-groups</a> <a id="3839" class="Keyword">public</a>
-<a id="3846" class="Keyword">open</a> <a id="3851" class="Keyword">import</a> <a id="3858" href="group-theory.stabilizer-groups-concrete-group-actions.html" class="Module">group-theory.stabilizer-groups-concrete-group-actions</a> <a id="3912" class="Keyword">public</a>
-<a id="3919" class="Keyword">open</a> <a id="3924" class="Keyword">import</a> <a id="3931" href="group-theory.subgroups.html" class="Module">group-theory.subgroups</a> <a id="3954" class="Keyword">public</a>
-<a id="3961" class="Keyword">open</a> <a id="3966" class="Keyword">import</a> <a id="3973" href="group-theory.subgroups-abelian-groups.html" class="Module">group-theory.subgroups-abelian-groups</a> <a id="4011" class="Keyword">public</a>
-<a id="4018" class="Keyword">open</a> <a id="4023" class="Keyword">import</a> <a id="4030" href="group-theory.subgroups-concrete-groups.html" class="Module">group-theory.subgroups-concrete-groups</a> <a id="4069" class="Keyword">public</a>
-<a id="4076" class="Keyword">open</a> <a id="4081" class="Keyword">import</a> <a id="4088" href="group-theory.subgroups-generated-by-subsets-groups.html" class="Module">group-theory.subgroups-generated-by-subsets-groups</a> <a id="4139" class="Keyword">public</a>
-<a id="4146" class="Keyword">open</a> <a id="4151" class="Keyword">import</a> <a id="4158" href="group-theory.subgroups-higher-groups.html" class="Module">group-theory.subgroups-higher-groups</a> <a id="4195" class="Keyword">public</a>
-<a id="4202" class="Keyword">open</a> <a id="4207" class="Keyword">import</a> <a id="4214" href="group-theory.substitution-functor-concrete-group-actions.html" class="Module">group-theory.substitution-functor-concrete-group-actions</a> <a id="4271" class="Keyword">public</a>
-<a id="4278" class="Keyword">open</a> <a id="4283" class="Keyword">import</a> <a id="4290" href="group-theory.substitution-functor-group-actions.html" class="Module">group-theory.substitution-functor-group-actions</a> <a id="4338" class="Keyword">public</a>
-<a id="4345" class="Keyword">open</a> <a id="4350" class="Keyword">import</a> <a id="4357" href="group-theory.symmetric-groups.html" class="Module">group-theory.symmetric-groups</a> <a id="4387" class="Keyword">public</a>
-<a id="4394" class="Keyword">open</a> <a id="4399" class="Keyword">import</a> <a id="4406" href="group-theory.symmetric-higher-groups.html" class="Module">group-theory.symmetric-higher-groups</a> <a id="4443" class="Keyword">public</a>
-<a id="4450" class="Keyword">open</a> <a id="4455" class="Keyword">import</a> <a id="4462" href="group-theory.torsors.html" class="Module">group-theory.torsors</a> <a id="4483" class="Keyword">public</a>
-<a id="4490" class="Keyword">open</a> <a id="4495" class="Keyword">import</a> <a id="4502" href="group-theory.transitive-concrete-group-actions.html" class="Module">group-theory.transitive-concrete-group-actions</a> <a id="4549" class="Keyword">public</a>
-<a id="4556" class="Keyword">open</a> <a id="4561" class="Keyword">import</a> <a id="4568" href="group-theory.transitive-group-actions.html" class="Module">group-theory.transitive-group-actions</a> <a id="4606" class="Keyword">public</a>
+<a id="2616" class="Keyword">open</a> <a id="2621" class="Keyword">import</a> <a id="2628" href="group-theory.mere-equivalences-concrete-group-actions.html" class="Module">group-theory.mere-equivalences-concrete-group-actions</a> <a id="2682" class="Keyword">public</a>
+<a id="2689" class="Keyword">open</a> <a id="2694" class="Keyword">import</a> <a id="2701" href="group-theory.mere-equivalences-group-actions.html" class="Module">group-theory.mere-equivalences-group-actions</a> <a id="2746" class="Keyword">public</a>
+<a id="2753" class="Keyword">open</a> <a id="2758" class="Keyword">import</a> <a id="2765" href="group-theory.monoid-actions.html" class="Module">group-theory.monoid-actions</a> <a id="2793" class="Keyword">public</a>
+<a id="2800" class="Keyword">open</a> <a id="2805" class="Keyword">import</a> <a id="2812" href="group-theory.monoids.html" class="Module">group-theory.monoids</a> <a id="2833" class="Keyword">public</a>
+<a id="2840" class="Keyword">open</a> <a id="2845" class="Keyword">import</a> <a id="2852" href="group-theory.monomorphisms-concrete-groups.html" class="Module">group-theory.monomorphisms-concrete-groups</a> <a id="2895" class="Keyword">public</a>
+<a id="2902" class="Keyword">open</a> <a id="2907" class="Keyword">import</a> <a id="2914" href="group-theory.monomorphisms-groups.html" class="Module">group-theory.monomorphisms-groups</a> <a id="2948" class="Keyword">public</a>
+<a id="2955" class="Keyword">open</a> <a id="2960" class="Keyword">import</a> <a id="2967" href="group-theory.normal-subgroups.html" class="Module">group-theory.normal-subgroups</a> <a id="2997" class="Keyword">public</a>
+<a id="3004" class="Keyword">open</a> <a id="3009" class="Keyword">import</a> <a id="3016" href="group-theory.normal-subgroups-concrete-groups.html" class="Module">group-theory.normal-subgroups-concrete-groups</a> <a id="3062" class="Keyword">public</a>
+<a id="3069" class="Keyword">open</a> <a id="3074" class="Keyword">import</a> <a id="3081" href="group-theory.orbit-stabilizer-theorem-concrete-groups.html" class="Module">group-theory.orbit-stabilizer-theorem-concrete-groups</a> <a id="3135" class="Keyword">public</a>
+<a id="3142" class="Keyword">open</a> <a id="3147" class="Keyword">import</a> <a id="3154" href="group-theory.orbits-monoid-actions.html" class="Module">group-theory.orbits-monoid-actions</a> <a id="3189" class="Keyword">public</a>
+<a id="3196" class="Keyword">open</a> <a id="3201" class="Keyword">import</a> <a id="3208" href="group-theory.orbits-concrete-group-actions.html" class="Module">group-theory.orbits-concrete-group-actions</a> <a id="3251" class="Keyword">public</a>
+<a id="3258" class="Keyword">open</a> <a id="3263" class="Keyword">import</a> <a id="3270" href="group-theory.orbits-group-actions.html" class="Module">group-theory.orbits-group-actions</a> <a id="3304" class="Keyword">public</a>
+<a id="3311" class="Keyword">open</a> <a id="3316" class="Keyword">import</a> <a id="3323" href="group-theory.orbits-higher-group-actions.html" class="Module">group-theory.orbits-higher-group-actions</a> <a id="3364" class="Keyword">public</a>
+<a id="3371" class="Keyword">open</a> <a id="3376" class="Keyword">import</a> <a id="3383" href="group-theory.orbits-monoid-actions.html" class="Module">group-theory.orbits-monoid-actions</a> <a id="3418" class="Keyword">public</a>
+<a id="3425" class="Keyword">open</a> <a id="3430" class="Keyword">import</a> <a id="3437" href="group-theory.precategory-of-group-actions.html" class="Module">group-theory.precategory-of-group-actions</a> <a id="3479" class="Keyword">public</a>
+<a id="3486" class="Keyword">open</a> <a id="3491" class="Keyword">import</a> <a id="3498" href="group-theory.precategory-of-groups.html" class="Module">group-theory.precategory-of-groups</a> <a id="3533" class="Keyword">public</a>
+<a id="3540" class="Keyword">open</a> <a id="3545" class="Keyword">import</a> <a id="3552" href="group-theory.precategory-of-semigroups.html" class="Module">group-theory.precategory-of-semigroups</a> <a id="3591" class="Keyword">public</a>
+<a id="3598" class="Keyword">open</a> <a id="3603" class="Keyword">import</a> <a id="3610" href="group-theory.principal-group-actions.html" class="Module">group-theory.principal-group-actions</a> <a id="3647" class="Keyword">public</a>
+<a id="3654" class="Keyword">open</a> <a id="3659" class="Keyword">import</a> <a id="3666" href="group-theory.principal-torsors-concrete-groups.html" class="Module">group-theory.principal-torsors-concrete-groups</a> <a id="3713" class="Keyword">public</a>
+<a id="3720" class="Keyword">open</a> <a id="3725" class="Keyword">import</a> <a id="3732" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="3756" class="Keyword">public</a>
+<a id="3763" class="Keyword">open</a> <a id="3768" class="Keyword">import</a> <a id="3775" href="group-theory.sheargroups.html" class="Module">group-theory.sheargroups</a> <a id="3800" class="Keyword">public</a>
+<a id="3807" class="Keyword">open</a> <a id="3812" class="Keyword">import</a> <a id="3819" href="group-theory.shriek-concrete-group-actions.html" class="Module">group-theory.shriek-concrete-group-actions</a> <a id="3862" class="Keyword">public</a>
+<a id="3869" class="Keyword">open</a> <a id="3874" class="Keyword">import</a> <a id="3881" href="group-theory.stabilizer-groups.html" class="Module">group-theory.stabilizer-groups</a> <a id="3912" class="Keyword">public</a>
+<a id="3919" class="Keyword">open</a> <a id="3924" class="Keyword">import</a> <a id="3931" href="group-theory.stabilizer-groups-concrete-group-actions.html" class="Module">group-theory.stabilizer-groups-concrete-group-actions</a> <a id="3985" class="Keyword">public</a>
+<a id="3992" class="Keyword">open</a> <a id="3997" class="Keyword">import</a> <a id="4004" href="group-theory.subgroups.html" class="Module">group-theory.subgroups</a> <a id="4027" class="Keyword">public</a>
+<a id="4034" class="Keyword">open</a> <a id="4039" class="Keyword">import</a> <a id="4046" href="group-theory.subgroups-abelian-groups.html" class="Module">group-theory.subgroups-abelian-groups</a> <a id="4084" class="Keyword">public</a>
+<a id="4091" class="Keyword">open</a> <a id="4096" class="Keyword">import</a> <a id="4103" href="group-theory.subgroups-concrete-groups.html" class="Module">group-theory.subgroups-concrete-groups</a> <a id="4142" class="Keyword">public</a>
+<a id="4149" class="Keyword">open</a> <a id="4154" class="Keyword">import</a> <a id="4161" href="group-theory.subgroups-generated-by-subsets-groups.html" class="Module">group-theory.subgroups-generated-by-subsets-groups</a> <a id="4212" class="Keyword">public</a>
+<a id="4219" class="Keyword">open</a> <a id="4224" class="Keyword">import</a> <a id="4231" href="group-theory.subgroups-higher-groups.html" class="Module">group-theory.subgroups-higher-groups</a> <a id="4268" class="Keyword">public</a>
+<a id="4275" class="Keyword">open</a> <a id="4280" class="Keyword">import</a> <a id="4287" href="group-theory.substitution-functor-concrete-group-actions.html" class="Module">group-theory.substitution-functor-concrete-group-actions</a> <a id="4344" class="Keyword">public</a>
+<a id="4351" class="Keyword">open</a> <a id="4356" class="Keyword">import</a> <a id="4363" href="group-theory.substitution-functor-group-actions.html" class="Module">group-theory.substitution-functor-group-actions</a> <a id="4411" class="Keyword">public</a>
+<a id="4418" class="Keyword">open</a> <a id="4423" class="Keyword">import</a> <a id="4430" href="group-theory.symmetric-groups.html" class="Module">group-theory.symmetric-groups</a> <a id="4460" class="Keyword">public</a>
+<a id="4467" class="Keyword">open</a> <a id="4472" class="Keyword">import</a> <a id="4479" href="group-theory.symmetric-higher-groups.html" class="Module">group-theory.symmetric-higher-groups</a> <a id="4516" class="Keyword">public</a>
+<a id="4523" class="Keyword">open</a> <a id="4528" class="Keyword">import</a> <a id="4535" href="group-theory.torsors.html" class="Module">group-theory.torsors</a> <a id="4556" class="Keyword">public</a>
+<a id="4563" class="Keyword">open</a> <a id="4568" class="Keyword">import</a> <a id="4575" href="group-theory.transitive-concrete-group-actions.html" class="Module">group-theory.transitive-concrete-group-actions</a> <a id="4622" class="Keyword">public</a>
+<a id="4629" class="Keyword">open</a> <a id="4634" class="Keyword">import</a> <a id="4641" href="group-theory.transitive-group-actions.html" class="Module">group-theory.transitive-group-actions</a> <a id="4679" class="Keyword">public</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-17)(ac7164a) Merge pull request #263 from EgbertRijke/group-theory by noreply
+(2022-07-17)(adc6b65) Merge pull request #264 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

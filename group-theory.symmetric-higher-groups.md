@@ -40,7 +40,7 @@ The symmetric higher group of a type `X` is the connected component of the unive
       <a id="1020" href="group-theory.symmetric-higher-groups.html#727" class="Function">shape-symmetric-∞-Group</a>
 
   <a id="1047" href="group-theory.symmetric-higher-groups.html#1047" class="Function">is-0-connected-classifying-type-symmetric-∞-Group</a> <a id="1097" class="Symbol">:</a>
-    <a id="1103" href="foundation.0-connected-types.html#1755" class="Function">is-0-connected</a> <a id="1118" href="group-theory.symmetric-higher-groups.html#621" class="Function">classifying-type-symmetric-∞-Group</a>
+    <a id="1103" href="foundation.0-connected-types.html#1858" class="Function">is-0-connected</a> <a id="1118" href="group-theory.symmetric-higher-groups.html#621" class="Function">classifying-type-symmetric-∞-Group</a>
   <a id="1155" href="group-theory.symmetric-higher-groups.html#1047" class="Function">is-0-connected-classifying-type-symmetric-∞-Group</a> <a id="1205" class="Symbol">=</a>
     <a id="1211" href="foundation.connected-components-universes.html#6382" class="Function">is-0-connected-component-UU</a> <a id="1239" href="group-theory.symmetric-higher-groups.html#600" class="Bound">X</a>
   

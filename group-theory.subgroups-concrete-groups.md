@@ -108,7 +108,7 @@ A subgroup of a concrete group `G` is a pointed transitive `G`-set.
     <a id="4059" href="group-theory.subgroups-concrete-groups.html#3612" class="Function">shape-subgroup-Concrete-Group</a>
 
   <a id="4092" href="group-theory.subgroups-concrete-groups.html#4092" class="Function">is-connected-classifying-type-subgroup-Concrete-Group</a> <a id="4146" class="Symbol">:</a>
-    <a id="4152" href="foundation.0-connected-types.html#1755" class="Function">is-0-connected</a> <a id="4167" href="group-theory.subgroups-concrete-groups.html#3323" class="Function">classifying-type-subgroup-Concrete-Group</a>
+    <a id="4152" href="foundation.0-connected-types.html#1858" class="Function">is-0-connected</a> <a id="4167" href="group-theory.subgroups-concrete-groups.html#3323" class="Function">classifying-type-subgroup-Concrete-Group</a>
   <a id="4210" href="group-theory.subgroups-concrete-groups.html#4092" class="Function">is-connected-classifying-type-subgroup-Concrete-Group</a> <a id="4264" class="Symbol">=</a>
     <a id="4270" href="group-theory.subgroups-concrete-groups.html#2370" class="Function">is-transitive-action-subgroup-Concrete-Group</a>
 
