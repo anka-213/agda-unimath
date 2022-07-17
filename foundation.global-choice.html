@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/global-choice.lagda.md.</p>
-<p>Version of Sunday, July 17, 2022, 10:42 AM</p>
+<p>Version of Sunday, July 17, 2022, 01:52 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -43,7 +43,7 @@
   <a id="391" class="Symbol">(</a> <a id="393" href="foundation.hilberts-epsilon-operators.html#675" class="Function">ε-operator-Hilbert</a><a id="411" class="Symbol">)</a>
 <a id="413" class="Keyword">open</a> <a id="418" class="Keyword">import</a> <a id="425" href="foundation.negation.html" class="Module">foundation.negation</a> <a id="445" class="Keyword">using</a> <a id="451" class="Symbol">(</a><a id="452" href="foundation-core.negation.html#465" class="Function">¬</a><a id="453" class="Symbol">)</a>
 <a id="455" class="Keyword">open</a> <a id="460" class="Keyword">import</a> <a id="467" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="504" class="Keyword">using</a>
-  <a id="512" class="Symbol">(</a> <a id="514" href="foundation.propositional-truncations.html#2048" class="Function">type-trunc-Prop</a><a id="529" class="Symbol">;</a> <a id="531" href="foundation.propositional-truncations.html#5611" class="Function">apply-universal-property-trunc-Prop</a><a id="566" class="Symbol">)</a>
+  <a id="512" class="Symbol">(</a> <a id="514" href="foundation.propositional-truncations.html#2206" class="Function">type-trunc-Prop</a><a id="529" class="Symbol">;</a> <a id="531" href="foundation.propositional-truncations.html#5769" class="Function">apply-universal-property-trunc-Prop</a><a id="566" class="Symbol">)</a>
 <a id="568" class="Keyword">open</a> <a id="573" class="Keyword">import</a> <a id="580" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="607" class="Keyword">using</a> <a id="613" class="Symbol">(</a><a id="614" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="619" class="Symbol">;</a> <a id="621" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="623" class="Symbol">;</a> <a id="625" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="629" class="Symbol">)</a>
 
 <a id="632" class="Keyword">open</a> <a id="637" class="Keyword">import</a> <a id="644" href="univalent-combinatorics.2-element-types.html" class="Module">univalent-combinatorics.2-element-types</a> <a id="684" class="Keyword">using</a>
@@ -62,7 +62,7 @@
 <h3 id="the-global-choice-principle-is-inconsistent-in-agda-unimath">The global choice principle is inconsistent in <code>agda-unimath</code></h3>
 <pre class="Agda"><a id="1254" class="Keyword">abstract</a>
   <a id="no-global-choice"></a><a id="1265" href="foundation.global-choice.html#1265" class="Function">no-global-choice</a> <a id="1282" class="Symbol">:</a>
-    <a id="1288" class="Symbol">{</a><a id="1289" href="foundation.global-choice.html#1289" class="Bound">l</a> <a id="1291" class="Symbol">:</a> <a id="1293" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1298" class="Symbol">}</a> <a id="1300" class="Symbol">→</a> <a id="1302" href="foundation-core.negation.html#465" class="Function">¬</a> <a id="1304" class="Symbol">((</a><a id="1306" href="foundation.global-choice.html#1306" class="Bound">X</a> <a id="1308" class="Symbol">:</a> <a id="1310" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1313" href="foundation.global-choice.html#1289" class="Bound">l</a><a id="1314" class="Symbol">)</a> <a id="1316" class="Symbol">→</a> <a id="1318" href="foundation.propositional-truncations.html#2048" class="Function">type-trunc-Prop</a> <a id="1334" href="foundation.global-choice.html#1306" class="Bound">X</a> <a id="1336" class="Symbol">→</a> <a id="1338" href="foundation.global-choice.html#1306" class="Bound">X</a><a id="1339" class="Symbol">)</a>
+    <a id="1288" class="Symbol">{</a><a id="1289" href="foundation.global-choice.html#1289" class="Bound">l</a> <a id="1291" class="Symbol">:</a> <a id="1293" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1298" class="Symbol">}</a> <a id="1300" class="Symbol">→</a> <a id="1302" href="foundation-core.negation.html#465" class="Function">¬</a> <a id="1304" class="Symbol">((</a><a id="1306" href="foundation.global-choice.html#1306" class="Bound">X</a> <a id="1308" class="Symbol">:</a> <a id="1310" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1313" href="foundation.global-choice.html#1289" class="Bound">l</a><a id="1314" class="Symbol">)</a> <a id="1316" class="Symbol">→</a> <a id="1318" href="foundation.propositional-truncations.html#2206" class="Function">type-trunc-Prop</a> <a id="1334" href="foundation.global-choice.html#1306" class="Bound">X</a> <a id="1336" class="Symbol">→</a> <a id="1338" href="foundation.global-choice.html#1306" class="Bound">X</a><a id="1339" class="Symbol">)</a>
   <a id="1343" href="foundation.global-choice.html#1265" class="Function">no-global-choice</a> <a id="1360" href="foundation.global-choice.html#1360" class="Bound">f</a> <a id="1362" class="Symbol">=</a>
     <a id="1368" href="univalent-combinatorics.2-element-types.html#19324" class="Function">no-section-type-UU-Fin-Level-two-ℕ</a>
       <a id="1409" class="Symbol">(</a> <a id="1411" class="Symbol">λ</a> <a id="1413" href="foundation.global-choice.html#1413" class="Bound">X</a> <a id="1415" class="Symbol">→</a>
@@ -70,7 +70,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-17)(f2a5bf5) Merge pull request #262 from EgbertRijke/group-theory by noreply
+(2022-07-17)(ac7164a) Merge pull request #263 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

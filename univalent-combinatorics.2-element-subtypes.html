@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/2-element-subtypes.lagda.md.</p>
-<p>Version of Sunday, July 17, 2022, 10:43 AM</p>
+<p>Version of Sunday, July 17, 2022, 01:53 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -58,14 +58,14 @@
 <a id="1318" class="Keyword">open</a> <a id="1323" class="Keyword">import</a> <a id="1330" href="foundation.mere-equivalences.html" class="Module">foundation.mere-equivalences</a> <a id="1359" class="Keyword">using</a> <a id="1365" class="Symbol">(</a><a id="1366" href="foundation.mere-equivalences.html#2257" class="Function">transitive-mere-equiv</a><a id="1387" class="Symbol">)</a>
 <a id="1389" class="Keyword">open</a> <a id="1394" class="Keyword">import</a> <a id="1401" href="foundation.negation.html" class="Module">foundation.negation</a> <a id="1421" class="Keyword">using</a> <a id="1427" class="Symbol">(</a><a id="1428" href="foundation-core.negation.html#465" class="Function">¬</a><a id="1429" class="Symbol">)</a>
 <a id="1431" class="Keyword">open</a> <a id="1436" class="Keyword">import</a> <a id="1443" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="1480" class="Keyword">using</a>
-  <a id="1488" class="Symbol">(</a> <a id="1490" href="foundation.propositional-truncations.html#2132" class="Function">unit-trunc-Prop</a><a id="1505" class="Symbol">;</a> <a id="1507" href="foundation.propositional-truncations.html#2048" class="Function">type-trunc-Prop</a><a id="1522" class="Symbol">)</a>
+  <a id="1488" class="Symbol">(</a> <a id="1490" href="foundation.propositional-truncations.html#2290" class="Function">unit-trunc-Prop</a><a id="1505" class="Symbol">;</a> <a id="1507" href="foundation.propositional-truncations.html#2206" class="Function">type-trunc-Prop</a><a id="1522" class="Symbol">)</a>
 <a id="1524" class="Keyword">open</a> <a id="1529" class="Keyword">import</a> <a id="1536" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="1560" class="Keyword">using</a>
   <a id="1568" class="Symbol">(</a> <a id="1570" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a><a id="1579" class="Symbol">;</a> <a id="1581" href="foundation-core.propositions.html#1309" class="Function">is-prop</a><a id="1588" class="Symbol">;</a> <a id="1590" href="foundation-core.propositions.html#1562" class="Function">is-prop-type-Prop</a><a id="1607" class="Symbol">)</a>
 <a id="1609" class="Keyword">open</a> <a id="1614" class="Keyword">import</a> <a id="1621" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="1637" class="Keyword">using</a> <a id="1643" class="Symbol">(</a><a id="1644" href="foundation-core.sets.html#1190" class="Function">UU-Set</a><a id="1650" class="Symbol">;</a> <a id="1652" href="foundation-core.sets.html#1304" class="Function">type-Set</a><a id="1660" class="Symbol">;</a> <a id="1662" href="foundation-core.sets.html#1355" class="Function">is-set-type-Set</a><a id="1677" class="Symbol">)</a>
 <a id="1679" class="Keyword">open</a> <a id="1684" class="Keyword">import</a> <a id="1691" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="1711" class="Keyword">using</a>
   <a id="1719" class="Symbol">(</a> <a id="1721" href="foundation-core.subtypes.html#2211" class="Function">subtype</a><a id="1728" class="Symbol">;</a> <a id="1730" href="foundation-core.subtypes.html#2555" class="Function">type-subtype</a><a id="1742" class="Symbol">;</a> <a id="1744" href="foundation-core.subtypes.html#2621" class="Function">inclusion-subtype</a><a id="1761" class="Symbol">;</a> <a id="1763" href="foundation-core.subtypes.html#3701" class="Function">is-emb-inclusion-subtype</a><a id="1787" class="Symbol">;</a>
     <a id="1793" href="foundation.subtypes.html#1123" class="Function">is-injective-inclusion-subtype</a><a id="1823" class="Symbol">;</a> <a id="1825" href="foundation-core.subtypes.html#6434" class="Function">equiv-subtype-equiv</a><a id="1844" class="Symbol">)</a>
-<a id="1846" class="Keyword">open</a> <a id="1851" class="Keyword">import</a> <a id="1858" href="foundation.surjective-maps.html" class="Module">foundation.surjective-maps</a> <a id="1885" class="Keyword">using</a> <a id="1891" class="Symbol">(</a><a id="1892" href="foundation.surjective-maps.html#1919" class="Function">is-surjective</a><a id="1905" class="Symbol">)</a>
+<a id="1846" class="Keyword">open</a> <a id="1851" class="Keyword">import</a> <a id="1858" href="foundation.surjective-maps.html" class="Module">foundation.surjective-maps</a> <a id="1885" class="Keyword">using</a> <a id="1891" class="Symbol">(</a><a id="1892" href="foundation.surjective-maps.html#1938" class="Function">is-surjective</a><a id="1905" class="Symbol">)</a>
 <a id="1907" class="Keyword">open</a> <a id="1912" class="Keyword">import</a> <a id="1919" href="foundation.type-arithmetic-coproduct-types.html" class="Module">foundation.type-arithmetic-coproduct-types</a> <a id="1962" class="Keyword">using</a>
   <a id="1970" class="Symbol">(</a> <a id="1972" href="foundation.type-arithmetic-coproduct-types.html#7225" class="Function">left-distributive-Σ-coprod</a><a id="1998" class="Symbol">)</a>
 <a id="2000" class="Keyword">open</a> <a id="2005" class="Keyword">import</a> <a id="2012" href="foundation.unit-type.html" class="Module">foundation.unit-type</a> <a id="2033" class="Keyword">using</a> <a id="2039" class="Symbol">(</a><a id="2040" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="2044" class="Symbol">;</a> <a id="2046" href="foundation.unit-type.html#2024" class="Function">is-contr-unit</a><a id="2059" class="Symbol">)</a>
@@ -127,7 +127,7 @@
   <a id="4323" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="4327" href="univalent-combinatorics.2-element-subtypes.html#4261" class="Function">2-element-type-2-Element-Subtype</a> <a id="4360" class="Symbol">=</a> <a id="4362" href="univalent-combinatorics.2-element-subtypes.html#3513" class="Function">type-2-Element-Subtype</a>
   <a id="4387" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="4391" href="univalent-combinatorics.2-element-subtypes.html#4261" class="Function">2-element-type-2-Element-Subtype</a> <a id="4424" class="Symbol">=</a> <a id="4426" href="univalent-combinatorics.2-element-subtypes.html#4122" class="Function">has-two-elements-type-2-Element-Subtype</a>
 
-  <a id="4469" href="univalent-combinatorics.2-element-subtypes.html#4469" class="Function">is-inhabited-type-2-Element-Subtype</a> <a id="4505" class="Symbol">:</a> <a id="4507" href="foundation.propositional-truncations.html#2048" class="Function">type-trunc-Prop</a> <a id="4523" href="univalent-combinatorics.2-element-subtypes.html#3513" class="Function">type-2-Element-Subtype</a>
+  <a id="4469" href="univalent-combinatorics.2-element-subtypes.html#4469" class="Function">is-inhabited-type-2-Element-Subtype</a> <a id="4505" class="Symbol">:</a> <a id="4507" href="foundation.propositional-truncations.html#2206" class="Function">type-trunc-Prop</a> <a id="4523" href="univalent-combinatorics.2-element-subtypes.html#3513" class="Function">type-2-Element-Subtype</a>
   <a id="4548" href="univalent-combinatorics.2-element-subtypes.html#4469" class="Function">is-inhabited-type-2-Element-Subtype</a> <a id="4584" class="Symbol">=</a>
     <a id="4590" href="univalent-combinatorics.2-element-types.html#5996" class="Function">is-inhabited-2-Element-Type</a> <a id="4618" href="univalent-combinatorics.2-element-subtypes.html#4261" class="Function">2-element-type-2-Element-Subtype</a>
 </pre>
@@ -173,7 +173,7 @@
   <a id="6014" href="univalent-combinatorics.2-element-subtypes.html#6014" class="Function">has-two-elements-type-standard-2-Element-Subtype</a> <a id="6063" class="Symbol">:</a>
     <a id="6069" href="univalent-combinatorics.2-element-types.html#4408" class="Function">has-two-elements</a> <a id="6086" href="univalent-combinatorics.2-element-subtypes.html#5483" class="Function">type-standard-2-Element-Subtype</a>
   <a id="6120" href="univalent-combinatorics.2-element-subtypes.html#6014" class="Function">has-two-elements-type-standard-2-Element-Subtype</a> <a id="6169" class="Symbol">=</a>
-    <a id="6175" href="foundation.propositional-truncations.html#2132" class="Function">unit-trunc-Prop</a> <a id="6191" href="univalent-combinatorics.2-element-subtypes.html#5613" class="Function">equiv-type-standard-2-Element-Subtype</a>
+    <a id="6175" href="foundation.propositional-truncations.html#2290" class="Function">unit-trunc-Prop</a> <a id="6191" href="univalent-combinatorics.2-element-subtypes.html#5613" class="Function">equiv-type-standard-2-Element-Subtype</a>
 </pre>
 <h3 id="morphisms-of-2-element-subtypes">Morphisms of 2-element-subtypes</h3>
 <p>A moprhism of 2-element subtypes <code>P</code> and <code>Q</code> is just a family of maps <code>P x → Q x</code>.</p>
@@ -238,7 +238,7 @@ module _
 <a id="8437" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="8441" class="Symbol">(</a><a id="8442" href="univalent-combinatorics.2-element-subtypes.html#8219" class="Function">precomp-equiv-2-Element-Subtype</a> <a id="8474" href="univalent-combinatorics.2-element-subtypes.html#8474" class="Bound">e</a> <a id="8476" class="Symbol">(</a><a id="8477" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="8482" href="univalent-combinatorics.2-element-subtypes.html#8482" class="Bound">P</a> <a id="8484" href="univalent-combinatorics.2-element-subtypes.html#8484" class="Bound">H</a><a id="8485" class="Symbol">))</a> <a id="8488" class="Symbol">=</a>
   <a id="8492" href="foundation.mere-equivalences.html#2257" class="Function">transitive-mere-equiv</a>
     <a id="8518" class="Symbol">(</a> <a id="8520" href="univalent-combinatorics.2-element-subtypes.html#8484" class="Bound">H</a><a id="8521" class="Symbol">)</a>
-    <a id="8527" class="Symbol">(</a> <a id="8529" href="foundation.propositional-truncations.html#2132" class="Function">unit-trunc-Prop</a>
+    <a id="8527" class="Symbol">(</a> <a id="8529" href="foundation.propositional-truncations.html#2290" class="Function">unit-trunc-Prop</a>
       <a id="8551" class="Symbol">(</a> <a id="8553" href="foundation-core.subtypes.html#6434" class="Function">equiv-subtype-equiv</a>
         <a id="8581" class="Symbol">(</a> <a id="8583" href="univalent-combinatorics.2-element-subtypes.html#8474" class="Bound">e</a><a id="8584" class="Symbol">)</a>
         <a id="8594" class="Symbol">(</a> <a id="8596" href="univalent-combinatorics.2-element-subtypes.html#8482" class="Bound">P</a><a id="8597" class="Symbol">)</a>
@@ -289,7 +289,7 @@ module _
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-17)(f2a5bf5) Merge pull request #262 from EgbertRijke/group-theory by noreply
+(2022-07-17)(ac7164a) Merge pull request #263 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
