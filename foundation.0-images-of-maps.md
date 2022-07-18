@@ -1,0 +1,32 @@
+---
+title: 0-Images of maps
+---
+
+<pre class="Agda"><a id="42" class="Keyword">module</a> <a id="49" href="foundation.0-images-of-maps.html" class="Module">foundation.0-images-of-maps</a> <a id="77" class="Keyword">where</a>
+
+<a id="84" class="Keyword">open</a> <a id="89" class="Keyword">import</a> <a id="96" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="128" class="Keyword">open</a> <a id="133" class="Keyword">import</a> <a id="140" href="foundation.fibers-of-maps.html" class="Module">foundation.fibers-of-maps</a>
+<a id="166" class="Keyword">open</a> <a id="171" class="Keyword">import</a> <a id="178" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="204" class="Keyword">open</a> <a id="209" class="Keyword">import</a> <a id="216" href="foundation.set-truncations.html" class="Module">foundation.set-truncations</a>
+<a id="243" class="Keyword">open</a> <a id="248" class="Keyword">import</a> <a id="255" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+</pre>
+## Idea
+
+The 0-image of a map `f : A → B` is the type `0-im f := Σ (b : B), type-trunc-Set (fib f b)`. The map `A → 0-im f` is 0-connected and the map `0-im f → B` is `0`-truncated.
+
+## Definition
+
+<pre class="Agda"><a id="493" class="Keyword">module</a> <a id="500" href="foundation.0-images-of-maps.html#500" class="Module">_</a>
+  <a id="504" class="Symbol">{</a><a id="505" href="foundation.0-images-of-maps.html#505" class="Bound">l1</a> <a id="508" href="foundation.0-images-of-maps.html#508" class="Bound">l2</a> <a id="511" class="Symbol">:</a> <a id="513" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="518" class="Symbol">}</a> <a id="520" class="Symbol">{</a><a id="521" href="foundation.0-images-of-maps.html#521" class="Bound">A</a> <a id="523" class="Symbol">:</a> <a id="525" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="528" href="foundation.0-images-of-maps.html#505" class="Bound">l1</a><a id="530" class="Symbol">}</a> <a id="532" class="Symbol">{</a><a id="533" href="foundation.0-images-of-maps.html#533" class="Bound">B</a> <a id="535" class="Symbol">:</a> <a id="537" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="540" href="foundation.0-images-of-maps.html#508" class="Bound">l2</a><a id="542" class="Symbol">}</a> <a id="544" class="Symbol">(</a><a id="545" href="foundation.0-images-of-maps.html#545" class="Bound">f</a> <a id="547" class="Symbol">:</a> <a id="549" href="foundation.0-images-of-maps.html#521" class="Bound">A</a> <a id="551" class="Symbol">→</a> <a id="553" href="foundation.0-images-of-maps.html#533" class="Bound">B</a><a id="554" class="Symbol">)</a>
+  <a id="558" class="Keyword">where</a>
+  
+  <a id="569" href="foundation.0-images-of-maps.html#569" class="Function">0-im</a> <a id="574" class="Symbol">:</a> <a id="576" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="579" class="Symbol">(</a><a id="580" href="foundation.0-images-of-maps.html#505" class="Bound">l1</a> <a id="583" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="585" href="foundation.0-images-of-maps.html#508" class="Bound">l2</a><a id="587" class="Symbol">)</a>
+  <a id="591" href="foundation.0-images-of-maps.html#569" class="Function">0-im</a> <a id="596" class="Symbol">=</a> <a id="598" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="600" href="foundation.0-images-of-maps.html#533" class="Bound">B</a> <a id="602" class="Symbol">(λ</a> <a id="605" href="foundation.0-images-of-maps.html#605" class="Bound">b</a> <a id="607" class="Symbol">→</a> <a id="609" href="foundation.set-truncations.html#3998" class="Function">type-trunc-Set</a> <a id="624" class="Symbol">(</a><a id="625" href="foundation-core.fibers-of-maps.html#942" class="Function">fib</a> <a id="629" href="foundation.0-images-of-maps.html#545" class="Bound">f</a> <a id="631" href="foundation.0-images-of-maps.html#605" class="Bound">b</a><a id="632" class="Symbol">))</a>
+
+  <a id="638" href="foundation.0-images-of-maps.html#638" class="Function">unit-0-im</a> <a id="648" class="Symbol">:</a> <a id="650" href="foundation.0-images-of-maps.html#521" class="Bound">A</a> <a id="652" class="Symbol">→</a> <a id="654" href="foundation.0-images-of-maps.html#569" class="Function">0-im</a>
+  <a id="661" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="665" class="Symbol">(</a><a id="666" href="foundation.0-images-of-maps.html#638" class="Function">unit-0-im</a> <a id="676" href="foundation.0-images-of-maps.html#676" class="Bound">x</a><a id="677" class="Symbol">)</a> <a id="679" class="Symbol">=</a> <a id="681" href="foundation.0-images-of-maps.html#545" class="Bound">f</a> <a id="683" href="foundation.0-images-of-maps.html#676" class="Bound">x</a>
+  <a id="687" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="691" class="Symbol">(</a><a id="692" href="foundation.0-images-of-maps.html#638" class="Function">unit-0-im</a> <a id="702" href="foundation.0-images-of-maps.html#702" class="Bound">x</a><a id="703" class="Symbol">)</a> <a id="705" class="Symbol">=</a> <a id="707" href="foundation.set-truncations.html#4265" class="Function">unit-trunc-Set</a> <a id="722" class="Symbol">(</a><a id="723" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="728" href="foundation.0-images-of-maps.html#702" class="Bound">x</a> <a id="730" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="734" class="Symbol">)</a>
+
+  <a id="739" href="foundation.0-images-of-maps.html#739" class="Function">projection-0-im</a> <a id="755" class="Symbol">:</a> <a id="757" href="foundation.0-images-of-maps.html#569" class="Function">0-im</a> <a id="762" class="Symbol">→</a> <a id="764" href="foundation.0-images-of-maps.html#533" class="Bound">B</a>
+  <a id="768" href="foundation.0-images-of-maps.html#739" class="Function">projection-0-im</a> <a id="784" class="Symbol">=</a> <a id="786" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a>
+</pre>
