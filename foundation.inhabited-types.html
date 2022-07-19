@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/inhabited-types.lagda.md.</p>
-<p>Version of Monday, July 18, 2022, 09:17 PM</p>
+<p>Version of Tuesday, July 19, 2022, 06:26 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -44,7 +44,7 @@
 <p>Inhabited types are types equipped with an element of its propositional truncation.</p>
 <h2 id="definition">Definition</h2>
 <pre class="Agda"><a id="is-inhabited-Prop"></a><a id="415" href="foundation.inhabited-types.html#415" class="Function">is-inhabited-Prop</a> <a id="433" class="Symbol">:</a> <a id="435" class="Symbol">{</a><a id="436" href="foundation.inhabited-types.html#436" class="Bound">l</a> <a id="438" class="Symbol">:</a> <a id="440" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="445" class="Symbol">}</a> <a id="447" class="Symbol">→</a> <a id="449" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="452" href="foundation.inhabited-types.html#436" class="Bound">l</a> <a id="454" class="Symbol">→</a> <a id="456" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a> <a id="464" href="foundation.inhabited-types.html#436" class="Bound">l</a>
-<a id="466" href="foundation.inhabited-types.html#415" class="Function">is-inhabited-Prop</a> <a id="484" href="foundation.inhabited-types.html#484" class="Bound">X</a> <a id="486" class="Symbol">=</a> <a id="488" href="foundation.propositional-truncations.html#2704" class="Function">trunc-Prop</a> <a id="499" href="foundation.inhabited-types.html#484" class="Bound">X</a>
+<a id="466" href="foundation.inhabited-types.html#415" class="Function">is-inhabited-Prop</a> <a id="484" href="foundation.inhabited-types.html#484" class="Bound">X</a> <a id="486" class="Symbol">=</a> <a id="488" href="foundation.propositional-truncations.html#2707" class="Function">trunc-Prop</a> <a id="499" href="foundation.inhabited-types.html#484" class="Bound">X</a>
 
 <a id="is-inhabited"></a><a id="502" href="foundation.inhabited-types.html#502" class="Function">is-inhabited</a> <a id="515" class="Symbol">:</a> <a id="517" class="Symbol">{</a><a id="518" href="foundation.inhabited-types.html#518" class="Bound">l</a> <a id="520" class="Symbol">:</a> <a id="522" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="527" class="Symbol">}</a> <a id="529" class="Symbol">→</a> <a id="531" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="534" href="foundation.inhabited-types.html#518" class="Bound">l</a> <a id="536" class="Symbol">→</a> <a id="538" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="541" href="foundation.inhabited-types.html#518" class="Bound">l</a>
 <a id="543" href="foundation.inhabited-types.html#502" class="Function">is-inhabited</a> <a id="556" href="foundation.inhabited-types.html#556" class="Bound">X</a> <a id="558" class="Symbol">=</a> <a id="560" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a> <a id="570" class="Symbol">(</a><a id="571" href="foundation.inhabited-types.html#415" class="Function">is-inhabited-Prop</a> <a id="589" href="foundation.inhabited-types.html#556" class="Bound">X</a><a id="590" class="Symbol">)</a>
@@ -59,12 +59,12 @@
   <a id="735" href="foundation.inhabited-types.html#735" class="Function">type-Inhabited-Type</a> <a id="755" class="Symbol">:</a> <a id="757" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="760" href="foundation.inhabited-types.html#690" class="Bound">l</a>
   <a id="764" href="foundation.inhabited-types.html#735" class="Function">type-Inhabited-Type</a> <a id="784" class="Symbol">=</a> <a id="786" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="790" href="foundation.inhabited-types.html#702" class="Bound">X</a>
 
-  <a id="795" href="foundation.inhabited-types.html#795" class="Function">is-inhabited-type-Inhabited-Type</a> <a id="828" class="Symbol">:</a> <a id="830" href="foundation.propositional-truncations.html#2206" class="Function">type-trunc-Prop</a> <a id="846" href="foundation.inhabited-types.html#735" class="Function">type-Inhabited-Type</a>
+  <a id="795" href="foundation.inhabited-types.html#795" class="Function">is-inhabited-type-Inhabited-Type</a> <a id="828" class="Symbol">:</a> <a id="830" href="foundation.propositional-truncations.html#2209" class="Function">type-trunc-Prop</a> <a id="846" href="foundation.inhabited-types.html#735" class="Function">type-Inhabited-Type</a>
   <a id="868" href="foundation.inhabited-types.html#795" class="Function">is-inhabited-type-Inhabited-Type</a> <a id="901" class="Symbol">=</a> <a id="903" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="907" href="foundation.inhabited-types.html#702" class="Bound">X</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-18)(efc60fe) Merge pull request #265 from EgbertRijke/group-theory by noreply
+(2022-07-19)(55ccccf) Merge pull request #266 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

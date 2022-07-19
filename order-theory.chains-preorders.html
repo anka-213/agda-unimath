@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/order-theory/chains-preorders.lagda.md.</p>
-<p>Version of Monday, July 18, 2022, 09:18 PM</p>
+<p>Version of Tuesday, July 19, 2022, 06:27 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -36,7 +36,7 @@
 <a id="119" class="Keyword">open</a> <a id="124" class="Keyword">import</a> <a id="131" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="163" class="Keyword">using</a> <a id="169" class="Symbol">(</a><a id="170" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="171" class="Symbol">;</a> <a id="173" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="177" class="Symbol">;</a> <a id="179" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="182" class="Symbol">;</a> <a id="184" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="187" class="Symbol">)</a>
 <a id="189" class="Keyword">open</a> <a id="194" class="Keyword">import</a> <a id="201" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="225" class="Keyword">using</a>
   <a id="233" class="Symbol">(</a> <a id="235" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a><a id="242" class="Symbol">;</a> <a id="244" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a><a id="253" class="Symbol">;</a> <a id="255" href="foundation-core.propositions.html#1309" class="Function">is-prop</a><a id="262" class="Symbol">;</a> <a id="264" href="foundation-core.propositions.html#1562" class="Function">is-prop-type-Prop</a><a id="281" class="Symbol">)</a>
-<a id="283" class="Keyword">open</a> <a id="288" class="Keyword">import</a> <a id="295" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="315" class="Keyword">using</a> <a id="321" class="Symbol">(</a><a id="322" href="foundation-core.subtypes.html#2555" class="Function">type-subtype</a><a id="334" class="Symbol">)</a>
+<a id="283" class="Keyword">open</a> <a id="288" class="Keyword">import</a> <a id="295" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="315" class="Keyword">using</a> <a id="321" class="Symbol">(</a><a id="322" href="foundation-core.subtypes.html#2609" class="Function">type-subtype</a><a id="334" class="Symbol">)</a>
 <a id="336" class="Keyword">open</a> <a id="341" class="Keyword">import</a> <a id="348" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="375" class="Keyword">using</a> <a id="381" class="Symbol">(</a><a id="382" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="387" class="Symbol">;</a> <a id="389" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="391" class="Symbol">;</a> <a id="393" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="396" class="Symbol">;</a> <a id="398" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="402" class="Symbol">)</a>
 
 <a id="405" class="Keyword">open</a> <a id="410" class="Keyword">import</a> <a id="417" href="order-theory.preorders.html" class="Module">order-theory.preorders</a> <a id="440" class="Keyword">using</a> <a id="446" class="Symbol">(</a><a id="447" href="order-theory.preorders.html#531" class="Function">Preorder</a><a id="455" class="Symbol">;</a> <a id="457" href="order-theory.preorders.html#873" class="Function">element-Preorder</a><a id="473" class="Symbol">)</a>
@@ -76,7 +76,7 @@
   <a id="1629" href="order-theory.chains-preorders.html#1565" class="Function">sub-preorder-chain-Preorder</a> <a id="1657" class="Symbol">=</a> <a id="1659" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1663" href="order-theory.chains-preorders.html#1529" class="Bound">C</a>
 
   <a id="1668" href="order-theory.chains-preorders.html#1668" class="Function">element-chain-Preorder</a> <a id="1691" class="Symbol">:</a> <a id="1693" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1696" class="Symbol">(</a><a id="1697" href="order-theory.chains-preorders.html#1489" class="Bound">l1</a> <a id="1700" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1702" href="order-theory.chains-preorders.html#1495" class="Bound">l3</a><a id="1704" class="Symbol">)</a>
-  <a id="1708" href="order-theory.chains-preorders.html#1668" class="Function">element-chain-Preorder</a> <a id="1731" class="Symbol">=</a> <a id="1733" href="foundation-core.subtypes.html#2555" class="Function">type-subtype</a> <a id="1746" href="order-theory.chains-preorders.html#1565" class="Function">sub-preorder-chain-Preorder</a>
+  <a id="1708" href="order-theory.chains-preorders.html#1668" class="Function">element-chain-Preorder</a> <a id="1731" class="Symbol">=</a> <a id="1733" href="foundation-core.subtypes.html#2609" class="Function">type-subtype</a> <a id="1746" href="order-theory.chains-preorders.html#1565" class="Function">sub-preorder-chain-Preorder</a>
 
 <a id="1775" class="Keyword">module</a> <a id="1782" href="order-theory.chains-preorders.html#1782" class="Module">_</a>
   <a id="1786" class="Symbol">{</a><a id="1787" href="order-theory.chains-preorders.html#1787" class="Bound">l1</a> <a id="1790" href="order-theory.chains-preorders.html#1790" class="Bound">l2</a> <a id="1793" class="Symbol">:</a> <a id="1795" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1800" class="Symbol">}</a> <a id="1802" class="Symbol">(</a><a id="1803" href="order-theory.chains-preorders.html#1803" class="Bound">X</a> <a id="1805" class="Symbol">:</a> <a id="1807" href="order-theory.preorders.html#531" class="Function">Preorder</a> <a id="1816" href="order-theory.chains-preorders.html#1787" class="Bound">l1</a> <a id="1819" href="order-theory.chains-preorders.html#1790" class="Bound">l2</a><a id="1821" class="Symbol">)</a>
@@ -103,7 +103,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-18)(efc60fe) Merge pull request #265 from EgbertRijke/group-theory by noreply
+(2022-07-19)(55ccccf) Merge pull request #266 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

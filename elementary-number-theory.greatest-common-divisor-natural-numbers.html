@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/elementary-number-theory/greatest-common-divisor-natural-numbers.lagda.md.</p>
-<p>Version of Monday, July 18, 2022, 09:17 PM</p>
+<p>Version of Tuesday, July 19, 2022, 06:26 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -66,7 +66,7 @@
     <a id="1754" href="elementary-number-theory.natural-numbers.html#1828" class="Function">is-zero-ℕ</a><a id="1763" class="Symbol">)</a>
 <a id="1765" class="Keyword">open</a> <a id="1770" class="Keyword">import</a>
   <a id="1779" href="elementary-number-theory.well-ordering-principle-natural-numbers.html" class="Module">elementary-number-theory.well-ordering-principle-natural-numbers</a> <a id="1844" class="Keyword">using</a>
-  <a id="1852" class="Symbol">(</a> <a id="1854" href="elementary-number-theory.well-ordering-principle-natural-numbers.html#2025" class="Function">minimal-element-ℕ</a><a id="1871" class="Symbol">;</a> <a id="1873" href="elementary-number-theory.well-ordering-principle-natural-numbers.html#4458" class="Function">well-ordering-principle-ℕ</a><a id="1898" class="Symbol">)</a>
+  <a id="1852" class="Symbol">(</a> <a id="1854" href="elementary-number-theory.well-ordering-principle-natural-numbers.html#2025" class="Function">minimal-element-ℕ</a><a id="1871" class="Symbol">;</a> <a id="1873" href="elementary-number-theory.well-ordering-principle-natural-numbers.html#4316" class="Function">well-ordering-principle-ℕ</a><a id="1898" class="Symbol">)</a>
 
 <a id="1901" class="Keyword">open</a> <a id="1906" class="Keyword">import</a> <a id="1913" href="foundation.cartesian-product-types.html" class="Module">foundation.cartesian-product-types</a> <a id="1948" class="Keyword">using</a> <a id="1954" class="Symbol">(</a><a id="1955" href="foundation-core.cartesian-product-types.html#590" class="Function Operator">_×_</a><a id="1958" class="Symbol">)</a>
 <a id="1960" class="Keyword">open</a> <a id="1965" class="Keyword">import</a> <a id="1972" href="foundation.coproduct-types.html" class="Module">foundation.coproduct-types</a> <a id="1999" class="Keyword">using</a> <a id="2005" class="Symbol">(</a><a id="2006" href="foundation.coproduct-types.html#1250" class="InductiveConstructor">inl</a><a id="2009" class="Symbol">;</a> <a id="2011" href="foundation.coproduct-types.html#1268" class="InductiveConstructor">inr</a><a id="2014" class="Symbol">)</a>
@@ -164,7 +164,7 @@
 <a id="5364" class="Keyword">abstract</a>
   <a id="GCD-ℕ"></a><a id="5375" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5375" class="Function">GCD-ℕ</a> <a id="5381" class="Symbol">:</a> <a id="5383" class="Symbol">(</a><a id="5384" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5384" class="Bound">a</a> <a id="5386" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5386" class="Bound">b</a> <a id="5388" class="Symbol">:</a> <a id="5390" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a><a id="5391" class="Symbol">)</a> <a id="5393" class="Symbol">→</a> <a id="5395" href="elementary-number-theory.well-ordering-principle-natural-numbers.html#2025" class="Function">minimal-element-ℕ</a> <a id="5413" class="Symbol">(</a><a id="5414" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#3661" class="Function">is-multiple-of-gcd-ℕ</a> <a id="5435" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5384" class="Bound">a</a> <a id="5437" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5386" class="Bound">b</a><a id="5438" class="Symbol">)</a>
   <a id="5442" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5375" class="Function">GCD-ℕ</a> <a id="5448" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5448" class="Bound">a</a> <a id="5450" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5450" class="Bound">b</a> <a id="5452" class="Symbol">=</a>
-    <a id="5458" href="elementary-number-theory.well-ordering-principle-natural-numbers.html#4458" class="Function">well-ordering-principle-ℕ</a>
+    <a id="5458" href="elementary-number-theory.well-ordering-principle-natural-numbers.html#4316" class="Function">well-ordering-principle-ℕ</a>
       <a id="5490" class="Symbol">(</a> <a id="5492" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#3661" class="Function">is-multiple-of-gcd-ℕ</a> <a id="5513" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5448" class="Bound">a</a> <a id="5515" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5450" class="Bound">b</a><a id="5516" class="Symbol">)</a>
       <a id="5524" class="Symbol">(</a> <a id="5526" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#4503" class="Function">is-decidable-is-multiple-of-gcd-ℕ</a> <a id="5560" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5448" class="Bound">a</a> <a id="5562" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5450" class="Bound">b</a><a id="5563" class="Symbol">)</a>
       <a id="5571" class="Symbol">(</a> <a id="5573" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="5578" class="Symbol">(</a><a id="5579" href="elementary-number-theory.addition-natural-numbers.html#1096" class="Function">add-ℕ</a> <a id="5585" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5448" class="Bound">a</a> <a id="5587" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5450" class="Bound">b</a><a id="5588" class="Symbol">)</a> <a id="5590" class="Symbol">(</a><a id="5591" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5116" class="Function">sum-is-multiple-of-gcd-ℕ</a> <a id="5616" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5448" class="Bound">a</a> <a id="5618" href="elementary-number-theory.greatest-common-divisor-natural-numbers.html#5450" class="Bound">b</a><a id="5619" class="Symbol">))</a>
@@ -336,7 +336,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-18)(efc60fe) Merge pull request #265 from EgbertRijke/group-theory by noreply
+(2022-07-19)(55ccccf) Merge pull request #266 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

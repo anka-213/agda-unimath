@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/symmetric-difference.lagda.md.</p>
-<p>Version of Monday, July 18, 2022, 09:18 PM</p>
+<p>Version of Tuesday, July 19, 2022, 06:26 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -46,7 +46,7 @@
 <a id="704" class="Keyword">open</a> <a id="709" class="Keyword">import</a> <a id="716" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="742" class="Keyword">using</a> <a id="748" class="Symbol">(</a><a id="749" href="foundation-core.identity-types.html#1865" class="Function Operator">_＝_</a><a id="752" class="Symbol">;</a> <a id="754" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="758" class="Symbol">;</a> <a id="760" href="foundation-core.identity-types.html#5702" class="Function">tr</a><a id="762" class="Symbol">)</a>
 <a id="764" class="Keyword">open</a> <a id="769" class="Keyword">import</a> <a id="776" href="foundation.intersection.html" class="Module">foundation.intersection</a> <a id="800" class="Keyword">using</a> <a id="806" class="Symbol">(</a><a id="807" href="foundation.intersection.html#954" class="Function">intersection-decidable-subtype</a><a id="837" class="Symbol">)</a>
 <a id="839" class="Keyword">open</a> <a id="844" class="Keyword">import</a> <a id="851" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="875" class="Keyword">using</a> <a id="881" class="Symbol">(</a><a id="882" href="foundation-core.propositions.html#2719" class="Function">eq-is-prop</a><a id="892" class="Symbol">)</a>
-<a id="894" class="Keyword">open</a> <a id="899" class="Keyword">import</a> <a id="906" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="926" class="Keyword">using</a> <a id="932" class="Symbol">(</a><a id="933" href="foundation-core.subtypes.html#2211" class="Function">subtype</a><a id="940" class="Symbol">)</a>
+<a id="894" class="Keyword">open</a> <a id="899" class="Keyword">import</a> <a id="906" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="926" class="Keyword">using</a> <a id="932" class="Symbol">(</a><a id="933" href="foundation-core.subtypes.html#2265" class="Function">subtype</a><a id="940" class="Symbol">)</a>
 <a id="942" class="Keyword">open</a> <a id="947" class="Keyword">import</a> <a id="954" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="981" class="Keyword">using</a> <a id="987" class="Symbol">(</a><a id="988" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="993" class="Symbol">;</a> <a id="995" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="997" class="Symbol">;</a> <a id="999" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="1002" class="Symbol">)</a>
 <a id="1004" class="Keyword">open</a> <a id="1009" class="Keyword">import</a> <a id="1016" href="foundation.xor.html" class="Module">foundation.xor</a> <a id="1031" class="Keyword">using</a> <a id="1037" class="Symbol">(</a><a id="1038" href="foundation.xor.html#3352" class="Function">xor-Prop</a><a id="1046" class="Symbol">;</a> <a id="1048" href="foundation.xor.html#12478" class="Function">xor-decidable-Prop</a><a id="1066" class="Symbol">)</a>
 </pre>
@@ -58,7 +58,7 @@
   <a id="1294" class="Keyword">where</a>
 
   <a id="1303" href="foundation.symmetric-difference.html#1303" class="Function">symmetric-difference-subtype</a> <a id="1332" class="Symbol">:</a>
-    <a id="1338" href="foundation-core.subtypes.html#2211" class="Function">subtype</a> <a id="1346" href="foundation.symmetric-difference.html#1266" class="Bound">l1</a> <a id="1349" href="foundation.symmetric-difference.html#1282" class="Bound">X</a> <a id="1351" class="Symbol">→</a> <a id="1353" href="foundation-core.subtypes.html#2211" class="Function">subtype</a> <a id="1361" href="foundation.symmetric-difference.html#1269" class="Bound">l2</a> <a id="1364" href="foundation.symmetric-difference.html#1282" class="Bound">X</a> <a id="1366" class="Symbol">→</a> <a id="1368" href="foundation-core.subtypes.html#2211" class="Function">subtype</a> <a id="1376" class="Symbol">(</a><a id="1377" href="foundation.symmetric-difference.html#1266" class="Bound">l1</a> <a id="1380" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1382" href="foundation.symmetric-difference.html#1269" class="Bound">l2</a><a id="1384" class="Symbol">)</a> <a id="1386" href="foundation.symmetric-difference.html#1282" class="Bound">X</a>
+    <a id="1338" href="foundation-core.subtypes.html#2265" class="Function">subtype</a> <a id="1346" href="foundation.symmetric-difference.html#1266" class="Bound">l1</a> <a id="1349" href="foundation.symmetric-difference.html#1282" class="Bound">X</a> <a id="1351" class="Symbol">→</a> <a id="1353" href="foundation-core.subtypes.html#2265" class="Function">subtype</a> <a id="1361" href="foundation.symmetric-difference.html#1269" class="Bound">l2</a> <a id="1364" href="foundation.symmetric-difference.html#1282" class="Bound">X</a> <a id="1366" class="Symbol">→</a> <a id="1368" href="foundation-core.subtypes.html#2265" class="Function">subtype</a> <a id="1376" class="Symbol">(</a><a id="1377" href="foundation.symmetric-difference.html#1266" class="Bound">l1</a> <a id="1380" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1382" href="foundation.symmetric-difference.html#1269" class="Bound">l2</a><a id="1384" class="Symbol">)</a> <a id="1386" href="foundation.symmetric-difference.html#1282" class="Bound">X</a>
   <a id="1390" href="foundation.symmetric-difference.html#1303" class="Function">symmetric-difference-subtype</a> <a id="1419" href="foundation.symmetric-difference.html#1419" class="Bound">P</a> <a id="1421" href="foundation.symmetric-difference.html#1421" class="Bound">Q</a> <a id="1423" href="foundation.symmetric-difference.html#1423" class="Bound">x</a> <a id="1425" class="Symbol">=</a> <a id="1427" href="foundation.xor.html#3352" class="Function">xor-Prop</a> <a id="1436" class="Symbol">(</a><a id="1437" href="foundation.symmetric-difference.html#1419" class="Bound">P</a> <a id="1439" href="foundation.symmetric-difference.html#1423" class="Bound">x</a><a id="1440" class="Symbol">)</a> <a id="1442" class="Symbol">(</a><a id="1443" href="foundation.symmetric-difference.html#1421" class="Bound">Q</a> <a id="1445" href="foundation.symmetric-difference.html#1423" class="Bound">x</a><a id="1446" class="Symbol">)</a>
 
   <a id="1451" href="foundation.symmetric-difference.html#1451" class="Function">symmetric-difference-decidable-subtype</a> <a id="1490" class="Symbol">:</a>
@@ -171,7 +171,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-18)(efc60fe) Merge pull request #265 from EgbertRijke/group-theory by noreply
+(2022-07-19)(55ccccf) Merge pull request #266 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

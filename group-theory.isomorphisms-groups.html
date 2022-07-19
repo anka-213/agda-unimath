@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/isomorphisms-groups.lagda.md.</p>
-<p>Version of Monday, July 18, 2022, 09:18 PM</p>
+<p>Version of Tuesday, July 19, 2022, 06:27 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -48,7 +48,7 @@
 <a id="666" class="Keyword">open</a> <a id="671" class="Keyword">import</a> <a id="678" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="702" class="Keyword">using</a> <a id="708" class="Symbol">(</a><a id="709" href="foundation-core.equivalences.html#1621" class="Function Operator">_≃_</a><a id="712" class="Symbol">;</a> <a id="714" href="foundation-core.equivalences.html#1821" class="Function">map-equiv</a><a id="723" class="Symbol">;</a> <a id="725" href="foundation-core.equivalences.html#7869" class="Function Operator">_∘e_</a><a id="729" class="Symbol">)</a>
 <a id="731" class="Keyword">open</a> <a id="736" class="Keyword">import</a> <a id="743" href="foundation.functoriality-dependent-pair-types.html" class="Module">foundation.functoriality-dependent-pair-types</a> <a id="789" class="Keyword">using</a> <a id="795" class="Symbol">(</a><a id="796" href="foundation-core.functoriality-dependent-pair-types.html#6817" class="Function">equiv-tot</a><a id="805" class="Symbol">)</a>
 <a id="807" class="Keyword">open</a> <a id="812" class="Keyword">import</a> <a id="819" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="845" class="Keyword">using</a> <a id="851" class="Symbol">(</a><a id="852" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a><a id="854" class="Symbol">)</a>
-<a id="856" class="Keyword">open</a> <a id="861" class="Keyword">import</a> <a id="868" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="888" class="Keyword">using</a> <a id="894" class="Symbol">(</a><a id="895" href="foundation-core.subtypes.html#4068" class="Function">equiv-ap-inclusion-subtype</a><a id="921" class="Symbol">)</a>
+<a id="856" class="Keyword">open</a> <a id="861" class="Keyword">import</a> <a id="868" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="888" class="Keyword">using</a> <a id="894" class="Symbol">(</a><a id="895" href="foundation-core.subtypes.html#4122" class="Function">equiv-ap-inclusion-subtype</a><a id="921" class="Symbol">)</a>
 <a id="923" class="Keyword">open</a> <a id="928" class="Keyword">import</a> <a id="935" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="962" class="Keyword">using</a> <a id="968" class="Symbol">(</a><a id="969" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="974" class="Symbol">;</a> <a id="976" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="978" class="Symbol">;</a> <a id="980" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="983" class="Symbol">)</a>
 
 <a id="986" class="Keyword">open</a> <a id="991" class="Keyword">import</a> <a id="998" href="group-theory.category-of-semigroups.html" class="Module">group-theory.category-of-semigroups</a> <a id="1034" class="Keyword">using</a>
@@ -118,7 +118,7 @@
       <a id="3153" class="Symbol">(</a> <a id="3155" href="group-theory.category-of-semigroups.html#1256" class="Function">extensionality-Semigroup</a>
         <a id="3188" class="Symbol">(</a> <a id="3190" href="group-theory.groups.html#2603" class="Function">semigroup-Group</a> <a id="3206" href="group-theory.isomorphisms-groups.html#2892" class="Bound">G</a><a id="3207" class="Symbol">)</a>
         <a id="3217" class="Symbol">(</a> <a id="3219" href="group-theory.groups.html#2603" class="Function">semigroup-Group</a> <a id="3235" href="group-theory.isomorphisms-groups.html#3143" class="Bound">H</a><a id="3236" class="Symbol">))</a> <a id="3239" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
-      <a id="3248" class="Symbol">(</a> <a id="3250" href="foundation-core.subtypes.html#4068" class="Function">equiv-ap-inclusion-subtype</a> <a id="3277" href="group-theory.groups.html#9807" class="Function">is-group-Prop</a> <a id="3291" class="Symbol">{</a><a id="3292" class="Argument">s</a> <a id="3294" class="Symbol">=</a> <a id="3296" href="group-theory.isomorphisms-groups.html#2892" class="Bound">G</a><a id="3297" class="Symbol">}</a> <a id="3299" class="Symbol">{</a><a id="3300" class="Argument">t</a> <a id="3302" class="Symbol">=</a> <a id="3304" href="group-theory.isomorphisms-groups.html#3143" class="Bound">H</a><a id="3305" class="Symbol">})</a>
+      <a id="3248" class="Symbol">(</a> <a id="3250" href="foundation-core.subtypes.html#4122" class="Function">equiv-ap-inclusion-subtype</a> <a id="3277" href="group-theory.groups.html#9807" class="Function">is-group-Prop</a> <a id="3291" class="Symbol">{</a><a id="3292" class="Argument">s</a> <a id="3294" class="Symbol">=</a> <a id="3296" href="group-theory.isomorphisms-groups.html#2892" class="Bound">G</a><a id="3297" class="Symbol">}</a> <a id="3299" class="Symbol">{</a><a id="3300" class="Argument">t</a> <a id="3302" class="Symbol">=</a> <a id="3304" href="group-theory.isomorphisms-groups.html#3143" class="Bound">H</a><a id="3305" class="Symbol">})</a>
 
   <a id="3311" class="Keyword">abstract</a>
     <a id="3324" href="group-theory.isomorphisms-groups.html#3324" class="Function">is-contr-total-iso-Group</a> <a id="3349" class="Symbol">:</a> <a id="3351" href="foundation-core.contractible-types.html#1006" class="Function">is-contr</a> <a id="3360" class="Symbol">(</a><a id="3361" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="3363" class="Symbol">(</a><a id="3364" href="group-theory.groups.html#2481" class="Function">Group</a> <a id="3370" href="group-theory.isomorphisms-groups.html#2880" class="Bound">l</a><a id="3371" class="Symbol">)</a> <a id="3373" class="Symbol">(</a><a id="3374" href="group-theory.isomorphisms-groups.html#1714" class="Function">type-iso-Group</a> <a id="3389" href="group-theory.isomorphisms-groups.html#2892" class="Bound">G</a><a id="3390" class="Symbol">))</a>
@@ -149,7 +149,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-18)(efc60fe) Merge pull request #265 from EgbertRijke/group-theory by noreply
+(2022-07-19)(55ccccf) Merge pull request #266 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
