@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/dependent-sum-finite-types.lagda.md.</p>
-<p>Version of Friday, July 22, 2022, 12:36 PM</p>
+<p>Version of Monday, July 25, 2022, 04:37 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -59,7 +59,7 @@
   <a id="1369" class="Symbol">(</a> <a id="1371" href="foundation.type-arithmetic-coproduct-types.html#7225" class="Function">left-distributive-Σ-coprod</a><a id="1397" class="Symbol">)</a>
 <a id="1399" class="Keyword">open</a> <a id="1404" class="Keyword">import</a> <a id="1411" href="foundation.type-arithmetic-dependent-pair-types.html" class="Module">foundation.type-arithmetic-dependent-pair-types</a> <a id="1459" class="Keyword">using</a>
   <a id="1467" class="Symbol">(</a> <a id="1469" href="foundation-core.type-arithmetic-dependent-pair-types.html#5675" class="Function">assoc-Σ</a><a id="1476" class="Symbol">;</a> <a id="1478" href="foundation-core.type-arithmetic-dependent-pair-types.html#3582" class="Function">inv-left-unit-law-Σ-is-contr</a><a id="1506" class="Symbol">;</a> <a id="1508" href="foundation-core.type-arithmetic-dependent-pair-types.html#4314" class="Function">right-unit-law-Σ-is-contr</a><a id="1533" class="Symbol">;</a>
-    <a id="1539" href="foundation-core.type-arithmetic-dependent-pair-types.html#11512" class="Function">equiv-right-swap-Σ</a><a id="1557" class="Symbol">)</a>
+    <a id="1539" href="foundation-core.type-arithmetic-dependent-pair-types.html#11376" class="Function">equiv-right-swap-Σ</a><a id="1557" class="Symbol">)</a>
 <a id="1559" class="Keyword">open</a> <a id="1564" class="Keyword">import</a> <a id="1571" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="1598" class="Keyword">using</a> <a id="1604" class="Symbol">(</a><a id="1605" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1610" class="Symbol">;</a> <a id="1612" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="1614" class="Symbol">;</a> <a id="1616" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="1619" class="Symbol">)</a>
 
 <a id="1622" class="Keyword">open</a> <a id="1627" class="Keyword">import</a> <a id="1634" href="univalent-combinatorics.coproduct-types.html" class="Module">univalent-combinatorics.coproduct-types</a> <a id="1674" class="Keyword">using</a>
@@ -182,7 +182,7 @@
           <a id="6244" class="Symbol">(</a> <a id="6246" href="foundation-core.subtypes.html#5335" class="Function">is-set-type-subtype</a> <a id="6266" class="Symbol">(λ</a> <a id="6269" href="univalent-combinatorics.dependent-sum-finite-types.html#6269" class="Bound">x</a> <a id="6271" class="Symbol">→</a> <a id="6273" href="foundation.propositional-truncations.html#2707" class="Function">trunc-Prop</a> <a id="6284" class="Symbol">_)</a> <a id="6287" href="univalent-combinatorics.dependent-sum-finite-types.html#5775" class="Bound">K</a><a id="6288" class="Symbol">)</a>
           <a id="6300" class="Symbol">(</a> <a id="6302" class="Symbol">λ</a> <a id="6304" href="univalent-combinatorics.dependent-sum-finite-types.html#6304" class="Bound">t</a> <a id="6306" class="Symbol">→</a> <a id="6308" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="6312" href="univalent-combinatorics.dependent-sum-finite-types.html#6304" class="Bound">t</a><a id="6313" class="Symbol">)</a>
           <a id="6325" class="Symbol">(</a> <a id="6327" href="univalent-combinatorics.finite-types.html#6751" class="Function">is-finite-equiv</a>
-            <a id="6355" class="Symbol">(</a> <a id="6357" href="foundation-core.type-arithmetic-dependent-pair-types.html#11512" class="Function">equiv-right-swap-Σ</a><a id="6375" class="Symbol">)</a>
+            <a id="6355" class="Symbol">(</a> <a id="6357" href="foundation-core.type-arithmetic-dependent-pair-types.html#11376" class="Function">equiv-right-swap-Σ</a><a id="6375" class="Symbol">)</a>
             <a id="6389" class="Symbol">(</a> <a id="6391" href="univalent-combinatorics.dependent-sum-finite-types.html#2490" class="Function">is-finite-Σ</a>
               <a id="6417" class="Symbol">(</a> <a id="6419" href="univalent-combinatorics.dependent-sum-finite-types.html#5777" class="Bound">f</a><a id="6420" class="Symbol">)</a>
               <a id="6436" class="Symbol">(</a> <a id="6438" class="Symbol">λ</a> <a id="6440" href="univalent-combinatorics.dependent-sum-finite-types.html#6440" class="Bound">x</a> <a id="6442" class="Symbol">→</a> <a id="6444" href="univalent-combinatorics.finite-types.html#18715" class="Function">is-finite-type-trunc-Prop</a> <a id="6470" class="Symbol">(</a><a id="6471" href="univalent-combinatorics.dependent-sum-finite-types.html#5779" class="Bound">g</a> <a id="6473" class="Symbol">(</a><a id="6474" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="6478" href="univalent-combinatorics.dependent-sum-finite-types.html#6440" class="Bound">x</a><a id="6479" class="Symbol">)))))</a>
@@ -191,7 +191,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-22)(5a5fd97) Merge pull request #269 from EgbertRijke/group-theory by noreply
+(2022-07-25)(633b13f) Merge pull request #270 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

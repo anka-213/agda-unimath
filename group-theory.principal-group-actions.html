@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/principal-group-actions.lagda.md.</p>
-<p>Version of Friday, July 22, 2022, 12:35 PM</p>
+<p>Version of Monday, July 25, 2022, 04:37 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -36,7 +36,7 @@
 <a id="92" class="Keyword">module</a> <a id="99" href="group-theory.principal-group-actions.html" class="Module">group-theory.principal-group-actions</a> <a id="136" class="Keyword">where</a>
 
 <a id="143" class="Keyword">open</a> <a id="148" class="Keyword">import</a> <a id="155" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="187" class="Keyword">using</a> <a id="193" class="Symbol">(</a><a id="194" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="195" class="Symbol">;</a> <a id="197" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="201" class="Symbol">;</a> <a id="203" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="206" class="Symbol">;</a> <a id="208" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="211" class="Symbol">)</a>
-<a id="213" class="Keyword">open</a> <a id="218" class="Keyword">import</a> <a id="225" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="249" class="Keyword">using</a> <a id="255" class="Symbol">(</a><a id="256" href="foundation.equivalences.html#12592" class="Function">eq-htpy-equiv</a><a id="269" class="Symbol">)</a>
+<a id="213" class="Keyword">open</a> <a id="218" class="Keyword">import</a> <a id="225" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="249" class="Keyword">using</a> <a id="255" class="Symbol">(</a><a id="256" href="foundation.equivalences.html#12673" class="Function">eq-htpy-equiv</a><a id="269" class="Symbol">)</a>
 <a id="271" class="Keyword">open</a> <a id="276" class="Keyword">import</a> <a id="283" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="310" class="Keyword">using</a> <a id="316" class="Symbol">(</a><a id="317" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="322" class="Symbol">)</a>
 
 <a id="325" class="Keyword">open</a> <a id="330" class="Keyword">import</a> <a id="337" href="group-theory.group-actions.html" class="Module">group-theory.group-actions</a> <a id="364" class="Keyword">using</a> <a id="370" class="Symbol">(</a><a id="371" href="group-theory.group-actions.html#1205" class="Function">Abstract-Group-Action</a><a id="392" class="Symbol">)</a>
@@ -54,11 +54,11 @@
   <a id="741" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="745" href="group-theory.principal-group-actions.html#678" class="Function">principal-Abstract-Group-Action</a> <a id="777" class="Symbol">=</a> <a id="779" href="group-theory.groups.html#2664" class="Function">set-Group</a> <a id="789" href="group-theory.principal-group-actions.html#651" class="Bound">G</a>
   <a id="793" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="797" class="Symbol">(</a><a id="798" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="802" href="group-theory.principal-group-actions.html#678" class="Function">principal-Abstract-Group-Action</a><a id="833" class="Symbol">)</a> <a id="835" href="group-theory.principal-group-actions.html#835" class="Bound">g</a> <a id="837" class="Symbol">=</a> <a id="839" href="group-theory.groups.html#5609" class="Function">equiv-mul-Group</a> <a id="855" href="group-theory.principal-group-actions.html#651" class="Bound">G</a> <a id="857" href="group-theory.principal-group-actions.html#835" class="Bound">g</a>
   <a id="861" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="865" class="Symbol">(</a><a id="866" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="870" href="group-theory.principal-group-actions.html#678" class="Function">principal-Abstract-Group-Action</a><a id="901" class="Symbol">)</a> <a id="903" href="group-theory.principal-group-actions.html#903" class="Bound">g</a> <a id="905" href="group-theory.principal-group-actions.html#905" class="Bound">h</a> <a id="907" class="Symbol">=</a>
-    <a id="913" href="foundation.equivalences.html#12592" class="Function">eq-htpy-equiv</a> <a id="927" class="Symbol">(</a><a id="928" href="group-theory.groups.html#3318" class="Function">associative-mul-Group</a> <a id="950" href="group-theory.principal-group-actions.html#651" class="Bound">G</a> <a id="952" href="group-theory.principal-group-actions.html#903" class="Bound">g</a> <a id="954" href="group-theory.principal-group-actions.html#905" class="Bound">h</a><a id="955" class="Symbol">)</a>
+    <a id="913" href="foundation.equivalences.html#12673" class="Function">eq-htpy-equiv</a> <a id="927" class="Symbol">(</a><a id="928" href="group-theory.groups.html#3318" class="Function">associative-mul-Group</a> <a id="950" href="group-theory.principal-group-actions.html#651" class="Bound">G</a> <a id="952" href="group-theory.principal-group-actions.html#903" class="Bound">g</a> <a id="954" href="group-theory.principal-group-actions.html#905" class="Bound">h</a><a id="955" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-22)(5a5fd97) Merge pull request #269 from EgbertRijke/group-theory by noreply
+(2022-07-25)(633b13f) Merge pull request #270 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

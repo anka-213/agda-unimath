@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation-core/faithful-maps.lagda.md.</p>
-<p>Version of Friday, July 22, 2022, 12:34 PM</p>
+<p>Version of Monday, July 25, 2022, 04:36 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -53,7 +53,7 @@
   <a id="916" class="Symbol">(</a> <a id="918" href="foundation-core.propositional-maps.html#1879" class="Function">is-prop-map-is-emb</a><a id="936" class="Symbol">;</a> <a id="938" href="foundation-core.propositional-maps.html#1537" class="Function">is-emb-is-prop-map</a><a id="956" class="Symbol">)</a>
 <a id="958" class="Keyword">open</a> <a id="963" class="Keyword">import</a> <a id="970" href="foundation-core.sets.html" class="Module">foundation-core.sets</a> <a id="991" class="Keyword">using</a> <a id="997" class="Symbol">(</a><a id="998" href="foundation-core.sets.html#1113" class="Function">is-set</a><a id="1004" class="Symbol">;</a> <a id="1006" href="foundation-core.sets.html#1190" class="Function">UU-Set</a><a id="1012" class="Symbol">;</a> <a id="1014" href="foundation-core.sets.html#1304" class="Function">type-Set</a><a id="1022" class="Symbol">;</a> <a id="1024" href="foundation-core.sets.html#1355" class="Function">is-set-type-Set</a><a id="1039" class="Symbol">)</a>
 <a id="1041" class="Keyword">open</a> <a id="1046" class="Keyword">import</a> <a id="1053" href="foundation-core.truncated-maps.html" class="Module">foundation-core.truncated-maps</a> <a id="1084" class="Keyword">using</a>
-  <a id="1092" class="Symbol">(</a> <a id="1094" href="foundation-core.truncated-maps.html#2916" class="Function">is-trunc-map-is-trunc-map-ap</a><a id="1122" class="Symbol">;</a> <a id="1124" href="foundation-core.truncated-maps.html#3292" class="Function">is-trunc-map-ap-is-trunc-map</a><a id="1152" class="Symbol">)</a>
+  <a id="1092" class="Symbol">(</a> <a id="1094" href="foundation-core.truncated-maps.html#2932" class="Function">is-trunc-map-is-trunc-map-ap</a><a id="1122" class="Symbol">;</a> <a id="1124" href="foundation-core.truncated-maps.html#3308" class="Function">is-trunc-map-ap-is-trunc-map</a><a id="1152" class="Symbol">)</a>
 <a id="1154" class="Keyword">open</a> <a id="1159" class="Keyword">import</a> <a id="1166" href="foundation-core.truncation-levels.html" class="Module">foundation-core.truncation-levels</a> <a id="1200" class="Keyword">using</a> <a id="1206" class="Symbol">(</a><a id="1207" href="foundation-core.truncation-levels.html#448" class="Function">neg-one-𝕋</a><a id="1216" class="Symbol">)</a>
 <a id="1218" class="Keyword">open</a> <a id="1223" class="Keyword">import</a> <a id="1230" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a> <a id="1262" class="Keyword">using</a> <a id="1268" class="Symbol">(</a><a id="1269" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1274" class="Symbol">;</a> <a id="1276" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="1278" class="Symbol">;</a> <a id="1280" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="1283" class="Symbol">)</a>
 </pre>
@@ -124,12 +124,12 @@
 
   <a id="3608" href="foundation-core.faithful-maps.html#3608" class="Function">is-0-map-is-faithful</a> <a id="3629" class="Symbol">:</a> <a id="3631" href="foundation-core.faithful-maps.html#1690" class="Function">is-faithful</a> <a id="3643" href="foundation-core.faithful-maps.html#3586" class="Bound">f</a> <a id="3645" class="Symbol">→</a> <a id="3647" href="foundation-core.0-maps.html#1181" class="Function">is-0-map</a> <a id="3656" href="foundation-core.faithful-maps.html#3586" class="Bound">f</a>
   <a id="3660" href="foundation-core.faithful-maps.html#3608" class="Function">is-0-map-is-faithful</a> <a id="3681" href="foundation-core.faithful-maps.html#3681" class="Bound">H</a> <a id="3683" class="Symbol">=</a>
-    <a id="3689" href="foundation-core.truncated-maps.html#2916" class="Function">is-trunc-map-is-trunc-map-ap</a> <a id="3718" href="foundation-core.truncation-levels.html#448" class="Function">neg-one-𝕋</a> <a id="3728" href="foundation-core.faithful-maps.html#3586" class="Bound">f</a>
+    <a id="3689" href="foundation-core.truncated-maps.html#2932" class="Function">is-trunc-map-is-trunc-map-ap</a> <a id="3718" href="foundation-core.truncation-levels.html#448" class="Function">neg-one-𝕋</a> <a id="3728" href="foundation-core.faithful-maps.html#3586" class="Bound">f</a>
       <a id="3736" class="Symbol">(</a> <a id="3738" class="Symbol">λ</a> <a id="3740" href="foundation-core.faithful-maps.html#3740" class="Bound">x</a> <a id="3742" href="foundation-core.faithful-maps.html#3742" class="Bound">y</a> <a id="3744" class="Symbol">→</a> <a id="3746" href="foundation-core.propositional-maps.html#1879" class="Function">is-prop-map-is-emb</a> <a id="3765" class="Symbol">(</a><a id="3766" href="foundation-core.faithful-maps.html#3681" class="Bound">H</a> <a id="3768" href="foundation-core.faithful-maps.html#3740" class="Bound">x</a> <a id="3770" href="foundation-core.faithful-maps.html#3742" class="Bound">y</a><a id="3771" class="Symbol">))</a>
 
   <a id="3777" href="foundation-core.faithful-maps.html#3777" class="Function">is-faithful-is-0-map</a> <a id="3798" class="Symbol">:</a> <a id="3800" href="foundation-core.0-maps.html#1181" class="Function">is-0-map</a> <a id="3809" href="foundation-core.faithful-maps.html#3586" class="Bound">f</a> <a id="3811" class="Symbol">→</a> <a id="3813" href="foundation-core.faithful-maps.html#1690" class="Function">is-faithful</a> <a id="3825" href="foundation-core.faithful-maps.html#3586" class="Bound">f</a>
   <a id="3829" href="foundation-core.faithful-maps.html#3777" class="Function">is-faithful-is-0-map</a> <a id="3850" href="foundation-core.faithful-maps.html#3850" class="Bound">H</a> <a id="3852" href="foundation-core.faithful-maps.html#3852" class="Bound">x</a> <a id="3854" href="foundation-core.faithful-maps.html#3854" class="Bound">y</a> <a id="3856" class="Symbol">=</a>
-    <a id="3862" href="foundation-core.propositional-maps.html#1537" class="Function">is-emb-is-prop-map</a> <a id="3881" class="Symbol">(</a><a id="3882" href="foundation-core.truncated-maps.html#3292" class="Function">is-trunc-map-ap-is-trunc-map</a> <a id="3911" href="foundation-core.truncation-levels.html#448" class="Function">neg-one-𝕋</a> <a id="3921" href="foundation-core.faithful-maps.html#3586" class="Bound">f</a> <a id="3923" href="foundation-core.faithful-maps.html#3850" class="Bound">H</a> <a id="3925" href="foundation-core.faithful-maps.html#3852" class="Bound">x</a> <a id="3927" href="foundation-core.faithful-maps.html#3854" class="Bound">y</a><a id="3928" class="Symbol">)</a>
+    <a id="3862" href="foundation-core.propositional-maps.html#1537" class="Function">is-emb-is-prop-map</a> <a id="3881" class="Symbol">(</a><a id="3882" href="foundation-core.truncated-maps.html#3308" class="Function">is-trunc-map-ap-is-trunc-map</a> <a id="3911" href="foundation-core.truncation-levels.html#448" class="Function">neg-one-𝕋</a> <a id="3921" href="foundation-core.faithful-maps.html#3586" class="Bound">f</a> <a id="3923" href="foundation-core.faithful-maps.html#3850" class="Bound">H</a> <a id="3925" href="foundation-core.faithful-maps.html#3852" class="Bound">x</a> <a id="3927" href="foundation-core.faithful-maps.html#3854" class="Bound">y</a><a id="3928" class="Symbol">)</a>
 </pre>
 <h2 id="properties">Properties</h2>
 <h3 id="the-projection-map-of-a-family-of-sets-is-faithful">The projection map of a family of sets is faithful</h3>
@@ -242,7 +242,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-22)(5a5fd97) Merge pull request #269 from EgbertRijke/group-theory by noreply
+(2022-07-25)(633b13f) Merge pull request #270 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

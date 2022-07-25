@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/finite-group-theory/finite-groups.lagda.md.</p>
-<p>Version of Friday, July 22, 2022, 12:34 PM</p>
+<p>Version of Monday, July 25, 2022, 04:36 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -48,7 +48,7 @@
   <a id="695" class="Symbol">(</a> <a id="697" href="foundation.propositional-truncations.html#5775" class="Function">apply-universal-property-trunc-Prop</a><a id="732" class="Symbol">)</a>
 <a id="734" class="Keyword">open</a> <a id="739" class="Keyword">import</a> <a id="746" href="foundation.set-truncations.html" class="Module">foundation.set-truncations</a> <a id="773" class="Keyword">using</a> <a id="779" class="Symbol">(</a><a id="780" href="foundation.set-truncations.html#4010" class="Function">type-trunc-Set</a><a id="794" class="Symbol">)</a>
 <a id="796" class="Keyword">open</a> <a id="801" class="Keyword">import</a> <a id="808" href="foundation.type-arithmetic-dependent-pair-types.html" class="Module">foundation.type-arithmetic-dependent-pair-types</a> <a id="856" class="Keyword">using</a>
-  <a id="864" class="Symbol">(</a> <a id="866" href="foundation-core.type-arithmetic-dependent-pair-types.html#11512" class="Function">equiv-right-swap-Σ</a><a id="884" class="Symbol">)</a>
+  <a id="864" class="Symbol">(</a> <a id="866" href="foundation-core.type-arithmetic-dependent-pair-types.html#11376" class="Function">equiv-right-swap-Σ</a><a id="884" class="Symbol">)</a>
 <a id="886" class="Keyword">open</a> <a id="891" class="Keyword">import</a> <a id="898" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="925" class="Keyword">using</a> <a id="931" class="Symbol">(</a><a id="932" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="937" class="Symbol">;</a> <a id="939" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="941" class="Symbol">;</a> <a id="943" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="947" class="Symbol">;</a> <a id="949" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="954" class="Symbol">)</a>
 
 <a id="957" class="Keyword">open</a> <a id="962" class="Keyword">import</a> <a id="969" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="989" class="Keyword">using</a>
@@ -140,7 +140,7 @@
   <a id="4278" class="Keyword">where</a>
   <a id="4286" href="finite-group-theory.finite-groups.html#4286" class="Function">e</a> <a id="4288" class="Symbol">:</a> <a id="4290" href="finite-group-theory.finite-groups.html#2182" class="Function">Group-of-Order</a> <a id="4305" href="finite-group-theory.finite-groups.html#4084" class="Bound">l</a> <a id="4307" href="finite-group-theory.finite-groups.html#4089" class="Bound">n</a> <a id="4309" href="foundation-core.equivalences.html#1621" class="Function Operator">≃</a>
       <a id="4317" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="4319" class="Symbol">(</a><a id="4320" href="finite-group-theory.finite-semigroups.html#2195" class="Function">Semigroup-of-Order</a> <a id="4339" href="finite-group-theory.finite-groups.html#4084" class="Bound">l</a> <a id="4341" href="finite-group-theory.finite-groups.html#4089" class="Bound">n</a><a id="4342" class="Symbol">)</a> <a id="4344" class="Symbol">(λ</a> <a id="4347" href="finite-group-theory.finite-groups.html#4347" class="Bound">X</a> <a id="4349" class="Symbol">→</a> <a id="4351" href="group-theory.groups.html#2339" class="Function">is-group</a> <a id="4360" class="Symbol">(</a><a id="4361" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="4365" href="finite-group-theory.finite-groups.html#4347" class="Bound">X</a><a id="4366" class="Symbol">))</a>
-  <a id="4371" href="finite-group-theory.finite-groups.html#4286" class="Function">e</a> <a id="4373" class="Symbol">=</a> <a id="4375" href="foundation-core.type-arithmetic-dependent-pair-types.html#11512" class="Function">equiv-right-swap-Σ</a>
+  <a id="4371" href="finite-group-theory.finite-groups.html#4286" class="Function">e</a> <a id="4373" class="Symbol">=</a> <a id="4375" href="foundation-core.type-arithmetic-dependent-pair-types.html#11376" class="Function">equiv-right-swap-Σ</a>
 
 <a id="number-of-groups-of-order"></a><a id="4395" href="finite-group-theory.finite-groups.html#4395" class="Function">number-of-groups-of-order</a> <a id="4421" class="Symbol">:</a> <a id="4423" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="4425" class="Symbol">→</a> <a id="4427" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a>
 <a id="4429" href="finite-group-theory.finite-groups.html#4395" class="Function">number-of-groups-of-order</a> <a id="4455" href="finite-group-theory.finite-groups.html#4455" class="Bound">n</a> <a id="4457" class="Symbol">=</a>
@@ -158,7 +158,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-22)(5a5fd97) Merge pull request #269 from EgbertRijke/group-theory by noreply
+(2022-07-25)(633b13f) Merge pull request #270 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
