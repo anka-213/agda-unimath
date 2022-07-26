@@ -1,0 +1,22 @@
+---
+title: Cospans
+---
+
+<pre class="Agda"><a id="33" class="Keyword">module</a> <a id="40" href="foundation-core.cospans.html" class="Module">foundation-core.cospans</a> <a id="64" class="Keyword">where</a>
+
+<a id="71" class="Keyword">open</a> <a id="76" class="Keyword">import</a> <a id="83" href="foundation-core.cartesian-product-types.html" class="Module">foundation-core.cartesian-product-types</a>
+<a id="123" class="Keyword">open</a> <a id="128" class="Keyword">import</a> <a id="135" href="foundation-core.dependent-pair-types.html" class="Module">foundation-core.dependent-pair-types</a>
+<a id="172" class="Keyword">open</a> <a id="177" class="Keyword">import</a> <a id="184" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a>
+</pre>
+## Definition
+
+### Cospans
+
+A cospan is a pair of functions with a common codomain
+
+<pre class="Agda"><a id="cospan"></a><a id="313" href="foundation-core.cospans.html#313" class="Function">cospan</a> <a id="320" class="Symbol">:</a>
+  <a id="324" class="Symbol">{</a><a id="325" href="foundation-core.cospans.html#325" class="Bound">l1</a> <a id="328" href="foundation-core.cospans.html#328" class="Bound">l2</a> <a id="331" class="Symbol">:</a> <a id="333" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="338" class="Symbol">}</a> <a id="340" class="Symbol">(</a><a id="341" href="foundation-core.cospans.html#341" class="Bound">l</a> <a id="343" class="Symbol">:</a> <a id="345" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="350" class="Symbol">)</a> <a id="352" class="Symbol">(</a><a id="353" href="foundation-core.cospans.html#353" class="Bound">A</a> <a id="355" class="Symbol">:</a> <a id="357" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="360" href="foundation-core.cospans.html#325" class="Bound">l1</a><a id="362" class="Symbol">)</a> <a id="364" class="Symbol">(</a><a id="365" href="foundation-core.cospans.html#365" class="Bound">B</a> <a id="367" class="Symbol">:</a> <a id="369" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="372" href="foundation-core.cospans.html#328" class="Bound">l2</a><a id="374" class="Symbol">)</a> <a id="376" class="Symbol">→</a>
+  <a id="380" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="383" class="Symbol">(</a><a id="384" href="foundation-core.cospans.html#325" class="Bound">l1</a> <a id="387" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="389" class="Symbol">(</a><a id="390" href="foundation-core.cospans.html#328" class="Bound">l2</a> <a id="393" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="395" class="Symbol">(</a><a id="396" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="401" href="foundation-core.cospans.html#341" class="Bound">l</a><a id="402" class="Symbol">)))</a>
+<a id="406" href="foundation-core.cospans.html#313" class="Function">cospan</a> <a id="413" href="foundation-core.cospans.html#413" class="Bound">l</a> <a id="415" href="foundation-core.cospans.html#415" class="Bound">A</a> <a id="417" href="foundation-core.cospans.html#417" class="Bound">B</a> <a id="419" class="Symbol">=</a>
+  <a id="423" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="425" class="Symbol">(</a><a id="426" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="429" href="foundation-core.cospans.html#413" class="Bound">l</a><a id="430" class="Symbol">)</a> <a id="432" class="Symbol">(λ</a> <a id="435" href="foundation-core.cospans.html#435" class="Bound">X</a> <a id="437" class="Symbol">→</a> <a id="439" class="Symbol">(</a><a id="440" href="foundation-core.cospans.html#415" class="Bound">A</a> <a id="442" class="Symbol">→</a> <a id="444" href="foundation-core.cospans.html#435" class="Bound">X</a><a id="445" class="Symbol">)</a> <a id="447" href="foundation-core.cartesian-product-types.html#590" class="Function Operator">×</a> <a id="449" class="Symbol">(</a><a id="450" href="foundation-core.cospans.html#417" class="Bound">B</a> <a id="452" class="Symbol">→</a> <a id="454" href="foundation-core.cospans.html#435" class="Bound">X</a><a id="455" class="Symbol">))</a>
+</pre>
