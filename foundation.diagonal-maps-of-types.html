@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/diagonal-maps-of-types.lagda.md.</p>
-<p>Version of Tuesday, July 26, 2022, 03:26 PM</p>
+<p>Version of Wednesday, July 27, 2022, 02:24 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -52,7 +52,7 @@
 <a id="976" class="Keyword">open</a> <a id="981" class="Keyword">import</a> <a id="988" href="foundation-core.homotopies.html" class="Module">foundation-core.homotopies</a> <a id="1015" class="Keyword">using</a> <a id="1021" class="Symbol">(</a><a id="1022" href="foundation-core.homotopies.html#627" class="Function Operator">_~_</a><a id="1025" class="Symbol">)</a>
 <a id="1027" class="Keyword">open</a> <a id="1032" class="Keyword">import</a> <a id="1039" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a> <a id="1070" class="Keyword">using</a> <a id="1076" class="Symbol">(</a><a id="1077" href="foundation-core.identity-types.html#1865" class="Function Operator">_＝_</a><a id="1080" class="Symbol">;</a> <a id="1082" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="1086" class="Symbol">;</a> <a id="1088" href="foundation-core.identity-types.html#2425" class="Function Operator">_∙_</a><a id="1091" class="Symbol">;</a> <a id="1093" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="1096" class="Symbol">;</a> <a id="1098" href="foundation-core.identity-types.html#4003" class="Function">ap</a><a id="1100" class="Symbol">)</a>
 <a id="1102" class="Keyword">open</a> <a id="1107" class="Keyword">import</a> <a id="1114" href="foundation-core.propositional-maps.html" class="Module">foundation-core.propositional-maps</a> <a id="1149" class="Keyword">using</a>
-  <a id="1157" class="Symbol">(</a> <a id="1159" href="foundation-core.propositional-maps.html#1263" class="Function">is-prop-map</a><a id="1170" class="Symbol">;</a> <a id="1172" href="foundation-core.propositional-maps.html#1879" class="Function">is-prop-map-is-emb</a><a id="1190" class="Symbol">;</a> <a id="1192" href="foundation-core.propositional-maps.html#1537" class="Function">is-emb-is-prop-map</a><a id="1210" class="Symbol">)</a>
+  <a id="1157" class="Symbol">(</a> <a id="1159" href="foundation-core.propositional-maps.html#1263" class="Function">is-prop-map</a><a id="1170" class="Symbol">;</a> <a id="1172" href="foundation-core.propositional-maps.html#1872" class="Function">is-prop-map-is-emb</a><a id="1190" class="Symbol">;</a> <a id="1192" href="foundation-core.propositional-maps.html#1537" class="Function">is-emb-is-prop-map</a><a id="1210" class="Symbol">)</a>
 <a id="1212" class="Keyword">open</a> <a id="1217" class="Keyword">import</a> <a id="1224" href="foundation-core.propositions.html" class="Module">foundation-core.propositions</a> <a id="1253" class="Keyword">using</a>
   <a id="1261" class="Symbol">(</a> <a id="1263" href="foundation-core.propositions.html#1309" class="Function">is-prop</a><a id="1270" class="Symbol">;</a> <a id="1272" href="foundation-core.propositions.html#2405" class="Function">is-prop-all-elements-equal</a><a id="1298" class="Symbol">)</a>
 <a id="1300" class="Keyword">open</a> <a id="1305" class="Keyword">import</a> <a id="1312" href="foundation-core.sets.html" class="Module">foundation-core.sets</a> <a id="1333" class="Keyword">using</a>
@@ -149,7 +149,7 @@
   <a id="4353" class="Keyword">abstract</a>
     <a id="4366" href="foundation.diagonal-maps-of-types.html#4366" class="Function">is-set-is-emb-diagonal</a> <a id="4389" class="Symbol">:</a> <a id="4391" href="foundation-core.embeddings.html#992" class="Function">is-emb</a> <a id="4398" class="Symbol">(</a><a id="4399" href="foundation.diagonal-maps-of-types.html#1894" class="Function">diagonal</a> <a id="4408" href="foundation.diagonal-maps-of-types.html#3651" class="Bound">A</a><a id="4409" class="Symbol">)</a> <a id="4411" class="Symbol">→</a> <a id="4413" href="foundation-core.sets.html#1113" class="Function">is-set</a> <a id="4420" href="foundation.diagonal-maps-of-types.html#3651" class="Bound">A</a>
     <a id="4426" href="foundation.diagonal-maps-of-types.html#4366" class="Function">is-set-is-emb-diagonal</a> <a id="4449" href="foundation.diagonal-maps-of-types.html#4449" class="Bound">H</a> <a id="4451" class="Symbol">=</a>
-      <a id="4459" href="foundation.diagonal-maps-of-types.html#4209" class="Function">is-set-is-prop-map-diagonal</a> <a id="4487" class="Symbol">(</a><a id="4488" href="foundation-core.propositional-maps.html#1879" class="Function">is-prop-map-is-emb</a> <a id="4507" href="foundation.diagonal-maps-of-types.html#4449" class="Bound">H</a><a id="4508" class="Symbol">)</a>
+      <a id="4459" href="foundation.diagonal-maps-of-types.html#4209" class="Function">is-set-is-prop-map-diagonal</a> <a id="4487" class="Symbol">(</a><a id="4488" href="foundation-core.propositional-maps.html#1872" class="Function">is-prop-map-is-emb</a> <a id="4507" href="foundation.diagonal-maps-of-types.html#4449" class="Bound">H</a><a id="4508" class="Symbol">)</a>
 
   <a id="4513" class="Keyword">abstract</a>
     <a id="4526" href="foundation.diagonal-maps-of-types.html#4526" class="Function">is-1-type-is-0-map-diagonal</a> <a id="4554" class="Symbol">:</a> <a id="4556" href="foundation-core.0-maps.html#1181" class="Function">is-0-map</a> <a id="4565" class="Symbol">(</a><a id="4566" href="foundation.diagonal-maps-of-types.html#1894" class="Function">diagonal</a> <a id="4575" href="foundation.diagonal-maps-of-types.html#3651" class="Bound">A</a><a id="4576" class="Symbol">)</a> <a id="4578" class="Symbol">→</a> <a id="4580" href="foundation-core.1-types.html#807" class="Function">is-1-type</a> <a id="4590" href="foundation.diagonal-maps-of-types.html#3651" class="Bound">A</a>
@@ -206,7 +206,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-26)(e739f21) Merge pull request #271 from EgbertRijke/group-theory by noreply
+(2022-07-27)(5f50eee) Merge pull request #272 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

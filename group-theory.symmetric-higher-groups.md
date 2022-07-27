@@ -42,7 +42,7 @@ The symmetric higher group of a type `X` is the connected component of the unive
   <a id="1047" href="group-theory.symmetric-higher-groups.html#1047" class="Function">is-0-connected-classifying-type-symmetric-∞-Group</a> <a id="1097" class="Symbol">:</a>
     <a id="1103" href="foundation.0-connected-types.html#1858" class="Function">is-0-connected</a> <a id="1118" href="group-theory.symmetric-higher-groups.html#621" class="Function">classifying-type-symmetric-∞-Group</a>
   <a id="1155" href="group-theory.symmetric-higher-groups.html#1047" class="Function">is-0-connected-classifying-type-symmetric-∞-Group</a> <a id="1205" class="Symbol">=</a>
-    <a id="1211" href="foundation.connected-components-universes.html#6382" class="Function">is-0-connected-component-UU</a> <a id="1239" href="group-theory.symmetric-higher-groups.html#600" class="Bound">X</a>
+    <a id="1211" href="foundation.connected-components-universes.html#6341" class="Function">is-0-connected-component-UU</a> <a id="1239" href="group-theory.symmetric-higher-groups.html#600" class="Bound">X</a>
   
   <a id="1246" href="group-theory.symmetric-higher-groups.html#1246" class="Function">symmetric-∞-Group</a> <a id="1264" class="Symbol">:</a> <a id="1266" href="group-theory.higher-groups.html#1626" class="Function">∞-Group</a> <a id="1274" class="Symbol">(</a><a id="1275" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1280" href="group-theory.symmetric-higher-groups.html#588" class="Bound">l</a><a id="1281" class="Symbol">)</a>
   <a id="1285" href="group-theory.symmetric-higher-groups.html#1246" class="Function">symmetric-∞-Group</a> <a id="1303" class="Symbol">=</a>

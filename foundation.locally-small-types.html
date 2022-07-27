@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/locally-small-types.lagda.md.</p>
-<p>Version of Tuesday, July 26, 2022, 03:26 PM</p>
+<p>Version of Wednesday, July 27, 2022, 02:24 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -43,7 +43,7 @@
 <a id="436" class="Keyword">open</a> <a id="441" class="Keyword">import</a> <a id="448" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="472" class="Keyword">using</a> <a id="478" class="Symbol">(</a><a id="479" href="foundation-core.propositions.html#1309" class="Function">is-prop</a><a id="486" class="Symbol">;</a> <a id="488" href="foundation-core.propositions.html#6158" class="Function">is-prop-Π</a><a id="497" class="Symbol">;</a> <a id="499" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a><a id="506" class="Symbol">)</a>
 <a id="508" class="Keyword">open</a> <a id="513" class="Keyword">import</a> <a id="520" href="foundation.small-types.html" class="Module">foundation.small-types</a> <a id="543" class="Keyword">using</a>
   <a id="551" class="Symbol">(</a> <a id="553" href="foundation.small-types.html#1463" class="Function">is-small</a><a id="561" class="Symbol">;</a> <a id="563" href="foundation.small-types.html#3457" class="Function">is-small-is-contr</a><a id="580" class="Symbol">;</a> <a id="582" href="foundation.small-types.html#2516" class="Function">is-small-equiv</a><a id="596" class="Symbol">;</a> <a id="598" href="foundation.small-types.html#3749" class="Function">is-small-Π</a><a id="608" class="Symbol">;</a> <a id="610" href="foundation.small-types.html#4606" class="Function">is-prop-is-small</a><a id="626" class="Symbol">)</a>
-<a id="628" class="Keyword">open</a> <a id="633" class="Keyword">import</a> <a id="640" href="foundation.univalence.html" class="Module">foundation.univalence</a> <a id="662" class="Keyword">using</a> <a id="668" class="Symbol">(</a><a id="669" href="foundation-core.univalence.html#2255" class="Function">equiv-univalence</a><a id="685" class="Symbol">)</a>
+<a id="628" class="Keyword">open</a> <a id="633" class="Keyword">import</a> <a id="640" href="foundation.univalence.html" class="Module">foundation.univalence</a> <a id="662" class="Keyword">using</a> <a id="668" class="Symbol">(</a><a id="669" href="foundation-core.univalence.html#2233" class="Function">equiv-univalence</a><a id="685" class="Symbol">)</a>
 <a id="687" class="Keyword">open</a> <a id="692" class="Keyword">import</a> <a id="699" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="726" class="Keyword">using</a> <a id="732" class="Symbol">(</a><a id="733" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="738" class="Symbol">;</a> <a id="740" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="742" class="Symbol">;</a> <a id="744" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="748" class="Symbol">;</a> <a id="750" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="753" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
@@ -73,7 +73,7 @@
   <a id="is-locally-small-UU"></a><a id="1629" href="foundation.locally-small-types.html#1629" class="Function">is-locally-small-UU</a> <a id="1649" class="Symbol">:</a>
     <a id="1655" class="Symbol">{</a><a id="1656" href="foundation.locally-small-types.html#1656" class="Bound">l</a> <a id="1658" class="Symbol">:</a> <a id="1660" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1665" class="Symbol">}</a> <a id="1667" class="Symbol">→</a> <a id="1669" href="foundation.locally-small-types.html#861" class="Function">is-locally-small</a> <a id="1686" href="foundation.locally-small-types.html#1656" class="Bound">l</a> <a id="1688" class="Symbol">(</a><a id="1689" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1692" href="foundation.locally-small-types.html#1656" class="Bound">l</a><a id="1693" class="Symbol">)</a>
   <a id="1697" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1701" class="Symbol">(</a><a id="1702" href="foundation.locally-small-types.html#1629" class="Function">is-locally-small-UU</a> <a id="1722" href="foundation.locally-small-types.html#1722" class="Bound">X</a> <a id="1724" href="foundation.locally-small-types.html#1724" class="Bound">Y</a><a id="1725" class="Symbol">)</a> <a id="1727" class="Symbol">=</a> <a id="1729" href="foundation.locally-small-types.html#1722" class="Bound">X</a> <a id="1731" href="foundation-core.equivalences.html#1621" class="Function Operator">≃</a> <a id="1733" href="foundation.locally-small-types.html#1724" class="Bound">Y</a>
-  <a id="1737" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1741" class="Symbol">(</a><a id="1742" href="foundation.locally-small-types.html#1629" class="Function">is-locally-small-UU</a> <a id="1762" href="foundation.locally-small-types.html#1762" class="Bound">X</a> <a id="1764" href="foundation.locally-small-types.html#1764" class="Bound">Y</a><a id="1765" class="Symbol">)</a> <a id="1767" class="Symbol">=</a> <a id="1769" href="foundation-core.univalence.html#2255" class="Function">equiv-univalence</a>
+  <a id="1737" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1741" class="Symbol">(</a><a id="1742" href="foundation.locally-small-types.html#1629" class="Function">is-locally-small-UU</a> <a id="1762" href="foundation.locally-small-types.html#1762" class="Bound">X</a> <a id="1764" href="foundation.locally-small-types.html#1764" class="Bound">Y</a><a id="1765" class="Symbol">)</a> <a id="1767" class="Symbol">=</a> <a id="1769" href="foundation-core.univalence.html#2233" class="Function">equiv-univalence</a>
 </pre>
 <h3 id="any-product-of-locally-small-types-indexed-by-a-small-type-is-small">Any product of locally small types indexed by a small type is small</h3>
 <pre class="Agda"><a id="1872" class="Keyword">abstract</a>
@@ -99,7 +99,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-26)(e739f21) Merge pull request #271 from EgbertRijke/group-theory by noreply
+(2022-07-27)(5f50eee) Merge pull request #272 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

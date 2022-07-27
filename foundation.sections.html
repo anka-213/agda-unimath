@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/sections.lagda.md.</p>
-<p>Version of Tuesday, July 26, 2022, 03:26 PM</p>
+<p>Version of Wednesday, July 27, 2022, 02:24 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -53,7 +53,7 @@
 <a id="853" class="Keyword">open</a> <a id="858" class="Keyword">import</a> <a id="865" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="891" class="Keyword">using</a> <a id="897" class="Symbol">(</a><a id="898" href="foundation-core.identity-types.html#1865" class="Function Operator">_＝_</a><a id="901" class="Symbol">;</a> <a id="903" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="907" class="Symbol">;</a> <a id="909" href="foundation-core.identity-types.html#4003" class="Function">ap</a><a id="911" class="Symbol">)</a>
 <a id="913" class="Keyword">open</a> <a id="918" class="Keyword">import</a> <a id="925" href="foundation.injective-maps.html" class="Module">foundation.injective-maps</a> <a id="951" class="Keyword">using</a> <a id="957" class="Symbol">(</a><a id="958" href="foundation.injective-maps.html#1309" class="Function">is-injective</a><a id="970" class="Symbol">)</a>
 <a id="972" class="Keyword">open</a> <a id="977" class="Keyword">import</a> <a id="984" href="foundation.structure-identity-principle.html" class="Module">foundation.structure-identity-principle</a> <a id="1024" class="Keyword">using</a>
-  <a id="1032" class="Symbol">(</a> <a id="1034" href="foundation.structure-identity-principle.html#2994" class="Function">extensionality-Σ</a><a id="1050" class="Symbol">)</a>
+  <a id="1032" class="Symbol">(</a> <a id="1034" href="foundation.structure-identity-principle.html#2926" class="Function">extensionality-Σ</a><a id="1050" class="Symbol">)</a>
 <a id="1052" class="Keyword">open</a> <a id="1057" class="Keyword">import</a> <a id="1064" href="foundation.type-arithmetic-dependent-pair-types.html" class="Module">foundation.type-arithmetic-dependent-pair-types</a> <a id="1112" class="Keyword">using</a>
   <a id="1120" class="Symbol">(</a> <a id="1122" href="foundation-core.type-arithmetic-dependent-pair-types.html#3907" class="Function">is-equiv-pr1-is-contr</a><a id="1143" class="Symbol">;</a> <a id="1145" href="foundation-core.type-arithmetic-dependent-pair-types.html#4439" class="Function">is-contr-is-equiv-pr1</a><a id="1166" class="Symbol">;</a> <a id="1168" href="foundation-core.type-arithmetic-dependent-pair-types.html#3090" class="Function">left-unit-law-Σ-is-contr</a><a id="1192" class="Symbol">;</a>
     <a id="1198" href="foundation-core.type-arithmetic-dependent-pair-types.html#11376" class="Function">equiv-right-swap-Σ</a><a id="1216" class="Symbol">)</a>
@@ -63,7 +63,7 @@
 
 <a id="1402" class="Keyword">open</a> <a id="1407" class="Keyword">import</a> <a id="1414" href="foundation-core.fibers-of-maps.html" class="Module">foundation-core.fibers-of-maps</a> <a id="1445" class="Keyword">using</a> <a id="1451" class="Symbol">(</a><a id="1452" href="foundation-core.fibers-of-maps.html#942" class="Function">fib</a><a id="1455" class="Symbol">;</a> <a id="1457" href="foundation-core.fibers-of-maps.html#5254" class="Function">equiv-total-fib</a><a id="1472" class="Symbol">)</a>
 <a id="1474" class="Keyword">open</a> <a id="1479" class="Keyword">import</a> <a id="1486" href="foundation-core.functoriality-dependent-pair-types.html" class="Module">foundation-core.functoriality-dependent-pair-types</a> <a id="1537" class="Keyword">using</a>
-  <a id="1545" class="Symbol">(</a> <a id="1547" href="foundation-core.functoriality-dependent-pair-types.html#10434" class="Function">equiv-Σ</a><a id="1554" class="Symbol">)</a>
+  <a id="1545" class="Symbol">(</a> <a id="1547" href="foundation-core.functoriality-dependent-pair-types.html#10884" class="Function">equiv-Σ</a><a id="1554" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>Any dependent function induces a section of the projection map</p>
@@ -139,7 +139,7 @@
           <a id="3816" class="Symbol">(</a> <a id="3818" href="foundation-core.contractible-types.html#6898" class="Function">is-contr-Π</a> <a id="3829" class="Symbol">(λ</a> <a id="3832" href="foundation.sections.html#3832" class="Bound">x</a> <a id="3834" class="Symbol">→</a> <a id="3836" href="foundation-core.contractible-types.html#2264" class="Function">is-contr-total-path&#39;</a> <a id="3857" href="foundation.sections.html#3832" class="Bound">x</a><a id="3858" class="Symbol">)))</a>
         <a id="3870" class="Symbol">(</a> <a id="3872" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="3877" href="foundation-core.functions.html#322" class="Function">id</a> <a id="3880" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a><a id="3889" class="Symbol">))</a> <a id="3892" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
       <a id="3901" class="Symbol">(</a> <a id="3903" href="foundation-core.type-arithmetic-dependent-pair-types.html#11376" class="Function">equiv-right-swap-Σ</a><a id="3921" class="Symbol">))</a> <a id="3924" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
-    <a id="3931" class="Symbol">(</a> <a id="3933" href="foundation-core.functoriality-dependent-pair-types.html#10434" class="Function">equiv-Σ</a>
+    <a id="3931" class="Symbol">(</a> <a id="3933" href="foundation-core.functoriality-dependent-pair-types.html#10884" class="Function">equiv-Σ</a>
       <a id="3947" class="Symbol">(</a> <a id="3949" class="Symbol">λ</a> <a id="3951" href="foundation.sections.html#3951" class="Bound">s</a> <a id="3953" class="Symbol">→</a> <a id="3955" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="3959" href="foundation.sections.html#3951" class="Bound">s</a> <a id="3961" href="foundation-core.homotopies.html#627" class="Function Operator">~</a> <a id="3963" href="foundation-core.functions.html#322" class="Function">id</a><a id="3965" class="Symbol">)</a>
       <a id="3973" class="Symbol">(</a> <a id="3975" href="foundation.type-theoretic-principle-of-choice.html#4367" class="Function">distributive-Π-Σ</a><a id="3991" class="Symbol">)</a>
       <a id="3999" class="Symbol">(</a> <a id="4001" class="Symbol">λ</a> <a id="4003" href="foundation.sections.html#4003" class="Bound">s</a> <a id="4005" class="Symbol">→</a> <a id="4007" href="foundation-core.equivalences.html#2494" class="Function">id-equiv</a><a id="4015" class="Symbol">))</a>
@@ -153,7 +153,7 @@
 
   <a id="4219" href="foundation.sections.html#4219" class="Function">extensionality-sec</a> <a id="4238" class="Symbol">:</a> <a id="4240" class="Symbol">(</a><a id="4241" href="foundation.sections.html#4241" class="Bound">s</a> <a id="4243" href="foundation.sections.html#4243" class="Bound">t</a> <a id="4245" class="Symbol">:</a> <a id="4247" href="foundation-core.sections.html#534" class="Function">sec</a> <a id="4251" href="foundation.sections.html#4083" class="Bound">f</a><a id="4252" class="Symbol">)</a> <a id="4254" class="Symbol">→</a> <a id="4256" class="Symbol">(</a><a id="4257" href="foundation.sections.html#4241" class="Bound">s</a> <a id="4259" href="foundation-core.identity-types.html#1865" class="Function Operator">＝</a> <a id="4261" href="foundation.sections.html#4243" class="Bound">t</a><a id="4262" class="Symbol">)</a> <a id="4264" href="foundation-core.equivalences.html#1621" class="Function Operator">≃</a> <a id="4266" href="foundation.sections.html#4105" class="Function">htpy-sec</a> <a id="4275" href="foundation.sections.html#4241" class="Bound">s</a> <a id="4277" href="foundation.sections.html#4243" class="Bound">t</a>
   <a id="4281" href="foundation.sections.html#4219" class="Function">extensionality-sec</a> <a id="4300" class="Symbol">(</a><a id="4301" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="4306" href="foundation.sections.html#4306" class="Bound">s</a> <a id="4308" href="foundation.sections.html#4308" class="Bound">H</a><a id="4309" class="Symbol">)</a> <a id="4311" class="Symbol">=</a>
-    <a id="4317" href="foundation.structure-identity-principle.html#2994" class="Function">extensionality-Σ</a>
+    <a id="4317" href="foundation.structure-identity-principle.html#2926" class="Function">extensionality-Σ</a>
       <a id="4340" class="Symbol">(</a> <a id="4342" class="Symbol">λ</a> <a id="4344" class="Symbol">{</a><a id="4345" href="foundation.sections.html#4345" class="Bound">s&#39;</a><a id="4347" class="Symbol">}</a> <a id="4349" href="foundation.sections.html#4349" class="Bound">H&#39;</a> <a id="4352" href="foundation.sections.html#4352" class="Bound">K</a> <a id="4354" class="Symbol">→</a> <a id="4356" href="foundation.sections.html#4308" class="Bound">H</a> <a id="4358" href="foundation-core.homotopies.html#627" class="Function Operator">~</a> <a id="4360" class="Symbol">((</a><a id="4362" href="foundation.sections.html#4083" class="Bound">f</a> <a id="4364" href="foundation-core.homotopies.html#1877" class="Function Operator">·l</a> <a id="4367" href="foundation.sections.html#4352" class="Bound">K</a><a id="4368" class="Symbol">)</a> <a id="4370" href="foundation-core.homotopies.html#1167" class="Function Operator">∙h</a> <a id="4373" href="foundation.sections.html#4349" class="Bound">H&#39;</a><a id="4375" class="Symbol">))</a>
       <a id="4384" class="Symbol">(</a> <a id="4386" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a><a id="4395" class="Symbol">)</a>
       <a id="4403" class="Symbol">(</a> <a id="4405" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a><a id="4414" class="Symbol">)</a>
@@ -202,7 +202,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-26)(e739f21) Merge pull request #271 from EgbertRijke/group-theory by noreply
+(2022-07-27)(5f50eee) Merge pull request #272 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

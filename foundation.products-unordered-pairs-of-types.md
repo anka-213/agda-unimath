@@ -53,7 +53,7 @@ Given an unordered pair of types, we can take their product. This is a commutati
           <a id="1913" class="Symbol">(</a> <a id="1915" href="foundation.products-unordered-pairs-of-types.html#1735" class="Bound">i</a><a id="1916" class="Symbol">)))</a>
       <a id="1926" class="Symbol">(</a> <a id="1928" href="foundation.identity-types.html#3828" class="Function">equiv-tr</a>
         <a id="1945" class="Symbol">(</a> <a id="1947" href="foundation.unordered-pairs.html#3488" class="Function">element-unordered-pair</a> <a id="1970" href="foundation.products-unordered-pairs-of-types.html#1733" class="Bound">A</a><a id="1971" class="Symbol">)</a>
-        <a id="1981" class="Symbol">(</a> <a id="1983" href="univalent-combinatorics.2-element-types.html#23916" class="Function">compute-map-equiv-point-2-Element-Type&#39;</a>
+        <a id="1981" class="Symbol">(</a> <a id="1983" href="univalent-combinatorics.2-element-types.html#23812" class="Function">compute-map-equiv-point-2-Element-Type&#39;</a>
           <a id="2033" class="Symbol">(</a> <a id="2035" href="foundation.unordered-pairs.html#2666" class="Function">2-element-type-unordered-pair</a> <a id="2065" href="foundation.products-unordered-pairs-of-types.html#1733" class="Bound">A</a><a id="2066" class="Symbol">)</a>
           <a id="2078" class="Symbol">(</a> <a id="2080" href="foundation.products-unordered-pairs-of-types.html#1735" class="Bound">i</a><a id="2081" class="Symbol">))))</a> <a id="2086" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
     <a id="2093" class="Symbol">(</a> <a id="2095" href="univalent-combinatorics.universal-property-standard-finite-types.html#2009" class="Function">equiv-dependent-universal-property-Fin-two-ℕ</a>
