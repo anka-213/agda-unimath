@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/finite-types.lagda.md.</p>
-<p>Version of Wednesday, July 27, 2022, 02:25 PM</p>
+<p>Version of Friday, July 29, 2022, 10:10 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -72,7 +72,7 @@
 <a id="1919" class="Keyword">open</a> <a id="1924" class="Keyword">import</a> <a id="1931" href="foundation.functoriality-propositional-truncation.html" class="Module">foundation.functoriality-propositional-truncation</a> <a id="1981" class="Keyword">using</a>
   <a id="1989" class="Symbol">(</a> <a id="1991" href="foundation.functoriality-propositional-truncation.html#1456" class="Function">map-trunc-Prop</a><a id="2005" class="Symbol">)</a>
 <a id="2007" class="Keyword">open</a> <a id="2012" class="Keyword">import</a> <a id="2019" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="2045" class="Keyword">using</a>
-  <a id="2053" class="Symbol">(</a> <a id="2055" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="2059" class="Symbol">;</a> <a id="2061" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a><a id="2063" class="Symbol">;</a> <a id="2065" href="foundation-core.identity-types.html#2425" class="Function Operator">_∙_</a><a id="2068" class="Symbol">;</a> <a id="2070" href="foundation-core.identity-types.html#4003" class="Function">ap</a><a id="2072" class="Symbol">;</a> <a id="2074" href="foundation-core.identity-types.html#5702" class="Function">tr</a><a id="2076" class="Symbol">;</a> <a id="2078" href="foundation.identity-types.html#3828" class="Function">equiv-tr</a><a id="2086" class="Symbol">;</a> <a id="2088" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="2091" class="Symbol">)</a>
+  <a id="2053" class="Symbol">(</a> <a id="2055" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="2059" class="Symbol">;</a> <a id="2061" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a><a id="2063" class="Symbol">;</a> <a id="2065" href="foundation-core.identity-types.html#2425" class="Function Operator">_∙_</a><a id="2068" class="Symbol">;</a> <a id="2070" href="foundation-core.identity-types.html#4003" class="Function">ap</a><a id="2072" class="Symbol">;</a> <a id="2074" href="foundation-core.identity-types.html#5702" class="Function">tr</a><a id="2076" class="Symbol">;</a> <a id="2078" href="foundation.identity-types.html#3838" class="Function">equiv-tr</a><a id="2086" class="Symbol">;</a> <a id="2088" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="2091" class="Symbol">)</a>
 <a id="2093" class="Keyword">open</a> <a id="2098" class="Keyword">import</a> <a id="2105" href="foundation.mere-equivalences.html" class="Module">foundation.mere-equivalences</a> <a id="2134" class="Keyword">using</a>
   <a id="2142" class="Symbol">(</a> <a id="2144" href="foundation.mere-equivalences.html#1301" class="Function">mere-equiv-Prop</a><a id="2159" class="Symbol">;</a> <a id="2161" href="foundation.mere-equivalences.html#1415" class="Function">mere-equiv</a><a id="2171" class="Symbol">;</a> <a id="2173" href="foundation.mere-equivalences.html#3474" class="Function">is-set-mere-equiv&#39;</a><a id="2191" class="Symbol">)</a>
 <a id="2193" class="Keyword">open</a> <a id="2198" class="Keyword">import</a> <a id="2205" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="2242" class="Keyword">using</a>
@@ -496,7 +496,7 @@
       <a id="16774" href="foundation-core.contractible-types.html#3813" class="Function">is-contr-equiv&#39;</a>
         <a id="16798" class="Symbol">(</a> <a id="16800" href="univalent-combinatorics.standard-finite-types.html#2393" class="Function">Fin</a> <a id="16804" class="Number">1</a><a id="16805" class="Symbol">)</a>
         <a id="16815" class="Symbol">(</a> <a id="16817" class="Symbol">(</a> <a id="16819" href="univalent-combinatorics.counting.html#2098" class="Function">equiv-count</a> <a id="16831" href="univalent-combinatorics.finite-types.html#16764" class="Bound">e</a><a id="16832" class="Symbol">)</a> <a id="16834" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
-          <a id="16847" class="Symbol">(</a> <a id="16849" href="foundation.identity-types.html#3828" class="Function">equiv-tr</a> <a id="16858" href="univalent-combinatorics.standard-finite-types.html#2393" class="Function">Fin</a>
+          <a id="16847" class="Symbol">(</a> <a id="16849" href="foundation.identity-types.html#3838" class="Function">equiv-tr</a> <a id="16858" href="univalent-combinatorics.standard-finite-types.html#2393" class="Function">Fin</a>
             <a id="16874" class="Symbol">(</a> <a id="16876" href="foundation-core.identity-types.html#2729" class="Function">inv</a> <a id="16880" href="univalent-combinatorics.finite-types.html#16689" class="Bound">p</a> <a id="16882" href="foundation-core.identity-types.html#2425" class="Function Operator">∙</a> <a id="16884" href="foundation-core.identity-types.html#2729" class="Function">inv</a> <a id="16888" class="Symbol">(</a><a id="16889" href="univalent-combinatorics.finite-types.html#13033" class="Function">compute-number-of-elements-is-finite</a> <a id="16926" href="univalent-combinatorics.finite-types.html#16764" class="Bound">e</a> <a id="16928" href="univalent-combinatorics.finite-types.html#16687" class="Bound">H</a><a id="16929" class="Symbol">))))</a>
         <a id="16942" class="Symbol">(</a> <a id="16944" href="univalent-combinatorics.standard-finite-types.html#4853" class="Function">is-contr-Fin-one-ℕ</a><a id="16962" class="Symbol">))</a>
 
@@ -723,7 +723,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-27)(5f50eee) Merge pull request #272 from EgbertRijke/group-theory by noreply
+(2022-07-29)(37e201a) Merge pull request #273 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

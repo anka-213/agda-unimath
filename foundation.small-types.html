@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/small-types.lagda.md.</p>
-<p>Version of Wednesday, July 27, 2022, 02:24 PM</p>
+<p>Version of Friday, July 29, 2022, 10:09 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -45,7 +45,7 @@
   <a id="530" class="Symbol">(</a> <a id="532" href="foundation.functoriality-dependent-function-types.html#4404" class="Function">equiv-Π</a><a id="539" class="Symbol">)</a>
 <a id="541" class="Keyword">open</a> <a id="546" class="Keyword">import</a> <a id="553" href="foundation.functoriality-dependent-pair-types.html" class="Module">foundation.functoriality-dependent-pair-types</a> <a id="599" class="Keyword">using</a>
   <a id="607" class="Symbol">(</a> <a id="609" href="foundation-core.functoriality-dependent-pair-types.html#10884" class="Function">equiv-Σ</a><a id="616" class="Symbol">;</a> <a id="618" href="foundation-core.functoriality-dependent-pair-types.html#7267" class="Function">equiv-tot</a><a id="627" class="Symbol">)</a>
-<a id="629" class="Keyword">open</a> <a id="634" class="Keyword">import</a> <a id="641" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="667" class="Keyword">using</a> <a id="673" class="Symbol">(</a><a id="674" href="foundation.identity-types.html#3828" class="Function">equiv-tr</a><a id="682" class="Symbol">;</a> <a id="684" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="687" class="Symbol">)</a>
+<a id="629" class="Keyword">open</a> <a id="634" class="Keyword">import</a> <a id="641" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="667" class="Keyword">using</a> <a id="673" class="Symbol">(</a><a id="674" href="foundation.identity-types.html#3838" class="Function">equiv-tr</a><a id="682" class="Symbol">;</a> <a id="684" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="687" class="Symbol">)</a>
 <a id="689" class="Keyword">open</a> <a id="694" class="Keyword">import</a> <a id="701" href="foundation.mere-equivalences.html" class="Module">foundation.mere-equivalences</a> <a id="730" class="Keyword">using</a> <a id="736" class="Symbol">(</a><a id="737" href="foundation.mere-equivalences.html#1415" class="Function">mere-equiv</a><a id="747" class="Symbol">)</a>
 <a id="749" class="Keyword">open</a> <a id="754" class="Keyword">import</a> <a id="761" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="798" class="Keyword">using</a>
   <a id="806" class="Symbol">(</a> <a id="808" href="foundation.propositional-truncations.html#5775" class="Function">apply-universal-property-trunc-Prop</a><a id="843" class="Symbol">)</a>
@@ -116,7 +116,7 @@
       <a id="3217" class="Symbol">(</a> <a id="3219" class="Symbol">λ</a> <a id="3221" href="foundation.small-types.html#3221" class="Bound">x</a> <a id="3223" class="Symbol">→</a> <a id="3225" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="3229" class="Symbol">(</a><a id="3230" href="foundation.small-types.html#3194" class="Bound">H</a> <a id="3232" class="Symbol">(</a><a id="3233" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a> <a id="3247" href="foundation.small-types.html#3191" class="Bound">e</a> <a id="3249" href="foundation.small-types.html#3221" class="Bound">x</a><a id="3250" class="Symbol">)))</a>
       <a id="3260" class="Symbol">(</a> <a id="3262" href="foundation.small-types.html#3191" class="Bound">e</a><a id="3263" class="Symbol">)</a>
       <a id="3271" class="Symbol">(</a> <a id="3273" class="Symbol">λ</a> <a id="3275" href="foundation.small-types.html#3275" class="Bound">a</a> <a id="3277" class="Symbol">→</a>
-        <a id="3287" class="Symbol">(</a> <a id="3289" href="foundation.identity-types.html#3828" class="Function">equiv-tr</a>
+        <a id="3287" class="Symbol">(</a> <a id="3289" href="foundation.identity-types.html#3838" class="Function">equiv-tr</a>
           <a id="3308" class="Symbol">(</a> <a id="3310" class="Symbol">λ</a> <a id="3312" href="foundation.small-types.html#3312" class="Bound">t</a> <a id="3314" class="Symbol">→</a> <a id="3316" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="3320" class="Symbol">(</a><a id="3321" href="foundation.small-types.html#3194" class="Bound">H</a> <a id="3323" href="foundation.small-types.html#3312" class="Bound">t</a><a id="3324" class="Symbol">))</a>
           <a id="3337" class="Symbol">(</a> <a id="3339" href="foundation-core.identity-types.html#2729" class="Function">inv</a> <a id="3343" class="Symbol">(</a><a id="3344" href="foundation-core.equivalences.html#5251" class="Function">isretr-map-inv-equiv</a> <a id="3365" href="foundation.small-types.html#3191" class="Bound">e</a> <a id="3367" href="foundation.small-types.html#3275" class="Bound">a</a><a id="3368" class="Symbol">)))</a> <a id="3372" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
         <a id="3383" class="Symbol">(</a> <a id="3385" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="3389" class="Symbol">(</a><a id="3390" href="foundation.small-types.html#3194" class="Bound">H</a> <a id="3392" href="foundation.small-types.html#3275" class="Bound">a</a><a id="3393" class="Symbol">)))</a>
@@ -140,7 +140,7 @@
       <a id="4049" class="Symbol">(</a> <a id="4051" class="Symbol">λ</a> <a id="4053" class="Symbol">(</a><a id="4054" href="foundation.small-types.html#4054" class="Bound">x</a> <a id="4056" class="Symbol">:</a> <a id="4058" href="foundation.small-types.html#4021" class="Bound">X</a><a id="4059" class="Symbol">)</a> <a id="4061" class="Symbol">→</a> <a id="4063" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="4067" class="Symbol">(</a><a id="4068" href="foundation.small-types.html#4026" class="Bound">H</a> <a id="4070" class="Symbol">(</a><a id="4071" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a> <a id="4085" href="foundation.small-types.html#4023" class="Bound">e</a> <a id="4087" href="foundation.small-types.html#4054" class="Bound">x</a><a id="4088" class="Symbol">)))</a>
       <a id="4098" class="Symbol">(</a> <a id="4100" href="foundation.small-types.html#4023" class="Bound">e</a><a id="4101" class="Symbol">)</a>
       <a id="4109" class="Symbol">(</a> <a id="4111" class="Symbol">λ</a> <a id="4113" href="foundation.small-types.html#4113" class="Bound">a</a> <a id="4115" class="Symbol">→</a>
-        <a id="4125" class="Symbol">(</a> <a id="4127" href="foundation.identity-types.html#3828" class="Function">equiv-tr</a>
+        <a id="4125" class="Symbol">(</a> <a id="4127" href="foundation.identity-types.html#3838" class="Function">equiv-tr</a>
           <a id="4146" class="Symbol">(</a> <a id="4148" class="Symbol">λ</a> <a id="4150" href="foundation.small-types.html#4150" class="Bound">t</a> <a id="4152" class="Symbol">→</a> <a id="4154" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="4158" class="Symbol">(</a><a id="4159" href="foundation.small-types.html#4026" class="Bound">H</a> <a id="4161" href="foundation.small-types.html#4150" class="Bound">t</a><a id="4162" class="Symbol">))</a>
           <a id="4175" class="Symbol">(</a> <a id="4177" href="foundation-core.identity-types.html#2729" class="Function">inv</a> <a id="4181" class="Symbol">(</a><a id="4182" href="foundation-core.equivalences.html#5251" class="Function">isretr-map-inv-equiv</a> <a id="4203" href="foundation.small-types.html#4023" class="Bound">e</a> <a id="4205" href="foundation.small-types.html#4113" class="Bound">a</a><a id="4206" class="Symbol">)))</a> <a id="4210" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
         <a id="4221" class="Symbol">(</a> <a id="4223" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="4227" class="Symbol">(</a><a id="4228" href="foundation.small-types.html#4026" class="Bound">H</a> <a id="4230" href="foundation.small-types.html#4113" class="Bound">a</a><a id="4231" class="Symbol">)))</a>
@@ -181,7 +181,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-27)(5f50eee) Merge pull request #272 from EgbertRijke/group-theory by noreply
+(2022-07-29)(37e201a) Merge pull request #273 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
