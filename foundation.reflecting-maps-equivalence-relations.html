@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/reflecting-maps-equivalence-relations.lagda.md.</p>
-<p>Version of Friday, July 29, 2022, 10:09 AM</p>
+<p>Version of Friday, July 29, 2022, 02:23 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -44,7 +44,7 @@
   <a id="517" class="Symbol">(</a> <a id="519" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a><a id="532" class="Symbol">;</a> <a id="534" href="foundation-core.equivalences.html#1556" class="Function">is-equiv</a><a id="542" class="Symbol">;</a> <a id="544" href="foundation-core.equivalences.html#1621" class="Function Operator">_≃_</a><a id="547" class="Symbol">;</a> <a id="549" href="foundation-core.equivalences.html#4187" class="Function">map-inv-is-equiv</a><a id="565" class="Symbol">)</a>
 <a id="567" class="Keyword">open</a> <a id="572" class="Keyword">import</a> <a id="579" href="foundation.fundamental-theorem-of-identity-types.html" class="Module">foundation.fundamental-theorem-of-identity-types</a> <a id="628" class="Keyword">using</a>
   <a id="636" class="Symbol">(</a> <a id="638" href="foundation-core.fundamental-theorem-of-identity-types.html#1894" class="Function">fundamental-theorem-id</a><a id="660" class="Symbol">)</a>
-<a id="662" class="Keyword">open</a> <a id="667" class="Keyword">import</a> <a id="674" href="foundation.homotopies.html" class="Module">foundation.homotopies</a> <a id="696" class="Keyword">using</a> <a id="702" class="Symbol">(</a><a id="703" href="foundation-core.homotopies.html#627" class="Function Operator">_~_</a><a id="706" class="Symbol">;</a> <a id="708" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a><a id="717" class="Symbol">;</a> <a id="719" href="foundation.homotopies.html#3155" class="Function">is-contr-total-htpy</a><a id="738" class="Symbol">)</a>
+<a id="662" class="Keyword">open</a> <a id="667" class="Keyword">import</a> <a id="674" href="foundation.homotopies.html" class="Module">foundation.homotopies</a> <a id="696" class="Keyword">using</a> <a id="702" class="Symbol">(</a><a id="703" href="foundation-core.homotopies.html#1249" class="Function Operator">_~_</a><a id="706" class="Symbol">;</a> <a id="708" href="foundation-core.homotopies.html#1368" class="Function">refl-htpy</a><a id="717" class="Symbol">;</a> <a id="719" href="foundation.homotopies.html#3155" class="Function">is-contr-total-htpy</a><a id="738" class="Symbol">)</a>
 <a id="740" class="Keyword">open</a> <a id="745" class="Keyword">import</a> <a id="752" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="778" class="Keyword">using</a> <a id="784" class="Symbol">(</a><a id="785" href="foundation-core.identity-types.html#1865" class="Function Operator">_＝_</a><a id="788" class="Symbol">;</a> <a id="790" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="794" class="Symbol">)</a>
 <a id="796" class="Keyword">open</a> <a id="801" class="Keyword">import</a> <a id="808" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="832" class="Keyword">using</a>
   <a id="840" class="Symbol">(</a> <a id="842" href="foundation-core.propositions.html#1309" class="Function">is-prop</a><a id="849" class="Symbol">;</a> <a id="851" href="foundation-core.propositions.html#6919" class="Function">is-prop-Π&#39;</a><a id="861" class="Symbol">;</a> <a id="863" href="foundation-core.propositions.html#7833" class="Function">is-prop-function-type</a><a id="884" class="Symbol">;</a> <a id="886" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a><a id="893" class="Symbol">)</a>
@@ -119,11 +119,11 @@
   <a id="3466" href="foundation.reflecting-maps-equivalence-relations.html#3466" class="Function">htpy-reflecting-map-Eq-Rel</a> <a id="3493" class="Symbol">:</a>
     <a id="3499" class="Symbol">(</a><a id="3500" href="foundation.reflecting-maps-equivalence-relations.html#3500" class="Bound">g</a> <a id="3502" class="Symbol">:</a> <a id="3504" href="foundation.reflecting-maps-equivalence-relations.html#1574" class="Function">reflecting-map-Eq-Rel</a> <a id="3526" href="foundation.reflecting-maps-equivalence-relations.html#3377" class="Bound">R</a> <a id="3528" class="Symbol">(</a><a id="3529" href="foundation-core.sets.html#1304" class="Function">type-Set</a> <a id="3538" href="foundation.reflecting-maps-equivalence-relations.html#3395" class="Bound">B</a><a id="3539" class="Symbol">))</a> <a id="3542" class="Symbol">→</a> <a id="3544" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="3547" class="Symbol">_</a>
   <a id="3551" href="foundation.reflecting-maps-equivalence-relations.html#3466" class="Function">htpy-reflecting-map-Eq-Rel</a> <a id="3578" href="foundation.reflecting-maps-equivalence-relations.html#3578" class="Bound">g</a> <a id="3580" class="Symbol">=</a>
-    <a id="3586" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="3590" href="foundation.reflecting-maps-equivalence-relations.html#3413" class="Bound">f</a> <a id="3592" href="foundation-core.homotopies.html#627" class="Function Operator">~</a> <a id="3594" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="3598" href="foundation.reflecting-maps-equivalence-relations.html#3578" class="Bound">g</a>
+    <a id="3586" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="3590" href="foundation.reflecting-maps-equivalence-relations.html#3413" class="Bound">f</a> <a id="3592" href="foundation-core.homotopies.html#1249" class="Function Operator">~</a> <a id="3594" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="3598" href="foundation.reflecting-maps-equivalence-relations.html#3578" class="Bound">g</a>
   
   <a id="3605" href="foundation.reflecting-maps-equivalence-relations.html#3605" class="Function">refl-htpy-reflecting-map-Eq-Rel</a> <a id="3637" class="Symbol">:</a>
     <a id="3643" href="foundation.reflecting-maps-equivalence-relations.html#3466" class="Function">htpy-reflecting-map-Eq-Rel</a> <a id="3670" href="foundation.reflecting-maps-equivalence-relations.html#3413" class="Bound">f</a>
-  <a id="3674" href="foundation.reflecting-maps-equivalence-relations.html#3605" class="Function">refl-htpy-reflecting-map-Eq-Rel</a> <a id="3706" class="Symbol">=</a> <a id="3708" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a>
+  <a id="3674" href="foundation.reflecting-maps-equivalence-relations.html#3605" class="Function">refl-htpy-reflecting-map-Eq-Rel</a> <a id="3706" class="Symbol">=</a> <a id="3708" href="foundation-core.homotopies.html#1368" class="Function">refl-htpy</a>
   
   <a id="3723" href="foundation.reflecting-maps-equivalence-relations.html#3723" class="Function">htpy-eq-reflecting-map-Eq-Rel</a> <a id="3753" class="Symbol">:</a>
     <a id="3759" class="Symbol">(</a><a id="3760" href="foundation.reflecting-maps-equivalence-relations.html#3760" class="Bound">g</a> <a id="3762" class="Symbol">:</a> <a id="3764" href="foundation.reflecting-maps-equivalence-relations.html#1574" class="Function">reflecting-map-Eq-Rel</a> <a id="3786" href="foundation.reflecting-maps-equivalence-relations.html#3377" class="Bound">R</a> <a id="3788" class="Symbol">(</a><a id="3789" href="foundation-core.sets.html#1304" class="Function">type-Set</a> <a id="3798" href="foundation.reflecting-maps-equivalence-relations.html#3395" class="Bound">B</a><a id="3799" class="Symbol">))</a> <a id="3802" class="Symbol">→</a>
@@ -140,7 +140,7 @@
         <a id="4165" class="Symbol">(</a> <a id="4167" href="foundation.homotopies.html#3155" class="Function">is-contr-total-htpy</a> <a id="4187" class="Symbol">(</a><a id="4188" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="4192" href="foundation.reflecting-maps-equivalence-relations.html#3413" class="Bound">f</a><a id="4193" class="Symbol">))</a>
         <a id="4204" class="Symbol">(</a> <a id="4206" href="foundation.reflecting-maps-equivalence-relations.html#2031" class="Function">is-prop-reflects-Eq-Rel</a> <a id="4230" href="foundation.reflecting-maps-equivalence-relations.html#3377" class="Bound">R</a> <a id="4232" href="foundation.reflecting-maps-equivalence-relations.html#3395" class="Bound">B</a><a id="4233" class="Symbol">)</a>
         <a id="4243" class="Symbol">(</a> <a id="4245" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="4249" href="foundation.reflecting-maps-equivalence-relations.html#3413" class="Bound">f</a><a id="4250" class="Symbol">)</a>
-        <a id="4260" class="Symbol">(</a> <a id="4262" href="foundation-core.homotopies.html#741" class="Function">refl-htpy</a><a id="4271" class="Symbol">)</a>
+        <a id="4260" class="Symbol">(</a> <a id="4262" href="foundation-core.homotopies.html#1368" class="Function">refl-htpy</a><a id="4271" class="Symbol">)</a>
         <a id="4281" class="Symbol">(</a> <a id="4283" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="4287" href="foundation.reflecting-maps-equivalence-relations.html#3413" class="Bound">f</a><a id="4288" class="Symbol">)</a>
 
   <a id="4293" class="Keyword">abstract</a>
@@ -168,7 +168,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-29)(37e201a) Merge pull request #273 from EgbertRijke/group-theory by noreply
+(2022-07-29)(724b7c0) Merge pull request #274 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
