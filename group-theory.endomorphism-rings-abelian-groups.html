@@ -25,7 +25,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/endomorphism-rings-abelian-groups.lagda.md.</p>
-<p>Version of Friday, July 29, 2022, 02:23 PM</p>
+<p>Version of Thursday, August  4, 2022, 01:23 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -39,7 +39,7 @@
 <a id="170" class="Keyword">open</a> <a id="175" class="Keyword">import</a> <a id="182" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="214" class="Keyword">using</a> <a id="220" class="Symbol">(</a><a id="221" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="222" class="Symbol">;</a> <a id="224" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="228" class="Symbol">;</a> <a id="230" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="233" class="Symbol">;</a> <a id="235" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="238" class="Symbol">)</a>
 <a id="240" class="Keyword">open</a> <a id="245" class="Keyword">import</a> <a id="252" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="279" class="Keyword">using</a> <a id="285" class="Symbol">(</a><a id="286" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="291" class="Symbol">)</a>
 
-<a id="294" class="Keyword">open</a> <a id="299" class="Keyword">import</a> <a id="306" href="group-theory.abelian-groups.html" class="Module">group-theory.abelian-groups</a> <a id="334" class="Keyword">using</a> <a id="340" class="Symbol">(</a><a id="341" href="group-theory.abelian-groups.html#2476" class="Function">Ab</a><a id="343" class="Symbol">)</a>
+<a id="294" class="Keyword">open</a> <a id="299" class="Keyword">import</a> <a id="306" href="group-theory.abelian-groups.html" class="Module">group-theory.abelian-groups</a> <a id="334" class="Keyword">using</a> <a id="340" class="Symbol">(</a><a id="341" href="group-theory.abelian-groups.html#2512" class="Function">Ab</a><a id="343" class="Symbol">)</a>
 <a id="345" class="Keyword">open</a> <a id="350" class="Keyword">import</a> <a id="357" href="group-theory.addition-homomorphisms-abelian-groups.html" class="Module">group-theory.addition-homomorphisms-abelian-groups</a> <a id="408" class="Keyword">using</a>
   <a id="416" class="Symbol">(</a> <a id="418" href="group-theory.addition-homomorphisms-abelian-groups.html#1203" class="Function">add-hom-Ab</a><a id="428" class="Symbol">;</a> <a id="430" href="group-theory.addition-homomorphisms-abelian-groups.html#1627" class="Function">zero-hom-Ab</a><a id="441" class="Symbol">;</a> <a id="443" href="group-theory.addition-homomorphisms-abelian-groups.html#1757" class="Function">neg-hom-Ab</a><a id="453" class="Symbol">;</a> <a id="455" href="group-theory.addition-homomorphisms-abelian-groups.html#2166" class="Function">associative-add-hom-Ab</a><a id="477" class="Symbol">;</a>
     <a id="483" href="group-theory.addition-homomorphisms-abelian-groups.html#3038" class="Function">left-unit-law-add-hom-Ab</a><a id="507" class="Symbol">;</a> <a id="509" href="group-theory.addition-homomorphisms-abelian-groups.html#3244" class="Function">right-unit-law-add-hom-Ab</a><a id="534" class="Symbol">;</a>
@@ -57,7 +57,7 @@
 <h2 id="definition">Definition</h2>
 <h3 id="the-endomorphism-ring-on-an-abelian-group">The endomorphism ring on an abelian group</h3>
 <pre class="Agda"><a id="1234" class="Keyword">module</a> <a id="1241" href="group-theory.endomorphism-rings-abelian-groups.html#1241" class="Module">_</a>
-  <a id="1245" class="Symbol">{</a><a id="1246" href="group-theory.endomorphism-rings-abelian-groups.html#1246" class="Bound">l</a> <a id="1248" class="Symbol">:</a> <a id="1250" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1255" class="Symbol">}</a> <a id="1257" class="Symbol">(</a><a id="1258" href="group-theory.endomorphism-rings-abelian-groups.html#1258" class="Bound">A</a> <a id="1260" class="Symbol">:</a> <a id="1262" href="group-theory.abelian-groups.html#2476" class="Function">Ab</a> <a id="1265" href="group-theory.endomorphism-rings-abelian-groups.html#1246" class="Bound">l</a><a id="1266" class="Symbol">)</a>
+  <a id="1245" class="Symbol">{</a><a id="1246" href="group-theory.endomorphism-rings-abelian-groups.html#1246" class="Bound">l</a> <a id="1248" class="Symbol">:</a> <a id="1250" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1255" class="Symbol">}</a> <a id="1257" class="Symbol">(</a><a id="1258" href="group-theory.endomorphism-rings-abelian-groups.html#1258" class="Bound">A</a> <a id="1260" class="Symbol">:</a> <a id="1262" href="group-theory.abelian-groups.html#2512" class="Function">Ab</a> <a id="1265" href="group-theory.endomorphism-rings-abelian-groups.html#1246" class="Bound">l</a><a id="1266" class="Symbol">)</a>
   <a id="1270" class="Keyword">where</a>
   
   <a id="1281" href="group-theory.endomorphism-rings-abelian-groups.html#1281" class="Function">endomorphism-ring-Ab</a> <a id="1302" class="Symbol">:</a> <a id="1304" href="ring-theory.rings.html#2551" class="Function">Ring</a> <a id="1309" href="group-theory.endomorphism-rings-abelian-groups.html#1246" class="Bound">l</a>
@@ -89,7 +89,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-07-29)(724b7c0) Merge pull request #274 from EgbertRijke/group-theory by noreply
+(2022-08-04)(0daed8f) Merge pull request #275 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
