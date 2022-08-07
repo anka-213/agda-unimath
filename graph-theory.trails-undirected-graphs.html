@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Trails in undirected graphs</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/graph-theory/trails-undirected-graphs.lagda.md.</p>
+<p>Version of Sunday, August  7, 2022, 10:28 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Trails in undirected graphs</h1>
+</header>
+<pre class="Agda"><a id="53" class="Keyword">module</a> <a id="60" href="graph-theory.trails-undirected-graphs.html" class="Module">graph-theory.trails-undirected-graphs</a> <a id="98" class="Keyword">where</a>
+
+<a id="105" class="Keyword">open</a> <a id="110" class="Keyword">import</a> <a id="117" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+
+<a id="159" class="Keyword">open</a> <a id="164" class="Keyword">import</a> <a id="171" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="203" class="Keyword">open</a> <a id="208" class="Keyword">import</a> <a id="215" href="foundation.injective-maps.html" class="Module">foundation.injective-maps</a>
+<a id="241" class="Keyword">open</a> <a id="246" class="Keyword">import</a> <a id="253" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="281" class="Keyword">open</a> <a id="286" class="Keyword">import</a> <a id="293" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a>
+<a id="324" class="Keyword">open</a> <a id="329" class="Keyword">import</a> <a id="336" href="graph-theory.walks-undirected-graphs.html" class="Module">graph-theory.walks-undirected-graphs</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A trail in an undirected graph is a walk that passes through each edge at most once</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="495" class="Keyword">module</a> <a id="502" href="graph-theory.trails-undirected-graphs.html#502" class="Module">_</a>
+  <a id="506" class="Symbol">{</a><a id="507" href="graph-theory.trails-undirected-graphs.html#507" class="Bound">l1</a> <a id="510" href="graph-theory.trails-undirected-graphs.html#510" class="Bound">l2</a> <a id="513" class="Symbol">:</a> <a id="515" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="520" class="Symbol">}</a> <a id="522" class="Symbol">(</a><a id="523" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a> <a id="525" class="Symbol">:</a> <a id="527" href="graph-theory.undirected-graphs.html#785" class="Function">Undirected-Graph</a> <a id="544" href="graph-theory.trails-undirected-graphs.html#507" class="Bound">l1</a> <a id="547" href="graph-theory.trails-undirected-graphs.html#510" class="Bound">l2</a><a id="549" class="Symbol">)</a>
+  <a id="553" class="Keyword">where</a>
+  
+  <a id="564" href="graph-theory.trails-undirected-graphs.html#564" class="Function">is-trail-walk-Undirected-Graph</a> <a id="595" class="Symbol">:</a>
+    <a id="601" class="Symbol">{</a><a id="602" href="graph-theory.trails-undirected-graphs.html#602" class="Bound">x</a> <a id="604" href="graph-theory.trails-undirected-graphs.html#604" class="Bound">y</a> <a id="606" class="Symbol">:</a> <a id="608" href="graph-theory.undirected-graphs.html#981" class="Function">vertex-Undirected-Graph</a> <a id="632" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a><a id="633" class="Symbol">}</a> <a id="635" class="Symbol">→</a> <a id="637" href="graph-theory.walks-undirected-graphs.html#1105" class="Datatype">walk-Undirected-Graph</a> <a id="659" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a> <a id="661" href="graph-theory.trails-undirected-graphs.html#602" class="Bound">x</a> <a id="663" href="graph-theory.trails-undirected-graphs.html#604" class="Bound">y</a> <a id="665" class="Symbol">→</a>
+    <a id="671" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="674" class="Symbol">(</a><a id="675" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="680" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="686" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="688" href="graph-theory.trails-undirected-graphs.html#507" class="Bound">l1</a> <a id="691" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="693" href="graph-theory.trails-undirected-graphs.html#510" class="Bound">l2</a><a id="695" class="Symbol">)</a>
+  <a id="699" href="graph-theory.trails-undirected-graphs.html#564" class="Function">is-trail-walk-Undirected-Graph</a> <a id="730" href="graph-theory.trails-undirected-graphs.html#730" class="Bound">w</a> <a id="732" class="Symbol">=</a>
+    <a id="738" href="foundation.injective-maps.html#1309" class="Function">is-injective</a> <a id="751" class="Symbol">(</a><a id="752" href="graph-theory.walks-undirected-graphs.html#3726" class="Function">edge-edge-on-walk-Undirected-Graph</a> <a id="787" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a> <a id="789" href="graph-theory.trails-undirected-graphs.html#730" class="Bound">w</a><a id="790" class="Symbol">)</a>
+
+  <a id="795" href="graph-theory.trails-undirected-graphs.html#795" class="Function">trail-Undirected-Graph</a> <a id="818" class="Symbol">:</a>
+    <a id="824" class="Symbol">(</a><a id="825" href="graph-theory.trails-undirected-graphs.html#825" class="Bound">x</a> <a id="827" href="graph-theory.trails-undirected-graphs.html#827" class="Bound">y</a> <a id="829" class="Symbol">:</a> <a id="831" href="graph-theory.undirected-graphs.html#981" class="Function">vertex-Undirected-Graph</a> <a id="855" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a><a id="856" class="Symbol">)</a> <a id="858" class="Symbol">→</a> <a id="860" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="863" class="Symbol">(</a><a id="864" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="869" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="875" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="877" href="graph-theory.trails-undirected-graphs.html#507" class="Bound">l1</a> <a id="880" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="882" href="graph-theory.trails-undirected-graphs.html#510" class="Bound">l2</a><a id="884" class="Symbol">)</a>
+  <a id="888" href="graph-theory.trails-undirected-graphs.html#795" class="Function">trail-Undirected-Graph</a> <a id="911" href="graph-theory.trails-undirected-graphs.html#911" class="Bound">x</a> <a id="913" href="graph-theory.trails-undirected-graphs.html#913" class="Bound">y</a> <a id="915" class="Symbol">=</a>
+    <a id="921" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="923" class="Symbol">(</a><a id="924" href="graph-theory.walks-undirected-graphs.html#1105" class="Datatype">walk-Undirected-Graph</a> <a id="946" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a> <a id="948" href="graph-theory.trails-undirected-graphs.html#911" class="Bound">x</a> <a id="950" href="graph-theory.trails-undirected-graphs.html#913" class="Bound">y</a><a id="951" class="Symbol">)</a> <a id="953" href="graph-theory.trails-undirected-graphs.html#564" class="Function">is-trail-walk-Undirected-Graph</a>
+
+  <a id="987" href="graph-theory.trails-undirected-graphs.html#987" class="Function">walk-trail-Undirected-Graph</a> <a id="1015" class="Symbol">:</a>
+    <a id="1021" class="Symbol">{</a><a id="1022" href="graph-theory.trails-undirected-graphs.html#1022" class="Bound">x</a> <a id="1024" href="graph-theory.trails-undirected-graphs.html#1024" class="Bound">y</a> <a id="1026" class="Symbol">:</a> <a id="1028" href="graph-theory.undirected-graphs.html#981" class="Function">vertex-Undirected-Graph</a> <a id="1052" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a><a id="1053" class="Symbol">}</a> <a id="1055" class="Symbol">→</a>
+    <a id="1061" href="graph-theory.trails-undirected-graphs.html#795" class="Function">trail-Undirected-Graph</a> <a id="1084" href="graph-theory.trails-undirected-graphs.html#1022" class="Bound">x</a> <a id="1086" href="graph-theory.trails-undirected-graphs.html#1024" class="Bound">y</a> <a id="1088" class="Symbol">→</a> <a id="1090" href="graph-theory.walks-undirected-graphs.html#1105" class="Datatype">walk-Undirected-Graph</a> <a id="1112" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a> <a id="1114" href="graph-theory.trails-undirected-graphs.html#1022" class="Bound">x</a> <a id="1116" href="graph-theory.trails-undirected-graphs.html#1024" class="Bound">y</a>
+  <a id="1120" href="graph-theory.trails-undirected-graphs.html#987" class="Function">walk-trail-Undirected-Graph</a> <a id="1148" class="Symbol">=</a> <a id="1150" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a>
+
+  <a id="1157" href="graph-theory.trails-undirected-graphs.html#1157" class="Function">length-trail-Undirected-Graph</a> <a id="1187" class="Symbol">:</a>
+    <a id="1193" class="Symbol">{</a><a id="1194" href="graph-theory.trails-undirected-graphs.html#1194" class="Bound">x</a> <a id="1196" href="graph-theory.trails-undirected-graphs.html#1196" class="Bound">y</a> <a id="1198" class="Symbol">:</a> <a id="1200" href="graph-theory.undirected-graphs.html#981" class="Function">vertex-Undirected-Graph</a> <a id="1224" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a><a id="1225" class="Symbol">}</a> <a id="1227" class="Symbol">→</a> <a id="1229" href="graph-theory.trails-undirected-graphs.html#795" class="Function">trail-Undirected-Graph</a> <a id="1252" href="graph-theory.trails-undirected-graphs.html#1194" class="Bound">x</a> <a id="1254" href="graph-theory.trails-undirected-graphs.html#1196" class="Bound">y</a> <a id="1256" class="Symbol">→</a> <a id="1258" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a>
+  <a id="1262" href="graph-theory.trails-undirected-graphs.html#1157" class="Function">length-trail-Undirected-Graph</a> <a id="1292" href="graph-theory.trails-undirected-graphs.html#1292" class="Bound">t</a> <a id="1294" class="Symbol">=</a>
+    <a id="1300" href="graph-theory.walks-undirected-graphs.html#4594" class="Function">length-walk-Undirected-Graph</a> <a id="1329" href="graph-theory.trails-undirected-graphs.html#523" class="Bound">G</a> <a id="1331" class="Symbol">(</a><a id="1332" href="graph-theory.trails-undirected-graphs.html#987" class="Function">walk-trail-Undirected-Graph</a> <a id="1360" href="graph-theory.trails-undirected-graphs.html#1292" class="Bound">t</a><a id="1361" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-08-07)(88211a3) Merge pull request #277 from EgbertRijke/group-theory by noreply
+</pre>
+</body>
+</html>
