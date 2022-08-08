@@ -1,0 +1,34 @@
+---
+title: The lesser limited principle of omniscience
+---
+
+<pre class="Agda"><a id="69" class="Keyword">module</a> <a id="76" href="foundation.lesser-limited-principle-of-omniscience.html" class="Module">foundation.lesser-limited-principle-of-omniscience</a> <a id="127" class="Keyword">where</a>
+
+<a id="134" class="Keyword">open</a> <a id="139" class="Keyword">import</a> <a id="146" href="elementary-number-theory.divisibility-natural-numbers.html" class="Module">elementary-number-theory.divisibility-natural-numbers</a>
+<a id="200" class="Keyword">open</a> <a id="205" class="Keyword">import</a> <a id="212" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+
+<a id="254" class="Keyword">open</a> <a id="259" class="Keyword">import</a> <a id="266" href="foundation.disjunction.html" class="Module">foundation.disjunction</a>
+<a id="289" class="Keyword">open</a> <a id="294" class="Keyword">import</a> <a id="301" href="foundation.fibers-of-maps.html" class="Module">foundation.fibers-of-maps</a>
+<a id="327" class="Keyword">open</a> <a id="332" class="Keyword">import</a> <a id="339" href="foundation.propositions.html" class="Module">foundation.propositions</a>
+<a id="363" class="Keyword">open</a> <a id="368" class="Keyword">import</a> <a id="375" href="foundation.sets.html" class="Module">foundation.sets</a>
+<a id="391" class="Keyword">open</a> <a id="396" class="Keyword">import</a> <a id="403" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="431" class="Keyword">open</a> <a id="436" class="Keyword">import</a> <a id="443" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
+</pre>
+## Idea
+
+The lesser limited principle of omniscience asserts that for any sequence `f : ℕ → Fin 2` containing at most one `1`, either `f n ＝ 0` for all even `n` or `f n ＝ 0` for all odd `n`.
+
+## Definition
+
+<pre class="Agda"><a id="LLPO"></a><a id="709" href="foundation.lesser-limited-principle-of-omniscience.html#709" class="Function">LLPO</a> <a id="714" class="Symbol">:</a> <a id="716" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="719" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="725" href="foundation.lesser-limited-principle-of-omniscience.html#709" class="Function">LLPO</a> <a id="730" class="Symbol">=</a>
+  <a id="734" class="Symbol">(</a><a id="735" href="foundation.lesser-limited-principle-of-omniscience.html#735" class="Bound">f</a> <a id="737" class="Symbol">:</a> <a id="739" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="741" class="Symbol">→</a> <a id="743" href="univalent-combinatorics.standard-finite-types.html#2393" class="Function">Fin</a> <a id="747" class="Number">2</a><a id="748" class="Symbol">)</a> <a id="750" class="Symbol">→</a> <a id="752" href="foundation-core.propositions.html#1309" class="Function">is-prop</a> <a id="760" class="Symbol">(</a><a id="761" href="foundation-core.fibers-of-maps.html#942" class="Function">fib</a> <a id="765" href="foundation.lesser-limited-principle-of-omniscience.html#735" class="Bound">f</a> <a id="767" class="Symbol">(</a><a id="768" href="univalent-combinatorics.standard-finite-types.html#8190" class="Function">one-Fin</a> <a id="776" class="Number">1</a><a id="777" class="Symbol">))</a> <a id="780" class="Symbol">→</a>
+  <a id="784" href="foundation.disjunction.html#1277" class="Function">type-disj-Prop</a>
+    <a id="803" class="Symbol">(</a> <a id="805" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a> <a id="812" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a>
+      <a id="820" class="Symbol">(</a> <a id="822" class="Symbol">λ</a> <a id="824" href="foundation.lesser-limited-principle-of-omniscience.html#824" class="Bound">n</a> <a id="826" class="Symbol">→</a>
+        <a id="836" href="foundation-core.propositions.html#8294" class="Function">function-Prop</a> <a id="850" class="Symbol">(</a><a id="851" href="elementary-number-theory.divisibility-natural-numbers.html#2375" class="Function">is-even-ℕ</a> <a id="861" href="foundation.lesser-limited-principle-of-omniscience.html#824" class="Bound">n</a><a id="862" class="Symbol">)</a> <a id="864" class="Symbol">(</a><a id="865" href="foundation-core.sets.html#1420" class="Function">Id-Prop</a> <a id="873" class="Symbol">(</a><a id="874" href="univalent-combinatorics.standard-finite-types.html#2285" class="Function">Fin-Set</a> <a id="882" class="Number">2</a><a id="883" class="Symbol">)</a> <a id="885" class="Symbol">(</a><a id="886" href="foundation.lesser-limited-principle-of-omniscience.html#735" class="Bound">f</a> <a id="888" href="foundation.lesser-limited-principle-of-omniscience.html#824" class="Bound">n</a><a id="889" class="Symbol">)</a> <a id="891" class="Symbol">(</a><a id="892" href="univalent-combinatorics.standard-finite-types.html#6792" class="Function">zero-Fin</a> <a id="901" class="Number">1</a><a id="902" class="Symbol">))))</a>
+    <a id="911" class="Symbol">(</a> <a id="913" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a> <a id="920" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a>
+      <a id="928" class="Symbol">(</a> <a id="930" class="Symbol">λ</a> <a id="932" href="foundation.lesser-limited-principle-of-omniscience.html#932" class="Bound">n</a> <a id="934" class="Symbol">→</a>
+        <a id="944" href="foundation-core.propositions.html#8294" class="Function">function-Prop</a> <a id="958" class="Symbol">(</a><a id="959" href="elementary-number-theory.divisibility-natural-numbers.html#2425" class="Function">is-odd-ℕ</a> <a id="968" href="foundation.lesser-limited-principle-of-omniscience.html#932" class="Bound">n</a><a id="969" class="Symbol">)</a> <a id="971" class="Symbol">(</a><a id="972" href="foundation-core.sets.html#1420" class="Function">Id-Prop</a> <a id="980" class="Symbol">(</a><a id="981" href="univalent-combinatorics.standard-finite-types.html#2285" class="Function">Fin-Set</a> <a id="989" class="Number">2</a><a id="990" class="Symbol">)</a> <a id="992" class="Symbol">(</a><a id="993" href="foundation.lesser-limited-principle-of-omniscience.html#735" class="Bound">f</a> <a id="995" href="foundation.lesser-limited-principle-of-omniscience.html#932" class="Bound">n</a><a id="996" class="Symbol">)</a> <a id="998" class="Symbol">(</a><a id="999" href="univalent-combinatorics.standard-finite-types.html#6792" class="Function">zero-Fin</a> <a id="1008" class="Number">1</a><a id="1009" class="Symbol">))))</a>
+</pre>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>The limited principle of omniscience (LPO)</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/foundation/limited-principle-of-omniscience.lagda.md.</p>
+<p>Version of Monday, August  8, 2022, 07:59 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">The limited principle of omniscience (LPO)</h1>
+</header>
+<pre class="Agda"><a id="68" class="Keyword">module</a> <a id="75" href="foundation.limited-principle-of-omniscience.html" class="Module">foundation.limited-principle-of-omniscience</a> <a id="119" class="Keyword">where</a>
+
+<a id="126" class="Keyword">open</a> <a id="131" class="Keyword">import</a> <a id="138" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+
+<a id="180" class="Keyword">open</a> <a id="185" class="Keyword">import</a> <a id="192" href="foundation.disjunction.html" class="Module">foundation.disjunction</a>
+<a id="215" class="Keyword">open</a> <a id="220" class="Keyword">import</a> <a id="227" href="foundation.existential-quantification.html" class="Module">foundation.existential-quantification</a>
+<a id="265" class="Keyword">open</a> <a id="270" class="Keyword">import</a> <a id="277" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="303" class="Keyword">open</a> <a id="308" class="Keyword">import</a> <a id="315" href="foundation.propositions.html" class="Module">foundation.propositions</a>
+<a id="339" class="Keyword">open</a> <a id="344" class="Keyword">import</a> <a id="351" href="foundation.sets.html" class="Module">foundation.sets</a>
+<a id="367" class="Keyword">open</a> <a id="372" class="Keyword">import</a> <a id="379" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="407" class="Keyword">open</a> <a id="412" class="Keyword">import</a> <a id="419" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The <strong>Limited Principle of Omniscience</strong> asserts that for every sequence <code>f : ℕ → Fin 2</code> either there exists an <code>n</code> such that <code>f n ＝ 1</code> or for all <code>n</code> we have <code>f n ＝ 0</code>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="LPO"></a><a id="673" href="foundation.limited-principle-of-omniscience.html#673" class="Function">LPO</a> <a id="677" class="Symbol">:</a> <a id="679" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="682" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="688" href="foundation.limited-principle-of-omniscience.html#673" class="Function">LPO</a> <a id="692" class="Symbol">=</a>
+  <a id="696" class="Symbol">(</a><a id="697" href="foundation.limited-principle-of-omniscience.html#697" class="Bound">f</a> <a id="699" class="Symbol">:</a> <a id="701" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="703" class="Symbol">→</a> <a id="705" href="univalent-combinatorics.standard-finite-types.html#2393" class="Function">Fin</a> <a id="709" class="Number">2</a><a id="710" class="Symbol">)</a> <a id="712" class="Symbol">→</a>
+  <a id="716" href="foundation.disjunction.html#1277" class="Function">type-disj-Prop</a>
+    <a id="735" class="Symbol">(</a> <a id="737" href="foundation.existential-quantification.html#1666" class="Function">∃-Prop</a> <a id="744" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="746" class="Symbol">(λ</a> <a id="749" href="foundation.limited-principle-of-omniscience.html#749" class="Bound">n</a> <a id="751" class="Symbol">→</a> <a id="753" href="foundation.limited-principle-of-omniscience.html#697" class="Bound">f</a> <a id="755" href="foundation.limited-principle-of-omniscience.html#749" class="Bound">n</a> <a id="757" href="foundation-core.identity-types.html#1865" class="Function Operator">＝</a> <a id="759" href="univalent-combinatorics.standard-finite-types.html#8190" class="Function">one-Fin</a> <a id="767" class="Number">1</a><a id="768" class="Symbol">))</a>
+    <a id="775" class="Symbol">(</a> <a id="777" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a> <a id="784" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="786" class="Symbol">(λ</a> <a id="789" href="foundation.limited-principle-of-omniscience.html#789" class="Bound">n</a> <a id="791" class="Symbol">→</a> <a id="793" href="foundation-core.sets.html#1420" class="Function">Id-Prop</a> <a id="801" class="Symbol">(</a><a id="802" href="univalent-combinatorics.standard-finite-types.html#2285" class="Function">Fin-Set</a> <a id="810" class="Number">2</a><a id="811" class="Symbol">)</a> <a id="813" class="Symbol">(</a><a id="814" href="foundation.limited-principle-of-omniscience.html#697" class="Bound">f</a> <a id="816" href="foundation.limited-principle-of-omniscience.html#789" class="Bound">n</a><a id="817" class="Symbol">)</a> <a id="819" class="Symbol">(</a><a id="820" href="univalent-combinatorics.standard-finite-types.html#6792" class="Function">zero-Fin</a> <a id="829" class="Number">1</a><a id="830" class="Symbol">)))</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-08-08)(fd11a02) Merge pull request #278 from EgbertRijke/group-theory by noreply
+</pre>
+</body>
+</html>

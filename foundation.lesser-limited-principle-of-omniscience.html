@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>The lesser limited principle of omniscience</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/foundation/lesser-limited-principle-of-omniscience.lagda.md.</p>
+<p>Version of Monday, August  8, 2022, 07:59 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">The lesser limited principle of omniscience</h1>
+</header>
+<pre class="Agda"><a id="69" class="Keyword">module</a> <a id="76" href="foundation.lesser-limited-principle-of-omniscience.html" class="Module">foundation.lesser-limited-principle-of-omniscience</a> <a id="127" class="Keyword">where</a>
+
+<a id="134" class="Keyword">open</a> <a id="139" class="Keyword">import</a> <a id="146" href="elementary-number-theory.divisibility-natural-numbers.html" class="Module">elementary-number-theory.divisibility-natural-numbers</a>
+<a id="200" class="Keyword">open</a> <a id="205" class="Keyword">import</a> <a id="212" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+
+<a id="254" class="Keyword">open</a> <a id="259" class="Keyword">import</a> <a id="266" href="foundation.disjunction.html" class="Module">foundation.disjunction</a>
+<a id="289" class="Keyword">open</a> <a id="294" class="Keyword">import</a> <a id="301" href="foundation.fibers-of-maps.html" class="Module">foundation.fibers-of-maps</a>
+<a id="327" class="Keyword">open</a> <a id="332" class="Keyword">import</a> <a id="339" href="foundation.propositions.html" class="Module">foundation.propositions</a>
+<a id="363" class="Keyword">open</a> <a id="368" class="Keyword">import</a> <a id="375" href="foundation.sets.html" class="Module">foundation.sets</a>
+<a id="391" class="Keyword">open</a> <a id="396" class="Keyword">import</a> <a id="403" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="431" class="Keyword">open</a> <a id="436" class="Keyword">import</a> <a id="443" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>The lesser limited principle of omniscience asserts that for any sequence <code>f : ℕ → Fin 2</code> containing at most one <code>1</code>, either <code>f n ＝ 0</code> for all even <code>n</code> or <code>f n ＝ 0</code> for all odd <code>n</code>.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="LLPO"></a><a id="709" href="foundation.lesser-limited-principle-of-omniscience.html#709" class="Function">LLPO</a> <a id="714" class="Symbol">:</a> <a id="716" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="719" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="725" href="foundation.lesser-limited-principle-of-omniscience.html#709" class="Function">LLPO</a> <a id="730" class="Symbol">=</a>
+  <a id="734" class="Symbol">(</a><a id="735" href="foundation.lesser-limited-principle-of-omniscience.html#735" class="Bound">f</a> <a id="737" class="Symbol">:</a> <a id="739" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a> <a id="741" class="Symbol">→</a> <a id="743" href="univalent-combinatorics.standard-finite-types.html#2393" class="Function">Fin</a> <a id="747" class="Number">2</a><a id="748" class="Symbol">)</a> <a id="750" class="Symbol">→</a> <a id="752" href="foundation-core.propositions.html#1309" class="Function">is-prop</a> <a id="760" class="Symbol">(</a><a id="761" href="foundation-core.fibers-of-maps.html#942" class="Function">fib</a> <a id="765" href="foundation.lesser-limited-principle-of-omniscience.html#735" class="Bound">f</a> <a id="767" class="Symbol">(</a><a id="768" href="univalent-combinatorics.standard-finite-types.html#8190" class="Function">one-Fin</a> <a id="776" class="Number">1</a><a id="777" class="Symbol">))</a> <a id="780" class="Symbol">→</a>
+  <a id="784" href="foundation.disjunction.html#1277" class="Function">type-disj-Prop</a>
+    <a id="803" class="Symbol">(</a> <a id="805" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a> <a id="812" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a>
+      <a id="820" class="Symbol">(</a> <a id="822" class="Symbol">λ</a> <a id="824" href="foundation.lesser-limited-principle-of-omniscience.html#824" class="Bound">n</a> <a id="826" class="Symbol">→</a>
+        <a id="836" href="foundation-core.propositions.html#8294" class="Function">function-Prop</a> <a id="850" class="Symbol">(</a><a id="851" href="elementary-number-theory.divisibility-natural-numbers.html#2375" class="Function">is-even-ℕ</a> <a id="861" href="foundation.lesser-limited-principle-of-omniscience.html#824" class="Bound">n</a><a id="862" class="Symbol">)</a> <a id="864" class="Symbol">(</a><a id="865" href="foundation-core.sets.html#1420" class="Function">Id-Prop</a> <a id="873" class="Symbol">(</a><a id="874" href="univalent-combinatorics.standard-finite-types.html#2285" class="Function">Fin-Set</a> <a id="882" class="Number">2</a><a id="883" class="Symbol">)</a> <a id="885" class="Symbol">(</a><a id="886" href="foundation.lesser-limited-principle-of-omniscience.html#735" class="Bound">f</a> <a id="888" href="foundation.lesser-limited-principle-of-omniscience.html#824" class="Bound">n</a><a id="889" class="Symbol">)</a> <a id="891" class="Symbol">(</a><a id="892" href="univalent-combinatorics.standard-finite-types.html#6792" class="Function">zero-Fin</a> <a id="901" class="Number">1</a><a id="902" class="Symbol">))))</a>
+    <a id="911" class="Symbol">(</a> <a id="913" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a> <a id="920" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a>
+      <a id="928" class="Symbol">(</a> <a id="930" class="Symbol">λ</a> <a id="932" href="foundation.lesser-limited-principle-of-omniscience.html#932" class="Bound">n</a> <a id="934" class="Symbol">→</a>
+        <a id="944" href="foundation-core.propositions.html#8294" class="Function">function-Prop</a> <a id="958" class="Symbol">(</a><a id="959" href="elementary-number-theory.divisibility-natural-numbers.html#2425" class="Function">is-odd-ℕ</a> <a id="968" href="foundation.lesser-limited-principle-of-omniscience.html#932" class="Bound">n</a><a id="969" class="Symbol">)</a> <a id="971" class="Symbol">(</a><a id="972" href="foundation-core.sets.html#1420" class="Function">Id-Prop</a> <a id="980" class="Symbol">(</a><a id="981" href="univalent-combinatorics.standard-finite-types.html#2285" class="Function">Fin-Set</a> <a id="989" class="Number">2</a><a id="990" class="Symbol">)</a> <a id="992" class="Symbol">(</a><a id="993" href="foundation.lesser-limited-principle-of-omniscience.html#735" class="Bound">f</a> <a id="995" href="foundation.lesser-limited-principle-of-omniscience.html#932" class="Bound">n</a><a id="996" class="Symbol">)</a> <a id="998" class="Symbol">(</a><a id="999" href="univalent-combinatorics.standard-finite-types.html#6792" class="Function">zero-Fin</a> <a id="1008" class="Number">1</a><a id="1009" class="Symbol">))))</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-08-08)(fd11a02) Merge pull request #278 from EgbertRijke/group-theory by noreply
+</pre>
+</body>
+</html>
