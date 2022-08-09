@@ -1,0 +1,35 @@
+---
+title: Ideals in preorders
+---
+
+<pre class="Agda"><a id="45" class="Keyword">module</a> <a id="52" href="order-theory.ideals-preorders.html" class="Module">order-theory.ideals-preorders</a> <a id="82" class="Keyword">where</a>
+
+<a id="89" class="Keyword">open</a> <a id="94" class="Keyword">import</a> <a id="101" href="foundation.cartesian-product-types.html" class="Module">foundation.cartesian-product-types</a>
+<a id="136" class="Keyword">open</a> <a id="141" class="Keyword">import</a> <a id="148" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="180" class="Keyword">open</a> <a id="185" class="Keyword">import</a> <a id="192" href="foundation.inhabited-types.html" class="Module">foundation.inhabited-types</a>
+<a id="219" class="Keyword">open</a> <a id="224" class="Keyword">import</a> <a id="231" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="259" class="Keyword">open</a> <a id="264" class="Keyword">import</a> <a id="271" href="order-theory.lower-types-preorders.html" class="Module">order-theory.lower-types-preorders</a>
+<a id="306" class="Keyword">open</a> <a id="311" class="Keyword">import</a> <a id="318" href="order-theory.preorders.html" class="Module">order-theory.preorders</a>
+</pre>
+## Idea
+
+Ideals in preorders are inhabited lower types `L` that contain an upper bound for every pair of elements in `L`.
+
+## Definition
+
+<pre class="Agda"><a id="492" class="Keyword">module</a> <a id="499" href="order-theory.ideals-preorders.html#499" class="Module">_</a>
+  <a id="503" class="Symbol">{</a><a id="504" href="order-theory.ideals-preorders.html#504" class="Bound">l1</a> <a id="507" href="order-theory.ideals-preorders.html#507" class="Bound">l2</a> <a id="510" class="Symbol">:</a> <a id="512" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="517" class="Symbol">}</a> <a id="519" class="Symbol">(</a><a id="520" href="order-theory.ideals-preorders.html#520" class="Bound">P</a> <a id="522" class="Symbol">:</a> <a id="524" href="order-theory.preorders.html#531" class="Function">Preorder</a> <a id="533" href="order-theory.ideals-preorders.html#504" class="Bound">l1</a> <a id="536" href="order-theory.ideals-preorders.html#507" class="Bound">l2</a><a id="538" class="Symbol">)</a>
+  <a id="542" class="Keyword">where</a>
+  
+  <a id="553" href="order-theory.ideals-preorders.html#553" class="Function">is-ideal-lower-type-Preorder</a> <a id="582" class="Symbol">:</a>
+    <a id="588" class="Symbol">{</a><a id="589" href="order-theory.ideals-preorders.html#589" class="Bound">l3</a> <a id="592" class="Symbol">:</a> <a id="594" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="599" class="Symbol">}</a> <a id="601" class="Symbol">(</a><a id="602" href="order-theory.ideals-preorders.html#602" class="Bound">L</a> <a id="604" class="Symbol">:</a> <a id="606" href="order-theory.lower-types-preorders.html#672" class="Function">lower-type-Preorder</a> <a id="626" href="order-theory.ideals-preorders.html#589" class="Bound">l3</a> <a id="629" href="order-theory.ideals-preorders.html#520" class="Bound">P</a><a id="630" class="Symbol">)</a> <a id="632" class="Symbol">→</a> <a id="634" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="637" class="Symbol">(</a><a id="638" href="order-theory.ideals-preorders.html#504" class="Bound">l1</a> <a id="641" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="643" href="order-theory.ideals-preorders.html#507" class="Bound">l2</a> <a id="646" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="648" href="order-theory.ideals-preorders.html#589" class="Bound">l3</a><a id="650" class="Symbol">)</a>
+  <a id="654" href="order-theory.ideals-preorders.html#553" class="Function">is-ideal-lower-type-Preorder</a> <a id="683" href="order-theory.ideals-preorders.html#683" class="Bound">L</a> <a id="685" class="Symbol">=</a>
+    <a id="691" class="Symbol">(</a> <a id="693" href="foundation.inhabited-types.html#502" class="Function">is-inhabited</a> <a id="706" class="Symbol">(</a><a id="707" href="order-theory.lower-types-preorders.html#1070" class="Function">element-lower-type-Preorder</a> <a id="735" href="order-theory.ideals-preorders.html#520" class="Bound">P</a> <a id="737" href="order-theory.ideals-preorders.html#683" class="Bound">L</a><a id="738" class="Symbol">))</a> <a id="741" href="foundation-core.cartesian-product-types.html#590" class="Function Operator">×</a>
+    <a id="747" class="Symbol">(</a> <a id="749" class="Symbol">(</a><a id="750" href="order-theory.ideals-preorders.html#750" class="Bound">x</a> <a id="752" href="order-theory.ideals-preorders.html#752" class="Bound">y</a> <a id="754" class="Symbol">:</a> <a id="756" href="order-theory.lower-types-preorders.html#1070" class="Function">element-lower-type-Preorder</a> <a id="784" href="order-theory.ideals-preorders.html#520" class="Bound">P</a> <a id="786" href="order-theory.ideals-preorders.html#683" class="Bound">L</a><a id="787" class="Symbol">)</a> <a id="789" class="Symbol">→</a>
+      <a id="797" href="foundation.inhabited-types.html#502" class="Function">is-inhabited</a>
+        <a id="818" class="Symbol">(</a> <a id="820" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="822" class="Symbol">(</a> <a id="824" href="order-theory.lower-types-preorders.html#1070" class="Function">element-lower-type-Preorder</a> <a id="852" href="order-theory.ideals-preorders.html#520" class="Bound">P</a> <a id="854" href="order-theory.ideals-preorders.html#683" class="Bound">L</a><a id="855" class="Symbol">)</a>
+            <a id="869" class="Symbol">(</a> <a id="871" class="Symbol">λ</a> <a id="873" href="order-theory.ideals-preorders.html#873" class="Bound">z</a> <a id="875" class="Symbol">→</a>
+              <a id="891" class="Symbol">(</a> <a id="893" href="order-theory.lower-types-preorders.html#1315" class="Function">leq-lower-type-Preorder</a> <a id="917" href="order-theory.ideals-preorders.html#520" class="Bound">P</a> <a id="919" href="order-theory.ideals-preorders.html#683" class="Bound">L</a> <a id="921" href="order-theory.ideals-preorders.html#750" class="Bound">x</a> <a id="923" href="order-theory.ideals-preorders.html#873" class="Bound">z</a><a id="924" class="Symbol">)</a> <a id="926" href="foundation-core.cartesian-product-types.html#590" class="Function Operator">×</a>
+              <a id="942" class="Symbol">(</a> <a id="944" href="order-theory.lower-types-preorders.html#1315" class="Function">leq-lower-type-Preorder</a> <a id="968" href="order-theory.ideals-preorders.html#520" class="Bound">P</a> <a id="970" href="order-theory.ideals-preorders.html#683" class="Bound">L</a> <a id="972" href="order-theory.ideals-preorders.html#752" class="Bound">y</a> <a id="974" href="order-theory.ideals-preorders.html#873" class="Bound">z</a><a id="975" class="Symbol">))))</a>
+</pre>
