@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/subgroups.lagda.md.</p>
-<p>Version of Tuesday, August  9, 2022, 08:07 AM</p>
+<p>Version of Thursday, August 11, 2022, 03:35 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -50,7 +50,7 @@
     <a id="816" href="foundation-core.propositions.html#7833" class="Function">is-prop-function-type</a><a id="837" class="Symbol">;</a> <a id="839" href="foundation-core.propositions.html#5725" class="Function">is-prop-prod</a><a id="851" class="Symbol">;</a> <a id="853" href="foundation-core.propositions.html#4298" class="Function">is-prop-is-equiv</a><a id="869" class="Symbol">;</a> <a id="871" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a><a id="877" class="Symbol">;</a> <a id="879" href="foundation-core.propositions.html#8796" class="Function">hom-Prop</a><a id="887" class="Symbol">;</a>
     <a id="893" href="foundation-core.propositions.html#5874" class="Function">prod-Prop</a><a id="902" class="Symbol">;</a> <a id="904" href="foundation-core.propositions.html#2719" class="Function">eq-is-prop</a><a id="914" class="Symbol">)</a>
 <a id="916" class="Keyword">open</a> <a id="921" class="Keyword">import</a> <a id="928" href="foundation.raising-universe-levels.html" class="Module">foundation.raising-universe-levels</a> <a id="963" class="Keyword">using</a> <a id="969" class="Symbol">(</a><a id="970" href="foundation.raising-universe-levels.html#1892" class="Function">raise-Prop</a><a id="980" class="Symbol">;</a> <a id="982" href="foundation.raising-universe-levels.html#1038" class="InductiveConstructor">map-raise</a><a id="991" class="Symbol">)</a>
-<a id="993" class="Keyword">open</a> <a id="998" class="Keyword">import</a> <a id="1005" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="1021" class="Keyword">using</a> <a id="1027" class="Symbol">(</a><a id="1028" href="foundation-core.sets.html#1113" class="Function">is-set</a><a id="1034" class="Symbol">;</a> <a id="1036" href="foundation.sets.html#3859" class="Function">is-set-function-type</a><a id="1056" class="Symbol">;</a> <a id="1058" href="foundation-core.sets.html#1190" class="Function">UU-Set</a><a id="1064" class="Symbol">)</a>
+<a id="993" class="Keyword">open</a> <a id="998" class="Keyword">import</a> <a id="1005" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="1021" class="Keyword">using</a> <a id="1027" class="Symbol">(</a><a id="1028" href="foundation-core.sets.html#1113" class="Function">is-set</a><a id="1034" class="Symbol">;</a> <a id="1036" href="foundation.sets.html#3896" class="Function">is-set-function-type</a><a id="1056" class="Symbol">;</a> <a id="1058" href="foundation-core.sets.html#1190" class="Function">UU-Set</a><a id="1064" class="Symbol">)</a>
 <a id="1066" class="Keyword">open</a> <a id="1071" class="Keyword">import</a> <a id="1078" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="1098" class="Keyword">using</a>
   <a id="1106" class="Symbol">(</a> <a id="1108" href="foundation-core.subtypes.html#2265" class="Function">subtype</a><a id="1115" class="Symbol">;</a> <a id="1117" href="foundation-core.subtypes.html#3755" class="Function">is-emb-inclusion-subtype</a><a id="1141" class="Symbol">;</a> <a id="1143" href="foundation-core.subtypes.html#2609" class="Function">type-subtype</a><a id="1155" class="Symbol">;</a> <a id="1157" href="foundation-core.subtypes.html#2675" class="Function">inclusion-subtype</a><a id="1174" class="Symbol">;</a>
     <a id="1180" href="foundation-core.subtypes.html#5335" class="Function">is-set-type-subtype</a><a id="1199" class="Symbol">;</a> <a id="1201" href="foundation-core.subtypes.html#2494" class="Function">is-prop-is-in-subtype</a><a id="1222" class="Symbol">;</a> <a id="1224" href="foundation-core.subtypes.html#2429" class="Function">is-in-subtype</a><a id="1237" class="Symbol">)</a>
@@ -79,7 +79,7 @@
 <a id="is-set-subset-Group"></a><a id="2225" href="group-theory.subgroups.html#2225" class="Function">is-set-subset-Group</a> <a id="2245" class="Symbol">:</a>
   <a id="2249" class="Symbol">(</a><a id="2250" href="group-theory.subgroups.html#2250" class="Bound">l</a> <a id="2252" class="Symbol">:</a> <a id="2254" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2259" class="Symbol">)</a> <a id="2261" class="Symbol">{</a><a id="2262" href="group-theory.subgroups.html#2262" class="Bound">l1</a> <a id="2265" class="Symbol">:</a> <a id="2267" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2272" class="Symbol">}</a> <a id="2274" class="Symbol">(</a><a id="2275" href="group-theory.subgroups.html#2275" class="Bound">G</a> <a id="2277" class="Symbol">:</a> <a id="2279" href="group-theory.groups.html#2481" class="Function">Group</a> <a id="2285" href="group-theory.subgroups.html#2262" class="Bound">l1</a><a id="2287" class="Symbol">)</a> <a id="2289" class="Symbol">→</a> <a id="2291" href="foundation-core.sets.html#1113" class="Function">is-set</a> <a id="2298" class="Symbol">(</a><a id="2299" href="group-theory.subgroups.html#2102" class="Function">subset-Group</a> <a id="2312" href="group-theory.subgroups.html#2250" class="Bound">l</a> <a id="2314" href="group-theory.subgroups.html#2275" class="Bound">G</a><a id="2315" class="Symbol">)</a>
 <a id="2317" href="group-theory.subgroups.html#2225" class="Function">is-set-subset-Group</a> <a id="2337" href="group-theory.subgroups.html#2337" class="Bound">l</a> <a id="2339" href="group-theory.subgroups.html#2339" class="Bound">G</a> <a id="2341" class="Symbol">=</a>
-  <a id="2345" href="foundation.sets.html#3859" class="Function">is-set-function-type</a> <a id="2366" href="foundation.propositional-extensionality.html#3587" class="Function">is-set-UU-Prop</a>
+  <a id="2345" href="foundation.sets.html#3896" class="Function">is-set-function-type</a> <a id="2366" href="foundation.propositional-extensionality.html#3587" class="Function">is-set-UU-Prop</a>
 </pre>
 <h3 id="subgroups">Subgroups</h3>
 <pre class="Agda"><a id="2409" class="Keyword">module</a> <a id="2416" href="group-theory.subgroups.html#2416" class="Module">_</a>
@@ -384,7 +384,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-09)(03a2b5c) Merge pull request #279 from EgbertRijke/group-theory by noreply
+(2022-08-11)(f63734c) Merge pull request #280 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

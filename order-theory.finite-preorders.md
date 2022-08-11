@@ -4,7 +4,7 @@
 
 <a id="95" class="Keyword">module</a> <a id="102" href="order-theory.finite-preorders.html" class="Module">order-theory.finite-preorders</a> <a id="132" class="Keyword">where</a>
 
-<a id="139" class="Keyword">open</a> <a id="144" class="Keyword">import</a> <a id="151" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="192" class="Keyword">using</a> <a id="198" class="Symbol">(</a><a id="199" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a><a id="200" class="Symbol">)</a>
+<a id="139" class="Keyword">open</a> <a id="144" class="Keyword">import</a> <a id="151" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="192" class="Keyword">using</a> <a id="198" class="Symbol">(</a><a id="199" href="elementary-number-theory.natural-numbers.html#1548" class="Datatype">ℕ</a><a id="200" class="Symbol">)</a>
 
 <a id="203" class="Keyword">open</a> <a id="208" class="Keyword">import</a> <a id="215" href="foundation.cartesian-product-types.html" class="Module">foundation.cartesian-product-types</a> <a id="250" class="Keyword">using</a> <a id="256" class="Symbol">(</a><a id="257" href="foundation-core.cartesian-product-types.html#590" class="Function Operator">_×_</a><a id="260" class="Symbol">)</a>
 <a id="262" class="Keyword">open</a> <a id="267" class="Keyword">import</a> <a id="274" href="foundation.decidable-equality.html" class="Module">foundation.decidable-equality</a> <a id="304" class="Keyword">using</a> <a id="310" class="Symbol">(</a><a id="311" href="foundation.decidable-equality.html#1796" class="Function">has-decidable-equality</a><a id="333" class="Symbol">)</a>
@@ -114,7 +114,7 @@ We say that a preorder X is finite if X has finitely many elements and the order
   <a id="4395" href="order-theory.finite-preorders.html#4323" class="Function">is-finite-element-Finite-Preorder</a> <a id="4429" class="Symbol">=</a>
     <a id="4435" href="univalent-combinatorics.finite-types.html#4957" class="Function">is-finite-type-𝔽</a> <a id="4452" href="order-theory.finite-preorders.html#4155" class="Function">element-Finite-Preorder-𝔽</a>
 
-  <a id="4481" href="order-theory.finite-preorders.html#4481" class="Function">number-of-elements-Finite-Preorder</a> <a id="4516" class="Symbol">:</a> <a id="4518" href="elementary-number-theory.natural-numbers.html#1530" class="Datatype">ℕ</a>
+  <a id="4481" href="order-theory.finite-preorders.html#4481" class="Function">number-of-elements-Finite-Preorder</a> <a id="4516" class="Symbol">:</a> <a id="4518" href="elementary-number-theory.natural-numbers.html#1548" class="Datatype">ℕ</a>
   <a id="4522" href="order-theory.finite-preorders.html#4481" class="Function">number-of-elements-Finite-Preorder</a> <a id="4557" class="Symbol">=</a>
     <a id="4563" href="univalent-combinatorics.finite-types.html#12633" class="Function">number-of-elements-is-finite</a> <a id="4592" href="order-theory.finite-preorders.html#4323" class="Function">is-finite-element-Finite-Preorder</a>
 

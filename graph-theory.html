@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/graph-theory.lagda.md.</p>
-<p>Version of Tuesday, August  9, 2022, 08:07 AM</p>
+<p>Version of Thursday, August 11, 2022, 03:34 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -59,20 +59,21 @@
 <a id="1476" class="Keyword">open</a> <a id="1481" class="Keyword">import</a> <a id="1488" href="graph-theory.polygons.html" class="Module">graph-theory.polygons</a> <a id="1510" class="Keyword">public</a>
 <a id="1517" class="Keyword">open</a> <a id="1522" class="Keyword">import</a> <a id="1529" href="graph-theory.reflexive-graphs.html" class="Module">graph-theory.reflexive-graphs</a> <a id="1559" class="Keyword">public</a>
 <a id="1566" class="Keyword">open</a> <a id="1571" class="Keyword">import</a> <a id="1578" href="graph-theory.regular-undirected-graphs.html" class="Module">graph-theory.regular-undirected-graphs</a> <a id="1617" class="Keyword">public</a>
-<a id="1624" class="Keyword">open</a> <a id="1629" class="Keyword">import</a> <a id="1636" href="graph-theory.rooted-trees.html" class="Module">graph-theory.rooted-trees</a> <a id="1662" class="Keyword">public</a>
-<a id="1669" class="Keyword">open</a> <a id="1674" class="Keyword">import</a> <a id="1681" href="graph-theory.simple-undirected-graphs.html" class="Module">graph-theory.simple-undirected-graphs</a> <a id="1719" class="Keyword">public</a>
-<a id="1726" class="Keyword">open</a> <a id="1731" class="Keyword">import</a> <a id="1738" href="graph-theory.totally-faithful-morphisms-undirected-graphs.html" class="Module">graph-theory.totally-faithful-morphisms-undirected-graphs</a> <a id="1796" class="Keyword">public</a>
-<a id="1803" class="Keyword">open</a> <a id="1808" class="Keyword">import</a> <a id="1815" href="graph-theory.trails-undirected-graphs.html" class="Module">graph-theory.trails-undirected-graphs</a> <a id="1853" class="Keyword">public</a>
-<a id="1860" class="Keyword">open</a> <a id="1865" class="Keyword">import</a> <a id="1872" href="graph-theory.trees.html" class="Module">graph-theory.trees</a> <a id="1891" class="Keyword">public</a>
-<a id="1898" class="Keyword">open</a> <a id="1903" class="Keyword">import</a> <a id="1910" href="graph-theory.undirected-graph-structures-on-standard-finite-sets.html" class="Module">graph-theory.undirected-graph-structures-on-standard-finite-sets</a> <a id="1975" class="Keyword">public</a>
-<a id="1982" class="Keyword">open</a> <a id="1987" class="Keyword">import</a> <a id="1994" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a> <a id="2025" class="Keyword">public</a>
-<a id="2032" class="Keyword">open</a> <a id="2037" class="Keyword">import</a> <a id="2044" href="graph-theory.vertex-covers.html" class="Module">graph-theory.vertex-covers</a> <a id="2071" class="Keyword">public</a>
-<a id="2078" class="Keyword">open</a> <a id="2083" class="Keyword">import</a> <a id="2090" href="graph-theory.voltage-graphs.html" class="Module">graph-theory.voltage-graphs</a> <a id="2118" class="Keyword">public</a>
-<a id="2125" class="Keyword">open</a> <a id="2130" class="Keyword">import</a> <a id="2137" href="graph-theory.walks-undirected-graphs.html" class="Module">graph-theory.walks-undirected-graphs</a> <a id="2174" class="Keyword">public</a>
+<a id="1624" class="Keyword">open</a> <a id="1629" class="Keyword">import</a> <a id="1636" href="graph-theory.rooted-quasitrees.html" class="Module">graph-theory.rooted-quasitrees</a> <a id="1667" class="Keyword">public</a>
+<a id="1674" class="Keyword">open</a> <a id="1679" class="Keyword">import</a> <a id="1686" href="graph-theory.rooted-trees.html" class="Module">graph-theory.rooted-trees</a> <a id="1712" class="Keyword">public</a>
+<a id="1719" class="Keyword">open</a> <a id="1724" class="Keyword">import</a> <a id="1731" href="graph-theory.simple-undirected-graphs.html" class="Module">graph-theory.simple-undirected-graphs</a> <a id="1769" class="Keyword">public</a>
+<a id="1776" class="Keyword">open</a> <a id="1781" class="Keyword">import</a> <a id="1788" href="graph-theory.totally-faithful-morphisms-undirected-graphs.html" class="Module">graph-theory.totally-faithful-morphisms-undirected-graphs</a> <a id="1846" class="Keyword">public</a>
+<a id="1853" class="Keyword">open</a> <a id="1858" class="Keyword">import</a> <a id="1865" href="graph-theory.trails-undirected-graphs.html" class="Module">graph-theory.trails-undirected-graphs</a> <a id="1903" class="Keyword">public</a>
+<a id="1910" class="Keyword">open</a> <a id="1915" class="Keyword">import</a> <a id="1922" href="graph-theory.trees.html" class="Module">graph-theory.trees</a> <a id="1941" class="Keyword">public</a>
+<a id="1948" class="Keyword">open</a> <a id="1953" class="Keyword">import</a> <a id="1960" href="graph-theory.undirected-graph-structures-on-standard-finite-sets.html" class="Module">graph-theory.undirected-graph-structures-on-standard-finite-sets</a> <a id="2025" class="Keyword">public</a>
+<a id="2032" class="Keyword">open</a> <a id="2037" class="Keyword">import</a> <a id="2044" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a> <a id="2075" class="Keyword">public</a>
+<a id="2082" class="Keyword">open</a> <a id="2087" class="Keyword">import</a> <a id="2094" href="graph-theory.vertex-covers.html" class="Module">graph-theory.vertex-covers</a> <a id="2121" class="Keyword">public</a>
+<a id="2128" class="Keyword">open</a> <a id="2133" class="Keyword">import</a> <a id="2140" href="graph-theory.voltage-graphs.html" class="Module">graph-theory.voltage-graphs</a> <a id="2168" class="Keyword">public</a>
+<a id="2175" class="Keyword">open</a> <a id="2180" class="Keyword">import</a> <a id="2187" href="graph-theory.walks-undirected-graphs.html" class="Module">graph-theory.walks-undirected-graphs</a> <a id="2224" class="Keyword">public</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-09)(03a2b5c) Merge pull request #279 from EgbertRijke/group-theory by noreply
+(2022-08-11)(f63734c) Merge pull request #280 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

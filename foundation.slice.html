@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/slice.lagda.md.</p>
-<p>Version of Tuesday, August  9, 2022, 08:06 AM</p>
+<p>Version of Thursday, August 11, 2022, 03:34 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -59,7 +59,7 @@
   <a id="1268" class="Symbol">(</a> <a id="1270" href="foundation-core.homotopies.html#1249" class="Function Operator">_~_</a><a id="1273" class="Symbol">;</a> <a id="1275" href="foundation-core.homotopies.html#1368" class="Function">refl-htpy</a><a id="1284" class="Symbol">;</a> <a id="1286" href="foundation-core.homotopies.html#1794" class="Function Operator">_∙h_</a><a id="1290" class="Symbol">;</a> <a id="1292" href="foundation-core.homotopies.html#2504" class="Function Operator">_·l_</a><a id="1296" class="Symbol">;</a> <a id="1298" href="foundation-core.homotopies.html#3211" class="Function">right-unit-htpy</a><a id="1313" class="Symbol">;</a> <a id="1315" href="foundation.homotopies.html#3155" class="Function">is-contr-total-htpy</a><a id="1334" class="Symbol">;</a> <a id="1336" href="foundation-core.homotopies.html#2710" class="Function Operator">_·r_</a><a id="1340" class="Symbol">;</a>
     <a id="1346" href="foundation.homotopies.html#6187" class="Function">equiv-concat-htpy</a><a id="1363" class="Symbol">)</a>
 <a id="1365" class="Keyword">open</a> <a id="1370" class="Keyword">import</a> <a id="1377" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="1403" class="Keyword">using</a> <a id="1409" class="Symbol">(</a><a id="1410" href="foundation-core.identity-types.html#1865" class="Function Operator">_＝_</a><a id="1413" class="Symbol">;</a> <a id="1415" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="1419" class="Symbol">;</a> <a id="1421" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="1424" class="Symbol">;</a> <a id="1426" href="foundation-core.identity-types.html#3332" class="Function">inv-inv</a><a id="1433" class="Symbol">;</a> <a id="1435" href="foundation-core.identity-types.html#2425" class="Function Operator">_∙_</a><a id="1438" class="Symbol">)</a>
-<a id="1440" class="Keyword">open</a> <a id="1445" class="Keyword">import</a> <a id="1452" href="foundation.injective-maps.html" class="Module">foundation.injective-maps</a> <a id="1478" class="Keyword">using</a> <a id="1484" class="Symbol">(</a><a id="1485" href="foundation.injective-maps.html#3783" class="Function">is-injective-emb</a><a id="1501" class="Symbol">)</a>
+<a id="1440" class="Keyword">open</a> <a id="1445" class="Keyword">import</a> <a id="1452" href="foundation.injective-maps.html" class="Module">foundation.injective-maps</a> <a id="1478" class="Keyword">using</a> <a id="1484" class="Symbol">(</a><a id="1485" href="foundation.injective-maps.html#3927" class="Function">is-injective-emb</a><a id="1501" class="Symbol">)</a>
 <a id="1503" class="Keyword">open</a> <a id="1508" class="Keyword">import</a> <a id="1515" href="foundation.propositional-maps.html" class="Module">foundation.propositional-maps</a> <a id="1545" class="Keyword">using</a>
   <a id="1553" class="Symbol">(</a> <a id="1555" href="foundation-core.propositional-maps.html#1864" class="Function">is-prop-map-is-emb</a><a id="1573" class="Symbol">;</a> <a id="1575" href="foundation.propositional-maps.html#1466" class="Function">equiv-is-prop-map-is-emb</a><a id="1599" class="Symbol">)</a>
 <a id="1601" class="Keyword">open</a> <a id="1606" class="Keyword">import</a> <a id="1613" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="1637" class="Keyword">using</a>
@@ -312,7 +312,7 @@
     <a id="11327" href="foundation-core.equivalences.html#3013" class="Function">is-equiv-has-inverse</a>
       <a id="11354" class="Symbol">(</a> <a id="11356" href="foundation.slice.html#3125" class="Function">map-hom-slice</a> <a id="11370" class="Symbol">(</a><a id="11371" href="foundation-core.embeddings.html#1217" class="Function">map-emb</a> <a id="11379" href="foundation.slice.html#11315" class="Bound">g</a><a id="11380" class="Symbol">)</a> <a id="11382" class="Symbol">(</a><a id="11383" href="foundation-core.embeddings.html#1217" class="Function">map-emb</a> <a id="11391" href="foundation.slice.html#11313" class="Bound">f</a><a id="11392" class="Symbol">)</a> <a id="11394" href="foundation.slice.html#11319" class="Bound">i</a><a id="11395" class="Symbol">)</a>
       <a id="11403" class="Symbol">(</a> <a id="11405" class="Symbol">λ</a> <a id="11407" href="foundation.slice.html#11407" class="Bound">y</a> <a id="11409" class="Symbol">→</a>
-        <a id="11419" href="foundation.injective-maps.html#3783" class="Function">is-injective-emb</a> <a id="11436" href="foundation.slice.html#11315" class="Bound">g</a>
+        <a id="11419" href="foundation.injective-maps.html#3927" class="Function">is-injective-emb</a> <a id="11436" href="foundation.slice.html#11315" class="Bound">g</a>
         <a id="11446" class="Symbol">(</a> <a id="11448" href="foundation-core.identity-types.html#2729" class="Function">inv</a>
           <a id="11462" class="Symbol">(</a> <a id="11464" class="Symbol">(</a> <a id="11466" href="foundation.slice.html#3277" class="Function">triangle-hom-slice</a>
               <a id="11499" class="Symbol">(</a> <a id="11501" href="foundation-core.embeddings.html#1217" class="Function">map-emb</a> <a id="11509" href="foundation.slice.html#11315" class="Bound">g</a><a id="11510" class="Symbol">)</a>
@@ -325,7 +325,7 @@
               <a id="11681" class="Symbol">(</a> <a id="11683" href="foundation.slice.html#11317" class="Bound">h</a><a id="11684" class="Symbol">)</a>
               <a id="11700" class="Symbol">(</a> <a id="11702" href="foundation.slice.html#3125" class="Function">map-hom-slice</a> <a id="11716" class="Symbol">(</a><a id="11717" href="foundation-core.embeddings.html#1217" class="Function">map-emb</a> <a id="11725" href="foundation.slice.html#11315" class="Bound">g</a><a id="11726" class="Symbol">)</a> <a id="11728" class="Symbol">(</a><a id="11729" href="foundation-core.embeddings.html#1217" class="Function">map-emb</a> <a id="11737" href="foundation.slice.html#11313" class="Bound">f</a><a id="11738" class="Symbol">)</a> <a id="11740" href="foundation.slice.html#11319" class="Bound">i</a> <a id="11742" href="foundation.slice.html#11407" class="Bound">y</a><a id="11743" class="Symbol">)))))</a>
       <a id="11755" class="Symbol">(</a> <a id="11757" class="Symbol">λ</a> <a id="11759" href="foundation.slice.html#11759" class="Bound">x</a> <a id="11761" class="Symbol">→</a>
-        <a id="11771" href="foundation.injective-maps.html#3783" class="Function">is-injective-emb</a> <a id="11788" href="foundation.slice.html#11313" class="Bound">f</a>
+        <a id="11771" href="foundation.injective-maps.html#3927" class="Function">is-injective-emb</a> <a id="11788" href="foundation.slice.html#11313" class="Bound">f</a>
         <a id="11798" class="Symbol">(</a> <a id="11800" href="foundation-core.identity-types.html#2729" class="Function">inv</a>
           <a id="11814" class="Symbol">(</a> <a id="11816" class="Symbol">(</a> <a id="11818" href="foundation.slice.html#3277" class="Function">triangle-hom-slice</a> <a id="11837" class="Symbol">(</a><a id="11838" href="foundation-core.embeddings.html#1217" class="Function">map-emb</a> <a id="11846" href="foundation.slice.html#11313" class="Bound">f</a><a id="11847" class="Symbol">)</a> <a id="11849" class="Symbol">(</a><a id="11850" href="foundation-core.embeddings.html#1217" class="Function">map-emb</a> <a id="11858" href="foundation.slice.html#11315" class="Bound">g</a><a id="11859" class="Symbol">)</a> <a id="11861" href="foundation.slice.html#11317" class="Bound">h</a> <a id="11863" href="foundation.slice.html#11759" class="Bound">x</a><a id="11864" class="Symbol">)</a> <a id="11866" href="foundation-core.identity-types.html#2425" class="Function Operator">∙</a>
             <a id="11880" class="Symbol">(</a> <a id="11882" href="foundation.slice.html#3277" class="Function">triangle-hom-slice</a> <a id="11901" class="Symbol">(</a><a id="11902" href="foundation-core.embeddings.html#1217" class="Function">map-emb</a> <a id="11910" href="foundation.slice.html#11315" class="Bound">g</a><a id="11911" class="Symbol">)</a> <a id="11913" class="Symbol">(</a><a id="11914" href="foundation-core.embeddings.html#1217" class="Function">map-emb</a> <a id="11922" href="foundation.slice.html#11313" class="Bound">f</a><a id="11923" class="Symbol">)</a> <a id="11925" href="foundation.slice.html#11319" class="Bound">i</a>
@@ -434,7 +434,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-09)(03a2b5c) Merge pull request #279 from EgbertRijke/group-theory by noreply
+(2022-08-11)(f63734c) Merge pull request #280 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
