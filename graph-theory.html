@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
-  <title>graph-theory</title>
+  <title>Graph theory</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -24,56 +24,59 @@
 >
 <div class="powerby">
 <p>src/graph-theory.lagda.md.</p>
-<p>Version of Thursday, August 11, 2022, 03:34 PM</p>
+<p>Version of Friday, August 12, 2022, 10:08 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
-<h1 id="graph-theory">Graph theory</h1>
-<pre class="Agda"><a id="25" class="Symbol">{-#</a> <a id="29" class="Keyword">OPTIONS</a> <a id="37" class="Pragma">--without-K</a> <a id="49" class="Pragma">--exact-split</a> <a id="63" class="Symbol">#-}</a>
+<header id="title-block-header">
+<h1 class="title">Graph theory</h1>
+</header>
+<pre class="Agda"><a id="38" class="Symbol">{-#</a> <a id="42" class="Keyword">OPTIONS</a> <a id="50" class="Pragma">--without-K</a> <a id="62" class="Pragma">--exact-split</a> <a id="76" class="Symbol">#-}</a>
 
-<a id="68" class="Keyword">module</a> <a id="75" href="graph-theory.html" class="Module">graph-theory</a> <a id="88" class="Keyword">where</a>
+<a id="81" class="Keyword">module</a> <a id="88" href="graph-theory.html" class="Module">graph-theory</a> <a id="101" class="Keyword">where</a>
 </pre>
-<pre class="Agda"><a id="107" class="Keyword">open</a> <a id="112" class="Keyword">import</a> <a id="119" href="graph-theory.circuits-undirected-graphs.html" class="Module">graph-theory.circuits-undirected-graphs</a> <a id="159" class="Keyword">public</a>
-<a id="166" class="Keyword">open</a> <a id="171" class="Keyword">import</a> <a id="178" href="graph-theory.closed-walks-undirected-graphs.html" class="Module">graph-theory.closed-walks-undirected-graphs</a> <a id="222" class="Keyword">public</a>
-<a id="229" class="Keyword">open</a> <a id="234" class="Keyword">import</a> <a id="241" href="graph-theory.complete-bipartite-graphs.html" class="Module">graph-theory.complete-bipartite-graphs</a> <a id="280" class="Keyword">public</a>
-<a id="287" class="Keyword">open</a> <a id="292" class="Keyword">import</a> <a id="299" href="graph-theory.complete-multipartite-graphs.html" class="Module">graph-theory.complete-multipartite-graphs</a> <a id="341" class="Keyword">public</a>
-<a id="348" class="Keyword">open</a> <a id="353" class="Keyword">import</a> <a id="360" href="graph-theory.complete-undirected-graphs.html" class="Module">graph-theory.complete-undirected-graphs</a> <a id="400" class="Keyword">public</a>
-<a id="407" class="Keyword">open</a> <a id="412" class="Keyword">import</a> <a id="419" href="graph-theory.connected-undirected-graphs.html" class="Module">graph-theory.connected-undirected-graphs</a> <a id="460" class="Keyword">public</a>
-<a id="467" class="Keyword">open</a> <a id="472" class="Keyword">import</a> <a id="479" href="graph-theory.cycles-undirected-graphs.html" class="Module">graph-theory.cycles-undirected-graphs</a> <a id="517" class="Keyword">public</a>
-<a id="524" class="Keyword">open</a> <a id="529" class="Keyword">import</a> <a id="536" href="graph-theory.directed-graph-structures-on-standard-finite-sets.html" class="Module">graph-theory.directed-graph-structures-on-standard-finite-sets</a> <a id="599" class="Keyword">public</a>
-<a id="606" class="Keyword">open</a> <a id="611" class="Keyword">import</a> <a id="618" href="graph-theory.directed-graphs.html" class="Module">graph-theory.directed-graphs</a> <a id="647" class="Keyword">public</a>
-<a id="654" class="Keyword">open</a> <a id="659" class="Keyword">import</a> <a id="666" href="graph-theory.edge-coloured-undirected-graphs.html" class="Module">graph-theory.edge-coloured-undirected-graphs</a> <a id="711" class="Keyword">public</a>
-<a id="718" class="Keyword">open</a> <a id="723" class="Keyword">import</a> <a id="730" href="graph-theory.embeddings-undirected-graphs.html" class="Module">graph-theory.embeddings-undirected-graphs</a> <a id="772" class="Keyword">public</a>
-<a id="779" class="Keyword">open</a> <a id="784" class="Keyword">import</a> <a id="791" href="graph-theory.equivalences-undirected-graphs.html" class="Module">graph-theory.equivalences-undirected-graphs</a> <a id="835" class="Keyword">public</a>
-<a id="842" class="Keyword">open</a> <a id="847" class="Keyword">import</a> <a id="854" href="graph-theory.eulerian-circuits-undirected-graphs.html" class="Module">graph-theory.eulerian-circuits-undirected-graphs</a> <a id="903" class="Keyword">public</a>
-<a id="910" class="Keyword">open</a> <a id="915" class="Keyword">import</a> <a id="922" href="graph-theory.faithful-morphisms-undirected-graphs.html" class="Module">graph-theory.faithful-morphisms-undirected-graphs</a> <a id="972" class="Keyword">public</a>
-<a id="979" class="Keyword">open</a> <a id="984" class="Keyword">import</a> <a id="991" href="graph-theory.finite-graphs.html" class="Module">graph-theory.finite-graphs</a> <a id="1018" class="Keyword">public</a>
-<a id="1025" class="Keyword">open</a> <a id="1030" class="Keyword">import</a> <a id="1037" href="graph-theory.hypergraphs.html" class="Module">graph-theory.hypergraphs</a> <a id="1062" class="Keyword">public</a>
-<a id="1069" class="Keyword">open</a> <a id="1074" class="Keyword">import</a> <a id="1081" href="graph-theory.incidence-undirected-graphs.html" class="Module">graph-theory.incidence-undirected-graphs</a> <a id="1122" class="Keyword">public</a>
-<a id="1129" class="Keyword">open</a> <a id="1134" class="Keyword">import</a> <a id="1141" href="graph-theory.matchings.html" class="Module">graph-theory.matchings</a> <a id="1164" class="Keyword">public</a>
-<a id="1171" class="Keyword">open</a> <a id="1176" class="Keyword">import</a> <a id="1183" href="graph-theory.mere-equivalences-undirected-graphs.html" class="Module">graph-theory.mere-equivalences-undirected-graphs</a> <a id="1232" class="Keyword">public</a>
-<a id="1239" class="Keyword">open</a> <a id="1244" class="Keyword">import</a> <a id="1251" href="graph-theory.morphisms-directed-graphs.html" class="Module">graph-theory.morphisms-directed-graphs</a> <a id="1290" class="Keyword">public</a>
-<a id="1297" class="Keyword">open</a> <a id="1302" class="Keyword">import</a> <a id="1309" href="graph-theory.morphisms-undirected-graphs.html" class="Module">graph-theory.morphisms-undirected-graphs</a> <a id="1350" class="Keyword">public</a>
-<a id="1357" class="Keyword">open</a> <a id="1362" class="Keyword">import</a> <a id="1369" href="graph-theory.orientations-undirected-graphs.html" class="Module">graph-theory.orientations-undirected-graphs</a> <a id="1413" class="Keyword">public</a>
-<a id="1420" class="Keyword">open</a> <a id="1425" class="Keyword">import</a> <a id="1432" href="graph-theory.paths-undirected-graphs.html" class="Module">graph-theory.paths-undirected-graphs</a> <a id="1469" class="Keyword">public</a>
-<a id="1476" class="Keyword">open</a> <a id="1481" class="Keyword">import</a> <a id="1488" href="graph-theory.polygons.html" class="Module">graph-theory.polygons</a> <a id="1510" class="Keyword">public</a>
-<a id="1517" class="Keyword">open</a> <a id="1522" class="Keyword">import</a> <a id="1529" href="graph-theory.reflexive-graphs.html" class="Module">graph-theory.reflexive-graphs</a> <a id="1559" class="Keyword">public</a>
-<a id="1566" class="Keyword">open</a> <a id="1571" class="Keyword">import</a> <a id="1578" href="graph-theory.regular-undirected-graphs.html" class="Module">graph-theory.regular-undirected-graphs</a> <a id="1617" class="Keyword">public</a>
-<a id="1624" class="Keyword">open</a> <a id="1629" class="Keyword">import</a> <a id="1636" href="graph-theory.rooted-quasitrees.html" class="Module">graph-theory.rooted-quasitrees</a> <a id="1667" class="Keyword">public</a>
-<a id="1674" class="Keyword">open</a> <a id="1679" class="Keyword">import</a> <a id="1686" href="graph-theory.rooted-trees.html" class="Module">graph-theory.rooted-trees</a> <a id="1712" class="Keyword">public</a>
-<a id="1719" class="Keyword">open</a> <a id="1724" class="Keyword">import</a> <a id="1731" href="graph-theory.simple-undirected-graphs.html" class="Module">graph-theory.simple-undirected-graphs</a> <a id="1769" class="Keyword">public</a>
-<a id="1776" class="Keyword">open</a> <a id="1781" class="Keyword">import</a> <a id="1788" href="graph-theory.totally-faithful-morphisms-undirected-graphs.html" class="Module">graph-theory.totally-faithful-morphisms-undirected-graphs</a> <a id="1846" class="Keyword">public</a>
-<a id="1853" class="Keyword">open</a> <a id="1858" class="Keyword">import</a> <a id="1865" href="graph-theory.trails-undirected-graphs.html" class="Module">graph-theory.trails-undirected-graphs</a> <a id="1903" class="Keyword">public</a>
-<a id="1910" class="Keyword">open</a> <a id="1915" class="Keyword">import</a> <a id="1922" href="graph-theory.trees.html" class="Module">graph-theory.trees</a> <a id="1941" class="Keyword">public</a>
-<a id="1948" class="Keyword">open</a> <a id="1953" class="Keyword">import</a> <a id="1960" href="graph-theory.undirected-graph-structures-on-standard-finite-sets.html" class="Module">graph-theory.undirected-graph-structures-on-standard-finite-sets</a> <a id="2025" class="Keyword">public</a>
-<a id="2032" class="Keyword">open</a> <a id="2037" class="Keyword">import</a> <a id="2044" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a> <a id="2075" class="Keyword">public</a>
-<a id="2082" class="Keyword">open</a> <a id="2087" class="Keyword">import</a> <a id="2094" href="graph-theory.vertex-covers.html" class="Module">graph-theory.vertex-covers</a> <a id="2121" class="Keyword">public</a>
-<a id="2128" class="Keyword">open</a> <a id="2133" class="Keyword">import</a> <a id="2140" href="graph-theory.voltage-graphs.html" class="Module">graph-theory.voltage-graphs</a> <a id="2168" class="Keyword">public</a>
-<a id="2175" class="Keyword">open</a> <a id="2180" class="Keyword">import</a> <a id="2187" href="graph-theory.walks-undirected-graphs.html" class="Module">graph-theory.walks-undirected-graphs</a> <a id="2224" class="Keyword">public</a>
+<pre class="Agda"><a id="120" class="Keyword">open</a> <a id="125" class="Keyword">import</a> <a id="132" href="graph-theory.circuits-undirected-graphs.html" class="Module">graph-theory.circuits-undirected-graphs</a> <a id="172" class="Keyword">public</a>
+<a id="179" class="Keyword">open</a> <a id="184" class="Keyword">import</a> <a id="191" href="graph-theory.closed-walks-undirected-graphs.html" class="Module">graph-theory.closed-walks-undirected-graphs</a> <a id="235" class="Keyword">public</a>
+<a id="242" class="Keyword">open</a> <a id="247" class="Keyword">import</a> <a id="254" href="graph-theory.complete-bipartite-graphs.html" class="Module">graph-theory.complete-bipartite-graphs</a> <a id="293" class="Keyword">public</a>
+<a id="300" class="Keyword">open</a> <a id="305" class="Keyword">import</a> <a id="312" href="graph-theory.complete-multipartite-graphs.html" class="Module">graph-theory.complete-multipartite-graphs</a> <a id="354" class="Keyword">public</a>
+<a id="361" class="Keyword">open</a> <a id="366" class="Keyword">import</a> <a id="373" href="graph-theory.complete-undirected-graphs.html" class="Module">graph-theory.complete-undirected-graphs</a> <a id="413" class="Keyword">public</a>
+<a id="420" class="Keyword">open</a> <a id="425" class="Keyword">import</a> <a id="432" href="graph-theory.connected-undirected-graphs.html" class="Module">graph-theory.connected-undirected-graphs</a> <a id="473" class="Keyword">public</a>
+<a id="480" class="Keyword">open</a> <a id="485" class="Keyword">import</a> <a id="492" href="graph-theory.cycles-undirected-graphs.html" class="Module">graph-theory.cycles-undirected-graphs</a> <a id="530" class="Keyword">public</a>
+<a id="537" class="Keyword">open</a> <a id="542" class="Keyword">import</a> <a id="549" href="graph-theory.directed-graph-structures-on-standard-finite-sets.html" class="Module">graph-theory.directed-graph-structures-on-standard-finite-sets</a> <a id="612" class="Keyword">public</a>
+<a id="619" class="Keyword">open</a> <a id="624" class="Keyword">import</a> <a id="631" href="graph-theory.directed-graphs.html" class="Module">graph-theory.directed-graphs</a> <a id="660" class="Keyword">public</a>
+<a id="667" class="Keyword">open</a> <a id="672" class="Keyword">import</a> <a id="679" href="graph-theory.edge-coloured-undirected-graphs.html" class="Module">graph-theory.edge-coloured-undirected-graphs</a> <a id="724" class="Keyword">public</a>
+<a id="731" class="Keyword">open</a> <a id="736" class="Keyword">import</a> <a id="743" href="graph-theory.embeddings-undirected-graphs.html" class="Module">graph-theory.embeddings-undirected-graphs</a> <a id="785" class="Keyword">public</a>
+<a id="792" class="Keyword">open</a> <a id="797" class="Keyword">import</a> <a id="804" href="graph-theory.enriched-undirected-graphs.html" class="Module">graph-theory.enriched-undirected-graphs</a> <a id="844" class="Keyword">public</a>
+<a id="851" class="Keyword">open</a> <a id="856" class="Keyword">import</a> <a id="863" href="graph-theory.equivalences-undirected-graphs.html" class="Module">graph-theory.equivalences-undirected-graphs</a> <a id="907" class="Keyword">public</a>
+<a id="914" class="Keyword">open</a> <a id="919" class="Keyword">import</a> <a id="926" href="graph-theory.eulerian-circuits-undirected-graphs.html" class="Module">graph-theory.eulerian-circuits-undirected-graphs</a> <a id="975" class="Keyword">public</a>
+<a id="982" class="Keyword">open</a> <a id="987" class="Keyword">import</a> <a id="994" href="graph-theory.faithful-morphisms-undirected-graphs.html" class="Module">graph-theory.faithful-morphisms-undirected-graphs</a> <a id="1044" class="Keyword">public</a>
+<a id="1051" class="Keyword">open</a> <a id="1056" class="Keyword">import</a> <a id="1063" href="graph-theory.finite-graphs.html" class="Module">graph-theory.finite-graphs</a> <a id="1090" class="Keyword">public</a>
+<a id="1097" class="Keyword">open</a> <a id="1102" class="Keyword">import</a> <a id="1109" href="graph-theory.hypergraphs.html" class="Module">graph-theory.hypergraphs</a> <a id="1134" class="Keyword">public</a>
+<a id="1141" class="Keyword">open</a> <a id="1146" class="Keyword">import</a> <a id="1153" href="graph-theory.incidence-undirected-graphs.html" class="Module">graph-theory.incidence-undirected-graphs</a> <a id="1194" class="Keyword">public</a>
+<a id="1201" class="Keyword">open</a> <a id="1206" class="Keyword">import</a> <a id="1213" href="graph-theory.matchings.html" class="Module">graph-theory.matchings</a> <a id="1236" class="Keyword">public</a>
+<a id="1243" class="Keyword">open</a> <a id="1248" class="Keyword">import</a> <a id="1255" href="graph-theory.mere-equivalences-undirected-graphs.html" class="Module">graph-theory.mere-equivalences-undirected-graphs</a> <a id="1304" class="Keyword">public</a>
+<a id="1311" class="Keyword">open</a> <a id="1316" class="Keyword">import</a> <a id="1323" href="graph-theory.morphisms-directed-graphs.html" class="Module">graph-theory.morphisms-directed-graphs</a> <a id="1362" class="Keyword">public</a>
+<a id="1369" class="Keyword">open</a> <a id="1374" class="Keyword">import</a> <a id="1381" href="graph-theory.morphisms-undirected-graphs.html" class="Module">graph-theory.morphisms-undirected-graphs</a> <a id="1422" class="Keyword">public</a>
+<a id="1429" class="Keyword">open</a> <a id="1434" class="Keyword">import</a> <a id="1441" href="graph-theory.orientations-undirected-graphs.html" class="Module">graph-theory.orientations-undirected-graphs</a> <a id="1485" class="Keyword">public</a>
+<a id="1492" class="Keyword">open</a> <a id="1497" class="Keyword">import</a> <a id="1504" href="graph-theory.paths-undirected-graphs.html" class="Module">graph-theory.paths-undirected-graphs</a> <a id="1541" class="Keyword">public</a>
+<a id="1548" class="Keyword">open</a> <a id="1553" class="Keyword">import</a> <a id="1560" href="graph-theory.polygons.html" class="Module">graph-theory.polygons</a> <a id="1582" class="Keyword">public</a>
+<a id="1589" class="Keyword">open</a> <a id="1594" class="Keyword">import</a> <a id="1601" href="graph-theory.reflexive-graphs.html" class="Module">graph-theory.reflexive-graphs</a> <a id="1631" class="Keyword">public</a>
+<a id="1638" class="Keyword">open</a> <a id="1643" class="Keyword">import</a> <a id="1650" href="graph-theory.regular-undirected-graphs.html" class="Module">graph-theory.regular-undirected-graphs</a> <a id="1689" class="Keyword">public</a>
+<a id="1696" class="Keyword">open</a> <a id="1701" class="Keyword">import</a> <a id="1708" href="graph-theory.rooted-quasitrees.html" class="Module">graph-theory.rooted-quasitrees</a> <a id="1739" class="Keyword">public</a>
+<a id="1746" class="Keyword">open</a> <a id="1751" class="Keyword">import</a> <a id="1758" href="graph-theory.rooted-trees.html" class="Module">graph-theory.rooted-trees</a> <a id="1784" class="Keyword">public</a>
+<a id="1791" class="Keyword">open</a> <a id="1796" class="Keyword">import</a> <a id="1803" href="graph-theory.simple-undirected-graphs.html" class="Module">graph-theory.simple-undirected-graphs</a> <a id="1841" class="Keyword">public</a>
+<a id="1848" class="Keyword">open</a> <a id="1853" class="Keyword">import</a> <a id="1860" href="graph-theory.totally-faithful-morphisms-undirected-graphs.html" class="Module">graph-theory.totally-faithful-morphisms-undirected-graphs</a> <a id="1918" class="Keyword">public</a>
+<a id="1925" class="Keyword">open</a> <a id="1930" class="Keyword">import</a> <a id="1937" href="graph-theory.trails-undirected-graphs.html" class="Module">graph-theory.trails-undirected-graphs</a> <a id="1975" class="Keyword">public</a>
+<a id="1982" class="Keyword">open</a> <a id="1987" class="Keyword">import</a> <a id="1994" href="graph-theory.trees.html" class="Module">graph-theory.trees</a> <a id="2013" class="Keyword">public</a>
+<a id="2020" class="Keyword">open</a> <a id="2025" class="Keyword">import</a> <a id="2032" href="graph-theory.undirected-graph-structures-on-standard-finite-sets.html" class="Module">graph-theory.undirected-graph-structures-on-standard-finite-sets</a> <a id="2097" class="Keyword">public</a>
+<a id="2104" class="Keyword">open</a> <a id="2109" class="Keyword">import</a> <a id="2116" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a> <a id="2147" class="Keyword">public</a>
+<a id="2154" class="Keyword">open</a> <a id="2159" class="Keyword">import</a> <a id="2166" href="graph-theory.vertex-covers.html" class="Module">graph-theory.vertex-covers</a> <a id="2193" class="Keyword">public</a>
+<a id="2200" class="Keyword">open</a> <a id="2205" class="Keyword">import</a> <a id="2212" href="graph-theory.voltage-graphs.html" class="Module">graph-theory.voltage-graphs</a> <a id="2240" class="Keyword">public</a>
+<a id="2247" class="Keyword">open</a> <a id="2252" class="Keyword">import</a> <a id="2259" href="graph-theory.walks-undirected-graphs.html" class="Module">graph-theory.walks-undirected-graphs</a> <a id="2296" class="Keyword">public</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-11)(f63734c) Merge pull request #280 from EgbertRijke/group-theory by noreply
+(2022-08-12)(5694595) Merge pull request #281 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

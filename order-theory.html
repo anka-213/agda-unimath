@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
-  <title>order-theory</title>
+  <title>Order theory</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -24,50 +24,54 @@
 >
 <div class="powerby">
 <p>src/order-theory.lagda.md.</p>
-<p>Version of Thursday, August 11, 2022, 03:35 PM</p>
+<p>Version of Friday, August 12, 2022, 10:08 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
-<h1 id="order-theory">Order theory</h1>
-<pre class="Agda"><a id="25" class="Symbol">{-#</a> <a id="29" class="Keyword">OPTIONS</a> <a id="37" class="Pragma">--without-K</a> <a id="49" class="Pragma">--exact-split</a> <a id="63" class="Symbol">#-}</a>
+<header id="title-block-header">
+<h1 class="title">Order theory</h1>
+</header>
+<pre class="Agda"><a id="38" class="Symbol">{-#</a> <a id="42" class="Keyword">OPTIONS</a> <a id="50" class="Pragma">--without-K</a> <a id="62" class="Pragma">--exact-split</a> <a id="76" class="Symbol">#-}</a>
 
-<a id="68" class="Keyword">module</a> <a id="75" href="order-theory.html" class="Module">order-theory</a> <a id="88" class="Keyword">where</a>
+<a id="81" class="Keyword">module</a> <a id="88" href="order-theory.html" class="Module">order-theory</a> <a id="101" class="Keyword">where</a>
 
-<a id="95" class="Keyword">open</a> <a id="100" class="Keyword">import</a> <a id="107" href="order-theory.chains-posets.html" class="Module">order-theory.chains-posets</a> <a id="134" class="Keyword">public</a>
-<a id="141" class="Keyword">open</a> <a id="146" class="Keyword">import</a> <a id="153" href="order-theory.chains-preorders.html" class="Module">order-theory.chains-preorders</a> <a id="183" class="Keyword">public</a>
-<a id="190" class="Keyword">open</a> <a id="195" class="Keyword">import</a> <a id="202" href="order-theory.decidable-subposets.html" class="Module">order-theory.decidable-subposets</a> <a id="235" class="Keyword">public</a>
-<a id="242" class="Keyword">open</a> <a id="247" class="Keyword">import</a> <a id="254" href="order-theory.decidable-subpreorders.html" class="Module">order-theory.decidable-subpreorders</a> <a id="290" class="Keyword">public</a>
-<a id="297" class="Keyword">open</a> <a id="302" class="Keyword">import</a> <a id="309" href="order-theory.directed-complete-posets.html" class="Module">order-theory.directed-complete-posets</a> <a id="347" class="Keyword">public</a>
-<a id="354" class="Keyword">open</a> <a id="359" class="Keyword">import</a> <a id="366" href="order-theory.directed-families.html" class="Module">order-theory.directed-families</a> <a id="397" class="Keyword">public</a>
-<a id="404" class="Keyword">open</a> <a id="409" class="Keyword">import</a> <a id="416" href="order-theory.distributive-lattices.html" class="Module">order-theory.distributive-lattices</a> <a id="451" class="Keyword">public</a>
-<a id="458" class="Keyword">open</a> <a id="463" class="Keyword">import</a> <a id="470" href="order-theory.finite-posets.html" class="Module">order-theory.finite-posets</a> <a id="497" class="Keyword">public</a>
-<a id="504" class="Keyword">open</a> <a id="509" class="Keyword">import</a> <a id="516" href="order-theory.finite-preorders.html" class="Module">order-theory.finite-preorders</a> <a id="546" class="Keyword">public</a>
-<a id="553" class="Keyword">open</a> <a id="558" class="Keyword">import</a> <a id="565" href="order-theory.finitely-graded-posets.html" class="Module">order-theory.finitely-graded-posets</a> <a id="601" class="Keyword">public</a>
-<a id="608" class="Keyword">open</a> <a id="613" class="Keyword">import</a> <a id="620" href="order-theory.greatest-lower-bounds-posets.html" class="Module">order-theory.greatest-lower-bounds-posets</a> <a id="662" class="Keyword">public</a>
-<a id="669" class="Keyword">open</a> <a id="674" class="Keyword">import</a> <a id="681" href="order-theory.ideals-preorders.html" class="Module">order-theory.ideals-preorders</a> <a id="711" class="Keyword">public</a>
-<a id="718" class="Keyword">open</a> <a id="723" class="Keyword">import</a> <a id="730" href="order-theory.interval-subposets.html" class="Module">order-theory.interval-subposets</a> <a id="762" class="Keyword">public</a>
-<a id="769" class="Keyword">open</a> <a id="774" class="Keyword">import</a> <a id="781" href="order-theory.large-posets.html" class="Module">order-theory.large-posets</a> <a id="807" class="Keyword">public</a>
-<a id="814" class="Keyword">open</a> <a id="819" class="Keyword">import</a> <a id="826" href="order-theory.large-preorders.html" class="Module">order-theory.large-preorders</a> <a id="855" class="Keyword">public</a>
-<a id="862" class="Keyword">open</a> <a id="867" class="Keyword">import</a> <a id="874" href="order-theory.largest-elements-posets.html" class="Module">order-theory.largest-elements-posets</a> <a id="911" class="Keyword">public</a>
-<a id="918" class="Keyword">open</a> <a id="923" class="Keyword">import</a> <a id="930" href="order-theory.largest-elements-preorders.html" class="Module">order-theory.largest-elements-preorders</a> <a id="970" class="Keyword">public</a>
-<a id="977" class="Keyword">open</a> <a id="982" class="Keyword">import</a> <a id="989" href="order-theory.least-elements-posets.html" class="Module">order-theory.least-elements-posets</a> <a id="1024" class="Keyword">public</a>
-<a id="1031" class="Keyword">open</a> <a id="1036" class="Keyword">import</a> <a id="1043" href="order-theory.least-elements-preorders.html" class="Module">order-theory.least-elements-preorders</a> <a id="1081" class="Keyword">public</a>
-<a id="1088" class="Keyword">open</a> <a id="1093" class="Keyword">import</a> <a id="1100" href="order-theory.locally-finite-posets.html" class="Module">order-theory.locally-finite-posets</a> <a id="1135" class="Keyword">public</a>
-<a id="1142" class="Keyword">open</a> <a id="1147" class="Keyword">import</a> <a id="1154" href="order-theory.lower-types-preorders.html" class="Module">order-theory.lower-types-preorders</a> <a id="1189" class="Keyword">public</a>
-<a id="1196" class="Keyword">open</a> <a id="1201" class="Keyword">import</a> <a id="1208" href="order-theory.maximal-chains-posets.html" class="Module">order-theory.maximal-chains-posets</a> <a id="1243" class="Keyword">public</a>
-<a id="1250" class="Keyword">open</a> <a id="1255" class="Keyword">import</a> <a id="1262" href="order-theory.maximal-chains-preorders.html" class="Module">order-theory.maximal-chains-preorders</a> <a id="1300" class="Keyword">public</a>
-<a id="1307" class="Keyword">open</a> <a id="1312" class="Keyword">import</a> <a id="1319" href="order-theory.meet-semilattices.html" class="Module">order-theory.meet-semilattices</a> <a id="1350" class="Keyword">public</a>
-<a id="1357" class="Keyword">open</a> <a id="1362" class="Keyword">import</a> <a id="1369" href="order-theory.planar-binary-trees.html" class="Module">order-theory.planar-binary-trees</a> <a id="1402" class="Keyword">public</a>
-<a id="1409" class="Keyword">open</a> <a id="1414" class="Keyword">import</a> <a id="1421" href="order-theory.posets.html" class="Module">order-theory.posets</a> <a id="1441" class="Keyword">public</a>
-<a id="1448" class="Keyword">open</a> <a id="1453" class="Keyword">import</a> <a id="1460" href="order-theory.preorders.html" class="Module">order-theory.preorders</a> <a id="1483" class="Keyword">public</a>
-<a id="1490" class="Keyword">open</a> <a id="1495" class="Keyword">import</a> <a id="1502" href="order-theory.subposets.html" class="Module">order-theory.subposets</a> <a id="1525" class="Keyword">public</a>
-<a id="1532" class="Keyword">open</a> <a id="1537" class="Keyword">import</a> <a id="1544" href="order-theory.subpreorders.html" class="Module">order-theory.subpreorders</a> <a id="1570" class="Keyword">public</a>
-<a id="1577" class="Keyword">open</a> <a id="1582" class="Keyword">import</a> <a id="1589" href="order-theory.total-posets.html" class="Module">order-theory.total-posets</a> <a id="1615" class="Keyword">public</a>
-<a id="1622" class="Keyword">open</a> <a id="1627" class="Keyword">import</a> <a id="1634" href="order-theory.total-preorders.html" class="Module">order-theory.total-preorders</a> <a id="1663" class="Keyword">public</a>
+<a id="108" class="Keyword">open</a> <a id="113" class="Keyword">import</a> <a id="120" href="order-theory.chains-posets.html" class="Module">order-theory.chains-posets</a> <a id="147" class="Keyword">public</a>
+<a id="154" class="Keyword">open</a> <a id="159" class="Keyword">import</a> <a id="166" href="order-theory.chains-preorders.html" class="Module">order-theory.chains-preorders</a> <a id="196" class="Keyword">public</a>
+<a id="203" class="Keyword">open</a> <a id="208" class="Keyword">import</a> <a id="215" href="order-theory.decidable-subposets.html" class="Module">order-theory.decidable-subposets</a> <a id="248" class="Keyword">public</a>
+<a id="255" class="Keyword">open</a> <a id="260" class="Keyword">import</a> <a id="267" href="order-theory.decidable-subpreorders.html" class="Module">order-theory.decidable-subpreorders</a> <a id="303" class="Keyword">public</a>
+<a id="310" class="Keyword">open</a> <a id="315" class="Keyword">import</a> <a id="322" href="order-theory.directed-complete-posets.html" class="Module">order-theory.directed-complete-posets</a> <a id="360" class="Keyword">public</a>
+<a id="367" class="Keyword">open</a> <a id="372" class="Keyword">import</a> <a id="379" href="order-theory.directed-families.html" class="Module">order-theory.directed-families</a> <a id="410" class="Keyword">public</a>
+<a id="417" class="Keyword">open</a> <a id="422" class="Keyword">import</a> <a id="429" href="order-theory.distributive-lattices.html" class="Module">order-theory.distributive-lattices</a> <a id="464" class="Keyword">public</a>
+<a id="471" class="Keyword">open</a> <a id="476" class="Keyword">import</a> <a id="483" href="order-theory.finite-posets.html" class="Module">order-theory.finite-posets</a> <a id="510" class="Keyword">public</a>
+<a id="517" class="Keyword">open</a> <a id="522" class="Keyword">import</a> <a id="529" href="order-theory.finite-preorders.html" class="Module">order-theory.finite-preorders</a> <a id="559" class="Keyword">public</a>
+<a id="566" class="Keyword">open</a> <a id="571" class="Keyword">import</a> <a id="578" href="order-theory.finitely-graded-posets.html" class="Module">order-theory.finitely-graded-posets</a> <a id="614" class="Keyword">public</a>
+<a id="621" class="Keyword">open</a> <a id="626" class="Keyword">import</a> <a id="633" href="order-theory.greatest-lower-bounds-posets.html" class="Module">order-theory.greatest-lower-bounds-posets</a> <a id="675" class="Keyword">public</a>
+<a id="682" class="Keyword">open</a> <a id="687" class="Keyword">import</a> <a id="694" href="order-theory.ideals-preorders.html" class="Module">order-theory.ideals-preorders</a> <a id="724" class="Keyword">public</a>
+<a id="731" class="Keyword">open</a> <a id="736" class="Keyword">import</a> <a id="743" href="order-theory.interval-subposets.html" class="Module">order-theory.interval-subposets</a> <a id="775" class="Keyword">public</a>
+<a id="782" class="Keyword">open</a> <a id="787" class="Keyword">import</a> <a id="794" href="order-theory.large-posets.html" class="Module">order-theory.large-posets</a> <a id="820" class="Keyword">public</a>
+<a id="827" class="Keyword">open</a> <a id="832" class="Keyword">import</a> <a id="839" href="order-theory.large-preorders.html" class="Module">order-theory.large-preorders</a> <a id="868" class="Keyword">public</a>
+<a id="875" class="Keyword">open</a> <a id="880" class="Keyword">import</a> <a id="887" href="order-theory.largest-elements-posets.html" class="Module">order-theory.largest-elements-posets</a> <a id="924" class="Keyword">public</a>
+<a id="931" class="Keyword">open</a> <a id="936" class="Keyword">import</a> <a id="943" href="order-theory.largest-elements-preorders.html" class="Module">order-theory.largest-elements-preorders</a> <a id="983" class="Keyword">public</a>
+<a id="990" class="Keyword">open</a> <a id="995" class="Keyword">import</a> <a id="1002" href="order-theory.least-elements-posets.html" class="Module">order-theory.least-elements-posets</a> <a id="1037" class="Keyword">public</a>
+<a id="1044" class="Keyword">open</a> <a id="1049" class="Keyword">import</a> <a id="1056" href="order-theory.least-elements-preorders.html" class="Module">order-theory.least-elements-preorders</a> <a id="1094" class="Keyword">public</a>
+<a id="1101" class="Keyword">open</a> <a id="1106" class="Keyword">import</a> <a id="1113" href="order-theory.locally-finite-posets.html" class="Module">order-theory.locally-finite-posets</a> <a id="1148" class="Keyword">public</a>
+<a id="1155" class="Keyword">open</a> <a id="1160" class="Keyword">import</a> <a id="1167" href="order-theory.lower-types-preorders.html" class="Module">order-theory.lower-types-preorders</a> <a id="1202" class="Keyword">public</a>
+<a id="1209" class="Keyword">open</a> <a id="1214" class="Keyword">import</a> <a id="1221" href="order-theory.maximal-chains-posets.html" class="Module">order-theory.maximal-chains-posets</a> <a id="1256" class="Keyword">public</a>
+<a id="1263" class="Keyword">open</a> <a id="1268" class="Keyword">import</a> <a id="1275" href="order-theory.maximal-chains-preorders.html" class="Module">order-theory.maximal-chains-preorders</a> <a id="1313" class="Keyword">public</a>
+<a id="1320" class="Keyword">open</a> <a id="1325" class="Keyword">import</a> <a id="1332" href="order-theory.meet-semilattices.html" class="Module">order-theory.meet-semilattices</a> <a id="1363" class="Keyword">public</a>
+<a id="1370" class="Keyword">open</a> <a id="1375" class="Keyword">import</a> <a id="1382" href="order-theory.order-preserving-maps-posets.html" class="Module">order-theory.order-preserving-maps-posets</a> <a id="1424" class="Keyword">public</a>
+<a id="1431" class="Keyword">open</a> <a id="1436" class="Keyword">import</a> <a id="1443" href="order-theory.order-preserving-maps-preorders.html" class="Module">order-theory.order-preserving-maps-preorders</a> <a id="1488" class="Keyword">public</a>
+<a id="1495" class="Keyword">open</a> <a id="1500" class="Keyword">import</a> <a id="1507" href="order-theory.planar-binary-trees.html" class="Module">order-theory.planar-binary-trees</a> <a id="1540" class="Keyword">public</a>
+<a id="1547" class="Keyword">open</a> <a id="1552" class="Keyword">import</a> <a id="1559" href="order-theory.posets.html" class="Module">order-theory.posets</a> <a id="1579" class="Keyword">public</a>
+<a id="1586" class="Keyword">open</a> <a id="1591" class="Keyword">import</a> <a id="1598" href="order-theory.preorders.html" class="Module">order-theory.preorders</a> <a id="1621" class="Keyword">public</a>
+<a id="1628" class="Keyword">open</a> <a id="1633" class="Keyword">import</a> <a id="1640" href="order-theory.subposets.html" class="Module">order-theory.subposets</a> <a id="1663" class="Keyword">public</a>
+<a id="1670" class="Keyword">open</a> <a id="1675" class="Keyword">import</a> <a id="1682" href="order-theory.subpreorders.html" class="Module">order-theory.subpreorders</a> <a id="1708" class="Keyword">public</a>
+<a id="1715" class="Keyword">open</a> <a id="1720" class="Keyword">import</a> <a id="1727" href="order-theory.total-posets.html" class="Module">order-theory.total-posets</a> <a id="1753" class="Keyword">public</a>
+<a id="1760" class="Keyword">open</a> <a id="1765" class="Keyword">import</a> <a id="1772" href="order-theory.total-preorders.html" class="Module">order-theory.total-preorders</a> <a id="1801" class="Keyword">public</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-11)(f63734c) Merge pull request #280 from EgbertRijke/group-theory by noreply
+(2022-08-12)(5694595) Merge pull request #281 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
