@@ -124,7 +124,7 @@ A subgroup of a concrete group `G` is a pointed transitive `G`-set.
   <a id="4689" href="group-theory.subgroups-concrete-groups.html#4508" class="Function">preserves-shape-classifying-inclusion-subgroup-Concrete-Group</a> <a id="4751" class="Symbol">=</a> <a id="4753" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a>
 
   <a id="4761" href="group-theory.subgroups-concrete-groups.html#4761" class="Function">classifying-pointed-inclusion-subgroup-Concrete-Group</a> <a id="4815" class="Symbol">:</a>
-    <a id="4821" href="group-theory.subgroups-concrete-groups.html#3822" class="Function">classifying-pointed-type-subgroup-Concrete-Group</a> <a id="4870" href="structured-types.pointed-maps.html#968" class="Function Operator">→*</a>
+    <a id="4821" href="group-theory.subgroups-concrete-groups.html#3822" class="Function">classifying-pointed-type-subgroup-Concrete-Group</a> <a id="4870" href="structured-types.pointed-maps.html#1015" class="Function Operator">→*</a>
     <a id="4877" href="group-theory.concrete-groups.html#2267" class="Function">classifying-pointed-type-Concrete-Group</a> <a id="4917" href="group-theory.subgroups-concrete-groups.html#1705" class="Bound">G</a>
   <a id="4921" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="4925" href="group-theory.subgroups-concrete-groups.html#4761" class="Function">classifying-pointed-inclusion-subgroup-Concrete-Group</a> <a id="4979" class="Symbol">=</a>
     <a id="4985" href="group-theory.subgroups-concrete-groups.html#4318" class="Function">classifying-inclusion-subgroup-Concrete-Group</a>
