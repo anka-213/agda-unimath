@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/graph-theory.lagda.md.</p>
-<p>Version of Sunday, August 14, 2022, 09:28 PM</p>
+<p>Version of Monday, August 15, 2022, 05:26 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -66,18 +66,19 @@
 <a id="1768" class="Keyword">open</a> <a id="1773" class="Keyword">import</a> <a id="1780" href="graph-theory.rooted-quasitrees.html" class="Module">graph-theory.rooted-quasitrees</a> <a id="1811" class="Keyword">public</a>
 <a id="1818" class="Keyword">open</a> <a id="1823" class="Keyword">import</a> <a id="1830" href="graph-theory.rooted-trees.html" class="Module">graph-theory.rooted-trees</a> <a id="1856" class="Keyword">public</a>
 <a id="1863" class="Keyword">open</a> <a id="1868" class="Keyword">import</a> <a id="1875" href="graph-theory.simple-undirected-graphs.html" class="Module">graph-theory.simple-undirected-graphs</a> <a id="1913" class="Keyword">public</a>
-<a id="1920" class="Keyword">open</a> <a id="1925" class="Keyword">import</a> <a id="1932" href="graph-theory.totally-faithful-morphisms-undirected-graphs.html" class="Module">graph-theory.totally-faithful-morphisms-undirected-graphs</a> <a id="1990" class="Keyword">public</a>
-<a id="1997" class="Keyword">open</a> <a id="2002" class="Keyword">import</a> <a id="2009" href="graph-theory.trails-undirected-graphs.html" class="Module">graph-theory.trails-undirected-graphs</a> <a id="2047" class="Keyword">public</a>
-<a id="2054" class="Keyword">open</a> <a id="2059" class="Keyword">import</a> <a id="2066" href="graph-theory.trees.html" class="Module">graph-theory.trees</a> <a id="2085" class="Keyword">public</a>
-<a id="2092" class="Keyword">open</a> <a id="2097" class="Keyword">import</a> <a id="2104" href="graph-theory.undirected-graph-structures-on-standard-finite-sets.html" class="Module">graph-theory.undirected-graph-structures-on-standard-finite-sets</a> <a id="2169" class="Keyword">public</a>
-<a id="2176" class="Keyword">open</a> <a id="2181" class="Keyword">import</a> <a id="2188" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a> <a id="2219" class="Keyword">public</a>
-<a id="2226" class="Keyword">open</a> <a id="2231" class="Keyword">import</a> <a id="2238" href="graph-theory.vertex-covers.html" class="Module">graph-theory.vertex-covers</a> <a id="2265" class="Keyword">public</a>
-<a id="2272" class="Keyword">open</a> <a id="2277" class="Keyword">import</a> <a id="2284" href="graph-theory.voltage-graphs.html" class="Module">graph-theory.voltage-graphs</a> <a id="2312" class="Keyword">public</a>
-<a id="2319" class="Keyword">open</a> <a id="2324" class="Keyword">import</a> <a id="2331" href="graph-theory.walks-undirected-graphs.html" class="Module">graph-theory.walks-undirected-graphs</a> <a id="2368" class="Keyword">public</a>
+<a id="1920" class="Keyword">open</a> <a id="1925" class="Keyword">import</a> <a id="1932" href="graph-theory.stereoisomerism-enriched-undirected-graphs.html" class="Module">graph-theory.stereoisomerism-enriched-undirected-graphs</a> <a id="1988" class="Keyword">public</a>
+<a id="1995" class="Keyword">open</a> <a id="2000" class="Keyword">import</a> <a id="2007" href="graph-theory.totally-faithful-morphisms-undirected-graphs.html" class="Module">graph-theory.totally-faithful-morphisms-undirected-graphs</a> <a id="2065" class="Keyword">public</a>
+<a id="2072" class="Keyword">open</a> <a id="2077" class="Keyword">import</a> <a id="2084" href="graph-theory.trails-undirected-graphs.html" class="Module">graph-theory.trails-undirected-graphs</a> <a id="2122" class="Keyword">public</a>
+<a id="2129" class="Keyword">open</a> <a id="2134" class="Keyword">import</a> <a id="2141" href="graph-theory.trees.html" class="Module">graph-theory.trees</a> <a id="2160" class="Keyword">public</a>
+<a id="2167" class="Keyword">open</a> <a id="2172" class="Keyword">import</a> <a id="2179" href="graph-theory.undirected-graph-structures-on-standard-finite-sets.html" class="Module">graph-theory.undirected-graph-structures-on-standard-finite-sets</a> <a id="2244" class="Keyword">public</a>
+<a id="2251" class="Keyword">open</a> <a id="2256" class="Keyword">import</a> <a id="2263" href="graph-theory.undirected-graphs.html" class="Module">graph-theory.undirected-graphs</a> <a id="2294" class="Keyword">public</a>
+<a id="2301" class="Keyword">open</a> <a id="2306" class="Keyword">import</a> <a id="2313" href="graph-theory.vertex-covers.html" class="Module">graph-theory.vertex-covers</a> <a id="2340" class="Keyword">public</a>
+<a id="2347" class="Keyword">open</a> <a id="2352" class="Keyword">import</a> <a id="2359" href="graph-theory.voltage-graphs.html" class="Module">graph-theory.voltage-graphs</a> <a id="2387" class="Keyword">public</a>
+<a id="2394" class="Keyword">open</a> <a id="2399" class="Keyword">import</a> <a id="2406" href="graph-theory.walks-undirected-graphs.html" class="Module">graph-theory.walks-undirected-graphs</a> <a id="2443" class="Keyword">public</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-14)(1ba6b12) Merge pull request #286 from EgbertRijke/group-theory by noreply
+(2022-08-15)(33be712) Merge pull request #287 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
