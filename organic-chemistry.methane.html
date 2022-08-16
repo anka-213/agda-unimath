@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Methane</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/organic-chemistry/methane.lagda.md.</p>
+<p>Version of Tuesday, August 16, 2022, 02:22 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Methane</h1>
+</header>
+<pre class="Agda"><a id="33" class="Symbol">{-#</a> <a id="37" class="Keyword">OPTIONS</a> <a id="45" class="Pragma">--without-K</a> <a id="57" class="Pragma">--exact-split</a> <a id="71" class="Symbol">#-}</a>
+
+<a id="76" class="Keyword">module</a> <a id="83" href="organic-chemistry.methane.html" class="Module">organic-chemistry.methane</a> <a id="109" class="Keyword">where</a>
+
+<a id="116" class="Keyword">open</a> <a id="121" class="Keyword">import</a> <a id="128" href="organic-chemistry.hydrocarbons.html" class="Module">organic-chemistry.hydrocarbons</a> <a id="159" class="Keyword">using</a> <a id="165" class="Symbol">(</a><a id="166" href="organic-chemistry.hydrocarbons.html#1564" class="Function">hydrocarbon</a><a id="177" class="Symbol">)</a>
+<a id="179" class="Keyword">open</a> <a id="184" class="Keyword">import</a> <a id="191" href="organic-chemistry.alkanes.html" class="Module">organic-chemistry.alkanes</a> <a id="217" class="Keyword">using</a> <a id="223" class="Symbol">(</a><a id="224" href="organic-chemistry.alkanes.html#414" class="Function">is-alkane-hydrocarbon</a><a id="245" class="Symbol">)</a>
+
+<a id="248" class="Keyword">open</a> <a id="253" class="Keyword">import</a> <a id="260" href="finite-group-theory.tetrahedra-in-3-space.html" class="Module">finite-group-theory.tetrahedra-in-3-space</a> <a id="302" class="Keyword">using</a> <a id="308" class="Symbol">(</a><a id="309" href="finite-group-theory.tetrahedra-in-3-space.html#842" class="Function">tetrahedron-in-3-space</a><a id="331" class="Symbol">)</a>
+
+<a id="334" class="Keyword">open</a> <a id="339" class="Keyword">import</a> <a id="346" href="elementary-number-theory.inequality-natural-numbers.html" class="Module">elementary-number-theory.inequality-natural-numbers</a> <a id="398" class="Keyword">using</a> <a id="404" class="Symbol">(</a><a id="405" href="elementary-number-theory.inequality-natural-numbers.html#3088" class="Function">concatenate-eq-leq-ℕ</a><a id="425" class="Symbol">)</a>
+
+<a id="428" class="Keyword">open</a> <a id="433" class="Keyword">import</a> <a id="440" href="foundation.unit-type.html" class="Module">foundation.unit-type</a> <a id="461" class="Keyword">using</a> <a id="467" class="Symbol">(</a><a id="468" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="472" class="Symbol">)</a>
+<a id="474" class="Keyword">open</a> <a id="479" class="Keyword">import</a> <a id="486" href="foundation.empty-types.html" class="Module">foundation.empty-types</a> <a id="509" class="Keyword">using</a> <a id="515" class="Symbol">(</a><a id="516" href="foundation-core.empty-types.html#1160" class="Function">ex-falso</a> <a id="525" class="Symbol">;</a> <a id="527" href="foundation-core.empty-types.html#2377" class="Function">is-prop-empty</a><a id="540" class="Symbol">)</a>
+<a id="542" class="Keyword">open</a> <a id="547" class="Keyword">import</a> <a id="554" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="580" class="Keyword">using</a> <a id="586" class="Symbol">(</a><a id="587" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="590" class="Symbol">)</a>
+<a id="592" class="Keyword">open</a> <a id="597" class="Keyword">import</a> <a id="604" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="636" class="Keyword">using</a> <a id="642" class="Symbol">(</a><a id="643" href="foundation-core.dependent-pair-types.html#692" class="InductiveConstructor Operator">_,_</a> <a id="647" class="Symbol">;</a> <a id="649" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="652" class="Symbol">)</a>
+<a id="654" class="Keyword">open</a> <a id="659" class="Keyword">import</a> <a id="666" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="703" class="Keyword">using</a> <a id="709" class="Symbol">(</a><a id="710" href="foundation.propositional-truncations.html#2293" class="Function">unit-trunc-Prop</a><a id="725" class="Symbol">)</a>
+
+<a id="728" class="Keyword">open</a> <a id="733" class="Keyword">import</a> <a id="740" href="graph-theory.walks-undirected-graphs.html" class="Module">graph-theory.walks-undirected-graphs</a> <a id="777" class="Keyword">using</a> <a id="783" class="Symbol">(</a><a id="784" href="graph-theory.walks-undirected-graphs.html#1490" class="InductiveConstructor">refl-walk-Undirected-Graph</a><a id="810" class="Symbol">)</a>
+
+<a id="813" class="Keyword">open</a> <a id="818" class="Keyword">import</a> <a id="825" href="univalent-combinatorics.counting.html" class="Module">univalent-combinatorics.counting</a> <a id="858" class="Keyword">using</a> <a id="864" class="Symbol">(</a><a id="865" href="univalent-combinatorics.counting.html#4897" class="Function">count-empty</a><a id="876" class="Symbol">)</a>
+<a id="878" class="Keyword">open</a> <a id="883" class="Keyword">import</a> <a id="890" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="927" class="Keyword">using</a> <a id="933" class="Symbol">(</a><a id="934" href="univalent-combinatorics.finite-types.html#8912" class="Function">unit-𝔽</a> <a id="941" class="Symbol">;</a> <a id="943" href="univalent-combinatorics.finite-types.html#7915" class="Function">empty-𝔽</a> <a id="951" class="Symbol">;</a> <a id="953" href="univalent-combinatorics.finite-types.html#13033" class="Function">compute-number-of-elements-is-finite</a> <a id="990" class="Symbol">;</a> <a id="992" href="univalent-combinatorics.finite-types.html#7832" class="Function">is-finite-empty</a><a id="1007" class="Symbol">)</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p><strong>Methane</strong> is the simpliest hydrocarbon, and the first alkane.</p>
+<h2 id="definition">Definition</h2>
+<pre class="Agda"><a id="1109" class="Keyword">module</a> <a id="1116" href="organic-chemistry.methane.html#1116" class="Module">_</a> <a id="1118" class="Symbol">(</a><a id="1119" href="organic-chemistry.methane.html#1119" class="Bound">t</a> <a id="1121" class="Symbol">:</a> <a id="1123" href="finite-group-theory.tetrahedra-in-3-space.html#842" class="Function">tetrahedron-in-3-space</a><a id="1145" class="Symbol">)</a> <a id="1147" class="Keyword">where</a>
+
+  <a id="1156" href="organic-chemistry.methane.html#1156" class="Function">methane</a> <a id="1164" class="Symbol">:</a> <a id="1166" href="organic-chemistry.hydrocarbons.html#1564" class="Function">hydrocarbon</a>
+  <a id="1180" href="organic-chemistry.methane.html#1156" class="Function">methane</a> <a id="1188" class="Symbol">=</a> <a id="1190" class="Symbol">(</a><a id="1191" href="univalent-combinatorics.finite-types.html#8912" class="Function">unit-𝔽</a> <a id="1198" href="foundation-core.dependent-pair-types.html#692" class="InductiveConstructor Operator">,</a> <a id="1200" class="Symbol">(λ</a> <a id="1203" href="organic-chemistry.methane.html#1203" class="Bound">x</a> <a id="1205" class="Symbol">→</a> <a id="1207" href="univalent-combinatorics.finite-types.html#7915" class="Function">empty-𝔽</a><a id="1214" class="Symbol">))</a>
+          <a id="1227" href="foundation-core.dependent-pair-types.html#692" class="InductiveConstructor Operator">,</a> <a id="1229" class="Symbol">(λ</a> <a id="1232" href="organic-chemistry.methane.html#1232" class="Bound">c</a> <a id="1234" class="Symbol">→</a> <a id="1236" href="organic-chemistry.methane.html#1119" class="Bound">t</a><a id="1237" class="Symbol">)</a>
+          <a id="1249" href="foundation-core.dependent-pair-types.html#692" class="InductiveConstructor Operator">,</a> <a id="1251" class="Symbol">(λ</a> <a id="1254" href="organic-chemistry.methane.html#1254" class="Bound">c</a> <a id="1256" class="Symbol">→</a> <a id="1258" class="Symbol">(λ</a> <a id="1261" href="organic-chemistry.methane.html#1261" class="Bound">e</a> <a id="1263" class="Symbol">→</a> <a id="1265" href="foundation-core.empty-types.html#1160" class="Function">ex-falso</a> <a id="1274" class="Symbol">(</a><a id="1275" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1279" href="organic-chemistry.methane.html#1261" class="Bound">e</a><a id="1280" class="Symbol">))</a> <a id="1283" href="foundation-core.dependent-pair-types.html#692" class="InductiveConstructor Operator">,</a> <a id="1285" class="Symbol">λ</a> <a id="1287" href="organic-chemistry.methane.html#1287" class="Bound">e</a> <a id="1289" href="organic-chemistry.methane.html#1289" class="Bound">_</a> <a id="1291" class="Symbol">→</a> <a id="1293" href="foundation-core.empty-types.html#1160" class="Function">ex-falso</a> <a id="1302" class="Symbol">(</a><a id="1303" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="1307" href="organic-chemistry.methane.html#1287" class="Bound">e</a><a id="1308" class="Symbol">))</a>
+          <a id="1321" href="foundation-core.dependent-pair-types.html#692" class="InductiveConstructor Operator">,</a> <a id="1323" class="Symbol">(λ</a> <a id="1326" href="organic-chemistry.methane.html#1326" class="Bound">c</a> <a id="1328" href="organic-chemistry.methane.html#1328" class="Bound">x</a> <a id="1330" class="Symbol">→</a> <a id="1332" href="organic-chemistry.methane.html#1328" class="Bound">x</a><a id="1333" class="Symbol">)</a>
+          <a id="1345" href="foundation-core.dependent-pair-types.html#692" class="InductiveConstructor Operator">,</a> <a id="1347" class="Symbol">(λ</a> <a id="1350" href="organic-chemistry.methane.html#1350" class="Bound">c</a> <a id="1352" href="organic-chemistry.methane.html#1352" class="Bound">c&#39;</a> <a id="1355" class="Symbol">→</a> <a id="1357" href="elementary-number-theory.inequality-natural-numbers.html#3088" class="Function">concatenate-eq-leq-ℕ</a> <a id="1378" class="Number">3</a> <a id="1380" class="Symbol">(</a><a id="1381" href="foundation-core.identity-types.html#2729" class="Function">inv</a> <a id="1385" class="Symbol">(</a><a id="1386" href="univalent-combinatorics.finite-types.html#13033" class="Function">compute-number-of-elements-is-finite</a> <a id="1423" href="univalent-combinatorics.counting.html#4897" class="Function">count-empty</a> <a id="1435" href="univalent-combinatorics.finite-types.html#7832" class="Function">is-finite-empty</a><a id="1450" class="Symbol">))</a> <a id="1453" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1457" class="Symbol">)</a>
+          <a id="1469" href="foundation-core.dependent-pair-types.html#692" class="InductiveConstructor Operator">,</a> <a id="1471" class="Symbol">λ</a> <a id="1473" class="Symbol">{</a><a id="1474" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a> <a id="1479" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a> <a id="1484" class="Symbol">→</a> <a id="1486" href="foundation.propositional-truncations.html#2293" class="Function">unit-trunc-Prop</a> <a id="1502" href="graph-theory.walks-undirected-graphs.html#1490" class="InductiveConstructor">refl-walk-Undirected-Graph</a><a id="1528" class="Symbol">}</a>
+
+  <a id="1533" href="organic-chemistry.methane.html#1533" class="Function">is-alkane-methane</a> <a id="1551" class="Symbol">:</a> <a id="1553" href="organic-chemistry.alkanes.html#414" class="Function">is-alkane-hydrocarbon</a> <a id="1575" href="organic-chemistry.methane.html#1156" class="Function">methane</a>
+  <a id="1585" href="organic-chemistry.methane.html#1533" class="Function">is-alkane-methane</a> <a id="1603" href="organic-chemistry.methane.html#1603" class="Bound">c</a> <a id="1605" href="organic-chemistry.methane.html#1605" class="Bound">c&#39;</a> <a id="1608" href="organic-chemistry.methane.html#1608" class="Bound">e</a> <a id="1610" href="organic-chemistry.methane.html#1610" class="Bound">e&#39;</a> <a id="1613" class="Symbol">=</a> <a id="1615" href="foundation-core.empty-types.html#2377" class="Function">is-prop-empty</a> <a id="1629" href="organic-chemistry.methane.html#1608" class="Bound">e</a> <a id="1631" href="organic-chemistry.methane.html#1610" class="Bound">e&#39;</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-08-16)(ceb84c0) Merge pull request #288 from Seiryn21/Seiryn21/hydrocarbons by noreply
+</pre>
+</body>
+</html>
