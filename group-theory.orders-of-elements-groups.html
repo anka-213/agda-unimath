@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>The order of an element in a group</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/group-theory/orders-of-elements-groups.lagda.md.</p>
+<p>Version of Thursday, August 18, 2022, 04:09 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">The order of an element in a group</h1>
+</header>
+<pre class="Agda"><a id="60" class="Keyword">module</a> <a id="67" href="group-theory.orders-of-elements-groups.html" class="Module">group-theory.orders-of-elements-groups</a> <a id="106" class="Keyword">where</a>
+
+<a id="113" class="Keyword">open</a> <a id="118" class="Keyword">import</a> <a id="125" href="elementary-number-theory.group-of-integers.html" class="Module">elementary-number-theory.group-of-integers</a>
+
+<a id="169" class="Keyword">open</a> <a id="174" class="Keyword">import</a> <a id="181" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="209" class="Keyword">open</a> <a id="214" class="Keyword">import</a> <a id="221" href="group-theory.free-groups-with-one-generator.html" class="Module">group-theory.free-groups-with-one-generator</a>
+<a id="265" class="Keyword">open</a> <a id="270" class="Keyword">import</a> <a id="277" href="group-theory.groups.html" class="Module">group-theory.groups</a>
+<a id="297" class="Keyword">open</a> <a id="302" class="Keyword">import</a> <a id="309" href="group-theory.kernels.html" class="Module">group-theory.kernels</a>
+<a id="330" class="Keyword">open</a> <a id="335" class="Keyword">import</a> <a id="342" href="group-theory.normal-subgroups.html" class="Module">group-theory.normal-subgroups</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>For each element <code>g : G</code> of a group <code>G</code> we have a unique group homomorphism <code>f : ℤ → G</code> such that <code>f 1 = g</code>. The order of <code>g</code> is defined to be the kernel of this group homomorphism <code>f</code>. Since kernels are ordered by inclusion, it follows that the orders of elements of a group are ordered by reversed inclusion.</p>
+<p>If the group <code>G</code> has decidable equality, then we can reduce the order of <code>g</code> to a natural number. In this case, the orders of elements of <code>G</code> are ordered by divisibility.</p>
+<p>If the unique group homomorphism <code>f : ℤ → G</code> such that <code>f 1 = g</code> is injective, and <code>G</code> has decidable equality, then the order of <code>g</code> is set to be <code>0</code>, which is a consequence of the point of view that orders are normal subgroups of <code>ℤ</code>.</p>
+<h2 id="definitions">Definitions</h2>
+<h3 id="the-type-of-orders-of-elements-in-groups">The type of orders of elements in groups</h3>
+<pre class="Agda"><a id="order-Group"></a><a id="1177" href="group-theory.orders-of-elements-groups.html#1177" class="Function">order-Group</a> <a id="1189" class="Symbol">:</a> <a id="1191" class="Symbol">(</a><a id="1192" href="group-theory.orders-of-elements-groups.html#1192" class="Bound">l</a> <a id="1194" class="Symbol">:</a> <a id="1196" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1201" class="Symbol">)</a> <a id="1203" class="Symbol">→</a> <a id="1205" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1208" class="Symbol">(</a><a id="1209" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="1214" href="group-theory.orders-of-elements-groups.html#1192" class="Bound">l</a><a id="1215" class="Symbol">)</a>
+<a id="1217" href="group-theory.orders-of-elements-groups.html#1177" class="Function">order-Group</a> <a id="1229" href="group-theory.orders-of-elements-groups.html#1229" class="Bound">l</a> <a id="1231" class="Symbol">=</a> <a id="1233" href="group-theory.normal-subgroups.html#1157" class="Function">Normal-Subgroup</a> <a id="1249" href="group-theory.orders-of-elements-groups.html#1229" class="Bound">l</a> <a id="1251" href="elementary-number-theory.group-of-integers.html#658" class="Function">ℤ-Group</a>
+</pre>
+<h3 id="the-order-of-an-element-in-a-group">The order of an element in a group</h3>
+<pre class="Agda"><a id="1312" class="Keyword">module</a> <a id="1319" href="group-theory.orders-of-elements-groups.html#1319" class="Module">_</a>
+  <a id="1323" class="Symbol">{</a><a id="1324" href="group-theory.orders-of-elements-groups.html#1324" class="Bound">l</a> <a id="1326" class="Symbol">:</a> <a id="1328" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1333" class="Symbol">}</a> <a id="1335" class="Symbol">(</a><a id="1336" href="group-theory.orders-of-elements-groups.html#1336" class="Bound">G</a> <a id="1338" class="Symbol">:</a> <a id="1340" href="group-theory.groups.html#2650" class="Function">Group</a> <a id="1346" href="group-theory.orders-of-elements-groups.html#1324" class="Bound">l</a><a id="1347" class="Symbol">)</a>
+  <a id="1351" class="Keyword">where</a>
+
+  <a id="1360" href="group-theory.orders-of-elements-groups.html#1360" class="Function">order-element-Group</a> <a id="1380" class="Symbol">:</a> <a id="1382" href="group-theory.groups.html#2893" class="Function">type-Group</a> <a id="1393" href="group-theory.orders-of-elements-groups.html#1336" class="Bound">G</a> <a id="1395" class="Symbol">→</a> <a id="1397" href="group-theory.orders-of-elements-groups.html#1177" class="Function">order-Group</a> <a id="1409" href="group-theory.orders-of-elements-groups.html#1324" class="Bound">l</a>
+  <a id="1413" href="group-theory.orders-of-elements-groups.html#1360" class="Function">order-element-Group</a> <a id="1433" href="group-theory.orders-of-elements-groups.html#1433" class="Bound">g</a> <a id="1435" class="Symbol">=</a>
+    <a id="1441" href="group-theory.kernels.html#3934" class="Function">kernel-hom-Group</a> <a id="1458" href="elementary-number-theory.group-of-integers.html#658" class="Function">ℤ-Group</a> <a id="1466" href="group-theory.orders-of-elements-groups.html#1336" class="Bound">G</a> <a id="1468" class="Symbol">(</a><a id="1469" href="group-theory.free-groups-with-one-generator.html#4565" class="Function">hom-free-group-with-one-generator-ℤ</a> <a id="1505" href="group-theory.orders-of-elements-groups.html#1336" class="Bound">G</a> <a id="1507" href="group-theory.orders-of-elements-groups.html#1433" class="Bound">g</a><a id="1508" class="Symbol">)</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-08-18)(199710b) Merge pull request #295 from EgbertRijke/group-theory by noreply
+</pre>
+</body>
+</html>

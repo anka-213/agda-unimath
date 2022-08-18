@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/impredicative-encodings.lagda.md.</p>
-<p>Version of Wednesday, August 17, 2022, 11:48 AM</p>
+<p>Version of Thursday, August 18, 2022, 04:08 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -36,7 +36,7 @@
 <a id="118" class="Keyword">module</a> <a id="125" href="foundation.impredicative-encodings.html" class="Module">foundation.impredicative-encodings</a> <a id="160" class="Keyword">where</a>
 
 <a id="167" class="Keyword">open</a> <a id="172" class="Keyword">import</a> <a id="179" href="foundation.conjunction.html" class="Module">foundation.conjunction</a> <a id="202" class="Keyword">using</a> <a id="208" class="Symbol">(</a><a id="209" href="foundation.conjunction.html#729" class="Function">type-conj-Prop</a><a id="223" class="Symbol">;</a> <a id="225" href="foundation.conjunction.html#706" class="Function">conj-Prop</a><a id="234" class="Symbol">)</a>
-<a id="236" class="Keyword">open</a> <a id="241" class="Keyword">import</a> <a id="248" href="foundation.coproduct-types.html" class="Module">foundation.coproduct-types</a> <a id="275" class="Keyword">using</a> <a id="281" class="Symbol">(</a><a id="282" href="foundation.coproduct-types.html#1287" class="Function">ind-coprod</a><a id="292" class="Symbol">)</a>
+<a id="236" class="Keyword">open</a> <a id="241" class="Keyword">import</a> <a id="248" href="foundation.coproduct-types.html" class="Module">foundation.coproduct-types</a> <a id="275" class="Keyword">using</a> <a id="281" class="Symbol">(</a><a id="282" href="foundation.coproduct-types.html#1286" class="Function">ind-coprod</a><a id="292" class="Symbol">)</a>
 <a id="294" class="Keyword">open</a> <a id="299" class="Keyword">import</a> <a id="306" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a> <a id="338" class="Keyword">using</a>
   <a id="346" class="Symbol">(</a> <a id="348" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a><a id="349" class="Symbol">;</a> <a id="351" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a><a id="355" class="Symbol">;</a> <a id="357" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a><a id="360" class="Symbol">;</a> <a id="362" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a><a id="365" class="Symbol">;</a> <a id="367" href="foundation-core.dependent-pair-types.html#743" class="Function">ind-Σ</a><a id="372" class="Symbol">)</a>
 <a id="374" class="Keyword">open</a> <a id="379" class="Keyword">import</a> <a id="386" href="foundation.disjunction.html" class="Module">foundation.disjunction</a> <a id="409" class="Keyword">using</a>
@@ -152,7 +152,7 @@
 <a id="4625" href="foundation.impredicative-encodings.html#4479" class="Function">map-impredicative-disj-Prop</a> <a id="4653" class="Symbol">{</a><a id="4654" href="foundation.impredicative-encodings.html#4654" class="Bound">l1</a><a id="4656" class="Symbol">}</a> <a id="4658" class="Symbol">{</a><a id="4659" href="foundation.impredicative-encodings.html#4659" class="Bound">l2</a><a id="4661" class="Symbol">}</a> <a id="4663" href="foundation.impredicative-encodings.html#4663" class="Bound">P1</a> <a id="4666" href="foundation.impredicative-encodings.html#4666" class="Bound">P2</a> <a id="4669" class="Symbol">=</a>
   <a id="4673" href="foundation.propositional-truncations.html#5416" class="Function">map-universal-property-trunc-Prop</a>
     <a id="4711" class="Symbol">(</a> <a id="4713" href="foundation.impredicative-encodings.html#3999" class="Function">impredicative-disj-Prop</a> <a id="4737" href="foundation.impredicative-encodings.html#4663" class="Bound">P1</a> <a id="4740" href="foundation.impredicative-encodings.html#4666" class="Bound">P2</a><a id="4742" class="Symbol">)</a>
-    <a id="4748" class="Symbol">(</a> <a id="4750" href="foundation.coproduct-types.html#1287" class="Function">ind-coprod</a>
+    <a id="4748" class="Symbol">(</a> <a id="4750" href="foundation.coproduct-types.html#1286" class="Function">ind-coprod</a>
       <a id="4767" class="Symbol">(</a> <a id="4769" class="Symbol">λ</a> <a id="4771" href="foundation.impredicative-encodings.html#4771" class="Bound">x</a> <a id="4773" class="Symbol">→</a> <a id="4775" href="foundation.impredicative-encodings.html#4300" class="Function">type-impredicative-disj-Prop</a> <a id="4804" href="foundation.impredicative-encodings.html#4663" class="Bound">P1</a> <a id="4807" href="foundation.impredicative-encodings.html#4666" class="Bound">P2</a><a id="4809" class="Symbol">)</a>
       <a id="4817" class="Symbol">(</a> <a id="4819" class="Symbol">λ</a> <a id="4821" href="foundation.impredicative-encodings.html#4821" class="Bound">x</a> <a id="4823" href="foundation.impredicative-encodings.html#4823" class="Bound">Q</a> <a id="4825" href="foundation.impredicative-encodings.html#4825" class="Bound">f1</a> <a id="4828" href="foundation.impredicative-encodings.html#4828" class="Bound">f2</a> <a id="4831" class="Symbol">→</a> <a id="4833" href="foundation.impredicative-encodings.html#4825" class="Bound">f1</a> <a id="4836" href="foundation.impredicative-encodings.html#4821" class="Bound">x</a><a id="4837" class="Symbol">)</a>
       <a id="4845" class="Symbol">(</a> <a id="4847" class="Symbol">λ</a> <a id="4849" href="foundation.impredicative-encodings.html#4849" class="Bound">y</a> <a id="4851" href="foundation.impredicative-encodings.html#4851" class="Bound">Q</a> <a id="4853" href="foundation.impredicative-encodings.html#4853" class="Bound">f1</a> <a id="4856" href="foundation.impredicative-encodings.html#4856" class="Bound">f2</a> <a id="4859" class="Symbol">→</a> <a id="4861" href="foundation.impredicative-encodings.html#4856" class="Bound">f2</a> <a id="4864" href="foundation.impredicative-encodings.html#4849" class="Bound">y</a><a id="4865" class="Symbol">))</a>
@@ -309,7 +309,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-17)(4ac284b) Merge pull request #293 from EgbertRijke/group-theory by noreply
+(2022-08-18)(199710b) Merge pull request #295 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

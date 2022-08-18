@@ -13,4 +13,5 @@ title: Organic Chemistry
 <a id="314" class="Keyword">open</a> <a id="319" class="Keyword">import</a> <a id="326" href="organic-chemistry.alkenes.html" class="Module">organic-chemistry.alkenes</a> <a id="352" class="Keyword">public</a>
 <a id="359" class="Keyword">open</a> <a id="364" class="Keyword">import</a> <a id="371" href="organic-chemistry.alkynes.html" class="Module">organic-chemistry.alkynes</a> <a id="397" class="Keyword">public</a>
 <a id="404" class="Keyword">open</a> <a id="409" class="Keyword">import</a> <a id="416" href="organic-chemistry.methane.html" class="Module">organic-chemistry.methane</a> <a id="442" class="Keyword">public</a>
+<a id="449" class="Keyword">open</a> <a id="454" class="Keyword">import</a> <a id="461" href="organic-chemistry.ethane.html" class="Module">organic-chemistry.ethane</a> <a id="486" class="Keyword">public</a>
 </pre>
