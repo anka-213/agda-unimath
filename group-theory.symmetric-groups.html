@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/symmetric-groups.lagda.md.</p>
-<p>Version of Thursday, August 18, 2022, 11:42 PM</p>
+<p>Version of Saturday, August 20, 2022, 05:53 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -64,7 +64,7 @@
 <a id="1631" class="Keyword">open</a> <a id="1636" class="Keyword">import</a> <a id="1643" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="1663" class="Keyword">using</a> <a id="1669" class="Symbol">(</a><a id="1670" href="group-theory.groups.html#2140" class="Function">is-group&#39;</a><a id="1679" class="Symbol">;</a> <a id="1681" href="group-theory.groups.html#2650" class="Function">Group</a><a id="1686" class="Symbol">;</a> <a id="1688" href="group-theory.groups.html#2772" class="Function">semigroup-Group</a><a id="1703" class="Symbol">)</a>
 <a id="1705" class="Keyword">open</a> <a id="1710" class="Keyword">import</a> <a id="1717" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="1751" class="Keyword">using</a> <a id="1757" class="Symbol">(</a><a id="1758" href="group-theory.homomorphisms-groups.html#2092" class="Function">id-hom-Group</a><a id="1770" class="Symbol">;</a> <a id="1772" href="group-theory.homomorphisms-groups.html#1635" class="Function">type-hom-Group</a><a id="1786" class="Symbol">;</a> <a id="1788" href="group-theory.homomorphisms-groups.html#2261" class="Function">comp-hom-Group</a><a id="1802" class="Symbol">)</a>
 <a id="1804" class="Keyword">open</a> <a id="1809" class="Keyword">import</a> <a id="1816" href="group-theory.homomorphisms-semigroups.html" class="Module">group-theory.homomorphisms-semigroups</a> <a id="1854" class="Keyword">using</a> <a id="1860" class="Symbol">(</a><a id="1861" href="group-theory.homomorphisms-semigroups.html#2111" class="Function">is-prop-preserves-mul-Semigroup</a><a id="1892" class="Symbol">)</a>
-<a id="1894" class="Keyword">open</a> <a id="1899" class="Keyword">import</a> <a id="1906" href="group-theory.isomorphisms-groups.html" class="Module">group-theory.isomorphisms-groups</a> <a id="1939" class="Keyword">using</a> <a id="1945" class="Symbol">(</a><a id="1946" href="group-theory.isomorphisms-groups.html#1714" class="Function">type-iso-Group</a><a id="1960" class="Symbol">)</a>
+<a id="1894" class="Keyword">open</a> <a id="1899" class="Keyword">import</a> <a id="1906" href="group-theory.isomorphisms-groups.html" class="Module">group-theory.isomorphisms-groups</a> <a id="1939" class="Keyword">using</a> <a id="1945" class="Symbol">(</a><a id="1946" href="group-theory.isomorphisms-groups.html#1804" class="Function">type-iso-Group</a><a id="1960" class="Symbol">)</a>
 <a id="1962" class="Keyword">open</a> <a id="1967" class="Keyword">import</a> <a id="1974" href="group-theory.monoids.html" class="Module">group-theory.monoids</a> <a id="1995" class="Keyword">using</a> <a id="2001" class="Symbol">(</a><a id="2002" href="group-theory.monoids.html#910" class="Function">is-unital-Semigroup</a><a id="2021" class="Symbol">)</a>
 <a id="2023" class="Keyword">open</a> <a id="2028" class="Keyword">import</a> <a id="2035" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="2059" class="Keyword">using</a> <a id="2065" class="Symbol">(</a><a id="2066" href="group-theory.semigroups.html#624" class="Function">has-associative-mul-Set</a><a id="2089" class="Symbol">;</a> <a id="2091" href="group-theory.semigroups.html#750" class="Function">Semigroup</a><a id="2100" class="Symbol">)</a>
 </pre>
@@ -179,7 +179,7 @@
           <a id="6213" class="Symbol">(</a> <a id="6215" href="foundation-core.functions.html#322" class="Function">id</a><a id="6217" class="Symbol">)))</a>
 
   <a id="6224" href="group-theory.symmetric-groups.html#6224" class="Function">iso-symmetric-group-equiv-Set</a> <a id="6254" class="Symbol">:</a>
-    <a id="6260" href="group-theory.isomorphisms-groups.html#1714" class="Function">type-iso-Group</a> <a id="6275" class="Symbol">(</a><a id="6276" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="6292" href="group-theory.symmetric-groups.html#3940" class="Bound">X</a><a id="6293" class="Symbol">)</a> <a id="6295" class="Symbol">(</a><a id="6296" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="6312" href="group-theory.symmetric-groups.html#3956" class="Bound">Y</a><a id="6313" class="Symbol">)</a>
+    <a id="6260" href="group-theory.isomorphisms-groups.html#1804" class="Function">type-iso-Group</a> <a id="6275" class="Symbol">(</a><a id="6276" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="6292" href="group-theory.symmetric-groups.html#3940" class="Bound">X</a><a id="6293" class="Symbol">)</a> <a id="6295" class="Symbol">(</a><a id="6296" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="6312" href="group-theory.symmetric-groups.html#3956" class="Bound">Y</a><a id="6313" class="Symbol">)</a>
   <a id="6317" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="6321" href="group-theory.symmetric-groups.html#6224" class="Function">iso-symmetric-group-equiv-Set</a> <a id="6351" class="Symbol">=</a> <a id="6353" href="group-theory.symmetric-groups.html#4012" class="Function">hom-symmetric-group-equiv-Set</a>
   <a id="6385" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="6389" class="Symbol">(</a><a id="6390" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="6394" href="group-theory.symmetric-groups.html#6224" class="Function">iso-symmetric-group-equiv-Set</a><a id="6423" class="Symbol">)</a> <a id="6425" class="Symbol">=</a> <a id="6427" href="group-theory.symmetric-groups.html#4396" class="Function">hom-inv-symmetric-group-equiv-Set</a>
   <a id="6463" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="6467" class="Symbol">(</a><a id="6468" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="6472" class="Symbol">(</a><a id="6473" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="6477" href="group-theory.symmetric-groups.html#6224" class="Function">iso-symmetric-group-equiv-Set</a><a id="6506" class="Symbol">))</a> <a id="6509" class="Symbol">=</a> <a id="6511" href="group-theory.symmetric-groups.html#4793" class="Function">is-sec-hom-inv-symmetric-group-equiv-Set</a>
@@ -484,7 +484,7 @@
           <a id="20487" class="Symbol">(</a> <a id="20489" href="foundation-core.functions.html#322" class="Function">id</a><a id="20491" class="Symbol">)))</a>
 
   <a id="20498" href="group-theory.symmetric-groups.html#20498" class="Function">iso-symmetric-group-abstract-automorphism-group-Set</a> <a id="20550" class="Symbol">:</a>
-    <a id="20556" href="group-theory.isomorphisms-groups.html#1714" class="Function">type-iso-Group</a>
+    <a id="20556" href="group-theory.isomorphisms-groups.html#1804" class="Function">type-iso-Group</a>
       <a id="20577" class="Symbol">(</a> <a id="20579" href="group-theory.symmetric-groups.html#3569" class="Function">symmetric-Group</a> <a id="20595" href="group-theory.symmetric-groups.html#6771" class="Bound">X</a><a id="20596" class="Symbol">)</a>
       <a id="20604" class="Symbol">(</a> <a id="20606" href="group-theory.concrete-groups.html#6401" class="Function">abstract-group-Concrete-Group</a>
         <a id="20644" class="Symbol">(</a> <a id="20646" href="group-theory.automorphism-groups.html#1165" class="Function">Automorphism-Group</a> <a id="20665" class="Symbol">(</a><a id="20666" href="foundation-core.sets.html#1190" class="Function">UU-Set</a> <a id="20673" class="Symbol">(</a><a id="20674" href="group-theory.symmetric-groups.html#6755" class="Bound">l1</a> <a id="20677" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="20679" href="group-theory.symmetric-groups.html#6758" class="Bound">l2</a><a id="20681" class="Symbol">))</a> <a id="20684" class="Symbol">(</a><a id="20685" href="foundation.raising-universe-levels.html#2149" class="Function">raise-Set</a> <a id="20695" href="group-theory.symmetric-groups.html#6758" class="Bound">l2</a> <a id="20698" href="group-theory.symmetric-groups.html#6771" class="Bound">X</a><a id="20699" class="Symbol">)</a> <a id="20701" href="foundation.sets.html#1357" class="Function">is-1-type-UU-Set</a><a id="20717" class="Symbol">))</a>
@@ -499,7 +499,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-19)(97f8b21) Merge pull request #298 from EgbertRijke/group-theory by noreply
+(2022-08-20)(a7d4ebd) Merge pull request #299 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
