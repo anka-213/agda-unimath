@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/finite-group-theory/groups-of-order-2.lagda.md.</p>
-<p>Version of Saturday, August 20, 2022, 05:52 PM</p>
+<p>Version of Saturday, August 20, 2022, 10:30 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -70,20 +70,20 @@
   <a id="1301" class="Symbol">{</a><a id="1302" href="finite-group-theory.groups-of-order-2.html#1302" class="Bound">l</a> <a id="1304" class="Symbol">:</a> <a id="1306" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1311" class="Symbol">}</a> <a id="1313" class="Symbol">(</a><a id="1314" href="finite-group-theory.groups-of-order-2.html#1314" class="Bound">G</a> <a id="1316" class="Symbol">:</a> <a id="1318" href="finite-group-theory.groups-of-order-2.html#1204" class="Function">Group-of-Order-2</a> <a id="1335" href="finite-group-theory.groups-of-order-2.html#1302" class="Bound">l</a><a id="1336" class="Symbol">)</a>
   <a id="1340" class="Keyword">where</a>
 
-  <a id="1349" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a> <a id="1372" class="Symbol">:</a> <a id="1374" href="group-theory.groups.html#2650" class="Function">Group</a> <a id="1380" href="finite-group-theory.groups-of-order-2.html#1302" class="Bound">l</a>
+  <a id="1349" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a> <a id="1372" class="Symbol">:</a> <a id="1374" href="group-theory.groups.html#2745" class="Function">Group</a> <a id="1380" href="finite-group-theory.groups-of-order-2.html#1302" class="Bound">l</a>
   <a id="1384" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a> <a id="1407" class="Symbol">=</a> <a id="1409" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1413" href="finite-group-theory.groups-of-order-2.html#1314" class="Bound">G</a>
 
   <a id="1418" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a> <a id="1440" class="Symbol">:</a> <a id="1442" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1445" href="finite-group-theory.groups-of-order-2.html#1302" class="Bound">l</a>
-  <a id="1449" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a> <a id="1471" class="Symbol">=</a> <a id="1473" href="group-theory.groups.html#2893" class="Function">type-Group</a> <a id="1484" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a>
+  <a id="1449" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a> <a id="1471" class="Symbol">=</a> <a id="1473" href="group-theory.groups.html#2988" class="Function">type-Group</a> <a id="1484" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a>
 
   <a id="1510" href="finite-group-theory.groups-of-order-2.html#1510" class="Function">is-set-type-Group-of-Order-2</a> <a id="1539" class="Symbol">:</a> <a id="1541" href="foundation-core.sets.html#1113" class="Function">is-set</a> <a id="1548" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a>
-  <a id="1572" href="finite-group-theory.groups-of-order-2.html#1510" class="Function">is-set-type-Group-of-Order-2</a> <a id="1601" class="Symbol">=</a> <a id="1603" href="group-theory.groups.html#2945" class="Function">is-set-type-Group</a> <a id="1621" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a>
+  <a id="1572" href="finite-group-theory.groups-of-order-2.html#1510" class="Function">is-set-type-Group-of-Order-2</a> <a id="1601" class="Symbol">=</a> <a id="1603" href="group-theory.groups.html#3040" class="Function">is-set-type-Group</a> <a id="1621" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a>
 
   <a id="1647" href="finite-group-theory.groups-of-order-2.html#1647" class="Function">mul-Group-of-Order-2</a> <a id="1668" class="Symbol">:</a> <a id="1670" class="Symbol">(</a><a id="1671" href="finite-group-theory.groups-of-order-2.html#1671" class="Bound">x</a> <a id="1673" href="finite-group-theory.groups-of-order-2.html#1673" class="Bound">y</a> <a id="1675" class="Symbol">:</a> <a id="1677" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a><a id="1698" class="Symbol">)</a> <a id="1700" class="Symbol">→</a> <a id="1702" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a>
-  <a id="1726" href="finite-group-theory.groups-of-order-2.html#1647" class="Function">mul-Group-of-Order-2</a> <a id="1747" class="Symbol">=</a> <a id="1749" href="group-theory.groups.html#3138" class="Function">mul-Group</a> <a id="1759" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a>
+  <a id="1726" href="finite-group-theory.groups-of-order-2.html#1647" class="Function">mul-Group-of-Order-2</a> <a id="1747" class="Symbol">=</a> <a id="1749" href="group-theory.groups.html#3233" class="Function">mul-Group</a> <a id="1759" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a>
 
   <a id="1785" href="finite-group-theory.groups-of-order-2.html#1785" class="Function">unit-Group-of-Order-2</a> <a id="1807" class="Symbol">:</a> <a id="1809" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a>
-  <a id="1833" href="finite-group-theory.groups-of-order-2.html#1785" class="Function">unit-Group-of-Order-2</a> <a id="1855" class="Symbol">=</a> <a id="1857" href="group-theory.groups.html#3937" class="Function">unit-Group</a> <a id="1868" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a>
+  <a id="1833" href="finite-group-theory.groups-of-order-2.html#1785" class="Function">unit-Group-of-Order-2</a> <a id="1855" class="Symbol">=</a> <a id="1857" href="group-theory.groups.html#4032" class="Function">unit-Group</a> <a id="1868" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a>
 
   <a id="1894" href="finite-group-theory.groups-of-order-2.html#1894" class="Function">has-two-elements-Group-of-Order-2</a> <a id="1928" class="Symbol">:</a> <a id="1930" href="univalent-combinatorics.2-element-types.html#4408" class="Function">has-two-elements</a> <a id="1947" class="Symbol">(</a><a id="1948" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a><a id="1969" class="Symbol">)</a>
   <a id="1973" href="finite-group-theory.groups-of-order-2.html#1894" class="Function">has-two-elements-Group-of-Order-2</a> <a id="2007" class="Symbol">=</a> <a id="2009" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="2013" href="finite-group-theory.groups-of-order-2.html#1314" class="Bound">G</a>
@@ -157,11 +157,11 @@
   <a id="4418" href="finite-group-theory.groups-of-order-2.html#4337" class="Function">equiv-Group-of-Order-2</a> <a id="4441" class="Symbol">=</a>
     <a id="4447" class="Symbol">(</a> <a id="4449" href="univalent-combinatorics.2-element-types.html#12078" class="Function">equiv-point-2-Element-Type</a>
       <a id="4482" class="Symbol">(</a> <a id="4484" href="finite-group-theory.groups-of-order-2.html#2018" class="Function">2-element-type-Group-of-Order-2</a> <a id="4516" href="finite-group-theory.groups-of-order-2.html#4301" class="Bound">H</a><a id="4517" class="Symbol">)</a>
-      <a id="4525" class="Symbol">(</a> <a id="4527" href="group-theory.groups.html#3937" class="Function">unit-Group</a> <a id="4538" class="Symbol">(</a><a id="4539" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a> <a id="4562" href="finite-group-theory.groups-of-order-2.html#4301" class="Bound">H</a><a id="4563" class="Symbol">)))</a> <a id="4567" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
+      <a id="4525" class="Symbol">(</a> <a id="4527" href="group-theory.groups.html#4032" class="Function">unit-Group</a> <a id="4538" class="Symbol">(</a><a id="4539" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a> <a id="4562" href="finite-group-theory.groups-of-order-2.html#4301" class="Bound">H</a><a id="4563" class="Symbol">)))</a> <a id="4567" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
     <a id="4574" class="Symbol">(</a> <a id="4576" href="foundation-core.equivalences.html#5721" class="Function">inv-equiv</a>
       <a id="4592" class="Symbol">(</a> <a id="4594" href="univalent-combinatorics.2-element-types.html#12078" class="Function">equiv-point-2-Element-Type</a>
         <a id="4629" class="Symbol">(</a> <a id="4631" href="finite-group-theory.groups-of-order-2.html#2018" class="Function">2-element-type-Group-of-Order-2</a> <a id="4663" href="finite-group-theory.groups-of-order-2.html#4275" class="Bound">G</a><a id="4664" class="Symbol">)</a>
-        <a id="4674" class="Symbol">(</a> <a id="4676" href="group-theory.groups.html#3937" class="Function">unit-Group</a> <a id="4687" class="Symbol">(</a><a id="4688" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a> <a id="4711" href="finite-group-theory.groups-of-order-2.html#4275" class="Bound">G</a><a id="4712" class="Symbol">))))</a>
+        <a id="4674" class="Symbol">(</a> <a id="4676" href="group-theory.groups.html#4032" class="Function">unit-Group</a> <a id="4687" class="Symbol">(</a><a id="4688" href="finite-group-theory.groups-of-order-2.html#1349" class="Function">group-Group-of-Order-2</a> <a id="4711" href="finite-group-theory.groups-of-order-2.html#4275" class="Bound">G</a><a id="4712" class="Symbol">))))</a>
 
   <a id="4720" href="finite-group-theory.groups-of-order-2.html#4720" class="Function">map-specified-hom-Group-of-Order-2</a> <a id="4755" class="Symbol">:</a>
     <a id="4761" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a> <a id="4783" href="finite-group-theory.groups-of-order-2.html#4275" class="Bound">G</a> <a id="4785" class="Symbol">→</a> <a id="4787" href="finite-group-theory.groups-of-order-2.html#1418" class="Function">type-Group-of-Order-2</a> <a id="4809" href="finite-group-theory.groups-of-order-2.html#4301" class="Bound">H</a>
@@ -184,7 +184,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-20)(a7d4ebd) Merge pull request #299 from EgbertRijke/group-theory by noreply
+(2022-08-21)(97f6920) Merge pull request #300 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

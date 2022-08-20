@@ -18,6 +18,6 @@ The dihedral group `D_k` is defined by the dihedral group construction applied t
 
 ## Definition
 
-<pre class="Agda"><a id="dihedral-group"></a><a id="481" href="group-theory.dihedral-groups.html#481" class="Function">dihedral-group</a> <a id="496" class="Symbol">:</a> <a id="498" href="elementary-number-theory.natural-numbers.html#1548" class="Datatype">ℕ</a> <a id="500" class="Symbol">→</a> <a id="502" href="group-theory.groups.html#2650" class="Function">Group</a> <a id="508" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<pre class="Agda"><a id="dihedral-group"></a><a id="481" href="group-theory.dihedral-groups.html#481" class="Function">dihedral-group</a> <a id="496" class="Symbol">:</a> <a id="498" href="elementary-number-theory.natural-numbers.html#1548" class="Datatype">ℕ</a> <a id="500" class="Symbol">→</a> <a id="502" href="group-theory.groups.html#2745" class="Function">Group</a> <a id="508" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
 <a id="514" href="group-theory.dihedral-groups.html#481" class="Function">dihedral-group</a> <a id="529" href="group-theory.dihedral-groups.html#529" class="Bound">k</a> <a id="531" class="Symbol">=</a> <a id="533" href="group-theory.dihedral-group-construction.html#5214" class="Function">dihedral-group-Ab</a> <a id="551" class="Symbol">(</a><a id="552" href="elementary-number-theory.groups-of-modular-arithmetic.html#1524" class="Function">ℤ-Mod-Ab</a> <a id="561" href="group-theory.dihedral-groups.html#529" class="Bound">k</a><a id="562" class="Symbol">)</a>
 </pre>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="univalent mathematics, homotopy type theory, univalent foundations, symmetry book, agda, formalisation, unimath" />
+  <title>Trivial subgroups</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body
+>
+<div class="powerby">
+<p>src/group-theory/trivial-subgroups.lagda.md.</p>
+<p>Version of Saturday, August 20, 2022, 10:31 PM</p>
+<p>Powered by agda version 2.6.2 and pandoc 2.13</p>
+</div>
+<hr>
+<header id="title-block-header">
+<h1 class="title">Trivial subgroups</h1>
+</header>
+<pre class="Agda"><a id="43" class="Keyword">module</a> <a id="50" href="group-theory.trivial-subgroups.html" class="Module">group-theory.trivial-subgroups</a> <a id="81" class="Keyword">where</a>
+
+<a id="88" class="Keyword">open</a> <a id="93" class="Keyword">import</a> <a id="100" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="132" class="Keyword">open</a> <a id="137" class="Keyword">import</a> <a id="144" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="170" class="Keyword">open</a> <a id="175" class="Keyword">import</a> <a id="182" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+
+<a id="210" class="Keyword">open</a> <a id="215" class="Keyword">import</a> <a id="222" href="group-theory.groups.html" class="Module">group-theory.groups</a>
+<a id="242" class="Keyword">open</a> <a id="247" class="Keyword">import</a> <a id="254" href="group-theory.subgroups.html" class="Module">group-theory.subgroups</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>A subgroup <code>H</code> of <code>G</code> is said to be trivial if it only contains the unit element of <code>G</code>.</p>
+<h2 id="definitions">Definitions</h2>
+<h3 id="trivial-subgroups">Trivial subgroups</h3>
+<pre class="Agda"><a id="428" class="Keyword">module</a> <a id="435" href="group-theory.trivial-subgroups.html#435" class="Module">_</a>
+  <a id="439" class="Symbol">{</a><a id="440" href="group-theory.trivial-subgroups.html#440" class="Bound">l1</a> <a id="443" href="group-theory.trivial-subgroups.html#443" class="Bound">l2</a> <a id="446" class="Symbol">:</a> <a id="448" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="453" class="Symbol">}</a> <a id="455" class="Symbol">(</a><a id="456" href="group-theory.trivial-subgroups.html#456" class="Bound">G</a> <a id="458" class="Symbol">:</a> <a id="460" href="group-theory.groups.html#2745" class="Function">Group</a> <a id="466" href="group-theory.trivial-subgroups.html#440" class="Bound">l1</a><a id="468" class="Symbol">)</a> <a id="470" class="Symbol">(</a><a id="471" href="group-theory.trivial-subgroups.html#471" class="Bound">H</a> <a id="473" class="Symbol">:</a> <a id="475" href="group-theory.subgroups.html#4979" class="Function">Subgroup</a> <a id="484" href="group-theory.trivial-subgroups.html#443" class="Bound">l2</a> <a id="487" href="group-theory.trivial-subgroups.html#456" class="Bound">G</a><a id="488" class="Symbol">)</a>
+  <a id="492" class="Keyword">where</a>
+
+  <a id="501" href="group-theory.trivial-subgroups.html#501" class="Function">is-trivial-Subgroup</a> <a id="521" class="Symbol">:</a> <a id="523" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="526" class="Symbol">(</a><a id="527" href="group-theory.trivial-subgroups.html#440" class="Bound">l1</a> <a id="530" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="532" href="group-theory.trivial-subgroups.html#443" class="Bound">l2</a><a id="534" class="Symbol">)</a>
+  <a id="538" href="group-theory.trivial-subgroups.html#501" class="Function">is-trivial-Subgroup</a> <a id="558" class="Symbol">=</a>
+    <a id="564" class="Symbol">(</a><a id="565" href="group-theory.trivial-subgroups.html#565" class="Bound">x</a> <a id="567" class="Symbol">:</a> <a id="569" href="group-theory.groups.html#2988" class="Function">type-Group</a> <a id="580" href="group-theory.trivial-subgroups.html#456" class="Bound">G</a><a id="581" class="Symbol">)</a> <a id="583" class="Symbol">→</a> <a id="585" href="group-theory.subgroups.html#5740" class="Function">is-in-Subgroup</a> <a id="600" href="group-theory.trivial-subgroups.html#456" class="Bound">G</a> <a id="602" href="group-theory.trivial-subgroups.html#471" class="Bound">H</a> <a id="604" href="group-theory.trivial-subgroups.html#565" class="Bound">x</a> <a id="606" class="Symbol">→</a> <a id="608" href="group-theory.trivial-subgroups.html#565" class="Bound">x</a> <a id="610" href="foundation-core.identity-types.html#1865" class="Function Operator">＝</a> <a id="612" href="group-theory.groups.html#4032" class="Function">unit-Group</a> <a id="623" href="group-theory.trivial-subgroups.html#456" class="Bound">G</a>
+</pre>
+<h3 id="the-trivial-subgroup">The trivial subgroup</h3>
+<pre class="Agda"><a id="664" class="Keyword">module</a> <a id="671" href="group-theory.trivial-subgroups.html#671" class="Module">_</a>
+  <a id="675" class="Symbol">{</a><a id="676" href="group-theory.trivial-subgroups.html#676" class="Bound">l1</a> <a id="679" class="Symbol">:</a> <a id="681" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="686" class="Symbol">}</a> <a id="688" class="Symbol">(</a><a id="689" href="group-theory.trivial-subgroups.html#689" class="Bound">G</a> <a id="691" class="Symbol">:</a> <a id="693" href="group-theory.groups.html#2745" class="Function">Group</a> <a id="699" href="group-theory.trivial-subgroups.html#676" class="Bound">l1</a><a id="701" class="Symbol">)</a>
+  <a id="705" class="Keyword">where</a>
+  
+  <a id="716" href="group-theory.trivial-subgroups.html#716" class="Function">trivial-Subgroup</a> <a id="733" class="Symbol">:</a> <a id="735" href="group-theory.subgroups.html#4979" class="Function">Subgroup</a> <a id="744" href="group-theory.trivial-subgroups.html#676" class="Bound">l1</a> <a id="747" href="group-theory.trivial-subgroups.html#689" class="Bound">G</a>
+  <a id="751" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="755" href="group-theory.trivial-subgroups.html#716" class="Function">trivial-Subgroup</a> <a id="772" href="group-theory.trivial-subgroups.html#772" class="Bound">x</a> <a id="774" class="Symbol">=</a> <a id="776" href="group-theory.groups.html#4300" class="Function">is-unit-group-Prop</a> <a id="795" href="group-theory.trivial-subgroups.html#689" class="Bound">G</a> <a id="797" href="group-theory.trivial-subgroups.html#772" class="Bound">x</a>
+  <a id="801" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="805" class="Symbol">(</a><a id="806" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="810" href="group-theory.trivial-subgroups.html#716" class="Function">trivial-Subgroup</a><a id="826" class="Symbol">)</a> <a id="828" class="Symbol">=</a> <a id="830" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a>
+  <a id="837" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="841" class="Symbol">(</a><a id="842" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="846" class="Symbol">(</a><a id="847" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="851" href="group-theory.trivial-subgroups.html#716" class="Function">trivial-Subgroup</a><a id="867" class="Symbol">))</a> <a id="870" class="DottedPattern Symbol">.(</a><a id="872" href="group-theory.groups.html#4032" class="DottedPattern Function">unit-Group</a> <a id="883" href="group-theory.trivial-subgroups.html#689" class="DottedPattern Bound">G</a><a id="884" class="DottedPattern Symbol">)</a> <a id="886" class="DottedPattern Symbol">.(</a><a id="888" href="group-theory.groups.html#4032" class="DottedPattern Function">unit-Group</a> <a id="899" href="group-theory.trivial-subgroups.html#689" class="DottedPattern Bound">G</a><a id="900" class="DottedPattern Symbol">)</a> <a id="902" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a> <a id="907" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a> <a id="912" class="Symbol">=</a>
+    <a id="918" href="group-theory.groups.html#4449" class="Function">left-unit-law-Group</a> <a id="938" href="group-theory.trivial-subgroups.html#689" class="Bound">G</a> <a id="940" class="Symbol">(</a><a id="941" href="group-theory.groups.html#4032" class="Function">unit-Group</a> <a id="952" href="group-theory.trivial-subgroups.html#689" class="Bound">G</a><a id="953" class="Symbol">)</a>
+  <a id="957" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="961" class="Symbol">(</a><a id="962" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="966" class="Symbol">(</a><a id="967" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="971" href="group-theory.trivial-subgroups.html#716" class="Function">trivial-Subgroup</a><a id="987" class="Symbol">))</a> <a id="990" class="DottedPattern Symbol">.(</a><a id="992" href="group-theory.groups.html#4032" class="DottedPattern Function">unit-Group</a> <a id="1003" href="group-theory.trivial-subgroups.html#689" class="DottedPattern Bound">G</a><a id="1004" class="DottedPattern Symbol">)</a> <a id="1006" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a> <a id="1011" class="Symbol">=</a>
+    <a id="1017" href="group-theory.groups.html#5316" class="Function">inv-unit-Group</a> <a id="1032" href="group-theory.trivial-subgroups.html#689" class="Bound">G</a>
+</pre>
+<h2>Recent changes</h2>
+<pre class="changelog">
+(2022-08-21)(97f6920) Merge pull request #300 from EgbertRijke/group-theory by noreply
+</pre>
+</body>
+</html>

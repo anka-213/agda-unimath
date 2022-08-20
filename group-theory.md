@@ -102,4 +102,6 @@ title: Group theory
 <a id="5389" class="Keyword">open</a> <a id="5394" class="Keyword">import</a> <a id="5401" href="group-theory.torsors.html" class="Module">group-theory.torsors</a> <a id="5422" class="Keyword">public</a>
 <a id="5429" class="Keyword">open</a> <a id="5434" class="Keyword">import</a> <a id="5441" href="group-theory.transitive-concrete-group-actions.html" class="Module">group-theory.transitive-concrete-group-actions</a> <a id="5488" class="Keyword">public</a>
 <a id="5495" class="Keyword">open</a> <a id="5500" class="Keyword">import</a> <a id="5507" href="group-theory.transitive-group-actions.html" class="Module">group-theory.transitive-group-actions</a> <a id="5545" class="Keyword">public</a>
+<a id="5552" class="Keyword">open</a> <a id="5557" class="Keyword">import</a> <a id="5564" href="group-theory.trivial-subgroups.html" class="Module">group-theory.trivial-subgroups</a> <a id="5595" class="Keyword">public</a>
+<a id="5602" class="Keyword">open</a> <a id="5607" class="Keyword">import</a> <a id="5614" href="group-theory.unordered-tuples-of-elements-commutative-monoids.html" class="Module">group-theory.unordered-tuples-of-elements-commutative-monoids</a> <a id="5676" class="Keyword">public</a>
 </pre>
