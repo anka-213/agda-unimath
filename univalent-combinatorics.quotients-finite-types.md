@@ -23,22 +23,22 @@ The quotient of a finite type by a decidable equivalence relation is again a fin
 ## Definition
 
 <pre class="Agda"><a id="774" class="Keyword">module</a> <a id="781" href="univalent-combinatorics.quotients-finite-types.html#781" class="Module">_</a>
-  <a id="785" class="Symbol">(</a><a id="786" href="univalent-combinatorics.quotients-finite-types.html#786" class="Bound">X</a> <a id="788" class="Symbol">:</a> <a id="790" href="univalent-combinatorics.finite-types.html#4873" class="Function">𝔽</a><a id="791" class="Symbol">)</a> <a id="793" class="Symbol">(</a><a id="794" href="univalent-combinatorics.quotients-finite-types.html#794" class="Bound">R</a> <a id="796" class="Symbol">:</a> <a id="798" href="univalent-combinatorics.decidable-equivalence-relations.html#663" class="Function">Decidable-Equivalence-Relation-𝔽</a> <a id="831" href="univalent-combinatorics.quotients-finite-types.html#786" class="Bound">X</a><a id="832" class="Symbol">)</a>
+  <a id="785" class="Symbol">(</a><a id="786" href="univalent-combinatorics.quotients-finite-types.html#786" class="Bound">X</a> <a id="788" class="Symbol">:</a> <a id="790" href="univalent-combinatorics.finite-types.html#4878" class="Function">𝔽</a><a id="791" class="Symbol">)</a> <a id="793" class="Symbol">(</a><a id="794" href="univalent-combinatorics.quotients-finite-types.html#794" class="Bound">R</a> <a id="796" class="Symbol">:</a> <a id="798" href="univalent-combinatorics.decidable-equivalence-relations.html#663" class="Function">Decidable-Equivalence-Relation-𝔽</a> <a id="831" href="univalent-combinatorics.quotients-finite-types.html#786" class="Bound">X</a><a id="832" class="Symbol">)</a>
   <a id="836" class="Keyword">where</a>
 
   <a id="845" href="univalent-combinatorics.quotients-finite-types.html#845" class="Function">equivalence-class-Decidable-Equivalence-Relation-𝔽</a> <a id="896" class="Symbol">:</a> <a id="898" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="901" class="Symbol">(</a><a id="902" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="907" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="912" class="Symbol">)</a>
   <a id="916" href="univalent-combinatorics.quotients-finite-types.html#845" class="Function">equivalence-class-Decidable-Equivalence-Relation-𝔽</a> <a id="967" class="Symbol">=</a>
-    <a id="973" href="foundation.equivalence-classes.html#2698" class="Function">equivalence-class</a>
+    <a id="973" href="foundation.equivalence-classes.html#2703" class="Function">equivalence-class</a>
       <a id="997" class="Symbol">(</a> <a id="999" href="univalent-combinatorics.decidable-equivalence-relations.html#2144" class="Function">equivalence-relation-Decidable-Equivalence-Relation-𝔽</a> <a id="1053" href="univalent-combinatorics.quotients-finite-types.html#786" class="Bound">X</a> <a id="1055" href="univalent-combinatorics.quotients-finite-types.html#794" class="Bound">R</a><a id="1056" class="Symbol">)</a>
 
   <a id="1061" href="univalent-combinatorics.quotients-finite-types.html#1061" class="Function">is-finite-equivalence-class-Decidable-Equivalence-Relation-𝔽&#39;</a> <a id="1123" class="Symbol">:</a>
-    <a id="1129" href="univalent-combinatorics.finite-types.html#4134" class="Function">is-finite</a> <a id="1139" href="univalent-combinatorics.quotients-finite-types.html#845" class="Function">equivalence-class-Decidable-Equivalence-Relation-𝔽</a>
+    <a id="1129" href="univalent-combinatorics.finite-types.html#4139" class="Function">is-finite</a> <a id="1139" href="univalent-combinatorics.quotients-finite-types.html#845" class="Function">equivalence-class-Decidable-Equivalence-Relation-𝔽</a>
   <a id="1192" href="univalent-combinatorics.quotients-finite-types.html#1061" class="Function">is-finite-equivalence-class-Decidable-Equivalence-Relation-𝔽&#39;</a> <a id="1254" class="Symbol">=</a>
-    <a id="1260" href="univalent-combinatorics.image-of-maps.html#1501" class="Function">is-finite-im</a>
-      <a id="1279" class="Symbol">(</a> <a id="1281" href="univalent-combinatorics.finite-types.html#4957" class="Function">is-finite-type-𝔽</a> <a id="1298" href="univalent-combinatorics.quotients-finite-types.html#786" class="Bound">X</a><a id="1299" class="Symbol">)</a>
+    <a id="1260" href="univalent-combinatorics.image-of-maps.html#1502" class="Function">is-finite-im</a>
+      <a id="1279" class="Symbol">(</a> <a id="1281" href="univalent-combinatorics.finite-types.html#4962" class="Function">is-finite-type-𝔽</a> <a id="1298" href="univalent-combinatorics.quotients-finite-types.html#786" class="Bound">X</a><a id="1299" class="Symbol">)</a>
       <a id="1307" class="Symbol">(</a> <a id="1309" href="univalent-combinatorics.equality-finite-types.html#1723" class="Function">has-decidable-equality-is-finite</a>
         <a id="1350" class="Symbol">(</a> <a id="1352" class="Hole">{!is-finite-decidable-subtype!}</a><a id="1383" class="Symbol">))</a>
 
-  <a id="1389" href="univalent-combinatorics.quotients-finite-types.html#1389" class="Function">quotient-𝔽</a> <a id="1400" class="Symbol">:</a> <a id="1402" href="univalent-combinatorics.finite-types.html#4873" class="Function">𝔽</a>
+  <a id="1389" href="univalent-combinatorics.quotients-finite-types.html#1389" class="Function">quotient-𝔽</a> <a id="1400" class="Symbol">:</a> <a id="1402" href="univalent-combinatorics.finite-types.html#4878" class="Function">𝔽</a>
   <a id="1406" href="univalent-combinatorics.quotients-finite-types.html#1389" class="Function">quotient-𝔽</a> <a id="1417" class="Symbol">=</a> <a id="1419" class="Hole">{!!}</a>
 </pre>

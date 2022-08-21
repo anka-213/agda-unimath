@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/order-theory/meet-semilattices.lagda.md.</p>
-<p>Version of Saturday, August 20, 2022, 10:31 PM</p>
+<p>Version of Sunday, August 21, 2022, 09:58 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -45,8 +45,8 @@
   <a id="562" class="Symbol">(</a> <a id="564" href="group-theory.semigroups.html#750" class="Function">Semigroup</a><a id="573" class="Symbol">;</a> <a id="575" href="group-theory.semigroups.html#946" class="Function">type-Semigroup</a><a id="589" class="Symbol">;</a> <a id="591" href="group-theory.semigroups.html#1228" class="Function">mul-Semigroup</a><a id="604" class="Symbol">)</a>
 
 <a id="607" class="Keyword">open</a> <a id="612" class="Keyword">import</a> <a id="619" href="order-theory.greatest-lower-bounds-posets.html" class="Module">order-theory.greatest-lower-bounds-posets</a> <a id="661" class="Keyword">using</a>
-  <a id="669" class="Symbol">(</a> <a id="671" href="order-theory.greatest-lower-bounds-posets.html#3384" class="Function">has-greatest-binary-lower-bound-poset-Prop</a><a id="713" class="Symbol">;</a>
-    <a id="719" href="order-theory.greatest-lower-bounds-posets.html#2016" class="Function">is-greatest-binary-lower-bound-Poset</a><a id="755" class="Symbol">)</a>
+  <a id="669" class="Symbol">(</a> <a id="671" href="order-theory.greatest-lower-bounds-posets.html#3394" class="Function">has-greatest-binary-lower-bound-poset-Prop</a><a id="713" class="Symbol">;</a>
+    <a id="719" href="order-theory.greatest-lower-bounds-posets.html#2021" class="Function">is-greatest-binary-lower-bound-Poset</a><a id="755" class="Symbol">)</a>
 <a id="757" class="Keyword">open</a> <a id="762" class="Keyword">import</a> <a id="769" href="order-theory.posets.html" class="Module">order-theory.posets</a> <a id="789" class="Keyword">using</a>
   <a id="797" class="Symbol">(</a> <a id="799" href="order-theory.posets.html#731" class="Function">Poset</a><a id="804" class="Symbol">;</a> <a id="806" href="order-theory.posets.html#1145" class="Function">element-Poset</a><a id="819" class="Symbol">;</a> <a id="821" href="order-theory.posets.html#1194" class="Function">leq-poset-Prop</a><a id="835" class="Symbol">;</a> <a id="837" href="order-theory.posets.html#1280" class="Function">leq-Poset</a><a id="846" class="Symbol">;</a> <a id="848" href="order-theory.posets.html#1375" class="Function">is-prop-leq-Poset</a><a id="865" class="Symbol">;</a>
     <a id="871" href="order-theory.posets.html#1511" class="Function">refl-leq-Poset</a><a id="885" class="Symbol">;</a> <a id="887" href="order-theory.posets.html#1983" class="Function">antisymmetric-leq-Poset</a><a id="910" class="Symbol">;</a> <a id="912" href="order-theory.posets.html#1610" class="Function">transitive-leq-Poset</a><a id="932" class="Symbol">;</a>
@@ -67,7 +67,7 @@
       <a id="1338" class="Symbol">(</a> <a id="1340" class="Symbol">λ</a> <a id="1342" href="order-theory.meet-semilattices.html#1342" class="Bound">x</a> <a id="1344" class="Symbol">→</a>
         <a id="1354" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a>
           <a id="1371" class="Symbol">(</a> <a id="1373" href="order-theory.posets.html#1145" class="Function">element-Poset</a> <a id="1387" href="order-theory.meet-semilattices.html#1182" class="Bound">P</a><a id="1388" class="Symbol">)</a>
-          <a id="1400" class="Symbol">(</a> <a id="1402" href="order-theory.greatest-lower-bounds-posets.html#3384" class="Function">has-greatest-binary-lower-bound-poset-Prop</a> <a id="1445" href="order-theory.meet-semilattices.html#1182" class="Bound">P</a> <a id="1447" href="order-theory.meet-semilattices.html#1342" class="Bound">x</a><a id="1448" class="Symbol">))</a>
+          <a id="1400" class="Symbol">(</a> <a id="1402" href="order-theory.greatest-lower-bounds-posets.html#3394" class="Function">has-greatest-binary-lower-bound-poset-Prop</a> <a id="1445" href="order-theory.meet-semilattices.html#1182" class="Bound">P</a> <a id="1447" href="order-theory.meet-semilattices.html#1342" class="Bound">x</a><a id="1448" class="Symbol">))</a>
 
   <a id="1454" href="order-theory.meet-semilattices.html#1454" class="Function">is-meet-semilattice-Poset</a> <a id="1480" class="Symbol">:</a> <a id="1482" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1485" class="Symbol">(</a><a id="1486" href="order-theory.meet-semilattices.html#1166" class="Bound">l1</a> <a id="1489" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="1491" href="order-theory.meet-semilattices.html#1169" class="Bound">l2</a><a id="1493" class="Symbol">)</a>
   <a id="1497" href="order-theory.meet-semilattices.html#1454" class="Function">is-meet-semilattice-Poset</a> <a id="1523" class="Symbol">=</a> <a id="1525" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a> <a id="1535" href="order-theory.meet-semilattices.html#1210" class="Function">is-meet-semilattice-poset-Prop</a>
@@ -137,7 +137,7 @@
 
   <a id="3984" href="order-theory.meet-semilattices.html#3984" class="Function">is-greatest-binary-lower-bound-meet-Meet-Semilattice</a> <a id="4037" class="Symbol">:</a>
     <a id="4043" class="Symbol">(</a><a id="4044" href="order-theory.meet-semilattices.html#4044" class="Bound">x</a> <a id="4046" href="order-theory.meet-semilattices.html#4046" class="Bound">y</a> <a id="4048" class="Symbol">:</a> <a id="4050" href="order-theory.meet-semilattices.html#2003" class="Function">element-Meet-Semilattice</a><a id="4074" class="Symbol">)</a> <a id="4076" class="Symbol">→</a>
-    <a id="4082" href="order-theory.greatest-lower-bounds-posets.html#2016" class="Function">is-greatest-binary-lower-bound-Poset</a> <a id="4119" href="order-theory.meet-semilattices.html#1930" class="Function">poset-Meet-Semilattice</a> <a id="4142" href="order-theory.meet-semilattices.html#4044" class="Bound">x</a> <a id="4144" href="order-theory.meet-semilattices.html#4046" class="Bound">y</a>
+    <a id="4082" href="order-theory.greatest-lower-bounds-posets.html#2021" class="Function">is-greatest-binary-lower-bound-Poset</a> <a id="4119" href="order-theory.meet-semilattices.html#1930" class="Function">poset-Meet-Semilattice</a> <a id="4142" href="order-theory.meet-semilattices.html#4044" class="Bound">x</a> <a id="4144" href="order-theory.meet-semilattices.html#4046" class="Bound">y</a>
       <a id="4152" class="Symbol">(</a> <a id="4154" href="order-theory.meet-semilattices.html#3812" class="Function">meet-Meet-Semilattice</a> <a id="4176" href="order-theory.meet-semilattices.html#4044" class="Bound">x</a> <a id="4178" href="order-theory.meet-semilattices.html#4046" class="Bound">y</a><a id="4179" class="Symbol">)</a>
   <a id="4183" href="order-theory.meet-semilattices.html#3984" class="Function">is-greatest-binary-lower-bound-meet-Meet-Semilattice</a> <a id="4236" href="order-theory.meet-semilattices.html#4236" class="Bound">x</a> <a id="4238" href="order-theory.meet-semilattices.html#4238" class="Bound">y</a> <a id="4240" class="Symbol">=</a>
     <a id="4246" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="4250" class="Symbol">(</a><a id="4251" href="order-theory.meet-semilattices.html#3464" class="Function">is-meet-semilattice-Meet-Semilattice</a> <a id="4288" href="order-theory.meet-semilattices.html#4236" class="Bound">x</a> <a id="4290" href="order-theory.meet-semilattices.html#4238" class="Bound">y</a><a id="4291" class="Symbol">)</a>
@@ -153,7 +153,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-21)(97f6920) Merge pull request #300 from EgbertRijke/group-theory by noreply
+(2022-08-21)(8caa406) Merge pull request #301 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

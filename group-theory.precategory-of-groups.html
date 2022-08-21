@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/precategory-of-groups.lagda.md.</p>
-<p>Version of Saturday, August 20, 2022, 10:31 PM</p>
+<p>Version of Sunday, August 21, 2022, 09:58 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -42,7 +42,7 @@
 
 <a id="414" class="Keyword">open</a> <a id="419" class="Keyword">import</a> <a id="426" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="453" class="Keyword">using</a> <a id="459" class="Symbol">(</a><a id="460" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="464" class="Symbol">;</a> <a id="466" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="469" class="Symbol">)</a>
 
-<a id="472" class="Keyword">open</a> <a id="477" class="Keyword">import</a> <a id="484" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="504" class="Keyword">using</a> <a id="510" class="Symbol">(</a><a id="511" href="group-theory.groups.html#2745" class="Function">Group</a><a id="516" class="Symbol">)</a>
+<a id="472" class="Keyword">open</a> <a id="477" class="Keyword">import</a> <a id="484" href="group-theory.groups.html" class="Module">group-theory.groups</a> <a id="504" class="Keyword">using</a> <a id="510" class="Symbol">(</a><a id="511" href="group-theory.groups.html#2750" class="Function">Group</a><a id="516" class="Symbol">)</a>
 <a id="518" class="Keyword">open</a> <a id="523" class="Keyword">import</a> <a id="530" href="group-theory.homomorphisms-groups.html" class="Module">group-theory.homomorphisms-groups</a> <a id="564" class="Keyword">using</a>
   <a id="572" class="Symbol">(</a> <a id="574" href="group-theory.homomorphisms-groups.html#4246" class="Function">hom-Group</a><a id="583" class="Symbol">;</a> <a id="585" href="group-theory.homomorphisms-groups.html#2261" class="Function">comp-hom-Group</a><a id="599" class="Symbol">;</a> <a id="601" href="group-theory.homomorphisms-groups.html#2092" class="Function">id-hom-Group</a><a id="613" class="Symbol">;</a> <a id="615" href="group-theory.homomorphisms-groups.html#4422" class="Function">associative-comp-hom-Group</a><a id="641" class="Symbol">;</a>
     <a id="647" href="group-theory.homomorphisms-groups.html#4988" class="Function">left-unit-law-comp-hom-Group</a><a id="675" class="Symbol">;</a> <a id="677" href="group-theory.homomorphisms-groups.html#5264" class="Function">right-unit-law-comp-hom-Group</a><a id="706" class="Symbol">)</a>
@@ -50,7 +50,7 @@
 <h2 id="definition">Definition</h2>
 <pre class="Agda"><a id="736" class="Keyword">instance</a>
   <a id="Group-Large-Precat"></a><a id="747" href="group-theory.precategory-of-groups.html#747" class="Function">Group-Large-Precat</a> <a id="766" class="Symbol">:</a> <a id="768" href="category-theory.large-precategories.html#668" class="Record">Large-Precat</a> <a id="781" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="786" class="Symbol">(λ</a> <a id="789" href="group-theory.precategory-of-groups.html#789" class="Bound">l1</a> <a id="792" href="group-theory.precategory-of-groups.html#792" class="Bound">l2</a> <a id="795" class="Symbol">→</a> <a id="797" href="group-theory.precategory-of-groups.html#789" class="Bound">l1</a> <a id="800" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="802" href="group-theory.precategory-of-groups.html#792" class="Bound">l2</a><a id="804" class="Symbol">)</a>
-  <a id="808" href="category-theory.large-precategories.html#786" class="Field">obj-Large-Precat</a> <a id="825" href="group-theory.precategory-of-groups.html#747" class="Function">Group-Large-Precat</a> <a id="844" class="Symbol">=</a> <a id="846" href="group-theory.groups.html#2745" class="Function">Group</a>
+  <a id="808" href="category-theory.large-precategories.html#786" class="Field">obj-Large-Precat</a> <a id="825" href="group-theory.precategory-of-groups.html#747" class="Function">Group-Large-Precat</a> <a id="844" class="Symbol">=</a> <a id="846" href="group-theory.groups.html#2750" class="Function">Group</a>
   <a id="854" href="category-theory.large-precategories.html#838" class="Field">hom-Large-Precat</a> <a id="871" href="group-theory.precategory-of-groups.html#747" class="Function">Group-Large-Precat</a> <a id="890" class="Symbol">=</a> <a id="892" href="group-theory.homomorphisms-groups.html#4246" class="Function">hom-Group</a>
   <a id="904" href="category-theory.large-precategories.html#952" class="Field">comp-hom-Large-Precat</a> <a id="926" href="group-theory.precategory-of-groups.html#747" class="Function">Group-Large-Precat</a> <a id="945" class="Symbol">{</a><a id="946" class="Argument">X</a> <a id="948" class="Symbol">=</a> <a id="950" href="group-theory.precategory-of-groups.html#950" class="Bound">G</a><a id="951" class="Symbol">}</a> <a id="953" class="Symbol">{</a><a id="954" href="group-theory.precategory-of-groups.html#954" class="Bound">H</a><a id="955" class="Symbol">}</a> <a id="957" class="Symbol">{</a><a id="958" href="group-theory.precategory-of-groups.html#958" class="Bound">K</a><a id="959" class="Symbol">}</a> <a id="961" class="Symbol">=</a>
     <a id="967" href="group-theory.homomorphisms-groups.html#2261" class="Function">comp-hom-Group</a> <a id="982" href="group-theory.precategory-of-groups.html#950" class="Bound">G</a> <a id="984" href="group-theory.precategory-of-groups.html#954" class="Bound">H</a> <a id="986" href="group-theory.precategory-of-groups.html#958" class="Bound">K</a>
@@ -65,7 +65,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-21)(97f6920) Merge pull request #300 from EgbertRijke/group-theory by noreply
+(2022-08-21)(8caa406) Merge pull request #301 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

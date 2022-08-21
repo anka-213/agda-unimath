@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/elementary-number-theory/multiplication-natural-numbers.lagda.md.</p>
-<p>Version of Saturday, August 20, 2022, 10:30 PM</p>
+<p>Version of Sunday, August 21, 2022, 09:57 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -54,7 +54,7 @@
 <a id="1040" class="Keyword">open</a> <a id="1045" class="Keyword">import</a> <a id="1052" href="foundation.negation.html" class="Module">foundation.negation</a> <a id="1072" class="Keyword">using</a> <a id="1078" class="Symbol">(</a><a id="1079" href="foundation-core.negation.html#465" class="Function">¬</a><a id="1080" class="Symbol">)</a>
 <a id="1082" class="Keyword">open</a> <a id="1087" class="Keyword">import</a> <a id="1094" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="1121" class="Keyword">using</a> <a id="1127" class="Symbol">(</a><a id="1128" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="1133" class="Symbol">)</a>
 
-<a id="1136" class="Keyword">open</a> <a id="1141" class="Keyword">import</a> <a id="1148" href="group-theory.monoids.html" class="Module">group-theory.monoids</a> <a id="1169" class="Keyword">using</a> <a id="1175" class="Symbol">(</a><a id="1176" href="group-theory.monoids.html#1020" class="Function">Monoid</a><a id="1182" class="Symbol">)</a>
+<a id="1136" class="Keyword">open</a> <a id="1141" class="Keyword">import</a> <a id="1148" href="group-theory.monoids.html" class="Module">group-theory.monoids</a> <a id="1169" class="Keyword">using</a> <a id="1175" class="Symbol">(</a><a id="1176" href="group-theory.monoids.html#1025" class="Function">Monoid</a><a id="1182" class="Symbol">)</a>
 <a id="1184" class="Keyword">open</a> <a id="1189" class="Keyword">import</a> <a id="1196" href="group-theory.semigroups.html" class="Module">group-theory.semigroups</a> <a id="1220" class="Keyword">using</a> <a id="1226" class="Symbol">(</a><a id="1227" href="group-theory.semigroups.html#750" class="Function">Semigroup</a><a id="1236" class="Symbol">)</a>
 </pre>
 <h2 id="definition">Definition</h2>
@@ -277,7 +277,7 @@
 <a id="8437" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="8441" class="Symbol">(</a><a id="8442" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="8446" href="elementary-number-theory.multiplication-natural-numbers.html#8381" class="Function">ℕ*-Semigroup</a><a id="8458" class="Symbol">)</a> <a id="8460" class="Symbol">=</a> <a id="8462" href="elementary-number-theory.multiplication-natural-numbers.html#1286" class="Function">mul-ℕ</a>
 <a id="8468" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="8472" class="Symbol">(</a><a id="8473" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="8477" href="elementary-number-theory.multiplication-natural-numbers.html#8381" class="Function">ℕ*-Semigroup</a><a id="8489" class="Symbol">)</a> <a id="8491" class="Symbol">=</a> <a id="8493" href="elementary-number-theory.multiplication-natural-numbers.html#4440" class="Function">associative-mul-ℕ</a>
 
-<a id="ℕ*-Monoid"></a><a id="8512" href="elementary-number-theory.multiplication-natural-numbers.html#8512" class="Function">ℕ*-Monoid</a> <a id="8522" class="Symbol">:</a> <a id="8524" href="group-theory.monoids.html#1020" class="Function">Monoid</a> <a id="8531" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
+<a id="ℕ*-Monoid"></a><a id="8512" href="elementary-number-theory.multiplication-natural-numbers.html#8512" class="Function">ℕ*-Monoid</a> <a id="8522" class="Symbol">:</a> <a id="8524" href="group-theory.monoids.html#1025" class="Function">Monoid</a> <a id="8531" href="Agda.Primitive.html#764" class="Primitive">lzero</a>
 <a id="8537" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="8541" href="elementary-number-theory.multiplication-natural-numbers.html#8512" class="Function">ℕ*-Monoid</a> <a id="8551" class="Symbol">=</a> <a id="8553" href="elementary-number-theory.multiplication-natural-numbers.html#8381" class="Function">ℕ*-Semigroup</a>
 <a id="8566" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="8570" class="Symbol">(</a><a id="8571" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="8575" href="elementary-number-theory.multiplication-natural-numbers.html#8512" class="Function">ℕ*-Monoid</a><a id="8584" class="Symbol">)</a> <a id="8586" class="Symbol">=</a> <a id="8588" class="Number">1</a>
 <a id="8590" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="8594" class="Symbol">(</a><a id="8595" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="8599" class="Symbol">(</a><a id="8600" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="8604" href="elementary-number-theory.multiplication-natural-numbers.html#8512" class="Function">ℕ*-Monoid</a><a id="8613" class="Symbol">))</a> <a id="8616" class="Symbol">=</a> <a id="8618" href="elementary-number-theory.multiplication-natural-numbers.html#2195" class="Function">left-unit-law-mul-ℕ</a>
@@ -285,7 +285,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-21)(97f6920) Merge pull request #300 from EgbertRijke/group-theory by noreply
+(2022-08-21)(8caa406) Merge pull request #301 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

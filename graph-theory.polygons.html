@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/graph-theory/polygons.lagda.md.</p>
-<p>Version of Saturday, August 20, 2022, 10:31 PM</p>
+<p>Version of Sunday, August 21, 2022, 09:58 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -64,7 +64,7 @@
   <a id="1501" class="Symbol">(</a> <a id="1503" href="graph-theory.undirected-graphs.html#1060" class="Function">Undirected-Graph</a><a id="1519" class="Symbol">;</a> <a id="1521" href="graph-theory.undirected-graphs.html#1256" class="Function">vertex-Undirected-Graph</a><a id="1544" class="Symbol">;</a> <a id="1546" href="graph-theory.undirected-graphs.html#1926" class="Function">edge-Undirected-Graph</a><a id="1567" class="Symbol">)</a>
 
 <a id="1570" class="Keyword">open</a> <a id="1575" class="Keyword">import</a> <a id="1582" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="1619" class="Keyword">using</a>
-  <a id="1627" class="Symbol">(</a> <a id="1629" href="univalent-combinatorics.finite-types.html#4134" class="Function">is-finite</a><a id="1638" class="Symbol">;</a> <a id="1640" href="univalent-combinatorics.finite-types.html#7528" class="Function">is-finite-mere-equiv</a><a id="1660" class="Symbol">)</a>
+  <a id="1627" class="Symbol">(</a> <a id="1629" href="univalent-combinatorics.finite-types.html#4139" class="Function">is-finite</a><a id="1638" class="Symbol">;</a> <a id="1640" href="univalent-combinatorics.finite-types.html#7533" class="Function">is-finite-mere-equiv</a><a id="1660" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>A polygon is an undirected graph that is merely equivalent to a graph with vertices <code>ℤ-Mod k</code> and an edge from each <code>x ∈ ℤ-Mod k</code> to <code>x+1</code>. This defines for each <code>k ∈ ℕ</code> the type of all <code>k</code>-gons. The type of all <code>k</code>-gons is a concrete presentation of the dihedral group <code>D_k</code>.</p>
@@ -129,9 +129,9 @@
         <a id="3945" class="Symbol">(</a> <a id="3947" href="graph-theory.polygons.html#3134" class="Function">undirected-graph-Polygon</a><a id="3971" class="Symbol">))</a>
       <a id="3980" class="Symbol">(</a> <a id="3982" href="graph-theory.polygons.html#3228" class="Function">mere-equiv-Polygon</a><a id="4000" class="Symbol">)</a>
 
-  <a id="4005" href="graph-theory.polygons.html#4005" class="Function">is-finite-vertex-Polygon</a> <a id="4030" class="Symbol">:</a> <a id="4032" href="elementary-number-theory.natural-numbers.html#2029" class="Function">is-nonzero-ℕ</a> <a id="4045" href="graph-theory.polygons.html#3098" class="Bound">k</a> <a id="4047" class="Symbol">→</a> <a id="4049" href="univalent-combinatorics.finite-types.html#4134" class="Function">is-finite</a> <a id="4059" href="graph-theory.polygons.html#3392" class="Function">vertex-Polygon</a>
+  <a id="4005" href="graph-theory.polygons.html#4005" class="Function">is-finite-vertex-Polygon</a> <a id="4030" class="Symbol">:</a> <a id="4032" href="elementary-number-theory.natural-numbers.html#2029" class="Function">is-nonzero-ℕ</a> <a id="4045" href="graph-theory.polygons.html#3098" class="Bound">k</a> <a id="4047" class="Symbol">→</a> <a id="4049" href="univalent-combinatorics.finite-types.html#4139" class="Function">is-finite</a> <a id="4059" href="graph-theory.polygons.html#3392" class="Function">vertex-Polygon</a>
   <a id="4076" href="graph-theory.polygons.html#4005" class="Function">is-finite-vertex-Polygon</a> <a id="4101" href="graph-theory.polygons.html#4101" class="Bound">H</a> <a id="4103" class="Symbol">=</a>
-    <a id="4109" href="univalent-combinatorics.finite-types.html#7528" class="Function">is-finite-mere-equiv</a> <a id="4130" href="graph-theory.polygons.html#3733" class="Function">mere-equiv-vertex-Polygon</a> <a id="4156" class="Symbol">(</a><a id="4157" href="elementary-number-theory.modular-arithmetic.html#4993" class="Function">is-finite-ℤ-Mod</a> <a id="4173" href="graph-theory.polygons.html#4101" class="Bound">H</a><a id="4174" class="Symbol">)</a>
+    <a id="4109" href="univalent-combinatorics.finite-types.html#7533" class="Function">is-finite-mere-equiv</a> <a id="4130" href="graph-theory.polygons.html#3733" class="Function">mere-equiv-vertex-Polygon</a> <a id="4156" class="Symbol">(</a><a id="4157" href="elementary-number-theory.modular-arithmetic.html#4993" class="Function">is-finite-ℤ-Mod</a> <a id="4173" href="graph-theory.polygons.html#4101" class="Bound">H</a><a id="4174" class="Symbol">)</a>
 
   <a id="4179" href="graph-theory.polygons.html#4179" class="Function">is-set-vertex-Polygon</a> <a id="4201" class="Symbol">:</a> <a id="4203" href="foundation-core.sets.html#1113" class="Function">is-set</a> <a id="4210" href="graph-theory.polygons.html#3392" class="Function">vertex-Polygon</a>
   <a id="4227" href="graph-theory.polygons.html#4179" class="Function">is-set-vertex-Polygon</a> <a id="4249" class="Symbol">=</a>
@@ -183,7 +183,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-21)(97f6920) Merge pull request #300 from EgbertRijke/group-theory by noreply
+(2022-08-21)(8caa406) Merge pull request #301 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

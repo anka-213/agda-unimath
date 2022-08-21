@@ -17,7 +17,7 @@ title: Edge-coloured undirected graphs
   <a id="566" class="Symbol">(</a> <a id="568" href="graph-theory.undirected-graphs.html#1060" class="Function">Undirected-Graph</a><a id="584" class="Symbol">;</a> <a id="586" href="graph-theory.undirected-graphs.html#1325" class="Function">unordered-pair-vertices-Undirected-Graph</a><a id="626" class="Symbol">;</a>
     <a id="632" href="graph-theory.undirected-graphs.html#1256" class="Function">vertex-Undirected-Graph</a><a id="655" class="Symbol">;</a> <a id="657" href="graph-theory.undirected-graphs.html#1926" class="Function">edge-Undirected-Graph</a><a id="678" class="Symbol">)</a>
 
-<a id="681" class="Keyword">open</a> <a id="686" class="Keyword">import</a> <a id="693" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="730" class="Keyword">using</a> <a id="736" class="Symbol">(</a><a id="737" href="univalent-combinatorics.finite-types.html#4873" class="Function">𝔽</a><a id="738" class="Symbol">;</a> <a id="740" href="univalent-combinatorics.finite-types.html#4912" class="Function">type-𝔽</a><a id="746" class="Symbol">)</a>
+<a id="681" class="Keyword">open</a> <a id="686" class="Keyword">import</a> <a id="693" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="730" class="Keyword">using</a> <a id="736" class="Symbol">(</a><a id="737" href="univalent-combinatorics.finite-types.html#4878" class="Function">𝔽</a><a id="738" class="Symbol">;</a> <a id="740" href="univalent-combinatorics.finite-types.html#4917" class="Function">type-𝔽</a><a id="746" class="Symbol">)</a>
 </pre>
 ## Idea
 

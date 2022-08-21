@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/slice.lagda.md.</p>
-<p>Version of Saturday, August 20, 2022, 10:31 PM</p>
+<p>Version of Sunday, August 21, 2022, 09:58 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -42,7 +42,7 @@
 <a id="360" class="Keyword">open</a> <a id="365" class="Keyword">import</a> <a id="372" href="foundation.equality-dependent-pair-types.html" class="Module">foundation.equality-dependent-pair-types</a> <a id="413" class="Keyword">using</a> <a id="419" class="Symbol">(</a><a id="420" href="foundation-core.equality-dependent-pair-types.html#1278" class="Function">eq-pair-Σ</a><a id="429" class="Symbol">)</a>
 <a id="431" class="Keyword">open</a> <a id="436" class="Keyword">import</a> <a id="443" href="foundation.equivalences.html" class="Module">foundation.equivalences</a> <a id="467" class="Keyword">using</a>
   <a id="475" class="Symbol">(</a> <a id="477" href="foundation-core.equivalences.html#1556" class="Function">is-equiv</a><a id="485" class="Symbol">;</a> <a id="487" href="foundation-core.equivalences.html#1621" class="Function Operator">_≃_</a><a id="490" class="Symbol">;</a> <a id="492" href="foundation-core.equivalences.html#7869" class="Function Operator">_∘e_</a><a id="496" class="Symbol">;</a> <a id="498" href="foundation-core.equivalences.html#5036" class="Function">map-inv-equiv</a><a id="511" class="Symbol">;</a> <a id="513" href="foundation-core.equivalences.html#3013" class="Function">is-equiv-has-inverse</a><a id="533" class="Symbol">;</a> <a id="535" href="foundation-core.equivalences.html#1821" class="Function">map-equiv</a><a id="544" class="Symbol">;</a>
-    <a id="550" href="foundation-core.equivalences.html#2095" class="Function">is-fiberwise-equiv</a><a id="568" class="Symbol">;</a> <a id="570" href="foundation.equivalences.html#11301" class="Function">is-property-is-equiv</a><a id="590" class="Symbol">;</a> <a id="592" href="foundation-core.equivalences.html#2494" class="Function">id-equiv</a><a id="600" class="Symbol">;</a> <a id="602" href="foundation-core.equivalences.html#4187" class="Function">map-inv-is-equiv</a><a id="618" class="Symbol">)</a>
+    <a id="550" href="foundation-core.equivalences.html#2095" class="Function">is-fiberwise-equiv</a><a id="568" class="Symbol">;</a> <a id="570" href="foundation.equivalences.html#11306" class="Function">is-property-is-equiv</a><a id="590" class="Symbol">;</a> <a id="592" href="foundation-core.equivalences.html#2494" class="Function">id-equiv</a><a id="600" class="Symbol">;</a> <a id="602" href="foundation-core.equivalences.html#4187" class="Function">map-inv-is-equiv</a><a id="618" class="Symbol">)</a>
 <a id="620" class="Keyword">open</a> <a id="625" class="Keyword">import</a> <a id="632" href="foundation.fibers-of-maps.html" class="Module">foundation.fibers-of-maps</a> <a id="658" class="Keyword">using</a>
   <a id="666" class="Symbol">(</a> <a id="668" href="foundation-core.fibers-of-maps.html#942" class="Function">fib</a><a id="671" class="Symbol">;</a> <a id="673" href="foundation-core.fibers-of-maps.html#6371" class="Function">equiv-fib-pr1</a><a id="686" class="Symbol">;</a> <a id="688" href="foundation-core.fibers-of-maps.html#8040" class="Function">equiv-total-fib</a><a id="703" class="Symbol">;</a> <a id="705" href="foundation-core.fibers-of-maps.html#7036" class="Function">triangle-map-equiv-total-fib</a><a id="733" class="Symbol">)</a>
 <a id="735" class="Keyword">open</a> <a id="740" class="Keyword">import</a> <a id="747" href="foundation.function-extensionality.html" class="Module">foundation.function-extensionality</a> <a id="782" class="Keyword">using</a>
@@ -269,8 +269,8 @@
         <a id="9649" href="foundation-core.equivalences.html#1556" class="Function">is-equiv</a> <a id="9658" class="Symbol">(</a><a id="9659" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="9663" href="foundation.slice.html#9620" class="Bound">h</a><a id="9664" class="Symbol">)</a> <a id="9666" href="foundation-core.equivalences.html#1621" class="Function Operator">≃</a>
         <a id="9676" href="foundation-core.equivalences.html#2095" class="Function">is-fiberwise-equiv</a> <a id="9695" class="Symbol">(</a><a id="9696" href="foundation-core.equivalences.html#1821" class="Function">map-equiv</a> <a id="9706" class="Symbol">(</a><a id="9707" href="foundation.slice.html#7086" class="Function">equiv-fiberwise-hom-hom-slice</a> <a id="9737" href="foundation.slice.html#9505" class="Bound">f</a> <a id="9739" href="foundation.slice.html#9507" class="Bound">g</a><a id="9740" class="Symbol">)</a> <a id="9742" href="foundation.slice.html#9620" class="Bound">h</a><a id="9743" class="Symbol">)</a>
   <a id="9747" href="foundation.slice.html#9612" class="Function">α</a> <a id="9749" href="foundation.slice.html#9749" class="Bound">h</a> <a id="9751" class="Symbol">=</a> <a id="9753" href="foundation-core.propositions.html#3958" class="Function">equiv-prop</a>
-          <a id="9774" class="Symbol">(</a> <a id="9776" href="foundation.equivalences.html#11301" class="Function">is-property-is-equiv</a> <a id="9797" class="Symbol">_)</a>
-          <a id="9810" class="Symbol">(</a> <a id="9812" href="foundation-core.propositions.html#6158" class="Function">is-prop-Π</a> <a id="9822" class="Symbol">(λ</a> <a id="9825" href="foundation.slice.html#9825" class="Bound">x</a> <a id="9827" class="Symbol">→</a> <a id="9829" href="foundation.equivalences.html#11301" class="Function">is-property-is-equiv</a> <a id="9850" class="Symbol">_))</a>
+          <a id="9774" class="Symbol">(</a> <a id="9776" href="foundation.equivalences.html#11306" class="Function">is-property-is-equiv</a> <a id="9797" class="Symbol">_)</a>
+          <a id="9810" class="Symbol">(</a> <a id="9812" href="foundation-core.propositions.html#6158" class="Function">is-prop-Π</a> <a id="9822" class="Symbol">(λ</a> <a id="9825" href="foundation.slice.html#9825" class="Bound">x</a> <a id="9827" class="Symbol">→</a> <a id="9829" href="foundation.equivalences.html#11306" class="Function">is-property-is-equiv</a> <a id="9850" class="Symbol">_))</a>
           <a id="9864" class="Symbol">(</a> <a id="9866" href="foundation.slice.html#8516" class="Function">is-fiberwise-equiv-fiberwise-equiv-equiv-slice</a> <a id="9913" href="foundation.slice.html#9505" class="Bound">f</a> <a id="9915" href="foundation.slice.html#9507" class="Bound">g</a> <a id="9917" href="foundation.slice.html#9749" class="Bound">h</a><a id="9918" class="Symbol">)</a>
           <a id="9930" class="Symbol">(</a> <a id="9932" href="foundation.slice.html#8879" class="Function">is-equiv-hom-slice-is-fiberwise-equiv-fiberwise-hom-hom-slice</a>
             <a id="10006" href="foundation.slice.html#9505" class="Bound">f</a> <a id="10008" href="foundation.slice.html#9507" class="Bound">g</a> <a id="10010" href="foundation.slice.html#9749" class="Bound">h</a><a id="10011" class="Symbol">)</a>
@@ -434,7 +434,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-21)(97f6920) Merge pull request #300 from EgbertRijke/group-theory by noreply
+(2022-08-21)(8caa406) Merge pull request #301 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
