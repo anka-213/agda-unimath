@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/finitely-presented-types.lagda.md.</p>
-<p>Version of Sunday, August 21, 2022, 09:59 PM</p>
+<p>Version of Tuesday, August 23, 2022, 02:02 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -56,7 +56,7 @@
 <a id="1107" class="Keyword">open</a> <a id="1112" class="Keyword">import</a> <a id="1119" href="univalent-combinatorics.finite-choice.html" class="Module">univalent-combinatorics.finite-choice</a> <a id="1157" class="Keyword">using</a> <a id="1163" class="Symbol">(</a><a id="1164" href="univalent-combinatorics.finite-choice.html#2928" class="Function">finite-choice-Fin</a><a id="1181" class="Symbol">)</a>
 <a id="1183" class="Keyword">open</a> <a id="1188" class="Keyword">import</a> <a id="1195" href="univalent-combinatorics.finite-connected-components.html" class="Module">univalent-combinatorics.finite-connected-components</a> <a id="1247" class="Keyword">using</a>
   <a id="1255" class="Symbol">(</a> <a id="1257" href="univalent-combinatorics.finite-connected-components.html#1096" class="Function">has-cardinality-components</a><a id="1283" class="Symbol">;</a> <a id="1285" href="univalent-combinatorics.finite-connected-components.html#940" class="Function">has-cardinality-components-Prop</a><a id="1316" class="Symbol">)</a>
-<a id="1318" class="Keyword">open</a> <a id="1323" class="Keyword">import</a> <a id="1330" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="1367" class="Keyword">using</a> <a id="1373" class="Symbol">(</a><a id="1374" href="univalent-combinatorics.finite-types.html#14150" class="Function">eq-cardinality</a><a id="1388" class="Symbol">)</a>
+<a id="1318" class="Keyword">open</a> <a id="1323" class="Keyword">import</a> <a id="1330" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="1367" class="Keyword">using</a> <a id="1373" class="Symbol">(</a><a id="1374" href="univalent-combinatorics.finite-types.html#13238" class="Function">eq-cardinality</a><a id="1388" class="Symbol">)</a>
 <a id="1390" class="Keyword">open</a> <a id="1395" class="Keyword">import</a> <a id="1402" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="1448" class="Keyword">using</a>
   <a id="1456" class="Symbol">(</a> <a id="1458" href="univalent-combinatorics.standard-finite-types.html#2392" class="Function">Fin</a><a id="1461" class="Symbol">;</a> <a id="1463" href="univalent-combinatorics.standard-finite-types.html#12920" class="Function">is-injective-Fin</a><a id="1479" class="Symbol">;</a> <a id="1481" href="univalent-combinatorics.standard-finite-types.html#2284" class="Function">Fin-Set</a><a id="1488" class="Symbol">)</a>
 </pre>
@@ -116,7 +116,7 @@
 <a id="3796" href="univalent-combinatorics.finitely-presented-types.html#3679" class="Function">all-elements-equal-is-finitely-presented</a> <a id="3837" class="Symbol">{</a><a id="3838" href="univalent-combinatorics.finitely-presented-types.html#3838" class="Bound">l1</a><a id="3840" class="Symbol">}</a> <a id="3842" class="Symbol">{</a><a id="3843" href="univalent-combinatorics.finitely-presented-types.html#3843" class="Bound">A</a><a id="3844" class="Symbol">}</a> <a id="3846" class="Symbol">(</a><a id="3847" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="3852" href="univalent-combinatorics.finitely-presented-types.html#3852" class="Bound">k</a> <a id="3854" href="univalent-combinatorics.finitely-presented-types.html#3854" class="Bound">K</a><a id="3855" class="Symbol">)</a> <a id="3857" class="Symbol">(</a><a id="3858" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="3863" href="univalent-combinatorics.finitely-presented-types.html#3863" class="Bound">l</a> <a id="3865" href="univalent-combinatorics.finitely-presented-types.html#3865" class="Bound">L</a><a id="3866" class="Symbol">)</a> <a id="3868" class="Symbol">=</a>
   <a id="3872" href="foundation-core.subtypes.html#3455" class="Function">eq-type-subtype</a>
     <a id="3892" class="Symbol">(</a> <a id="3894" class="Symbol">λ</a> <a id="3896" href="univalent-combinatorics.finitely-presented-types.html#3896" class="Bound">n</a> <a id="3898" class="Symbol">→</a> <a id="3900" href="foundation.set-presented-types.html#706" class="Function">has-set-presentation-Prop</a> <a id="3926" class="Symbol">(</a><a id="3927" href="univalent-combinatorics.standard-finite-types.html#2284" class="Function">Fin-Set</a> <a id="3935" href="univalent-combinatorics.finitely-presented-types.html#3896" class="Bound">n</a><a id="3936" class="Symbol">)</a> <a id="3938" href="univalent-combinatorics.finitely-presented-types.html#3843" class="Bound">A</a><a id="3939" class="Symbol">)</a>
-    <a id="3945" class="Symbol">(</a> <a id="3947" href="univalent-combinatorics.finite-types.html#14150" class="Function">eq-cardinality</a>
+    <a id="3945" class="Symbol">(</a> <a id="3947" href="univalent-combinatorics.finite-types.html#13238" class="Function">eq-cardinality</a>
       <a id="3968" class="Symbol">(</a> <a id="3970" href="univalent-combinatorics.finitely-presented-types.html#3228" class="Function">has-cardinality-components-has-presentation-of-cardinality</a> <a id="4029" href="univalent-combinatorics.finitely-presented-types.html#3852" class="Bound">k</a> <a id="4031" href="univalent-combinatorics.finitely-presented-types.html#3854" class="Bound">K</a><a id="4032" class="Symbol">)</a>
       <a id="4040" class="Symbol">(</a> <a id="4042" href="univalent-combinatorics.finitely-presented-types.html#3228" class="Function">has-cardinality-components-has-presentation-of-cardinality</a> <a id="4101" href="univalent-combinatorics.finitely-presented-types.html#3863" class="Bound">l</a> <a id="4103" href="univalent-combinatorics.finitely-presented-types.html#3865" class="Bound">L</a><a id="4104" class="Symbol">))</a>
 
@@ -131,7 +131,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-21)(8caa406) Merge pull request #301 from EgbertRijke/group-theory by noreply
+(2022-08-23)(35ca3a0) Merge pull request #302 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

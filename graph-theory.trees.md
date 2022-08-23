@@ -270,7 +270,7 @@ A tree is a graph such that the type of trails from x to y is contractible for a
 
   <a id="9512" href="graph-theory.trees.html#9512" class="Function">is-set-node-Tree</a> <a id="9529" class="Symbol">:</a> <a id="9531" href="foundation-core.sets.html#1113" class="Function">is-set</a> <a id="9538" class="Symbol">(</a><a id="9539" href="graph-theory.trees.html#1566" class="Function">node-Tree</a> <a id="9549" href="graph-theory.trees.html#9467" class="Bound">T</a><a id="9550" class="Symbol">)</a>
   <a id="9554" href="graph-theory.trees.html#9512" class="Function">is-set-node-Tree</a> <a id="9571" class="Symbol">=</a>
-    <a id="9577" href="foundation.sets.html#6528" class="Function">is-set-mere-eq-in-id</a>
+    <a id="9577" href="foundation.sets.html#6451" class="Function">is-set-mere-eq-in-id</a>
       <a id="9604" class="Symbol">(</a> <a id="9606" class="Symbol">λ</a> <a id="9608" href="graph-theory.trees.html#9608" class="Bound">x</a> <a id="9610" href="graph-theory.trees.html#9610" class="Bound">y</a> <a id="9612" href="graph-theory.trees.html#9612" class="Bound">H</a> <a id="9614" class="Symbol">→</a>
         <a id="9624" href="graph-theory.walks-undirected-graphs.html#19199" class="Function">eq-constant-walk-Undirected-Graph</a>
           <a id="9668" class="Symbol">(</a> <a id="9670" href="graph-theory.trees.html#1362" class="Function">undirected-graph-Tree</a> <a id="9692" href="graph-theory.trees.html#9467" class="Bound">T</a><a id="9693" class="Symbol">)</a>

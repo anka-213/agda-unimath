@@ -152,7 +152,7 @@ A subgroup of a concrete group `G` is a pointed transitive `G`-set.
   <a id="6001" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="6005" class="Symbol">(</a><a id="6006" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="6010" href="group-theory.subgroups-concrete-groups.html#5823" class="Function">concrete-group-subgroup-Concrete-Group</a><a id="6048" class="Symbol">)</a> <a id="6050" class="Symbol">=</a>
     <a id="6056" href="group-theory.subgroups-concrete-groups.html#4092" class="Function">is-connected-classifying-type-subgroup-Concrete-Group</a>
   <a id="6112" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="6116" href="group-theory.subgroups-concrete-groups.html#5823" class="Function">concrete-group-subgroup-Concrete-Group</a> <a id="6155" class="Symbol">=</a>
-    <a id="6161" href="foundation.sets.html#6153" class="Function">is-set-is-emb</a>
+    <a id="6161" href="foundation.sets.html#6076" class="Function">is-set-is-emb</a>
       <a id="6181" class="Symbol">(</a> <a id="6183" href="synthetic-homotopy-theory.functoriality-loop-spaces.html#1184" class="Function">map-Ω</a>
         <a id="6197" class="Symbol">(</a> <a id="6199" href="group-theory.subgroups-concrete-groups.html#3822" class="Function">classifying-pointed-type-subgroup-Concrete-Group</a><a id="6247" class="Symbol">)</a>
         <a id="6257" class="Symbol">(</a> <a id="6259" href="group-theory.concrete-groups.html#2267" class="Function">classifying-pointed-type-Concrete-Group</a> <a id="6299" href="group-theory.subgroups-concrete-groups.html#1705" class="Bound">G</a><a id="6300" class="Symbol">)</a>

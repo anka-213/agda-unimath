@@ -6,10 +6,12 @@ title: Complete undirected graphs
 
 <a id="95" class="Keyword">module</a> <a id="102" href="graph-theory.complete-undirected-graphs.html" class="Module">graph-theory.complete-undirected-graphs</a> <a id="142" class="Keyword">where</a>
 
-<a id="149" class="Keyword">open</a> <a id="154" class="Keyword">import</a> <a id="161" href="graph-theory.complete-multipartite-graphs.html" class="Module">graph-theory.complete-multipartite-graphs</a>
-<a id="203" class="Keyword">open</a> <a id="208" class="Keyword">import</a> <a id="215" href="graph-theory.finite-graphs.html" class="Module">graph-theory.finite-graphs</a>
+<a id="149" class="Keyword">open</a> <a id="154" class="Keyword">import</a> <a id="161" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
 
-<a id="243" class="Keyword">open</a> <a id="248" class="Keyword">import</a> <a id="255" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
+<a id="189" class="Keyword">open</a> <a id="194" class="Keyword">import</a> <a id="201" href="graph-theory.complete-multipartite-graphs.html" class="Module">graph-theory.complete-multipartite-graphs</a>
+<a id="243" class="Keyword">open</a> <a id="248" class="Keyword">import</a> <a id="255" href="graph-theory.finite-graphs.html" class="Module">graph-theory.finite-graphs</a>
+
+<a id="283" class="Keyword">open</a> <a id="288" class="Keyword">import</a> <a id="295" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a>
 </pre>
 ## Idea
 
@@ -19,6 +21,6 @@ There are many ways of presenting complete undirected graphs. For example, the t
 
 ## Definition
 
-<pre class="Agda"><a id="complete-Undirected-Graph-𝔽"></a><a id="713" href="graph-theory.complete-undirected-graphs.html#713" class="Function">complete-Undirected-Graph-𝔽</a> <a id="741" class="Symbol">:</a> <a id="743" href="univalent-combinatorics.finite-types.html#4878" class="Function">𝔽</a> <a id="745" class="Symbol">→</a> <a id="747" href="graph-theory.finite-graphs.html#1298" class="Function">Undirected-Graph-𝔽</a>
-<a id="766" href="graph-theory.complete-undirected-graphs.html#713" class="Function">complete-Undirected-Graph-𝔽</a> <a id="794" href="graph-theory.complete-undirected-graphs.html#794" class="Bound">X</a> <a id="796" class="Symbol">=</a> <a id="798" href="graph-theory.complete-multipartite-graphs.html#826" class="Function">complete-multipartite-Undirected-Graph-𝔽</a> <a id="839" href="graph-theory.complete-undirected-graphs.html#794" class="Bound">X</a> <a id="841" class="Symbol">(λ</a> <a id="844" href="graph-theory.complete-undirected-graphs.html#844" class="Bound">x</a> <a id="846" class="Symbol">→</a> <a id="848" href="univalent-combinatorics.finite-types.html#8917" class="Function">unit-𝔽</a><a id="854" class="Symbol">)</a>
+<pre class="Agda"><a id="complete-Undirected-Graph-𝔽"></a><a id="753" href="graph-theory.complete-undirected-graphs.html#753" class="Function">complete-Undirected-Graph-𝔽</a> <a id="781" class="Symbol">:</a> <a id="783" class="Symbol">{</a><a id="784" href="graph-theory.complete-undirected-graphs.html#784" class="Bound">l</a> <a id="786" class="Symbol">:</a> <a id="788" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="793" class="Symbol">}</a> <a id="795" class="Symbol">→</a> <a id="797" href="univalent-combinatorics.finite-types.html#4550" class="Function">𝔽</a> <a id="799" href="graph-theory.complete-undirected-graphs.html#784" class="Bound">l</a> <a id="801" class="Symbol">→</a> <a id="803" href="graph-theory.finite-graphs.html#1298" class="Function">Undirected-Graph-𝔽</a> <a id="822" href="graph-theory.complete-undirected-graphs.html#784" class="Bound">l</a> <a id="824" href="graph-theory.complete-undirected-graphs.html#784" class="Bound">l</a>
+<a id="826" href="graph-theory.complete-undirected-graphs.html#753" class="Function">complete-Undirected-Graph-𝔽</a> <a id="854" href="graph-theory.complete-undirected-graphs.html#854" class="Bound">X</a> <a id="856" class="Symbol">=</a> <a id="858" href="graph-theory.complete-multipartite-graphs.html#865" class="Function">complete-multipartite-Undirected-Graph-𝔽</a> <a id="899" href="graph-theory.complete-undirected-graphs.html#854" class="Bound">X</a> <a id="901" class="Symbol">(λ</a> <a id="904" href="graph-theory.complete-undirected-graphs.html#904" class="Bound">x</a> <a id="906" class="Symbol">→</a> <a id="908" href="univalent-combinatorics.finite-types.html#8209" class="Function">unit-𝔽</a><a id="914" class="Symbol">)</a>
 </pre>
