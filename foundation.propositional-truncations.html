@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/propositional-truncations.lagda.md.</p>
-<p>Version of Thursday, August 25, 2022, 05:45 PM</p>
+<p>Version of Thursday, August 25, 2022, 10:25 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -64,7 +64,7 @@
 
 <a id="1670" class="Keyword">open</a> <a id="1675" class="Keyword">import</a> <a id="1682" href="foundation-core.sets.html" class="Module">foundation-core.sets</a> <a id="1703" class="Keyword">using</a> <a id="1709" class="Symbol">(</a><a id="1710" href="foundation-core.sets.html#1190" class="Function">UU-Set</a><a id="1716" class="Symbol">)</a>
 <a id="1718" class="Keyword">open</a> <a id="1723" class="Keyword">import</a> <a id="1730" href="foundation-core.truncated-types.html" class="Module">foundation-core.truncated-types</a> <a id="1762" class="Keyword">using</a>
-  <a id="1770" class="Symbol">(</a> <a id="1772" href="foundation-core.truncated-types.html#1741" class="Function">is-trunc</a><a id="1780" class="Symbol">;</a> <a id="1782" href="foundation-core.truncated-types.html#1925" class="Function">Truncated-Type</a><a id="1796" class="Symbol">)</a>
+  <a id="1770" class="Symbol">(</a> <a id="1772" href="foundation-core.truncated-types.html#1741" class="Function">is-trunc</a><a id="1780" class="Symbol">;</a> <a id="1782" href="foundation-core.truncated-types.html#2039" class="Function">Truncated-Type</a><a id="1796" class="Symbol">)</a>
 <a id="1798" class="Keyword">open</a> <a id="1803" class="Keyword">import</a> <a id="1810" href="foundation-core.truncation-levels.html" class="Module">foundation-core.truncation-levels</a> <a id="1844" class="Keyword">using</a> <a id="1850" class="Symbol">(</a><a id="1851" href="foundation-core.truncation-levels.html#395" class="Datatype">𝕋</a><a id="1852" class="Symbol">;</a> <a id="1854" href="foundation-core.truncation-levels.html#448" class="Function">neg-one-𝕋</a><a id="1863" class="Symbol">;</a> <a id="1865" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a><a id="1871" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
@@ -176,7 +176,7 @@
 <a id="6187" href="foundation.propositional-truncations.html#6090" class="Function">is-trunc-trunc-Prop</a> <a id="6207" href="foundation.propositional-truncations.html#6207" class="Bound">k</a> <a id="6209" class="Symbol">=</a> <a id="6211" href="foundation.propositions.html#979" class="Function">is-trunc-is-prop</a> <a id="6228" href="foundation.propositional-truncations.html#6207" class="Bound">k</a> <a id="6230" href="foundation.propositional-truncations.html#2388" class="Function">is-prop-type-trunc-Prop</a>
 
 <a id="truncated-type-trunc-Prop"></a><a id="6255" href="foundation.propositional-truncations.html#6255" class="Function">truncated-type-trunc-Prop</a> <a id="6281" class="Symbol">:</a>
-  <a id="6285" class="Symbol">{</a><a id="6286" href="foundation.propositional-truncations.html#6286" class="Bound">l</a> <a id="6288" class="Symbol">:</a> <a id="6290" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="6295" class="Symbol">}</a> <a id="6297" class="Symbol">(</a><a id="6298" href="foundation.propositional-truncations.html#6298" class="Bound">k</a> <a id="6300" class="Symbol">:</a> <a id="6302" href="foundation-core.truncation-levels.html#395" class="Datatype">𝕋</a><a id="6303" class="Symbol">)</a> <a id="6305" class="Symbol">→</a> <a id="6307" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="6310" href="foundation.propositional-truncations.html#6286" class="Bound">l</a> <a id="6312" class="Symbol">→</a> <a id="6314" href="foundation-core.truncated-types.html#1925" class="Function">Truncated-Type</a> <a id="6329" href="foundation.propositional-truncations.html#6286" class="Bound">l</a> <a id="6331" class="Symbol">(</a><a id="6332" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a> <a id="6339" href="foundation.propositional-truncations.html#6298" class="Bound">k</a><a id="6340" class="Symbol">)</a>
+  <a id="6285" class="Symbol">{</a><a id="6286" href="foundation.propositional-truncations.html#6286" class="Bound">l</a> <a id="6288" class="Symbol">:</a> <a id="6290" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="6295" class="Symbol">}</a> <a id="6297" class="Symbol">(</a><a id="6298" href="foundation.propositional-truncations.html#6298" class="Bound">k</a> <a id="6300" class="Symbol">:</a> <a id="6302" href="foundation-core.truncation-levels.html#395" class="Datatype">𝕋</a><a id="6303" class="Symbol">)</a> <a id="6305" class="Symbol">→</a> <a id="6307" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="6310" href="foundation.propositional-truncations.html#6286" class="Bound">l</a> <a id="6312" class="Symbol">→</a> <a id="6314" href="foundation-core.truncated-types.html#2039" class="Function">Truncated-Type</a> <a id="6329" href="foundation.propositional-truncations.html#6286" class="Bound">l</a> <a id="6331" class="Symbol">(</a><a id="6332" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a> <a id="6339" href="foundation.propositional-truncations.html#6298" class="Bound">k</a><a id="6340" class="Symbol">)</a>
 <a id="6342" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="6346" class="Symbol">(</a><a id="6347" href="foundation.propositional-truncations.html#6255" class="Function">truncated-type-trunc-Prop</a> <a id="6373" href="foundation.propositional-truncations.html#6373" class="Bound">k</a> <a id="6375" href="foundation.propositional-truncations.html#6375" class="Bound">A</a><a id="6376" class="Symbol">)</a> <a id="6378" class="Symbol">=</a> <a id="6380" href="foundation.propositional-truncations.html#2209" class="Function">type-trunc-Prop</a> <a id="6396" href="foundation.propositional-truncations.html#6375" class="Bound">A</a>
 <a id="6398" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="6402" class="Symbol">(</a><a id="6403" href="foundation.propositional-truncations.html#6255" class="Function">truncated-type-trunc-Prop</a> <a id="6429" href="foundation.propositional-truncations.html#6429" class="Bound">k</a> <a id="6431" href="foundation.propositional-truncations.html#6431" class="Bound">A</a><a id="6432" class="Symbol">)</a> <a id="6434" class="Symbol">=</a> <a id="6436" href="foundation.propositional-truncations.html#6090" class="Function">is-trunc-trunc-Prop</a> <a id="6456" href="foundation.propositional-truncations.html#6429" class="Bound">k</a>
 
@@ -341,7 +341,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-25)(7951d20) Merge pull request #305 from UniMath/EgbertRijke-patch-1 by noreply
+(2022-08-25)(05a82c0) Merge pull request #306 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
