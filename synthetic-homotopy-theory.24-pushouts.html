@@ -24,85 +24,83 @@
 >
 <div class="powerby">
 <p>src/synthetic-homotopy-theory/24-pushouts.lagda.md.</p>
-<p>Version of Tuesday, August 23, 2022, 05:10 PM</p>
+<p>Version of Thursday, August 25, 2022, 07:27 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
 <header id="title-block-header">
 <h1 class="title">Formalisation of the Symmetry Book</h1>
 </header>
-<pre class="Agda"><a id="60" class="Symbol">{-#</a> <a id="64" class="Keyword">OPTIONS</a> <a id="72" class="Pragma">--without-K</a> <a id="84" class="Pragma">--allow-unsolved-metas</a> <a id="107" class="Pragma">--exact-split</a> <a id="121" class="Symbol">#-}</a>
+<pre class="Agda"><a id="60" class="Keyword">module</a> <a id="67" href="synthetic-homotopy-theory.24-pushouts.html" class="Module">synthetic-homotopy-theory.24-pushouts</a> <a id="105" class="Keyword">where</a>
 
-<a id="126" class="Keyword">module</a> <a id="133" href="synthetic-homotopy-theory.24-pushouts.html" class="Module">synthetic-homotopy-theory.24-pushouts</a> <a id="171" class="Keyword">where</a>
+<a id="112" class="Keyword">open</a> <a id="117" class="Keyword">import</a> <a id="124" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
 
-<a id="178" class="Keyword">open</a> <a id="183" class="Keyword">import</a> <a id="190" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a>
+<a id="166" class="Keyword">open</a> <a id="171" class="Keyword">import</a> <a id="178" href="foundation.booleans.html" class="Module">foundation.booleans</a>
+<a id="198" class="Keyword">open</a> <a id="203" class="Keyword">import</a> <a id="210" href="foundation.cones-pullbacks.html" class="Module">foundation.cones-pullbacks</a>
+<a id="237" class="Keyword">open</a> <a id="242" class="Keyword">import</a> <a id="249" href="foundation.constant-maps.html" class="Module">foundation.constant-maps</a>
+<a id="274" class="Keyword">open</a> <a id="279" class="Keyword">import</a> <a id="286" href="foundation.contractible-maps.html" class="Module">foundation.contractible-maps</a>
+<a id="315" class="Keyword">open</a> <a id="320" class="Keyword">import</a> <a id="327" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a>
+<a id="357" class="Keyword">open</a> <a id="362" class="Keyword">import</a> <a id="369" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="401" class="Keyword">open</a> <a id="406" class="Keyword">import</a> <a id="413" href="foundation.equality-dependent-pair-types.html" class="Module">foundation.equality-dependent-pair-types</a>
+<a id="454" class="Keyword">open</a> <a id="459" class="Keyword">import</a> <a id="466" href="foundation.equivalences.html" class="Module">foundation.equivalences</a>
+<a id="490" class="Keyword">open</a> <a id="495" class="Keyword">import</a> <a id="502" href="foundation.fibers-of-maps.html" class="Module">foundation.fibers-of-maps</a>
+<a id="528" class="Keyword">open</a> <a id="533" class="Keyword">import</a> <a id="540" href="foundation.function-extensionality.html" class="Module">foundation.function-extensionality</a>
+<a id="575" class="Keyword">open</a> <a id="580" class="Keyword">import</a> <a id="587" href="foundation.functions.html" class="Module">foundation.functions</a>
+<a id="608" class="Keyword">open</a> <a id="613" class="Keyword">import</a> <a id="620" href="foundation.functoriality-dependent-pair-types.html" class="Module">foundation.functoriality-dependent-pair-types</a>
+<a id="666" class="Keyword">open</a> <a id="671" class="Keyword">import</a> <a id="678" href="foundation.fundamental-theorem-of-identity-types.html" class="Module">foundation.fundamental-theorem-of-identity-types</a>
+<a id="727" class="Keyword">open</a> <a id="732" class="Keyword">import</a> <a id="739" href="foundation.homotopies.html" class="Module">foundation.homotopies</a>
+<a id="761" class="Keyword">open</a> <a id="766" class="Keyword">import</a> <a id="773" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="799" class="Keyword">open</a> <a id="804" class="Keyword">import</a> <a id="811" href="foundation.pullbacks.html" class="Module">foundation.pullbacks</a>
+<a id="832" class="Keyword">open</a> <a id="837" class="Keyword">import</a> <a id="844" href="foundation.structure-identity-principle.html" class="Module">foundation.structure-identity-principle</a>
+<a id="884" class="Keyword">open</a> <a id="889" class="Keyword">import</a> <a id="896" href="foundation.subtype-identity-principle.html" class="Module">foundation.subtype-identity-principle</a>
+<a id="934" class="Keyword">open</a> <a id="939" class="Keyword">import</a> <a id="946" href="foundation.unit-type.html" class="Module">foundation.unit-type</a>
+<a id="967" class="Keyword">open</a> <a id="972" class="Keyword">import</a> <a id="979" href="foundation.universal-property-pullbacks.html" class="Module">foundation.universal-property-pullbacks</a>
+<a id="1019" class="Keyword">open</a> <a id="1024" class="Keyword">import</a> <a id="1031" href="foundation.universal-property-unit-type.html" class="Module">foundation.universal-property-unit-type</a>
+<a id="1071" class="Keyword">open</a> <a id="1076" class="Keyword">import</a> <a id="1083" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
 
-<a id="232" class="Keyword">open</a> <a id="237" class="Keyword">import</a> <a id="244" href="foundation.booleans.html" class="Module">foundation.booleans</a>
-<a id="264" class="Keyword">open</a> <a id="269" class="Keyword">import</a> <a id="276" href="foundation.cones-pullbacks.html" class="Module">foundation.cones-pullbacks</a>
-<a id="303" class="Keyword">open</a> <a id="308" class="Keyword">import</a> <a id="315" href="foundation.constant-maps.html" class="Module">foundation.constant-maps</a>
-<a id="340" class="Keyword">open</a> <a id="345" class="Keyword">import</a> <a id="352" href="foundation.contractible-maps.html" class="Module">foundation.contractible-maps</a>
-<a id="381" class="Keyword">open</a> <a id="386" class="Keyword">import</a> <a id="393" href="foundation.contractible-types.html" class="Module">foundation.contractible-types</a>
-<a id="423" class="Keyword">open</a> <a id="428" class="Keyword">import</a> <a id="435" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
-<a id="467" class="Keyword">open</a> <a id="472" class="Keyword">import</a> <a id="479" href="foundation.equality-dependent-pair-types.html" class="Module">foundation.equality-dependent-pair-types</a>
-<a id="520" class="Keyword">open</a> <a id="525" class="Keyword">import</a> <a id="532" href="foundation.equivalences.html" class="Module">foundation.equivalences</a>
-<a id="556" class="Keyword">open</a> <a id="561" class="Keyword">import</a> <a id="568" href="foundation.fibers-of-maps.html" class="Module">foundation.fibers-of-maps</a>
-<a id="594" class="Keyword">open</a> <a id="599" class="Keyword">import</a> <a id="606" href="foundation.function-extensionality.html" class="Module">foundation.function-extensionality</a>
-<a id="641" class="Keyword">open</a> <a id="646" class="Keyword">import</a> <a id="653" href="foundation.functions.html" class="Module">foundation.functions</a>
-<a id="674" class="Keyword">open</a> <a id="679" class="Keyword">import</a> <a id="686" href="foundation.functoriality-dependent-pair-types.html" class="Module">foundation.functoriality-dependent-pair-types</a>
-<a id="732" class="Keyword">open</a> <a id="737" class="Keyword">import</a> <a id="744" href="foundation.fundamental-theorem-of-identity-types.html" class="Module">foundation.fundamental-theorem-of-identity-types</a>
-<a id="793" class="Keyword">open</a> <a id="798" class="Keyword">import</a> <a id="805" href="foundation.homotopies.html" class="Module">foundation.homotopies</a>
-<a id="827" class="Keyword">open</a> <a id="832" class="Keyword">import</a> <a id="839" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
-<a id="865" class="Keyword">open</a> <a id="870" class="Keyword">import</a> <a id="877" href="foundation.pullbacks.html" class="Module">foundation.pullbacks</a>
-<a id="898" class="Keyword">open</a> <a id="903" class="Keyword">import</a> <a id="910" href="foundation.structure-identity-principle.html" class="Module">foundation.structure-identity-principle</a>
-<a id="950" class="Keyword">open</a> <a id="955" class="Keyword">import</a> <a id="962" href="foundation.subtype-identity-principle.html" class="Module">foundation.subtype-identity-principle</a>
-<a id="1000" class="Keyword">open</a> <a id="1005" class="Keyword">import</a> <a id="1012" href="foundation.unit-type.html" class="Module">foundation.unit-type</a>
-<a id="1033" class="Keyword">open</a> <a id="1038" class="Keyword">import</a> <a id="1045" href="foundation.universal-property-pullbacks.html" class="Module">foundation.universal-property-pullbacks</a>
-<a id="1085" class="Keyword">open</a> <a id="1090" class="Keyword">import</a> <a id="1097" href="foundation.universal-property-unit-type.html" class="Module">foundation.universal-property-unit-type</a>
-<a id="1137" class="Keyword">open</a> <a id="1142" class="Keyword">import</a> <a id="1149" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="1111" class="Keyword">open</a> <a id="1116" class="Keyword">import</a> <a id="1123" href="synthetic-homotopy-theory.cocones-pushouts.html" class="Module">synthetic-homotopy-theory.cocones-pushouts</a>
+<a id="1166" class="Keyword">open</a> <a id="1171" class="Keyword">import</a> <a id="1178" href="synthetic-homotopy-theory.pushouts.html" class="Module">synthetic-homotopy-theory.pushouts</a>
+<a id="1213" class="Keyword">open</a> <a id="1218" class="Keyword">import</a> <a id="1225" href="synthetic-homotopy-theory.universal-property-pushouts.html" class="Module">synthetic-homotopy-theory.universal-property-pushouts</a>
 
-<a id="1177" class="Keyword">open</a> <a id="1182" class="Keyword">import</a> <a id="1189" href="synthetic-homotopy-theory.cocones-pushouts.html" class="Module">synthetic-homotopy-theory.cocones-pushouts</a>
-<a id="1232" class="Keyword">open</a> <a id="1237" class="Keyword">import</a> <a id="1244" href="synthetic-homotopy-theory.pushouts.html" class="Module">synthetic-homotopy-theory.pushouts</a>
-<a id="1279" class="Keyword">open</a> <a id="1284" class="Keyword">import</a> <a id="1291" href="synthetic-homotopy-theory.universal-property-pushouts.html" class="Module">synthetic-homotopy-theory.universal-property-pushouts</a>
+<a id="1280" class="Comment">-- Exercises</a>
 
-<a id="1346" class="Comment">-- Exercises</a>
+<a id="1294" class="Comment">-- Exercise 13.1</a>
 
-<a id="1360" class="Comment">-- Exercise 13.1</a>
+<a id="1312" class="Comment">-- Exercise 13.2</a>
 
-<a id="1378" class="Comment">-- Exercise 13.2</a>
+<a id="is-equiv-cofiber-point"></a><a id="1330" href="synthetic-homotopy-theory.24-pushouts.html#1330" class="Function">is-equiv-cofiber-point</a> <a id="1353" class="Symbol">:</a>
+  <a id="1357" class="Symbol">{</a><a id="1358" href="synthetic-homotopy-theory.24-pushouts.html#1358" class="Bound">l</a> <a id="1360" class="Symbol">:</a> <a id="1362" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1367" class="Symbol">}</a> <a id="1369" class="Symbol">{</a><a id="1370" href="synthetic-homotopy-theory.24-pushouts.html#1370" class="Bound">B</a> <a id="1372" class="Symbol">:</a> <a id="1374" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1377" href="synthetic-homotopy-theory.24-pushouts.html#1358" class="Bound">l</a><a id="1378" class="Symbol">}</a> <a id="1380" class="Symbol">(</a><a id="1381" href="synthetic-homotopy-theory.24-pushouts.html#1381" class="Bound">b</a> <a id="1383" class="Symbol">:</a> <a id="1385" href="synthetic-homotopy-theory.24-pushouts.html#1370" class="Bound">B</a><a id="1386" class="Symbol">)</a> <a id="1388" class="Symbol">→</a>
+  <a id="1392" href="foundation-core.equivalences.html#1556" class="Function">is-equiv</a> <a id="1401" class="Symbol">(</a><a id="1402" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1406" class="Symbol">(</a><a id="1407" href="synthetic-homotopy-theory.pushouts.html#980" class="Function">cocone-pushout</a> <a id="1422" class="Symbol">(</a><a id="1423" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1429" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1434" href="synthetic-homotopy-theory.24-pushouts.html#1370" class="Bound">B</a> <a id="1436" href="synthetic-homotopy-theory.24-pushouts.html#1381" class="Bound">b</a><a id="1437" class="Symbol">)</a> <a id="1439" class="Symbol">(</a><a id="1440" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1446" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1451" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1456" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1460" class="Symbol">)))</a>
+<a id="1464" href="synthetic-homotopy-theory.24-pushouts.html#1330" class="Function">is-equiv-cofiber-point</a> <a id="1487" class="Symbol">{</a><a id="1488" href="synthetic-homotopy-theory.24-pushouts.html#1488" class="Bound">l</a><a id="1489" class="Symbol">}</a> <a id="1491" class="Symbol">{</a><a id="1492" href="synthetic-homotopy-theory.24-pushouts.html#1492" class="Bound">B</a><a id="1493" class="Symbol">}</a> <a id="1495" href="synthetic-homotopy-theory.24-pushouts.html#1495" class="Bound">b</a> <a id="1497" class="Symbol">=</a>
+  <a id="1501" href="synthetic-homotopy-theory.universal-property-pushouts.html#11483" class="Function">is-equiv-universal-property-pushout&#39;</a>
+    <a id="1542" class="Symbol">(</a> <a id="1544" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1550" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1555" href="synthetic-homotopy-theory.24-pushouts.html#1492" class="Bound">B</a> <a id="1557" href="synthetic-homotopy-theory.24-pushouts.html#1495" class="Bound">b</a><a id="1558" class="Symbol">)</a>
+    <a id="1564" class="Symbol">(</a> <a id="1566" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1572" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1577" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1582" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1586" class="Symbol">)</a>
+    <a id="1592" class="Symbol">(</a> <a id="1594" href="synthetic-homotopy-theory.pushouts.html#980" class="Function">cocone-pushout</a> <a id="1609" class="Symbol">(</a><a id="1610" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1616" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1621" href="synthetic-homotopy-theory.24-pushouts.html#1492" class="Bound">B</a> <a id="1623" href="synthetic-homotopy-theory.24-pushouts.html#1495" class="Bound">b</a><a id="1624" class="Symbol">)</a> <a id="1626" class="Symbol">(</a><a id="1627" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1633" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1638" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1643" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1647" class="Symbol">))</a>
+    <a id="1654" class="Symbol">(</a> <a id="1656" href="foundation-core.contractible-types.html#4047" class="Function">is-equiv-is-contr</a> <a id="1674" class="Symbol">(</a><a id="1675" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1681" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1686" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1691" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1695" class="Symbol">)</a> <a id="1697" href="foundation.unit-type.html#2024" class="Function">is-contr-unit</a> <a id="1711" href="foundation.unit-type.html#2024" class="Function">is-contr-unit</a><a id="1724" class="Symbol">)</a>
+    <a id="1730" class="Symbol">(</a> <a id="1732" href="synthetic-homotopy-theory.pushouts.html#1234" class="Postulate">up-pushout</a> <a id="1743" class="Symbol">(</a><a id="1744" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1750" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1755" href="synthetic-homotopy-theory.24-pushouts.html#1492" class="Bound">B</a> <a id="1757" href="synthetic-homotopy-theory.24-pushouts.html#1495" class="Bound">b</a><a id="1758" class="Symbol">)</a> <a id="1760" class="Symbol">(</a><a id="1761" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1767" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1772" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1777" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1781" class="Symbol">))</a>
 
-<a id="is-equiv-cofiber-point"></a><a id="1396" href="synthetic-homotopy-theory.24-pushouts.html#1396" class="Function">is-equiv-cofiber-point</a> <a id="1419" class="Symbol">:</a>
-  <a id="1423" class="Symbol">{</a><a id="1424" href="synthetic-homotopy-theory.24-pushouts.html#1424" class="Bound">l</a> <a id="1426" class="Symbol">:</a> <a id="1428" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="1433" class="Symbol">}</a> <a id="1435" class="Symbol">{</a><a id="1436" href="synthetic-homotopy-theory.24-pushouts.html#1436" class="Bound">B</a> <a id="1438" class="Symbol">:</a> <a id="1440" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="1443" href="synthetic-homotopy-theory.24-pushouts.html#1424" class="Bound">l</a><a id="1444" class="Symbol">}</a> <a id="1446" class="Symbol">(</a><a id="1447" href="synthetic-homotopy-theory.24-pushouts.html#1447" class="Bound">b</a> <a id="1449" class="Symbol">:</a> <a id="1451" href="synthetic-homotopy-theory.24-pushouts.html#1436" class="Bound">B</a><a id="1452" class="Symbol">)</a> <a id="1454" class="Symbol">→</a>
-  <a id="1458" href="foundation-core.equivalences.html#1556" class="Function">is-equiv</a> <a id="1467" class="Symbol">(</a><a id="1468" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="1472" class="Symbol">(</a><a id="1473" href="synthetic-homotopy-theory.pushouts.html#980" class="Function">cocone-pushout</a> <a id="1488" class="Symbol">(</a><a id="1489" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1495" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1500" href="synthetic-homotopy-theory.24-pushouts.html#1436" class="Bound">B</a> <a id="1502" href="synthetic-homotopy-theory.24-pushouts.html#1447" class="Bound">b</a><a id="1503" class="Symbol">)</a> <a id="1505" class="Symbol">(</a><a id="1506" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1512" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1517" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1522" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1526" class="Symbol">)))</a>
-<a id="1530" href="synthetic-homotopy-theory.24-pushouts.html#1396" class="Function">is-equiv-cofiber-point</a> <a id="1553" class="Symbol">{</a><a id="1554" href="synthetic-homotopy-theory.24-pushouts.html#1554" class="Bound">l</a><a id="1555" class="Symbol">}</a> <a id="1557" class="Symbol">{</a><a id="1558" href="synthetic-homotopy-theory.24-pushouts.html#1558" class="Bound">B</a><a id="1559" class="Symbol">}</a> <a id="1561" href="synthetic-homotopy-theory.24-pushouts.html#1561" class="Bound">b</a> <a id="1563" class="Symbol">=</a>
-  <a id="1567" href="synthetic-homotopy-theory.universal-property-pushouts.html#11483" class="Function">is-equiv-universal-property-pushout&#39;</a>
-    <a id="1608" class="Symbol">(</a> <a id="1610" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1616" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1621" href="synthetic-homotopy-theory.24-pushouts.html#1558" class="Bound">B</a> <a id="1623" href="synthetic-homotopy-theory.24-pushouts.html#1561" class="Bound">b</a><a id="1624" class="Symbol">)</a>
-    <a id="1630" class="Symbol">(</a> <a id="1632" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1638" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1643" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1648" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1652" class="Symbol">)</a>
-    <a id="1658" class="Symbol">(</a> <a id="1660" href="synthetic-homotopy-theory.pushouts.html#980" class="Function">cocone-pushout</a> <a id="1675" class="Symbol">(</a><a id="1676" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1682" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1687" href="synthetic-homotopy-theory.24-pushouts.html#1558" class="Bound">B</a> <a id="1689" href="synthetic-homotopy-theory.24-pushouts.html#1561" class="Bound">b</a><a id="1690" class="Symbol">)</a> <a id="1692" class="Symbol">(</a><a id="1693" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1699" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1704" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1709" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1713" class="Symbol">))</a>
-    <a id="1720" class="Symbol">(</a> <a id="1722" href="foundation-core.contractible-types.html#4047" class="Function">is-equiv-is-contr</a> <a id="1740" class="Symbol">(</a><a id="1741" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1747" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1752" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1757" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1761" class="Symbol">)</a> <a id="1763" href="foundation.unit-type.html#2024" class="Function">is-contr-unit</a> <a id="1777" href="foundation.unit-type.html#2024" class="Function">is-contr-unit</a><a id="1790" class="Symbol">)</a>
-    <a id="1796" class="Symbol">(</a> <a id="1798" href="synthetic-homotopy-theory.pushouts.html#1234" class="Postulate">up-pushout</a> <a id="1809" class="Symbol">(</a><a id="1810" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1816" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1821" href="synthetic-homotopy-theory.24-pushouts.html#1558" class="Bound">B</a> <a id="1823" href="synthetic-homotopy-theory.24-pushouts.html#1561" class="Bound">b</a><a id="1824" class="Symbol">)</a> <a id="1826" class="Symbol">(</a><a id="1827" href="foundation-core.constant-maps.html#216" class="Function">const</a> <a id="1833" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1838" href="foundation.unit-type.html#1084" class="Datatype">unit</a> <a id="1843" href="foundation.unit-type.html#1108" class="InductiveConstructor">star</a><a id="1847" class="Symbol">))</a>
+<a id="1785" class="Comment">-- Exercise 16.2</a>
 
-<a id="1851" class="Comment">-- Exercise 16.2</a>
+<a id="1803" class="Comment">-- ev-disjunction :</a>
+<a id="1823" class="Comment">--   {l1 l2 l3 : Level} (P : UU-Prop l1) (Q : UU-Prop l2) (R : UU-Prop l3) →</a>
+<a id="1900" class="Comment">--   ((type-Prop P) * (type-Prop Q) → (type-Prop R)) →</a>
+<a id="1955" class="Comment">--   (type-Prop P → type-Prop R) × (type-Prop Q → type-Prop R)</a>
+<a id="2018" class="Comment">-- ev-disjunction P Q R f =</a>
+<a id="2046" class="Comment">--   pair</a>
+<a id="2056" class="Comment">--     ( f ∘ (inl-join (type-Prop P) (type-Prop Q)))</a>
+<a id="2109" class="Comment">--     ( f ∘ (inr-join (type-Prop P) (type-Prop Q)))</a>
 
-<a id="1869" class="Comment">-- ev-disjunction :</a>
-<a id="1889" class="Comment">--   {l1 l2 l3 : Level} (P : UU-Prop l1) (Q : UU-Prop l2) (R : UU-Prop l3) →</a>
-<a id="1966" class="Comment">--   ((type-Prop P) * (type-Prop Q) → (type-Prop R)) →</a>
-<a id="2021" class="Comment">--   (type-Prop P → type-Prop R) × (type-Prop Q → type-Prop R)</a>
-<a id="2084" class="Comment">-- ev-disjunction P Q R f =</a>
-<a id="2112" class="Comment">--   pair</a>
-<a id="2122" class="Comment">--     ( f ∘ (inl-join (type-Prop P) (type-Prop Q)))</a>
-<a id="2175" class="Comment">--     ( f ∘ (inr-join (type-Prop P) (type-Prop Q)))</a>
+<a id="2163" class="Comment">-- comparison-ev-disjunction :</a>
+<a id="2194" class="Comment">--   {l1 l2 l3 : Level} (P : UU-Prop l1) (Q : UU-Prop l2) (R : UU-Prop l3) →</a>
+<a id="2271" class="Comment">--   cocone-join (type-Prop P) (type-Prop Q) (type-Prop R)</a>
 
-<a id="2229" class="Comment">-- comparison-ev-disjunction :</a>
-<a id="2260" class="Comment">--   {l1 l2 l3 : Level} (P : UU-Prop l1) (Q : UU-Prop l2) (R : UU-Prop l3) →</a>
-<a id="2337" class="Comment">--   cocone-join (type-Prop P) (type-Prop Q) (type-Prop R)</a>
-
-<a id="2397" class="Comment">-- universal-property-disjunction-join-prop :</a>
-<a id="2443" class="Comment">--   {l1 l2 l3 : Level} (P : UU-Prop l1) (Q : UU-Prop l2) (R : UU-Prop l3) →</a>
-<a id="2520" class="Comment">--   is-equiv (ev-disjunction P Q R)</a>
+<a id="2331" class="Comment">-- universal-property-disjunction-join-prop :</a>
+<a id="2377" class="Comment">--   {l1 l2 l3 : Level} (P : UU-Prop l1) (Q : UU-Prop l2) (R : UU-Prop l3) →</a>
+<a id="2454" class="Comment">--   is-equiv (ev-disjunction P Q R)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-23)(5dc78bb) Merge pull request #297 from blu-bird/mod by noreply
+(2022-08-25)(1cfa684) Merge pull request #303 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/fibers-of-maps.lagda.md.</p>
-<p>Version of Tuesday, August 23, 2022, 05:10 PM</p>
+<p>Version of Thursday, August 25, 2022, 07:27 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -61,7 +61,7 @@
 <a id="1245" class="Keyword">open</a> <a id="1250" class="Keyword">import</a> <a id="1257" href="univalent-combinatorics.counting-dependent-pair-types.html" class="Module">univalent-combinatorics.counting-dependent-pair-types</a> <a id="1311" class="Keyword">using</a>
   <a id="1319" class="Symbol">(</a> <a id="1321" href="univalent-combinatorics.counting-dependent-pair-types.html#5328" class="Function">count-fiber-count-Σ</a><a id="1340" class="Symbol">;</a> <a id="1342" href="univalent-combinatorics.counting-dependent-pair-types.html#9018" class="Function">sum-number-of-elements-count-fiber-count-Σ</a><a id="1384" class="Symbol">)</a>
 <a id="1386" class="Keyword">open</a> <a id="1391" class="Keyword">import</a> <a id="1398" href="univalent-combinatorics.decidable-propositions.html" class="Module">univalent-combinatorics.decidable-propositions</a>
-<a id="1445" class="Keyword">open</a> <a id="1450" class="Keyword">import</a> <a id="1457" href="univalent-combinatorics.double-counting.html" class="Module">univalent-combinatorics.double-counting</a> <a id="1497" class="Keyword">using</a> <a id="1503" class="Symbol">(</a><a id="1504" href="univalent-combinatorics.double-counting.html#1110" class="Function">double-counting</a><a id="1519" class="Symbol">)</a>
+<a id="1445" class="Keyword">open</a> <a id="1450" class="Keyword">import</a> <a id="1457" href="univalent-combinatorics.double-counting.html" class="Module">univalent-combinatorics.double-counting</a> <a id="1497" class="Keyword">using</a> <a id="1503" class="Symbol">(</a><a id="1504" href="univalent-combinatorics.double-counting.html#1044" class="Function">double-counting</a><a id="1519" class="Symbol">)</a>
 <a id="1521" class="Keyword">open</a> <a id="1526" class="Keyword">import</a> <a id="1533" href="univalent-combinatorics.equality-finite-types.html" class="Module">univalent-combinatorics.equality-finite-types</a> <a id="1579" class="Keyword">using</a>
   <a id="1587" class="Symbol">(</a> <a id="1589" href="univalent-combinatorics.equality-finite-types.html#2553" class="Function">is-finite-eq</a><a id="1601" class="Symbol">;</a> <a id="1603" href="univalent-combinatorics.equality-finite-types.html#1651" class="Function">has-decidable-equality-is-finite</a><a id="1635" class="Symbol">)</a>
 <a id="1637" class="Keyword">open</a> <a id="1642" class="Keyword">import</a> <a id="1649" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="1686" class="Keyword">using</a>
@@ -96,7 +96,7 @@
     <a id="2882" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a> <a id="2885" class="Symbol">(</a> <a id="2887" href="univalent-combinatorics.counting.html#2029" class="Function">number-of-elements-count</a> <a id="2912" class="Symbol">(</a><a id="2913" href="univalent-combinatorics.fibers-of-maps.html#2827" class="Bound">count-fib-f</a> <a id="2925" href="univalent-combinatorics.fibers-of-maps.html#2869" class="Bound">y</a><a id="2926" class="Symbol">))</a>
        <a id="2936" class="Symbol">(</a> <a id="2938" href="univalent-combinatorics.counting.html#2029" class="Function">number-of-elements-count</a> <a id="2963" class="Symbol">(</a><a id="2964" href="univalent-combinatorics.fibers-of-maps.html#2012" class="Function">count-fib</a> <a id="2974" href="univalent-combinatorics.fibers-of-maps.html#2769" class="Bound">f</a> <a id="2976" href="univalent-combinatorics.fibers-of-maps.html#2781" class="Bound">count-A</a> <a id="2984" href="univalent-combinatorics.fibers-of-maps.html#2807" class="Bound">count-B</a> <a id="2992" href="univalent-combinatorics.fibers-of-maps.html#2869" class="Bound">y</a><a id="2993" class="Symbol">))</a>
   <a id="2998" href="univalent-combinatorics.fibers-of-maps.html#2702" class="Function">double-counting-fib</a> <a id="3018" href="univalent-combinatorics.fibers-of-maps.html#3018" class="Bound">f</a> <a id="3020" href="univalent-combinatorics.fibers-of-maps.html#3020" class="Bound">count-A</a> <a id="3028" href="univalent-combinatorics.fibers-of-maps.html#3028" class="Bound">count-B</a> <a id="3036" href="univalent-combinatorics.fibers-of-maps.html#3036" class="Bound">count-fib-f</a> <a id="3048" href="univalent-combinatorics.fibers-of-maps.html#3048" class="Bound">y</a> <a id="3050" class="Symbol">=</a>
-    <a id="3056" href="univalent-combinatorics.double-counting.html#1110" class="Function">double-counting</a> <a id="3072" class="Symbol">(</a><a id="3073" href="univalent-combinatorics.fibers-of-maps.html#3036" class="Bound">count-fib-f</a> <a id="3085" href="univalent-combinatorics.fibers-of-maps.html#3048" class="Bound">y</a><a id="3086" class="Symbol">)</a> <a id="3088" class="Symbol">(</a><a id="3089" href="univalent-combinatorics.fibers-of-maps.html#2012" class="Function">count-fib</a> <a id="3099" href="univalent-combinatorics.fibers-of-maps.html#3018" class="Bound">f</a> <a id="3101" href="univalent-combinatorics.fibers-of-maps.html#3020" class="Bound">count-A</a> <a id="3109" href="univalent-combinatorics.fibers-of-maps.html#3028" class="Bound">count-B</a> <a id="3117" href="univalent-combinatorics.fibers-of-maps.html#3048" class="Bound">y</a><a id="3118" class="Symbol">)</a>
+    <a id="3056" href="univalent-combinatorics.double-counting.html#1044" class="Function">double-counting</a> <a id="3072" class="Symbol">(</a><a id="3073" href="univalent-combinatorics.fibers-of-maps.html#3036" class="Bound">count-fib-f</a> <a id="3085" href="univalent-combinatorics.fibers-of-maps.html#3048" class="Bound">y</a><a id="3086" class="Symbol">)</a> <a id="3088" class="Symbol">(</a><a id="3089" href="univalent-combinatorics.fibers-of-maps.html#2012" class="Function">count-fib</a> <a id="3099" href="univalent-combinatorics.fibers-of-maps.html#3018" class="Bound">f</a> <a id="3101" href="univalent-combinatorics.fibers-of-maps.html#3020" class="Bound">count-A</a> <a id="3109" href="univalent-combinatorics.fibers-of-maps.html#3028" class="Bound">count-B</a> <a id="3117" href="univalent-combinatorics.fibers-of-maps.html#3048" class="Bound">y</a><a id="3118" class="Symbol">)</a>
 </pre>
 <h3 id="fibers-of-maps-between-finite-types-are-finite">Fibers of maps between finite types are finite</h3>
 <pre class="Agda"><a id="3185" class="Keyword">abstract</a>
@@ -151,7 +151,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-23)(5dc78bb) Merge pull request #297 from blu-bird/mod by noreply
+(2022-08-25)(1cfa684) Merge pull request #303 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

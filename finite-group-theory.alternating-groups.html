@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/finite-group-theory/alternating-groups.lagda.md.</p>
-<p>Version of Tuesday, August 23, 2022, 05:08 PM</p>
+<p>Version of Thursday, August 25, 2022, 07:25 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -42,7 +42,7 @@
 
 <a id="298" class="Keyword">open</a> <a id="303" class="Keyword">import</a> <a id="310" href="elementary-number-theory.natural-numbers.html" class="Module">elementary-number-theory.natural-numbers</a> <a id="351" class="Keyword">using</a> <a id="357" class="Symbol">(</a><a id="358" href="elementary-number-theory.natural-numbers.html#1548" class="Datatype">ℕ</a><a id="359" class="Symbol">)</a>
 <a id="361" class="Keyword">open</a> <a id="366" class="Keyword">import</a> <a id="373" href="univalent-combinatorics.standard-finite-types.html" class="Module">univalent-combinatorics.standard-finite-types</a> <a id="419" class="Keyword">using</a> <a id="425" class="Symbol">(</a><a id="426" href="univalent-combinatorics.standard-finite-types.html#2284" class="Function">Fin-Set</a><a id="433" class="Symbol">)</a>
-<a id="435" class="Keyword">open</a> <a id="440" class="Keyword">import</a> <a id="447" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="484" class="Keyword">using</a> <a id="490" class="Symbol">(</a><a id="491" href="univalent-combinatorics.finite-types.html#5087" class="Function">UU-Fin</a><a id="497" class="Symbol">;</a> <a id="499" href="univalent-combinatorics.finite-types.html#14443" class="Function">set-UU-Fin</a><a id="509" class="Symbol">)</a>
+<a id="435" class="Keyword">open</a> <a id="440" class="Keyword">import</a> <a id="447" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="484" class="Keyword">using</a> <a id="490" class="Symbol">(</a><a id="491" href="univalent-combinatorics.finite-types.html#5087" class="Function">UU-Fin</a><a id="497" class="Symbol">;</a> <a id="499" href="univalent-combinatorics.finite-types.html#14564" class="Function">set-UU-Fin</a><a id="509" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>The alternating group on a finite set <code>X</code> is the group of even permutations of <code>X</code>, i.e. it is the kernel of the sign homomorphism <code>Aut(X) → Aut(2)</code>.</p>
@@ -50,13 +50,13 @@
 <pre class="Agda"><a id="699" class="Keyword">module</a> <a id="706" href="finite-group-theory.alternating-groups.html#706" class="Module">_</a> <a id="708" class="Symbol">{</a><a id="709" href="finite-group-theory.alternating-groups.html#709" class="Bound">l</a><a id="710" class="Symbol">}</a> <a id="712" class="Symbol">(</a><a id="713" href="finite-group-theory.alternating-groups.html#713" class="Bound">n</a> <a id="715" class="Symbol">:</a> <a id="717" href="elementary-number-theory.natural-numbers.html#1548" class="Datatype">ℕ</a><a id="718" class="Symbol">)</a> <a id="720" class="Symbol">(</a><a id="721" href="finite-group-theory.alternating-groups.html#721" class="Bound">X</a> <a id="723" class="Symbol">:</a> <a id="725" href="univalent-combinatorics.finite-types.html#5087" class="Function">UU-Fin</a> <a id="732" href="finite-group-theory.alternating-groups.html#709" class="Bound">l</a> <a id="734" href="finite-group-theory.alternating-groups.html#713" class="Bound">n</a><a id="735" class="Symbol">)</a> <a id="737" class="Keyword">where</a>
   <a id="745" href="finite-group-theory.alternating-groups.html#745" class="Function">alternating-Group</a> <a id="763" class="Symbol">:</a> <a id="765" href="group-theory.groups.html#2750" class="Function">Group</a> <a id="771" href="finite-group-theory.alternating-groups.html#709" class="Bound">l</a>
   <a id="775" href="finite-group-theory.alternating-groups.html#745" class="Function">alternating-Group</a> <a id="793" class="Symbol">=</a> <a id="795" href="group-theory.kernels.html#2475" class="Function">group-kernel-hom-Group</a>
-    <a id="822" class="Symbol">(</a> <a id="824" href="group-theory.symmetric-groups.html#3597" class="Function">symmetric-Group</a> <a id="840" class="Symbol">(</a><a id="841" href="univalent-combinatorics.finite-types.html#14443" class="Function">set-UU-Fin</a> <a id="852" href="finite-group-theory.alternating-groups.html#713" class="Bound">n</a> <a id="854" href="finite-group-theory.alternating-groups.html#721" class="Bound">X</a><a id="855" class="Symbol">))</a>
+    <a id="822" class="Symbol">(</a> <a id="824" href="group-theory.symmetric-groups.html#3597" class="Function">symmetric-Group</a> <a id="840" class="Symbol">(</a><a id="841" href="univalent-combinatorics.finite-types.html#14564" class="Function">set-UU-Fin</a> <a id="852" href="finite-group-theory.alternating-groups.html#713" class="Bound">n</a> <a id="854" href="finite-group-theory.alternating-groups.html#721" class="Bound">X</a><a id="855" class="Symbol">))</a>
     <a id="862" class="Symbol">(</a> <a id="864" href="group-theory.symmetric-groups.html#3597" class="Function">symmetric-Group</a> <a id="880" class="Symbol">(</a><a id="881" href="univalent-combinatorics.standard-finite-types.html#2284" class="Function">Fin-Set</a> <a id="889" class="Number">2</a><a id="890" class="Symbol">))</a>
     <a id="897" class="Symbol">(</a> <a id="899" href="finite-group-theory.sign-homomorphism.html#11097" class="Function">sign-homomorphism</a> <a id="917" href="finite-group-theory.alternating-groups.html#713" class="Bound">n</a> <a id="919" href="finite-group-theory.alternating-groups.html#721" class="Bound">X</a><a id="920" class="Symbol">)</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-23)(5dc78bb) Merge pull request #297 from blu-bird/mod by noreply
+(2022-08-25)(1cfa684) Merge pull request #303 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

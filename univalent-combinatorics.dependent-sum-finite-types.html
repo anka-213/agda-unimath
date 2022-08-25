@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/univalent-combinatorics/dependent-sum-finite-types.lagda.md.</p>
-<p>Version of Tuesday, August 23, 2022, 05:10 PM</p>
+<p>Version of Thursday, August 25, 2022, 07:27 AM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -76,7 +76,7 @@
   <a id="2122" class="Symbol">(</a> <a id="2124" href="univalent-combinatorics.finite-choice.html#3857" class="Function">finite-choice</a><a id="2137" class="Symbol">;</a> <a id="2139" href="univalent-combinatorics.finite-choice.html#5826" class="Function">choice-is-finite-Σ-is-finite-fiber</a><a id="2173" class="Symbol">)</a>
 <a id="2175" class="Keyword">open</a> <a id="2180" class="Keyword">import</a> <a id="2187" href="univalent-combinatorics.finite-types.html" class="Module">univalent-combinatorics.finite-types</a> <a id="2224" class="Keyword">using</a>
   <a id="2232" class="Symbol">(</a> <a id="2234" href="univalent-combinatorics.finite-types.html#4139" class="Function">is-finite</a><a id="2243" class="Symbol">;</a> <a id="2245" href="univalent-combinatorics.finite-types.html#4048" class="Function">is-finite-Prop</a><a id="2259" class="Symbol">;</a> <a id="2261" href="univalent-combinatorics.finite-types.html#4378" class="Function">is-finite-count</a><a id="2276" class="Symbol">;</a> <a id="2278" href="univalent-combinatorics.finite-types.html#4550" class="Function">𝔽</a><a id="2279" class="Symbol">;</a> <a id="2281" href="univalent-combinatorics.finite-types.html#4606" class="Function">type-𝔽</a><a id="2287" class="Symbol">;</a> <a id="2289" href="univalent-combinatorics.finite-types.html#4658" class="Function">is-finite-type-𝔽</a><a id="2305" class="Symbol">;</a>
-    <a id="2311" href="univalent-combinatorics.finite-types.html#6036" class="Function">is-finite-equiv</a><a id="2326" class="Symbol">;</a> <a id="2328" href="univalent-combinatorics.finite-types.html#17004" class="Function">is-inhabited-or-empty-is-finite</a><a id="2359" class="Symbol">;</a> <a id="2361" href="univalent-combinatorics.finite-types.html#17716" class="Function">is-finite-type-trunc-Prop</a><a id="2386" class="Symbol">)</a>
+    <a id="2311" href="univalent-combinatorics.finite-types.html#6036" class="Function">is-finite-equiv</a><a id="2326" class="Symbol">;</a> <a id="2328" href="univalent-combinatorics.finite-types.html#17125" class="Function">is-inhabited-or-empty-is-finite</a><a id="2359" class="Symbol">;</a> <a id="2361" href="univalent-combinatorics.finite-types.html#17837" class="Function">is-finite-type-trunc-Prop</a><a id="2386" class="Symbol">)</a>
 </pre>
 <h2 id="idea">Idea</h2>
 <p>A dependent sum of finite types indexed by a finite type is finite.</p>
@@ -172,7 +172,7 @@
           <a id="5883" class="Symbol">(</a> <a id="5885" class="Symbol">λ</a> <a id="5887" href="univalent-combinatorics.dependent-sum-finite-types.html#5887" class="Bound">x</a> <a id="5889" class="Symbol">→</a>
             <a id="5903" href="foundation-core.propositions.html#3047" class="Function">is-proof-irrelevant-is-prop</a>
               <a id="5945" class="Symbol">(</a> <a id="5947" href="foundation.decidable-types.html#7166" class="Function">is-prop-is-inhabited-or-empty</a> <a id="5977" class="Symbol">(</a><a id="5978" href="univalent-combinatorics.dependent-sum-finite-types.html#5804" class="Bound">B</a> <a id="5980" href="univalent-combinatorics.dependent-sum-finite-types.html#5887" class="Bound">x</a><a id="5981" class="Symbol">))</a>
-              <a id="5998" class="Symbol">(</a> <a id="6000" href="univalent-combinatorics.finite-types.html#17004" class="Function">is-inhabited-or-empty-is-finite</a> <a id="6032" class="Symbol">(</a><a id="6033" href="univalent-combinatorics.dependent-sum-finite-types.html#5811" class="Bound">g</a> <a id="6035" href="univalent-combinatorics.dependent-sum-finite-types.html#5887" class="Bound">x</a><a id="6036" class="Symbol">))))</a> <a id="6041" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
+              <a id="5998" class="Symbol">(</a> <a id="6000" href="univalent-combinatorics.finite-types.html#17125" class="Function">is-inhabited-or-empty-is-finite</a> <a id="6032" class="Symbol">(</a><a id="6033" href="univalent-combinatorics.dependent-sum-finite-types.html#5811" class="Bound">g</a> <a id="6035" href="univalent-combinatorics.dependent-sum-finite-types.html#5887" class="Bound">x</a><a id="6036" class="Symbol">))))</a> <a id="6041" href="foundation-core.equivalences.html#7869" class="Function Operator">∘e</a>
         <a id="6052" class="Symbol">(</a> <a id="6054" href="foundation-core.equivalences.html#5721" class="Function">inv-equiv</a>
           <a id="6074" class="Symbol">(</a> <a id="6076" href="foundation.type-arithmetic-coproduct-types.html#7225" class="Function">left-distributive-Σ-coprod</a> <a id="6103" href="univalent-combinatorics.dependent-sum-finite-types.html#5800" class="Bound">A</a>
             <a id="6117" class="Symbol">(</a> <a id="6119" class="Symbol">λ</a> <a id="6121" href="univalent-combinatorics.dependent-sum-finite-types.html#6121" class="Bound">x</a> <a id="6123" class="Symbol">→</a> <a id="6125" href="foundation.propositional-truncations.html#2209" class="Function">type-trunc-Prop</a> <a id="6141" class="Symbol">(</a><a id="6142" href="univalent-combinatorics.dependent-sum-finite-types.html#5804" class="Bound">B</a> <a id="6144" href="univalent-combinatorics.dependent-sum-finite-types.html#6121" class="Bound">x</a><a id="6145" class="Symbol">))</a>
@@ -185,13 +185,13 @@
             <a id="6387" class="Symbol">(</a> <a id="6389" href="foundation-core.type-arithmetic-dependent-pair-types.html#11376" class="Function">equiv-right-swap-Σ</a><a id="6407" class="Symbol">)</a>
             <a id="6421" class="Symbol">(</a> <a id="6423" href="univalent-combinatorics.dependent-sum-finite-types.html#2490" class="Function">is-finite-Σ</a>
               <a id="6449" class="Symbol">(</a> <a id="6451" href="univalent-combinatorics.dependent-sum-finite-types.html#5809" class="Bound">f</a><a id="6452" class="Symbol">)</a>
-              <a id="6468" class="Symbol">(</a> <a id="6470" class="Symbol">λ</a> <a id="6472" href="univalent-combinatorics.dependent-sum-finite-types.html#6472" class="Bound">x</a> <a id="6474" class="Symbol">→</a> <a id="6476" href="univalent-combinatorics.finite-types.html#17716" class="Function">is-finite-type-trunc-Prop</a> <a id="6502" class="Symbol">(</a><a id="6503" href="univalent-combinatorics.dependent-sum-finite-types.html#5811" class="Bound">g</a> <a id="6505" class="Symbol">(</a><a id="6506" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="6510" href="univalent-combinatorics.dependent-sum-finite-types.html#6472" class="Bound">x</a><a id="6511" class="Symbol">)))))</a>
+              <a id="6468" class="Symbol">(</a> <a id="6470" class="Symbol">λ</a> <a id="6472" href="univalent-combinatorics.dependent-sum-finite-types.html#6472" class="Bound">x</a> <a id="6474" class="Symbol">→</a> <a id="6476" href="univalent-combinatorics.finite-types.html#17837" class="Function">is-finite-type-trunc-Prop</a> <a id="6502" class="Symbol">(</a><a id="6503" href="univalent-combinatorics.dependent-sum-finite-types.html#5811" class="Bound">g</a> <a id="6505" class="Symbol">(</a><a id="6506" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="6510" href="univalent-combinatorics.dependent-sum-finite-types.html#6472" class="Bound">x</a><a id="6511" class="Symbol">)))))</a>
           <a id="6527" class="Symbol">(</a> <a id="6529" class="Symbol">λ</a> <a id="6531" href="univalent-combinatorics.dependent-sum-finite-types.html#6531" class="Bound">x</a> <a id="6533" class="Symbol">→</a> <a id="6535" href="univalent-combinatorics.dependent-sum-finite-types.html#5811" class="Bound">g</a> <a id="6537" class="Symbol">(</a><a id="6538" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="6542" href="univalent-combinatorics.dependent-sum-finite-types.html#6531" class="Bound">x</a><a id="6543" class="Symbol">)))</a>
         <a id="6555" class="Symbol">(</a> <a id="6557" href="univalent-combinatorics.dependent-sum-finite-types.html#5813" class="Bound">h</a><a id="6558" class="Symbol">))</a>
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-23)(5dc78bb) Merge pull request #297 from blu-bird/mod by noreply
+(2022-08-25)(1cfa684) Merge pull request #303 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
