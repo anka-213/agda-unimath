@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/torsors.lagda.md.</p>
-<p>Version of Thursday, August 25, 2022, 07:27 AM</p>
+<p>Version of Thursday, August 25, 2022, 01:30 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -47,7 +47,7 @@
   <a id="648" class="Symbol">(</a> <a id="650" href="foundation-core.fundamental-theorem-of-identity-types.html#1894" class="Function">fundamental-theorem-id</a><a id="672" class="Symbol">)</a>
 <a id="674" class="Keyword">open</a> <a id="679" class="Keyword">import</a> <a id="686" href="foundation.homotopies.html" class="Module">foundation.homotopies</a> <a id="708" class="Keyword">using</a> <a id="714" class="Symbol">(</a><a id="715" href="foundation-core.homotopies.html#1368" class="Function">refl-htpy</a><a id="724" class="Symbol">;</a> <a id="726" href="foundation-core.homotopies.html#1249" class="Function Operator">_~_</a><a id="729" class="Symbol">)</a>
 <a id="731" class="Keyword">open</a> <a id="736" class="Keyword">import</a> <a id="743" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="769" class="Keyword">using</a> <a id="775" class="Symbol">(</a><a id="776" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a><a id="778" class="Symbol">;</a> <a id="780" href="foundation-core.identity-types.html#2425" class="Function Operator">_∙_</a><a id="783" class="Symbol">;</a> <a id="785" href="foundation-core.identity-types.html#2729" class="Function">inv</a><a id="788" class="Symbol">;</a> <a id="790" href="foundation-core.identity-types.html#4003" class="Function">ap</a><a id="792" class="Symbol">;</a> <a id="794" href="foundation-core.identity-types.html#5702" class="Function">tr</a><a id="796" class="Symbol">;</a> <a id="798" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="802" class="Symbol">)</a>
-<a id="804" class="Keyword">open</a> <a id="809" class="Keyword">import</a> <a id="816" href="foundation.mere-equality.html" class="Module">foundation.mere-equality</a> <a id="841" class="Keyword">using</a> <a id="847" class="Symbol">(</a><a id="848" href="foundation.mere-equality.html#1195" class="Function">mere-eq</a><a id="855" class="Symbol">;</a> <a id="857" href="foundation.mere-equality.html#1117" class="Function">mere-eq-Prop</a><a id="869" class="Symbol">)</a>
+<a id="804" class="Keyword">open</a> <a id="809" class="Keyword">import</a> <a id="816" href="foundation.mere-equality.html" class="Module">foundation.mere-equality</a> <a id="841" class="Keyword">using</a> <a id="847" class="Symbol">(</a><a id="848" href="foundation.mere-equality.html#1225" class="Function">mere-eq</a><a id="855" class="Symbol">;</a> <a id="857" href="foundation.mere-equality.html#1147" class="Function">mere-eq-Prop</a><a id="869" class="Symbol">)</a>
 <a id="871" class="Keyword">open</a> <a id="876" class="Keyword">import</a> <a id="883" href="foundation.propositional-truncations.html" class="Module">foundation.propositional-truncations</a> <a id="920" class="Keyword">using</a>
   <a id="928" class="Symbol">(</a> <a id="930" href="foundation.propositional-truncations.html#2293" class="Function">unit-trunc-Prop</a><a id="945" class="Symbol">;</a> <a id="947" href="foundation.propositional-truncations.html#5775" class="Function">apply-universal-property-trunc-Prop</a><a id="982" class="Symbol">)</a>
 <a id="984" class="Keyword">open</a> <a id="989" class="Keyword">import</a> <a id="996" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="1020" class="Keyword">using</a>
@@ -461,15 +461,15 @@
   <a id="16989" class="Keyword">where</a>
 
   <a id="16998" href="group-theory.torsors.html#16998" class="Function">mere-eq-Torsor-Abstract-Group</a> <a id="17028" class="Symbol">:</a>
-    <a id="17034" class="Symbol">(</a><a id="17035" href="group-theory.torsors.html#17035" class="Bound">Y</a> <a id="17037" class="Symbol">:</a> <a id="17039" href="group-theory.torsors.html#3257" class="Function">Torsor-Abstract-Group</a> <a id="17061" href="group-theory.torsors.html#16940" class="Bound">G</a> <a id="17063" href="group-theory.torsors.html#16927" class="Bound">l2</a><a id="17065" class="Symbol">)</a> <a id="17067" class="Symbol">→</a> <a id="17069" href="foundation.mere-equality.html#1195" class="Function">mere-eq</a> <a id="17077" href="group-theory.torsors.html#16955" class="Bound">X</a> <a id="17079" href="group-theory.torsors.html#17035" class="Bound">Y</a>
+    <a id="17034" class="Symbol">(</a><a id="17035" href="group-theory.torsors.html#17035" class="Bound">Y</a> <a id="17037" class="Symbol">:</a> <a id="17039" href="group-theory.torsors.html#3257" class="Function">Torsor-Abstract-Group</a> <a id="17061" href="group-theory.torsors.html#16940" class="Bound">G</a> <a id="17063" href="group-theory.torsors.html#16927" class="Bound">l2</a><a id="17065" class="Symbol">)</a> <a id="17067" class="Symbol">→</a> <a id="17069" href="foundation.mere-equality.html#1225" class="Function">mere-eq</a> <a id="17077" href="group-theory.torsors.html#16955" class="Bound">X</a> <a id="17079" href="group-theory.torsors.html#17035" class="Bound">Y</a>
   <a id="17083" href="group-theory.torsors.html#16998" class="Function">mere-eq-Torsor-Abstract-Group</a> <a id="17113" href="group-theory.torsors.html#17113" class="Bound">Y</a> <a id="17115" class="Symbol">=</a>
     <a id="17121" href="foundation.propositional-truncations.html#5775" class="Function">apply-universal-property-trunc-Prop</a>
       <a id="17163" class="Symbol">(</a> <a id="17165" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="17169" href="group-theory.torsors.html#16955" class="Bound">X</a><a id="17170" class="Symbol">)</a>
-      <a id="17178" class="Symbol">(</a> <a id="17180" href="foundation.mere-equality.html#1117" class="Function">mere-eq-Prop</a> <a id="17193" href="group-theory.torsors.html#16955" class="Bound">X</a> <a id="17195" href="group-theory.torsors.html#17113" class="Bound">Y</a><a id="17196" class="Symbol">)</a>
+      <a id="17178" class="Symbol">(</a> <a id="17180" href="foundation.mere-equality.html#1147" class="Function">mere-eq-Prop</a> <a id="17193" href="group-theory.torsors.html#16955" class="Bound">X</a> <a id="17195" href="group-theory.torsors.html#17113" class="Bound">Y</a><a id="17196" class="Symbol">)</a>
       <a id="17204" class="Symbol">(</a> <a id="17206" class="Symbol">λ</a> <a id="17208" href="group-theory.torsors.html#17208" class="Bound">e</a> <a id="17210" class="Symbol">→</a>
         <a id="17220" href="foundation.propositional-truncations.html#5775" class="Function">apply-universal-property-trunc-Prop</a>
           <a id="17266" class="Symbol">(</a> <a id="17268" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="17272" href="group-theory.torsors.html#17113" class="Bound">Y</a><a id="17273" class="Symbol">)</a>
-          <a id="17285" class="Symbol">(</a> <a id="17287" href="foundation.mere-equality.html#1117" class="Function">mere-eq-Prop</a> <a id="17300" href="group-theory.torsors.html#16955" class="Bound">X</a> <a id="17302" href="group-theory.torsors.html#17113" class="Bound">Y</a><a id="17303" class="Symbol">)</a>
+          <a id="17285" class="Symbol">(</a> <a id="17287" href="foundation.mere-equality.html#1147" class="Function">mere-eq-Prop</a> <a id="17300" href="group-theory.torsors.html#16955" class="Bound">X</a> <a id="17302" href="group-theory.torsors.html#17113" class="Bound">Y</a><a id="17303" class="Symbol">)</a>
           <a id="17315" class="Symbol">(</a> <a id="17317" class="Symbol">λ</a> <a id="17319" href="group-theory.torsors.html#17319" class="Bound">f</a> <a id="17321" class="Symbol">→</a>
             <a id="17335" href="foundation.propositional-truncations.html#2293" class="Function">unit-trunc-Prop</a>
               <a id="17365" class="Symbol">(</a> <a id="17367" href="group-theory.torsors.html#6814" class="Function">eq-equiv-Torsor-Abstract-Group</a> <a id="17398" href="group-theory.torsors.html#16940" class="Bound">G</a> <a id="17400" href="group-theory.torsors.html#16955" class="Bound">X</a> <a id="17402" href="group-theory.torsors.html#17113" class="Bound">Y</a>
@@ -669,7 +669,7 @@ module _
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-25)(1cfa684) Merge pull request #303 from EgbertRijke/group-theory by noreply
+(2022-08-25)(8a2503e) Merge pull request #304 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

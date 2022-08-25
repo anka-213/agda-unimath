@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/functoriality-set-truncation.lagda.md.</p>
-<p>Version of Thursday, August 25, 2022, 07:26 AM</p>
+<p>Version of Thursday, August 25, 2022, 01:29 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -70,7 +70,7 @@
 <a id="1982" class="Keyword">open</a> <a id="1987" class="Keyword">import</a> <a id="1994" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="2010" class="Keyword">using</a> <a id="2016" class="Symbol">(</a><a id="2017" href="foundation-core.sets.html#3072" class="Function">set-Prop</a><a id="2025" class="Symbol">;</a> <a id="2027" href="foundation-core.sets.html#1420" class="Function">Id-Prop</a><a id="2034" class="Symbol">)</a>
 <a id="2036" class="Keyword">open</a> <a id="2041" class="Keyword">import</a> <a id="2048" href="foundation.slice.html" class="Module">foundation.slice</a> <a id="2065" class="Keyword">using</a>
   <a id="2073" class="Symbol">(</a> <a id="2075" href="foundation.slice.html#2949" class="Function">hom-slice</a><a id="2084" class="Symbol">;</a> <a id="2086" href="foundation.slice.html#8085" class="Function">equiv-slice</a><a id="2097" class="Symbol">;</a> <a id="2099" href="foundation.slice.html#3653" class="Function">htpy-hom-slice</a><a id="2113" class="Symbol">;</a> <a id="2115" href="foundation.slice.html#4410" class="Function">comp-hom-slice</a><a id="2129" class="Symbol">;</a> <a id="2131" href="foundation.slice.html#8277" class="Function">hom-equiv-slice</a><a id="2146" class="Symbol">)</a>
-<a id="2148" class="Keyword">open</a> <a id="2153" class="Keyword">import</a> <a id="2160" href="foundation.surjective-maps.html" class="Module">foundation.surjective-maps</a> <a id="2187" class="Keyword">using</a> <a id="2193" class="Symbol">(</a><a id="2194" href="foundation.surjective-maps.html#1938" class="Function">is-surjective</a><a id="2207" class="Symbol">)</a>
+<a id="2148" class="Keyword">open</a> <a id="2153" class="Keyword">import</a> <a id="2160" href="foundation.surjective-maps.html" class="Module">foundation.surjective-maps</a> <a id="2187" class="Keyword">using</a> <a id="2193" class="Symbol">(</a><a id="2194" href="foundation.surjective-maps.html#2795" class="Function">is-surjective</a><a id="2207" class="Symbol">)</a>
 <a id="2209" class="Keyword">open</a> <a id="2214" class="Keyword">import</a> <a id="2221" href="foundation.truncation-levels.html" class="Module">foundation.truncation-levels</a> <a id="2250" class="Keyword">using</a> <a id="2256" class="Symbol">(</a><a id="2257" href="foundation-core.truncation-levels.html#492" class="Function">zero-𝕋</a><a id="2263" class="Symbol">)</a>
 <a id="2265" class="Keyword">open</a> <a id="2270" class="Keyword">import</a> <a id="2277" href="foundation.uniqueness-image.html" class="Module">foundation.uniqueness-image</a> <a id="2305" class="Keyword">using</a> <a id="2311" class="Symbol">(</a><a id="2312" href="foundation.uniqueness-image.html#7662" class="Function">uniqueness-im</a><a id="2325" class="Symbol">)</a>
 <a id="2327" class="Keyword">open</a> <a id="2332" class="Keyword">import</a> <a id="2339" href="foundation.uniqueness-set-truncations.html" class="Module">foundation.uniqueness-set-truncations</a> <a id="2377" class="Keyword">using</a>
@@ -208,7 +208,7 @@
 
   <a id="7004" class="Keyword">abstract</a>
     <a id="7017" href="foundation.functoriality-set-truncation.html#7017" class="Function">is-surjective-map-trunc-Set</a> <a id="7045" class="Symbol">:</a>
-      <a id="7053" href="foundation.surjective-maps.html#1938" class="Function">is-surjective</a> <a id="7067" href="foundation.functoriality-set-truncation.html#6982" class="Bound">f</a> <a id="7069" class="Symbol">→</a> <a id="7071" href="foundation.surjective-maps.html#1938" class="Function">is-surjective</a> <a id="7085" class="Symbol">(</a><a id="7086" href="foundation.functoriality-set-truncation.html#3122" class="Function">map-trunc-Set</a> <a id="7100" href="foundation.functoriality-set-truncation.html#6982" class="Bound">f</a><a id="7101" class="Symbol">)</a>
+      <a id="7053" href="foundation.surjective-maps.html#2795" class="Function">is-surjective</a> <a id="7067" href="foundation.functoriality-set-truncation.html#6982" class="Bound">f</a> <a id="7069" class="Symbol">→</a> <a id="7071" href="foundation.surjective-maps.html#2795" class="Function">is-surjective</a> <a id="7085" class="Symbol">(</a><a id="7086" href="foundation.functoriality-set-truncation.html#3122" class="Function">map-trunc-Set</a> <a id="7100" href="foundation.functoriality-set-truncation.html#6982" class="Bound">f</a><a id="7101" class="Symbol">)</a>
     <a id="7107" href="foundation.functoriality-set-truncation.html#7017" class="Function">is-surjective-map-trunc-Set</a> <a id="7135" href="foundation.functoriality-set-truncation.html#7135" class="Bound">H</a> <a id="7137" class="Symbol">=</a>
       <a id="7145" href="foundation.set-truncations.html#6096" class="Function">apply-dependent-universal-property-trunc-Set&#39;</a>
         <a id="7199" class="Symbol">(</a> <a id="7201" class="Symbol">λ</a> <a id="7203" href="foundation.functoriality-set-truncation.html#7203" class="Bound">x</a> <a id="7205" class="Symbol">→</a> <a id="7207" href="foundation-core.sets.html#3072" class="Function">set-Prop</a> <a id="7216" class="Symbol">(</a><a id="7217" href="foundation.propositional-truncations.html#2707" class="Function">trunc-Prop</a> <a id="7228" class="Symbol">(</a><a id="7229" href="foundation-core.fibers-of-maps.html#942" class="Function">fib</a> <a id="7233" class="Symbol">(</a><a id="7234" href="foundation.functoriality-set-truncation.html#3122" class="Function">map-trunc-Set</a> <a id="7248" href="foundation.functoriality-set-truncation.html#6982" class="Bound">f</a><a id="7249" class="Symbol">)</a> <a id="7251" href="foundation.functoriality-set-truncation.html#7203" class="Bound">x</a><a id="7252" class="Symbol">)))</a>
@@ -225,7 +225,7 @@
 <h3 id="if-the-set-truncation-of-a-map-f-is-surjective-then-f-is-surjective">If the set truncation of a map <code>f</code> is surjective, then <code>f</code> is surjective</h3>
 <pre class="Agda">  <a id="7710" class="Keyword">abstract</a>
     <a id="7723" href="foundation.functoriality-set-truncation.html#7723" class="Function">is-surjective-is-surjective-map-trunc-Set</a> <a id="7765" class="Symbol">:</a>
-      <a id="7773" href="foundation.surjective-maps.html#1938" class="Function">is-surjective</a> <a id="7787" class="Symbol">(</a><a id="7788" href="foundation.functoriality-set-truncation.html#3122" class="Function">map-trunc-Set</a> <a id="7802" href="foundation.functoriality-set-truncation.html#6982" class="Bound">f</a><a id="7803" class="Symbol">)</a> <a id="7805" class="Symbol">→</a> <a id="7807" href="foundation.surjective-maps.html#1938" class="Function">is-surjective</a> <a id="7821" href="foundation.functoriality-set-truncation.html#6982" class="Bound">f</a>
+      <a id="7773" href="foundation.surjective-maps.html#2795" class="Function">is-surjective</a> <a id="7787" class="Symbol">(</a><a id="7788" href="foundation.functoriality-set-truncation.html#3122" class="Function">map-trunc-Set</a> <a id="7802" href="foundation.functoriality-set-truncation.html#6982" class="Bound">f</a><a id="7803" class="Symbol">)</a> <a id="7805" class="Symbol">→</a> <a id="7807" href="foundation.surjective-maps.html#2795" class="Function">is-surjective</a> <a id="7821" href="foundation.functoriality-set-truncation.html#6982" class="Bound">f</a>
     <a id="7827" href="foundation.functoriality-set-truncation.html#7723" class="Function">is-surjective-is-surjective-map-trunc-Set</a> <a id="7869" href="foundation.functoriality-set-truncation.html#7869" class="Bound">H</a> <a id="7871" href="foundation.functoriality-set-truncation.html#7871" class="Bound">b</a> <a id="7873" class="Symbol">=</a>
       <a id="7881" href="foundation.propositional-truncations.html#5775" class="Function">apply-universal-property-trunc-Prop</a>
         <a id="7925" class="Symbol">(</a> <a id="7927" href="foundation.functoriality-set-truncation.html#7869" class="Bound">H</a> <a id="7929" class="Symbol">(</a><a id="7930" href="foundation.set-truncations.html#4277" class="Function">unit-trunc-Set</a> <a id="7945" href="foundation.functoriality-set-truncation.html#7871" class="Bound">b</a><a id="7946" class="Symbol">))</a>
@@ -281,7 +281,7 @@
 
   <a id="9943" class="Keyword">abstract</a>
     <a id="9956" href="foundation.functoriality-set-truncation.html#9956" class="Function">is-surjective-map-hom-slice-trunc-im-Set</a> <a id="9997" class="Symbol">:</a>
-      <a id="10005" href="foundation.surjective-maps.html#1938" class="Function">is-surjective</a> <a id="10019" href="foundation.functoriality-set-truncation.html#9378" class="Function">map-hom-slice-trunc-im-Set</a>
+      <a id="10005" href="foundation.surjective-maps.html#2795" class="Function">is-surjective</a> <a id="10019" href="foundation.functoriality-set-truncation.html#9378" class="Function">map-hom-slice-trunc-im-Set</a>
     <a id="10050" href="foundation.functoriality-set-truncation.html#9956" class="Function">is-surjective-map-hom-slice-trunc-im-Set</a> <a id="10091" class="Symbol">=</a>
       <a id="10099" href="foundation.functoriality-set-truncation.html#7017" class="Function">is-surjective-map-trunc-Set</a>
         <a id="10135" class="Symbol">(</a> <a id="10137" href="foundation.images.html#2281" class="Function">map-unit-im</a> <a id="10149" href="foundation.functoriality-set-truncation.html#8603" class="Bound">f</a><a id="10150" class="Symbol">)</a>
@@ -420,7 +420,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-25)(1cfa684) Merge pull request #303 from EgbertRijke/group-theory by noreply
+(2022-08-25)(8a2503e) Merge pull request #304 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

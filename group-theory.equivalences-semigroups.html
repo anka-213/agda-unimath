@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/group-theory/equivalences-semigroups.lagda.md.</p>
-<p>Version of Thursday, August 25, 2022, 07:26 AM</p>
+<p>Version of Thursday, August 25, 2022, 01:30 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -42,7 +42,7 @@
 <a id="422" class="Keyword">open</a> <a id="427" class="Keyword">import</a> <a id="434" href="foundation.functions.html" class="Module">foundation.functions</a> <a id="455" class="Keyword">using</a> <a id="461" class="Symbol">(</a><a id="462" href="foundation-core.functions.html#322" class="Function">id</a><a id="464" class="Symbol">)</a>
 <a id="466" class="Keyword">open</a> <a id="471" class="Keyword">import</a> <a id="478" href="foundation.identity-types.html" class="Module">foundation.identity-types</a> <a id="504" class="Keyword">using</a> <a id="510" class="Symbol">(</a><a id="511" href="foundation-core.identity-types.html#1767" class="Datatype">Id</a><a id="513" class="Symbol">;</a> <a id="515" href="foundation-core.identity-types.html#1820" class="InductiveConstructor">refl</a><a id="519" class="Symbol">)</a>
 <a id="521" class="Keyword">open</a> <a id="526" class="Keyword">import</a> <a id="533" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="557" class="Keyword">using</a> <a id="563" class="Symbol">(</a><a id="564" href="foundation-core.propositions.html#6694" class="Function">Π-Prop</a><a id="570" class="Symbol">)</a>
-<a id="572" class="Keyword">open</a> <a id="577" class="Keyword">import</a> <a id="584" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="600" class="Keyword">using</a> <a id="606" class="Symbol">(</a><a id="607" href="foundation-core.sets.html#1420" class="Function">Id-Prop</a><a id="614" class="Symbol">;</a> <a id="616" href="foundation.sets.html#2470" class="Function">is-prop-is-set</a><a id="630" class="Symbol">)</a>
+<a id="572" class="Keyword">open</a> <a id="577" class="Keyword">import</a> <a id="584" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="600" class="Keyword">using</a> <a id="606" class="Symbol">(</a><a id="607" href="foundation-core.sets.html#1420" class="Function">Id-Prop</a><a id="614" class="Symbol">;</a> <a id="616" href="foundation.sets.html#2458" class="Function">is-prop-is-set</a><a id="630" class="Symbol">)</a>
 <a id="632" class="Keyword">open</a> <a id="637" class="Keyword">import</a> <a id="644" href="foundation.structure-identity-principle.html" class="Module">foundation.structure-identity-principle</a> <a id="684" class="Keyword">using</a>
   <a id="692" class="Symbol">(</a> <a id="694" href="foundation.structure-identity-principle.html#1355" class="Function">is-contr-total-Eq-structure</a><a id="721" class="Symbol">)</a>
 <a id="723" class="Keyword">open</a> <a id="728" class="Keyword">import</a> <a id="735" href="foundation.subtype-identity-principle.html" class="Module">foundation.subtype-identity-principle</a> <a id="773" class="Keyword">using</a>
@@ -143,7 +143,7 @@
       <a id="4307" class="Symbol">(</a> <a id="4309" class="Symbol">λ</a> <a id="4311" href="group-theory.equivalences-semigroups.html#4311" class="Bound">H</a> <a id="4313" href="group-theory.equivalences-semigroups.html#4313" class="Bound">μH</a> <a id="4316" class="Symbol">→</a> <a id="4318" href="group-theory.equivalences-semigroups.html#1882" class="Function">preserves-mul-equiv-Semigroup</a> <a id="4348" href="group-theory.equivalences-semigroups.html#2466" class="Bound">G</a> <a id="4350" class="Symbol">(</a><a id="4351" href="foundation-core.dependent-pair-types.html#588" class="InductiveConstructor">pair</a> <a id="4356" href="group-theory.equivalences-semigroups.html#4311" class="Bound">H</a> <a id="4358" href="group-theory.equivalences-semigroups.html#4313" class="Bound">μH</a><a id="4360" class="Symbol">))</a>
       <a id="4369" class="Symbol">(</a> <a id="4371" href="foundation-core.subtype-identity-principle.html#1586" class="Function">is-contr-total-Eq-subtype</a>
         <a id="4405" class="Symbol">(</a> <a id="4407" href="foundation-core.univalence.html#2381" class="Function">is-contr-total-equiv</a> <a id="4428" class="Symbol">(</a><a id="4429" href="group-theory.semigroups.html#946" class="Function">type-Semigroup</a> <a id="4444" href="group-theory.equivalences-semigroups.html#2466" class="Bound">G</a><a id="4445" class="Symbol">))</a>
-        <a id="4456" class="Symbol">(</a> <a id="4458" href="foundation.sets.html#2470" class="Function">is-prop-is-set</a><a id="4472" class="Symbol">)</a>
+        <a id="4456" class="Symbol">(</a> <a id="4458" href="foundation.sets.html#2458" class="Function">is-prop-is-set</a><a id="4472" class="Symbol">)</a>
         <a id="4482" class="Symbol">(</a> <a id="4484" href="group-theory.semigroups.html#946" class="Function">type-Semigroup</a> <a id="4499" href="group-theory.equivalences-semigroups.html#2466" class="Bound">G</a><a id="4500" class="Symbol">)</a>
         <a id="4510" class="Symbol">(</a> <a id="4512" href="foundation-core.equivalences.html#2494" class="Function">id-equiv</a><a id="4520" class="Symbol">)</a>
         <a id="4530" class="Symbol">(</a> <a id="4532" href="group-theory.semigroups.html#1013" class="Function">is-set-type-Semigroup</a> <a id="4554" href="group-theory.equivalences-semigroups.html#2466" class="Bound">G</a><a id="4555" class="Symbol">))</a>
@@ -152,7 +152,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-25)(1cfa684) Merge pull request #303 from EgbertRijke/group-theory by noreply
+(2022-08-25)(8a2503e) Merge pull request #304 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/decidable-subtypes.lagda.md.</p>
-<p>Version of Thursday, August 25, 2022, 07:25 AM</p>
+<p>Version of Thursday, August 25, 2022, 01:29 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -60,7 +60,7 @@
 <a id="1356" class="Keyword">open</a> <a id="1361" class="Keyword">import</a> <a id="1368" href="foundation.propositions.html" class="Module">foundation.propositions</a> <a id="1392" class="Keyword">using</a>
   <a id="1400" class="Symbol">(</a> <a id="1402" href="foundation-core.propositions.html#1495" class="Function">type-Prop</a><a id="1411" class="Symbol">;</a> <a id="1413" href="foundation-core.propositions.html#1309" class="Function">is-prop</a><a id="1420" class="Symbol">;</a> <a id="1422" href="foundation-core.propositions.html#1393" class="Function">UU-Prop</a><a id="1429" class="Symbol">;</a> <a id="1431" href="foundation-core.propositions.html#1562" class="Function">is-prop-type-Prop</a><a id="1448" class="Symbol">)</a>
 <a id="1450" class="Keyword">open</a> <a id="1455" class="Keyword">import</a> <a id="1462" href="foundation.sets.html" class="Module">foundation.sets</a> <a id="1478" class="Keyword">using</a>
-  <a id="1486" class="Symbol">(</a> <a id="1488" href="foundation-core.sets.html#1113" class="Function">is-set</a><a id="1494" class="Symbol">;</a> <a id="1496" href="foundation.sets.html#3896" class="Function">is-set-function-type</a><a id="1516" class="Symbol">;</a> <a id="1518" href="foundation-core.sets.html#1190" class="Function">UU-Set</a><a id="1524" class="Symbol">;</a> <a id="1526" href="foundation-core.sets.html#1304" class="Function">type-Set</a><a id="1534" class="Symbol">;</a> <a id="1536" href="foundation-core.sets.html#1355" class="Function">is-set-type-Set</a><a id="1551" class="Symbol">)</a>
+  <a id="1486" class="Symbol">(</a> <a id="1488" href="foundation-core.sets.html#1113" class="Function">is-set</a><a id="1494" class="Symbol">;</a> <a id="1496" href="foundation.sets.html#4053" class="Function">is-set-function-type</a><a id="1516" class="Symbol">;</a> <a id="1518" href="foundation-core.sets.html#1190" class="Function">UU-Set</a><a id="1524" class="Symbol">;</a> <a id="1526" href="foundation-core.sets.html#1304" class="Function">type-Set</a><a id="1534" class="Symbol">;</a> <a id="1536" href="foundation-core.sets.html#1355" class="Function">is-set-type-Set</a><a id="1551" class="Symbol">)</a>
 <a id="1553" class="Keyword">open</a> <a id="1558" class="Keyword">import</a> <a id="1565" href="foundation.subtypes.html" class="Module">foundation.subtypes</a> <a id="1585" class="Keyword">using</a>
   <a id="1593" class="Symbol">(</a> <a id="1595" href="foundation-core.subtypes.html#2275" class="Function">subtype</a><a id="1602" class="Symbol">;</a> <a id="1604" href="foundation-core.subtypes.html#2619" class="Function">type-subtype</a><a id="1616" class="Symbol">;</a> <a id="1618" href="foundation-core.subtypes.html#2685" class="Function">inclusion-subtype</a><a id="1635" class="Symbol">;</a> <a id="1637" href="foundation-core.subtypes.html#3783" class="Function">is-emb-inclusion-subtype</a><a id="1661" class="Symbol">;</a>
     <a id="1667" href="foundation-core.subtypes.html#4029" class="Function">emb-subtype</a><a id="1678" class="Symbol">;</a> <a id="1680" href="foundation.subtypes.html#1713" class="Function">is-injective-inclusion-subtype</a><a id="1710" class="Symbol">;</a> <a id="1712" href="foundation-core.subtypes.html#2439" class="Function">is-in-subtype</a><a id="1725" class="Symbol">;</a>
@@ -226,7 +226,7 @@
 <pre class="Agda"><a id="is-set-decidable-subtype"></a><a id="7607" href="foundation.decidable-subtypes.html#7607" class="Function">is-set-decidable-subtype</a> <a id="7632" class="Symbol">:</a>
   <a id="7636" class="Symbol">{</a><a id="7637" href="foundation.decidable-subtypes.html#7637" class="Bound">l1</a> <a id="7640" href="foundation.decidable-subtypes.html#7640" class="Bound">l2</a> <a id="7643" class="Symbol">:</a> <a id="7645" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="7650" class="Symbol">}</a> <a id="7652" class="Symbol">{</a><a id="7653" href="foundation.decidable-subtypes.html#7653" class="Bound">X</a> <a id="7655" class="Symbol">:</a> <a id="7657" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="7660" href="foundation.decidable-subtypes.html#7637" class="Bound">l1</a><a id="7662" class="Symbol">}</a> <a id="7664" class="Symbol">→</a> <a id="7666" href="foundation-core.sets.html#1113" class="Function">is-set</a> <a id="7673" class="Symbol">(</a><a id="7674" href="foundation.decidable-subtypes.html#2426" class="Function">decidable-subtype</a> <a id="7692" href="foundation.decidable-subtypes.html#7640" class="Bound">l2</a> <a id="7695" href="foundation.decidable-subtypes.html#7653" class="Bound">X</a><a id="7696" class="Symbol">)</a>
 <a id="7698" href="foundation.decidable-subtypes.html#7607" class="Function">is-set-decidable-subtype</a> <a id="7723" class="Symbol">{</a><a id="7724" href="foundation.decidable-subtypes.html#7724" class="Bound">l1</a><a id="7726" class="Symbol">}</a> <a id="7728" class="Symbol">{</a><a id="7729" href="foundation.decidable-subtypes.html#7729" class="Bound">l2</a><a id="7731" class="Symbol">}</a> <a id="7733" class="Symbol">{</a><a id="7734" href="foundation.decidable-subtypes.html#7734" class="Bound">X</a><a id="7735" class="Symbol">}</a> <a id="7737" class="Symbol">=</a>
-  <a id="7741" href="foundation.sets.html#3896" class="Function">is-set-function-type</a> <a id="7762" href="foundation.decidable-propositions.html#7308" class="Function">is-set-decidable-Prop</a>
+  <a id="7741" href="foundation.sets.html#4053" class="Function">is-set-function-type</a> <a id="7762" href="foundation.decidable-propositions.html#7308" class="Function">is-set-decidable-Prop</a>
 </pre>
 <h3 id="extensionality-of-the-type-of-decidable-subtypes">Extensionality of the type of decidable subtypes</h3>
 <pre class="Agda"><a id="7851" class="Keyword">module</a> <a id="7858" href="foundation.decidable-subtypes.html#7858" class="Module">_</a>
@@ -266,7 +266,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-25)(1cfa684) Merge pull request #303 from EgbertRijke/group-theory by noreply
+(2022-08-25)(8a2503e) Merge pull request #304 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>

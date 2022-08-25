@@ -197,7 +197,7 @@ A decidable equivalence relation on a type `X` is an equivalence relation `R` on
     <a id="8291" href="foundation.universal-property-image.html#8411" class="Function">is-image-im</a> <a id="8303" class="Symbol">(</a><a id="8304" href="foundation.decidable-equivalence-relations.html#1897" class="Function">decidable-relation-Decidable-Equivalence-Relation</a> <a id="8354" href="foundation.decidable-equivalence-relations.html#4738" class="Bound">R</a><a id="8355" class="Symbol">)</a>
 
   <a id="8360" href="foundation.decidable-equivalence-relations.html#8360" class="Function">is-surjective-class-Decidable-Equivalence-Relation</a> <a id="8411" class="Symbol">:</a>
-    <a id="8417" href="foundation.surjective-maps.html#1938" class="Function">is-surjective</a> <a id="8431" href="foundation.decidable-equivalence-relations.html#5212" class="Function">class-Decidable-Equivalence-Relation</a>
+    <a id="8417" href="foundation.surjective-maps.html#2795" class="Function">is-surjective</a> <a id="8431" href="foundation.decidable-equivalence-relations.html#5212" class="Function">class-Decidable-Equivalence-Relation</a>
   <a id="8470" href="foundation.decidable-equivalence-relations.html#8360" class="Function">is-surjective-class-Decidable-Equivalence-Relation</a> <a id="8521" class="Symbol">=</a>
     <a id="8527" href="foundation.images.html#4370" class="Function">is-surjective-map-unit-im</a>
       <a id="8559" class="Symbol">(</a> <a id="8561" href="foundation.decidable-equivalence-relations.html#1897" class="Function">decidable-relation-Decidable-Equivalence-Relation</a> <a id="8611" href="foundation.decidable-equivalence-relations.html#4738" class="Bound">R</a><a id="8612" class="Symbol">)</a>
