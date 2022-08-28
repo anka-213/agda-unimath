@@ -1,0 +1,30 @@
+---
+title: Reflexive relations
+---
+
+<pre class="Agda"><a id="45" class="Keyword">module</a> <a id="52" href="foundation.reflexive-relations.html" class="Module">foundation.reflexive-relations</a> <a id="83" class="Keyword">where</a>
+
+<a id="90" class="Keyword">open</a> <a id="95" class="Keyword">import</a> <a id="102" href="foundation.binary-relations.html" class="Module">foundation.binary-relations</a>
+<a id="130" class="Keyword">open</a> <a id="135" class="Keyword">import</a> <a id="142" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="174" class="Keyword">open</a> <a id="179" class="Keyword">import</a> <a id="186" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+</pre>
+## Idea
+
+A reflexive relation on a type `A` is a type-valued binary relation `R : A → A → U` equipped with a proof `r : (x : A) → R x x
+
+## Definition
+
+<pre class="Agda"><a id="Reflexive-Relation"></a><a id="378" href="foundation.reflexive-relations.html#378" class="Function">Reflexive-Relation</a> <a id="397" class="Symbol">:</a>
+  <a id="401" class="Symbol">{</a><a id="402" href="foundation.reflexive-relations.html#402" class="Bound">l1</a> <a id="405" class="Symbol">:</a> <a id="407" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="412" class="Symbol">}</a> <a id="414" class="Symbol">(</a><a id="415" href="foundation.reflexive-relations.html#415" class="Bound">l2</a> <a id="418" class="Symbol">:</a> <a id="420" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="425" class="Symbol">)</a> <a id="427" class="Symbol">→</a> <a id="429" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="432" href="foundation.reflexive-relations.html#402" class="Bound">l1</a> <a id="435" class="Symbol">→</a> <a id="437" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="440" class="Symbol">(</a><a id="441" href="foundation.reflexive-relations.html#402" class="Bound">l1</a> <a id="444" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="446" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="451" href="foundation.reflexive-relations.html#415" class="Bound">l2</a><a id="453" class="Symbol">)</a>
+<a id="455" href="foundation.reflexive-relations.html#378" class="Function">Reflexive-Relation</a> <a id="474" href="foundation.reflexive-relations.html#474" class="Bound">l2</a> <a id="477" href="foundation.reflexive-relations.html#477" class="Bound">A</a> <a id="479" class="Symbol">=</a> <a id="481" href="foundation-core.dependent-pair-types.html#515" class="Record">Σ</a> <a id="483" class="Symbol">(</a><a id="484" href="foundation.binary-relations.html#632" class="Function">Rel</a> <a id="488" href="foundation.reflexive-relations.html#474" class="Bound">l2</a> <a id="491" href="foundation.reflexive-relations.html#477" class="Bound">A</a><a id="492" class="Symbol">)</a> <a id="494" class="Symbol">(λ</a> <a id="497" href="foundation.reflexive-relations.html#497" class="Bound">R</a> <a id="499" class="Symbol">→</a> <a id="501" href="foundation.binary-relations.html#1237" class="Function">is-reflexive</a> <a id="514" href="foundation.reflexive-relations.html#497" class="Bound">R</a><a id="515" class="Symbol">)</a>
+
+<a id="518" class="Keyword">module</a> <a id="525" href="foundation.reflexive-relations.html#525" class="Module">_</a>
+  <a id="529" class="Symbol">{</a><a id="530" href="foundation.reflexive-relations.html#530" class="Bound">l1</a> <a id="533" href="foundation.reflexive-relations.html#533" class="Bound">l2</a> <a id="536" class="Symbol">:</a> <a id="538" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="543" class="Symbol">}</a> <a id="545" class="Symbol">{</a><a id="546" href="foundation.reflexive-relations.html#546" class="Bound">A</a> <a id="548" class="Symbol">:</a> <a id="550" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a> <a id="553" href="foundation.reflexive-relations.html#530" class="Bound">l1</a><a id="555" class="Symbol">}</a> <a id="557" class="Symbol">(</a><a id="558" href="foundation.reflexive-relations.html#558" class="Bound">R</a> <a id="560" class="Symbol">:</a> <a id="562" href="foundation.reflexive-relations.html#378" class="Function">Reflexive-Relation</a> <a id="581" href="foundation.reflexive-relations.html#533" class="Bound">l2</a> <a id="584" href="foundation.reflexive-relations.html#546" class="Bound">A</a><a id="585" class="Symbol">)</a>
+  <a id="589" class="Keyword">where</a>
+
+  <a id="598" href="foundation.reflexive-relations.html#598" class="Function">rel-Reflexive-Relation</a> <a id="621" class="Symbol">:</a> <a id="623" href="foundation.binary-relations.html#632" class="Function">Rel</a> <a id="627" href="foundation.reflexive-relations.html#533" class="Bound">l2</a> <a id="630" href="foundation.reflexive-relations.html#546" class="Bound">A</a>
+  <a id="634" href="foundation.reflexive-relations.html#598" class="Function">rel-Reflexive-Relation</a> <a id="657" class="Symbol">=</a> <a id="659" href="foundation-core.dependent-pair-types.html#605" class="Field">pr1</a> <a id="663" href="foundation.reflexive-relations.html#558" class="Bound">R</a>
+
+  <a id="668" href="foundation.reflexive-relations.html#668" class="Function">is-reflexive-Reflexive-Relation</a> <a id="700" class="Symbol">:</a> <a id="702" href="foundation.binary-relations.html#1237" class="Function">is-reflexive</a> <a id="715" href="foundation.reflexive-relations.html#598" class="Function">rel-Reflexive-Relation</a>
+  <a id="740" href="foundation.reflexive-relations.html#668" class="Function">is-reflexive-Reflexive-Relation</a> <a id="772" class="Symbol">=</a> <a id="774" href="foundation-core.dependent-pair-types.html#617" class="Field">pr2</a> <a id="778" href="foundation.reflexive-relations.html#558" class="Bound">R</a>
+</pre>

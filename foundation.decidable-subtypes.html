@@ -24,7 +24,7 @@
 >
 <div class="powerby">
 <p>src/foundation/decidable-subtypes.lagda.md.</p>
-<p>Version of Friday, August 26, 2022, 05:11 AM</p>
+<p>Version of Sunday, August 28, 2022, 01:38 PM</p>
 <p>Powered by agda version 2.6.2 and pandoc 2.13</p>
 </div>
 <hr>
@@ -67,7 +67,7 @@
     <a id="1731" href="foundation-core.subtypes.html#2504" class="Function">is-prop-is-in-subtype</a><a id="1752" class="Symbol">;</a> <a id="1754" href="foundation-core.subtypes.html#4929" class="Function">is-trunc-type-subtype</a><a id="1775" class="Symbol">;</a> <a id="1777" href="foundation-core.subtypes.html#5226" class="Function">is-prop-type-subtype</a><a id="1797" class="Symbol">;</a>
     <a id="1803" href="foundation-core.subtypes.html#5363" class="Function">is-set-type-subtype</a><a id="1822" class="Symbol">;</a> <a id="1824" href="foundation-core.subtypes.html#5481" class="Function">prop-subprop</a><a id="1836" class="Symbol">;</a> <a id="1838" href="foundation-core.subtypes.html#5697" class="Function">set-subset</a><a id="1848" class="Symbol">;</a>
     <a id="1854" href="foundation.subtypes.html#1993" class="Function">has-same-elements-subtype</a><a id="1879" class="Symbol">)</a>
-<a id="1881" class="Keyword">open</a> <a id="1886" class="Keyword">import</a> <a id="1893" href="foundation.truncated-types.html" class="Module">foundation.truncated-types</a> <a id="1920" class="Keyword">using</a> <a id="1926" class="Symbol">(</a><a id="1927" href="foundation-core.truncated-types.html#1741" class="Function">is-trunc</a><a id="1935" class="Symbol">;</a> <a id="1937" href="foundation-core.truncated-types.html#5313" class="Function">is-trunc-is-emb</a><a id="1952" class="Symbol">)</a>
+<a id="1881" class="Keyword">open</a> <a id="1886" class="Keyword">import</a> <a id="1893" href="foundation.truncated-types.html" class="Module">foundation.truncated-types</a> <a id="1920" class="Keyword">using</a> <a id="1926" class="Symbol">(</a><a id="1927" href="foundation-core.truncated-types.html#1749" class="Function">is-trunc</a><a id="1935" class="Symbol">;</a> <a id="1937" href="foundation-core.truncated-types.html#5321" class="Function">is-trunc-is-emb</a><a id="1952" class="Symbol">)</a>
 <a id="1954" class="Keyword">open</a> <a id="1959" class="Keyword">import</a> <a id="1966" href="foundation.truncation-levels.html" class="Module">foundation.truncation-levels</a> <a id="1995" class="Keyword">using</a>
   <a id="2003" class="Symbol">(</a> <a id="2005" href="foundation-core.truncation-levels.html#395" class="Datatype">𝕋</a><a id="2006" class="Symbol">;</a> <a id="2008" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a><a id="2014" class="Symbol">;</a> <a id="2016" href="foundation-core.truncation-levels.html#416" class="InductiveConstructor">neg-two-𝕋</a><a id="2025" class="Symbol">;</a> <a id="2027" href="foundation-core.truncation-levels.html#448" class="Function">neg-one-𝕋</a><a id="2036" class="Symbol">;</a> <a id="2038" href="foundation-core.truncation-levels.html#492" class="Function">zero-𝕋</a><a id="2044" class="Symbol">)</a>
 <a id="2046" class="Keyword">open</a> <a id="2051" class="Keyword">import</a> <a id="2058" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a> <a id="2085" class="Keyword">using</a> <a id="2091" class="Symbol">(</a><a id="2092" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="2097" class="Symbol">;</a> <a id="2099" href="foundation-core.universe-levels.html#235" class="Primitive">UU</a><a id="2101" class="Symbol">;</a> <a id="2103" href="Agda.Primitive.html#810" class="Primitive Operator">_⊔_</a><a id="2106" class="Symbol">;</a> <a id="2108" href="Agda.Primitive.html#780" class="Primitive">lsuc</a><a id="2112" class="Symbol">;</a> <a id="2114" href="Agda.Primitive.html#764" class="Primitive">lzero</a><a id="2119" class="Symbol">)</a>
@@ -187,7 +187,7 @@
   
   <a id="6264" class="Keyword">abstract</a>
     <a id="6277" href="foundation.decidable-subtypes.html#6277" class="Function">is-trunc-type-decidable-subtype</a> <a id="6309" class="Symbol">:</a>
-      <a id="6317" href="foundation-core.truncated-types.html#1741" class="Function">is-trunc</a> <a id="6326" class="Symbol">(</a><a id="6327" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a> <a id="6334" href="foundation.decidable-subtypes.html#6203" class="Bound">k</a><a id="6335" class="Symbol">)</a> <a id="6337" href="foundation.decidable-subtypes.html#6211" class="Bound">A</a> <a id="6339" class="Symbol">→</a> <a id="6341" href="foundation-core.truncated-types.html#1741" class="Function">is-trunc</a> <a id="6350" class="Symbol">(</a><a id="6351" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a> <a id="6358" href="foundation.decidable-subtypes.html#6203" class="Bound">k</a><a id="6359" class="Symbol">)</a> <a id="6361" class="Symbol">(</a><a id="6362" href="foundation.decidable-subtypes.html#3414" class="Function">type-decidable-subtype</a> <a id="6385" href="foundation.decidable-subtypes.html#6223" class="Bound">P</a><a id="6386" class="Symbol">)</a>
+      <a id="6317" href="foundation-core.truncated-types.html#1749" class="Function">is-trunc</a> <a id="6326" class="Symbol">(</a><a id="6327" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a> <a id="6334" href="foundation.decidable-subtypes.html#6203" class="Bound">k</a><a id="6335" class="Symbol">)</a> <a id="6337" href="foundation.decidable-subtypes.html#6211" class="Bound">A</a> <a id="6339" class="Symbol">→</a> <a id="6341" href="foundation-core.truncated-types.html#1749" class="Function">is-trunc</a> <a id="6350" class="Symbol">(</a><a id="6351" href="foundation-core.truncation-levels.html#432" class="InductiveConstructor">succ-𝕋</a> <a id="6358" href="foundation.decidable-subtypes.html#6203" class="Bound">k</a><a id="6359" class="Symbol">)</a> <a id="6361" class="Symbol">(</a><a id="6362" href="foundation.decidable-subtypes.html#3414" class="Function">type-decidable-subtype</a> <a id="6385" href="foundation.decidable-subtypes.html#6223" class="Bound">P</a><a id="6386" class="Symbol">)</a>
     <a id="6392" href="foundation.decidable-subtypes.html#6277" class="Function">is-trunc-type-decidable-subtype</a> <a id="6424" class="Symbol">=</a>
       <a id="6432" href="foundation-core.subtypes.html#4929" class="Function">is-trunc-type-subtype</a> <a id="6454" href="foundation.decidable-subtypes.html#6203" class="Bound">k</a> <a id="6456" class="Symbol">(</a><a id="6457" href="foundation.decidable-subtypes.html#2692" class="Function">subtype-decidable-subtype</a> <a id="6483" href="foundation.decidable-subtypes.html#6223" class="Bound">P</a><a id="6484" class="Symbol">)</a>
 
@@ -266,7 +266,7 @@
 </pre>
 <h2>Recent changes</h2>
 <pre class="changelog">
-(2022-08-26)(4071dc6) Merge pull request #307 from EgbertRijke/group-theory by noreply
+(2022-08-28)(5eee2b9) Merge pull request #308 from EgbertRijke/group-theory by noreply
 </pre>
 </body>
 </html>
